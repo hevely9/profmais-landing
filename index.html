@@ -500,7 +500,7 @@ button { cursor:pointer; background:none; border:none; padding:0; }
 
 /* Assinatura horizontal oficial (DS 2.1) — arquivo único da marca.
    Nunca recompor com texto: o logotipo tem desenho próprio. */
-.logo { display:inline-flex; align-items:center; }
+.logo { display:inline-flex; align-items:center; min-height:44px; }
 .logo__full { width:auto; height:38px; }
 @media (min-width:768px)  { .logo__full { height:44px; } }
 @media (min-width:1024px) { .logo__full { height:50px; } }
@@ -718,33 +718,6 @@ button { cursor:pointer; background:none; border:none; padding:0; }
 }
 
 /* ============================================================
-   SEÇÃO 5 — SOLUÇÃO
-   ============================================================ */
-.solution__grid { display:grid; gap:var(--space-10); align-items:center; }
-@media (min-width:1024px) { .solution__grid { grid-template-columns:1fr 1fr; gap:var(--space-16); } }
-.solution__aside {
-  position:relative;
-  background:var(--color-primary-deepgreen);
-  border-radius:var(--radius-2xl);
-  padding:var(--space-10) var(--space-8);
-  overflow:hidden;
-  box-shadow:var(--shadow-lg);
-}
-.solution__aside::after {
-  content:""; position:absolute; right:-30%; bottom:-45%;
-  width:80%; aspect-ratio:1; border-radius:var(--radius-full);
-  background:var(--color-support-mossgreen);
-}
-.solution__aside > * { position:relative; z-index:var(--z-raised); }
-.solution__symbol { width:96px; margin-bottom:var(--space-6); }
-.solution__quote {
-  font-family:var(--font-family-primary); font-weight:var(--font-weight-bold);
-  font-size:var(--font-size-h4); line-height:1.35;
-  color:var(--color-secondary-offwhite);
-}
-.solution__quote em { font-style:normal; color:var(--color-secondary-sand); }
-
-/* ============================================================
    SEÇÃO 6 — BENEFÍCIOS
    ============================================================ */
 .service-card { display:flex; flex-direction:column; }
@@ -816,24 +789,6 @@ button { cursor:pointer; background:none; border:none; padding:0; }
 .section__cta { margin-top:var(--space-12); display:flex; justify-content:center; }
 
 /* ============================================================
-   SEÇÃO 8 — DIFERENCIAIS
-   ============================================================ */
-.diff-list { display:grid; gap:var(--space-6); }
-@media (min-width:768px)  { .diff-list { grid-template-columns:repeat(2,1fr); gap:var(--space-6) var(--space-10); } }
-@media (min-width:1024px) { .diff-list { grid-template-columns:repeat(2,1fr); gap:var(--space-8) var(--space-16); } }
-.diff {
-  display:flex; gap:var(--space-4); align-items:flex-start;
-  padding-bottom:var(--space-6); border-bottom:1px solid var(--color-border-default);
-}
-.diff__icon {
-  width:44px; height:44px; flex:0 0 auto; display:grid; place-items:center;
-  border-radius:var(--radius-md); background:var(--color-secondary-sand);
-  color:var(--color-primary-deepgreen);
-}
-.diff__icon svg { width:22px; height:22px; }
-.diff__title { margin-bottom:var(--space-2); }
-
-/* ============================================================
    SEÇÃO 9 — FAIXA DE DESTAQUE
    ============================================================ */
 .strip { background:var(--color-primary-deepgreen); position:relative; overflow:hidden; }
@@ -851,26 +806,6 @@ button { cursor:pointer; background:none; border:none; padding:0; }
 /* ============================================================
    SEÇÃO 10 — GALERIA DE MATERIAIS (exemplares · polaroids)
    ============================================================ */
-.gallery__tabs {
-  display:flex; gap:var(--space-2); flex-wrap:wrap;
-  margin-bottom:var(--space-10);
-  border-bottom:1px solid var(--color-border-default);
-  padding-bottom:var(--space-1);
-}
-.gallery__tab {
-  font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold);
-  font-size:var(--font-size-body-sm); color:var(--color-gray-700);
-  padding:var(--space-3) var(--space-4); min-height:44px;
-  border-bottom:2px solid transparent; border-radius:var(--radius-sm) var(--radius-sm) 0 0;
-  transition:color var(--duration-normal) var(--easing-out),
-             border-color var(--duration-normal) var(--easing-out),
-             background-color var(--duration-normal) var(--easing-out);
-}
-.gallery__tab:hover { background:var(--color-green-06); color:var(--color-primary-deepgreen); }
-.gallery__tab[aria-selected="true"] {
-  color:var(--color-primary-deepgreen);
-  border-bottom-color:var(--color-primary-orange);
-}
 .gallery__panel[hidden] { display:none; }
 .gallery__panel { animation:fadeIn var(--duration-slow) var(--easing-out); }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -1413,7 +1348,239 @@ button { cursor:pointer; background:none; border:none; padding:0; }
 @media (min-width:1024px) { .sticky-cta { display:none; } }
 body.has-sticky-cta .wa-float { bottom:88px; }
 @media (min-width:1024px) { body.has-sticky-cta .wa-float { bottom:24px; } }
-</style>
+
+/* ============================================================
+   MOBILE FIRST — COMPACTAÇÃO
+   Mais de 80% do tráfego chega pelo WhatsApp, no celular. Este
+   bloco reduz a altura de cada seção sem tirar informação que
+   sustente a decisão de compra. Desktop permanece intacto.
+   ============================================================ */
+@media (max-width:767px) {
+
+  /* ritmo vertical geral */
+  .section { padding-block:var(--space-10); }
+  .section__head { margin-bottom:var(--space-6); }
+  .section__title { margin-bottom:var(--space-3); }
+  .overline { margin-bottom:var(--space-3); font-size:0.6875rem; padding:6px var(--space-3); }
+  .section__note { margin-top:var(--space-5); }
+  .grid { gap:var(--space-3); }
+  .card { padding:var(--space-5); border-radius:var(--radius-md); }
+  .prose { gap:var(--space-3); margin-bottom:var(--space-6); }
+  .prose p { font-size:var(--font-size-body); }
+
+  /* hero */
+  .hero { padding-block:var(--space-8) var(--space-10); }
+  .hero__grid { gap:var(--space-8); }
+  .hero__title { margin-bottom:var(--space-4); }
+  .hero__subtitle { font-size:var(--font-size-body); margin-bottom:var(--space-6); }
+  .hero__uvp { display:none; }
+  .hero__actions { gap:var(--space-3); margin-bottom:var(--space-4); }
+  .hero__microcopy { gap:var(--space-1) var(--space-3); font-size:var(--font-size-caption); }
+  .hero__microcopy span[aria-hidden] { display:none; }
+  .hero__microcopy > span { flex:0 0 100%; }
+
+  /* card-exemplo do hero: bem mais baixo */
+  .material-card { border-radius:var(--radius-lg); }
+  .material-card__bar { padding:var(--space-3) var(--space-4); }
+  .material-card__body { padding:var(--space-4); gap:var(--space-3); }
+  .material-card__heading { font-size:var(--font-size-body); }
+  .rule-lines { gap:var(--space-2); }
+  .rule-lines i { height:7px; }
+  .material-card__body .rule-lines:last-child { display:none; }
+  .material-card__body .rule-lines:first-of-type i:nth-child(n+3) { display:none; }
+  .material-card__tags span { font-size:0.625rem; padding:3px var(--space-2); }
+  .material-card__caption { padding:var(--space-3) var(--space-4); }
+  .hero__float--portrait { display:none; }
+
+  /* prova social */
+  .proof__grid { gap:var(--space-4) var(--space-3); padding-block:0 var(--space-4); }
+  .proof__number { font-size:1.625rem; }
+  .proof__desc { font-size:var(--font-size-caption); }
+
+  /* dor: cards viram linhas compactas */
+  .pain-grid .card { display:flex; gap:var(--space-4); align-items:flex-start; padding:var(--space-4); }
+  .pain-grid .card__icon { width:36px; height:36px; margin-bottom:0; border-radius:var(--radius-sm); }
+  .pain-grid .card__icon svg { width:20px; height:20px; }
+  .pain-grid .card__title { font-size:var(--font-size-body); margin-bottom:var(--space-1); }
+  .pain-grid .card__text { font-size:var(--font-size-body-sm); }
+  .transition-note { margin-top:var(--space-6); padding:var(--space-4); font-size:var(--font-size-body); }
+
+  /* materiais: linhas compactas em vez de cards altos */
+  .services-grid .card {
+    display:grid; grid-template-columns:auto 1fr; gap:0 var(--space-4);
+    padding:var(--space-4); align-items:start;
+  }
+  .services-grid .card__icon { grid-row:span 2; width:36px; height:36px; margin-bottom:0; }
+  .services-grid .card__icon svg { width:20px; height:20px; }
+  .services-grid .card__title { font-size:var(--font-size-body); margin-bottom:var(--space-1); }
+  .services-grid .card__text { font-size:var(--font-size-body-sm); grid-column:2; }
+  .service-card__benefit { grid-column:2; padding-top:var(--space-2); font-size:var(--font-size-caption); }
+
+  /* planos: cartões baixos e comparáveis */
+  .pricing { gap:var(--space-4); }
+  .plan { padding:var(--space-5); border-radius:var(--radius-md); }
+  .plan--featured { transform:none; }
+  .plan__name { font-size:var(--font-size-h4); }
+  .plan__price { margin-block:var(--space-1) var(--space-2); }
+  .plan__value { font-size:2.25rem; }
+  .plan__once { font-size:var(--font-size-caption); margin-bottom:var(--space-4); }
+  .plan__features { gap:var(--space-2); margin-bottom:var(--space-5); }
+  .plan__features li { font-size:var(--font-size-body-sm); }
+  .plan__features svg { width:16px; height:16px; }
+  .plan__badge { font-size:0.625rem; padding:5px var(--space-3); }
+
+  /* garantia */
+  .guarantee { padding:var(--space-6) var(--space-5); border-radius:var(--radius-lg); gap:var(--space-6); }
+  .guarantee__seal { width:52px; height:52px; margin-bottom:var(--space-4); }
+  .guarantee__seal svg { width:28px; height:28px; }
+  .guarantee__points { gap:var(--space-3); }
+  .guarantee__point p { font-size:var(--font-size-body-sm); }
+  .guarantee__point svg { width:20px; height:20px; }
+
+  /* exemplares: carrossel horizontal com snap (1 card por vez) */
+  .polaroids {
+    display:flex; gap:var(--space-4);
+    overflow-x:auto; scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    padding:var(--space-2) var(--container-pad) var(--space-5);
+    margin-inline:calc(-1 * var(--container-pad));
+    scrollbar-width:none;
+  }
+  .polaroids::-webkit-scrollbar { display:none; }
+  .polaroids > li { flex:0 0 76%; scroll-snap-align:center; }
+  .polaroid { --tilt:0deg; padding:var(--space-2) var(--space-2) var(--space-4); }
+  .polaroid::before { display:none; }
+  .polaroid__caption { padding-top:var(--space-3); }
+  .gallery__foot { margin-top:var(--space-6); gap:var(--space-4); }
+  .gallery__foot .lead { font-size:var(--font-size-body); }
+
+  /* como funciona */
+  .steps { gap:var(--space-4); }
+  .step { padding-top:0; display:grid; grid-template-columns:auto 1fr; gap:0 var(--space-4); }
+  .step__number { width:44px; height:44px; font-size:var(--font-size-body); margin-bottom:0; grid-row:span 4; }
+  .step__icon { display:none; }
+  .step__title { font-size:var(--font-size-body-lg); margin-bottom:var(--space-2); }
+  .step__text { font-size:var(--font-size-body-sm); margin-bottom:var(--space-3); }
+  .step__micro { font-size:var(--font-size-caption); padding:5px var(--space-3); }
+  .section__cta { margin-top:var(--space-6); }
+
+  /* depoimentos: carrossel horizontal */
+  .testimonial-grid {
+    display:flex; gap:var(--space-4);
+    overflow-x:auto; scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    padding:0 var(--container-pad) var(--space-4);
+    margin-inline:calc(-1 * var(--container-pad));
+    scrollbar-width:none;
+  }
+  .testimonial-grid::-webkit-scrollbar { display:none; }
+  .testimonial-grid > .testimonial { flex:0 0 84%; scroll-snap-align:center; }
+  .testimonial__quote { font-size:var(--font-size-body-sm); margin-bottom:var(--space-4); }
+  .testimonial__stars { margin-bottom:var(--space-3); }
+  .testimonial__stars svg { width:16px; height:16px; }
+  .avatar { width:44px; height:44px; font-size:var(--font-size-body); }
+
+  /* comparativo: some com a coluna do meio, mantém o contraste que importa */
+  .compare { min-width:0; }
+  .compare th, .compare td { padding:var(--space-3); font-size:var(--font-size-caption); }
+  .compare thead th:nth-child(3), .compare tbody td:nth-child(3) { display:none; }
+  .compare .mark svg { width:15px; height:15px; }
+  .compare caption { font-size:var(--font-size-caption); padding-bottom:var(--space-3); }
+  .audience li { padding:var(--space-3) var(--space-4); font-size:var(--font-size-caption); }
+  .audience svg { width:18px; height:18px; }
+
+  /* faixa de destaque */
+  .strip__inner { padding-block:var(--space-8); gap:var(--space-5); }
+  .strip__title svg { width:24px; height:24px; }
+  .strip__sub { font-size:var(--font-size-body); }
+
+  /* faq */
+  .faq { gap:var(--space-2); }
+  .faq__trigger { padding:var(--space-4); font-size:var(--font-size-body-sm); }
+  .faq__panel p { padding:0 var(--space-4) var(--space-4); font-size:var(--font-size-body-sm); }
+
+  /* chamada final */
+  .final__grid { gap:var(--space-8); }
+  .final__text { gap:var(--space-3); margin-bottom:var(--space-6); }
+  .final__text p { font-size:var(--font-size-body); }
+  .trust-list { gap:var(--space-2); margin-bottom:var(--space-6); }
+  .trust-list li { font-size:var(--font-size-body-sm); }
+  .final__micro { margin-bottom:var(--space-6); }
+
+  /* rodapé */
+  .site-footer .container { padding-block:var(--space-10); }
+  .footer-grid { gap:var(--space-8); }
+  .footer-col-title { margin-bottom:var(--space-4); }
+  .footer-bottom { margin-top:var(--space-8); padding-top:var(--space-5); }
+
+  /* o botão flutuante disputava o polegar com a barra fixa */
+  .wa-float { display:none; }
+}
+
+/* ---------- segunda passada: as seções que ainda pesavam ---------- */
+@media (max-width:767px) {
+
+  /* planos: nome e preço na mesma linha */
+  .plan {
+    display:grid; grid-template-columns:1fr auto;
+    align-items:baseline; column-gap:var(--space-3);
+    padding:var(--space-4) var(--space-5) var(--space-5);
+  }
+  .plan__badge { grid-column:1 / -1; margin-bottom:var(--space-2); }
+  .plan__name  { grid-column:1; }
+  .plan__price { grid-column:2; margin:0; }
+  .plan__value { font-size:1.875rem; }
+  .plan__once  { grid-column:1 / -1; margin:var(--space-1) 0 var(--space-3); }
+  .plan__features { grid-column:1 / -1; gap:var(--space-1); margin-bottom:var(--space-4); }
+  .plan__features li { align-items:flex-start; line-height:1.4; }
+  .plan__cta { grid-column:1 / -1; }
+
+  /* materiais: descrição resumida, título e benefício continuam inteiros */
+  .services-grid .card__text {
+    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
+    overflow:hidden; line-height:1.45;
+  }
+
+  /* dor */
+  .pain-grid .card { padding:var(--space-3) var(--space-4); }
+  .pain-grid .card__text { line-height:1.45; }
+
+  /* garantia */
+  .guarantee { padding:var(--space-5) var(--space-4); gap:var(--space-5); }
+  .guarantee__points { gap:var(--space-2); }
+  .guarantee__point p { line-height:1.45; }
+
+  /* público-alvo em duas colunas */
+  .audience { grid-template-columns:repeat(2,1fr); gap:var(--space-2); }
+  .audience li { padding:var(--space-2) var(--space-3); line-height:1.35; align-items:flex-start; }
+  .audience svg { width:15px; height:15px; margin-top:2px; }
+
+  /* chamada final */
+  .final__contacts { gap:var(--space-2); }
+
+  /* exemplar: altura pelo conteúdo, sem vão interno */
+  .polaroid__shot { aspect-ratio:auto; }
+  .polaroid__sheet { margin:6px; padding:8px; gap:6px; }
+  .polaroid__qs { margin-top:var(--space-3); }
+  .polaroid__lines i:nth-child(n+4) { display:none; }
+
+  /* a barra fixa não pode cobrir o conteúdo do fim da seção */
+  body.has-sticky-cta { padding-bottom:74px; }
+  .sticky-cta .btn { font-size:var(--font-size-body-sm); padding:var(--space-3); }
+
+  /* CTAs cabem em uma linha */
+  .btn--cta { font-size:var(--font-size-body-sm); }
+  .btn--lg.btn--cta { font-size:var(--font-size-body); }
+  .gallery__foot .btn { background:transparent; border-color:var(--color-primary-deepgreen); color:var(--color-primary-deepgreen); }
+  .gallery__foot .btn svg { display:none; }
+}
+
+/* Telas muito estreitas */
+@media (max-width:390px) {
+  .polaroids > li { flex:0 0 82%; }
+  .testimonial-grid > .testimonial { flex:0 0 88%; }
+  .plan__value { font-size:2rem; }
+}</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Ir para o conteúdo principal</a>
@@ -1490,36 +1657,26 @@ body.has-sticky-cta .wa-float { bottom:88px; }
   <div class="container">
     <div class="hero__grid">
       <div class="hero__content">
-        <span class="overline">MATERIAIS PEDAGÓGICOS SOB MEDIDA</span>
+        <span class="overline">PARA PROFESSORES DA EDUCAÇÃO BÁSICA · A PARTIR DE R$&nbsp;297</span>
 
-        <h1 class="display hero__title" id="hero-title">Ainda perde horas preparando aulas?</h1>
+        <h1 class="display hero__title" id="hero-title">Sua sequência didática pronta em 48 horas — feita para a sua turma, não para uma turma genérica.</h1>
 
-        <p class="hero__subtitle">A Prof+ cria materiais pedagógicos feitos sob medida para a sua realidade — alinhados à BNCC, adaptados à sua turma e prontos para aplicar na próxima aula.</p>
-
-        <div class="hero__uvp">
-          <p class="lead">Você dedica tanto de si para os seus alunos. Mas e o seu tempo? Enquanto outros professores passam domingos inteiros criando provas e atividades do zero, você poderia estar descansando, se atualizando ou simplesmente sendo você.</p>
-          <p class="lead">A Prof+ existe para isso: para que o planejamento pedagógico nunca mais seja o motivo do seu esgotamento.</p>
-        </div>
-
-        <p class="hero__badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M18.5 5.5l1.5 1.5"/></svg>
-          Vagas limitadas esta semana
-        </p>
+        <p class="hero__subtitle">Você manda a disciplina, o ano, o livro didático que usa e como é a sua turma. A gente devolve o material alinhado à BNCC, em Word editável e PDF pronto para imprimir — com até 2 revisões inclusas.</p>
 
         <div class="hero__actions">
           <a href="https://wa.me/5568984216557?text=Ol%C3%A1!%20Quero%20materiais%20pedag%C3%B3gicos%20personalizados%20da%20Prof%2B" class="btn btn--primary btn--lg btn--cta btn--block-mobile" target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp com a Prof+ (abre em nova aba)">
             <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
-            QUERO MEUS MATERIAIS PRONTOS →
+            QUERO MEU MATERIAL EM 48H →
           </a>
           <a href="#precos" class="btn btn--outline btn--lg btn--cta btn--block-mobile">VER PLANOS E VALORES ↓</a>
         </div>
 
         <p class="hero__microcopy">
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Sem compromisso</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Resposta em até 2h em dias úteis</span>
           <span aria-hidden="true">·</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Resposta em até 24h</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Feito por professores, não por robô</span>
           <span aria-hidden="true">·</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Totalmente personalizado</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>+200 professores atendidos</span>
         </p>
       </div>
 
@@ -1559,7 +1716,7 @@ body.has-sticky-cta .wa-float { bottom:88px; }
 <aside class="warn-banner">
   <div class="container">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
-    <p><b>Atenção:</b> a Prof+ não é um banco de atividades prontas. Cada material é criado do zero para a <b>sua</b> turma, o <b>seu</b> livro didático e o currículo da <b>sua</b> rede — por quem entende de sala de aula.</p>
+    <p><b>Atenção:</b> isto não é um banco de atividades prontas nem um prompt de ChatGPT. Cada material é escrito por professores para a <b>sua</b> turma, o <b>seu</b> livro didático e o currículo da <b>sua</b> rede — e revisado por quem já deu aula.</p>
   </div>
 </aside>
 
@@ -1588,6 +1745,59 @@ body.has-sticky-cta .wa-float { bottom:88px; }
       </div>
     </div>
     <p class="proof__note">Dados referentes aos atendimentos realizados de 2024 a 2026.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 4 — PROBLEMA (PAS)
+     ============================================================ -->
+<section class="section section--subtle" aria-labelledby="problema-title">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="overline">A REALIDADE DE MUITOS PROFESSORES</span>
+      <h2 class="h1 section__title" id="problema-title">Você foi formado para ensinar. Não para perder fins de semana planejando.</h2>
+    </div>
+
+    <div class="prose reveal">
+      
+      <p>E não é só o tempo que vai embora. É a energia. É o sono. É o domingo que deveria ser de descanso.</p>
+    </div>
+
+    <div class="grid grid--4 pain-grid">
+      <article class="card card--hover reveal">
+        <div class="card__icon pain-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        </div>
+        <h3 class="h4 card__title">Horas perdidas toda semana</h3>
+        <p class="card__text">Professores gastam em média 6 a 10 horas semanais apenas preparando materiais — tempo que poderia ser dedicado à família, ao autocuidado ou à atualização profissional.</p>
+      </article>
+
+      <article class="card card--hover reveal">
+        <div class="card__icon pain-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 15.5c1-1 5-1 7 0M9 9.5h.01M15 9.5h.01"/></svg>
+        </div>
+        <h3 class="h4 card__title">Esgotamento que não para de crescer</h3>
+        <p class="card__text">O burnout docente é real. Parte dele vem exatamente da sobrecarga de tarefas administrativas e de planejamento que se acumulam fora do horário de aula.</p>
+      </article>
+
+      <article class="card card--hover reveal">
+        <div class="card__icon pain-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6a1 1 0 0 1 1 1v1H8V4a1 1 0 0 1 1-1z"/><path d="M16 5h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg>
+        </div>
+        <h3 class="h4 card__title">Materiais genéricos que não funcionam</h3>
+        <p class="card__text">Baixar atividades prontas da internet parece prático — mas raramente se encaixam no currículo da sua rede, no livro que você usa ou nas necessidades reais da sua turma.</p>
+      </article>
+
+      <article class="card card--hover reveal">
+        <div class="card__icon pain-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 2 9l10 5 10-5-10-5z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/></svg>
+        </div>
+        <h3 class="h4 card__title">Alunos com necessidades específicas sem suporte</h3>
+        <p class="card__text">Adaptar materiais para alunos com NEE ou dificuldades de aprendizagem exige tempo e conhecimento especializado — e geralmente recai sobre o professor sem nenhum apoio.</p>
+      </article>
+    </div>
+
+    <p class="transition-note reveal">Você não precisa resolver tudo sozinho. É exatamente aqui que a Prof+ entra.</p>
   </div>
 </section>
 
@@ -1667,7 +1877,7 @@ body.has-sticky-cta .wa-float { bottom:88px; }
      PLACEHOLDERS. Só o plano Completo (R$ 597) está definido.
      Trocar em .plan__value quando os valores forem fechados.
      ============================================================ -->
-<section class="section" id="precos" aria-labelledby="precos-title">
+<section class="section section--subtle" id="precos" aria-labelledby="precos-title">
   <span class="edge-curve edge-curve--tl" aria-hidden="true"></span>
   <div class="container">
     <div class="section__head reveal" style="max-width:720px">
@@ -1681,7 +1891,6 @@ body.has-sticky-cta .wa-float { bottom:88px; }
       <!-- Plano econômico -->
       <article class="plan reveal" aria-labelledby="plan-essencial">
         <h3 class="plan__name" id="plan-essencial">Essencial</h3>
-        <p class="plan__pitch">Para quem quer resolver um conteúdo específico com qualidade profissional.</p>
         <p class="plan__price">
           <span class="plan__currency">R$</span>
           <!-- PLACEHOLDER: definir valor do plano Essencial -->
@@ -1691,7 +1900,6 @@ body.has-sticky-cta .wa-float { bottom:88px; }
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
           Pagamento único
         </p>
-        <p class="plan__note">Ideal para testar o padrão Prof+ antes de fechar um pacote maior.</p>
         <ul class="plan__features">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>2 sequências didáticas</b> completas</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>1 prova com gabarito</span></li>
@@ -1711,7 +1919,6 @@ body.has-sticky-cta .wa-float { bottom:88px; }
           Mais escolhido
         </p>
         <h3 class="plan__name" id="plan-completo">Completo</h3>
-        <p class="plan__pitch">O bimestre inteiro resolvido de uma vez — é o que a maioria dos professores leva.</p>
         <p class="plan__price">
           <span class="plan__currency">R$</span>
           <span class="plan__value">597</span>
@@ -1720,7 +1927,6 @@ body.has-sticky-cta .wa-float { bottom:88px; }
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
           Pagamento único · sem assinatura
         </p>
-        <p class="plan__note">Sai menos por material do que contratar item por item.</p>
         <ul class="plan__features">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>6 sequências didáticas</b> completas</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Provas prontas</b> com gabarito e grade de correção</span></li>
@@ -1740,7 +1946,6 @@ body.has-sticky-cta .wa-float { bottom:88px; }
       <!-- Plano âncora -->
       <article class="plan reveal" aria-labelledby="plan-institucional">
         <h3 class="plan__name" id="plan-institucional">Institucional</h3>
-        <p class="plan__pitch">Para coordenações e projetos interdisciplinares com várias disciplinas envolvidas.</p>
         <p class="plan__price">
           <span class="plan__currency">R$</span>
           <!-- PLACEHOLDER: definir valor do plano Institucional -->
@@ -1750,7 +1955,6 @@ body.has-sticky-cta .wa-float { bottom:88px; }
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
           Pagamento único
         </p>
-        <p class="plan__note">Escopo fechado junto com a equipe pedagógica antes de iniciar.</p>
         <ul class="plan__features">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Pacote integrado para <b>até 4 disciplinas</b></span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Tema central e conexões entre os conteúdos</span></li>
@@ -1776,7 +1980,7 @@ body.has-sticky-cta .wa-float { bottom:88px; }
 <!-- ============================================================
      SEÇÃO 15 — GARANTIA
      ============================================================ -->
-<section class="section section--subtle" aria-labelledby="garantia-title">
+<section class="section" aria-labelledby="garantia-title">
   <div class="container">
     <div class="guarantee reveal">
       <div>
@@ -1792,6 +1996,12 @@ body.has-sticky-cta .wa-float { bottom:88px; }
 
       <div>
         <ul class="guarantee__points">
+          <!-- ATENÇÃO: confirmar com o cliente antes de divulgar.
+               Só publique a devolução de 7 dias se ela for realmente praticada. -->
+          <li class="guarantee__point guarantee__point--strong">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <p><b>Devolvemos 100% em até 7 dias</b> — se depois das revisões o material ainda não servir, é só mandar uma mensagem. Sem formulário e sem justificativa.</p>
+          </li>
           <li class="guarantee__point">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
             <p><b>Até 2 revisões inclusas</b> — sem custo adicional por ajustes dentro do escopo.</p>
@@ -1821,7 +2031,7 @@ body.has-sticky-cta .wa-float { bottom:88px; }
 <!-- ============================================================
      SEÇÃO 10 — GALERIA DE MATERIAIS (exemplares interativos)
      ============================================================ -->
-<section class="section" id="exemplares" aria-labelledby="galeria-title">
+<section class="section section--subtle" id="exemplares" aria-labelledby="galeria-title">
   <div class="container">
     <div class="section__head reveal">
       <span class="overline">EXEMPLOS DE MATERIAIS</span>
@@ -1829,12 +2039,7 @@ body.has-sticky-cta .wa-float { bottom:88px; }
       <p class="section__subtitle">Qualidade visual, estrutura pedagógica e formatação profissional em cada peça.</p>
     </div>
 
-    <div class="gallery__tabs" role="tablist" aria-label="Categorias de exemplares">
-      <button type="button" class="gallery__tab" role="tab" id="tab-exemplares" aria-controls="panel-exemplares" aria-selected="true">Exemplares recentes</button>
-      <button type="button" class="gallery__tab" role="tab" id="tab-outros" aria-controls="panel-outros" aria-selected="false" tabindex="-1">Outros formatos</button>
-    </div>
-
-    <div class="gallery__panel" role="tabpanel" id="panel-exemplares" aria-labelledby="tab-exemplares" tabindex="0">
+    <div class="gallery__panel">
       <ul class="polaroids">
         <li><article class="polaroid" tabindex="0" aria-label="Exemplar: Sequência Didática — Língua Portuguesa, 6º ano">
           <div class="polaroid__shot">
@@ -1918,50 +2123,6 @@ body.has-sticky-cta .wa-float { bottom:88px; }
       </ul>
     </div>
 
-    <div class="gallery__panel" role="tabpanel" id="panel-outros" aria-labelledby="tab-outros" tabindex="0" hidden>
-      <ul class="polaroids">
-        <li><article class="polaroid" tabindex="0" aria-label="Exemplar: Atividade de Fixação — Português, caça-palavras temático">
-          <div class="polaroid__shot">
-            <div class="polaroid__head"><span class="polaroid__disc">Português</span><span class="polaroid__year">Fixação</span></div>
-            <div class="polaroid__sheet">
-              <p class="polaroid__doc">Atividade de Fixação · Caça-palavras</p>
-              <div class="polaroid__lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-              <div class="polaroid__qs" aria-hidden="true">
-                <span class="polaroid__q"><b>1</b>Vocabulário temático</span>
-                <span class="polaroid__q"><b>2</b>Pronto para imprimir</span>
-                <span class="polaroid__q"><b>3</b>Gabarito incluso</span>
-              </div>
-            </div>
-            <span class="polaroid__stamp">LÚDICO</span>
-          </div>
-          <div class="polaroid__caption">
-            <strong>Atividade de Fixação — Português · caça-palavras temático</strong>
-            <span>Exemplar simulado</span>
-          </div>
-        </article></li>
-
-        <li><article class="polaroid" tabindex="0" aria-label="Exemplar: Sequência Didática — Educação Física, Ensino Médio">
-          <div class="polaroid__shot">
-            <div class="polaroid__head"><span class="polaroid__disc">Educação Física</span><span class="polaroid__year">E. Médio</span></div>
-            <div class="polaroid__sheet">
-              <p class="polaroid__doc">Sequência Didática · Esportes e saúde</p>
-              <div class="polaroid__lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="polaroid__qs" aria-hidden="true">
-                <span class="polaroid__q"><b>1</b>Práticas corporais</span>
-                <span class="polaroid__q"><b>2</b>Teoria aplicada</span>
-                <span class="polaroid__q"><b>3</b>Avaliação processual</span>
-              </div>
-            </div>
-            <span class="polaroid__stamp">BNCC</span>
-          </div>
-          <div class="polaroid__caption">
-            <strong>Sequência Didática — Educação Física · Ensino Médio</strong>
-            <span>Exemplar simulado</span>
-          </div>
-        </article></li>
-      </ul>
-    </div>
-
     <p class="section__note gallery__note reveal">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
       Todos os exemplos são materiais reais entregues a professores. Dados e turmas foram omitidos para preservar a privacidade.
@@ -1980,7 +2141,7 @@ body.has-sticky-cta .wa-float { bottom:88px; }
 <!-- ============================================================
      SEÇÃO 7 — COMO FUNCIONA
      ============================================================ -->
-<section class="section section--subtle" id="como-funciona" aria-labelledby="como-title">
+<section class="section" id="como-funciona" aria-labelledby="como-title">
   <div class="container">
     <div class="section__head reveal">
       <span class="overline">PROCESSO SIMPLES, RESULTADO PROFISSIONAL</span>
@@ -2040,7 +2201,7 @@ body.has-sticky-cta .wa-float { bottom:88px; }
       <h2 class="h1 section__title" id="depoimentos-title">Quem já usa a Prof+ não volta a planejar sozinho.</h2>
     </div>
 
-    <div class="grid grid--3">
+    <div class="grid grid--3 testimonial-grid">
       <article class="card card--hover testimonial reveal">
         <div class="testimonial__stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
@@ -2191,165 +2352,6 @@ body.has-sticky-cta .wa-float { bottom:88px; }
 </section>
 
 <!-- ============================================================
-     SEÇÃO 8 — DIFERENCIAIS COMPETITIVOS
-     ============================================================ -->
-<section class="section section--subtle" id="diferenciais" aria-labelledby="diferenciais-title">
-  <span class="edge-curve edge-curve--br" aria-hidden="true"></span>
-  <div class="container">
-    <div class="section__head reveal">
-      <span class="overline">POR QUE ESCOLHER A PROF+?</span>
-      <h2 class="h1 section__title" id="diferenciais-title">A diferença está nos detalhes que só um especialista vê.</h2>
-      <p class="section__subtitle">Não somos um banco de atividades. Somos o seu suporte pedagógico personalizado.</p>
-    </div>
-
-    <ul class="diff-list">
-      <li class="diff reveal">
-        <span class="diff__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></span>
-        <div>
-          <h3 class="h4 diff__title">100% personalizado para você</h3>
-          <p class="card__text">Cada material é criado do zero com base nas informações que você nos passa. Nenhum material é reaproveitado de outro professor sem adaptação.</p>
-        </div>
-      </li>
-      <li class="diff reveal">
-        <span class="diff__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C10.5 5 8.5 4.5 4 4.5v13C8.5 17.5 10.5 18 12 19.5c1.5-1.5 3.5-2 8-2v-13c-4.5 0-6.5.5-8 2z"/><path d="M12 6.5v13"/></svg></span>
-        <div>
-          <h3 class="h4 diff__title">Alinhamento rigoroso à BNCC</h3>
-          <p class="card__text">Todos os materiais são desenvolvidos com referência direta à Base Nacional Comum Curricular, garantindo que os objetivos de aprendizagem estejam sempre presentes.</p>
-        </div>
-      </li>
-      <li class="diff reveal">
-        <span class="diff__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l7-4 7 4v13"/><path d="M10 21v-5h4v5"/></svg></span>
-        <div>
-          <h3 class="h4 diff__title">Adequado ao currículo da sua rede</h3>
-          <p class="card__text">Sabemos que cada rede de ensino tem suas especificidades. Por isso, nos adaptamos ao currículo municipal ou estadual da sua escola.</p>
-        </div>
-      </li>
-      <li class="diff reveal">
-        <span class="diff__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2V4z"/><path d="M18 16h1.5a1.5 1.5 0 0 1 0 3H18M8 8h6M8 12h6"/></svg></span>
-        <div>
-          <h3 class="h4 diff__title">Compatível com o seu livro didático</h3>
-          <p class="card__text">Você não precisa abandonar o livro que já usa. Criamos materiais complementares e alinhados à coleção didática da sua escola.</p>
-        </div>
-      </li>
-      <li class="diff reveal">
-        <span class="diff__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 18.5V20"/><circle cx="10" cy="7.5" r="3.2"/><path d="M20 20v-1.5a3.5 3.5 0 0 0-2.6-3.4M15.5 4.6a3.2 3.2 0 0 1 0 6.2"/></svg></span>
-        <div>
-          <h3 class="h4 diff__title">Adaptado às necessidades da turma</h3>
-          <p class="card__text">Seja uma turma com alunos avançados, com NEE ou com dificuldades específicas, desenvolvemos materiais que respeitam e atendem a esse espectro.</p>
-        </div>
-      </li>
-      <li class="diff reveal">
-        <span class="diff__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M18.5 5.5l1.5 1.5"/></svg></span>
-        <div>
-          <h3 class="h4 diff__title">Economia real de tempo</h3>
-          <p class="card__text">Professores que trabalham com a Prof+ relatam economizar entre 6 e 10 horas semanais de planejamento. Tempo que vai para onde realmente importa.</p>
-        </div>
-      </li>
-      <li class="diff reveal">
-        <span class="diff__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11.5 11.5 14 16 9.5"/><rect x="4" y="4" width="16" height="16" rx="3"/></svg></span>
-        <div>
-          <h3 class="h4 diff__title">Pronto para aplicar, sem retrabalho</h3>
-          <p class="card__text">Entregamos os materiais em formatos prontos para uso imediato — PDF para impressão e Word editável para quem quiser personalizar algum detalhe.</p>
-        </div>
-      </li>
-      <li class="diff reveal">
-        <span class="diff__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 1 1-2.3-5.6"/><path d="M20 4v4.5h-4.5"/></svg></span>
-        <div>
-          <h3 class="h4 diff__title">Revisões incluídas no pedido</h3>
-          <p class="card__text">Não ficou exatamente como você imaginou? Incluímos até 2 rodadas de ajustes em cada pedido, sem custo adicional.</p>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<!-- ============================================================
-     SEÇÃO 4 — PROBLEMA (PAS)
-     ============================================================ -->
-<section class="section" aria-labelledby="problema-title">
-  <div class="container">
-    <div class="section__head reveal">
-      <span class="overline">A REALIDADE DE MUITOS PROFESSORES</span>
-      <h2 class="h1 section__title" id="problema-title">Você foi formado para ensinar. Não para perder fins de semana planejando.</h2>
-    </div>
-
-    <div class="prose reveal">
-      
-      <p>E não é só o tempo que vai embora. É a energia. É o sono. É o domingo que deveria ser de descanso.</p>
-    </div>
-
-    <div class="grid grid--4">
-      <article class="card card--hover reveal">
-        <div class="card__icon pain-card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
-        </div>
-        <h3 class="h4 card__title">Horas perdidas toda semana</h3>
-        <p class="card__text">Professores gastam em média 6 a 10 horas semanais apenas preparando materiais — tempo que poderia ser dedicado à família, ao autocuidado ou à atualização profissional.</p>
-      </article>
-
-      <article class="card card--hover reveal">
-        <div class="card__icon pain-card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 15.5c1-1 5-1 7 0M9 9.5h.01M15 9.5h.01"/></svg>
-        </div>
-        <h3 class="h4 card__title">Esgotamento que não para de crescer</h3>
-        <p class="card__text">O burnout docente é real. Parte dele vem exatamente da sobrecarga de tarefas administrativas e de planejamento que se acumulam fora do horário de aula.</p>
-      </article>
-
-      <article class="card card--hover reveal">
-        <div class="card__icon pain-card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6a1 1 0 0 1 1 1v1H8V4a1 1 0 0 1 1-1z"/><path d="M16 5h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg>
-        </div>
-        <h3 class="h4 card__title">Materiais genéricos que não funcionam</h3>
-        <p class="card__text">Baixar atividades prontas da internet parece prático — mas raramente se encaixam no currículo da sua rede, no livro que você usa ou nas necessidades reais da sua turma.</p>
-      </article>
-
-      <article class="card card--hover reveal">
-        <div class="card__icon pain-card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 2 9l10 5 10-5-10-5z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/></svg>
-        </div>
-        <h3 class="h4 card__title">Alunos com necessidades específicas sem suporte</h3>
-        <p class="card__text">Adaptar materiais para alunos com NEE ou dificuldades de aprendizagem exige tempo e conhecimento especializado — e geralmente recai sobre o professor sem nenhum apoio.</p>
-      </article>
-    </div>
-
-    <p class="transition-note reveal">Você não precisa resolver tudo sozinho. É exatamente aqui que a Prof+ entra.</p>
-  </div>
-</section>
-
-<!-- ============================================================
-     SEÇÃO 5 — SOLUÇÃO
-     ============================================================ -->
-<section class="section section--subtle" aria-labelledby="solucao-title">
-  <div class="container">
-    <div class="solution__grid">
-      <div>
-        <span class="overline">A SOLUÇÃO PROF+</span>
-        <h2 class="h1 section__title reveal" id="solucao-title">Materiais pedagógicos feitos para a sua realidade — não para uma turma genérica.</h2>
-        <p class="section__subtitle reveal" style="margin-bottom:var(--space-6)">A Prof+ cria, você aplica.</p>
-
-        <div class="prose reveal" style="margin-bottom:var(--space-8)">
-          <p>Diferente dos materiais prontos que você encontra na internet — criados para um professor imaginário, de uma turma imaginária — os materiais da Prof+ são desenvolvidos com base nas informações que você nos passa: sua rede de ensino, o livro didático que você usa, o ano escolar, os conteúdos que está trabalhando e as características da sua turma.</p>
-          <p>O resultado é um material que parece que foi você mesmo quem criou. Porque, de certa forma, foi.</p>
-        </div>
-
-        <ul class="chip-list reveal">
-          <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Alinhado à BNCC</li>
-          <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Compatível com o seu livro didático</li>
-          <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Adaptado à faixa etária</li>
-          <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Pronto para imprimir e aplicar</li>
-          <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Entrega rápida</li>
-        </ul>
-      </div>
-
-      <aside class="solution__aside reveal">
-        <img class="solution__symbol" src="assets/logo-symbol-light.png" alt="" aria-hidden="true" width="230" height="340">
-        <p class="solution__quote">A Prof+ cria o material.<br><em>Você aplica em sala.</em></p>
-      </aside>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
      SEÇÃO 9 — FAIXA DE DESTAQUE
      ============================================================ -->
 <section class="strip" aria-labelledby="strip-title">
@@ -2378,7 +2380,7 @@ body.has-sticky-cta .wa-float { bottom:88px; }
 <!-- ============================================================
      SEÇÃO 16 — FAQ
      ============================================================ -->
-<section class="section" id="faq" aria-labelledby="faq-title">
+<section class="section section--subtle" id="faq" aria-labelledby="faq-title">
   <div class="container">
     <div class="section__head reveal">
       <span class="overline">DÚVIDAS FREQUENTES</span>
@@ -2399,24 +2401,12 @@ body.has-sticky-cta .wa-float { bottom:88px; }
         <div class="faq__panel" id="faq-p3" role="region"><div><p>A maioria dos pedidos é entregue em até 48 horas úteis após a confirmação do pedido e o pagamento. Materiais mais extensos (como sequências completas ou pacotes com múltiplos itens) podem levar até 72 horas. Em caso de urgência, entre em contato pelo WhatsApp e avaliamos a possibilidade de entrega expressa.</p></div></div>
       </div>
       <div class="faq__item">
-        <h3 class="faq__heading"><button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-p4">Os materiais são alinhados à BNCC?<svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
-        <div class="faq__panel" id="faq-p4" role="region"><div><p>Sim. Todos os materiais produzidos pela Prof+ são desenvolvidos com referência direta à Base Nacional Comum Curricular (BNCC), respeitando as competências e habilidades previstas para cada etapa e componente curricular.</p></div></div>
-      </div>
-      <div class="faq__item">
         <h3 class="faq__heading"><button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-p5">E se o material não ficar do jeito que eu queria?<svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
         <div class="faq__panel" id="faq-p5" role="region"><div><p>Cada pedido inclui até 2 rodadas de revisão sem custo adicional. Você revisa o material, indica os ajustes necessários e nossa equipe corrige dentro do prazo acordado. Queremos que você fique satisfeito — sempre.</p></div></div>
       </div>
       <div class="faq__item">
         <h3 class="faq__heading"><button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-p6">A Prof+ faz materiais para educação especial e inclusiva?<svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
         <div class="faq__panel" id="faq-p6" role="region"><div><p>Sim. Desenvolvemos atividades adaptadas para alunos com TEA, TDAH, dislexia, discalculia e outras condições. Os materiais são criados com recursos visuais adequados, linguagem simplificada quando necessário e estrutura que respeita o ritmo de cada aluno.</p></div></div>
-      </div>
-      <div class="faq__item">
-        <h3 class="faq__heading"><button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-p7">Posso pedir materiais para qualquer disciplina e ano escolar?<svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
-        <div class="faq__panel" id="faq-p7" role="region"><div><p>Sim. Atendemos todas as disciplinas do currículo da Educação Básica — do 1º ano do Ensino Fundamental ao 3º ano do Ensino Médio, incluindo Educação de Jovens e Adultos (EJA). Se tiver dúvidas sobre a sua situação específica, entre em contato e verificamos juntos.</p></div></div>
-      </div>
-      <div class="faq__item">
-        <h3 class="faq__heading"><button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-p9">Em qual formato os materiais são entregues?<svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
-        <div class="faq__panel" id="faq-p9" role="region"><div><p>Os materiais são entregues em dois formatos: Word (.docx) para edições e personalização e PDF pronto para impressão. Caso prefira um formato diferente, é só nos informar no momento do pedido.</p></div></div>
       </div>
       <div class="faq__item">
         <h3 class="faq__heading"><button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-p10">Como funciona o processo de pagamento?<svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
@@ -2564,7 +2554,7 @@ body.has-sticky-cta .wa-float { bottom:88px; }
 <div class="sticky-cta" id="stickyCta" aria-hidden="true">
   <a href="https://wa.me/5568984216557?text=Ol%C3%A1!%20Quero%20materiais%20pedag%C3%B3gicos%20personalizados%20da%20Prof%2B" class="btn btn--primary btn--full btn--cta" target="_blank" rel="noopener" tabindex="-1">
     <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
-    QUERO MEUS MATERIAIS PRONTOS →
+    QUERO MEU MATERIAL EM 48H →
   </a>
 </div>
 

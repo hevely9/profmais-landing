@@ -13,26 +13,38 @@ assets/         logo, ícones, ilustrações e imagem de Open Graph da marca
 
 Sem build, sem dependências. Basta abrir o `index.html` ou publicar a pasta.
 
-## Ordem das seções
+## Mobile first
 
-A página está ordenada para conversão — o visitante chega ao preço por volta da 3ª tela:
+Mais de 80% do tráfego chega pelo WhatsApp, no celular. A versão mobile é a
+principal: **29,9 → 16,4 telas** (−45%).
+
+O que mudou: exemplares e depoimentos viraram carrossel horizontal com snap;
+cards de materiais e de dor viraram linhas compactas; os planos passaram a ter
+nome e preço na mesma linha (590px → 290–390px por card); a tabela comparativa
+esconde a coluna do meio; o botão flutuante some no celular para não disputar o
+polegar com a barra fixa. O desktop não foi alterado.
+
+## Ordem das seções
 
 1. Hero
 2. Faixa de diferenciação
 3. Prova social
-4. Materiais (o que você recebe)
-5. **Preços**
-6. Garantia
-7. Exemplares
-8. Como funciona
-9. Depoimentos
-10. Comparativo + público-alvo
-11. Diferenciais
-12. Problema
-13. Solução
-14. Faixa de destaque (CTA)
-15. FAQ
-16. Chamada final e contato
+4. Problema (dor)
+5. Materiais (o que você recebe)
+6. **Preços**
+7. Garantia
+8. Exemplares
+9. Como funciona
+10. Depoimentos
+11. Comparativo + público-alvo
+12. Faixa de destaque (CTA)
+13. FAQ
+14. Chamada final e contato
+
+**Removidas por não contribuírem para a conversão:** Solução e Diferenciais
+(redundantes com a faixa de diferenciação e com o comparativo), Casos de Uso,
+Logos placeholder e Estatísticas. FAQ enxuta de 17 para 7 perguntas, ordenada
+por objeção.
 
 ## Conversão
 
@@ -47,6 +59,13 @@ pré-preenchida conforme a seção de origem.
 - **Exemplares simulados:** as 4 polaroids da galeria são exemplos fictícios. Substituir
   por imagens de materiais reais entregues.
 - **Depoimentos:** os avatares usam iniciais. Fotos reais (com autorização) convertem mais.
+- **Garantia de 7 dias:** a devolução de 100% em 7 dias está publicada na seção de
+  garantia. **Confirme que ela é realmente praticada antes de divulgar a página** —
+  procure por `guarantee__point--strong` no `index.html`.
+- **Pendentes da auditoria de CRO:** definir os preços reais, publicar prints de
+  WhatsApp e uma amostra em PDF de verdade, e criar a seção "quem faz os seus
+  materiais" com foto e nome. Sem isso, a credibilidade continua sendo o ponto
+  mais fraco da página.
 
 ## Identidade visual
 
