@@ -36,15 +36,20 @@ polegar com a barra fixa. O desktop não foi alterado.
 8. Exemplares
 9. Como funciona
 10. Depoimentos
-11. Comparativo + público-alvo
-12. Faixa de destaque (CTA)
-13. FAQ
-14. Chamada final e contato
+11. Faixa de destaque (CTA)
+12. FAQ
+13. Chamada final e contato
 
-**Removidas por não contribuírem para a conversão:** Solução e Diferenciais
-(redundantes com a faixa de diferenciação e com o comparativo), Casos de Uso,
-Logos placeholder e Estatísticas. FAQ enxuta de 17 para 7 perguntas, ordenada
-por objeção.
+**Removidas por não contribuírem para a conversão:** Comparativo (+ público-alvo),
+Solução, Diferenciais, Casos de Uso, Logos placeholder e Estatísticas. FAQ enxuta
+de 17 para 7 perguntas, ordenada por objeção.
+
+## Exemplares
+
+As 4 polaroids da galeria usam **páginas de materiais reais** produzidos pela Prof+
+(Física, História, Química e Matemática), padronizadas em 660×880 (3:4) a partir dos
+originais. Para trocar, basta substituir os arquivos `assets/exemplo-*.jpg`
+mantendo a proporção.
 
 ## Conversão
 
@@ -56,8 +61,8 @@ pré-preenchida conforme a seção de origem.
 - **Preços placeholder:** apenas o plano **Completo (R$ 597)** está definido. Os valores
   do **Essencial (R$ 297)** e do **Institucional (R$ 1.297)** são provisórios — procure
   por `<!-- PLACEHOLDER -->` no `index.html`.
-- **Exemplares simulados:** as 4 polaroids da galeria são exemplos fictícios. Substituir
-  por imagens de materiais reais entregues.
+- **Prints de WhatsApp e seção "quem faz":** ainda pendentes. São hoje o ponto mais
+  fraco de credibilidade da página.
 - **Depoimentos:** os avatares usam iniciais. Fotos reais (com autorização) convertem mais.
 - **Garantia de 7 dias:** a devolução de 100% em 7 dias está publicada na seção de
   garantia. **Confirme que ela é realmente praticada antes de divulgar a página** —
