@@ -498,21 +498,12 @@ button { cursor:pointer; background:none; border:none; padding:0; }
 }
 @media (min-width:1024px) { .navbar { min-height:80px; } }
 
-/* Assinatura horizontal: símbolo à esquerda, logotipo à direita (DS 2.3) */
-.logo { display:inline-flex; align-items:center; gap:var(--space-3); }
-.logo__symbol { width:34px; height:auto; flex:0 0 auto; }
-@media (min-width:1024px) { .logo__symbol { width:40px; } }
-.logo__wordmark {
-  font-family:var(--font-family-primary);
-  font-weight:var(--font-weight-semibold);
-  font-size:1.5rem;
-  line-height:1;
-  color:var(--color-primary-deepgreen);
-  letter-spacing:var(--letter-spacing-tighter);
-}
-@media (min-width:1024px) { .logo__wordmark { font-size:1.75rem; } }
-/* O sinal "+" nunca muda de cor em aplicações coloridas (DS 2.1) */
-.logo__plus { color:var(--color-primary-orange); }
+/* Assinatura horizontal oficial (DS 2.1) — arquivo único da marca.
+   Nunca recompor com texto: o logotipo tem desenho próprio. */
+.logo { display:inline-flex; align-items:center; }
+.logo__full { width:auto; height:38px; }
+@media (min-width:768px)  { .logo__full { height:44px; } }
+@media (min-width:1024px) { .logo__full { height:50px; } }
 
 .nav-links { display:none; }
 @media (min-width:1024px) {
@@ -1131,9 +1122,8 @@ button { cursor:pointer; background:none; border:none; padding:0; }
 .footer-grid { display:grid; gap:var(--space-10); }
 @media (min-width:768px)  { .footer-grid { grid-template-columns:repeat(2,1fr); } }
 @media (min-width:1024px) { .footer-grid { grid-template-columns:1.6fr 1fr 1fr 1.2fr; gap:var(--space-12); } }
-.footer-logo { display:inline-flex; align-items:center; gap:var(--space-3); margin-bottom:var(--space-5); }
-.footer-logo img { width:38px; }
-.footer-logo .logo__wordmark { color:var(--color-secondary-offwhite); }
+.footer-logo { display:inline-flex; align-items:center; margin-bottom:var(--space-5); }
+.footer-logo img { width:auto; height:52px; }
 .footer-tagline {
   font-family:var(--font-family-mono); font-size:var(--font-size-overline);
   letter-spacing:var(--letter-spacing-widest); text-transform:uppercase;
@@ -1446,8 +1436,7 @@ body.has-sticky-cta .wa-float { bottom:88px; }
   <div class="container">
     <nav class="navbar" aria-label="Navegação principal">
       <a href="#topo" class="logo" aria-label="Prof+ — Materiais pedagógicos personalizados">
-        <img class="logo__symbol" src="assets/logo-symbol.png" alt="" aria-hidden="true" width="230" height="340">
-        <span class="logo__wordmark">Prof<span class="logo__plus">+</span></span>
+        <img class="logo__full" src="assets/logo-horizontal.png" alt="Prof+" width="1274" height="711">
       </a>
 
       <ul class="nav-links">
@@ -2504,8 +2493,7 @@ body.has-sticky-cta .wa-float { bottom:88px; }
     <div class="footer-grid">
       <div>
         <div class="footer-logo">
-          <img src="assets/logo-symbol-light.png" alt="" aria-hidden="true" width="230" height="340">
-          <span class="logo__wordmark">Prof<span class="logo__plus">+</span></span>
+          <img src="assets/logo-horizontal-light.png" alt="Prof+" width="1274" height="711">
         </div>
         <p class="footer-tagline">Educar, Transformar, Inspirar.</p>
         <p class="body-sm">Materiais pedagógicos personalizados para professores que querem mais tempo, mais qualidade e mais leveza no planejamento.</p>
