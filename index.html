@@ -1,0 +1,2824 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prof+ | Materiais Pedagógicos Personalizados para Professores</title>
+<meta name="description" content="Sequências didáticas, provas, atividades e muito mais — feitos sob medida para a sua realidade de sala. Economize horas de planejamento com a Prof+. Solicite seu orçamento agora.">
+<meta name="keywords" content="materiais pedagógicos personalizados, sequência didática pronta, provas personalizadas professor, atividades BNCC, planejamento de aulas, materiais didáticos adaptados, atividades adaptadas NEE, trabalhos avaliativos prontos, economia de tempo professor, planejamento pedagógico">
+<meta name="author" content="Prof+">
+<meta name="theme-color" content="#0E4B3C">
+<link rel="canonical" href="https://hevely9.github.io/profmais-landing/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Prof+">
+<meta property="og:title" content="Prof+ | Você ensina. A gente prepara o material.">
+<meta property="og:description" content="Materiais pedagógicos 100% personalizados para a sua turma, alinhados à BNCC e prontos para aplicar. Economize seu tempo para o que realmente importa: ensinar.">
+<meta property="og:url" content="https://hevely9.github.io/profmais-landing/">
+<meta property="og:image" content="https://hevely9.github.io/profmais-landing/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Prof+ | Você ensina. A gente prepara o material.">
+<meta name="twitter:description" content="Materiais pedagógicos 100% personalizados para a sua turma, alinhados à BNCC e prontos para aplicar.">
+<meta name="twitter:image" content="https://hevely9.github.io/profmais-landing/assets/og-image.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   PROF+ — LANDING PAGE
+   Implementação do Design System Prof+ v1.0 (Documento 2).
+   Toda a copy provém do Documento 1 e está reproduzida na
+   íntegra, sem alterações.
+   Regra de laranja (DS 4.5): um único ponto de Laranja Vivo por
+   peça — aqui reservado ao antetítulo (overline), aos CTAs
+   secundários/WhatsApp e ao anel de foco.
+   ============================================================ */
+
+/* ---------- PARTE 17 — DESIGN TOKENS ---------- */
+:root {
+  /* 17.1 Cor — institucionais */
+  --color-primary-deepgreen: #0E4B3C;
+  --color-primary-orange:    #E36B1F;
+  --color-secondary-sand:    #EFDCA9;
+  --color-secondary-offwhite:#F6F1E3;
+  --color-support-nightgreen:#1E3A30;
+  --color-support-mossgreen: #27493F;
+
+  /* Cor — semânticas */
+  --color-semantic-success: #2D7A4F;
+  --color-semantic-error:   #C0392B;
+  --color-semantic-warning: #E36B1F;
+  --color-semantic-info:    #2980B9;
+
+  /* Cor — escala de cinzas */
+  --color-gray-900: #1A1A1A;
+  --color-gray-700: #4A4A4A;
+  --color-gray-500: #7A7A7A;
+  --color-gray-300: #BCBCBC;
+  --color-gray-100: #F0F0F0;
+  --color-white:    #FFFFFF;
+
+  /* Cor — background e surface */
+  --color-bg-default:      #F6F1E3;
+  --color-bg-subtle:       #EDE7D4;
+  --color-surface-default: #FFFFFF;
+  --color-surface-raised:  #F6F1E3;
+  --color-surface-overlay: rgba(14,75,60,0.08);
+
+  /* Cor — bordas */
+  --color-border-default: rgba(14,75,60,0.20);
+  --color-border-strong:  rgba(14,75,60,0.40);
+  --color-border-focus:   #E36B1F;
+  --color-border-error:   #C0392B;
+  --color-border-subtle:  #BCBCBC;
+
+  /* Derivadas de estado (escurecimento 8% / 12% — DS 12.1) */
+  --color-green-hover:  #0B3E32;
+  --color-green-active: #093428;
+  --color-orange-hover: #CE5F15;
+  --color-orange-active:#B95511;
+  --color-green-04: rgba(14,75,60,0.04);
+  --color-green-06: rgba(14,75,60,0.06);
+  --color-green-08: rgba(14,75,60,0.08);
+  --color-green-12: rgba(14,75,60,0.12);
+
+  /* 17.2 Tipografia */
+  /* Tipografia unificada em Inter (decisão de projeto: peso visual de
+     resposta direta, referência lp.didata.ai). O logotipo Prof+ segue
+     com o desenho original da marca no arquivo de assinatura. */
+  --font-family-primary:   'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-secondary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono:      'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --font-weight-regular:  400;
+  --font-weight-medium:   500;
+  --font-weight-semibold:  600;
+  --font-weight-bold:      700;
+  --font-weight-extrabold: 800;
+
+  --font-size-display:  4rem;      /* 64px */
+  --font-size-h1:       3rem;      /* 48px */
+  --font-size-h2:       2.25rem;   /* 36px */
+  --font-size-h3:       1.75rem;   /* 28px */
+  --font-size-h4:       1.375rem;  /* 22px */
+  --font-size-h5:       1.125rem;  /* 18px */
+  --font-size-h6:       1rem;      /* 16px */
+  --font-size-body-lg:  1.125rem;  /* 18px */
+  --font-size-body:     1rem;      /* 16px */
+  --font-size-body-sm:  0.875rem;  /* 14px */
+  --font-size-caption:  0.75rem;   /* 12px */
+  --font-size-overline: 0.6875rem; /* 11px */
+  --font-size-label:    0.875rem;  /* 14px */
+
+  --line-height-tight:   1.1;
+  --line-height-snug:    1.25;
+  --line-height-normal:  1.5;
+  --line-height-relaxed: 1.6;
+  --line-height-loose:   1.8;
+
+  --letter-spacing-tighter: -0.01em;
+  --letter-spacing-normal:  0;
+  --letter-spacing-wider:   0.06em;
+  --letter-spacing-widest:  0.08em;
+
+  /* 17.3 Espaçamento (base 4px) */
+  --space-1:4px;   --space-2:8px;   --space-3:12px;  --space-4:16px;
+  --space-5:20px;  --space-6:24px;  --space-8:32px;  --space-10:40px;
+  --space-12:48px; --space-16:64px; --space-20:80px; --space-24:96px;
+  --space-32:128px;
+
+  /* 17.4 Border radius */
+  --radius-none:0px; --radius-xs:4px;  --radius-sm:8px;   --radius-md:12px;
+  --radius-lg:16px;  --radius-xl:24px; --radius-2xl:32px; --radius-full:9999px;
+
+  /* 17.5 Sombras */
+  --shadow-none:   none;
+  --shadow-sm:     0 1px 3px rgba(14,75,60,0.10), 0 1px 2px rgba(14,75,60,0.06);
+  --shadow-md:     0 4px 6px rgba(14,75,60,0.08), 0 2px 4px rgba(14,75,60,0.06);
+  --shadow-lg:     0 10px 15px rgba(14,75,60,0.10), 0 4px 6px rgba(14,75,60,0.05);
+  --shadow-xl:     0 20px 25px rgba(14,75,60,0.12), 0 10px 10px rgba(14,75,60,0.04);
+  --shadow-inner:  inset 0 2px 4px rgba(14,75,60,0.08);
+  --shadow-focus:  0 0 0 3px rgba(227,107,31,0.40);
+
+  /* 17.6 Z-index */
+  --z-base:0; --z-raised:10; --z-dropdown:100; --z-sticky:200; --z-fixed:300;
+  --z-modal-bg:400; --z-modal:500; --z-popover:600; --z-tooltip:700;
+  --z-toast:800; --z-topmost:900;
+
+  /* 17.8 Motion */
+  --duration-instant:0ms; --duration-fast:100ms;  --duration-normal:200ms;
+  --duration-slow:300ms;  --duration-slower:400ms; --duration-slowest:600ms;
+
+  --easing-linear: cubic-bezier(0,0,1,1);
+  --easing-in:     cubic-bezier(0.4,0,1,1);
+  --easing-out:    cubic-bezier(0,0,0.2,1);
+  --easing-in-out: cubic-bezier(0.4,0,0.2,1);
+  --easing-bounce: cubic-bezier(0.34,1.56,0.64,1);
+  --easing-spring: cubic-bezier(0.175,0.885,0.32,1.275);
+
+  /* Layout — PARTE 5 */
+  --container-max: 1200px;
+  --container-pad: 16px;
+}
+
+@media (min-width:768px) { :root { --container-pad:24px; } }
+@media (min-width:1024px){ :root { --container-pad:32px; } }
+@media (min-width:1280px){ :root { --container-pad:40px; } }
+
+/* ---------- RESET ---------- */
+*,*::before,*::after { box-sizing:border-box; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; overflow-x:hidden; }
+body {
+  margin:0;
+  font-family:var(--font-family-secondary);
+  font-size:var(--font-size-body);
+  font-weight:var(--font-weight-regular);
+  line-height:var(--line-height-relaxed);
+  color:var(--color-gray-700);
+  background:var(--color-bg-default);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4,h5,h6 { margin:0; font-family:var(--font-family-primary); color:var(--color-primary-deepgreen); }
+p { margin:0; }
+ul,ol { margin:0; padding:0; list-style:none; }
+a { color:inherit; text-decoration:none; }
+img,svg { display:block; max-width:100%; }
+button,input,select,textarea { font:inherit; color:inherit; }
+button { cursor:pointer; background:none; border:none; padding:0; }
+
+/* 15.6 prefers-reduced-motion */
+@media (prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+  *,*::before,*::after {
+    animation-duration:0.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:0.01ms !important;
+  }
+  .reveal { opacity:1 !important; transform:none !important; }
+}
+
+/* 14.4 Foco visível — outline 3px Laranja Vivo, offset 2px */
+:focus-visible {
+  outline:3px solid var(--color-primary-orange);
+  outline-offset:2px;
+  border-radius:var(--radius-xs);
+}
+:focus:not(:focus-visible) { outline:none; }
+
+/* Skip link (14.3) */
+.skip-link {
+  position:absolute; left:-9999px; top:0; z-index:var(--z-topmost);
+  background:var(--color-primary-deepgreen); color:var(--color-secondary-offwhite);
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold);
+  font-size:var(--font-size-body-sm);
+  padding:var(--space-3) var(--space-5); border-radius:var(--radius-sm);
+}
+.skip-link:focus { left:var(--space-4); top:var(--space-4); }
+
+.sr-only {
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
+
+/* ---------- LAYOUT ---------- */
+.container {
+  width:100%; max-width:var(--container-max);
+  margin-inline:auto; padding-inline:var(--container-pad);
+}
+.container--narrow { max-width:860px; }
+
+/* overflow:hidden contém as curvas decorativas, que entram e saem
+   pelas bordas da tela (DS 5.6) sem gerar scroll horizontal. */
+.section { position:relative; overflow:hidden; padding-block:var(--space-12); }
+@media (min-width:768px)  { .section { padding-block:var(--space-16); } }
+@media (min-width:1024px) { .section { padding-block:var(--space-20); } }
+
+.section--subtle { background:var(--color-bg-subtle); }
+.section--green  { background:var(--color-primary-deepgreen); }
+.section--green .section__title,
+.section--green h2,.section--green h3 { color:var(--color-secondary-offwhite); }
+
+/* Curvas pelas bordas (DS 5.6) — raio amplo, entram e saem pelas bordas */
+.edge-curve {
+  position:absolute; border-radius:var(--radius-full);
+  pointer-events:none; z-index:var(--z-base);
+}
+.edge-curve--tl { top:-38%;  left:-22%;  width:52vw; height:52vw; background:var(--color-green-04); }
+.edge-curve--br { bottom:-42%; right:-18%; width:46vw; height:46vw; background:var(--color-green-04); }
+.section--green .edge-curve--tl { background:var(--color-support-mossgreen); opacity:.55; }
+.section--green .edge-curve--br { background:var(--color-support-nightgreen); opacity:.7; }
+.section > .container { position:relative; z-index:var(--z-raised); }
+
+/* Padrão modular (DS 5.6) — faixas de quartos de círculo no topo/base */
+.pattern-band {
+  height:14px; width:100%;
+  background-image:url('assets/pattern-modular.png');
+  background-size:auto 100%; background-repeat:repeat-x;
+  opacity:.9;
+}
+@media (min-width:768px) { .pattern-band { height:18px; } }
+
+/* ---------- TIPOGRAFIA (4.4) ---------- */
+/* Antetítulo: pílula sólida — leitura imediata, estilo resposta direta */
+.overline {
+  display:inline-flex; align-items:center; gap:var(--space-2);
+  font-family:var(--font-family-primary);
+  font-weight:var(--font-weight-bold);
+  font-size:var(--font-size-caption);
+  line-height:1;
+  letter-spacing:0.09em;
+  text-transform:uppercase;
+  color:var(--color-primary-orange);
+  background:rgba(227,107,31,0.10);
+  padding:var(--space-2) var(--space-4);
+  border-radius:var(--radius-full);
+  margin-bottom:var(--space-5);
+}
+.overline::before {
+  content:""; width:6px; height:6px; border-radius:var(--radius-full);
+  background:currentColor; flex:0 0 auto;
+}
+.section--green .overline, .proof .overline, .final .overline {
+  color:var(--color-secondary-sand); background:rgba(239,220,169,0.14);
+}
+
+.display, .h1, .h2 { letter-spacing:-0.028em; }
+.h3, .h4 { letter-spacing:-0.015em; }
+.display {
+  font-size:1.75rem; font-weight:var(--font-weight-bold);
+  line-height:var(--line-height-tight);
+}
+@media (min-width:480px) { .display { font-size:2.125rem; } }
+@media (min-width:768px) { .display { font-size:2.75rem; } }
+@media (min-width:1024px){ .display { font-size:3.5rem;  } }
+@media (min-width:1280px){ .display { font-size:var(--font-size-display); } }
+
+.h1 { font-size:1.625rem; font-weight:var(--font-weight-bold); line-height:var(--line-height-snug); }
+@media (min-width:768px) { .h1 { font-size:2rem; } }
+@media (min-width:1024px){ .h1 { font-size:2.5rem; } }
+@media (min-width:1280px){ .h1 { font-size:var(--font-size-h1); } }
+
+.h2 { font-size:1.5rem; font-weight:var(--font-weight-bold); line-height:var(--line-height-snug); }
+@media (min-width:768px) { .h2 { font-size:1.875rem; } }
+@media (min-width:1024px){ .h2 { font-size:var(--font-size-h2); } }
+
+.h3 { font-size:1.25rem; font-weight:var(--font-weight-semibold); line-height:var(--line-height-snug); }
+@media (min-width:1024px){ .h3 { font-size:1.5rem; } }
+
+.h4 { font-size:1.125rem; font-weight:var(--font-weight-semibold); line-height:1.3; }
+@media (min-width:1024px){ .h4 { font-size:var(--font-size-h4); } }
+
+.h5 { font-size:var(--font-size-h5); font-weight:var(--font-weight-medium); line-height:1.35; }
+
+.lead {
+  font-size:var(--font-size-body-lg); line-height:var(--line-height-relaxed);
+  color:var(--color-gray-700);
+}
+.body-sm { font-size:var(--font-size-body-sm); line-height:var(--line-height-normal); }
+.caption {
+  font-size:var(--font-size-caption); line-height:var(--line-height-normal);
+  color:var(--color-gray-500);
+}
+.section--green .caption,
+.section--green p { color:rgba(246,241,227,0.82); }
+
+.section__head { max-width:760px; margin-bottom:var(--space-10); }
+@media (min-width:1024px){ .section__head { margin-bottom:var(--space-12); } }
+.section__title { margin-bottom:var(--space-4); }
+.section__subtitle {
+  font-family:var(--font-family-primary);
+  font-weight:var(--font-weight-semibold);
+  font-size:var(--font-size-h5);
+  line-height:1.4;
+  color:rgba(14,75,60,0.80);
+}
+.section--green .section__subtitle { color:rgba(246,241,227,0.86); }
+
+/* ---------- 12.1 BOTÕES ---------- */
+.btn {
+  display:inline-flex; align-items:center; justify-content:center; gap:var(--space-2);
+  font-family:var(--font-family-primary);
+  font-weight:var(--font-weight-semibold);
+  font-size:var(--font-size-body);
+  line-height:1;
+  min-height:44px; min-width:100px;
+  padding:var(--space-3) var(--space-5);
+  border-radius:var(--radius-md);
+  border:2px solid transparent;
+  text-align:center;
+  transition:background-color var(--duration-normal) var(--easing-out),
+             box-shadow var(--duration-normal) var(--easing-out),
+             transform var(--duration-fast) var(--easing-in),
+             color var(--duration-normal) var(--easing-out);
+}
+.btn:active { transform:scale(0.98); }
+.btn__icon { width:20px; height:20px; flex:0 0 auto; }
+
+.btn--lg { font-size:var(--font-size-body-lg); padding:var(--space-4) var(--space-8); min-width:120px; min-height:52px; }
+.btn--sm { font-size:var(--font-size-body-sm); padding:var(--space-2) var(--space-4); min-width:80px; }
+
+.btn--primary { background:var(--color-primary-deepgreen); color:var(--color-secondary-offwhite); box-shadow:var(--shadow-sm); }
+.btn--primary:hover { background:var(--color-green-hover); box-shadow:var(--shadow-md); }
+.btn--primary:active { background:var(--color-green-active); box-shadow:var(--shadow-inner); }
+
+.btn--secondary { background:var(--color-primary-orange); color:var(--color-secondary-offwhite); box-shadow:var(--shadow-sm); }
+.btn--secondary:hover { background:var(--color-orange-hover); box-shadow:var(--shadow-md); }
+.btn--secondary:active { background:var(--color-orange-active); box-shadow:var(--shadow-inner); }
+
+.btn--outline { background:transparent; border-color:var(--color-primary-deepgreen); color:var(--color-primary-deepgreen); }
+.btn--outline:hover { background:var(--color-green-08); }
+
+.btn--ghost { background:transparent; color:var(--color-primary-deepgreen); border-color:transparent; }
+.btn--ghost:hover { background:var(--color-green-06); }
+
+.btn--on-green { background:var(--color-secondary-offwhite); color:var(--color-primary-deepgreen); }
+.btn--on-green:hover { background:var(--color-secondary-sand); }
+
+.btn--full { width:100%; }
+@media (max-width:767px) { .btn--block-mobile { width:100%; } }
+
+.btn[aria-disabled="true"] { opacity:.4; cursor:not-allowed; }
+.btn.is-loading { pointer-events:none; }
+.btn.is-loading .btn__label { visibility:hidden; }
+.spinner {
+  width:20px; height:20px; border-radius:var(--radius-full);
+  border:2px solid rgba(246,241,227,0.35);
+  border-top-color:var(--color-secondary-offwhite);
+  animation:spin 700ms linear infinite;
+}
+@keyframes spin { to { transform:rotate(360deg); } }
+
+/* ---------- 12.13 BADGE / CHIP ---------- */
+.badge {
+  display:inline-flex; align-items:center; gap:var(--space-2);
+  font-family:var(--font-family-primary);
+  font-weight:var(--font-weight-semibold);
+  font-size:var(--font-size-caption);
+  letter-spacing:var(--letter-spacing-wider);
+  text-transform:uppercase;
+  padding:var(--space-2) var(--space-3);
+  border-radius:var(--radius-full);
+  line-height:1;
+}
+.badge--orange { background:var(--color-primary-orange); color:var(--color-secondary-offwhite); }
+.badge--sand   { background:var(--color-secondary-sand); color:var(--color-primary-deepgreen); }
+.badge--subtle { background:var(--color-green-08); color:var(--color-primary-deepgreen); }
+
+.chip {
+  display:inline-flex; align-items:center; gap:var(--space-2);
+  font-family:var(--font-family-primary);
+  font-weight:var(--font-weight-medium);
+  font-size:var(--font-size-body-sm);
+  padding:var(--space-3) var(--space-4);
+  border-radius:var(--radius-full);
+  background:var(--color-surface-default);
+  border:1px solid var(--color-border-default);
+  color:var(--color-primary-deepgreen);
+  box-shadow:var(--shadow-sm);
+}
+.chip svg { width:18px; height:18px; flex:0 0 auto; color:var(--color-semantic-success); }
+.chip-list { display:flex; flex-wrap:wrap; gap:var(--space-3); }
+
+/* ---------- 12.7 CARDS ---------- */
+.card {
+  background:var(--color-surface-default);
+  border:1px solid var(--color-border-default);
+  border-radius:var(--radius-lg);
+  padding:var(--space-6);
+  box-shadow:var(--shadow-md);
+  transition:box-shadow var(--duration-normal) var(--easing-out),
+             transform var(--duration-normal) var(--easing-out);
+  height:100%;
+}
+@media (min-width:1024px) { .card { padding:var(--space-8); } }
+.card--hover:hover { box-shadow:var(--shadow-lg); transform:translateY(-2px); }
+
+.card__icon {
+  width:48px; height:48px; flex:0 0 auto;
+  display:grid; place-items:center;
+  border-radius:var(--radius-md);
+  background:var(--color-green-08);
+  color:var(--color-primary-deepgreen);
+  margin-bottom:var(--space-5);
+}
+.card__icon svg { width:26px; height:26px; }
+.card__title { margin-bottom:var(--space-3); }
+.card__text { font-size:var(--font-size-body); line-height:var(--line-height-relaxed); color:var(--color-gray-700); }
+
+.grid { display:grid; gap:var(--space-4); }
+@media (min-width:768px)  { .grid { gap:var(--space-5); } }
+@media (min-width:1024px) { .grid { gap:var(--space-6); } }
+.grid--2 { grid-template-columns:1fr; }
+.grid--3 { grid-template-columns:1fr; }
+.grid--4 { grid-template-columns:1fr; }
+@media (min-width:768px) {
+  .grid--2,.grid--3,.grid--4 { grid-template-columns:repeat(2,1fr); }
+}
+@media (min-width:1024px) {
+  .grid--3 { grid-template-columns:repeat(3,1fr); }
+  .grid--4 { grid-template-columns:repeat(4,1fr); }
+}
+
+/* Animação de entrada (15.5) */
+.reveal { opacity:0; transform:translateY(24px); }
+.reveal.is-visible {
+  opacity:1; transform:none;
+  transition:opacity var(--duration-slowest) var(--easing-out),
+             transform var(--duration-slowest) var(--easing-out);
+}
+
+/* ============================================================
+   12.8 NAVBAR
+   ============================================================ */
+.site-header {
+  position:sticky; top:0; z-index:var(--z-sticky);
+  background:var(--color-bg-default);
+  transition:box-shadow var(--duration-normal) var(--easing-out),
+             background-color var(--duration-normal) var(--easing-out);
+}
+.site-header.is-scrolled {
+  box-shadow:var(--shadow-sm);
+  background:rgba(246,241,227,0.94);
+  backdrop-filter:saturate(140%) blur(8px);
+}
+.navbar {
+  display:flex; align-items:center; justify-content:space-between; gap:var(--space-6);
+  min-height:68px;
+}
+@media (min-width:1024px) { .navbar { min-height:80px; } }
+
+/* Assinatura horizontal: símbolo à esquerda, logotipo à direita (DS 2.3) */
+.logo { display:inline-flex; align-items:center; gap:var(--space-3); }
+.logo__symbol { width:34px; height:auto; flex:0 0 auto; }
+@media (min-width:1024px) { .logo__symbol { width:40px; } }
+.logo__wordmark {
+  font-family:var(--font-family-primary);
+  font-weight:var(--font-weight-semibold);
+  font-size:1.5rem;
+  line-height:1;
+  color:var(--color-primary-deepgreen);
+  letter-spacing:var(--letter-spacing-tighter);
+}
+@media (min-width:1024px) { .logo__wordmark { font-size:1.75rem; } }
+/* O sinal "+" nunca muda de cor em aplicações coloridas (DS 2.1) */
+.logo__plus { color:var(--color-primary-orange); }
+
+.nav-links { display:none; }
+@media (min-width:1024px) {
+  .nav-links { display:flex; align-items:center; gap:var(--space-1); }
+}
+.nav-links a {
+  display:inline-block;
+  font-family:var(--font-family-primary);
+  font-weight:var(--font-weight-medium);
+  font-size:var(--font-size-body-sm);
+  color:var(--color-primary-deepgreen);
+  padding:var(--space-2) var(--space-3);
+  border-radius:var(--radius-sm);
+  border-bottom:2px solid transparent;
+  transition:background-color var(--duration-normal) var(--easing-out),
+             border-color var(--duration-normal) var(--easing-out);
+}
+.nav-links a:hover { background:var(--color-green-06); }
+.nav-links a.is-active { border-bottom-color:var(--color-primary-orange); }
+
+.nav-actions { display:flex; align-items:center; gap:var(--space-3); }
+.nav-actions .btn { display:none; }
+@media (min-width:1024px) { .nav-actions .btn { display:inline-flex; } }
+
+.nav-toggle {
+  width:44px; height:44px; display:grid; place-items:center;
+  border-radius:var(--radius-sm); color:var(--color-primary-deepgreen);
+}
+.nav-toggle svg { width:26px; height:26px; }
+@media (min-width:1024px) { .nav-toggle { display:none; } }
+.nav-toggle .icon-close { display:none; }
+.nav-toggle[aria-expanded="true"] .icon-open  { display:none; }
+.nav-toggle[aria-expanded="true"] .icon-close { display:block; }
+
+/* 12.11 Drawer de navegação mobile */
+.nav-drawer {
+  display:none;
+  border-top:1px solid var(--color-border-default);
+  background:var(--color-bg-default);
+  padding-block:var(--space-4) var(--space-6);
+}
+.nav-drawer.is-open { display:block; }
+@media (min-width:1024px) { .nav-drawer, .nav-drawer.is-open { display:none; } }
+.nav-drawer ul { display:flex; flex-direction:column; }
+.nav-drawer a {
+  display:block; padding:var(--space-3) var(--space-2);
+  font-family:var(--font-family-primary);
+  font-weight:var(--font-weight-medium);
+  color:var(--color-primary-deepgreen);
+  border-radius:var(--radius-sm);
+  min-height:44px;
+}
+.nav-drawer a:hover { background:var(--color-green-06); }
+.nav-drawer .btn { margin-top:var(--space-4); }
+
+/* ============================================================
+   SEÇÃO 2 — HERO
+   ============================================================ */
+.hero { position:relative; overflow:hidden; padding-block:var(--space-12) var(--space-16); }
+@media (min-width:1024px) { .hero { padding-block:var(--space-20) var(--space-24); } }
+
+.hero__grid { display:grid; gap:var(--space-10); align-items:center; }
+@media (min-width:1024px) { .hero__grid { grid-template-columns:1.05fr 0.95fr; gap:var(--space-16); } }
+
+.hero__title { margin-bottom:var(--space-5); }
+.hero__subtitle {
+  font-family:var(--font-family-primary);
+  font-weight:var(--font-weight-semibold);
+  font-size:var(--font-size-h5);
+  line-height:1.45;
+  color:rgba(14,75,60,0.82);
+  margin-bottom:var(--space-6);
+}
+@media (min-width:1024px) { .hero__subtitle { font-size:1.25rem; } }
+.hero__uvp { display:grid; gap:var(--space-4); margin-bottom:var(--space-8); max-width:56ch; }
+.hero__actions { display:flex; flex-wrap:wrap; gap:var(--space-4); margin-bottom:var(--space-5); }
+@media (max-width:767px) { .hero__actions { flex-direction:column; } }
+
+.hero__microcopy {
+  display:flex; flex-wrap:wrap; align-items:center; gap:var(--space-2) var(--space-4);
+  font-size:var(--font-size-body-sm); color:var(--color-gray-700);
+}
+.hero__microcopy span { display:inline-flex; align-items:center; gap:var(--space-2); }
+.hero__microcopy svg { width:18px; height:18px; color:var(--color-semantic-success); flex:0 0 auto; }
+
+.hero__badge {
+  display:inline-flex; align-items:center; gap:var(--space-2);
+  margin-bottom:var(--space-5);
+  background:var(--color-secondary-sand);
+  color:var(--color-primary-deepgreen);
+  font-family:var(--font-family-primary);
+  font-weight:var(--font-weight-semibold);
+  font-size:var(--font-size-body-sm);
+  padding:var(--space-2) var(--space-4);
+  border-radius:var(--radius-full);
+  box-shadow:var(--shadow-sm);
+}
+.hero__badge svg { width:18px; height:18px; }
+
+/* Visual do hero — mockup de material pedagógico */
+.hero__visual { position:relative; }
+.material-card {
+  position:relative;
+  background:var(--color-surface-default);
+  border:1px solid var(--color-border-default);
+  border-radius:var(--radius-xl);
+  box-shadow:var(--shadow-xl);
+  overflow:hidden;
+  max-width:460px; margin-inline:auto;
+}
+.material-card__bar {
+  background:var(--color-primary-deepgreen);
+  color:var(--color-secondary-offwhite);
+  padding:var(--space-5) var(--space-6);
+  display:flex; align-items:center; justify-content:space-between; gap:var(--space-4);
+}
+.material-card__bar span:first-child {
+  font-family:var(--font-family-mono); font-size:var(--font-size-overline);
+  letter-spacing:var(--letter-spacing-widest); text-transform:uppercase;
+}
+.material-card__bar span:last-child {
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold);
+  font-size:var(--font-size-caption);
+  background:var(--color-secondary-sand); color:var(--color-primary-deepgreen);
+  padding:var(--space-1) var(--space-3); border-radius:var(--radius-full);
+}
+.material-card__body { padding:var(--space-6); display:grid; gap:var(--space-5); }
+.material-card__heading {
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-bold);
+  font-size:var(--font-size-h5); color:var(--color-primary-deepgreen);
+}
+.rule-lines { display:grid; gap:var(--space-3); }
+.rule-lines i { display:block; height:9px; border-radius:var(--radius-full); background:var(--color-green-08); }
+.rule-lines i:nth-child(2) { width:92%; }
+.rule-lines i:nth-child(3) { width:78%; }
+.rule-lines i:nth-child(4) { width:86%; }
+.material-card__tags { display:flex; flex-wrap:wrap; gap:var(--space-2); }
+.material-card__tags span {
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-medium);
+  font-size:var(--font-size-caption);
+  background:var(--color-bg-subtle); color:var(--color-primary-deepgreen);
+  padding:var(--space-1) var(--space-3); border-radius:var(--radius-xs);
+}
+.material-card__caption {
+  border-top:1px solid var(--color-border-default);
+  padding:var(--space-4) var(--space-6);
+  font-size:var(--font-size-caption); color:var(--color-gray-500);
+}
+
+.hero__float {
+  position:absolute; z-index:var(--z-raised);
+  background:var(--color-surface-default);
+  border:1px solid var(--color-border-default);
+  border-radius:var(--radius-md);
+  box-shadow:var(--shadow-lg);
+  padding:var(--space-3) var(--space-4);
+  display:flex; align-items:center; gap:var(--space-3);
+}
+.hero__float strong {
+  display:block; font-family:var(--font-family-primary);
+  font-weight:var(--font-weight-bold); font-size:var(--font-size-body-lg);
+  color:var(--color-primary-deepgreen); line-height:1.1;
+}
+.hero__float small { font-size:var(--font-size-caption); color:var(--color-gray-500); }
+.hero__float--portrait { left:-8px; bottom:26px; padding:var(--space-2) var(--space-4) var(--space-2) var(--space-2); }
+.hero__float--portrait img {
+  width:46px; height:46px; border-radius:var(--radius-full);
+  object-fit:cover; object-position:top center; background:var(--color-secondary-sand);
+}
+@media (max-width:479px) { .hero__float--portrait { display:none; } }
+@media (min-width:1024px) { .hero__float--portrait { left:-28px; } }
+
+/* ============================================================
+   SEÇÃO 3 — BARRA DE PROVA SOCIAL
+   ============================================================ */
+.proof { background:var(--color-primary-deepgreen); color:var(--color-secondary-offwhite); }
+.proof .overline { display:flex; width:fit-content; margin-inline:auto; }
+.proof__grid {
+  display:grid; grid-template-columns:repeat(2,1fr);
+  gap:var(--space-6) var(--space-4);
+  padding-block:var(--space-2) var(--space-6);
+}
+@media (min-width:768px) { .proof__grid { grid-template-columns:repeat(4,1fr); gap:var(--space-8); } }
+.proof__item { text-align:center; }
+.proof__number {
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-bold);
+  font-size:2rem; line-height:1.1; color:var(--color-secondary-sand);
+}
+@media (min-width:1024px) { .proof__number { font-size:2.75rem; } }
+.proof__desc { font-size:var(--font-size-body-sm); color:rgba(246,241,227,0.88); margin-top:var(--space-1); }
+.proof__note { text-align:center; font-size:var(--font-size-caption); color:rgba(246,241,227,0.62); }
+
+/* ============================================================
+   SEÇÃO 4 — PROBLEMA
+   ============================================================ */
+.prose { display:grid; gap:var(--space-4); max-width:68ch; margin-bottom:var(--space-10); }
+.prose p { font-size:var(--font-size-body-lg); line-height:var(--line-height-relaxed); }
+
+.pain-card__icon { background:rgba(192,57,43,0.08); color:var(--color-semantic-error); }
+
+.transition-note {
+  margin-top:var(--space-10);
+  padding:var(--space-6);
+  border-left:4px solid var(--color-primary-orange);
+  background:var(--color-surface-default);
+  border-radius:0 var(--radius-md) var(--radius-md) 0;
+  font-family:var(--font-family-primary);
+  font-weight:var(--font-weight-semibold);
+  font-size:var(--font-size-h5);
+  color:var(--color-primary-deepgreen);
+  box-shadow:var(--shadow-sm);
+}
+
+/* ============================================================
+   SEÇÃO 5 — SOLUÇÃO
+   ============================================================ */
+.solution__grid { display:grid; gap:var(--space-10); align-items:center; }
+@media (min-width:1024px) { .solution__grid { grid-template-columns:1fr 1fr; gap:var(--space-16); } }
+.solution__aside {
+  position:relative;
+  background:var(--color-primary-deepgreen);
+  border-radius:var(--radius-2xl);
+  padding:var(--space-10) var(--space-8);
+  overflow:hidden;
+  box-shadow:var(--shadow-lg);
+}
+.solution__aside::after {
+  content:""; position:absolute; right:-30%; bottom:-45%;
+  width:80%; aspect-ratio:1; border-radius:var(--radius-full);
+  background:var(--color-support-mossgreen);
+}
+.solution__aside > * { position:relative; z-index:var(--z-raised); }
+.solution__symbol { width:96px; margin-bottom:var(--space-6); }
+.solution__quote {
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-bold);
+  font-size:var(--font-size-h4); line-height:1.35;
+  color:var(--color-secondary-offwhite);
+}
+.solution__quote em { font-style:normal; color:var(--color-secondary-sand); }
+
+/* ============================================================
+   SEÇÃO 6 — BENEFÍCIOS
+   ============================================================ */
+.service-card { display:flex; flex-direction:column; }
+.service-card__name {
+  font-family:var(--font-family-mono); font-size:var(--font-size-overline);
+  letter-spacing:var(--letter-spacing-widest); text-transform:uppercase;
+  color:var(--color-gray-500); margin-bottom:var(--space-2);
+}
+.service-card__benefit {
+  margin-top:auto; padding-top:var(--space-5);
+  display:flex; align-items:flex-start; gap:var(--space-2);
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold);
+  font-size:var(--font-size-body-sm); color:var(--color-primary-deepgreen);
+}
+.service-card__benefit svg { width:18px; height:18px; flex:0 0 auto; color:var(--color-semantic-success); margin-top:2px; }
+@media (min-width:1024px) {
+  .services-grid { grid-template-columns:repeat(6,1fr); }
+  .services-grid > *:nth-child(1),
+  .services-grid > *:nth-child(2),
+  .services-grid > *:nth-child(3) { grid-column:span 2; }
+  .services-grid > *:nth-child(4),
+  .services-grid > *:nth-child(5) { grid-column:span 3; }
+}
+
+.section__note {
+  margin-top:var(--space-8);
+  font-size:var(--font-size-body-sm); color:var(--color-gray-700);
+  display:flex; align-items:flex-start; gap:var(--space-2);
+}
+.section__note svg { width:18px; height:18px; flex:0 0 auto; color:var(--color-primary-deepgreen); margin-top:3px; }
+
+/* ============================================================
+   SEÇÃO 7 — COMO FUNCIONA (12.27 Stepper)
+   ============================================================ */
+.steps { display:grid; gap:var(--space-6); counter-reset:step; }
+@media (min-width:1024px) { .steps { grid-template-columns:repeat(3,1fr); gap:var(--space-8); } }
+.step { position:relative; padding-top:var(--space-2); }
+@media (min-width:1024px) {
+  .step:not(:last-child)::after {
+    content:""; position:absolute; top:30px; left:calc(60px + var(--space-4)); right:calc(-1 * var(--space-8));
+    height:2px; background:var(--color-border-default);
+  }
+}
+.step__number {
+  width:60px; height:60px; border-radius:var(--radius-full);
+  display:grid; place-items:center;
+  background:var(--color-primary-deepgreen); color:var(--color-secondary-sand);
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-bold);
+  font-size:var(--font-size-h4); line-height:1;
+  margin-bottom:var(--space-5);
+  box-shadow:var(--shadow-md);
+  position:relative; z-index:var(--z-raised);
+}
+.step__icon {
+  display:inline-flex; align-items:center; gap:var(--space-2);
+  color:var(--color-primary-deepgreen); margin-bottom:var(--space-3);
+}
+.step__icon svg { width:22px; height:22px; }
+.step__title { margin-bottom:var(--space-3); }
+.step__text { margin-bottom:var(--space-4); }
+.step__micro {
+  display:inline-flex; align-items:center; gap:var(--space-2);
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-medium);
+  font-size:var(--font-size-body-sm); color:var(--color-primary-deepgreen);
+  background:var(--color-green-06); padding:var(--space-2) var(--space-3);
+  border-radius:var(--radius-full);
+}
+.step__micro svg { width:16px; height:16px; }
+.section__cta { margin-top:var(--space-12); display:flex; justify-content:center; }
+
+/* ============================================================
+   SEÇÃO 8 — DIFERENCIAIS
+   ============================================================ */
+.diff-list { display:grid; gap:var(--space-6); }
+@media (min-width:768px)  { .diff-list { grid-template-columns:repeat(2,1fr); gap:var(--space-6) var(--space-10); } }
+@media (min-width:1024px) { .diff-list { grid-template-columns:repeat(2,1fr); gap:var(--space-8) var(--space-16); } }
+.diff {
+  display:flex; gap:var(--space-4); align-items:flex-start;
+  padding-bottom:var(--space-6); border-bottom:1px solid var(--color-border-default);
+}
+.diff__icon {
+  width:44px; height:44px; flex:0 0 auto; display:grid; place-items:center;
+  border-radius:var(--radius-md); background:var(--color-secondary-sand);
+  color:var(--color-primary-deepgreen);
+}
+.diff__icon svg { width:22px; height:22px; }
+.diff__title { margin-bottom:var(--space-2); }
+
+/* ============================================================
+   SEÇÃO 9 — FAIXA DE DESTAQUE
+   ============================================================ */
+.strip { background:var(--color-primary-deepgreen); position:relative; overflow:hidden; }
+.strip__inner {
+  display:grid; gap:var(--space-8); align-items:center;
+  padding-block:var(--space-12);
+}
+@media (min-width:1024px) {
+  .strip__inner { grid-template-columns:1.4fr auto; gap:var(--space-16); padding-block:var(--space-16); }
+}
+.strip__title { color:var(--color-secondary-offwhite); margin-bottom:var(--space-3); display:flex; align-items:flex-start; gap:var(--space-3); }
+.strip__title svg { width:32px; height:32px; flex:0 0 auto; color:var(--color-secondary-sand); margin-top:2px; }
+.strip__sub { color:rgba(246,241,227,0.85); font-size:var(--font-size-body-lg); }
+
+/* ============================================================
+   SEÇÃO 10 — GALERIA DE MATERIAIS (exemplares · polaroids)
+   ============================================================ */
+.gallery__tabs {
+  display:flex; gap:var(--space-2); flex-wrap:wrap;
+  margin-bottom:var(--space-10);
+  border-bottom:1px solid var(--color-border-default);
+  padding-bottom:var(--space-1);
+}
+.gallery__tab {
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold);
+  font-size:var(--font-size-body-sm); color:var(--color-gray-700);
+  padding:var(--space-3) var(--space-4); min-height:44px;
+  border-bottom:2px solid transparent; border-radius:var(--radius-sm) var(--radius-sm) 0 0;
+  transition:color var(--duration-normal) var(--easing-out),
+             border-color var(--duration-normal) var(--easing-out),
+             background-color var(--duration-normal) var(--easing-out);
+}
+.gallery__tab:hover { background:var(--color-green-06); color:var(--color-primary-deepgreen); }
+.gallery__tab[aria-selected="true"] {
+  color:var(--color-primary-deepgreen);
+  border-bottom-color:var(--color-primary-orange);
+}
+.gallery__panel[hidden] { display:none; }
+.gallery__panel { animation:fadeIn var(--duration-slow) var(--easing-out); }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+/* Grade dos exemplares — 4 lado a lado no desktop */
+.polaroids {
+  display:grid; gap:var(--space-6);
+  grid-template-columns:1fr;
+  perspective:1200px;
+  padding-block:var(--space-4) var(--space-8);
+}
+@media (min-width:600px)  { .polaroids { grid-template-columns:repeat(2,1fr); gap:var(--space-8); } }
+@media (min-width:1024px) { .polaroids { grid-template-columns:repeat(4,1fr); gap:var(--space-5); } }
+@media (min-width:1280px) { .polaroids { gap:var(--space-6); } }
+
+.polaroid {
+  --tilt:0deg;
+  position:relative;
+  display:block; width:100%; text-align:left;
+  background:var(--color-white);
+  padding:var(--space-3) var(--space-3) var(--space-5);
+  border-radius:var(--radius-xs);
+  box-shadow:var(--shadow-lg);
+  transform:rotate(var(--tilt));
+  transform-style:preserve-3d;
+  transition:transform var(--duration-slower) var(--easing-spring),
+             box-shadow var(--duration-slower) var(--easing-out);
+  will-change:transform;
+}
+.polaroid:nth-child(1) { --tilt:-2.5deg; }
+.polaroid:nth-child(2) { --tilt:1.8deg; }
+.polaroid:nth-child(3) { --tilt:-1.4deg; }
+.polaroid:nth-child(4) { --tilt:2.6deg; }
+
+/* Fita adesiva no topo — reforça a metáfora de mural */
+.polaroid::before {
+  content:""; position:absolute; top:-10px; left:50%;
+  width:74px; height:22px; transform:translateX(-50%) rotate(-3deg);
+  background:linear-gradient(180deg, rgba(239,220,169,0.92), rgba(239,220,169,0.72));
+  border-left:1px dashed rgba(14,75,60,0.16);
+  border-right:1px dashed rgba(14,75,60,0.16);
+  box-shadow:0 1px 2px rgba(14,75,60,0.12);
+  z-index:var(--z-raised);
+  transition:opacity var(--duration-normal) var(--easing-out);
+}
+.polaroid:hover, .polaroid:focus-visible, .polaroid.is-active {
+  box-shadow:var(--shadow-xl);
+  z-index:var(--z-raised);
+}
+.polaroid:hover::before, .polaroid.is-active::before { opacity:0; }
+
+/* "Foto" do exemplar */
+.polaroid__shot {
+  position:relative; aspect-ratio:3/4; overflow:hidden;
+  background:var(--color-bg-subtle);
+  border-radius:2px;
+  display:flex; flex-direction:column;
+}
+.polaroid__head {
+  background:var(--color-primary-deepgreen); color:var(--color-secondary-offwhite);
+  padding:10px 12px; display:flex; align-items:center; justify-content:space-between; gap:8px;
+}
+.polaroid__disc {
+  font-family:var(--font-family-mono); font-size:9px;
+  letter-spacing:var(--letter-spacing-widest); text-transform:uppercase;
+}
+.polaroid__year {
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold);
+  font-size:9px; background:var(--color-secondary-sand); color:var(--color-primary-deepgreen);
+  padding:2px 7px; border-radius:var(--radius-full);
+}
+.polaroid__sheet {
+  flex:1; background:var(--color-white); margin:8px; padding:10px;
+  border-radius:2px; box-shadow:var(--shadow-sm);
+  display:flex; flex-direction:column; gap:7px;
+}
+.polaroid__doc {
+  font-size:11px; font-weight:var(--font-weight-bold); line-height:1.25;
+  color:var(--color-primary-deepgreen);
+}
+.polaroid__lines { display:grid; gap:5px; }
+.polaroid__lines i { display:block; height:5px; border-radius:var(--radius-full); background:var(--color-green-08); }
+.polaroid__lines i:nth-child(2n) { width:84%; }
+.polaroid__lines i:nth-child(3n) { width:68%; }
+.polaroid__qs { margin-top:auto; display:grid; gap:5px; }
+.polaroid__q {
+  display:flex; align-items:center; gap:5px;
+  font-size:8px; color:var(--color-gray-500);
+}
+.polaroid__q b {
+  width:12px; height:12px; flex:0 0 auto; border-radius:var(--radius-full);
+  background:var(--color-secondary-sand); color:var(--color-primary-deepgreen);
+  display:grid; place-items:center; font-size:7px; font-weight:var(--font-weight-bold);
+  font-family:var(--font-family-primary);
+}
+.polaroid__stamp {
+  position:absolute; right:10px; bottom:10px;
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-bold);
+  font-size:8px; letter-spacing:var(--letter-spacing-wider);
+  color:var(--color-primary-orange);
+  border:1.5px solid var(--color-primary-orange);
+  padding:3px 6px; border-radius:var(--radius-xs);
+  transform:rotate(-8deg); background:rgba(246,241,227,0.9);
+}
+/* Legenda manuscrita da polaroid */
+.polaroid__caption { padding:var(--space-4) var(--space-1) 0; }
+.polaroid__caption strong {
+  display:block;
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold);
+  font-size:var(--font-size-body-sm); line-height:1.3;
+  color:var(--color-primary-deepgreen); margin-bottom:2px;
+}
+.polaroid__caption span { font-size:var(--font-size-caption); color:var(--color-gray-500); }
+
+.gallery__note { margin-top:var(--space-8); }
+.gallery__foot {
+  margin-top:var(--space-10); display:flex; flex-wrap:wrap;
+  align-items:center; gap:var(--space-5); justify-content:space-between;
+}
+
+/* ============================================================
+   SEÇÃO 12 — DEPOIMENTOS
+   ============================================================ */
+.testimonial { display:flex; flex-direction:column; }
+.testimonial__stars { display:flex; gap:2px; margin-bottom:var(--space-4); color:var(--color-primary-orange); }
+.testimonial__stars svg { width:18px; height:18px; }
+.testimonial__quote {
+  font-size:var(--font-size-body); line-height:var(--line-height-relaxed);
+  color:var(--color-gray-700); margin-bottom:var(--space-6);
+}
+.testimonial__author { display:flex; align-items:center; gap:var(--space-4); margin-top:auto; }
+/* Avatar por iniciais (12.21 fallback). Substituir por foto real do
+   professor assim que houver autorização — converte bem mais. */
+.avatar {
+  width:56px; height:56px; flex:0 0 auto; border-radius:var(--radius-full);
+  display:grid; place-items:center;
+  background:var(--color-secondary-sand); color:var(--color-primary-deepgreen);
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-bold);
+  font-size:var(--font-size-body-lg); letter-spacing:0.04em;
+  box-shadow:0 0 0 2px var(--color-surface-default), 0 0 0 4px rgba(14,75,60,0.18);
+}
+.testimonial__name {
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold);
+  font-size:var(--font-size-body); color:var(--color-primary-deepgreen);
+}
+.testimonial__role { font-size:var(--font-size-caption); color:var(--color-gray-500); line-height:1.4; }
+
+/* ============================================================
+   SEÇÃO 15 — GARANTIA
+   ============================================================ */
+.guarantee {
+  background:var(--color-surface-default);
+  border:1px solid var(--color-border-default);
+  border-radius:var(--radius-2xl);
+  box-shadow:var(--shadow-lg);
+  padding:var(--space-8) var(--space-6);
+  display:grid; gap:var(--space-8);
+}
+@media (min-width:1024px) {
+  .guarantee { grid-template-columns:1fr 1fr; gap:var(--space-16); padding:var(--space-16) var(--space-12); }
+}
+.guarantee__seal {
+  width:72px; height:72px; display:grid; place-items:center;
+  border-radius:var(--radius-full);
+  background:var(--color-secondary-sand); color:var(--color-primary-deepgreen);
+  margin-bottom:var(--space-6);
+}
+.guarantee__seal svg { width:38px; height:38px; }
+.guarantee__points { display:grid; gap:var(--space-5); }
+.guarantee__point { display:flex; gap:var(--space-3); align-items:flex-start; }
+.guarantee__point svg { width:22px; height:22px; flex:0 0 auto; color:var(--color-semantic-success); margin-top:2px; }
+.guarantee__point b {
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold);
+  color:var(--color-primary-deepgreen);
+}
+
+/* ============================================================
+   SEÇÃO 16 — FAQ (12.16 Accordion)
+   ============================================================ */
+.faq { display:grid; gap:var(--space-3); max-width:920px; }
+.faq__item {
+  background:var(--color-surface-default);
+  border:1px solid var(--color-border-default);
+  border-radius:var(--radius-md);
+  overflow:hidden;
+  transition:box-shadow var(--duration-normal) var(--easing-out);
+}
+.faq__item:has(.faq__trigger[aria-expanded="true"]) { box-shadow:var(--shadow-md); }
+.faq__heading { margin:0; }
+.faq__trigger {
+  width:100%; display:flex; align-items:center; justify-content:space-between; gap:var(--space-4);
+  text-align:left; padding:var(--space-5) var(--space-6); min-height:44px;
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold);
+  font-size:var(--font-size-body); color:var(--color-primary-deepgreen);
+  transition:background-color var(--duration-normal) var(--easing-out);
+}
+.faq__trigger:hover { background:var(--color-green-04); }
+.faq__chevron {
+  width:22px; height:22px; flex:0 0 auto; color:var(--color-primary-deepgreen);
+  transition:transform var(--duration-normal) var(--easing-out);
+}
+.faq__trigger[aria-expanded="true"] .faq__chevron { transform:rotate(180deg); }
+.faq__panel {
+  display:grid; grid-template-rows:0fr;
+  transition:grid-template-rows var(--duration-slow) var(--easing-out);
+}
+.faq__panel[data-open="true"] { grid-template-rows:1fr; }
+.faq__panel > div { overflow:hidden; }
+.faq__panel p {
+  padding:0 var(--space-6) var(--space-6);
+  font-size:var(--font-size-body); line-height:var(--line-height-relaxed);
+  color:var(--color-gray-700);
+}
+
+/* ============================================================
+   SEÇÃO 17/18 — CHAMADA FINAL + FORMULÁRIO
+   ============================================================ */
+.final { background:var(--color-primary-deepgreen); position:relative; overflow:hidden; }
+.final__grid { display:grid; gap:var(--space-12); align-items:start; }
+@media (min-width:1024px) { .final__grid { grid-template-columns:1fr 1fr; gap:var(--space-16); } }
+.final__title { color:var(--color-secondary-offwhite); margin-bottom:var(--space-5); }
+.final__text { display:grid; gap:var(--space-4); margin-bottom:var(--space-8); }
+.final__text p { color:rgba(246,241,227,0.88); font-size:var(--font-size-body-lg); }
+.trust-list { display:grid; gap:var(--space-3); margin-bottom:var(--space-8); }
+.trust-list li {
+  display:flex; align-items:center; gap:var(--space-3);
+  color:var(--color-secondary-offwhite); font-size:var(--font-size-body-sm);
+}
+.trust-list svg { width:20px; height:20px; flex:0 0 auto; color:var(--color-secondary-sand); }
+.final__actions { display:flex; flex-wrap:wrap; gap:var(--space-4); margin-bottom:var(--space-4); }
+@media (max-width:767px) { .final__actions { flex-direction:column; } }
+.final__micro { font-size:var(--font-size-body-sm); color:rgba(246,241,227,0.72); margin-bottom:var(--space-8); }
+.final__contacts { display:grid; gap:var(--space-1); }
+.final__contacts a, .final__contacts span {
+  display:inline-flex; align-items:center; gap:var(--space-3);
+  color:var(--color-secondary-offwhite); font-size:var(--font-size-body-sm);
+  border-radius:var(--radius-sm);
+  min-height:44px; padding-block:var(--space-2);
+}
+.final__contacts svg { width:20px; height:20px; flex:0 0 auto; color:var(--color-secondary-sand); }
+.final__contacts a:hover { color:var(--color-secondary-sand); }
+
+/* ============================================================
+   12.9 FOOTER
+   ============================================================ */
+.site-footer { background:var(--color-support-nightgreen); color:rgba(246,241,227,0.78); }
+.site-footer .container { padding-block:var(--space-12); }
+@media (min-width:1024px) { .site-footer .container { padding-block:var(--space-16); } }
+.footer-grid { display:grid; gap:var(--space-10); }
+@media (min-width:768px)  { .footer-grid { grid-template-columns:repeat(2,1fr); } }
+@media (min-width:1024px) { .footer-grid { grid-template-columns:1.6fr 1fr 1fr 1.2fr; gap:var(--space-12); } }
+.footer-logo { display:inline-flex; align-items:center; gap:var(--space-3); margin-bottom:var(--space-5); }
+.footer-logo img { width:38px; }
+.footer-logo .logo__wordmark { color:var(--color-secondary-offwhite); }
+.footer-tagline {
+  font-family:var(--font-family-mono); font-size:var(--font-size-overline);
+  letter-spacing:var(--letter-spacing-widest); text-transform:uppercase;
+  color:var(--color-secondary-sand); margin-bottom:var(--space-4);
+}
+.footer-col-title {
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold);
+  font-size:var(--font-size-h6); color:var(--color-secondary-offwhite);
+  margin-bottom:var(--space-5);
+}
+.footer-links { display:grid; gap:var(--space-1); }
+.footer-links a, .footer-contact a, .footer-contact span {
+  display:inline-flex; align-items:center; gap:var(--space-2);
+  font-size:var(--font-size-body-sm); border-radius:var(--radius-xs);
+  transition:color var(--duration-normal) var(--easing-out);
+  /* 13.3 — área de toque mínima de 44px sem alterar o visual */
+  min-height:44px; padding-block:var(--space-2);
+}
+.footer-links a:hover, .footer-contact a:hover { color:var(--color-secondary-sand); }
+.footer-contact { display:grid; gap:var(--space-1); }
+.footer-contact svg { width:18px; height:18px; flex:0 0 auto; color:var(--color-secondary-sand); }
+.footer-social { display:flex; gap:var(--space-3); margin-top:var(--space-6); }
+.footer-social a {
+  width:44px; height:44px; display:grid; place-items:center;
+  border-radius:var(--radius-full); background:rgba(246,241,227,0.10);
+  color:var(--color-secondary-offwhite);
+  transition:background-color var(--duration-normal) var(--easing-out);
+}
+.footer-social a:hover { background:var(--color-primary-orange); }
+.footer-social svg { width:22px; height:22px; }
+.footer-bottom {
+  border-top:1px solid rgba(246,241,227,0.14);
+  margin-top:var(--space-12); padding-top:var(--space-6);
+  display:flex; flex-wrap:wrap; gap:var(--space-4);
+  align-items:center; justify-content:space-between;
+  font-size:var(--font-size-caption);
+}
+.footer-legal { display:flex; flex-wrap:wrap; align-items:center; gap:var(--space-4); }
+.footer-legal a {
+  text-decoration:underline; border-radius:var(--radius-xs);
+  display:inline-flex; align-items:center; min-height:44px;
+}
+.footer-legal a:hover { color:var(--color-secondary-sand); }
+
+/* WhatsApp flutuante */
+.wa-float {
+  position:fixed; right:16px; bottom:16px; z-index:var(--z-fixed);
+  width:56px; height:56px; border-radius:var(--radius-full);
+  display:grid; place-items:center;
+  background:var(--color-semantic-success); color:var(--color-white);
+  box-shadow:var(--shadow-lg);
+  transition:transform var(--duration-normal) var(--easing-out),
+             background-color var(--duration-normal) var(--easing-out);
+}
+.wa-float:hover { transform:translateY(-2px); background:#25663f; }
+.wa-float svg { width:30px; height:30px; }
+@media (min-width:1024px) { .wa-float { right:24px; bottom:24px; width:60px; height:60px; } }
+
+/* Modais legais (12.10) */
+.legal-modal { border:none; padding:0; background:transparent; max-width:min(680px,92vw); width:100%; }
+.legal-modal::backdrop { background:rgba(14,75,60,0.55); }
+.legal-modal__box {
+  background:var(--color-surface-default); border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-xl); max-height:86vh; display:flex; flex-direction:column;
+}
+.legal-modal__head {
+  display:flex; align-items:flex-start; justify-content:space-between; gap:var(--space-4);
+  padding:var(--space-6); border-bottom:1px solid var(--color-border-default);
+}
+.legal-modal__close { width:44px; height:44px; display:grid; place-items:center; border-radius:var(--radius-sm); color:var(--color-primary-deepgreen); }
+.legal-modal__close svg { width:24px; height:24px; }
+.legal-modal__body { padding:var(--space-6); overflow-y:auto; display:grid; gap:var(--space-5); }
+.legal-modal__body h3 { font-size:var(--font-size-body); margin-bottom:var(--space-2); }
+.legal-modal__body p { font-size:var(--font-size-body-sm); line-height:var(--line-height-relaxed); }
+
+/* ============================================================
+   PADRÕES DE RESPOSTA DIRETA (referência lp.didata.ai)
+   ============================================================ */
+
+/* CTA em caixa alta, 1ª pessoa */
+.btn--cta {
+  text-transform:uppercase;
+  font-weight:var(--font-weight-bold);
+  letter-spacing:0.02em;
+}
+.btn--lg.btn--cta { font-size:var(--font-size-body); }
+@media (min-width:768px) { .btn--lg.btn--cta { font-size:var(--font-size-body-lg); } }
+.nav-actions .btn--cta { font-size:var(--font-size-body-sm); }
+
+/* Pulso discreto no CTA principal do hero */
+@keyframes ctaPulse {
+  0%,100% { box-shadow:var(--shadow-sm), 0 0 0 0 rgba(14,75,60,0.28); }
+  50%     { box-shadow:var(--shadow-md), 0 0 0 12px rgba(14,75,60,0); }
+}
+.hero__actions .btn--primary { animation:ctaPulse 2.8s var(--easing-in-out) infinite; }
+
+/* Faixa de aviso / diferenciação */
+.warn-banner { background:var(--color-secondary-sand); }
+.warn-banner .container {
+  display:flex; align-items:flex-start; gap:var(--space-4);
+  padding-block:var(--space-6);
+}
+@media (min-width:1024px) { .warn-banner .container { padding-block:var(--space-8); } }
+.warn-banner svg { width:28px; height:28px; flex:0 0 auto; color:var(--color-primary-orange); }
+.warn-banner p {
+  font-family:var(--font-family-primary);
+  font-weight:var(--font-weight-semibold);
+  font-size:var(--font-size-body);
+  line-height:1.55; color:var(--color-primary-deepgreen);
+}
+@media (min-width:1024px) { .warn-banner p { font-size:var(--font-size-body-lg); } }
+.warn-banner b { font-weight:var(--font-weight-extrabold); }
+
+/* Barra de anúncio no topo */
+.announce {
+  background:var(--color-primary-deepgreen); color:var(--color-secondary-offwhite);
+  text-align:center; padding:var(--space-3) var(--space-4);
+  font-size:var(--font-size-body-sm); font-weight:var(--font-weight-semibold);
+  display:flex; align-items:center; justify-content:center; gap:var(--space-2);
+}
+.announce svg { width:18px; height:18px; color:var(--color-secondary-sand); flex:0 0 auto; }
+@media (max-width:479px) { .announce { font-size:var(--font-size-caption); } }
+
+/* Tabela comparativa */
+.compare-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:var(--radius-lg); }
+.compare {
+  width:100%; min-width:640px; border-collapse:separate; border-spacing:0;
+  background:var(--color-surface-default);
+  border:1px solid var(--color-border-default);
+  border-radius:var(--radius-lg); overflow:hidden;
+}
+.compare caption { text-align:left; padding-bottom:var(--space-4); font-size:var(--font-size-body-sm); color:var(--color-gray-500); }
+.compare th, .compare td { padding:var(--space-4) var(--space-5); text-align:left; font-size:var(--font-size-body-sm); }
+.compare thead th {
+  background:var(--color-primary-deepgreen); color:var(--color-secondary-offwhite);
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-bold);
+  font-size:var(--font-size-body-sm); vertical-align:bottom;
+}
+.compare thead th:first-child { background:var(--color-support-nightgreen); }
+.compare thead th.is-brand { background:var(--color-primary-orange); }
+.compare tbody th {
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold);
+  color:var(--color-primary-deepgreen); background:var(--color-bg-subtle);
+}
+.compare tbody tr + tr th, .compare tbody tr + tr td { border-top:1px solid var(--color-border-default); }
+.compare tbody td.is-brand { background:rgba(227,107,31,0.06); font-weight:var(--font-weight-semibold); color:var(--color-primary-deepgreen); }
+.compare .mark { display:inline-flex; align-items:center; gap:var(--space-2); }
+.compare .mark svg { width:18px; height:18px; flex:0 0 auto; }
+.compare .mark--yes svg { color:var(--color-semantic-success); }
+.compare .mark--no  svg { color:var(--color-semantic-error); }
+
+/* "Feito para:" — público-alvo */
+.audience { display:grid; gap:var(--space-3); }
+@media (min-width:768px)  { .audience { grid-template-columns:repeat(2,1fr); gap:var(--space-3) var(--space-6); } }
+@media (min-width:1024px) { .audience { grid-template-columns:repeat(3,1fr); } }
+.audience li {
+  display:flex; align-items:flex-start; gap:var(--space-3);
+  background:var(--color-surface-default);
+  border:1px solid var(--color-border-default);
+  border-radius:var(--radius-md);
+  padding:var(--space-4) var(--space-5);
+  font-size:var(--font-size-body-sm); line-height:var(--line-height-normal);
+}
+.audience svg { width:20px; height:20px; flex:0 0 auto; color:var(--color-semantic-success); margin-top:1px; }
+
+/* ============================================================
+   PREÇOS
+   ============================================================ */
+.pricing {
+  display:grid; gap:var(--space-6);
+  align-items:stretch;
+  padding-top:var(--space-6);
+}
+@media (min-width:1024px) {
+  .pricing { grid-template-columns:repeat(3,1fr); gap:var(--space-6); align-items:center; }
+}
+
+.plan {
+  position:relative; display:flex; flex-direction:column;
+  background:var(--color-surface-default);
+  border:1px solid var(--color-border-default);
+  border-radius:var(--radius-xl);
+  padding:var(--space-8) var(--space-6);
+  box-shadow:var(--shadow-md);
+  transition:box-shadow var(--duration-normal) var(--easing-out),
+             transform var(--duration-normal) var(--easing-out),
+             border-color var(--duration-normal) var(--easing-out);
+}
+@media (min-width:1024px) { .plan { padding:var(--space-10) var(--space-8); } }
+.plan:hover { transform:translateY(-4px); box-shadow:var(--shadow-lg); border-color:var(--color-border-strong); }
+
+/* Plano em destaque — elegante, sem gritar */
+.plan--featured {
+  border:2px solid var(--color-primary-orange);
+  box-shadow:var(--shadow-xl);
+  background:linear-gradient(180deg,#FFFFFF 0%, #FFFBF6 100%);
+  order:-1; /* mobile: o recomendado aparece primeiro */
+}
+@media (min-width:1024px) {
+  .plan--featured { order:0; transform:scale(1.045); z-index:var(--z-raised); padding-block:var(--space-12); }
+  .plan--featured:hover { transform:scale(1.045) translateY(-4px); }
+}
+
+.plan__badge {
+  position:absolute; top:0; left:50%; transform:translate(-50%,-50%);
+  display:inline-flex; align-items:center; gap:var(--space-2); white-space:nowrap;
+  background:var(--color-primary-orange); color:var(--color-secondary-offwhite);
+  font-weight:var(--font-weight-bold); font-size:var(--font-size-caption);
+  letter-spacing:0.08em; text-transform:uppercase;
+  padding:var(--space-2) var(--space-4); border-radius:var(--radius-full);
+  box-shadow:var(--shadow-md);
+}
+.plan__badge svg { width:14px; height:14px; }
+
+.plan__name {
+  font-weight:var(--font-weight-bold); font-size:var(--font-size-h4);
+  color:var(--color-primary-deepgreen); margin-bottom:var(--space-2);
+}
+.plan__pitch {
+  font-size:var(--font-size-body-sm); color:var(--color-gray-700);
+  line-height:var(--line-height-normal); margin-bottom:var(--space-6);
+  min-height:2.8em;
+}
+.plan__price { display:flex; align-items:flex-end; gap:var(--space-2); margin-bottom:var(--space-1); }
+.plan__currency {
+  font-weight:var(--font-weight-semibold); font-size:var(--font-size-h5);
+  color:var(--color-gray-500); padding-bottom:6px;
+}
+.plan__value {
+  font-weight:var(--font-weight-extrabold); font-size:2.75rem; line-height:1;
+  letter-spacing:-0.03em; color:var(--color-primary-deepgreen);
+}
+.plan--featured .plan__value { font-size:3.25rem; }
+.plan__once {
+  font-size:var(--font-size-body-sm); font-weight:var(--font-weight-semibold);
+  color:var(--color-semantic-success); margin-bottom:var(--space-6);
+  display:flex; align-items:center; gap:var(--space-2);
+}
+.plan__once svg { width:16px; height:16px; flex:0 0 auto; }
+.plan__note { font-size:var(--font-size-caption); color:var(--color-gray-500); margin-bottom:var(--space-6); }
+
+.plan__features { display:grid; gap:var(--space-3); margin-bottom:var(--space-8); }
+.plan__features li {
+  display:flex; align-items:flex-start; gap:var(--space-3);
+  font-size:var(--font-size-body-sm); line-height:var(--line-height-normal);
+}
+.plan__features svg { width:18px; height:18px; flex:0 0 auto; margin-top:2px; color:var(--color-semantic-success); }
+.plan__features li.is-off { color:var(--color-gray-500); }
+.plan__features li.is-off svg { color:var(--color-gray-300); }
+.plan__cta { margin-top:auto; }
+
+/* Selos de credibilidade */
+.pay-trust {
+  display:flex; flex-wrap:wrap; justify-content:center; gap:var(--space-3) var(--space-6);
+  margin-top:var(--space-12); padding-top:var(--space-8);
+  border-top:1px solid var(--color-border-default);
+}
+.pay-trust li {
+  display:flex; align-items:center; gap:var(--space-2);
+  font-size:var(--font-size-body-sm); font-weight:var(--font-weight-medium);
+  color:var(--color-primary-deepgreen);
+}
+.pay-trust svg { width:20px; height:20px; flex:0 0 auto; color:var(--color-semantic-success); }
+
+/* Materiais: layout compacto para o preço subir na página */
+.service-card { gap:0; }
+.service-card .card__icon { width:40px; height:40px; margin-bottom:var(--space-4); }
+.service-card .card__icon svg { width:22px; height:22px; }
+.service-card__name { display:none; }
+.service-card .card__title { margin-bottom:var(--space-2); }
+.service-card .card__text { font-size:var(--font-size-body-sm); }
+.service-card__benefit { padding-top:var(--space-4); }
+@media (min-width:1024px) { .services-grid .card { padding:var(--space-6); } }
+/* Barra fixa de conversão no mobile */
+.sticky-cta {
+  position:fixed; left:0; right:0; bottom:0; z-index:var(--z-fixed);
+  background:rgba(246,241,227,0.97);
+  backdrop-filter:saturate(140%) blur(10px);
+  border-top:1px solid var(--color-border-default);
+  padding:var(--space-3) var(--space-4);
+  padding-bottom:calc(var(--space-3) + env(safe-area-inset-bottom, 0px));
+  transform:translateY(110%);
+  transition:transform var(--duration-slower) var(--easing-out);
+  box-shadow:0 -6px 20px rgba(14,75,60,0.10);
+}
+.sticky-cta.is-visible { transform:translateY(0); }
+@media (min-width:1024px) { .sticky-cta { display:none; } }
+body.has-sticky-cta .wa-float { bottom:88px; }
+@media (min-width:1024px) { body.has-sticky-cta .wa-float { bottom:24px; } }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Ir para o conteúdo principal</a>
+
+
+
+
+
+
+
+<!-- ============================================================
+     SEÇÃO 1 — NAVEGAÇÃO (NAVBAR)
+     ============================================================ -->
+<div class="announce">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M18.5 5.5l1.5 1.5"/></svg>
+  <span>Materiais alinhados à BNCC · Entrega em até 48h · Resposta em até 2 horas em dias úteis</span>
+</div>
+
+<header class="site-header" role="banner" id="topo">
+  <div class="container">
+    <nav class="navbar" aria-label="Navegação principal">
+      <a href="#topo" class="logo" aria-label="Prof+ — Materiais pedagógicos personalizados">
+        <img class="logo__symbol" src="assets/logo-symbol.png" alt="" aria-hidden="true" width="230" height="340">
+        <span class="logo__wordmark">Prof<span class="logo__plus">+</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#como-funciona" aria-label="Navegar para a seção Como Funciona">Como Funciona</a></li>
+        <li><a href="#materiais" aria-label="Navegar para a seção Materiais">Materiais</a></li>
+        <li><a href="#precos">Preços</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/5568984216557?text=Ol%C3%A1!%20Quero%20materiais%20pedag%C3%B3gicos%20personalizados%20da%20Prof%2B" class="btn btn--primary btn--cta" target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp com a Prof+ (abre em nova aba)">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+          FALAR NO WHATSAPP
+        </a>
+        <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navDrawer" aria-label="Abrir menu de navegação">
+          <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <div class="nav-drawer" id="navDrawer">
+    <div class="container">
+      <ul>
+        <li><a href="#como-funciona">Como Funciona</a></li>
+        <li><a href="#materiais">Materiais</a></li>
+        <li><a href="#precos">Preços</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <a href="https://wa.me/5568984216557?text=Ol%C3%A1!%20Quero%20materiais%20pedag%C3%B3gicos%20personalizados%20da%20Prof%2B" class="btn btn--primary btn--full btn--cta" target="_blank" rel="noopener">
+        <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+        FALAR NO WHATSAPP
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main-content" role="main">
+<!-- ============================================================
+     SEÇÃO 2 — HERO
+     ============================================================ -->
+<section class="hero" aria-labelledby="hero-title">
+  <span class="edge-curve edge-curve--tl" aria-hidden="true"></span>
+  <div class="container">
+    <div class="hero__grid">
+      <div class="hero__content">
+        <span class="overline">MATERIAIS PEDAGÓGICOS SOB MEDIDA</span>
+
+        <h1 class="display hero__title" id="hero-title">Ainda perde horas preparando aulas?</h1>
+
+        <p class="hero__subtitle">A Prof+ cria materiais pedagógicos feitos sob medida para a sua realidade — alinhados à BNCC, adaptados à sua turma e prontos para aplicar na próxima aula.</p>
+
+        <div class="hero__uvp">
+          <p class="lead">Você dedica tanto de si para os seus alunos. Mas e o seu tempo? Enquanto outros professores passam domingos inteiros criando provas e atividades do zero, você poderia estar descansando, se atualizando ou simplesmente sendo você.</p>
+          <p class="lead">A Prof+ existe para isso: para que o planejamento pedagógico nunca mais seja o motivo do seu esgotamento.</p>
+        </div>
+
+        <p class="hero__badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M18.5 5.5l1.5 1.5"/></svg>
+          Vagas limitadas esta semana
+        </p>
+
+        <div class="hero__actions">
+          <a href="https://wa.me/5568984216557?text=Ol%C3%A1!%20Quero%20materiais%20pedag%C3%B3gicos%20personalizados%20da%20Prof%2B" class="btn btn--primary btn--lg btn--cta btn--block-mobile" target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp com a Prof+ (abre em nova aba)">
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+            QUERO MEUS MATERIAIS PRONTOS →
+          </a>
+          <a href="#precos" class="btn btn--outline btn--lg btn--cta btn--block-mobile">VER PLANOS E VALORES ↓</a>
+        </div>
+
+        <p class="hero__microcopy">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Sem compromisso</span>
+          <span aria-hidden="true">·</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Resposta em até 24h</span>
+          <span aria-hidden="true">·</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Totalmente personalizado</span>
+        </p>
+      </div>
+
+      <div class="hero__visual">
+        <figure class="material-card">
+          <div class="material-card__bar">
+            <span>Sequência Didática</span>
+            <span>BNCC ✓</span>
+          </div>
+          <div class="material-card__body">
+            <p class="material-card__heading">Língua Portuguesa · 6º ano</p>
+            <div class="rule-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <div class="material-card__tags">
+              <span>Objetivos de aprendizagem</span>
+              <span>4 aulas</span>
+              <span>Avaliação</span>
+              <span>Versão adaptada</span>
+            </div>
+            <div class="rule-lines" aria-hidden="true"><i></i><i></i></div>
+          </div>
+          <figcaption class="material-card__caption">Material pedagógico criado pela Prof+ — pronto para aplicar.</figcaption>
+        </figure>
+
+        <div class="hero__float hero__float--portrait">
+          <img src="assets/brand-portrait.png" alt="" aria-hidden="true" width="286" height="455">
+          <span>
+            <strong>+200</strong>
+            <small>professores atendidos</small>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Faixa de atenção — diferenciação (padrão lp.didata.ai) -->
+<aside class="warn-banner">
+  <div class="container">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+    <p><b>Atenção:</b> a Prof+ não é um banco de atividades prontas. Cada material é criado do zero para a <b>sua</b> turma, o <b>seu</b> livro didático e o currículo da <b>sua</b> rede — por quem entende de sala de aula.</p>
+  </div>
+</aside>
+
+<!-- ============================================================
+     SEÇÃO 3 — BARRA DE PROVA SOCIAL
+     ============================================================ -->
+<section class="section proof" aria-labelledby="proof-title">
+  <div class="container">
+    <h2 class="overline" id="proof-title">PROFESSORES QUE JÁ ECONOMIZAM TEMPO COM A PROF+</h2>
+    <div class="proof__grid">
+      <div class="proof__item">
+        <p class="proof__number" data-count-to="200" data-prefix="+">+200</p>
+        <p class="proof__desc">Professores atendidos</p>
+      </div>
+      <div class="proof__item">
+        <p class="proof__number" data-count-to="1500" data-prefix="+" data-group="true">+1.500</p>
+        <p class="proof__desc">Materiais entregues</p>
+      </div>
+      <div class="proof__item">
+        <p class="proof__number" data-count-to="98" data-suffix="%">98%</p>
+        <p class="proof__desc">de satisfação</p>
+      </div>
+      <div class="proof__item">
+        <p class="proof__number" data-count-to="24" data-suffix="h">24h</p>
+        <p class="proof__desc">Tempo médio de entrega</p>
+      </div>
+    </div>
+    <p class="proof__note">Dados referentes aos atendimentos realizados de 2024 a 2026.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 6 — BENEFÍCIOS
+     ============================================================ -->
+<section class="section" id="materiais" aria-labelledby="beneficios-title">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="overline">TUDO QUE VOCÊ PRECISA</span>
+      <h2 class="h1 section__title" id="beneficios-title">Tudo o que você precisa para planejar suas aulas</h2>
+      <p class="section__subtitle">Cinco tipos de materiais, criados sob medida, entregues diretamente para você.</p>
+    </div>
+
+    <div class="grid services-grid">
+      <article class="card card--hover service-card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C10.5 5 8.5 4.5 4 4.5v13C8.5 17.5 10.5 18 12 19.5c1.5-1.5 3.5-2 8-2v-13c-4.5 0-6.5.5-8 2z"/><path d="M12 6.5v13"/></svg>
+        </div>
+        <p class="service-card__name">Sequências Didáticas</p>
+        <h3 class="h4 card__title">Planejamento completo de uma vez</h3>
+        <p class="card__text">Receba uma sequência didática estruturada com objetivos de aprendizagem, desenvolvimento das aulas e sugestões de avaliação — tudo alinhado ao conteúdo que você está trabalhando e à realidade da sua turma.</p>
+        <p class="service-card__benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Economize até 4 horas por sequência.</p>
+      </article>
+
+      <article class="card card--hover service-card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L8 18l-4 1 1-4 11.5-11.5z"/><path d="M4 21h16"/></svg>
+        </div>
+        <p class="service-card__name">Provas e Gabaritos</p>
+        <h3 class="h4 card__title">Avaliações que fazem sentido</h3>
+        <p class="card__text">Provas elaboradas com critério técnico e pedagógico, com questões objetivas, dissertativas ou mistas — já acompanhadas de gabarito e, se quiser, de uma grade de correção.</p>
+        <p class="service-card__benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Personalizadas por nível de dificuldade.</p>
+      </article>
+
+      <article class="card card--hover service-card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 3v18M12 8h5M12 12h5M12 16h3"/></svg>
+        </div>
+        <p class="service-card__name">Atividades</p>
+        <h3 class="h4 card__title">Atividades que engajam</h3>
+        <p class="card__text">Atividades de fixação, revisão ou aprofundamento, criadas com linguagem adequada à faixa etária, visual atraente e formatação pronta para impressão ou projeção em sala.</p>
+        <p class="service-card__benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Diversidade de formatos: jogos, cruzadinhas, exercícios, projetos.</p>
+      </article>
+
+      <article class="card card--hover service-card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M4.5 8.5h15M12 8.5v6M12 14.5l-3.5 6M12 14.5l3.5 6"/></svg>
+        </div>
+        <p class="service-card__name">Atividades Adaptadas</p>
+        <h3 class="h4 card__title">Inclusão de verdade</h3>
+        <p class="card__text">Atividades adaptadas para alunos com necessidades educacionais específicas (NEE), dislexia, TDAH, TEA e outras condições — respeitando o ritmo e as possibilidades de cada estudante.</p>
+        <p class="service-card__benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Inclusão pedagógica acessível e documentada.</p>
+      </article>
+
+      <article class="card card--hover service-card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v6a5 5 0 0 1-10 0V4z"/><path d="M7 6H4.5A2.5 2.5 0 0 0 7 8.5M17 6h2.5A2.5 2.5 0 0 1 17 8.5"/><path d="M12 15v3M9 21h6"/></svg>
+        </div>
+        <p class="service-card__name">Trabalhos Avaliativos</p>
+        <h3 class="h4 card__title">Avaliações que motivam</h3>
+        <p class="card__text">Propostas de trabalhos em grupo ou individuais, com roteiro detalhado, critérios de avaliação e rubricas — para que o aluno saiba exatamente o que é esperado e o professor tenha um processo de correção claro.</p>
+        <p class="service-card__benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Inclui rubricas de avaliação prontas.</p>
+      </article>
+    </div>
+
+    <p class="section__note reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+      Todos os materiais são entregues em formato editável (Word ou PDF), prontos para personalizar ou aplicar direto.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     PREÇOS
+     ATENÇÃO: os valores dos planos Essencial e Institucional são
+     PLACEHOLDERS. Só o plano Completo (R$ 597) está definido.
+     Trocar em .plan__value quando os valores forem fechados.
+     ============================================================ -->
+<section class="section" id="precos" aria-labelledby="precos-title">
+  <span class="edge-curve edge-curve--tl" aria-hidden="true"></span>
+  <div class="container">
+    <div class="section__head reveal" style="max-width:720px">
+      <span class="overline">PLANOS E VALORES</span>
+      <h2 class="h1 section__title" id="precos-title">Escolha quanto tempo você quer de volta.</h2>
+      <p class="section__subtitle">Pagamento único. Sem mensalidade, sem assinatura e sem renovação automática — você paga uma vez e o material é seu.</p>
+    </div>
+
+    <div class="pricing">
+
+      <!-- Plano econômico -->
+      <article class="plan reveal" aria-labelledby="plan-essencial">
+        <h3 class="plan__name" id="plan-essencial">Essencial</h3>
+        <p class="plan__pitch">Para quem quer resolver um conteúdo específico com qualidade profissional.</p>
+        <p class="plan__price">
+          <span class="plan__currency">R$</span>
+          <!-- PLACEHOLDER: definir valor do plano Essencial -->
+          <span class="plan__value">297</span>
+        </p>
+        <p class="plan__once">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          Pagamento único
+        </p>
+        <p class="plan__note">Ideal para testar o padrão Prof+ antes de fechar um pacote maior.</p>
+        <ul class="plan__features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>2 sequências didáticas</b> completas</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>1 prova com gabarito</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Alinhamento à BNCC e ao seu livro didático</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Word editável + PDF pronto para imprimir</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>2 revisões inclusas</span></li>
+        </ul>
+        <div class="plan__cta">
+          <a href="https://wa.me/5568984216557?text=Ol%C3%A1!%20Quero%20o%20plano%20Essencial%20da%20Prof%2B" class="btn btn--outline btn--full btn--cta" target="_blank" rel="noopener">QUERO O ESSENCIAL</a>
+        </div>
+      </article>
+
+      <!-- Plano recomendado -->
+      <article class="plan plan--featured reveal" aria-labelledby="plan-completo">
+        <p class="plan__badge">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
+          Mais escolhido
+        </p>
+        <h3 class="plan__name" id="plan-completo">Completo</h3>
+        <p class="plan__pitch">O bimestre inteiro resolvido de uma vez — é o que a maioria dos professores leva.</p>
+        <p class="plan__price">
+          <span class="plan__currency">R$</span>
+          <span class="plan__value">597</span>
+        </p>
+        <p class="plan__once">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          Pagamento único · sem assinatura
+        </p>
+        <p class="plan__note">Sai menos por material do que contratar item por item.</p>
+        <ul class="plan__features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>6 sequências didáticas</b> completas</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Provas prontas</b> com gabarito e grade de correção</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Atividades prontas</b> de fixação e revisão</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Material completo</b> do bimestre, pronto para aplicar</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Versão adaptada para alunos com NEE</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><b>Acesso imediato</b> — produção começa em até 24h úteis</span></li>
+        </ul>
+        <div class="plan__cta">
+          <a href="https://wa.me/5568984216557?text=Ol%C3%A1!%20Quero%20o%20plano%20Completo%20(R%24%20597)%20da%20Prof%2B" class="btn btn--secondary btn--full btn--cta" target="_blank" rel="noopener">
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+            QUERO O COMPLETO →
+          </a>
+        </div>
+      </article>
+
+      <!-- Plano âncora -->
+      <article class="plan reveal" aria-labelledby="plan-institucional">
+        <h3 class="plan__name" id="plan-institucional">Institucional</h3>
+        <p class="plan__pitch">Para coordenações e projetos interdisciplinares com várias disciplinas envolvidas.</p>
+        <p class="plan__price">
+          <span class="plan__currency">R$</span>
+          <!-- PLACEHOLDER: definir valor do plano Institucional -->
+          <span class="plan__value">1.297</span>
+        </p>
+        <p class="plan__once">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          Pagamento único
+        </p>
+        <p class="plan__note">Escopo fechado junto com a equipe pedagógica antes de iniciar.</p>
+        <ul class="plan__features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Pacote integrado para <b>até 4 disciplinas</b></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Tema central e conexões entre os conteúdos</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Trabalhos avaliativos com rubrica</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Alinhamento ao currículo da rede</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Atendimento dedicado à coordenação</span></li>
+        </ul>
+        <div class="plan__cta">
+          <a href="https://wa.me/5568984216557?text=Ol%C3%A1!%20Quero%20o%20plano%20Institucional%20da%20Prof%2B" class="btn btn--outline btn--full btn--cta" target="_blank" rel="noopener">FALAR SOBRE O INSTITUCIONAL</a>
+        </div>
+      </article>
+    </div>
+
+    <ul class="pay-trust reveal">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Pagamento 100% seguro</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Acesso imediato</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 14.5h5M9.5 11h5M12 8v8"/></svg>Sem mensalidades</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Suporte pelo WhatsApp</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 15 — GARANTIA
+     ============================================================ -->
+<section class="section section--subtle" aria-labelledby="garantia-title">
+  <div class="container">
+    <div class="guarantee reveal">
+      <div>
+        <span class="guarantee__seal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/><path d="m9 12 2 2 4-4"/></svg>
+        </span>
+        <h2 class="h1 section__title" id="garantia-title">Nossa garantia é simples: você vai gostar do que receber.</h2>
+        <div class="prose" style="margin-bottom:0">
+          <p>Trabalhamos com revisões incluídas em cada pedido porque sabemos que a primeira versão pode precisar de ajustes. Se o material não atender às suas expectativas após as revisões combinadas, conversamos sobre uma solução — sem burocracia.</p>
+          <p>Não queremos um cliente insatisfeito. Queremos um professor que consiga aplicar o material com segurança e confiança.</p>
+        </div>
+      </div>
+
+      <div>
+        <ul class="guarantee__points">
+          <li class="guarantee__point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <p><b>Até 2 revisões inclusas</b> — sem custo adicional por ajustes dentro do escopo.</p>
+          </li>
+          <li class="guarantee__point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <p><b>Suporte pelo WhatsApp</b> — tire dúvidas antes, durante e depois da entrega.</p>
+          </li>
+          <li class="guarantee__point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <p><b>Material entregue no prazo</b> — caso contrário, você é avisado com antecedência.</p>
+          </li>
+          <li class="guarantee__point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <p><b>Transparência total</b> — você sabe exatamente o que está recebendo antes de confirmar o pedido.</p>
+          </li>
+        </ul>
+        <p class="section__note" style="margin-top:var(--space-8)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+          Não temos letras miúdas. Só compromisso.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 10 — GALERIA DE MATERIAIS (exemplares interativos)
+     ============================================================ -->
+<section class="section" id="exemplares" aria-labelledby="galeria-title">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="overline">EXEMPLOS DE MATERIAIS</span>
+      <h2 class="h1 section__title" id="galeria-title">Veja como é um material feito pela Prof+.</h2>
+      <p class="section__subtitle">Qualidade visual, estrutura pedagógica e formatação profissional em cada peça.</p>
+    </div>
+
+    <div class="gallery__tabs" role="tablist" aria-label="Categorias de exemplares">
+      <button type="button" class="gallery__tab" role="tab" id="tab-exemplares" aria-controls="panel-exemplares" aria-selected="true">Exemplares recentes</button>
+      <button type="button" class="gallery__tab" role="tab" id="tab-outros" aria-controls="panel-outros" aria-selected="false" tabindex="-1">Outros formatos</button>
+    </div>
+
+    <div class="gallery__panel" role="tabpanel" id="panel-exemplares" aria-labelledby="tab-exemplares" tabindex="0">
+      <ul class="polaroids">
+        <li><article class="polaroid" tabindex="0" aria-label="Exemplar: Sequência Didática — Língua Portuguesa, 6º ano">
+          <div class="polaroid__shot">
+            <div class="polaroid__head"><span class="polaroid__disc">Língua Portuguesa</span><span class="polaroid__year">6º ano</span></div>
+            <div class="polaroid__sheet">
+              <p class="polaroid__doc">Sequência Didática · Gêneros textuais</p>
+              <div class="polaroid__lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="polaroid__qs" aria-hidden="true">
+                <span class="polaroid__q"><b>1</b>Objetivos de aprendizagem</span>
+                <span class="polaroid__q"><b>2</b>Desenvolvimento em 4 aulas</span>
+                <span class="polaroid__q"><b>3</b>Proposta de avaliação</span>
+              </div>
+            </div>
+            <span class="polaroid__stamp">BNCC</span>
+          </div>
+          <div class="polaroid__caption">
+            <strong>Sequência Didática — Língua Portuguesa · 6º ano</strong>
+            <span>Exemplar simulado</span>
+          </div>
+        </article></li>
+
+        <li><article class="polaroid" tabindex="0" aria-label="Exemplar: Prova Bimestral — Matemática, 8º ano, com gabarito">
+          <div class="polaroid__shot">
+            <div class="polaroid__head"><span class="polaroid__disc">Matemática</span><span class="polaroid__year">8º ano</span></div>
+            <div class="polaroid__sheet">
+              <p class="polaroid__doc">Prova Bimestral · Álgebra e proporções</p>
+              <div class="polaroid__lines" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="polaroid__qs" aria-hidden="true">
+                <span class="polaroid__q"><b>A</b>10 questões objetivas</span>
+                <span class="polaroid__q"><b>B</b>4 questões dissertativas</span>
+                <span class="polaroid__q"><b>C</b>Gabarito + grade</span>
+              </div>
+            </div>
+            <span class="polaroid__stamp">GABARITO</span>
+          </div>
+          <div class="polaroid__caption">
+            <strong>Prova Bimestral — Matemática · 8º ano · com gabarito</strong>
+            <span>Exemplar simulado</span>
+          </div>
+        </article></li>
+
+        <li><article class="polaroid" tabindex="0" aria-label="Exemplar: Atividade Adaptada — Ciências, aluno com TEA">
+          <div class="polaroid__shot">
+            <div class="polaroid__head"><span class="polaroid__disc">Ciências</span><span class="polaroid__year">Adaptada</span></div>
+            <div class="polaroid__sheet">
+              <p class="polaroid__doc">Atividade Adaptada · Sistema Solar</p>
+              <div class="polaroid__lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+              <div class="polaroid__qs" aria-hidden="true">
+                <span class="polaroid__q"><b>1</b>Instruções simplificadas</span>
+                <span class="polaroid__q"><b>2</b>Apoio visual ampliado</span>
+                <span class="polaroid__q"><b>3</b>Ritmo individualizado</span>
+              </div>
+            </div>
+            <span class="polaroid__stamp">TEA</span>
+          </div>
+          <div class="polaroid__caption">
+            <strong>Atividade Adaptada — Ciências · aluno com TEA</strong>
+            <span>Exemplar simulado</span>
+          </div>
+        </article></li>
+
+        <li><article class="polaroid" tabindex="0" aria-label="Exemplar: Trabalho Avaliativo — História, com rubrica de correção">
+          <div class="polaroid__shot">
+            <div class="polaroid__head"><span class="polaroid__disc">História</span><span class="polaroid__year">Grupo</span></div>
+            <div class="polaroid__sheet">
+              <p class="polaroid__doc">Trabalho Avaliativo · Brasil República</p>
+              <div class="polaroid__lines" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="polaroid__qs" aria-hidden="true">
+                <span class="polaroid__q"><b>1</b>Roteiro detalhado</span>
+                <span class="polaroid__q"><b>2</b>Critérios de avaliação</span>
+                <span class="polaroid__q"><b>3</b>Rubrica pronta</span>
+              </div>
+            </div>
+            <span class="polaroid__stamp">RUBRICA</span>
+          </div>
+          <div class="polaroid__caption">
+            <strong>Trabalho Avaliativo — História · com rubrica de correção</strong>
+            <span>Exemplar simulado</span>
+          </div>
+        </article></li>
+      </ul>
+    </div>
+
+    <div class="gallery__panel" role="tabpanel" id="panel-outros" aria-labelledby="tab-outros" tabindex="0" hidden>
+      <ul class="polaroids">
+        <li><article class="polaroid" tabindex="0" aria-label="Exemplar: Atividade de Fixação — Português, caça-palavras temático">
+          <div class="polaroid__shot">
+            <div class="polaroid__head"><span class="polaroid__disc">Português</span><span class="polaroid__year">Fixação</span></div>
+            <div class="polaroid__sheet">
+              <p class="polaroid__doc">Atividade de Fixação · Caça-palavras</p>
+              <div class="polaroid__lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+              <div class="polaroid__qs" aria-hidden="true">
+                <span class="polaroid__q"><b>1</b>Vocabulário temático</span>
+                <span class="polaroid__q"><b>2</b>Pronto para imprimir</span>
+                <span class="polaroid__q"><b>3</b>Gabarito incluso</span>
+              </div>
+            </div>
+            <span class="polaroid__stamp">LÚDICO</span>
+          </div>
+          <div class="polaroid__caption">
+            <strong>Atividade de Fixação — Português · caça-palavras temático</strong>
+            <span>Exemplar simulado</span>
+          </div>
+        </article></li>
+
+        <li><article class="polaroid" tabindex="0" aria-label="Exemplar: Sequência Didática — Educação Física, Ensino Médio">
+          <div class="polaroid__shot">
+            <div class="polaroid__head"><span class="polaroid__disc">Educação Física</span><span class="polaroid__year">E. Médio</span></div>
+            <div class="polaroid__sheet">
+              <p class="polaroid__doc">Sequência Didática · Esportes e saúde</p>
+              <div class="polaroid__lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="polaroid__qs" aria-hidden="true">
+                <span class="polaroid__q"><b>1</b>Práticas corporais</span>
+                <span class="polaroid__q"><b>2</b>Teoria aplicada</span>
+                <span class="polaroid__q"><b>3</b>Avaliação processual</span>
+              </div>
+            </div>
+            <span class="polaroid__stamp">BNCC</span>
+          </div>
+          <div class="polaroid__caption">
+            <strong>Sequência Didática — Educação Física · Ensino Médio</strong>
+            <span>Exemplar simulado</span>
+          </div>
+        </article></li>
+      </ul>
+    </div>
+
+    <p class="section__note gallery__note reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+      Todos os exemplos são materiais reais entregues a professores. Dados e turmas foram omitidos para preservar a privacidade.
+    </p>
+
+    <div class="gallery__foot reveal">
+      <p class="lead" style="margin:0">Quer ver um exemplo do material para a sua disciplina? Fale com a gente.</p>
+      <a href="https://wa.me/5568984216557?text=Ol%C3%A1!%20Quero%20ver%20exemplos%20de%20material%20da%20minha%20disciplina" class="btn btn--primary btn--cta btn--block-mobile" target="_blank" rel="noopener">
+        <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+        VER EXEMPLOS DA MINHA DISCIPLINA →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 7 — COMO FUNCIONA
+     ============================================================ -->
+<section class="section section--subtle" id="como-funciona" aria-labelledby="como-title">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="overline">PROCESSO SIMPLES, RESULTADO PROFISSIONAL</span>
+      <h2 class="h1 section__title" id="como-title">Simples assim: do pedido à sala de aula.</h2>
+      <p class="section__subtitle">Em apenas 3 passos, você tem o material que precisa na hora certa.</p>
+    </div>
+
+    <ol class="steps">
+      <li class="step reveal">
+        <p class="step__number" aria-hidden="true">01</p>
+        <span class="step__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </span>
+        <h3 class="h3 step__title"><span class="sr-only">Passo 1. </span>Você nos conta o que precisa</h3>
+        <p class="step__text">Entre em contato pelo WhatsApp ou formulário. Nos conte sobre a disciplina, o ano escolar, o conteúdo, o livro didático que você usa e qualquer característica específica da sua turma. Quanto mais detalhes você der, mais certeiro será o material.</p>
+        <p class="step__micro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 1.8"/></svg>Resposta em até 2 horas em dias úteis.</p>
+      </li>
+
+      <li class="step reveal">
+        <p class="step__number" aria-hidden="true">02</p>
+        <span class="step__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6h.09A1.65 1.65 0 0 0 10 3.09V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9v.09a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </span>
+        <h3 class="h3 step__title"><span class="sr-only">Passo 2. </span>A gente cria, você aprova</h3>
+        <p class="step__text">Nossa equipe desenvolve o material com base nas informações recebidas, aplicando técnicas pedagógicas atualizadas e alinhamento com a BNCC. Você recebe uma versão inicial para revisar e solicitar ajustes se necessário.</p>
+        <p class="step__micro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 1 1-2.3-5.6"/><path d="M20 4v4.5h-4.5"/></svg>Até 2 rodadas de revisão incluídas.</p>
+      </li>
+
+      <li class="step reveal">
+        <p class="step__number" aria-hidden="true">03</p>
+        <span class="step__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8V4h10v4"/><path d="M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="7" y="14" width="10" height="7" rx="1"/></svg>
+        </span>
+        <h3 class="h3 step__title"><span class="sr-only">Passo 3. </span>Pronto para aplicar</h3>
+        <p class="step__text">Com o material aprovado, você recebe o arquivo em formato editável (Word) e em PDF pronto para impressão. É só imprimir ou projetar — e focar no que você faz de melhor: ensinar.</p>
+        <p class="step__micro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Entrega em até 48 horas para a maioria dos pedidos.</p>
+      </li>
+    </ol>
+
+    <div class="section__cta reveal">
+      <a href="https://wa.me/5568984216557?text=Ol%C3%A1!%20Quero%20meu%20material%20pedag%C3%B3gico%20personalizado%20agora" class="btn btn--primary btn--lg btn--cta btn--block-mobile" target="_blank" rel="noopener">
+        <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+        QUERO MEU MATERIAL AGORA →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 12 — DEPOIMENTOS
+     ============================================================ -->
+<section class="section section--subtle" id="depoimentos" aria-labelledby="depoimentos-title">
+  <span class="edge-curve edge-curve--tl" aria-hidden="true"></span>
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="overline">O QUE DIZEM OS PROFESSORES</span>
+      <h2 class="h1 section__title" id="depoimentos-title">Quem já usa a Prof+ não volta a planejar sozinho.</h2>
+    </div>
+
+    <div class="grid grid--3">
+      <article class="card card--hover testimonial reveal">
+        <div class="testimonial__stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
+        </div>
+        <blockquote class="testimonial__quote">“Eu não acreditei quando recebi a sequência didática. Era exatamente o que eu precisava — com linguagem adequada para o meu 6º ano, usando o mesmo livro que eu utilizo e ainda com as questões adaptadas para os meus alunos com dificuldade de leitura. Nunca mais perdi fim de semana planejando.”</blockquote>
+        <div class="testimonial__author">
+          <span class="avatar" aria-hidden="true">JF</span>
+          <div>
+            <p class="testimonial__name">Juliana Ferreira</p>
+            <p class="testimonial__role">Professora de Português · Ensino Fundamental II · Rede Municipal</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--hover testimonial reveal">
+        <div class="testimonial__stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
+        </div>
+        <blockquote class="testimonial__quote">“Trabalho com turmas do 1º, 2º e 3º ano do Ensino Médio ao mesmo tempo. Precisava de provas diferentes para cada ano, com gabarito, e em menos de 48 horas. A Prof+ entregou tudo certinho. Virou parceira permanente do meu planejamento.”</blockquote>
+        <div class="testimonial__author">
+          <span class="avatar" aria-hidden="true">CA</span>
+          <div>
+            <p class="testimonial__name">Carlos Almeida</p>
+            <p class="testimonial__role">Professor de Matemática · Ensino Médio · Rede Estadual</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--hover testimonial reveal">
+        <div class="testimonial__stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
+        </div>
+        <blockquote class="testimonial__quote">“O que mais me impressionou foi a qualidade dos materiais adaptados para a minha aluna com TEA. São detalhes que mostram que quem fez entende de educação de verdade. A inclusão não foi um detalhe — foi central no material. Me emocionei.”</blockquote>
+        <div class="testimonial__author">
+          <span class="avatar" aria-hidden="true">RO</span>
+          <div>
+            <p class="testimonial__name">Renata Oliveira</p>
+            <p class="testimonial__role">Professora de Ciências · Fundamental I e II · Escola Particular</p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <p class="section__note reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+      Depoimentos baseados em experiências reais de professores atendidos. Nomes preservados com autorização.
+    </p>
+  </div>
+</section>
+
+<!-- Tabela comparativa + público-alvo (padrão lp.didata.ai) -->
+<section class="section" aria-labelledby="compare-title">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="overline">A PROF+ NA PRÁTICA</span>
+      <h2 class="h1 section__title" id="compare-title">Compare antes de decidir.</h2>
+      <p class="section__subtitle">A diferença entre um material que você adapta às pressas e um material que já chega pronto para a sua turma.</p>
+    </div>
+
+    <div class="compare-wrap reveal">
+      <table class="compare">
+        <caption>Comparativo entre criar o material sozinho, baixar da internet e contratar a Prof+.</caption>
+        <thead>
+          <tr>
+            <th scope="col">O que importa</th>
+            <th scope="col">Criar sozinho</th>
+            <th scope="col">Baixar da internet</th>
+            <th scope="col" class="is-brand">Prof+</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Tempo gasto por semana</th>
+            <td>6 a 10 horas</td>
+            <td>2 a 4 horas adaptando</td>
+            <td class="is-brand">Praticamente zero</td>
+          </tr>
+          <tr>
+            <th scope="row">Alinhamento à BNCC</th>
+            <td><span class="mark mark--no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Depende de você</span></td>
+            <td><span class="mark mark--no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Raramente indicado</span></td>
+            <td class="is-brand"><span class="mark mark--yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Referência direta</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Segue o seu livro didático</th>
+            <td><span class="mark mark--yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Sim, mas dá trabalho</span></td>
+            <td><span class="mark mark--no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Não</span></td>
+            <td class="is-brand"><span class="mark mark--yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Sim, por padrão</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Currículo da sua rede</th>
+            <td>Você pesquisa</td>
+            <td><span class="mark mark--no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Genérico</span></td>
+            <td class="is-brand"><span class="mark mark--yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Municipal ou estadual</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Versão adaptada (NEE, TEA, TDAH)</th>
+            <td>Exige conhecimento específico</td>
+            <td><span class="mark mark--no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Quase nunca existe</span></td>
+            <td class="is-brand"><span class="mark mark--yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Incluída no pedido</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Revisões e ajustes</th>
+            <td>Você refaz</td>
+            <td><span class="mark mark--no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Não tem</span></td>
+            <td class="is-brand"><span class="mark mark--yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Até 2 rodadas inclusas</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Formato de entrega</th>
+            <td>O que você montar</td>
+            <td>PDF travado</td>
+            <td class="is-brand">Word editável + PDF</td>
+          </tr>
+          <tr>
+            <th scope="row">Prazo</th>
+            <td>Seus fins de semana</td>
+            <td>Imediato, mas não serve</td>
+            <td class="is-brand">Até 48 horas</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section__head reveal" style="margin-top:var(--space-16); margin-bottom:var(--space-8)">
+      <h3 class="h2 section__title">Feito para:</h3>
+    </div>
+    <ul class="audience reveal">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Professores do Ensino Fundamental I e II</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Professores do Ensino Médio e da EJA</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Quem dá aula para várias turmas ao mesmo tempo</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Quem tem alunos com NEE e precisa de material adaptado</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Professores em início de carreira, ainda montando repertório</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Coordenações pedagógicas e projetos interdisciplinares</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 8 — DIFERENCIAIS COMPETITIVOS
+     ============================================================ -->
+<section class="section section--subtle" id="diferenciais" aria-labelledby="diferenciais-title">
+  <span class="edge-curve edge-curve--br" aria-hidden="true"></span>
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="overline">POR QUE ESCOLHER A PROF+?</span>
+      <h2 class="h1 section__title" id="diferenciais-title">A diferença está nos detalhes que só um especialista vê.</h2>
+      <p class="section__subtitle">Não somos um banco de atividades. Somos o seu suporte pedagógico personalizado.</p>
+    </div>
+
+    <ul class="diff-list">
+      <li class="diff reveal">
+        <span class="diff__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></span>
+        <div>
+          <h3 class="h4 diff__title">100% personalizado para você</h3>
+          <p class="card__text">Cada material é criado do zero com base nas informações que você nos passa. Nenhum material é reaproveitado de outro professor sem adaptação.</p>
+        </div>
+      </li>
+      <li class="diff reveal">
+        <span class="diff__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C10.5 5 8.5 4.5 4 4.5v13C8.5 17.5 10.5 18 12 19.5c1.5-1.5 3.5-2 8-2v-13c-4.5 0-6.5.5-8 2z"/><path d="M12 6.5v13"/></svg></span>
+        <div>
+          <h3 class="h4 diff__title">Alinhamento rigoroso à BNCC</h3>
+          <p class="card__text">Todos os materiais são desenvolvidos com referência direta à Base Nacional Comum Curricular, garantindo que os objetivos de aprendizagem estejam sempre presentes.</p>
+        </div>
+      </li>
+      <li class="diff reveal">
+        <span class="diff__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l7-4 7 4v13"/><path d="M10 21v-5h4v5"/></svg></span>
+        <div>
+          <h3 class="h4 diff__title">Adequado ao currículo da sua rede</h3>
+          <p class="card__text">Sabemos que cada rede de ensino tem suas especificidades. Por isso, nos adaptamos ao currículo municipal ou estadual da sua escola.</p>
+        </div>
+      </li>
+      <li class="diff reveal">
+        <span class="diff__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2V4z"/><path d="M18 16h1.5a1.5 1.5 0 0 1 0 3H18M8 8h6M8 12h6"/></svg></span>
+        <div>
+          <h3 class="h4 diff__title">Compatível com o seu livro didático</h3>
+          <p class="card__text">Você não precisa abandonar o livro que já usa. Criamos materiais complementares e alinhados à coleção didática da sua escola.</p>
+        </div>
+      </li>
+      <li class="diff reveal">
+        <span class="diff__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 18.5V20"/><circle cx="10" cy="7.5" r="3.2"/><path d="M20 20v-1.5a3.5 3.5 0 0 0-2.6-3.4M15.5 4.6a3.2 3.2 0 0 1 0 6.2"/></svg></span>
+        <div>
+          <h3 class="h4 diff__title">Adaptado às necessidades da turma</h3>
+          <p class="card__text">Seja uma turma com alunos avançados, com NEE ou com dificuldades específicas, desenvolvemos materiais que respeitam e atendem a esse espectro.</p>
+        </div>
+      </li>
+      <li class="diff reveal">
+        <span class="diff__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M18.5 5.5l1.5 1.5"/></svg></span>
+        <div>
+          <h3 class="h4 diff__title">Economia real de tempo</h3>
+          <p class="card__text">Professores que trabalham com a Prof+ relatam economizar entre 6 e 10 horas semanais de planejamento. Tempo que vai para onde realmente importa.</p>
+        </div>
+      </li>
+      <li class="diff reveal">
+        <span class="diff__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11.5 11.5 14 16 9.5"/><rect x="4" y="4" width="16" height="16" rx="3"/></svg></span>
+        <div>
+          <h3 class="h4 diff__title">Pronto para aplicar, sem retrabalho</h3>
+          <p class="card__text">Entregamos os materiais em formatos prontos para uso imediato — PDF para impressão e Word editável para quem quiser personalizar algum detalhe.</p>
+        </div>
+      </li>
+      <li class="diff reveal">
+        <span class="diff__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 1 1-2.3-5.6"/><path d="M20 4v4.5h-4.5"/></svg></span>
+        <div>
+          <h3 class="h4 diff__title">Revisões incluídas no pedido</h3>
+          <p class="card__text">Não ficou exatamente como você imaginou? Incluímos até 2 rodadas de ajustes em cada pedido, sem custo adicional.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 4 — PROBLEMA (PAS)
+     ============================================================ -->
+<section class="section" aria-labelledby="problema-title">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="overline">A REALIDADE DE MUITOS PROFESSORES</span>
+      <h2 class="h1 section__title" id="problema-title">Você foi formado para ensinar. Não para perder fins de semana planejando.</h2>
+    </div>
+
+    <div class="prose reveal">
+      
+      <p>E não é só o tempo que vai embora. É a energia. É o sono. É o domingo que deveria ser de descanso.</p>
+    </div>
+
+    <div class="grid grid--4">
+      <article class="card card--hover reveal">
+        <div class="card__icon pain-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        </div>
+        <h3 class="h4 card__title">Horas perdidas toda semana</h3>
+        <p class="card__text">Professores gastam em média 6 a 10 horas semanais apenas preparando materiais — tempo que poderia ser dedicado à família, ao autocuidado ou à atualização profissional.</p>
+      </article>
+
+      <article class="card card--hover reveal">
+        <div class="card__icon pain-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 15.5c1-1 5-1 7 0M9 9.5h.01M15 9.5h.01"/></svg>
+        </div>
+        <h3 class="h4 card__title">Esgotamento que não para de crescer</h3>
+        <p class="card__text">O burnout docente é real. Parte dele vem exatamente da sobrecarga de tarefas administrativas e de planejamento que se acumulam fora do horário de aula.</p>
+      </article>
+
+      <article class="card card--hover reveal">
+        <div class="card__icon pain-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6a1 1 0 0 1 1 1v1H8V4a1 1 0 0 1 1-1z"/><path d="M16 5h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg>
+        </div>
+        <h3 class="h4 card__title">Materiais genéricos que não funcionam</h3>
+        <p class="card__text">Baixar atividades prontas da internet parece prático — mas raramente se encaixam no currículo da sua rede, no livro que você usa ou nas necessidades reais da sua turma.</p>
+      </article>
+
+      <article class="card card--hover reveal">
+        <div class="card__icon pain-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 2 9l10 5 10-5-10-5z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/></svg>
+        </div>
+        <h3 class="h4 card__title">Alunos com necessidades específicas sem suporte</h3>
+        <p class="card__text">Adaptar materiais para alunos com NEE ou dificuldades de aprendizagem exige tempo e conhecimento especializado — e geralmente recai sobre o professor sem nenhum apoio.</p>
+      </article>
+    </div>
+
+    <p class="transition-note reveal">Você não precisa resolver tudo sozinho. É exatamente aqui que a Prof+ entra.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 5 — SOLUÇÃO
+     ============================================================ -->
+<section class="section section--subtle" aria-labelledby="solucao-title">
+  <div class="container">
+    <div class="solution__grid">
+      <div>
+        <span class="overline">A SOLUÇÃO PROF+</span>
+        <h2 class="h1 section__title reveal" id="solucao-title">Materiais pedagógicos feitos para a sua realidade — não para uma turma genérica.</h2>
+        <p class="section__subtitle reveal" style="margin-bottom:var(--space-6)">A Prof+ cria, você aplica.</p>
+
+        <div class="prose reveal" style="margin-bottom:var(--space-8)">
+          <p>Diferente dos materiais prontos que você encontra na internet — criados para um professor imaginário, de uma turma imaginária — os materiais da Prof+ são desenvolvidos com base nas informações que você nos passa: sua rede de ensino, o livro didático que você usa, o ano escolar, os conteúdos que está trabalhando e as características da sua turma.</p>
+          <p>O resultado é um material que parece que foi você mesmo quem criou. Porque, de certa forma, foi.</p>
+        </div>
+
+        <ul class="chip-list reveal">
+          <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Alinhado à BNCC</li>
+          <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Compatível com o seu livro didático</li>
+          <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Adaptado à faixa etária</li>
+          <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Pronto para imprimir e aplicar</li>
+          <li class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Entrega rápida</li>
+        </ul>
+      </div>
+
+      <aside class="solution__aside reveal">
+        <img class="solution__symbol" src="assets/logo-symbol-light.png" alt="" aria-hidden="true" width="230" height="340">
+        <p class="solution__quote">A Prof+ cria o material.<br><em>Você aplica em sala.</em></p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 9 — FAIXA DE DESTAQUE
+     ============================================================ -->
+<section class="strip" aria-labelledby="strip-title">
+  <div class="pattern-band" aria-hidden="true"></div>
+  <span class="edge-curve edge-curve--br" aria-hidden="true"></span>
+  <div class="container">
+    <div class="strip__inner">
+      <div>
+        <h2 class="h2 strip__title" id="strip-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M18.5 5.5l1.5 1.5"/></svg>
+          <span>Entrega rápida e materiais prontos para aplicar em sala de aula.</span>
+        </h2>
+        <p class="strip__sub">Sem espera. Sem retrabalho. Sem domingo perdido.</p>
+      </div>
+      <div>
+        <a href="https://wa.me/5568984216557?text=Ol%C3%A1!%20Quero%20parar%20de%20perder%20meus%20domingos%20planejando.%20Me%20conta%20como%20funciona%20a%20Prof%2B" class="btn btn--secondary btn--lg btn--cta btn--block-mobile" target="_blank" rel="noopener">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+          QUERO PARAR DE PERDER MEUS DOMINGOS →
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="pattern-band" aria-hidden="true"></div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 16 — FAQ
+     ============================================================ -->
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="overline">DÚVIDAS FREQUENTES</span>
+      <h2 class="h1 section__title" id="faq-title">Respondemos as perguntas que professores mais fazem.</h2>
+    </div>
+
+    <div class="faq" id="faqList">
+      <div class="faq__item">
+        <h3 class="faq__heading"><button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-p1">O que exatamente a Prof+ entrega?<svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+        <div class="faq__panel" id="faq-p1" role="region"><div><p>A Prof+ cria materiais pedagógicos personalizados — sequências didáticas, provas com gabarito, atividades de fixação e revisão, atividades adaptadas para alunos com NEE e trabalhos avaliativos com rubrica. Tudo desenvolvido com base nas informações que você nos passa sobre sua turma, disciplina, rede de ensino e livro didático.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__heading"><button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-p2">Os materiais são genéricos ou realmente personalizados para mim?<svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+        <div class="faq__panel" id="faq-p2" role="region"><div><p>São 100% personalizados. Não vendemos materiais prontos de prateleira. Cada pedido é desenvolvido do zero com base nas informações que você nos fornece. Por isso pedimos o máximo de detalhes possíveis no momento do contato.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__heading"><button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-p3">Quanto tempo demora para receber o material?<svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+        <div class="faq__panel" id="faq-p3" role="region"><div><p>A maioria dos pedidos é entregue em até 48 horas úteis após a confirmação do pedido e o pagamento. Materiais mais extensos (como sequências completas ou pacotes com múltiplos itens) podem levar até 72 horas. Em caso de urgência, entre em contato pelo WhatsApp e avaliamos a possibilidade de entrega expressa.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__heading"><button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-p4">Os materiais são alinhados à BNCC?<svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+        <div class="faq__panel" id="faq-p4" role="region"><div><p>Sim. Todos os materiais produzidos pela Prof+ são desenvolvidos com referência direta à Base Nacional Comum Curricular (BNCC), respeitando as competências e habilidades previstas para cada etapa e componente curricular.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__heading"><button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-p5">E se o material não ficar do jeito que eu queria?<svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+        <div class="faq__panel" id="faq-p5" role="region"><div><p>Cada pedido inclui até 2 rodadas de revisão sem custo adicional. Você revisa o material, indica os ajustes necessários e nossa equipe corrige dentro do prazo acordado. Queremos que você fique satisfeito — sempre.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__heading"><button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-p6">A Prof+ faz materiais para educação especial e inclusiva?<svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+        <div class="faq__panel" id="faq-p6" role="region"><div><p>Sim. Desenvolvemos atividades adaptadas para alunos com TEA, TDAH, dislexia, discalculia e outras condições. Os materiais são criados com recursos visuais adequados, linguagem simplificada quando necessário e estrutura que respeita o ritmo de cada aluno.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__heading"><button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-p7">Posso pedir materiais para qualquer disciplina e ano escolar?<svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+        <div class="faq__panel" id="faq-p7" role="region"><div><p>Sim. Atendemos todas as disciplinas do currículo da Educação Básica — do 1º ano do Ensino Fundamental ao 3º ano do Ensino Médio, incluindo Educação de Jovens e Adultos (EJA). Se tiver dúvidas sobre a sua situação específica, entre em contato e verificamos juntos.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__heading"><button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-p9">Em qual formato os materiais são entregues?<svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+        <div class="faq__panel" id="faq-p9" role="region"><div><p>Os materiais são entregues em dois formatos: Word (.docx) para edições e personalização e PDF pronto para impressão. Caso prefira um formato diferente, é só nos informar no momento do pedido.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__heading"><button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-p10">Como funciona o processo de pagamento?<svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+        <div class="faq__panel" id="faq-p10" role="region"><div><p>Após definirmos o escopo do material e o valor, o pagamento é feito via Pix, transferência bancária ou outros meios acordados no momento do atendimento. O pedido é iniciado após a confirmação do pagamento.</p></div></div>
+      </div>
+      <div class="faq__item">
+        <h3 class="faq__heading"><button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-p13">É possível solicitar um pacote de materiais para o bimestre ou semestre inteiro?<svg class="faq__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+        <div class="faq__panel" id="faq-p13" role="region"><div><p>Sim, e essa é uma das opções mais procuradas! Pacotes bimestrais ou semestrais garantem um planejamento mais tranquilo e, dependendo do volume, podem ter condições especiais. Entre em contato pelo WhatsApp para montar o pacote ideal para você.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEÇÃO 17 — CHAMADA FINAL
+     ============================================================ -->
+<section class="section final" id="contato" aria-labelledby="final-title">
+  <span class="edge-curve edge-curve--tl" aria-hidden="true"></span>
+  <span class="edge-curve edge-curve--br" aria-hidden="true"></span>
+  <div class="container">
+    <div class="final__grid">
+      <div>
+        <span class="overline">PRONTO PARA COMEÇAR?</span>
+        <h2 class="h1 final__title" id="final-title">Você ensina. A Prof+ prepara o material.</h2>
+        <div class="final__text">
+          <p>Receba materiais personalizados para a sua realidade, economize horas de planejamento e tenha muito mais tempo para focar no que realmente importa: ensinar.</p>
+          <p>Cada hora que você ganha no planejamento é uma hora a mais de energia, presença e cuidado para os seus alunos — e para você mesma.</p>
+        </div>
+      </div>
+
+      <div>
+        <ul class="trust-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>+200 professores atendidos</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Materiais alinhados à BNCC</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Entrega em até 48h</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>2 revisões inclusas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Suporte pelo WhatsApp</li>
+        </ul>
+
+        <div class="final__actions">
+          <a href="https://wa.me/5568984216557?text=Ol%C3%A1!%20Quero%20economizar%20horas%20de%20planejamento%20com%20a%20Prof%2B" class="btn btn--secondary btn--lg btn--cta btn--block-mobile" target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp com a Prof+ (abre em nova aba)">
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+            QUERO ECONOMIZAR 8 HORAS POR SEMANA →
+          </a>
+        </div>
+        <p class="final__micro">Sem compromisso. Sem taxa de consulta. Só uma conversa.</p>
+
+        <div class="final__contacts">
+          <a href="https://wa.me/5568984216557?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Prof%2B" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+            WhatsApp: (68) 98421-6557
+          </a>
+          <a href="https://instagram.com/profmais" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+            Instagram: @profmais
+          </a>
+          <a href="mailto:profmais@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+            E-mail: profmais@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     SEÇÃO 19 — RODAPÉ
+     ============================================================ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <img src="assets/logo-symbol-light.png" alt="" aria-hidden="true" width="230" height="340">
+          <span class="logo__wordmark">Prof<span class="logo__plus">+</span></span>
+        </div>
+        <p class="footer-tagline">Educar, Transformar, Inspirar.</p>
+        <p class="body-sm">Materiais pedagógicos personalizados para professores que querem mais tempo, mais qualidade e mais leveza no planejamento.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/5568984216557?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Prof%2B" target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp com a Prof+ (abre em nova aba)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+          </a>
+          <a href="https://instagram.com/profmais" target="_blank" rel="noopener" aria-label="Abrir o perfil da Prof+ no Instagram (abre em nova aba)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav aria-label="Navegação do rodapé">
+        <h2 class="footer-col-title">Navegação</h2>
+        <ul class="footer-links">
+          <li><a href="#como-funciona">Como Funciona</a></li>
+          <li><a href="#materiais">Materiais</a></li>
+          <li><a href="#precos">Preços</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="footer-col-title">Materiais</h2>
+        <ul class="footer-links">
+          <li><a href="#materiais">Sequências Didáticas</a></li>
+          <li><a href="#materiais">Provas e Gabaritos</a></li>
+          <li><a href="#materiais">Atividades</a></li>
+          <li><a href="#materiais">Atividades Adaptadas</a></li>
+          <li><a href="#materiais">Trabalhos Avaliativos</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="footer-col-title">Fale Conosco</h2>
+        <div class="footer-contact">
+          <a href="https://wa.me/5568984216557?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Prof%2B" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+            WhatsApp: (68) 98421-6557
+          </a>
+          <a href="https://instagram.com/profmais" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+            Instagram: @profmais
+          </a>
+          <a href="mailto:profmais@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+            profmais@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Prof+ · Todos os direitos reservados.</p>
+      <p class="footer-legal">
+        <a href="#" data-legal="privacidade">Política de Privacidade</a>
+        <a href="#" data-legal="termos">Termos de Uso</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- Barra fixa de conversão (mobile) -->
+<div class="sticky-cta" id="stickyCta" aria-hidden="true">
+  <a href="https://wa.me/5568984216557?text=Ol%C3%A1!%20Quero%20materiais%20pedag%C3%B3gicos%20personalizados%20da%20Prof%2B" class="btn btn--primary btn--full btn--cta" target="_blank" rel="noopener" tabindex="-1">
+    <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+    QUERO MEUS MATERIAIS PRONTOS →
+  </a>
+</div>
+
+<a class="wa-float" href="https://wa.me/5568984216557?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Prof%2B" target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp com a Prof+ (abre em nova aba)">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+</a>
+
+<!-- Modais legais -->
+<dialog class="legal-modal" id="modal-privacidade" aria-labelledby="modal-privacidade-title">
+  <div class="legal-modal__box">
+    <div class="legal-modal__head">
+      <div>
+        <h2 class="h3" id="modal-privacidade-title">Política de Privacidade</h2>
+        <p class="caption">Data de vigência: 01 de janeiro de 2026</p>
+      </div>
+      <button type="button" class="legal-modal__close" data-close-modal aria-label="Fechar Política de Privacidade">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="legal-modal__body">
+      <div><h3>1. Quais dados coletamos</h3><p>Coletamos os dados informados voluntariamente por você no contato: nome, e-mail, número de WhatsApp, informações sobre sua atuação docente e detalhes do material solicitado. Não coletamos dados sensíveis como CPF, data de nascimento ou dados bancários por este canal.</p></div>
+      <div><h3>2. Para que usamos seus dados</h3><p>Seus dados são usados exclusivamente para: (a) entrar em contato com você para enviar o orçamento solicitado; (b) prestar o serviço contratado; (c) melhorar nosso atendimento e comunicação. Não utilizamos seus dados para spam ou comunicações não autorizadas.</p></div>
+      <div><h3>3. Compartilhamento de dados</h3><p>Não vendemos, alugamos ou compartilhamos seus dados pessoais com terceiros, exceto quando exigido por lei.</p></div>
+      <div><h3>4. Segurança</h3><p>Adotamos medidas técnicas e organizacionais adequadas para proteger seus dados contra acesso não autorizado, perda ou alteração.</p></div>
+      <div><h3>5. Seus direitos (LGPD)</h3><p>Você tem o direito de solicitar acesso, correção, exclusão ou portabilidade de seus dados a qualquer momento, por meio do e-mail: profmais@gmail.com.</p></div>
+      <div><h3>6. Cookies</h3><p>Este site pode utilizar cookies para melhorar a experiência de navegação. Você pode desativá-los nas configurações do seu navegador.</p></div>
+      <div><h3>7. Contato</h3><p>Para dúvidas sobre esta política: profmais@gmail.com</p></div>
+    </div>
+  </div>
+</dialog>
+
+<dialog class="legal-modal" id="modal-termos" aria-labelledby="modal-termos-title">
+  <div class="legal-modal__box">
+    <div class="legal-modal__head">
+      <div>
+        <h2 class="h3" id="modal-termos-title">Termos de Uso</h2>
+        <p class="caption">Data de vigência: 01 de janeiro de 2026</p>
+      </div>
+      <button type="button" class="legal-modal__close" data-close-modal aria-label="Fechar Termos de Uso">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="legal-modal__body">
+      <div><h3>1. Uso dos materiais</h3><p>Os materiais pedagógicos criados pela Prof+ são licenciados para uso pessoal do professor contratante, exclusivamente com suas próprias turmas. É vedado: reproduzir, vender, distribuir ou sublicenciar os materiais a terceiros sem autorização expressa da Prof+.</p></div>
+      <div><h3>2. Processo de pedido</h3><p>O pedido é formalizado após o envio das informações necessárias e a confirmação do pagamento. A Prof+ se compromete a iniciar a produção em até 24h úteis após a confirmação.</p></div>
+      <div><h3>3. Revisões</h3><p>Cada pedido inclui até 2 rodadas de revisão, dentro do escopo originalmente acordado. Alterações que modifiquem substancialmente o escopo podem ser tratadas como novos pedidos.</p></div>
+      <div><h3>4. Prazo de entrega</h3><p>Os prazos são informados no momento da contratação. Em caso de imprevisto que impacte o prazo, a Prof+ comunicará o cliente com antecedência.</p></div>
+      <div><h3>5. Propriedade intelectual</h3><p>Os materiais produzidos pela Prof+ são criações originais e propriedade da Prof+ até o momento da entrega, quando passam a ser licenciados ao professor contratante para uso conforme descrito no item 1.</p></div>
+      <div><h3>6. Limitação de responsabilidade</h3><p>A Prof+ não se responsabiliza pelo uso indevido dos materiais nem por resultados pedagógicos específicos. Os materiais são ferramentas de apoio pedagógico e seu uso é de responsabilidade do professor.</p></div>
+      <div><h3>7. Contato</h3><p>profmais@gmail.com · WhatsApp: (68) 98421-6557</p></div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  'use strict';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Navbar: sombra ao rolar + menu mobile ---------- */
+  var header = document.querySelector('.site-header');
+  var toggle = document.getElementById('navToggle');
+  var drawer = document.getElementById('navDrawer');
+
+  toggle.addEventListener('click', function () {
+    var open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    toggle.setAttribute('aria-label', open ? 'Abrir menu de navegação' : 'Fechar menu de navegação');
+    drawer.classList.toggle('is-open', !open);
+  });
+  drawer.addEventListener('click', function (e) {
+    if (e.target.closest('a')) {
+      toggle.setAttribute('aria-expanded', 'false');
+      drawer.classList.remove('is-open');
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
+      toggle.setAttribute('aria-expanded', 'false');
+      drawer.classList.remove('is-open');
+      toggle.focus();
+    }
+  });
+
+  /* ---------- Barra fixa de conversão (mobile) ---------- */
+  var sticky = document.getElementById('stickyCta');
+  var stickyLink = sticky.querySelector('a');
+  function onScroll() {
+    header.classList.toggle('is-scrolled', window.scrollY > 80);
+    var show = window.scrollY > window.innerHeight * 0.9;
+    sticky.classList.toggle('is-visible', show);
+    sticky.setAttribute('aria-hidden', String(!show));
+    stickyLink.tabIndex = show ? 0 : -1;
+    document.body.classList.toggle('has-sticky-cta', show);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---------- Link ativo na navbar ---------- */
+  var navAnchors = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
+  var sections = navAnchors
+    .map(function (a) { return document.querySelector(a.getAttribute('href')); })
+    .filter(Boolean);
+  if ('IntersectionObserver' in window && sections.length) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navAnchors.forEach(function (a) {
+          a.classList.toggle('is-active', a.getAttribute('href') === '#' + entry.target.id);
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(function (s) { spy.observe(s); });
+  }
+
+  /* ---------- Animações de entrada (15.5) ---------- */
+  var reveals = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    reveals.forEach(function (el) { el.classList.add('is-visible'); });
+  } else {
+    var revealObserver = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry, i) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        setTimeout(function () { el.classList.add('is-visible'); }, Math.min(i, 5) * 100);
+        obs.unobserve(el);
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(function (el) { revealObserver.observe(el); });
+  }
+
+  /* ---------- Contadores de estatística (15.5) ---------- */
+  var counters = document.querySelectorAll('[data-count-to]');
+  function runCount(el) {
+    var target = parseFloat(el.getAttribute('data-count-to'));
+    var prefix = el.getAttribute('data-prefix') || '';
+    var suffix = el.getAttribute('data-suffix') || '';
+    var group = el.getAttribute('data-group') === 'true';
+    var fmt = function (n) {
+      return group ? n.toLocaleString('pt-BR') : String(n);
+    };
+    if (reduce) { el.textContent = prefix + fmt(target) + suffix; return; }
+    var start = performance.now(), dur = 1500;
+    function tick(now) {
+      var p = Math.min((now - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = prefix + fmt(Math.round(target * eased)) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  if ('IntersectionObserver' in window) {
+    var countObserver = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        runCount(entry.target);
+        obs.unobserve(entry.target);
+      });
+    }, { threshold: 0.4 });
+    counters.forEach(function (el) { countObserver.observe(el); });
+  }
+
+  /* ---------- FAQ: accordion exclusivo (12.16) ---------- */
+  var triggers = document.querySelectorAll('.faq__trigger');
+  triggers.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      triggers.forEach(function (other) {
+        other.setAttribute('aria-expanded', 'false');
+        document.getElementById(other.getAttribute('aria-controls')).dataset.open = 'false';
+      });
+      if (!expanded) {
+        btn.setAttribute('aria-expanded', 'true');
+        document.getElementById(btn.getAttribute('aria-controls')).dataset.open = 'true';
+      }
+    });
+  });
+
+  /* ---------- Galeria: abas (12.17) ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.gallery__tab'));
+  function selectTab(tab) {
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener('click', function () { selectTab(tab); });
+    tab.addEventListener('keydown', function (e) {
+      var dir = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!dir) return;
+      e.preventDefault();
+      var next = tabs[(i + dir + tabs.length) % tabs.length];
+      selectTab(next);
+      next.focus();
+    });
+  });
+
+  /* ---------- Exemplares: polaroids interativas ---------- */
+  var polaroids = document.querySelectorAll('.polaroid');
+  polaroids.forEach(function (card) {
+    if (!reduce) {
+      card.addEventListener('pointermove', function (e) {
+        var r = card.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width - 0.5;
+        var py = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform =
+          'rotate(0deg) translateY(-10px) scale(1.04) ' +
+          'rotateX(' + (-py * 9).toFixed(2) + 'deg) ' +
+          'rotateY(' + (px * 11).toFixed(2) + 'deg)';
+      });
+      card.addEventListener('pointerleave', function () { card.style.transform = ''; });
+      card.addEventListener('blur', function () { card.style.transform = ''; });
+      card.addEventListener('focus', function () {
+        card.style.transform = 'rotate(0deg) translateY(-10px) scale(1.04)';
+      });
+    }
+    // Toque: primeiro toque destaca, segundo solta
+    card.addEventListener('pointerdown', function (e) {
+      if (e.pointerType !== 'touch') return;
+      polaroids.forEach(function (o) { if (o !== card) o.classList.remove('is-active'); });
+      card.classList.toggle('is-active');
+    });
+  });
+
+  /* ---------- Modais legais (12.10) ---------- */
+  document.querySelectorAll('[data-legal]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      var dlg = document.getElementById('modal-' + link.dataset.legal);
+      if (dlg && typeof dlg.showModal === 'function') dlg.showModal();
+    });
+  });
+  document.querySelectorAll('[data-close-modal]').forEach(function (btn) {
+    btn.addEventListener('click', function () { btn.closest('dialog').close(); });
+  });
+  document.querySelectorAll('.legal-modal').forEach(function (dlg) {
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  });
+})();
+</script>
+</body>
+</html>
