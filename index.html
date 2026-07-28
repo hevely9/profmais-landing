@@ -333,6 +333,19 @@ button { cursor:pointer; background:none; border:none; padding:0; }
 .section--green .caption,
 .section--green p { color:rgba(246,241,227,0.82); }
 
+/* Nota de rodapé de seção (ícone + microcopy). Este bloco vivia junto da
+   seção Benefícios; quando ela saiu, o ícone ficou sem tamanho e explodia
+   para a largura toda do container. */
+.section__note {
+  margin-top:var(--space-8);
+  display:flex; align-items:flex-start; gap:var(--space-2);
+  font-size:var(--font-size-body-sm); color:var(--color-gray-700);
+}
+.section__note svg {
+  width:18px; height:18px; flex:0 0 auto;
+  color:var(--color-primary-deepgreen); margin-top:3px;
+}
+
 .section__head { max-width:760px; margin-bottom:var(--space-10); }
 @media (min-width:1024px){ .section__head { margin-bottom:var(--space-12); } }
 .section__title { margin-bottom:var(--space-4); }
@@ -774,33 +787,6 @@ button { cursor:pointer; background:none; border:none; padding:0; }
 }
 
 /* ============================================================
-   SEÇÃO 12 — DEPOIMENTOS
-   ============================================================ */
-.testimonial { display:flex; flex-direction:column; }
-.testimonial__stars { display:flex; gap:2px; margin-bottom:var(--space-4); color:var(--color-primary-orange); }
-.testimonial__stars svg { width:18px; height:18px; }
-.testimonial__quote {
-  font-size:var(--font-size-body); line-height:var(--line-height-relaxed);
-  color:var(--color-gray-700); margin-bottom:var(--space-6);
-}
-.testimonial__author { display:flex; align-items:center; gap:var(--space-4); margin-top:auto; }
-/* Avatar por iniciais (12.21 fallback). Substituir por foto real do
-   professor assim que houver autorização — converte bem mais. */
-.avatar {
-  width:56px; height:56px; flex:0 0 auto; border-radius:var(--radius-full);
-  display:grid; place-items:center;
-  background:var(--color-secondary-sand); color:var(--color-primary-deepgreen);
-  font-family:var(--font-family-primary); font-weight:var(--font-weight-bold);
-  font-size:var(--font-size-body-lg); letter-spacing:0.04em;
-  box-shadow:0 0 0 2px var(--color-surface-default), 0 0 0 4px rgba(14,75,60,0.18);
-}
-.testimonial__name {
-  font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold);
-  font-size:var(--font-size-body); color:var(--color-primary-deepgreen);
-}
-.testimonial__role { font-size:var(--font-size-caption); color:var(--color-gray-500); line-height:1.4; }
-
-/* ============================================================
    SEÇÃO 15 — GARANTIA
    ============================================================ */
 .guarantee {
@@ -1238,49 +1224,14 @@ body.has-sticky-cta .wa-float { bottom:88px; }
   .step__title { font-size:var(--font-size-body-lg); margin-bottom:var(--space-2); }
   .step__text { font-size:var(--font-size-body-sm); margin-bottom:var(--space-3); }
   .step__micro { font-size:var(--font-size-caption); padding:5px var(--space-3); }
-  .section__cta { margin-top:var(--space-6); }
-
-  /* depoimentos: carrossel horizontal */
-  .testimonial-grid {
-    display:flex; gap:var(--space-4);
+  .section__cta { margin-top:var(--space-6); }    display:flex; gap:var(--space-4);
     overflow-x:auto; scroll-snap-type:x mandatory;
     -webkit-overflow-scrolling:touch;
     padding:0 var(--container-pad) var(--space-4);
     margin-inline:calc(-1 * var(--container-pad));
     scrollbar-width:none;
   }
-  .testimonial-grid::-webkit-scrollbar { display:none; }
-  .testimonial-grid > .testimonial { flex:0 0 84%; scroll-snap-align:center; }
-  .testimonial__quote { font-size:var(--font-size-body-sm); margin-bottom:var(--space-4); }
-  .testimonial__stars { margin-bottom:var(--space-3); }
-  .testimonial__stars svg { width:16px; height:16px; }
-  .avatar { width:44px; height:44px; font-size:var(--font-size-body); }
-
-  /* faixa de destaque */
-  .strip__inner { padding-block:var(--space-8); gap:var(--space-5); }
-  .strip__title svg { width:24px; height:24px; }
-  .strip__sub { font-size:var(--font-size-body); }
-
-  /* faq */
-  .faq { gap:var(--space-2); }
-  .faq__trigger { padding:var(--space-4); font-size:var(--font-size-body-sm); }
-  .faq__panel p { padding:0 var(--space-4) var(--space-4); font-size:var(--font-size-body-sm); }
-
-  /* chamada final */
-  .final__grid { gap:var(--space-8); }
-  .final__text { gap:var(--space-3); margin-bottom:var(--space-6); }
-  .final__text p { font-size:var(--font-size-body); }
-  .trust-list { gap:var(--space-2); margin-bottom:var(--space-6); }
-  .trust-list li { font-size:var(--font-size-body-sm); }
-  .final__micro { margin-bottom:var(--space-6); }
-
-  /* rodapé */
-  .site-footer .container { padding-block:var(--space-10); }
-  .footer-grid { gap:var(--space-8); }
-  .footer-col-title { margin-bottom:var(--space-4); }
-  .footer-bottom { margin-top:var(--space-8); padding-top:var(--space-5); }
-}
-
+  
 /* ---------- segunda passada: as seções que ainda pesavam ---------- */
 @media (max-width:767px) {
 
@@ -1461,12 +1412,131 @@ body.has-sticky-cta .wa-float { bottom:88px; }
 }
 
 /* o flutuante volta a sumir no celular: a barra fixa já ocupa o polegar */
-@media (max-width:767px) { .wa-float { display:none; } }</style>
+@media (max-width:767px) { .wa-float { display:none; } }
+/* ============================================================
+   DEPOIMENTO REAL + ÁREA DE AVALIAÇÃO
+   Um depoimento verdadeiro vale mais que seis inventados: aqui o
+   print da conversa fica ao lado da frase destacada, e logo abaixo
+   o cliente pode mandar a própria avaliação.
+   ============================================================ */
+.proof-real {
+  position:relative; margin:0 auto;
+  max-width:620px;
+  background:var(--color-white);
+  border:1px solid var(--color-border-default);
+  border-radius:var(--radius-lg);
+  padding:var(--space-3);
+  box-shadow:var(--shadow-xl);
+  transform:rotate(-1deg);
+  animation:floatA 9s ease-in-out infinite;
+}
+.proof-real img {
+  width:100%; height:auto; display:block;
+  border-radius:var(--radius-sm);
+}
+.proof-real__badge {
+  position:absolute; top:calc(-1 * var(--space-4)); left:var(--space-5);
+  z-index:var(--z-raised);
+  display:inline-flex; align-items:center; gap:6px;
+  background:var(--color-semantic-success); color:var(--color-white);
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold);
+  font-size:var(--font-size-caption);
+  padding:7px 13px; border-radius:var(--radius-full);
+  box-shadow:var(--shadow-md);
+}
+.proof-real__badge svg { width:15px; height:15px; flex:0 0 auto; }
+/* ---------- área de avaliação ---------- */
+.review {
+  margin-top:var(--space-16);
+  background:var(--color-surface-default);
+  border:1px solid var(--color-border-default);
+  border-radius:var(--radius-xl);
+  box-shadow:var(--shadow-md);
+  padding:var(--space-6);
+  display:grid; gap:var(--space-6);
+}
+@media (min-width:1024px) {
+  .review { grid-template-columns:1fr 1fr; gap:var(--space-12); padding:var(--space-10); align-items:center; }
+}
+.review__intro h3 { margin-bottom:var(--space-3); }
+.review__intro p { font-size:var(--font-size-body-sm); color:var(--color-gray-700); }
+.review__form { display:grid; gap:var(--space-4); }
+
+.rating { border:none; margin:0; padding:0; }
+.rating legend {
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-medium);
+  font-size:var(--font-size-label); color:var(--color-primary-deepgreen);
+  margin-bottom:var(--space-2); padding:0;
+}
+/* estrelas em ordem inversa no DOM: permite pintar da 1ª até a marcada */
+.rating__stars { display:inline-flex; flex-direction:row-reverse; gap:var(--space-1); }
+.rating__stars input { position:absolute; opacity:0; width:1px; height:1px; }
+.rating__stars label {
+  cursor:pointer; color:var(--color-gray-300);
+  padding:var(--space-1);
+  transition:color var(--duration-fast) var(--easing-out), transform var(--duration-fast) var(--easing-out);
+}
+.rating__stars label svg { width:30px; height:30px; display:block; }
+.rating__stars input:checked ~ label,
+.rating__stars label:hover,
+.rating__stars label:hover ~ label { color:var(--color-primary-orange); }
+.rating__stars label:hover { transform:scale(1.12); }
+.rating__stars input:focus-visible + label {
+  outline:3px solid var(--color-primary-orange); outline-offset:2px; border-radius:var(--radius-xs);
+}
+
+.review__field { display:grid; gap:var(--space-2); }
+.review__field > span {
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-medium);
+  font-size:var(--font-size-label); color:var(--color-primary-deepgreen);
+}
+.review__field em { font-style:normal; color:var(--color-gray-500); font-weight:var(--font-weight-regular); }
+.review__field textarea {
+  width:100%; padding:var(--space-3) var(--space-4);
+  font-family:var(--font-family-secondary); font-size:var(--font-size-body);
+  color:var(--color-gray-900); background:var(--color-surface-default);
+  border:1px solid var(--color-border-default); border-radius:var(--radius-sm);
+  resize:vertical; min-height:88px; line-height:var(--line-height-relaxed);
+}
+.review__field textarea:hover { border-color:var(--color-border-strong); }
+.review__field textarea:focus {
+  outline:none; border-color:var(--color-border-focus); box-shadow:var(--shadow-focus);
+}
+.review__hint { font-size:var(--font-size-caption); color:var(--color-gray-500); text-align:center; }
+
+@media (max-width:767px) {
+  .proof-real { transform:none; padding:var(--space-2); }
+  /* no celular o selo passa a ficar acima do print, para nao cobrir a conversa */
+  .proof-real__badge {
+    position:static; transform:none;
+    width:fit-content; margin:0 auto var(--space-3);
+    font-size:0.6875rem; padding:6px 11px;
+  }
+  .review { margin-top:var(--space-10); padding:var(--space-5); gap:var(--space-5); }
+  .rating__stars label svg { width:34px; height:34px; }
+}
+/* Fatos que o professor destacou, lidos direto do print acima */
+.proof-points {
+  display:grid; gap:var(--space-3);
+  max-width:620px; margin:var(--space-8) auto 0;
+}
+@media (min-width:768px) {
+  .proof-points { grid-template-columns:repeat(3,1fr); gap:var(--space-4); }
+}
+.proof-points li {
+  display:flex; align-items:flex-start; gap:var(--space-3);
+  background:var(--color-surface-default);
+  border:1px solid var(--color-border-default);
+  border-radius:var(--radius-md);
+  padding:var(--space-4);
+  font-size:var(--font-size-body-sm); line-height:1.4;
+  color:var(--color-gray-700);
+}
+.proof-points svg { width:18px; height:18px; flex:0 0 auto; color:var(--color-semantic-success); margin-top:2px; }
+.proof-points strong { color:var(--color-primary-deepgreen); font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold); }</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Ir para o conteúdo principal</a>
-
-
 
 <!-- ============================================================
      SEÇÃO 1 — NAVEGAÇÃO (NAVBAR)
@@ -1914,76 +1984,76 @@ body.has-sticky-cta .wa-float { bottom:88px; }
 </section>
 
 <!-- ============================================================
-     SEÇÃO 12 — DEPOIMENTOS
+     DEPOIMENTOS — prova real + espaço para novas avaliações
      ============================================================ -->
 <section class="section section--subtle" id="depoimentos" aria-labelledby="depoimentos-title">
-  <span class="edge-curve edge-curve--tl" aria-hidden="true"></span>
   <div class="container">
     <div class="section__head reveal">
       <span class="overline">O QUE DIZEM OS PROFESSORES</span>
       <h2 class="h1 section__title" id="depoimentos-title">Quem já usa a Prof+ não volta a planejar sozinho.</h2>
     </div>
 
-    <div class="grid grid--3 testimonial-grid">
-      <article class="card card--hover testimonial reveal">
-        <div class="testimonial__stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
-        </div>
-        <blockquote class="testimonial__quote">“Eu não acreditei quando recebi a sequência didática. Era exatamente o que eu precisava — com linguagem adequada para o meu 6º ano, usando o mesmo livro que eu utilizo e ainda com as questões adaptadas para os meus alunos com dificuldade de leitura. Nunca mais perdi fim de semana planejando.”</blockquote>
-        <div class="testimonial__author">
-          <span class="avatar" aria-hidden="true">JF</span>
-          <div>
-            <p class="testimonial__name">Juliana Ferreira</p>
-            <p class="testimonial__role">Professora de Português · Ensino Fundamental II · Rede Municipal</p>
-          </div>
-        </div>
-      </article>
+    <figure class="proof-real reveal">
+      <figcaption class="proof-real__badge">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+        Conversa real, sem edição
+      </figcaption>
+      <img src="assets/depoimento-guilherme.jpg" width="1100" height="752" loading="lazy" decoding="async"
+           alt="Print de conversa no WhatsApp: a Prof+ pergunta se o material atendeu às necessidades e o professor responde que o material é show, fácil de aplicar, que não tem estresse de ficar horas planejando e que foi aceito pela coordenação de primeira, sem precisar alterar nada.">
+    </figure>
 
-      <article class="card card--hover testimonial reveal">
-        <div class="testimonial__stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
-        </div>
-        <blockquote class="testimonial__quote">“Trabalho com turmas do 1º, 2º e 3º ano do Ensino Médio ao mesmo tempo. Precisava de provas diferentes para cada ano, com gabarito, e em menos de 48 horas. A Prof+ entregou tudo certinho. Virou parceira permanente do meu planejamento.”</blockquote>
-        <div class="testimonial__author">
-          <span class="avatar" aria-hidden="true">CA</span>
-          <div>
-            <p class="testimonial__name">Carlos Almeida</p>
-            <p class="testimonial__role">Professor de Matemática · Ensino Médio · Rede Estadual</p>
-          </div>
-        </div>
-      </article>
+    <!-- Fatos extraídos da própria conversa acima — sem citação reescrita -->
+    <ul class="proof-points reveal">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        <span><strong>Fácil de aplicar</strong> em sala</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        <span><strong>Sem horas</strong> de planejamento</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        <span>Aprovado pela <strong>coordenação de primeira</strong></span>
+      </li>
+    </ul>
 
-      <article class="card card--hover testimonial reveal">
-        <div class="testimonial__stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
-        </div>
-        <blockquote class="testimonial__quote">“O que mais me impressionou foi a qualidade dos materiais adaptados para a minha aluna com TEA. São detalhes que mostram que quem fez entende de educação de verdade. A inclusão não foi um detalhe — foi central no material. Me emocionei.”</blockquote>
-        <div class="testimonial__author">
-          <span class="avatar" aria-hidden="true">RO</span>
-          <div>
-            <p class="testimonial__name">Renata Oliveira</p>
-            <p class="testimonial__role">Professora de Ciências · Fundamental I e II · Escola Particular</p>
-          </div>
-        </div>
-      </article>
-    </div>
+    <!-- Área de avaliação: sem backend, a nota vai junto na mensagem do WhatsApp -->
+    <aside class="review reveal" aria-labelledby="review-title">
+      <div class="review__intro">
+        <h3 class="h3" id="review-title">Já recebeu um material da Prof+?</h3>
+        <p>Conta como foi. Sua avaliação ajuda outro professor a decidir — e leva menos de um minuto.</p>
+      </div>
 
-    <p class="section__note reveal">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
-      Depoimentos baseados em experiências reais de professores atendidos. Nomes preservados com autorização.
-    </p>
+      <form class="review__form" id="reviewForm">
+        <fieldset class="rating">
+          <legend>Sua nota</legend>
+          <div class="rating__stars">
+            <input type="radio" id="nota5" name="nota" value="5" checked>
+            <label for="nota5" title="5 estrelas"><span class="sr-only">5 estrelas</span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg></label>
+            <input type="radio" id="nota4" name="nota" value="4">
+            <label for="nota4" title="4 estrelas"><span class="sr-only">4 estrelas</span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg></label>
+            <input type="radio" id="nota3" name="nota" value="3">
+            <label for="nota3" title="3 estrelas"><span class="sr-only">3 estrelas</span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg></label>
+            <input type="radio" id="nota2" name="nota" value="2">
+            <label for="nota2" title="2 estrelas"><span class="sr-only">2 estrelas</span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg></label>
+            <input type="radio" id="nota1" name="nota" value="1">
+            <label for="nota1" title="1 estrela"><span class="sr-only">1 estrela</span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg></label>
+          </div>
+        </fieldset>
+
+        <label class="review__field">
+          <span>Seu depoimento <em>(opcional)</em></span>
+          <textarea id="reviewText" rows="3" maxlength="400" placeholder="Ex.: usei a sequência na turma do 7º ano e não precisei ajustar nada."></textarea>
+        </label>
+
+        <button type="submit" class="btn btn--primary btn--full btn--cta">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+          ENVIAR MEU DEPOIMENTO →
+        </button>
+        <p class="review__hint">Abre o WhatsApp com sua nota já preenchida. Publicamos só com a sua autorização.</p>
+      </form>
+    </aside>
   </div>
 </section>
 
@@ -2400,6 +2470,19 @@ body.has-sticky-cta .wa-float { bottom:88px; }
     // removeAttribute em vez de src='' — src vazio faz o navegador
     // requisitar a própria página de novo
     shotModal.addEventListener('close', function () { shotImg.removeAttribute('src'); });
+  }
+  /* ---------- Avaliação: leva a nota (e o texto) para o WhatsApp ---------- */
+  var reviewForm = document.getElementById('reviewForm');
+  if (reviewForm) {
+    reviewForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var nota = (reviewForm.querySelector('input[name="nota"]:checked') || {}).value || '5';
+      var texto = (document.getElementById('reviewText').value || '').trim();
+      var msg = 'Olá! Quero deixar meu depoimento sobre a Prof+.\n' +
+                'Minha nota: ' + nota + ' de 5 estrelas.';
+      if (texto) msg += '\n' + texto;
+      window.open('https://wa.me/5568984216557?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+    });
   }
   /* ---------- Modais legais (12.10) ---------- */
   document.querySelectorAll('[data-legal]').forEach(function (link) {
