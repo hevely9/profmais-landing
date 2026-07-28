@@ -69,6 +69,67 @@ Cada cartão flutua com **duração própria** (6s, 6.8s, 7.5s, 8s) — é o que
 conjunto de subir e descer em bloco e faz o movimento parecer natural. Tudo desligado
 sob `prefers-reduced-motion`.
 
+## Avaliações no site — como ligar (5 minutos)
+
+A seção de depoimentos tem um formulário de avaliação (estrelas + comentário).
+**Enquanto não for configurado, ele envia a nota pelo WhatsApp** e a lista fica
+oculta — ou seja, o site funciona normalmente hoje.
+
+Para as avaliações passarem a aparecer no site:
+
+**1.** Crie uma conta grátis em [supabase.com](https://supabase.com) e um projeto novo.
+
+**2.** No projeto, vá em **SQL Editor** e rode:
+
+```sql
+create table public.depoimentos (
+  id          bigint generated always as identity primary key,
+  criado_em   timestamptz not null default now(),
+  nome        text     not null check (char_length(nome) between 2 and 60),
+  disciplina  text               check (char_length(disciplina) <= 60),
+  nota        smallint not null  check (nota between 1 and 5),
+  texto       text     not null  check (char_length(texto) between 10 and 400)
+);
+
+alter table public.depoimentos enable row level security;
+
+-- qualquer visitante pode ler e escrever, mas ninguém pode editar nem apagar
+create policy "leitura publica"  on public.depoimentos for select using (true);
+create policy "escrita publica"  on public.depoimentos for insert with check (true);
+```
+
+**3.** Em **Project Settings → API**, copie a *Project URL* e a chave *anon public*.
+
+**4.** No `index.html`, procure por `PROFMAIS_REVIEWS` e preencha:
+
+```js
+var PROFMAIS_REVIEWS = {
+  url: 'https://xxxxxxxx.supabase.co',
+  key: 'sua-chave-anon-public'
+};
+```
+
+Pronto. A partir daí a avaliação entra no site na hora.
+
+> A chave *anon public* é feita para ficar exposta no navegador — quem protege
+> os dados são as regras de RLS acima. Nunca use a chave `service_role` aqui.
+
+### Se aparecer spam
+
+Você escolheu publicar sem revisar antes. O formulário já tem campo-isca contra
+robô e tempo mínimo de preenchimento, mas nada impede uma pessoa de escrever
+bobagem. Para passar a aprovar antes, rode no SQL Editor:
+
+```sql
+alter table public.depoimentos add column aprovado boolean not null default false;
+drop policy "leitura publica" on public.depoimentos;
+create policy "leitura publica" on public.depoimentos
+  for select using (aprovado = true);
+```
+
+E troque `depoimentos?select=` por `depoimentos?aprovado=eq.true&select=` no
+`index.html`. Aprovar passa a ser marcar a caixinha no painel do Supabase.
+
 ## Conversão
 
 Não há formulário. Todos os CTAs abrem o WhatsApp **(68) 98421-6557** com mensagem

@@ -1533,7 +1533,75 @@ body.has-sticky-cta .wa-float { bottom:88px; }
   color:var(--color-gray-700);
 }
 .proof-points svg { width:18px; height:18px; flex:0 0 auto; color:var(--color-semantic-success); margin-top:2px; }
-.proof-points strong { color:var(--color-primary-deepgreen); font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold); }</style>
+.proof-points strong { color:var(--color-primary-deepgreen); font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold); }
+/* ---------- lista de avaliações ---------- */
+.reviews { margin-top:var(--space-10); }
+.reviews__head { margin-bottom:var(--space-6); }
+.reviews__score { display:flex; align-items:center; gap:var(--space-4); }
+.reviews__score > strong {
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-bold);
+  font-size:3rem; line-height:1; color:var(--color-primary-deepgreen);
+}
+.reviews__stars { display:flex; gap:2px; color:var(--color-primary-orange); }
+.reviews__stars svg { width:20px; height:20px; }
+.reviews__stars svg.is-off { color:var(--color-gray-300); }
+.reviews__score span { font-size:var(--font-size-body-sm); color:var(--color-gray-500); }
+
+.reviews__list { display:grid; gap:var(--space-4); }
+@media (min-width:768px)  { .reviews__list { grid-template-columns:repeat(2,1fr); } }
+@media (min-width:1280px) { .reviews__list { grid-template-columns:repeat(3,1fr); } }
+.reviews__item {
+  background:var(--color-surface-default);
+  border:1px solid var(--color-border-default);
+  border-radius:var(--radius-lg);
+  padding:var(--space-5);
+  box-shadow:var(--shadow-sm);
+  display:flex; flex-direction:column; gap:var(--space-3);
+}
+.reviews__item .reviews__stars svg { width:16px; height:16px; }
+.reviews__texto { font-size:var(--font-size-body-sm); line-height:var(--line-height-relaxed); color:var(--color-gray-700); }
+.reviews__quem { margin-top:auto; display:flex; align-items:center; gap:var(--space-3); }
+.reviews__ini {
+  width:38px; height:38px; flex:0 0 auto; border-radius:var(--radius-full);
+  display:grid; place-items:center;
+  background:var(--color-secondary-sand); color:var(--color-primary-deepgreen);
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-bold);
+  font-size:var(--font-size-body-sm);
+}
+.reviews__quem b {
+  display:block; font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold);
+  font-size:var(--font-size-body-sm); color:var(--color-primary-deepgreen);
+}
+.reviews__quem small { font-size:var(--font-size-caption); color:var(--color-gray-500); }
+.reviews__more { text-align:center; margin-top:var(--space-5); }
+
+/* ---------- campos do formulário ---------- */
+.review__row { display:grid; gap:var(--space-4); }
+@media (min-width:640px) { .review__row { grid-template-columns:1fr 1fr; } }
+.review__field input[type="text"] {
+  width:100%; min-height:48px; padding:var(--space-3) var(--space-4);
+  font-family:var(--font-family-secondary); font-size:var(--font-size-body);
+  color:var(--color-gray-900); background:var(--color-surface-default);
+  border:1px solid var(--color-border-default); border-radius:var(--radius-sm);
+}
+.review__field input[type="text"]:hover { border-color:var(--color-border-strong); }
+.review__field input[type="text"]:focus,
+.review__field textarea:focus { outline:none; border-color:var(--color-border-focus); box-shadow:var(--shadow-focus); }
+.review__field.is-erro input, .review__field.is-erro textarea { border-color:var(--color-border-error); }
+.review__trap { position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+.review__erro {
+  display:flex; align-items:center; gap:var(--space-2);
+  font-size:var(--font-size-body-sm); color:var(--color-semantic-error);
+  background:rgba(192,57,43,0.08); padding:var(--space-3) var(--space-4); border-radius:var(--radius-sm);
+}
+.review__ok {
+  display:flex; align-items:center; justify-content:center; gap:var(--space-2);
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold);
+  color:var(--color-semantic-success); text-align:center;
+  padding:var(--space-6) var(--space-4);
+}
+.review__ok svg { width:22px; height:22px; flex:0 0 auto; }
+@media (min-width:1024px) { .review:has(#reviewOk:not([hidden])) { grid-template-columns:1fr; } }</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Ir para o conteúdo principal</a>
@@ -2018,14 +2086,33 @@ body.has-sticky-cta .wa-float { bottom:88px; }
       </li>
     </ul>
 
-    <!-- Área de avaliação: sem backend, a nota vai junto na mensagem do WhatsApp -->
+    <!-- ==========================================================
+         AVALIAÇÕES DOS PROFESSORES
+         Enquanto as chaves do Supabase não estiverem preenchidas no
+         script (PROFMAIS_REVIEWS), o formulário continua enviando a
+         nota pelo WhatsApp e a lista fica oculta.
+         ========================================================== -->
+    <div class="reviews" id="reviews" hidden>
+      <div class="reviews__head">
+        <div class="reviews__score">
+          <strong id="reviewsAvg">—</strong>
+          <div>
+            <div class="reviews__stars" id="reviewsStars" role="img" aria-label="Média das avaliações"></div>
+            <span id="reviewsCount">Nenhuma avaliação ainda</span>
+          </div>
+        </div>
+      </div>
+      <ul class="reviews__list" id="reviewsList"></ul>
+      <p class="reviews__more"><button type="button" class="btn btn--outline btn--sm" id="reviewsMore" hidden>Ver mais avaliações</button></p>
+    </div>
+
     <aside class="review reveal" aria-labelledby="review-title">
       <div class="review__intro">
         <h3 class="h3" id="review-title">Já recebeu um material da Prof+?</h3>
         <p>Conta como foi. Sua avaliação ajuda outro professor a decidir — e leva menos de um minuto.</p>
       </div>
 
-      <form class="review__form" id="reviewForm">
+      <form class="review__form" id="reviewForm" novalidate>
         <fieldset class="rating">
           <legend>Sua nota</legend>
           <div class="rating__stars">
@@ -2042,17 +2129,40 @@ body.has-sticky-cta .wa-float { bottom:88px; }
           </div>
         </fieldset>
 
+        <div class="review__row">
+          <label class="review__field">
+            <span>Seu nome</span>
+            <input type="text" id="reviewNome" maxlength="60" autocomplete="name" placeholder="Ex.: Ana Oliveira">
+          </label>
+          <label class="review__field">
+            <span>Disciplina <em>(opcional)</em></span>
+            <input type="text" id="reviewDisc" maxlength="60" placeholder="Ex.: Ciências · 7º ano">
+          </label>
+        </div>
+
         <label class="review__field">
-          <span>Seu depoimento <em>(opcional)</em></span>
+          <span>Seu depoimento</span>
           <textarea id="reviewText" rows="3" maxlength="400" placeholder="Ex.: usei a sequência na turma do 7º ano e não precisei ajustar nada."></textarea>
         </label>
 
-        <button type="submit" class="btn btn--primary btn--full btn--cta">
-          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
-          ENVIAR MEU DEPOIMENTO →
+        <!-- campo-isca: humano nunca preenche, robô de spam preenche -->
+        <div class="review__trap" aria-hidden="true">
+          <label>Não preencha este campo<input type="text" id="reviewTrap" tabindex="-1" autocomplete="off"></label>
+        </div>
+
+        <p class="review__erro" id="reviewErro" role="alert" hidden></p>
+
+        <button type="submit" class="btn btn--primary btn--full btn--cta" id="reviewSubmit">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>
+          <span class="btn__label">PUBLICAR MINHA AVALIAÇÃO</span>
         </button>
-        <p class="review__hint">Abre o WhatsApp com sua nota já preenchida. Publicamos só com a sua autorização.</p>
+        <p class="review__hint" id="reviewHint">Sua avaliação aparece aqui no site assim que você enviar.</p>
       </form>
+
+      <p class="review__ok" id="reviewOk" role="status" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        Obrigado! Sua avaliação já está no ar.
+      </p>
     </aside>
   </div>
 </section>
@@ -2484,6 +2594,162 @@ body.has-sticky-cta .wa-float { bottom:88px; }
       window.open('https://wa.me/5568984216557?text=' + encodeURIComponent(msg), '_blank', 'noopener');
     });
   }
+  /* ============================================================
+     AVALIAÇÕES DOS PROFESSORES
+     Preencha as duas linhas abaixo com os dados do seu projeto no
+     Supabase (Project Settings > API). Enquanto estiverem vazias, o
+     formulário envia a nota pelo WhatsApp e a lista fica oculta.
+     ============================================================ */
+  var PROFMAIS_REVIEWS = {
+    url: '',   // ex.: https://xxxxxxxx.supabase.co
+    key: ''    // chave "anon public"
+  };
+
+  (function () {
+    var form = document.getElementById('reviewForm');
+    if (!form) return;
+
+    var cfg = PROFMAIS_REVIEWS;
+    var ligado = !!(cfg.url && cfg.key);
+    var bloco = document.getElementById('reviews');
+    var lista = document.getElementById('reviewsList');
+    var elErro = document.getElementById('reviewErro');
+    var elOk = document.getElementById('reviewOk');
+    var btn = document.getElementById('reviewSubmit');
+    var hint = document.getElementById('reviewHint');
+    var maisBtn = document.getElementById('reviewsMore');
+    var abertoEm = Date.now();
+    var todas = [];
+    var mostrando = 6;
+
+    if (!ligado) {
+      hint.textContent = 'Sua nota chega direto no nosso WhatsApp.';
+      btn.querySelector('.btn__label').textContent = 'ENVIAR MINHA AVALIAÇÃO';
+    }
+
+    function api(caminho, opts) {
+      opts = opts || {};
+      opts.headers = Object.assign({
+        apikey: cfg.key,
+        Authorization: 'Bearer ' + cfg.key,
+        'Content-Type': 'application/json'
+      }, opts.headers || {});
+      return fetch(cfg.url.replace(/\/$/, '') + '/rest/v1/' + caminho, opts);
+    }
+
+    function estrelas(n, classe) {
+      var s = '';
+      for (var i = 1; i <= 5; i++) {
+        s += '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"' +
+             (i > n ? ' class="is-off"' : '') +
+             '><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3z"/></svg>';
+      }
+      return '<div class="' + (classe || 'reviews__stars') + '" role="img" aria-label="' + n + ' de 5 estrelas">' + s + '</div>';
+    }
+
+    function esc(s) {
+      return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+      });
+    }
+
+    function quando(iso) {
+      var d = new Date(iso), dias = Math.floor((Date.now() - d) / 86400000);
+      if (isNaN(dias)) return '';
+      if (dias <= 0) return 'hoje';
+      if (dias === 1) return 'ontem';
+      if (dias < 30) return 'há ' + dias + ' dias';
+      var m = Math.floor(dias / 30);
+      return 'há ' + m + (m === 1 ? ' mês' : ' meses');
+    }
+
+    function pintar() {
+      lista.innerHTML = todas.slice(0, mostrando).map(function (r) {
+        var ini = (r.nome || '?').trim().charAt(0).toUpperCase();
+        return '<li class="reviews__item">' + estrelas(r.nota) +
+          '<p class="reviews__texto">' + esc(r.texto) + '</p>' +
+          '<div class="reviews__quem"><span class="reviews__ini" aria-hidden="true">' + esc(ini) + '</span>' +
+          '<span><b>' + esc(r.nome) + '</b><small>' +
+          (r.disciplina ? esc(r.disciplina) + ' · ' : '') + quando(r.criado_em) + '</small></span></div></li>';
+      }).join('');
+      maisBtn.hidden = todas.length <= mostrando;
+    }
+
+    function resumo() {
+      var n = todas.length;
+      if (!n) return;
+      var media = todas.reduce(function (a, r) { return a + Number(r.nota); }, 0) / n;
+      document.getElementById('reviewsAvg').textContent = media.toFixed(1).replace('.', ',');
+      document.getElementById('reviewsStars').innerHTML = estrelas(Math.round(media)).replace(/^<div[^>]*>|<\/div>$/g, '');
+      document.getElementById('reviewsCount').textContent =
+        n + (n === 1 ? ' avaliação de professor' : ' avaliações de professores');
+      bloco.hidden = false;
+    }
+
+    function carregar() {
+      if (!ligado) return;
+      api('depoimentos?select=nome,disciplina,nota,texto,criado_em&order=criado_em.desc&limit=60')
+        .then(function (r) { return r.ok ? r.json() : []; })
+        .then(function (d) { todas = d || []; if (todas.length) { resumo(); pintar(); } })
+        .catch(function () { /* silencioso: a página não pode quebrar por causa disso */ });
+    }
+
+    maisBtn.addEventListener('click', function () { mostrando += 6; pintar(); });
+
+    function erro(msg, campo) {
+      elErro.textContent = msg; elErro.hidden = false;
+      form.querySelectorAll('.is-erro').forEach(function (e) { e.classList.remove('is-erro'); });
+      if (campo) { campo.closest('.review__field').classList.add('is-erro'); campo.focus(); }
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      elErro.hidden = true;
+
+      var nota = (form.querySelector('input[name="nota"]:checked') || {}).value || '5';
+      var nome = document.getElementById('reviewNome');
+      var disc = document.getElementById('reviewDisc');
+      var texto = document.getElementById('reviewText');
+
+      if (!ligado) {
+        var msg = 'Olá! Quero deixar meu depoimento sobre a Prof+.\nMinha nota: ' + nota + ' de 5 estrelas.';
+        if (texto.value.trim()) msg += '\n' + texto.value.trim();
+        window.open('https://wa.me/5568984216557?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+        return;
+      }
+
+      if (document.getElementById('reviewTrap').value) return;          // robô
+      if (Date.now() - abertoEm < 3000) { erro('Só um instante antes de enviar.'); return; }
+      if (nome.value.trim().length < 2) { erro('Escreva seu nome para publicarmos a avaliação.', nome); return; }
+      if (texto.value.trim().length < 10) { erro('Conta um pouco mais sobre o material — pelo menos uma frase.', texto); return; }
+
+      btn.classList.add('is-loading');
+      btn.insertAdjacentHTML('beforeend', '<span class="spinner"></span>');
+
+      api('depoimentos', {
+        method: 'POST',
+        headers: { Prefer: 'return=minimal' },
+        body: JSON.stringify({
+          nome: nome.value.trim(),
+          disciplina: disc.value.trim() || null,
+          nota: Number(nota),
+          texto: texto.value.trim()
+        })
+      }).then(function (r) {
+        if (!r.ok) throw new Error('falhou');
+        form.hidden = true;
+        elOk.hidden = false;
+        mostrando = 6;
+        carregar();
+      }).catch(function () {
+        btn.classList.remove('is-loading');
+        var sp = btn.querySelector('.spinner'); if (sp) sp.remove();
+        erro('Não conseguimos publicar agora. Tente de novo em instantes ou fale no WhatsApp.');
+      });
+    });
+
+    carregar();
+  })();
   /* ---------- Modais legais (12.10) ---------- */
   document.querySelectorAll('[data-legal]').forEach(function (link) {
     link.addEventListener('click', function (e) {
