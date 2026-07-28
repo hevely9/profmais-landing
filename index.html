@@ -289,7 +289,7 @@ button { cursor:pointer; background:none; border:none; padding:0; }
   content:""; width:6px; height:6px; border-radius:var(--radius-full);
   background:currentColor; flex:0 0 auto;
 }
-.section--green .overline, .proof .overline, .final .overline {
+.section--green .overline, .final .overline {
   color:var(--color-secondary-sand); background:rgba(239,220,169,0.14);
 }
 
@@ -578,7 +578,6 @@ button { cursor:pointer; background:none; border:none; padding:0; }
   margin-bottom:var(--space-6);
 }
 @media (min-width:1024px) { .hero__subtitle { font-size:1.25rem; } }
-.hero__uvp { display:grid; gap:var(--space-4); margin-bottom:var(--space-8); max-width:56ch; }
 .hero__actions { display:flex; flex-wrap:wrap; gap:var(--space-4); margin-bottom:var(--space-5); }
 @media (max-width:767px) { .hero__actions { flex-direction:column; } }
 
@@ -603,99 +602,6 @@ button { cursor:pointer; background:none; border:none; padding:0; }
 }
 .hero__badge svg { width:18px; height:18px; }
 
-/* Visual do hero — mockup de material pedagógico */
-.hero__visual { position:relative; }
-.material-card {
-  position:relative;
-  background:var(--color-surface-default);
-  border:1px solid var(--color-border-default);
-  border-radius:var(--radius-xl);
-  box-shadow:var(--shadow-xl);
-  overflow:hidden;
-  max-width:460px; margin-inline:auto;
-}
-.material-card__bar {
-  background:var(--color-primary-deepgreen);
-  color:var(--color-secondary-offwhite);
-  padding:var(--space-5) var(--space-6);
-  display:flex; align-items:center; justify-content:space-between; gap:var(--space-4);
-}
-.material-card__bar span:first-child {
-  font-family:var(--font-family-mono); font-size:var(--font-size-overline);
-  letter-spacing:var(--letter-spacing-widest); text-transform:uppercase;
-}
-.material-card__bar span:last-child {
-  font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold);
-  font-size:var(--font-size-caption);
-  background:var(--color-secondary-sand); color:var(--color-primary-deepgreen);
-  padding:var(--space-1) var(--space-3); border-radius:var(--radius-full);
-}
-.material-card__body { padding:var(--space-6); display:grid; gap:var(--space-5); }
-.material-card__heading {
-  font-family:var(--font-family-primary); font-weight:var(--font-weight-bold);
-  font-size:var(--font-size-h5); color:var(--color-primary-deepgreen);
-}
-.rule-lines { display:grid; gap:var(--space-3); }
-.rule-lines i { display:block; height:9px; border-radius:var(--radius-full); background:var(--color-green-08); }
-.rule-lines i:nth-child(2) { width:92%; }
-.rule-lines i:nth-child(3) { width:78%; }
-.rule-lines i:nth-child(4) { width:86%; }
-.material-card__tags { display:flex; flex-wrap:wrap; gap:var(--space-2); }
-.material-card__tags span {
-  font-family:var(--font-family-primary); font-weight:var(--font-weight-medium);
-  font-size:var(--font-size-caption);
-  background:var(--color-bg-subtle); color:var(--color-primary-deepgreen);
-  padding:var(--space-1) var(--space-3); border-radius:var(--radius-xs);
-}
-.material-card__caption {
-  border-top:1px solid var(--color-border-default);
-  padding:var(--space-4) var(--space-6);
-  font-size:var(--font-size-caption); color:var(--color-gray-500);
-}
-
-.hero__float {
-  position:absolute; z-index:var(--z-raised);
-  background:var(--color-surface-default);
-  border:1px solid var(--color-border-default);
-  border-radius:var(--radius-md);
-  box-shadow:var(--shadow-lg);
-  padding:var(--space-3) var(--space-4);
-  display:flex; align-items:center; gap:var(--space-3);
-}
-.hero__float strong {
-  display:block; font-family:var(--font-family-primary);
-  font-weight:var(--font-weight-bold); font-size:var(--font-size-body-lg);
-  color:var(--color-primary-deepgreen); line-height:1.1;
-}
-.hero__float small { font-size:var(--font-size-caption); color:var(--color-gray-500); }
-.hero__float--portrait { left:-8px; bottom:26px; padding:var(--space-2) var(--space-4) var(--space-2) var(--space-2); }
-.hero__float--portrait img {
-  width:46px; height:46px; border-radius:var(--radius-full);
-  object-fit:cover; object-position:top center; background:var(--color-secondary-sand);
-}
-@media (max-width:479px) { .hero__float--portrait { display:none; } }
-@media (min-width:1024px) { .hero__float--portrait { left:-28px; } }
-
-/* ============================================================
-   SEÇÃO 3 — BARRA DE PROVA SOCIAL
-   ============================================================ */
-.proof { background:var(--color-primary-deepgreen); color:var(--color-secondary-offwhite); }
-.proof .overline { display:flex; width:fit-content; margin-inline:auto; }
-.proof__grid {
-  display:grid; grid-template-columns:repeat(2,1fr);
-  gap:var(--space-6) var(--space-4);
-  padding-block:var(--space-2) var(--space-6);
-}
-@media (min-width:768px) { .proof__grid { grid-template-columns:repeat(4,1fr); gap:var(--space-8); } }
-.proof__item { text-align:center; }
-.proof__number {
-  font-family:var(--font-family-primary); font-weight:var(--font-weight-bold);
-  font-size:2rem; line-height:1.1; color:var(--color-secondary-sand);
-}
-@media (min-width:1024px) { .proof__number { font-size:2.75rem; } }
-.proof__desc { font-size:var(--font-size-body-sm); color:rgba(246,241,227,0.88); margin-top:var(--space-1); }
-.proof__note { text-align:center; font-size:var(--font-size-caption); color:rgba(246,241,227,0.62); }
-
 /* ============================================================
    SEÇÃO 4 — PROBLEMA
    ============================================================ */
@@ -716,38 +622,6 @@ button { cursor:pointer; background:none; border:none; padding:0; }
   color:var(--color-primary-deepgreen);
   box-shadow:var(--shadow-sm);
 }
-
-/* ============================================================
-   SEÇÃO 6 — BENEFÍCIOS
-   ============================================================ */
-.service-card { display:flex; flex-direction:column; }
-.service-card__name {
-  font-family:var(--font-family-mono); font-size:var(--font-size-overline);
-  letter-spacing:var(--letter-spacing-widest); text-transform:uppercase;
-  color:var(--color-gray-500); margin-bottom:var(--space-2);
-}
-.service-card__benefit {
-  margin-top:auto; padding-top:var(--space-5);
-  display:flex; align-items:flex-start; gap:var(--space-2);
-  font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold);
-  font-size:var(--font-size-body-sm); color:var(--color-primary-deepgreen);
-}
-.service-card__benefit svg { width:18px; height:18px; flex:0 0 auto; color:var(--color-semantic-success); margin-top:2px; }
-@media (min-width:1024px) {
-  .services-grid { grid-template-columns:repeat(6,1fr); }
-  .services-grid > *:nth-child(1),
-  .services-grid > *:nth-child(2),
-  .services-grid > *:nth-child(3) { grid-column:span 2; }
-  .services-grid > *:nth-child(4),
-  .services-grid > *:nth-child(5) { grid-column:span 3; }
-}
-
-.section__note {
-  margin-top:var(--space-8);
-  font-size:var(--font-size-body-sm); color:var(--color-gray-700);
-  display:flex; align-items:flex-start; gap:var(--space-2);
-}
-.section__note svg { width:18px; height:18px; flex:0 0 auto; color:var(--color-primary-deepgreen); margin-top:3px; }
 
 /* ============================================================
    SEÇÃO 7 — COMO FUNCIONA (12.27 Stepper)
@@ -1264,15 +1138,6 @@ button { cursor:pointer; background:none; border:none; padding:0; }
 }
 .pay-trust svg { width:20px; height:20px; flex:0 0 auto; color:var(--color-semantic-success); }
 
-/* Materiais: layout compacto para o preço subir na página */
-.service-card { gap:0; }
-.service-card .card__icon { width:40px; height:40px; margin-bottom:var(--space-4); }
-.service-card .card__icon svg { width:22px; height:22px; }
-.service-card__name { display:none; }
-.service-card .card__title { margin-bottom:var(--space-2); }
-.service-card .card__text { font-size:var(--font-size-body-sm); }
-.service-card__benefit { padding-top:var(--space-4); }
-@media (min-width:1024px) { .services-grid .card { padding:var(--space-6); } }
 /* Barra fixa de conversão no mobile */
 .sticky-cta {
   position:fixed; left:0; right:0; bottom:0; z-index:var(--z-fixed);
@@ -1314,29 +1179,10 @@ body.has-sticky-cta .wa-float { bottom:88px; }
   .hero__grid { gap:var(--space-8); }
   .hero__title { margin-bottom:var(--space-4); }
   .hero__subtitle { font-size:var(--font-size-body); margin-bottom:var(--space-6); }
-  .hero__uvp { display:none; }
   .hero__actions { gap:var(--space-3); margin-bottom:var(--space-4); }
   .hero__microcopy { gap:var(--space-1) var(--space-3); font-size:var(--font-size-caption); }
   .hero__microcopy span[aria-hidden] { display:none; }
   .hero__microcopy > span { flex:0 0 100%; }
-
-  /* card-exemplo do hero: bem mais baixo */
-  .material-card { border-radius:var(--radius-lg); }
-  .material-card__bar { padding:var(--space-3) var(--space-4); }
-  .material-card__body { padding:var(--space-4); gap:var(--space-3); }
-  .material-card__heading { font-size:var(--font-size-body); }
-  .rule-lines { gap:var(--space-2); }
-  .rule-lines i { height:7px; }
-  .material-card__body .rule-lines:last-child { display:none; }
-  .material-card__body .rule-lines:first-of-type i:nth-child(n+3) { display:none; }
-  .material-card__tags span { font-size:0.625rem; padding:3px var(--space-2); }
-  .material-card__caption { padding:var(--space-3) var(--space-4); }
-  .hero__float--portrait { display:none; }
-
-  /* prova social */
-  .proof__grid { gap:var(--space-4) var(--space-3); padding-block:0 var(--space-4); }
-  .proof__number { font-size:1.625rem; }
-  .proof__desc { font-size:var(--font-size-caption); }
 
   /* dor: cards viram linhas compactas */
   .pain-grid .card { display:flex; gap:var(--space-4); align-items:flex-start; padding:var(--space-4); }
@@ -1345,17 +1191,6 @@ body.has-sticky-cta .wa-float { bottom:88px; }
   .pain-grid .card__title { font-size:var(--font-size-body); margin-bottom:var(--space-1); }
   .pain-grid .card__text { font-size:var(--font-size-body-sm); }
   .transition-note { margin-top:var(--space-6); padding:var(--space-4); font-size:var(--font-size-body); }
-
-  /* materiais: linhas compactas em vez de cards altos */
-  .services-grid .card {
-    display:grid; grid-template-columns:auto 1fr; gap:0 var(--space-4);
-    padding:var(--space-4); align-items:start;
-  }
-  .services-grid .card__icon { grid-row:span 2; width:36px; height:36px; margin-bottom:0; }
-  .services-grid .card__icon svg { width:20px; height:20px; }
-  .services-grid .card__title { font-size:var(--font-size-body); margin-bottom:var(--space-1); }
-  .services-grid .card__text { font-size:var(--font-size-body-sm); grid-column:2; }
-  .service-card__benefit { grid-column:2; padding-top:var(--space-2); font-size:var(--font-size-caption); }
 
   /* planos: cartões baixos e comparáveis */
   .pricing { gap:var(--space-4); }
@@ -1421,8 +1256,32 @@ body.has-sticky-cta .wa-float { bottom:88px; }
   .testimonial__stars svg { width:16px; height:16px; }
   .avatar { width:44px; height:44px; font-size:var(--font-size-body); }
 
-  /* comparativo: some com a coluna do meio, mantém o contraste que importa */
-  /* ---------- segunda passada: as seções que ainda pesavam ---------- */
+  /* faixa de destaque */
+  .strip__inner { padding-block:var(--space-8); gap:var(--space-5); }
+  .strip__title svg { width:24px; height:24px; }
+  .strip__sub { font-size:var(--font-size-body); }
+
+  /* faq */
+  .faq { gap:var(--space-2); }
+  .faq__trigger { padding:var(--space-4); font-size:var(--font-size-body-sm); }
+  .faq__panel p { padding:0 var(--space-4) var(--space-4); font-size:var(--font-size-body-sm); }
+
+  /* chamada final */
+  .final__grid { gap:var(--space-8); }
+  .final__text { gap:var(--space-3); margin-bottom:var(--space-6); }
+  .final__text p { font-size:var(--font-size-body); }
+  .trust-list { gap:var(--space-2); margin-bottom:var(--space-6); }
+  .trust-list li { font-size:var(--font-size-body-sm); }
+  .final__micro { margin-bottom:var(--space-6); }
+
+  /* rodapé */
+  .site-footer .container { padding-block:var(--space-10); }
+  .footer-grid { gap:var(--space-8); }
+  .footer-col-title { margin-bottom:var(--space-4); }
+  .footer-bottom { margin-top:var(--space-8); padding-top:var(--space-5); }
+}
+
+/* ---------- segunda passada: as seções que ainda pesavam ---------- */
 @media (max-width:767px) {
 
   /* planos: nome e preço na mesma linha */
@@ -1440,12 +1299,6 @@ body.has-sticky-cta .wa-float { bottom:88px; }
   .plan__features li { align-items:flex-start; line-height:1.4; }
   .plan__cta { grid-column:1 / -1; }
 
-  /* materiais: descrição resumida, título e benefício continuam inteiros */
-  .services-grid .card__text {
-    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
-    overflow:hidden; line-height:1.45;
-  }
-
   /* dor */
   .pain-grid .card { padding:var(--space-3) var(--space-4); }
   .pain-grid .card__text { line-height:1.45; }
@@ -1455,20 +1308,163 @@ body.has-sticky-cta .wa-float { bottom:88px; }
   .guarantee__points { gap:var(--space-2); }
   .guarantee__point p { line-height:1.45; }
 
-  /* público-alvo em duas colunas */
-    /* Telas muito estreitas */
-@media (max-width:390px) {
-  .polaroids > li { flex:0 0 82%; }
-  .testimonial-grid > .testimonial { flex:0 0 88%; }
-  .plan__value { font-size:2rem; }
-}</style>
+  /* chamada final */
+  .final__contacts { gap:var(--space-2); }
+
+  /* a barra fixa não pode cobrir o conteúdo do fim da seção */
+  body.has-sticky-cta { padding-bottom:74px; }
+  .sticky-cta .btn { font-size:var(--font-size-body-sm); padding:var(--space-3); }
+
+  /* CTAs cabem em uma linha */
+  .btn--cta { font-size:var(--font-size-body-sm); }
+  .gallery__foot .btn { background:transparent; border-color:var(--color-primary-deepgreen); color:var(--color-primary-deepgreen); }
+  .gallery__foot .btn svg { display:none; }
+}
+
+/* ============================================================
+   PROVA SOCIAL FLUTUANTE NO HERO
+   Substitui a antiga barra verde de números. A personagem da marca
+   fica ao centro e os números orbitam em cartões leves.
+   ============================================================ */
+.proof-cloud {
+  position:relative;
+  width:100%; max-width:420px; margin-inline:auto;
+  aspect-ratio:1/1;
+  display:grid; place-items:center;
+}
+/* halo de marca atrás da personagem */
+.proof-cloud::before {
+  content:""; position:absolute; inset:16%;
+  border-radius:var(--radius-full);
+  background:radial-gradient(circle at 50% 40%, var(--color-secondary-sand) 0%, rgba(239,220,169,0.55) 55%, rgba(239,220,169,0) 72%);
+}
+.proof-cloud__mascote {
+  position:relative; z-index:var(--z-raised);
+  width:46%; height:auto;
+  filter:drop-shadow(0 10px 22px rgba(14,75,60,0.18));
+  animation:floatA 9s ease-in-out infinite;
+}
+
+.proof-chip {
+  position:absolute; z-index:var(--z-raised);
+  display:inline-flex; align-items:baseline; gap:6px;
+  white-space:nowrap;
+  background:var(--color-surface-default);
+  border:1px solid var(--color-border-default);
+  border-radius:var(--radius-full);
+  box-shadow:var(--shadow-lg);
+  padding:9px 15px;
+  font-size:var(--font-size-caption);
+  line-height:1.15;
+  color:var(--color-gray-700);
+  animation:floatA 6s ease-in-out infinite;
+  will-change:transform;
+}
+.proof-chip strong {
+  font-family:var(--font-family-primary);
+  font-weight:var(--font-weight-bold);
+  font-size:var(--font-size-body);
+  color:var(--color-primary-deepgreen);
+}
+/* Duração diferente em cada cartão: eles nunca sobem e descem juntos,
+   que é o que faz o conjunto parecer vivo em vez de mecânico. */
+.proof-chip--a { top:4%;    left:-2%;  animation:floatA 6s   ease-in-out infinite 0s;    }
+.proof-chip--b { top:24%;   right:-4%; animation:floatB 7.5s ease-in-out infinite -0.6s; }
+.proof-chip--c { bottom:22%; left:-6%; animation:floatA 6.8s ease-in-out infinite -1.2s; }
+.proof-chip--d { bottom:2%;  right:0;  animation:floatB 8s   ease-in-out infinite -0.3s; }
+
+@keyframes floatA {
+  0%, 100% { transform:translateY(0) rotate(-0.8deg); }
+  50%      { transform:translateY(-10px) rotate(0.8deg); }
+}
+@keyframes floatB {
+  0%, 100% { transform:translateY(0) rotate(0.9deg); }
+  50%      { transform:translateY(-13px) rotate(-0.9deg); }
+}
+
+.proof-cloud__note {
+  margin-top:var(--space-4);
+  text-align:center;
+  font-size:var(--font-size-caption);
+  color:var(--color-gray-500);
+}
+
+@media (min-width:1024px) {
+  .proof-cloud { max-width:460px; }
+  .proof-chip { font-size:var(--font-size-body-sm); padding:11px 18px; }
+  .proof-chip strong { font-size:var(--font-size-body-lg); }
+}
+
+/* No celular os cartões encolhem e chegam mais para dentro,
+   para nunca vazarem a lateral da tela. */
+@media (max-width:767px) {
+  .proof-cloud { max-width:330px; }
+  .proof-cloud__mascote { width:40%; }
+  .proof-chip { padding:7px 12px; font-size:0.6875rem; box-shadow:var(--shadow-md); }
+  .proof-chip strong { font-size:var(--font-size-body-sm); }
+  .proof-chip--a { top:0;      left:0;    }
+  .proof-chip--b { top:19%;    right:0;   }
+  .proof-chip--c { bottom:21%; left:0;    }
+  .proof-chip--d { bottom:0;   right:2%;  }
+  .proof-cloud__note { margin-top:var(--space-3); }
+}
+@media (max-width:360px) {
+  .proof-cloud { max-width:290px; }
+  .proof-chip { padding:6px 10px; font-size:0.625rem; }
+}
+/* ============================================================
+   VISUALIZADOR DOS EXEMPLARES
+   O professor precisa conseguir ler o material antes de comprar.
+   ============================================================ */
+.polaroid { cursor:zoom-in; font:inherit; color:inherit; border:none; }
+.polaroid__shot::before {
+  content:""; position:absolute; inset:0; z-index:var(--z-raised);
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 24 24' fill='none' stroke='%23F6F1E3' stroke-width='1.8' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-3.5-3.5M11 8.5v5M8.5 11h5'/%3E%3C/svg%3E") center/44px no-repeat,
+             rgba(14,75,60,0.30);
+  opacity:0; transition:opacity var(--duration-normal) var(--easing-out);
+}
+.polaroid:hover .polaroid__shot::before,
+.polaroid:focus-visible .polaroid__shot::before { opacity:1; }
+
+.shot-modal {
+  border:none; padding:0; background:transparent;
+  max-width:min(760px, 94vw); width:100%;
+  max-height:94vh;
+}
+.shot-modal::backdrop { background:rgba(14,75,60,0.82); }
+.shot-modal__fig {
+  margin:0; background:var(--color-white);
+  border-radius:var(--radius-lg); overflow:hidden;
+  box-shadow:var(--shadow-xl);
+}
+.shot-modal__fig img {
+  width:100%; height:auto; display:block;
+  max-height:82vh; object-fit:contain; background:var(--color-white);
+}
+.shot-modal__fig figcaption {
+  padding:var(--space-4) var(--space-5);
+  font-family:var(--font-family-primary); font-weight:var(--font-weight-semibold);
+  font-size:var(--font-size-body-sm); color:var(--color-primary-deepgreen);
+  border-top:1px solid var(--color-border-default);
+}
+.shot-modal__close {
+  position:absolute; top:-52px; right:0;
+  width:44px; height:44px; display:grid; place-items:center;
+  border-radius:var(--radius-full);
+  background:rgba(246,241,227,0.16); color:var(--color-secondary-offwhite);
+}
+.shot-modal__close svg { width:24px; height:24px; }
+@media (max-width:767px) {
+  .shot-modal { max-width:94vw; }
+  .shot-modal__close { top:auto; bottom:-56px; right:50%; transform:translateX(50%); }
+  .shot-modal__fig img { max-height:74vh; }
+}
+
+/* o flutuante volta a sumir no celular: a barra fixa já ocupa o polegar */
+@media (max-width:767px) { .wa-float { display:none; } }</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Ir para o conteúdo principal</a>
-
-
-
-
 
 
 
@@ -1489,9 +1485,8 @@ body.has-sticky-cta .wa-float { bottom:88px; }
 
       <ul class="nav-links">
         <li><a href="#como-funciona" aria-label="Navegar para a seção Como Funciona">Como Funciona</a></li>
-        <li><a href="#materiais" aria-label="Navegar para a seção Materiais">Materiais</a></li>
+        <li><a href="#exemplares" aria-label="Navegar para a seção Exemplos de materiais">Exemplos</a></li>
         <li><a href="#precos">Preços</a></li>
-        <li><a href="#diferenciais">Diferenciais</a></li>
         <li><a href="#depoimentos">Depoimentos</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contato">Contato</a></li>
@@ -1514,9 +1509,8 @@ body.has-sticky-cta .wa-float { bottom:88px; }
     <div class="container">
       <ul>
         <li><a href="#como-funciona">Como Funciona</a></li>
-        <li><a href="#materiais">Materiais</a></li>
+        <li><a href="#exemplares">Exemplos</a></li>
         <li><a href="#precos">Preços</a></li>
-        <li><a href="#diferenciais">Diferenciais</a></li>
         <li><a href="#depoimentos">Depoimentos</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contato">Contato</a></li>
@@ -1538,7 +1532,7 @@ body.has-sticky-cta .wa-float { bottom:88px; }
   <div class="container">
     <div class="hero__grid">
       <div class="hero__content">
-        <span class="overline">PARA PROFESSORES DA EDUCAÇÃO BÁSICA · A PARTIR DE R$&nbsp;297</span>
+        <span class="overline">PLANEJAMENTO PRONTO · A PARTIR DE R$&nbsp;297</span>
 
         <h1 class="display hero__title" id="hero-title">Sua sequência didática pronta em 48 horas — feita para a sua turma, não para uma turma genérica.</h1>
 
@@ -1562,32 +1556,15 @@ body.has-sticky-cta .wa-float { bottom:88px; }
       </div>
 
       <div class="hero__visual">
-        <figure class="material-card">
-          <div class="material-card__bar">
-            <span>Sequência Didática</span>
-            <span>BNCC ✓</span>
-          </div>
-          <div class="material-card__body">
-            <p class="material-card__heading">Língua Portuguesa · 6º ano</p>
-            <div class="rule-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-            <div class="material-card__tags">
-              <span>Objetivos de aprendizagem</span>
-              <span>4 aulas</span>
-              <span>Avaliação</span>
-              <span>Versão adaptada</span>
-            </div>
-            <div class="rule-lines" aria-hidden="true"><i></i><i></i></div>
-          </div>
-          <figcaption class="material-card__caption">Material pedagógico criado pela Prof+ — pronto para aplicar.</figcaption>
-        </figure>
+        <div class="proof-cloud">
+          <img class="proof-cloud__mascote" src="assets/mascote.png" alt="" aria-hidden="true" width="420" height="420">
 
-        <div class="hero__float hero__float--portrait">
-          <img src="assets/brand-portrait.png" alt="" aria-hidden="true" width="286" height="455">
-          <span>
-            <strong>+200</strong>
-            <small>professores atendidos</small>
-          </span>
+          <p class="proof-chip proof-chip--a"><strong>+200</strong> professores atendidos</p>
+          <p class="proof-chip proof-chip--b"><strong>+1.500</strong> materiais entregues</p>
+          <p class="proof-chip proof-chip--c"><strong>98%</strong> de satisfação</p>
+          <p class="proof-chip proof-chip--d"><strong>24h</strong> tempo médio de entrega</p>
         </div>
+        <p class="proof-cloud__note">Dados referentes aos atendimentos realizados de 2024 a 2026.</p>
       </div>
     </div>
   </div>
@@ -1600,34 +1577,6 @@ body.has-sticky-cta .wa-float { bottom:88px; }
     <p><b>Atenção:</b> isto não é um banco de atividades prontas nem um prompt de ChatGPT. Cada material é escrito por professores para a <b>sua</b> turma, o <b>seu</b> livro didático e o currículo da <b>sua</b> rede — e revisado por quem já deu aula.</p>
   </div>
 </aside>
-
-<!-- ============================================================
-     SEÇÃO 3 — BARRA DE PROVA SOCIAL
-     ============================================================ -->
-<section class="section proof" aria-labelledby="proof-title">
-  <div class="container">
-    <h2 class="overline" id="proof-title">PROFESSORES QUE JÁ ECONOMIZAM TEMPO COM A PROF+</h2>
-    <div class="proof__grid">
-      <div class="proof__item">
-        <p class="proof__number" data-count-to="200" data-prefix="+">+200</p>
-        <p class="proof__desc">Professores atendidos</p>
-      </div>
-      <div class="proof__item">
-        <p class="proof__number" data-count-to="1500" data-prefix="+" data-group="true">+1.500</p>
-        <p class="proof__desc">Materiais entregues</p>
-      </div>
-      <div class="proof__item">
-        <p class="proof__number" data-count-to="98" data-suffix="%">98%</p>
-        <p class="proof__desc">de satisfação</p>
-      </div>
-      <div class="proof__item">
-        <p class="proof__number" data-count-to="24" data-suffix="h">24h</p>
-        <p class="proof__desc">Tempo médio de entrega</p>
-      </div>
-    </div>
-    <p class="proof__note">Dados referentes aos atendimentos realizados de 2024 a 2026.</p>
-  </div>
-</section>
 
 <!-- ============================================================
      SEÇÃO 4 — PROBLEMA (PAS)
@@ -1679,76 +1628,6 @@ body.has-sticky-cta .wa-float { bottom:88px; }
     </div>
 
     <p class="transition-note reveal">Você não precisa resolver tudo sozinho. É exatamente aqui que a Prof+ entra.</p>
-  </div>
-</section>
-
-<!-- ============================================================
-     SEÇÃO 6 — BENEFÍCIOS
-     ============================================================ -->
-<section class="section" id="materiais" aria-labelledby="beneficios-title">
-  <div class="container">
-    <div class="section__head reveal">
-      <span class="overline">TUDO QUE VOCÊ PRECISA</span>
-      <h2 class="h1 section__title" id="beneficios-title">Tudo o que você precisa para planejar suas aulas</h2>
-      <p class="section__subtitle">Cinco tipos de materiais, criados sob medida, entregues diretamente para você.</p>
-    </div>
-
-    <div class="grid services-grid">
-      <article class="card card--hover service-card reveal">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C10.5 5 8.5 4.5 4 4.5v13C8.5 17.5 10.5 18 12 19.5c1.5-1.5 3.5-2 8-2v-13c-4.5 0-6.5.5-8 2z"/><path d="M12 6.5v13"/></svg>
-        </div>
-        <p class="service-card__name">Sequências Didáticas</p>
-        <h3 class="h4 card__title">Planejamento completo de uma vez</h3>
-        <p class="card__text">Objetivos de aprendizagem, desenvolvimento das aulas e avaliação — alinhados ao conteúdo que você está dando e à realidade da sua turma.</p>
-        <p class="service-card__benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Economize até 4 horas por sequência.</p>
-      </article>
-
-      <article class="card card--hover service-card reveal">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L8 18l-4 1 1-4 11.5-11.5z"/><path d="M4 21h16"/></svg>
-        </div>
-        <p class="service-card__name">Provas e Gabaritos</p>
-        <h3 class="h4 card__title">Avaliações que fazem sentido</h3>
-        <p class="card__text">Questões objetivas, dissertativas ou mistas, com gabarito pronto e grade de correção se você quiser.</p>
-        <p class="service-card__benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Personalizadas por nível de dificuldade.</p>
-      </article>
-
-      <article class="card card--hover service-card reveal">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 3v18M12 8h5M12 12h5M12 16h3"/></svg>
-        </div>
-        <p class="service-card__name">Atividades</p>
-        <h3 class="h4 card__title">Atividades que engajam</h3>
-        <p class="card__text">Fixação, revisão ou aprofundamento — na linguagem certa para a faixa etária e prontas para imprimir ou projetar.</p>
-        <p class="service-card__benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Diversidade de formatos: jogos, cruzadinhas, exercícios, projetos.</p>
-      </article>
-
-      <article class="card card--hover service-card reveal">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M4.5 8.5h15M12 8.5v6M12 14.5l-3.5 6M12 14.5l3.5 6"/></svg>
-        </div>
-        <p class="service-card__name">Atividades Adaptadas</p>
-        <h3 class="h4 card__title">Inclusão de verdade</h3>
-        <p class="card__text">Para alunos com NEE, dislexia, TDAH, TEA e outras condições — respeitando o ritmo de cada estudante.</p>
-        <p class="service-card__benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Inclusão pedagógica acessível e documentada.</p>
-      </article>
-
-      <article class="card card--hover service-card reveal">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v6a5 5 0 0 1-10 0V4z"/><path d="M7 6H4.5A2.5 2.5 0 0 0 7 8.5M17 6h2.5A2.5 2.5 0 0 1 17 8.5"/><path d="M12 15v3M9 21h6"/></svg>
-        </div>
-        <p class="service-card__name">Trabalhos Avaliativos</p>
-        <h3 class="h4 card__title">Avaliações que motivam</h3>
-        <p class="card__text">Em grupo ou individuais, com roteiro, critérios e rubrica — o aluno sabe o que se espera dele e você corrige sem dúvida.</p>
-        <p class="service-card__benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Inclui rubricas de avaliação prontas.</p>
-      </article>
-    </div>
-
-    <p class="section__note reveal">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
-      Todos os materiais são entregues em formato editável (Word ou PDF), prontos para personalizar ou aplicar direto.
-    </p>
   </div>
 </section>
 
@@ -1870,8 +1749,7 @@ body.has-sticky-cta .wa-float { bottom:88px; }
         </span>
         <h2 class="h1 section__title" id="garantia-title">Nossa garantia é simples: você vai gostar do que receber.</h2>
         <div class="prose" style="margin-bottom:0">
-          <p>Toda primeira versão pode precisar de ajuste — por isso as revisões já vêm inclusas no pedido.</p>
-          <p>Não queremos um cliente insatisfeito. Queremos um professor que consiga aplicar o material com segurança e confiança.</p>
+          <p>Nenhuma letra miúda. Só compromisso.</p>
         </div>
       </div>
 
@@ -1881,29 +1759,25 @@ body.has-sticky-cta .wa-float { bottom:88px; }
                Só publique a devolução de 7 dias se ela for realmente praticada. -->
           <li class="guarantee__point guarantee__point--strong">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-            <p><b>Devolvemos 100% em até 7 dias</b> — se depois das revisões o material ainda não servir, é só mandar uma mensagem. Sem formulário e sem justificativa.</p>
+            <p><b>Devolvemos 100% em até 7 dias</b> — se não servir depois das revisões, é só mandar uma mensagem.</p>
           </li>
           <li class="guarantee__point">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-            <p><b>Até 2 revisões inclusas</b> — sem custo adicional por ajustes dentro do escopo.</p>
+            <p><b>Até 2 revisões inclusas</b> — sem custo por ajustes dentro do escopo.</p>
           </li>
           <li class="guarantee__point">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-            <p><b>Suporte pelo WhatsApp</b> — tire dúvidas antes, durante e depois da entrega.</p>
+            <p><b>Suporte pelo WhatsApp</b> — antes, durante e depois da entrega.</p>
           </li>
           <li class="guarantee__point">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-            <p><b>Material entregue no prazo</b> — caso contrário, você é avisado com antecedência.</p>
+            <p><b>Material entregue no prazo</b> — e, se algo mudar, você é avisado antes.</p>
           </li>
           <li class="guarantee__point">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-            <p><b>Transparência total</b> — você sabe exatamente o que está recebendo antes de confirmar o pedido.</p>
+            <p><b>Transparência total</b> — você sabe o que vai receber antes de confirmar.</p>
           </li>
         </ul>
-        <p class="section__note" style="margin-top:var(--space-8)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
-          Não temos letras miúdas. Só compromisso.
-        </p>
       </div>
     </div>
   </div>
@@ -1922,9 +1796,9 @@ body.has-sticky-cta .wa-float { bottom:88px; }
 
     <div class="gallery__panel">
       <ul class="polaroids">
-        <li><article class="polaroid" tabindex="0">
+        <li><button type="button" class="polaroid" aria-haspopup="dialog">
           <div class="polaroid__shot">
-            <img src="assets/exemplo-fisica.jpg" width="660" height="880" loading="lazy" decoding="async"
+            <img src="assets/exemplo-fisica.jpg" data-full="assets/exemplo-fisica-full.jpg" width="816" height="1088" loading="lazy" decoding="async"
                  alt="Página de sequência didática de Física: quadro de definições sobre dopagem do silício e esquema da junção PN em uma célula fotovoltaica.">
             <span class="polaroid__tag">Física · Ensino Médio</span>
           </div>
@@ -1932,11 +1806,11 @@ body.has-sticky-cta .wa-float { bottom:88px; }
             <strong>Dopagem do silício e junção PN</strong>
             <span>Sequência didática · com esquema para a lousa</span>
           </div>
-        </article></li>
+        </button></li>
 
-        <li><article class="polaroid" tabindex="0">
+        <li><button type="button" class="polaroid" aria-haspopup="dialog">
           <div class="polaroid__shot">
-            <img src="assets/exemplo-historia.jpg" width="660" height="880" loading="lazy" decoding="async"
+            <img src="assets/exemplo-historia.jpg" data-full="assets/exemplo-historia-full.jpg" width="816" height="1088" loading="lazy" decoding="async"
                  alt="Página de sequência didática de História: quadros sobre a máquina a vapor e as fases da Revolução Industrial, com texto de apoio sobre o trabalho nas fábricas do século XIX.">
             <span class="polaroid__tag">História · Fundamental II</span>
           </div>
@@ -1944,11 +1818,11 @@ body.has-sticky-cta .wa-float { bottom:88px; }
             <strong>Revolução Industrial em 3 momentos</strong>
             <span>Sequência didática · com texto de apoio impresso</span>
           </div>
-        </article></li>
+        </button></li>
 
-        <li><article class="polaroid" tabindex="0">
+        <li><button type="button" class="polaroid" aria-haspopup="dialog">
           <div class="polaroid__shot">
-            <img src="assets/exemplo-quimica.jpg" width="660" height="880" loading="lazy" decoding="async"
+            <img src="assets/exemplo-quimica.jpg" data-full="assets/exemplo-quimica-full.jpg" width="816" height="1088" loading="lazy" decoding="async"
                  alt="Página de sequência didática de Química: figuras da transformação isotérmica e do experimento com balão em garrafa PET para observar as propriedades dos gases.">
             <span class="polaroid__tag">Química · Ensino Médio</span>
           </div>
@@ -1956,11 +1830,11 @@ body.has-sticky-cta .wa-float { bottom:88px; }
             <strong>Transformação isotérmica e gases</strong>
             <span>Sequência didática · com experimento prático</span>
           </div>
-        </article></li>
+        </button></li>
 
-        <li><article class="polaroid" tabindex="0">
+        <li><button type="button" class="polaroid" aria-haspopup="dialog">
           <div class="polaroid__shot">
-            <img src="assets/exemplo-matematica.jpg" width="660" height="880" loading="lazy" decoding="async"
+            <img src="assets/exemplo-matematica.jpg" data-full="assets/exemplo-matematica-full.jpg" width="816" height="1088" loading="lazy" decoding="async"
                  alt="Página de sequência didática de Matemática: gráficos de barras e de setores com o cálculo dos ângulos resolvido passo a passo e a escrita pronta para o quadro.">
             <span class="polaroid__tag">Matemática · Estatística</span>
           </div>
@@ -1968,7 +1842,7 @@ body.has-sticky-cta .wa-float { bottom:88px; }
             <strong>Gráficos de barras e de setores</strong>
             <span>Sequência didática · com cálculo resolvido</span>
           </div>
-        </article></li>
+        </button></li>
       </ul>
     </div>
 
@@ -2005,7 +1879,7 @@ body.has-sticky-cta .wa-float { bottom:88px; }
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
         </span>
         <h3 class="h3 step__title"><span class="sr-only">Passo 1. </span>Você nos conta o que precisa</h3>
-        <p class="step__text">Manda uma mensagem no WhatsApp com a disciplina, o ano, o conteúdo, o livro didático e como é a sua turma. Quanto mais detalhe, mais certeiro o material.</p>
+        <p class="step__text">Você manda no WhatsApp: disciplina, ano, conteúdo, livro didático e como é a turma. Quanto mais detalhe, mais certeiro o material.</p>
         <p class="step__micro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 1.8"/></svg>Resposta em até 2 horas em dias úteis.</p>
       </li>
 
@@ -2015,7 +1889,7 @@ body.has-sticky-cta .wa-float { bottom:88px; }
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6h.09A1.65 1.65 0 0 0 10 3.09V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9v.09a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
         </span>
         <h3 class="h3 step__title"><span class="sr-only">Passo 2. </span>A gente cria, você aprova</h3>
-        <p class="step__text">Nossa equipe escreve o material com alinhamento à BNCC e te envia uma primeira versão para revisar e pedir ajustes.</p>
+        <p class="step__text">Escrevemos o material alinhado à BNCC e enviamos uma primeira versão para você revisar.</p>
         <p class="step__micro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 1 1-2.3-5.6"/><path d="M20 4v4.5h-4.5"/></svg>Até 2 rodadas de revisão incluídas.</p>
       </li>
 
@@ -2025,7 +1899,7 @@ body.has-sticky-cta .wa-float { bottom:88px; }
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8V4h10v4"/><path d="M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="7" y="14" width="10" height="7" rx="1"/></svg>
         </span>
         <h3 class="h3 step__title"><span class="sr-only">Passo 3. </span>Pronto para aplicar</h3>
-        <p class="step__text">Aprovado, você recebe em Word editável e em PDF pronto para impressão. É só aplicar — e voltar a focar no que você faz de melhor: ensinar.</p>
+        <p class="step__text">Aprovado, você recebe em Word editável e PDF pronto para imprimir. É só aplicar.</p>
         <p class="step__micro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Entrega em até 48 horas para a maioria dos pedidos.</p>
       </li>
     </ol>
@@ -2262,9 +2136,8 @@ body.has-sticky-cta .wa-float { bottom:88px; }
         <h2 class="footer-col-title">Navegação</h2>
         <ul class="footer-links">
           <li><a href="#como-funciona">Como Funciona</a></li>
-          <li><a href="#materiais">Materiais</a></li>
+          <li><a href="#exemplares">Exemplos</a></li>
           <li><a href="#precos">Preços</a></li>
-          <li><a href="#diferenciais">Diferenciais</a></li>
           <li><a href="#depoimentos">Depoimentos</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contato">Contato</a></li>
@@ -2274,11 +2147,11 @@ body.has-sticky-cta .wa-float { bottom:88px; }
       <div>
         <h2 class="footer-col-title">Materiais</h2>
         <ul class="footer-links">
-          <li><a href="#materiais">Sequências Didáticas</a></li>
-          <li><a href="#materiais">Provas e Gabaritos</a></li>
-          <li><a href="#materiais">Atividades</a></li>
-          <li><a href="#materiais">Atividades Adaptadas</a></li>
-          <li><a href="#materiais">Trabalhos Avaliativos</a></li>
+          <li><a href="#exemplares">Sequências Didáticas</a></li>
+          <li><a href="#exemplares">Provas e Gabaritos</a></li>
+          <li><a href="#exemplares">Atividades</a></li>
+          <li><a href="#exemplares">Atividades Adaptadas</a></li>
+          <li><a href="#exemplares">Trabalhos Avaliativos</a></li>
         </ul>
       </div>
 
@@ -2323,6 +2196,16 @@ body.has-sticky-cta .wa-float { bottom:88px; }
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.7-1.2-4.4-3.9-4.6-4.1-.1-.2-1-1.4-1-2.6 0-1.2.6-1.8.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l1.8.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
 </a>
 
+<!-- Visualizador dos exemplares em tamanho grande -->
+<dialog class="shot-modal" id="shotModal" aria-label="Exemplar de material ampliado">
+  <button type="button" class="shot-modal__close" data-close-shot aria-label="Fechar visualização">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <figure class="shot-modal__fig">
+    <img id="shotModalImg" alt="">
+    <figcaption id="shotModalCap"></figcaption>
+  </figure>
+</dialog>
 <!-- Modais legais -->
 <dialog class="legal-modal" id="modal-privacidade" aria-labelledby="modal-privacidade-title">
   <div class="legal-modal__box">
@@ -2447,37 +2330,6 @@ body.has-sticky-cta .wa-float { bottom:88px; }
     reveals.forEach(function (el) { revealObserver.observe(el); });
   }
 
-  /* ---------- Contadores de estatística (15.5) ---------- */
-  var counters = document.querySelectorAll('[data-count-to]');
-  function runCount(el) {
-    var target = parseFloat(el.getAttribute('data-count-to'));
-    var prefix = el.getAttribute('data-prefix') || '';
-    var suffix = el.getAttribute('data-suffix') || '';
-    var group = el.getAttribute('data-group') === 'true';
-    var fmt = function (n) {
-      return group ? n.toLocaleString('pt-BR') : String(n);
-    };
-    if (reduce) { el.textContent = prefix + fmt(target) + suffix; return; }
-    var start = performance.now(), dur = 1500;
-    function tick(now) {
-      var p = Math.min((now - start) / dur, 1);
-      var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = prefix + fmt(Math.round(target * eased)) + suffix;
-      if (p < 1) requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-  }
-  if ('IntersectionObserver' in window) {
-    var countObserver = new IntersectionObserver(function (entries, obs) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        runCount(entry.target);
-        obs.unobserve(entry.target);
-      });
-    }, { threshold: 0.4 });
-    counters.forEach(function (el) { countObserver.observe(el); });
-  }
-
   /* ---------- FAQ: accordion exclusivo (12.16) ---------- */
   var triggers = document.querySelectorAll('.faq__trigger');
   triggers.forEach(function (btn) {
@@ -2491,28 +2343,6 @@ body.has-sticky-cta .wa-float { bottom:88px; }
         btn.setAttribute('aria-expanded', 'true');
         document.getElementById(btn.getAttribute('aria-controls')).dataset.open = 'true';
       }
-    });
-  });
-
-  /* ---------- Galeria: abas (12.17) ---------- */
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('.gallery__tab'));
-  function selectTab(tab) {
-    tabs.forEach(function (t) {
-      var on = t === tab;
-      t.setAttribute('aria-selected', String(on));
-      t.tabIndex = on ? 0 : -1;
-      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
-    });
-  }
-  tabs.forEach(function (tab, i) {
-    tab.addEventListener('click', function () { selectTab(tab); });
-    tab.addEventListener('keydown', function (e) {
-      var dir = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
-      if (!dir) return;
-      e.preventDefault();
-      var next = tabs[(i + dir + tabs.length) % tabs.length];
-      selectTab(next);
-      next.focus();
     });
   });
 
@@ -2543,6 +2373,34 @@ body.has-sticky-cta .wa-float { bottom:88px; }
     });
   });
 
+  /* ---------- Exemplares: abre a página do material em tamanho grande ---------- */
+  var shotModal = document.getElementById('shotModal');
+  var shotImg = document.getElementById('shotModalImg');
+  var shotCap = document.getElementById('shotModalCap');
+  document.querySelectorAll('.polaroid').forEach(function (card) {
+    card.addEventListener('click', function () {
+      var img = card.querySelector('img');
+      var titulo = card.querySelector('.polaroid__caption strong');
+      var tag = card.querySelector('.polaroid__tag');
+      if (!img || !shotModal || typeof shotModal.showModal !== 'function') return;
+      shotImg.src = img.getAttribute('data-full') || img.currentSrc || img.src;
+      shotImg.alt = img.alt;
+      shotCap.textContent = (titulo ? titulo.textContent.trim() : '') +
+        (tag ? ' — ' + tag.textContent.trim() : '');
+      shotModal.showModal();
+    });
+  });
+  document.querySelectorAll('[data-close-shot]').forEach(function (b) {
+    b.addEventListener('click', function () { shotModal.close(); });
+  });
+  if (shotModal) {
+    shotModal.addEventListener('click', function (e) {
+      if (e.target === shotModal) shotModal.close();
+    });
+    // removeAttribute em vez de src='' — src vazio faz o navegador
+    // requisitar a própria página de novo
+    shotModal.addEventListener('close', function () { shotImg.removeAttribute('src'); });
+  }
   /* ---------- Modais legais (12.10) ---------- */
   document.querySelectorAll('[data-legal]').forEach(function (link) {
     link.addEventListener('click', function (e) {

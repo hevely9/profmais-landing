@@ -26,30 +26,48 @@ polegar com a barra fixa. O desktop não foi alterado.
 
 ## Ordem das seções
 
-1. Hero
+1. Hero (com a prova social flutuante)
 2. Faixa de diferenciação
-3. Prova social
-4. Problema (dor)
-5. Materiais (o que você recebe)
-6. **Preços**
-7. Garantia
-8. Exemplares
-9. Como funciona
-10. Depoimentos
-11. Faixa de destaque (CTA)
-12. FAQ
-13. Chamada final e contato
+3. Problema (dor)
+4. **Preços**
+5. Garantia
+6. Exemplares
+7. Como funciona
+8. Depoimentos
+9. Faixa de destaque (CTA)
+10. FAQ
+11. Chamada final e contato
 
-**Removidas por não contribuírem para a conversão:** Comparativo (+ público-alvo),
-Solução, Diferenciais, Casos de Uso, Logos placeholder e Estatísticas. FAQ enxuta
-de 17 para 7 perguntas, ordenada por objeção.
+**Removidas por não contribuírem para a conversão:** Barra de prova social (virou o
+bloco flutuante do hero), Materiais (os 5 cards), Comparativo, Solução, Diferenciais,
+Casos de Uso, Logos placeholder e Estatísticas. FAQ enxuta de 17 para 7 perguntas,
+ordenada por objeção.
 
 ## Exemplares
 
-As 4 polaroids da galeria usam **páginas de materiais reais** produzidos pela Prof+
-(Física, História, Química e Matemática), padronizadas em 660×880 (3:4) a partir dos
-originais. Para trocar, basta substituir os arquivos `assets/exemplo-*.jpg`
-mantendo a proporção.
+As 4 polaroids usam **páginas de materiais reais** da Prof+ (Física, História, Química
+e Matemática). Cada uma tem dois arquivos:
+
+- `exemplo-*.jpg` — miniatura 816×1088 (3:4), densidade 3× na tela
+- `exemplo-*-full.jpg` — página inteira em alta, aberta ao tocar no exemplar
+
+Tocar em um exemplar abre o visualizador com a página completa, para o professor
+conseguir ler o material antes de comprar.
+
+## Prova social no hero
+
+A antiga barra verde de números virou uma composição flutuante em volta da personagem
+da marca: quatro cartões com os mesmos dados (+200 professores, +1.500 materiais, 98%
+de satisfação, 24h de entrega média) e a nota de origem dos dados.
+
+A personagem vem do manual de identidade, mas **a arte original está cortada do lado
+direito** — a orelha e parte do cabelo somem na borda. A versão em `assets/mascote.png`
+foi reconstruída espelhando a metade esquerda sobre o eixo de simetria detectado.
+Se aparecer o arquivo original completo, é só substituir.
+
+Cada cartão flutua com **duração própria** (6s, 6.8s, 7.5s, 8s) — é o que impede o
+conjunto de subir e descer em bloco e faz o movimento parecer natural. Tudo desligado
+sob `prefers-reduced-motion`.
 
 ## Conversão
 
