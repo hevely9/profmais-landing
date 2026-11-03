@@ -147,8 +147,9 @@
     const total = $("#total-docs");
     if (total) {
       if (sorted.length) {
-        const anos = new Set(sorted.map((p) => p.ano).filter(Boolean));
-        total.innerHTML = `<strong>${sorted.length}</strong> ${sorted.length === 1 ? "documento" : "documentos"}<br>${anos.size} ${anos.size === 1 ? "ano" : "anos"} de atuação`;
+        const anos = sorted.map((p) => numValue(p.ano)).filter(Boolean);
+        const ini = Math.min(...anos), fim = Math.max(...anos);
+        total.innerHTML = `<strong>${sorted.length} ${sorted.length === 1 ? "projeto de lei" : "projetos de lei"}</strong>${ini === fim ? `Apresentados em ${ini}` : `De ${ini} a ${fim}`}`;
       } else {
         total.innerHTML = "<strong>Acesso livre</strong>Documentos oficiais em PDF";
       }
