@@ -22,7 +22,7 @@
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 <header class="site-header">
   <div class="container">
-    <a class="brand" href="index.html" aria-label="Clodoaldo Rodrigues — página inicial">
+    <a class="brand" href="index.html" aria-label="Clodoaldo Rodrigues, página inicial">
       <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.5 2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg></span>
       <span class="brand-text"><span class="brand-name">Clodoaldo Rodrigues</span><span class="brand-role">Deputado Estadual</span></span>
     </a>
@@ -50,33 +50,20 @@
 
   <div class="container">
     <form class="search-panel" id="busca" role="search">
-      <div class="search-row">
-        <div class="search-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-          <label class="sr-only" for="q">Pesquisar</label>
-          <input id="q" type="search" placeholder="Número (ex.: 25/2025), ano ou palavra-chave" autocomplete="off">
-        </div>
-        <button class="btn btn-primary" type="submit" style="height:56px;justify-content:center">Pesquisar</button>
-      </div>
-      <div class="filters">
-        <div class="field"><label for="f-ano">Ano</label><select class="select" id="f-ano"><option value="">Todos os anos</option></select></div>
-        <div class="field"><label for="f-tipo">Tipo</label><select class="select" id="f-tipo"><option value="">Todos os tipos</option></select></div>
-        <div class="field"><label for="f-situacao">Situação</label><select class="select" id="f-situacao"><option value="">Todas as situações</option></select></div>
-        <div class="field"><label for="f-ordem">Ordenar</label><select class="select" id="f-ordem"><option value="recentes">Mais recentes primeiro</option><option value="antigos">Mais antigos primeiro</option></select></div>
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <label class="sr-only" for="q">Pesquisar projeto</label>
+        <input id="q" type="search" placeholder="Buscar por número ou assunto" autocomplete="off">
       </div>
     </form>
 
-    <div class="results-bar">
-      <p class="results-count" id="contagem" aria-live="polite"></p>
-      <div class="chips" id="chips"></div>
-    </div>
+    <p class="results-count" id="contagem" aria-live="polite"></p>
 
-    <div class="cards" id="lista">
+    <div id="lista">
       <div class="skeleton"><i></i><i></i><i></i><i></i><i></i></div>
       <div class="skeleton"><i></i><i></i><i></i><i></i><i></i></div>
       <div class="skeleton"><i></i><i></i><i></i><i></i><i></i></div>
     </div>
-    <div class="load-more"><button class="btn btn-outline" id="mais" type="button" hidden><span>Carregar mais</span></button></div>
 
     <div class="source-note">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
