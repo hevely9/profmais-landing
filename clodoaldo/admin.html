@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Painel Administrativo · Portal Clodoaldo Rodrigues</title>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<style>
+  body { background: var(--paper); }
+  .adm-top { background: var(--navy-950); color: #fff; }
+  .adm-top .container { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 12px; }
+  .adm-top .who { font-size: 13px; color: rgba(255,255,255,.7); display: flex; gap: 12px; align-items: center; }
+  .adm-wrap { padding: 32px 0 80px; }
+  .card { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm), inset 0 0 0 1px var(--line); padding: 24px; }
+  .login { max-width: 520px; margin: 48px auto; }
+  .login h1 { font-size: 26px; font-weight: 800; }
+  .login p { color: var(--ink-2); font-size: 15px; }
+  .form { display: grid; gap: 14px; margin-top: 18px; }
+  .form .row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+  .in, .ta { width: 100%; padding: 11px 13px; border-radius: 10px; border: 1.5px solid var(--line); font: inherit; font-size: 15px; background: #fff; color: var(--ink); }
+  .ta { min-height: 110px; resize: vertical; line-height: 1.5; }
+  .in:focus, .ta:focus { outline: none; border-color: var(--blue-500); box-shadow: 0 0 0 4px rgba(42,98,209,.12); }
+  .hint { font-size: 13px; color: var(--ink-3); margin: 4px 0 0; }
+  .tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; }
+  .tab { border: 0; cursor: pointer; padding: 10px 16px; border-radius: 999px; background: #fff; box-shadow: inset 0 0 0 1px var(--line); font-weight: 600; color: var(--ink-2); }
+  .tab[aria-selected="true"] { background: var(--blue-700); color: #fff; box-shadow: none; }
+  .bar { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+  td .ementa { max-width: 520px; color: var(--ink-2); }
+  .tbl-wrap { overflow-x: auto; }
+  .actions { display: flex; gap: 6px; flex-wrap: wrap; }
+  .btn-danger { background: #fff; color: #b42318; box-shadow: inset 0 0 0 1.5px #f3c7c3; }
+  .btn-danger:hover { background: #fef3f2; }
+  .drop { border: 2px dashed var(--blue-100); border-radius: var(--radius); padding: 36px 20px; text-align: center; background: var(--blue-50); cursor: pointer; transition: border-color .2s, background .2s; }
+  .drop.over { border-color: var(--blue-500); background: #e9f0fd; }
+  .drop strong { display: block; font-family: var(--font-display); font-size: 18px; }
+  .imp-row { display: grid; grid-template-columns: 28px 1.1fr 90px 80px 2fr 1fr; gap: 8px; align-items: start; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .imp-row .in, .imp-row .ta { padding: 8px 10px; font-size: 14px; }
+  .imp-row .ta { min-height: 64px; }
+  .imp-row .fname { grid-column: 2 / -1; font-size: 12.5px; color: var(--ink-3); display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .flag { font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 999px; }
+  .flag.ok { background: #e6f5ec; color: var(--green); }
+  .flag.warn { background: #fff6d6; color: #8a6a00; }
+  .flag.bad { background: #fef3f2; color: #b42318; }
+  @media (max-width: 860px) { .imp-row { grid-template-columns: 28px 1fr 1fr; } .imp-row .ta { grid-column: 2 / -1; } }
+  dialog { border: 0; border-radius: var(--radius-lg); padding: 0; width: min(760px, calc(100vw - 24px)); box-shadow: var(--shadow-lg); }
+  dialog::backdrop { background: rgba(3, 15, 42, .55); backdrop-filter: blur(3px); }
+  dialog .card { box-shadow: none; max-height: 86vh; overflow: auto; }
+  .toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 99; background: var(--navy-950); color: #fff; padding: 14px 20px; border-radius: 12px; box-shadow: var(--shadow-lg); font-size: 14px; max-width: calc(100vw - 32px); }
+  .toast.err { background: #b42318; }
+  .muted { color: var(--ink-3); font-size: 14px; }
+  .photo-prev { width: 160px; aspect-ratio: 4/5; object-fit: cover; border-radius: 12px; box-shadow: var(--shadow-sm); }
+  .tl-item { display: grid; grid-template-columns: 160px 1fr 40px; gap: 8px; margin-bottom: 8px; }
+  .busy { opacity: .6; pointer-events: none; }
+</style>
+</head>
+<body>
+<header class="adm-top">
+  <div class="container">
+    <a class="brand" href="index.html"><span class="brand-mark"><svg viewBox="0 0 24 24"><path d="m12 2.5 2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg></span>
+      <span class="brand-text"><span class="brand-name">Painel do Portal</span><span class="brand-role">Área administrativa</span></span></a>
+    <div class="who" id="who" hidden><span id="who-name"></span><button class="btn btn-ghost btn-sm" id="sair" type="button">Sair</button></div>
+  </div>
+</header>
+<div class="tricolor"></div>
+
+<main class="container adm-wrap">
+  <!-- LOGIN -->
+  <section id="v-login" class="card login">
+    <h1>Entrar no painel</h1>
+    <p>O portal é publicado pelo GitHub Pages. Cada alteração feita aqui vira um registro (commit) no repositório, com histórico completo e possibilidade de desfazer.</p>
+    <form class="form" id="f-login">
+      <div><label class="field"><span style="font-weight:600">Token de acesso do GitHub</span></label>
+        <input class="in" id="l-token" type="password" required autocomplete="off" placeholder="github_pat_…">
+        <p class="hint">Use um <em>fine-grained token</em> com acesso somente a este repositório e permissão <strong>Contents: Read and write</strong>. O token fica apenas neste navegador.</p></div>
+      <details><summary class="muted" style="cursor:pointer">Configuração do repositório</summary>
+        <div class="row" style="margin-top:10px">
+          <input class="in" id="l-owner" placeholder="dono" aria-label="Dono do repositório">
+          <input class="in" id="l-repo" placeholder="repositório" aria-label="Repositório">
+          <input class="in" id="l-branch" placeholder="branch" aria-label="Branch">
+          <input class="in" id="l-base" placeholder="pasta do portal" aria-label="Pasta do portal">
+        </div></details>
+      <label style="display:flex;gap:8px;align-items:center;font-size:14px"><input type="checkbox" id="l-lembrar"> Manter conectado neste computador</label>
+      <button class="btn btn-primary" type="submit" style="justify-content:center">Entrar</button>
+      <p class="hint" id="l-erro" style="color:#b42318"></p>
+    </form>
+  </section>
+
+  <!-- APP -->
+  <section id="v-app" hidden>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" data-tab="projetos" aria-selected="true">Projetos</button>
+      <button class="tab" role="tab" data-tab="importar" aria-selected="false">Importar PDFs em lote</button>
+      <button class="tab" role="tab" data-tab="deputado" aria-selected="false">Deputado e biografia</button>
+      <button class="tab" role="tab" data-tab="config" aria-selected="false">Links oficiais</button>
+    </div>
+
+    <div data-panel="projetos" class="card">
+      <div class="bar">
+        <input class="in" id="p-busca" type="search" placeholder="Filtrar por número, ano ou texto" style="max-width:360px">
+        <button class="btn btn-primary btn-sm" id="p-novo" type="button">+ Novo projeto</button>
+      </div>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>Tipo / Nº</th><th>Ementa</th><th>Situação</th><th>PDF</th><th></th></tr></thead>
+        <tbody id="p-tbody"></tbody>
+      </table></div>
+      <p class="muted" id="p-vazio" hidden>Nenhum projeto cadastrado ainda. Use “Novo projeto” ou “Importar PDFs em lote”.</p>
+    </div>
+
+    <div data-panel="importar" class="card" hidden>
+      <h2 style="font-size:20px;font-weight:800">Importar vários PDFs de uma vez</h2>
+      <p class="muted">Baixe a pasta do Google Drive (ou os arquivos da ALEAC) e arraste os PDFs aqui. O painel lê o texto da primeira página e <strong>sugere</strong> tipo, número, ano e ementa. Revise cada linha antes de publicar — nada é publicado sem a sua confirmação.</p>
+      <label class="drop" id="drop" style="display:block;margin-top:16px">
+        <strong>Arraste os PDFs aqui</strong><span class="muted">ou clique para escolher os arquivos</span>
+        <input type="file" id="imp-files" accept="application/pdf" multiple hidden>
+      </label>
+      <div id="imp-lista" style="margin-top:16px"></div>
+      <div class="bar" id="imp-bar" hidden style="margin-top:16px">
+        <span class="muted" id="imp-resumo"></span>
+        <button class="btn btn-gold" id="imp-publicar" type="button">Publicar selecionados</button>
+      </div>
+    </div>
+
+    <div data-panel="deputado" class="card" hidden>
+      <form class="form" id="f-dep">
+        <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-end">
+          <img class="photo-prev" id="d-foto-prev" alt="Foto atual">
+          <div><label class="btn btn-outline btn-sm" style="cursor:pointer">Trocar fotografia<input type="file" id="d-foto" accept="image/*" hidden></label>
+          <p class="hint">A imagem é otimizada automaticamente (máx. 1400 px).</p></div>
+        </div>
+        <div class="row">
+          <div><label class="muted">Nome de exibição</label><input class="in" name="nome"></div>
+          <div><label class="muted">Nome completo</label><input class="in" name="nomeCompleto"></div>
+        </div>
+        <div class="row">
+          <div><label class="muted">Cargo</label><input class="in" name="cargo"></div>
+          <div><label class="muted">Partido</label><input class="in" name="partido"></div>
+          <div><label class="muted">Estado</label><input class="in" name="estado"></div>
+        </div>
+        <div><label class="muted">Lema</label><input class="in" name="lema"></div>
+        <div><label class="muted">Resumo (página inicial, 2–3 linhas)</label><textarea class="ta" name="resumo" style="min-height:80px"></textarea></div>
+        <div><label class="muted">Biografia</label><textarea class="ta" name="biografia"></textarea><p class="hint">Separe parágrafos com uma linha em branco.</p></div>
+        <div><label class="muted">Trajetória pessoal e profissional</label><textarea class="ta" name="trajetoriaPessoal"></textarea></div>
+        <div><label class="muted">Trajetória política (linha do tempo)</label><div id="d-tl"></div>
+          <button class="btn btn-outline btn-sm" type="button" id="d-tl-add">+ Adicionar marco</button></div>
+        <div><label class="muted">Atuação parlamentar</label><textarea class="ta" name="atuacaoParlamentar"></textarea></div>
+        <div><label class="muted">Áreas de atuação (separadas por vírgula)</label><input class="in" name="areasDeAtuacao"></div>
+        <div><label class="muted">História pública — destaques (um por linha)</label><textarea class="ta" name="destaques"></textarea></div>
+        <button class="btn btn-primary" type="submit" style="justify-content:center">Salvar biografia</button>
+      </form>
+    </div>
+
+    <div data-panel="config" class="card" hidden>
+      <form class="form" id="f-cfg">
+        <div><label class="muted">Site oficial da ALEAC</label><input class="in" name="aleacUrl" type="url"></div>
+        <div><label class="muted">Página de proposições do deputado na ALEAC</label><input class="in" name="aleacProjetosUrl" type="url"><p class="hint">Link usado em “Consultar na ALEAC” e no rodapé.</p></div>
+        <div class="row">
+          <div><label class="muted">Instagram</label><input class="in" name="instagram" type="url"></div>
+          <div><label class="muted">Facebook</label><input class="in" name="facebook" type="url"></div>
+        </div>
+        <div><label class="muted">Link do grupo do WhatsApp (botão flutuante)</label><input class="in" name="whatsappGrupo" type="url" placeholder="https://chat.whatsapp.com/…"><p class="hint">Deixe em branco para esconder o botão.</p></div>
+        <button class="btn btn-primary" type="submit" style="justify-content:center">Salvar links</button>
+      </form>
+    </div>
+    <p class="muted" style="margin-top:16px">Após salvar, o GitHub Pages leva cerca de 1 minuto para atualizar o site público.</p>
+  </section>
+</main>
+
+<dialog id="dlg">
+  <form class="card form" id="f-proj" method="dialog">
+    <h2 style="font-size:22px;font-weight:800" id="dlg-titulo">Projeto</h2>
+    <div class="row">
+      <div><label class="muted">Tipo *</label><input class="in" name="tipo" list="tipos" required></div>
+      <div><label class="muted">Número *</label><input class="in" name="numero" required></div>
+      <div><label class="muted">Ano *</label><input class="in" name="ano" inputmode="numeric" pattern="\d{4}" required></div>
+      <div><label class="muted">Data de apresentação</label><input class="in" name="dataApresentacao" type="date"></div>
+    </div>
+    <div><label class="muted">Ementa *</label><textarea class="ta" name="ementa" required></textarea></div>
+    <div><label class="muted">Breve descrição (linguagem simples)</label><textarea class="ta" name="descricao" style="min-height:80px"></textarea></div>
+    <div class="row">
+      <div><label class="muted">Situação legislativa</label><input class="in" name="situacao" list="situacoes"></div>
+      <div><label class="muted">Palavras-chave (vírgula)</label><input class="in" name="palavrasChave"></div>
+    </div>
+    <div><label class="muted">Link oficial na ALEAC</label><input class="in" name="linkOficial" type="url" placeholder="https://"></div>
+    <div><label class="muted">Documento PDF</label><input class="in" type="file" name="arquivo" accept="application/pdf">
+      <p class="hint" id="dlg-pdf-atual"></p>
+      <input class="in" name="pdfUrl" type="url" placeholder="…ou link externo para o PDF oficial" style="margin-top:6px"></div>
+    <div class="bar" style="margin:8px 0 0">
+      <button class="btn btn-outline btn-sm" value="cancel" formnovalidate>Cancelar</button>
+      <button class="btn btn-primary btn-sm" id="dlg-salvar" value="save">Salvar e publicar</button>
+    </div>
+  </form>
+</dialog>
+
+<datalist id="tipos">
+  <option>Projeto de Lei</option><option>Projeto de Lei Complementar</option><option>Proposta de Emenda à Constituição</option>
+  <option>Projeto de Resolução</option><option>Projeto de Decreto Legislativo</option><option>Indicação</option>
+  <option>Requerimento</option><option>Moção</option>
+</datalist>
+<datalist id="situacoes">
+  <option>Em tramitação</option><option>Aguardando parecer</option><option>Aprovado</option><option>Sancionado</option>
+  <option>Promulgado</option><option>Vetado</option><option>Arquivado</option><option>Retirado</option>
+</datalist>
+
+<script src="assets/js/admin.js"></script>
+</body>
+</html>
