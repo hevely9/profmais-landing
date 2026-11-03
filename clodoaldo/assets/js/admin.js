@@ -1,7 +1,7 @@
 /* Painel administrativo do portal.
    Funciona sem servidor próprio: lê e grava os arquivos do site direto no
    repositório do GitHub (API REST), autenticado por um token pessoal.
-   Cada "salvar" gera um único commit — histórico completo, reversível. */
+   Cada "salvar" gera um único commit, com histórico completo e reversível. */
 (function () {
   "use strict";
 
@@ -116,7 +116,7 @@
     $("#p-tbody").innerHTML = list.map((p) => `<tr>
       <td><strong>${esc(p.tipo)}</strong><br>Nº ${esc(p.numero)}/${esc(p.ano)}</td>
       <td><div class="ementa">${esc(p.ementa)}</div></td>
-      <td>${esc(p.situacao || "—")}</td>
+      <td>${esc(p.situacao || "-")}</td>
       <td>${p.pdf ? `<a href="${esc(p.pdf)}" target="_blank" rel="noopener">abrir</a>` : '<span class="flag warn">sem PDF</span>'}</td>
       <td><div class="actions"><button class="btn btn-outline btn-sm" data-edit="${esc(p.id)}">Editar</button><button class="btn btn-danger btn-sm" data-del="${esc(p.id)}">Remover</button></div></td>
     </tr>`).join("");
@@ -309,14 +309,14 @@
       projetos = res["data/projetos.json"]; renderProjetos();
       fila = fila.filter((it) => !sel.includes(it)); renderFila();
       toast(`${novos.length} documento(s) publicados.`);
-    } catch (e) { toast("Erro ao publicar: " + e.message + " — se forem muitos arquivos grandes, envie em lotes menores.", true); }
+    } catch (e) { toast("Erro ao publicar: " + e.message + ". Se forem muitos arquivos grandes, envie em lotes menores.", true); }
     finally { btn.classList.remove("busy"); btn.textContent = "Publicar selecionados"; }
   }
 
   // ---------- deputado ----------
   function tlRow(item = {}) {
     const d = document.createElement("div"); d.className = "tl-item";
-    d.innerHTML = `<input class="in" placeholder="Período (ex.: 2023–2026)" value="${esc(item.periodo)}"><input class="in" placeholder="Descrição" value="${esc(item.descricao)}"><button class="btn btn-danger btn-sm" type="button" aria-label="Remover">×</button>`;
+    d.innerHTML = `<input class="in" placeholder="Período (ex.: 2023 a 2026)" value="${esc(item.periodo)}"><input class="in" placeholder="Descrição" value="${esc(item.descricao)}"><button class="btn btn-danger btn-sm" type="button" aria-label="Remover">×</button>`;
     d.querySelector("button").onclick = () => d.remove();
     $("#d-tl").appendChild(d);
   }

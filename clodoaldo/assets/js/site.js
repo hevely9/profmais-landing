@@ -1,4 +1,4 @@
-/* Portal Clodoaldo Rodrigues — scripts públicos
+/* Portal Clodoaldo Rodrigues: scripts públicos
    Os dados vêm de data/*.json. Nada aqui gera ou inventa conteúdo:
    quando um campo está vazio, a página mostra um estado "em preparação". */
 (function () {
@@ -164,129 +164,102 @@
   }
 
   // ---------- biblioteca ----------
+  // Lista completa agrupada por ano, do mais recente para o mais antigo, com uma busca simples.
   async function initLibrary(cfg) {
-    const PAGE = 12;
-    const grid = $("#lista"), count = $("#contagem"), chips = $("#chips"), more = $("#mais");
-    const fq = $("#q"), fano = $("#f-ano"), ftipo = $("#f-tipo"), fsit = $("#f-situacao"), ford = $("#f-ordem");
+    const lista = $("#lista"), count = $("#contagem"), fq = $("#q");
     const all = sortProjects((await getJSON("data/projetos.json", [])) || []);
-    let shown = PAGE, current = [];
-
-    const uniq = (k) => Array.from(new Set(all.map((p) => p[k]).filter(Boolean)));
-    const fill = (sel, values, label) => {
-      sel.innerHTML = `<option value="">${label}</option>` + values.map((v) => `<option value="${esc(v)}">${esc(v)}</option>`).join("");
-    };
-    fill(fano, uniq("ano").sort((a, b) => numValue(b) - numValue(a)), "Todos os anos");
-    fill(ftipo, uniq("tipo").sort((a, b) => a.localeCompare(b, "pt-BR")), "Todos os tipos");
-    fill(fsit, uniq("situacao").sort((a, b) => a.localeCompare(b, "pt-BR")), "Todas as situações");
-    [fano, ftipo, fsit].forEach((s) => { s.disabled = s.options.length <= 1; });
-
-    // estado inicial a partir da URL (links compartilháveis)
-    const params = new URLSearchParams(location.search);
-    fq.value = params.get("q") || "";
-    [["ano", fano], ["tipo", ftipo], ["situacao", fsit], ["ordem", ford]].forEach(([k, el]) => { if (params.get(k)) el.value = params.get(k); });
-
     all.forEach((p) => {
-      p._search = norm([p.tipo, p.numero, p.ano, p.resultado, p.localizacaoAtual, `${p.numero}/${p.ano}`, `${p.numero}-${p.ano}`, p.ementa, p.descricao, p.situacao, (p.palavrasChave || []).join(" ")].join(" "));
+      p._search = norm([p.tipo, p.numero, p.ano, `${p.numero}/${p.ano}`, `${p.numero}-${p.ano}`, p.ementa, p.descricao, p.situacao, p.resultado, (p.palavrasChave || []).join(" ")].join(" "));
     });
+    fq.value = new URLSearchParams(location.search).get("q") || "";
 
-    function apply(resetPage) {
-      if (resetPage) shown = PAGE;
+    function render() {
       const terms = norm(fq.value).split(/\s+/).filter(Boolean);
-      current = all.filter((p) =>
-        (!fano.value || String(p.ano) === fano.value) &&
-        (!ftipo.value || p.tipo === ftipo.value) &&
-        (!fsit.value || p.situacao === fsit.value) &&
-        terms.every((t) => p._search.includes(t)));
-      if (ford.value === "antigos") current.reverse();
-
-      const filtered = !!(terms.length || fano.value || ftipo.value || fsit.value);
-      grid.innerHTML = current.length ? current.slice(0, shown).map(cardHTML).join("") : emptyHTML(cfg, filtered && all.length > 0);
-      observeReveal(grid);
-      count.innerHTML = all.length
-        ? `<strong>${current.length}</strong> de ${all.length} ${all.length === 1 ? "documento" : "documentos"}`
-        : "";
-      more.hidden = current.length <= shown;
-      more.querySelector("span").textContent = `Carregar mais (${current.length - shown} restantes)`;
-
-      const c = [];
-      if (terms.length) c.push(["q", `“${fq.value.trim()}”`]);
-      if (fano.value) c.push(["ano", fano.value]);
-      if (ftipo.value) c.push(["tipo", ftipo.value]);
-      if (fsit.value) c.push(["situacao", fsit.value]);
-      chips.innerHTML = c.map(([k, v]) => `<button class="chip" type="button" data-chip="${k}" aria-label="Remover filtro ${esc(v)}">${esc(v)}${ICON.x}</button>`).join("");
-
-      const qs = new URLSearchParams();
-      if (fq.value.trim()) qs.set("q", fq.value.trim());
-      if (fano.value) qs.set("ano", fano.value);
-      if (ftipo.value) qs.set("tipo", ftipo.value);
-      if (fsit.value) qs.set("situacao", fsit.value);
-      if (ford.value !== "recentes") qs.set("ordem", ford.value);
-      history.replaceState(null, "", location.pathname + (qs.toString() ? "?" + qs : ""));
-    }
-
-    let t;
-    fq.addEventListener("input", () => { clearTimeout(t); t = setTimeout(() => apply(true), 160); });
-    $("#busca").addEventListener("submit", (e) => { e.preventDefault(); apply(true); });
-    [fano, ftipo, fsit, ford].forEach((s) => s.addEventListener("change", () => apply(true)));
-    more.addEventListener("click", () => { shown += PAGE; apply(false); });
-    document.addEventListener("click", (e) => {
-      const chip = e.target.closest("[data-chip]");
-      if (chip) {
-        const k = chip.dataset.chip;
-        ({ q: fq, ano: fano, tipo: ftipo, situacao: fsit })[k].value = "";
-        apply(true);
+      const found = all.filter((p) => terms.every((t) => p._search.includes(t)));
+      if (!found.length) {
+        lista.innerHTML = `<div class="cards">${emptyHTML(cfg, terms.length > 0 && all.length > 0)}</div>`;
+      } else {
+        const anos = [];
+        found.forEach((p) => {
+          const k = p.ano || "Sem ano";
+          let g = anos.find((x) => x.ano === k);
+          if (!g) anos.push(g = { ano: k, itens: [] });
+          g.itens.push(p);
+        });
+        lista.innerHTML = anos.map((g) => `<section class="year-group" aria-labelledby="ano-${esc(g.ano)}">
+          <h2 class="year-title" id="ano-${esc(g.ano)}">${esc(g.ano)} <span>${g.itens.length} ${g.itens.length === 1 ? "projeto" : "projetos"}</span></h2>
+          <div class="cards">${g.itens.map(cardHTML).join("")}</div></section>`).join("");
       }
-      if (e.target.closest("[data-clear]")) { fq.value = ""; fano.value = ftipo.value = fsit.value = ""; apply(true); fq.focus(); }
-    });
-    apply(true);
+      observeReveal(lista);
+      count.innerHTML = all.length
+        ? (terms.length ? `<strong>${found.length}</strong> de ${all.length} projetos encontrados` : `<strong>${all.length}</strong> projetos de lei`)
+        : "";
+      const qs = fq.value.trim() ? "?q=" + encodeURIComponent(fq.value.trim()) : "";
+      history.replaceState(null, "", location.pathname + qs);
+    }
+    let t;
+    fq.addEventListener("input", () => { clearTimeout(t); t = setTimeout(render, 160); });
+    $("#busca").addEventListener("submit", (e) => { e.preventDefault(); render(); });
+    document.addEventListener("click", (e) => { if (e.target.closest("[data-clear]")) { fq.value = ""; render(); fq.focus(); } });
+    render();
   }
 
   // ---------- página do deputado ----------
+  // Seções sem conteúdo oficial ficam ocultas e somem do índice.
   async function initProfile() {
     const [dep, projetos] = await Promise.all([getJSON("data/deputado.json", {}), getJSON("data/projetos.json", [])]);
-    const pending = (txt) => `<span class="pending">${ICON.clock}${txt || "Informação oficial em preparação."}</span>`;
-    const paras = (txt) => String(txt || "").split(/\n{2,}|\r\n\r\n/).map((p) => `<p>${esc(p.trim())}</p>`).join("");
-    const set = (id, html) => { const el = document.getElementById(id); if (el) el.innerHTML = html; };
+    const paras = (txt) => String(txt || "").split(/\n{2,}/).map((p) => p.trim()).filter(Boolean).map((p) => `<p>${esc(p)}</p>`).join("");
+    const fill = (block, id, html) => {
+      const sec = document.getElementById(block), el = document.getElementById(id);
+      if (!sec || !el) return;
+      if (html) { el.innerHTML = html; sec.hidden = false; }
+      else { sec.hidden = true; const a = $(`.toc a[href="#${block}"]`); if (a) a.hidden = true; }
+    };
 
     if (dep.foto) $$("[data-foto]").forEach((img) => { img.src = dep.foto; });
-    if (dep.nomeCompleto) set("nome-completo", `Nome completo: <strong>${esc(dep.nomeCompleto)}</strong>`);
+    if (dep.nomeCompleto) { const el = document.getElementById("nome-completo"); if (el) el.innerHTML = `Nome completo: <strong>${esc(dep.nomeCompleto)}</strong>`; }
     const linha = [dep.cargo, dep.partido, dep.estado].filter(Boolean).map(esc).join(" · ");
-    if (linha) set("cargo-linha", linha);
+    if (linha) { const el = document.getElementById("cargo-linha"); if (el) el.innerHTML = linha; }
 
-    set("bio-apresentacao", dep.biografia ? paras(dep.biografia) : pending());
-    set("bio-pessoal", dep.trajetoriaPessoal ? paras(dep.trajetoriaPessoal) : pending());
+    fill("apresentacao", "bio-apresentacao", paras(dep.biografia));
+    fill("pessoal", "bio-pessoal", paras(dep.trajetoriaPessoal));
     const tp = Array.isArray(dep.trajetoriaPolitica) ? dep.trajetoriaPolitica.filter((i) => i && (i.periodo || i.descricao)) : [];
-    set("bio-politica", tp.length
-      ? `<ol class="timeline">${tp.map((i) => `<li><div class="when">${esc(i.periodo)}</div><div class="what">${esc(i.descricao)}</div></li>`).join("")}</ol>`
-      : pending());
+    fill("politica", "bio-politica", tp.length ? `<ol class="timeline">${tp.map((i) => `<li><div class="when">${esc(i.periodo)}</div><div class="what">${esc(i.descricao)}</div></li>`).join("")}</ol>` : "");
 
     const list = Array.isArray(projetos) ? projetos : [];
     const atu = [];
     if (dep.atuacaoParlamentar) atu.push(paras(dep.atuacaoParlamentar));
     if (list.length) {
-      const anos = new Set(list.map((p) => p.ano).filter(Boolean));
-      const tipos = new Set(list.map((p) => p.tipo).filter(Boolean));
+      const anos = list.map((p) => numValue(p.ano)).filter(Boolean);
+      const aprov = list.filter((p) => statusClass(p.situacao) === "ok").length;
       atu.push(`<div class="stat-row">
-        <div class="stat"><b>${list.length}</b><span>proposições na biblioteca</span></div>
-        <div class="stat"><b>${anos.size}</b><span>${anos.size === 1 ? "ano" : "anos"} com documentos</span></div>
-        <div class="stat"><b>${tipos.size}</b><span>${tipos.size === 1 ? "tipo de proposição" : "tipos de proposição"}</span></div></div>`);
+        <div class="stat"><b>${list.length}</b><span>projetos de lei apresentados</span></div>
+        <div class="stat"><b>${aprov}</b><span>aprovados ou com autógrafo enviado</span></div>
+        <div class="stat"><b>${Math.min(...anos)} a ${Math.max(...anos)}</b><span>período com projetos na biblioteca</span></div></div>`);
     }
     const areas = Array.isArray(dep.areasDeAtuacao) ? dep.areasDeAtuacao.filter(Boolean) : [];
-    if (areas.length) atu.push(`<div class="tags">${areas.map((a) => `<span class="tag">${esc(a)}</span>`).join("")}</div>`);
-    set("bio-atuacao", atu.length ? atu.join("") : pending());
+    if (areas.length) atu.push(`<div class="tags">${areas.map((x) => `<span class="tag">${esc(x)}</span>`).join("")}</div>`);
+    fill("atuacao", "bio-atuacao", atu.join(""));
 
     const dest = Array.isArray(dep.destaques) ? dep.destaques.filter(Boolean) : [];
-    set("bio-destaques", dest.length ? `<ol class="timeline">${dest.map((d) => `<li><div class="what">${esc(d)}</div></li>`).join("")}</ol>` : pending());
+    fill("destaques", "bio-destaques", dest.length ? `<ol class="timeline">${dest.map((d) => `<li><div class="what">${esc(d)}</div></li>`).join("")}</ol>` : "");
 
-    // índice ativo conforme rolagem
-    const links = $$(".toc a");
+    const fontes = Array.isArray(dep.fontes) ? dep.fontes.filter((f) => f && safeHref(f.url)) : [];
+    const fEl = document.getElementById("bio-fontes");
+    if (fEl && fontes.length) {
+      fEl.innerHTML = `<h3>Fontes consultadas</h3><ul>${fontes.map((f) => `<li><a href="${esc(safeHref(f.url))}" target="_blank" rel="noopener">${esc(f.titulo || f.url)}</a></li>`).join("")}</ul>`;
+      fEl.hidden = false;
+    }
+
+    const links = $$(".toc a:not([hidden])");
+    links.forEach((x, i) => x.classList.toggle("active", i === 0));
     if ("IntersectionObserver" in window && links.length) {
       const obs = new IntersectionObserver((ents) => {
         ents.forEach((en) => {
-          if (en.isIntersecting) links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + en.target.id));
+          if (en.isIntersecting) links.forEach((x) => x.classList.toggle("active", x.getAttribute("href") === "#" + en.target.id));
         });
       }, { rootMargin: "-30% 0px -60% 0px" });
-      $$(".bio-block").forEach((s) => obs.observe(s));
+      $$(".bio-block:not([hidden])").forEach((x) => obs.observe(x));
     }
   }
 
