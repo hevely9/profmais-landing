@@ -28,6 +28,7 @@
     file: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>',
     library: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2Z"/><path d="M4 19a2 2 0 0 1 2-2h12"/><path d="M9 7h6M9 11h4"/></svg>',
     x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>',
+    check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>',
     clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
     arrow: '<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
   };
@@ -54,8 +55,8 @@
   function statusClass(s) {
     const t = norm(s);
     if (!t) return "";
-    if (/(aprovad|sancionad|promulgad|lei n|transformad)/.test(t)) return "ok";
-    if (/(arquivad|retirad|vetad|rejeitad|prejudicad)/.test(t)) return "off";
+    if (/(inconstitucional|arquivad|retirad|vetad|rejeitad|prejudicad)/.test(t)) return "off";
+    if (/(aprovad|sancionad|promulgad|lei n|transformad|autografo)/.test(t)) return "ok";
     return "warn";
   }
   function fmtDate(iso) {
@@ -76,6 +77,8 @@
     const meta = [];
     if (p.dataApresentacao) meta.push(`<span>${ICON.calendar}Apresentado em ${fmtDate(p.dataApresentacao)}</span>`);
     else if (p.ano) meta.push(`<span>${ICON.calendar}${esc(p.ano)}</span>`);
+    if (p.dataVotacao) meta.push(`<span>${ICON.check}${esc(p.resultado || "Votado")} em ${fmtDate(p.dataVotacao)}</span>`);
+    else if (p.dataUltimaTramitacao) meta.push(`<span>${ICON.clock}Última tramitação: ${fmtDate(p.dataUltimaTramitacao)}</span>`);
     const actions = [];
     if (pdf) actions.push(`<a class="btn btn-primary btn-sm" href="${esc(pdf)}" ${isUrl(pdf) ? 'target="_blank" rel="noopener"' : `download="${esc(fileName(p))}"`} aria-label="Baixar ${esc(p.tipo || "projeto")} ${esc(p.numero || "")}/${esc(p.ano || "")} em PDF">${ICON.download}Baixar projeto</a>`);
     if (oficial) actions.push(`<a class="btn btn-outline btn-sm" href="${esc(oficial)}" target="_blank" rel="noopener" aria-label="Consultar na ALEAC (abre em nova aba)">${ICON.external}Ver na ALEAC</a>`);
@@ -182,7 +185,7 @@
     [["ano", fano], ["tipo", ftipo], ["situacao", fsit], ["ordem", ford]].forEach(([k, el]) => { if (params.get(k)) el.value = params.get(k); });
 
     all.forEach((p) => {
-      p._search = norm([p.tipo, p.numero, p.ano, `${p.numero}/${p.ano}`, `${p.numero}-${p.ano}`, p.ementa, p.descricao, p.situacao, (p.palavrasChave || []).join(" ")].join(" "));
+      p._search = norm([p.tipo, p.numero, p.ano, p.resultado, p.localizacaoAtual, `${p.numero}/${p.ano}`, `${p.numero}-${p.ano}`, p.ementa, p.descricao, p.situacao, (p.palavrasChave || []).join(" ")].join(" "));
     });
 
     function apply(resetPage) {
