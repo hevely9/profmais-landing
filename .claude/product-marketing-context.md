@@ -68,6 +68,16 @@ Fonte: **Inter** (títulos 800–900, texto 500–700).
 Arquivos: `assets/logo-horizontal.png` (fundo claro), `assets/logo-horizontal-light.png` (fundo escuro/laranja),
 `assets/mascote.png` (personagem da marca), `assets/pattern-modular.png` (textura).
 
+## Dois tipos de vídeo (defina antes de roteirizar)
+| Tipo | Objetivo | Público | Marca no vídeo | CTA |
+|---|---|---|---|---|
+| **Público / autoridade** | alcance, seguidores, ser referência em educação | qualquer pessoa curiosa: alunos, pais, professores | discreta: `@profmais` pequeno + identidade da série | comentar, seguir para o próximo episódio, compartilhar |
+| **Prof+ / venda** | contatos no WhatsApp | professores | logo, cores e oferta | link na bio / WhatsApp |
+
+Vídeos de público **não** precisam falar da Prof+ nem ter ângulo de professor. Exemplo: a série
+**"A História dos Números"** (Ep.01 · O Zero). Ainda assim: fatos corretos (é uma marca de educação),
+`@profmais` visível e convite para seguir.
+
 ## Pilares de conteúdo do Instagram (ponto de partida)
 | Pilar | % | Exemplos |
 |---|---|---|

@@ -220,11 +220,14 @@ function encoderDeCena(out, dur) {
     const vol = cfg.volume_musica ?? 0.15;
     run('ffmpeg', ['-y', '-loglevel', 'error', '-i', juntado, '-stream_loop', '-1', '-i', musica,
       '-filter_complex', `[1:a]volume=${vol}[m];[0:a][m]amix=inputs=2:duration=first:normalize=0[a]`,
-      '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', final]);
+      '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', final + '.tmp.mp4']);
+    fs.renameSync(final + '.tmp.mp4', juntado);
   } else {
     if (musica) console.warn(`⚠ música não encontrada: ${musica}`);
-    run('ffmpeg', ['-y', '-loglevel', 'error', '-i', juntado, '-c', 'copy', '-movflags', '+faststart', final]);
   }
+  // volume no padrão dos Reels (~ -14 LUFS): vídeo baixo passa despercebido no feed
+  run('ffmpeg', ['-y', '-loglevel', 'error', '-i', juntado, '-c:v', 'copy', '-af', `loudnorm=I=${cfg.loudness ?? -14}:TP=-1.5:LRA=11`,
+    '-c:a', 'aac', '-b:a', '160k', '-ar', '44100', '-movflags', '+faststart', final]);
   fs.rmSync(tmp, { recursive: true, force: true });
 
   const dur = duracaoAudio(final);

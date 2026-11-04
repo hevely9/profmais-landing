@@ -1,0 +1,81 @@
+{
+  "titulo": "O número que já foi proibido · Ep.01",
+  "fps": 30,
+  "motor_voz": "edge",
+  "voz": "pt-BR-AntonioNeural",
+  "velocidade_voz": "+20%",
+  "voz_elevenlabs": null,
+  "musica": null,
+  "pausa_entre_falas": 0.2,
+  "capa": {
+    "cena": 0,
+    "tempo": 0.8
+  },
+  "cenas": [
+    {
+      "arquivo": "cenas/01-gancho.html",
+      "duracao": 2.2,
+      "narracao": "Esse número já foi proibido."
+    },
+    {
+      "arquivo": "cenas/02-florenca.html",
+      "duracao": 2.2,
+      "narracao": "Em mil duzentos e noventa e nove, Florença proibiu esse número nos livros de contas."
+    },
+    {
+      "arquivo": "cenas/03-poder.html",
+      "duracao": 2.0,
+      "narracao": "Mas olha o poder dele."
+    },
+    {
+      "arquivo": "cenas/04-zeros.html",
+      "duracao": 2.2,
+      "narracao": "Tira os zeros de mil reais: sobra um."
+    },
+    {
+      "arquivo": "cenas/05-nada.html",
+      "duracao": 2.2,
+      "narracao": "Esse nada valia novecentos e noventa e nove."
+    },
+    {
+      "arquivo": "cenas/06-roma.html",
+      "duracao": 2.2,
+      "narracao": "Roma construiu um império sem ele. Tenta essa conta."
+    },
+    {
+      "arquivo": "cenas/07-india.html",
+      "duracao": 2.2,
+      "narracao": "Na Índia, no ano seiscentos e vinte e oito, Brahmagupta fez do nada um número."
+    },
+    {
+      "arquivo": "cenas/08-arabes.html",
+      "duracao": 2.2,
+      "narracao": "Os árabes chamaram de sifr. Virou cifra."
+    },
+    {
+      "arquivo": "cenas/09-fraude.html",
+      "duracao": 2.2,
+      "narracao": "Em Florença, um zero mal escrito virava seis."
+    },
+    {
+      "arquivo": "cenas/10-proibido.html",
+      "duracao": 2.2,
+      "narracao": "Fraude fácil. Por isso, proibido."
+    },
+    {
+      "arquivo": "cenas/11-hoje.html",
+      "duracao": 2.2,
+      "narracao": "Hoje, seu celular inteiro é zero e um."
+    },
+    {
+      "arquivo": "cenas/12-erro.html",
+      "duracao": 2.2,
+      "narracao": "Mas Brahmagupta errou: disse que zero dividido por zero dava zero."
+    },
+    {
+      "arquivo": "cenas/13-cta.html",
+      "duracao": 3.2,
+      "narracao": "E aí, quanto dá? Comenta. E segue a Prof Mais pro episódio dois."
+    }
+  ]
+}
