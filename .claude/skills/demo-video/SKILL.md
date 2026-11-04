@@ -65,7 +65,7 @@ Veja `references/design-reels.md` para ritmo, durações e receitas de cena.
 }
 ```
 - `duracao` em segundos. Com narração, a cena é esticada automaticamente se a fala for mais longa.
-- `voz`: `pt-BR-FranciscaNeural` (feminina, acolhedora; padrão), `pt-BR-ThalitaMultilingualNeural` (feminina, jovem) ou `pt-BR-AntonioNeural` (masculina).
+- `motor_voz`, `voz`, `voz_elevenlabs` e `ajustes_elevenlabs`: veja **Narração** abaixo.
 - `musica`: caminho para um MP3 **livre de direitos** (relativo à pasta do Reel). Na maioria dos casos é melhor deixar `null` e escolher um áudio em alta no próprio Instagram, o que ajuda o alcance.
 
 ### 5. Confira antes de renderizar (rápido)
@@ -89,14 +89,25 @@ e o texto passado pela skill `content-humanizer`.
 ## Narração (voz sintética, padrão da Prof+)
 Todo Reel leva narração. Escreva `narracao` em **todas** as cenas do `reel.json`.
 
-O script tenta duas coisas e entrega as duas:
-1. **Voz automática no MP4 (edge-tts)**: antes de renderizar, se `edge-tts` não existir, instale com
-   `pip install edge-tts`. O ambiente na nuvem já libera `speech.platform.bing.com`; o script usa o proxy sozinho.
-   Se mesmo assim falhar, o script avisa e gera o MP4 sem voz.
-2. **`saida/narracao.txt`** (sempre gerado): a fala de cada cena com o segundo em que ela começa. Serve para:
-   - **Instagram** → editor do Reel → **Texto** → digite a fala → **Texto para fala** → escolha a voz;
-   - **CapCut** → Texto → **Conversão de texto em fala** (tem as vozes virais).
-   Quando o MP4 sair sem voz, diga isso à usuária e entregue o `narracao.txt` junto.
+### Motores de voz (`"motor_voz"` no reel.json)
+| Motor | Qualidade | Custo | Configuração |
+|---|---|---|---|
+| `"elevenlabs"` | **mais humana** (respiração, emoção), o preferido da usuária | plano pago para uso comercial | `voz_elevenlabs` = ID da voz; chave da API no ambiente |
+| `"edge"` | boa, mais "locutor de GPS" | grátis | `voz` = `pt-BR-AntonioNeural`, `pt-BR-FranciscaNeural`, `pt-BR-ThalitaMultilingualNeural`; precisa de `pip install edge-tts` |
+
+**Prefira `elevenlabs`** quando a chave estiver configurada (teste: `curl -s -o /dev/null -w "%{http_code}" https://api.elevenlabs.io/v1/voices -H "xi-api-key: $ELEVENLABS_API_KEY"` → 200).
+Se falhar, avise a usuária e use `edge` (Antonio, `velocidade_voz` +15%) ou entregue sem voz.
+
+ElevenLabs:
+- A chave fica em `ELEVENLABS_API_KEY` (variável de ambiente) ou como segredo de rede do ambiente para `api.elevenlabs.io`. **Nunca peça para colar a chave no chat.**
+- `voz_elevenlabs` é o **Voice ID** (copiado na Voice Library do site). Para listar as vozes da conta:
+  `curl -s https://api.elevenlabs.io/v1/voices -H "xi-api-key: $ELEVENLABS_API_KEY"`.
+- `ajustes_elevenlabs`: `estabilidade` (0.3–0.5 = mais emoção), `estilo` (0.2–0.5 = mais teatral), `velocidade` (1.0–1.15 para Reel).
+- O script manda o texto das cenas vizinhas como contexto, então a entonação sai contínua, como uma fala única.
+- Cada caractere consome crédito: um Reel de 20s gasta cerca de 300 caracteres.
+
+Se nenhuma voz funcionar, o MP4 sai sem voz e o **`saida/narracao.txt`** (sempre gerado) traz a fala de cada cena
+com o segundo em que começa, para colar no "Texto para fala" do Instagram ou do CapCut.
 
 Boas práticas da narração:
 - A 1ª frase **é** o gancho, dita em até 2s.

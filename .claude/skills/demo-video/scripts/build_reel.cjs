@@ -12,7 +12,8 @@
  *   previa-NN.png  (só com --previa) um quadro do meio de cada cena
  *
  * Requisitos: Node + Playwright (Chromium) e ffmpeg/ffprobe no PATH.
- * Narração (padrão da Prof+): edge-tts (pip install edge-tts) coloca a voz sintética no MP4.
+ * Narração (padrão da Prof+): "motor_voz": "elevenlabs" (voz mais humana, precisa de chave) ou
+ * "edge" (edge-tts, grátis: pip install edge-tts). A voz entra direto no MP4.
  * Sem edge-tts, ou se a rede bloquear, o MP4 sai sem voz e saida/narracao.txt traz a fala
  * de cada cena com o tempo, para usar no 'Texto para fala' do Instagram ou do CapCut.
  *
@@ -55,26 +56,69 @@ function run(cmd, a, opts = {}) {
 }
 const duracaoAudio = f => parseFloat(run('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', f]));
 
-// ── 1. Narração (opcional) ────────────────────────────────────────────────
-const voz = cfg.voz || null;
-let ttsOk = !PREVIA && !!voz && cfg.cenas.some(c => c.narracao) && spawnSync('edge-tts', ['--help'], { stdio: 'ignore' }).status === 0;
-if (!PREVIA && voz && !ttsOk) console.warn('⚠ edge-tts indisponível: o vídeo sai sem narração (legendas na tela continuam).');
+// ── 1. Narração ───────────────────────────────────────────────────────────
+// motor_voz: "elevenlabs" (voz mais humana; precisa de chave) ou "edge" (grátis, Microsoft)
+const MOTOR = cfg.motor_voz || 'edge';
+const voz = MOTOR === 'elevenlabs' ? (cfg.voz_elevenlabs || null) : (cfg.voz || null);
+const temFala = cfg.cenas.some(c => c.narracao);
+let ttsOk = !PREVIA && !!voz && temFala;
+if (ttsOk && MOTOR === 'edge' && spawnSync('edge-tts', ['--help'], { stdio: 'ignore' }).status !== 0) {
+  console.warn('⚠ edge-tts não instalado (pip install edge-tts): o vídeo sai sem narração.'); ttsOk = false;
+}
+if (!PREVIA && temFala && !voz) console.warn(`⚠ nenhuma voz definida para o motor "${MOTOR}": o vídeo sai sem narração.`);
 
-cfg.cenas.forEach((c, i) => {
-  c._dur = c.duracao || 3;
-  if (!ttsOk || !c.narracao) return;
-  const mp3 = path.join(tmp, `voz-${i}.mp3`);
+function falaEdge(c, mp3) {
   const a = ['--voice', voz, '--text', c.narracao, '--write-media', mp3];
   if (cfg.velocidade_voz) a.push(`--rate=${cfg.velocidade_voz}`);
   const proxy = process.env.HTTPS_PROXY || process.env.https_proxy;
   if (proxy) a.push('--proxy', proxy);
   const r = spawnSync('edge-tts', a, { encoding: 'utf8' });
-  if (r.status !== 0 || !fs.existsSync(mp3) || fs.statSync(mp3).size === 0) {
-    console.warn('⚠ edge-tts falhou (rede bloqueada?). Seguindo sem narração.');
+  return r.status === 0 ? null : (r.stderr || '').trim().split('\n').pop();
+}
+
+function falaElevenLabs(c, mp3, i) {
+  // Chave: variável ELEVENLABS_API_KEY ou segredo de rede injetado pelo proxy para api.elevenlabs.io
+  const ajustes = cfg.ajustes_elevenlabs || {};
+  const corpo = {
+    text: c.narracao,
+    model_id: cfg.modelo_elevenlabs || 'eleven_multilingual_v2',
+    language_code: 'pt',
+    // contexto das cenas vizinhas: a entonação fica contínua, como uma fala só
+    previous_text: cfg.cenas.slice(0, i).map(x => x.narracao || '').join(' ').slice(-500) || undefined,
+    next_text: cfg.cenas.slice(i + 1).map(x => x.narracao || '').join(' ').slice(0, 500) || undefined,
+    voice_settings: {
+      stability: ajustes.estabilidade ?? 0.4,          // menor = mais emoção e variação
+      similarity_boost: ajustes.similaridade ?? 0.8,
+      style: ajustes.estilo ?? 0.35,                   // maior = mais teatral
+      use_speaker_boost: true,
+      speed: ajustes.velocidade ?? 1.05,               // 0.7 a 1.2
+    },
+  };
+  const json = path.join(tmp, `voz-${i}.json`);
+  fs.writeFileSync(json, JSON.stringify(corpo));
+  const a = ['-sS', '-X', 'POST', `https://api.elevenlabs.io/v1/text-to-speech/${encodeURIComponent(voz)}?output_format=mp3_44100_128`,
+    '-H', 'Content-Type: application/json', '--data-binary', `@${json}`, '-o', mp3, '-w', '%{http_code}'];
+  if (process.env.ELEVENLABS_API_KEY) a.push('-H', `xi-api-key: ${process.env.ELEVENLABS_API_KEY}`);
+  const r = spawnSync('curl', a, { encoding: 'utf8' });
+  const code = (r.stdout || '').trim();
+  if (code === '200') return null;
+  let msg = '';
+  try { msg = fs.readFileSync(mp3, 'utf8').slice(0, 300); } catch {}
+  fs.rmSync(mp3, { force: true });
+  return `HTTP ${code || '?'} ${msg || (r.stderr || '').trim()}`;
+}
+
+cfg.cenas.forEach((c, i) => {
+  c._dur = c.duracao || 3;
+  if (!ttsOk || !c.narracao) return;
+  const mp3 = path.join(tmp, `voz-${i}.mp3`);
+  const erro = MOTOR === 'elevenlabs' ? falaElevenLabs(c, mp3, i) : falaEdge(c, mp3);
+  if (erro || !fs.existsSync(mp3) || fs.statSync(mp3).size === 0) {
+    console.warn(`⚠ narração (${MOTOR}) falhou: ${erro || 'áudio vazio'}. Seguindo sem narração.`);
     ttsOk = false; return;
   }
   c._audio = mp3;
-  c._dur = Math.max(c._dur, duracaoAudio(mp3) + 0.4);
+  c._dur = Math.max(c._dur, duracaoAudio(mp3) + (cfg.pausa_entre_falas ?? 0.3));
 });
 if (!ttsOk) cfg.cenas.forEach(c => delete c._audio);
 

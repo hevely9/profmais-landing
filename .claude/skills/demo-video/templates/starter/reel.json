@@ -1,16 +1,47 @@
 {
   "titulo": "Domingo de novo planejando aula?",
   "fps": 30,
+  "motor_voz": "edge",
+  "voz_elevenlabs": null,
+  "ajustes_elevenlabs": {
+    "estabilidade": 0.4,
+    "similaridade": 0.8,
+    "estilo": 0.35,
+    "velocidade": 1.05
+  },
   "voz": "pt-BR-FranciscaNeural",
   "velocidade_voz": "+8%",
   "musica": null,
   "volume_musica": 0.15,
-  "capa": { "cena": 0, "tempo": 1.5 },
+  "capa": {
+    "cena": 0,
+    "tempo": 1.5
+  },
   "cenas": [
-    { "arquivo": "cenas/01-gancho.html",   "duracao": 2.8, "narracao": "Domingo de novo planejando aula?" },
-    { "arquivo": "cenas/02-problema.html", "duracao": 4.5, "narracao": "São de seis a dez horas por semana só preparando material." },
-    { "arquivo": "cenas/03-solucao.html",  "duracao": 5.0, "narracao": "Você manda o plano de curso e o livro. A gente devolve a sequência didática pronta, em até três dias." },
-    { "arquivo": "cenas/04-prova.html",    "duracao": 3.5, "narracao": "Feita por professores, para a sua turma." },
-    { "arquivo": "cenas/05-cta.html",      "duracao": 3.5, "narracao": "Peça o seu na Prof Mais pelo WhatsApp. O link está na bio." }
+    {
+      "arquivo": "cenas/01-gancho.html",
+      "duracao": 2.8,
+      "narracao": "Domingo de novo planejando aula?"
+    },
+    {
+      "arquivo": "cenas/02-problema.html",
+      "duracao": 4.5,
+      "narracao": "São de seis a dez horas por semana só preparando material."
+    },
+    {
+      "arquivo": "cenas/03-solucao.html",
+      "duracao": 5.0,
+      "narracao": "Você manda o plano de curso e o livro. A gente devolve a sequência didática pronta, em até três dias."
+    },
+    {
+      "arquivo": "cenas/04-prova.html",
+      "duracao": 3.5,
+      "narracao": "Feita por professores, para a sua turma."
+    },
+    {
+      "arquivo": "cenas/05-cta.html",
+      "duracao": 3.5,
+      "narracao": "Peça o seu na Prof Mais pelo WhatsApp. O link está na bio."
+    }
   ]
 }
