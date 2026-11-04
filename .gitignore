@@ -1,2 +1,3 @@
 # Reels gerados (vídeos e quadros temporários não vão para o git)
 _reels/*/saida/
+__pycache__/
