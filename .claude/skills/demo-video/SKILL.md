@@ -90,8 +90,9 @@ e o texto passado pela skill `content-humanizer`.
 Todo Reel leva narração. Escreva `narracao` em **todas** as cenas do `reel.json`.
 
 O script tenta duas coisas e entrega as duas:
-1. **Voz automática no MP4 (edge-tts)**: funciona no computador da usuária (`pip install edge-tts`).
-   Na sessão na nuvem do Claude Code a rede bloqueia o servidor de voz: o script avisa e gera o MP4 sem voz.
+1. **Voz automática no MP4 (edge-tts)**: antes de renderizar, se `edge-tts` não existir, instale com
+   `pip install edge-tts`. O ambiente na nuvem já libera `speech.platform.bing.com`; o script usa o proxy sozinho.
+   Se mesmo assim falhar, o script avisa e gera o MP4 sem voz.
 2. **`saida/narracao.txt`** (sempre gerado): a fala de cada cena com o segundo em que ela começa. Serve para:
    - **Instagram** → editor do Reel → **Texto** → digite a fala → **Texto para fala** → escolha a voz;
    - **CapCut** → Texto → **Conversão de texto em fala** (tem as vozes virais).
