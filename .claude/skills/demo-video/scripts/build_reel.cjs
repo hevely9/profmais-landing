@@ -35,11 +35,15 @@ catch { console.error('Playwright não encontrado. Instale com: npm i -D playwri
 const W = 1080, H = 1920;
 const args = process.argv.slice(2);
 const dir = args.find(a => !a.startsWith('--'));
-const PREVIA = args.includes('--previa');
+const PREVIA = args.includes('--previa') || args.some(a => a.startsWith('--quadros='));
+// --config=outro.json: variações do mesmo Reel (ex.: sem legenda). --quadros=1.5,10,22: prévias em segundos do vídeo
+const CONFIG = (args.find(a => a.startsWith('--config=')) || '--config=reel.json').split('=')[1];
+const QUADROS = (args.find(a => a.startsWith('--quadros=')) || '').split('=')[1];
 if (!dir) { console.error('Uso: node build_reel.cjs <pasta-do-reel> [--previa]'); process.exit(1); }
 
 const raiz = path.resolve(dir);
-const cfg = JSON.parse(fs.readFileSync(path.join(raiz, 'reel.json'), 'utf8'));
+const cfg = JSON.parse(fs.readFileSync(path.join(raiz, CONFIG), 'utf8'));
+const NOME_MP4 = cfg.saida || 'reel.mp4', NOME_CAPA = cfg.saida_capa || 'capa.jpg';
 const FPS = cfg.fps || 30;
 const saida = path.join(raiz, 'saida');
 const tmp = path.join(saida, '.tmp');
@@ -163,6 +167,18 @@ function encoderDeCena(out, dur) {
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: W, height: H }, deviceScaleFactor: 1 });
 
+  if (QUADROS) {
+    let ini = 0; const faixas = cfg.cenas.map(c => { const r = [ini, ini + c._dur, c]; ini += c._dur; return r; });
+    for (const t of QUADROS.split(',').map(Number)) {
+      const [a, , c] = faixas.find(([a, b]) => t >= a && t < b) || faixas[faixas.length - 1];
+      await abrir(page, c.arquivo);
+      await page.evaluate(`(${SEEK})(${Math.round((t - a) * 1000)})`);
+      const f = path.join(saida, `quadro-${t.toFixed(1).padStart(5, '0')}s.png`);
+      await page.screenshot({ path: f });
+      console.log('✓', path.relative(process.cwd(), f));
+    }
+    await browser.close(); fs.rmSync(tmp, { recursive: true, force: true }); return;
+  }
   if (PREVIA) {
     for (const [i, c] of cfg.cenas.entries()) {
       await abrir(page, c.arquivo);
@@ -203,7 +219,7 @@ function encoderDeCena(out, dur) {
   const capaCfg = cfg.capa || { cena: 0, tempo: 1.5 };
   await abrir(page, cfg.cenas[capaCfg.cena].arquivo);
   await page.evaluate(`(${SEEK})(${Math.round((capaCfg.tempo ?? 1.5) * 1000)})`);
-  await page.screenshot({ path: path.join(saida, 'capa.jpg'), type: 'jpeg', quality: 92 });
+  await page.screenshot({ path: path.join(saida, NOME_CAPA), type: 'jpeg', quality: 92 });
   await browser.close();
 
   // ── 3. Concatena e (opcional) mistura música de fundo ───────────────────
@@ -214,7 +230,7 @@ function encoderDeCena(out, dur) {
 
   escreverNarracao();
 
-  const final = path.join(saida, 'reel.mp4');
+  const final = path.join(saida, NOME_MP4);
   const musica = cfg.musica ? path.resolve(raiz, cfg.musica) : null;
   if (musica && fs.existsSync(musica)) {
     const vol = cfg.volume_musica ?? 0.15;
@@ -233,7 +249,7 @@ function encoderDeCena(out, dur) {
   const dur = duracaoAudio(final);
   const mb = (fs.statSync(final).size / 1048576).toFixed(1);
   console.log(`\n✅ ${path.relative(process.cwd(), final)}  (${dur.toFixed(1)}s, ${mb} MB, ${W}x${H}, ${FPS}fps)`);
-  console.log(`   capa: ${path.relative(process.cwd(), path.join(saida, 'capa.jpg'))}`);
+  console.log(`   capa: ${path.relative(process.cwd(), path.join(saida, NOME_CAPA))}`);
   console.log(`   narração: ${path.relative(process.cwd(), path.join(saida, 'narracao.txt'))}${ttsOk ? '' : '  (voz não incluída no MP4)'}`);
   if (dur > 90) console.warn('⚠ Mais de 90s: o Instagram aceita, mas Reels curtos (15–45s) retêm muito melhor.');
 })().catch(e => { console.error('✗', e.message); process.exit(1); });
