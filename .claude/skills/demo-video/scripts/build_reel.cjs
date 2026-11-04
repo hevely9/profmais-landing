@@ -12,9 +12,9 @@
  *   previa-NN.png  (só com --previa) um quadro do meio de cada cena
  *
  * Requisitos: Node + Playwright (Chromium) e ffmpeg/ffprobe no PATH.
- * Opcional: edge-tts (pip install edge-tts) para narração com voz sintética.
- * Sem edge-tts, ou se a rede bloquear, o vídeo sai sem narração: a legenda
- * fica na tela e o áudio é adicionado depois no app do Instagram.
+ * Narração (padrão da Prof+): edge-tts (pip install edge-tts) coloca a voz sintética no MP4.
+ * Sem edge-tts, ou se a rede bloquear, o MP4 sai sem voz e saida/narracao.txt traz a fala
+ * de cada cena com o tempo, para usar no 'Texto para fala' do Instagram ou do CapCut.
  *
  * As cenas são animadas SÓ com CSS (@keyframes / animation-delay). O script
  * pausa todas as animações e avança o relógio quadro a quadro, então o
@@ -78,6 +78,16 @@ cfg.cenas.forEach((c, i) => {
 });
 if (!ttsOk) cfg.cenas.forEach(c => delete c._audio);
 
+// roteiro de narração com tempos (para colar no 'Texto para fala' do Instagram/CapCut)
+function escreverNarracao() {
+  let t0 = 0;
+  const fmtT = s => `${Math.floor(s / 60)}:${(s % 60).toFixed(1).padStart(4, '0')}`;
+  const roteiro = cfg.cenas.map((c, i) => { const l = `[${fmtT(t0)}] Cena ${i + 1}: ${c.narracao || '(sem fala)'}`; t0 += c._dur; return l; });
+  fs.writeFileSync(path.join(saida, 'narracao.txt'),
+    `Narração: ${cfg.titulo || path.basename(raiz)}\nVoz sugerida: ${voz || '-'}${ttsOk ? ' (já está no MP4)' : ' (NÃO está no MP4: use o Texto para fala do Instagram ou do CapCut)'}\n\n${roteiro.join('\n')}\n`);
+
+}
+
 // ── 2. Render das cenas quadro a quadro ──────────────────────────────────
 const SEEK = `(ms) => {
   for (const a of document.getAnimations()) { a.pause(); a.currentTime = ms; }
@@ -117,6 +127,8 @@ function encoderDeCena(out, dur) {
       await page.screenshot({ path: f });
       console.log('✓', path.relative(process.cwd(), f));
     }
+    escreverNarracao();
+    console.log('✓', path.relative(process.cwd(), path.join(saida, 'narracao.txt')));
     await browser.close(); fs.rmSync(tmp, { recursive: true, force: true }); return;
   }
 
@@ -156,6 +168,8 @@ function encoderDeCena(out, dur) {
   const juntado = path.join(tmp, 'juntado.mp4');
   run('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', lista, '-c', 'copy', juntado]);
 
+  escreverNarracao();
+
   const final = path.join(saida, 'reel.mp4');
   const musica = cfg.musica ? path.resolve(raiz, cfg.musica) : null;
   if (musica && fs.existsSync(musica)) {
@@ -173,5 +187,6 @@ function encoderDeCena(out, dur) {
   const mb = (fs.statSync(final).size / 1048576).toFixed(1);
   console.log(`\n✅ ${path.relative(process.cwd(), final)}  (${dur.toFixed(1)}s, ${mb} MB, ${W}x${H}, ${FPS}fps)`);
   console.log(`   capa: ${path.relative(process.cwd(), path.join(saida, 'capa.jpg'))}`);
+  console.log(`   narração: ${path.relative(process.cwd(), path.join(saida, 'narracao.txt'))}${ttsOk ? '' : '  (voz não incluída no MP4)'}`);
   if (dur > 90) console.warn('⚠ Mais de 90s: o Instagram aceita, mas Reels curtos (15–45s) retêm muito melhor.');
 })().catch(e => { console.error('✗', e.message); process.exit(1); });

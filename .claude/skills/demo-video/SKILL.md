@@ -12,7 +12,7 @@ Você é um produtor de vídeo curto, não um montador de slides. Cada quadro te
 ## O que este pipeline faz (e o que não faz)
 - ✅ Vídeo **motion design**: texto animado, listas, cartões com material real, logo, mascote, chamada para ação.
 - ✅ Saída no padrão do Instagram: **1080×1920, 9:16, 30 fps, H.264 + AAC, faststart**, mais `capa.jpg`.
-- ✅ Narração por voz sintética (edge-tts) **quando disponível**.
+- ✅ **Narração com voz sintética** em pt-BR (formato padrão da Prof+): automática via edge-tts quando houver conexão, ou pelo roteiro `narracao.txt` para colar no "Texto para fala" do Instagram ou do CapCut.
 - ❌ Não filma pessoas nem gera vídeo realista com IA. Para isso, a professora grava no celular e
   este pipeline faz as cartelas de abertura e fechamento.
 
@@ -65,7 +65,7 @@ Veja `references/design-reels.md` para ritmo, durações e receitas de cena.
 }
 ```
 - `duracao` em segundos. Com narração, a cena é esticada automaticamente se a fala for mais longa.
-- `voz`: `pt-BR-FranciscaNeural` (feminina, acolhedora; padrão), `pt-BR-ThalitaMultilingualNeural` (feminina, jovem) ou `pt-BR-AntonioNeural` (masculina). Use `null` para vídeo sem voz.
+- `voz`: `pt-BR-FranciscaNeural` (feminina, acolhedora; padrão), `pt-BR-ThalitaMultilingualNeural` (feminina, jovem) ou `pt-BR-AntonioNeural` (masculina).
 - `musica`: caminho para um MP3 **livre de direitos** (relativo à pasta do Reel). Na maioria dos casos é melhor deixar `null` e escolher um áudio em alta no próprio Instagram, o que ajuda o alcance.
 
 ### 5. Confira antes de renderizar (rápido)
@@ -83,14 +83,26 @@ Leva cerca de 2s de processamento por segundo de vídeo. Depois **extraia alguns
 (`ffmpeg -i saida/reel.mp4 -vf "fps=1,scale=270:480,tile=8x1" -frames:v 1 folha.png`).
 
 ### 7. Entregue
-Envie `saida/reel.mp4` e `saida/capa.jpg` à usuária, junto com a **legenda do post** (skill `social-content`)
+Envie `saida/reel.mp4`, `saida/capa.jpg` e `saida/narracao.txt` à usuária, junto com a **legenda do post** (skill `social-content`)
 e o texto passado pela skill `content-humanizer`.
 
-## Narração e ambiente
-- O edge-tts precisa de internet (servidor da Microsoft). **Na sessão na nuvem do Claude Code ele é bloqueado pela rede**: o script avisa e gera o vídeo sem voz.
-- No computador da usuária: `pip install edge-tts` e rode o mesmo comando para ter narração.
-- ⚠ **Posicionamento**: a Prof+ vende "feito por professores, não por robô". Voz sintética pode soar robótica e contradizer isso. Ordem de preferência: voz real da equipe → texto na tela + áudio do Instagram → voz sintética. Lembre a usuária disso quando ela pedir narração.
-- Para usar voz gravada: grave um áudio por cena (`voz-01.m4a`...), converta para MP3 e use-o como `musica` com `volume_musica: 1.0`, ou peça para adaptar o script.
+## Narração (voz sintética, padrão da Prof+)
+Todo Reel leva narração. Escreva `narracao` em **todas** as cenas do `reel.json`.
+
+O script tenta duas coisas e entrega as duas:
+1. **Voz automática no MP4 (edge-tts)**: funciona no computador da usuária (`pip install edge-tts`).
+   Na sessão na nuvem do Claude Code a rede bloqueia o servidor de voz: o script avisa e gera o MP4 sem voz.
+2. **`saida/narracao.txt`** (sempre gerado): a fala de cada cena com o segundo em que ela começa. Serve para:
+   - **Instagram** → editor do Reel → **Texto** → digite a fala → **Texto para fala** → escolha a voz;
+   - **CapCut** → Texto → **Conversão de texto em fala** (tem as vozes virais).
+   Quando o MP4 sair sem voz, diga isso à usuária e entregue o `narracao.txt` junto.
+
+Boas práticas da narração:
+- A 1ª frase **é** o gancho, dita em até 2s.
+- Uma frase por cena, até ~12 palavras; a fala e o texto na tela dizem a mesma coisa (quem assiste sem som não perde nada).
+- Escreva para o ouvido: números por extenso, sem parênteses, sem emoji, pontuação marcando as pausas.
+- `velocidade_voz` entre `+8%` e `+15%` dá o ritmo de Reel viral.
+- Teste a pronúncia de "Prof+" (a voz pode ler "prof mais" ou "prof"): na narração escreva **"Prof Mais"**.
 
 ## Estruturas prontas
 | Formato | Duração | Sequência |
@@ -108,6 +120,7 @@ e o texto passado pela skill `content-humanizer`.
 - [ ] Pelo menos uma cena com **material real** ou prova verdadeira
 - [ ] CTA único e claro no fim (WhatsApp / link na bio / salvar / comentar)
 - [ ] Números conferidos com o arquivo de contexto (nada inventado)
+- [ ] Narração em todas as cenas; 1ª frase = gancho
 - [ ] Duração total 15–45s
 - [ ] `previa` conferida e quadros do MP4 conferidos
 

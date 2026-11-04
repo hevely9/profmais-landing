@@ -29,5 +29,5 @@ cp -r .claude/skills/demo-video/templates/starter _reels/meu-reel        # cria 
 node .claude/skills/demo-video/scripts/build_reel.cjs _reels/meu-reel --previa   # confere as cenas
 node .claude/skills/demo-video/scripts/build_reel.cjs _reels/meu-reel            # gera o MP4
 ```
-Requisitos: Node, Playwright e ffmpeg. Narração opcional com `pip install edge-tts` (precisa de internet;
-na sessão na nuvem do Claude Code essa conexão é bloqueada e o vídeo sai sem voz).
+Requisitos: Node, Playwright e ffmpeg. Narração com voz sintética via `pip install edge-tts` (precisa de internet;
+na sessão na nuvem essa conexão é bloqueada: o vídeo sai sem voz e o `saida/narracao.txt` traz a fala de cada cena para colar no "Texto para fala" do Instagram ou do CapCut).

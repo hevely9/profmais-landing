@@ -47,12 +47,13 @@ Confirme o número certo com a dona da marca antes de colocar em vídeo. **Nunca
 - Evitar: tom de urgência agressiva, promessas milagrosas, "hack", "segredo que ninguém conta",
   jargão de marketing, excesso de emoji (no máximo 1–3 por legenda).
 
-## ⚠ Tensão de posicionamento: IA
-A marca vende **"feito por professores, não por robô"**. Portanto:
-- Nunca diga ou sugira que o material é gerado por IA.
-- **Voz sintética** em Reel pode soar "robô" e contradizer a promessa. Prefira, nesta ordem:
-  1) voz real de alguém da equipe; 2) só texto na tela + áudio em alta do Instagram; 3) voz sintética.
-- Rostos e bastidores reais (mãos digitando, material impresso, a mesa de trabalho) valem mais que arte genérica.
+## Formato de vídeo escolhido: narração com voz sintética
+Decisão da marca: os Reels usam **voz sintética de narrador** (formato viral) + texto grande na tela.
+- Voz padrão: `pt-BR-FranciscaNeural` (feminina, acolhedora), ritmo um pouco acelerado (+8% a +15%).
+- Narração curta e falada: frases de até ~12 palavras, uma por cena, com o gancho logo na 1ª frase.
+- O texto da narração é escrito para ser **ouvido**: números por extenso ("seis a dez horas"), sem siglas soletradas estranhas (escreva "bê-ene-cê-cê" só se a voz ler errado).
+- A promessa "feito por professores, não por robô" vale para o **material**: nunca diga ou sugira que o material pedagógico é gerado por IA.
+- Material real na tela (exemplares, bastidores) continua valendo mais que arte genérica.
 
 ## Identidade visual
 | Token | Cor | Uso |

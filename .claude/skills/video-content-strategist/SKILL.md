@@ -13,7 +13,7 @@ entende a rotina dela confia mais do que em dez posts estáticos.
 
 ## Perguntas iniciais (só as que faltarem, todas de uma vez)
 1. Objetivo do vídeo: alcance (novos seguidores), confiança (prova) ou venda (WhatsApp)?
-2. Formato possível: só texto na tela (gerado pelo `demo-video`), professora gravando no celular, ou os dois?
+2. Formato: padrão é texto na tela + **narração com voz sintética** (gerado pelo `demo-video`). Vai ter gravação com celular também?
 3. Tem algum material, depoimento ou bastidor real para mostrar?
 4. Há data ou campanha (volta às aulas, fim de bimestre, semana de provas)?
 
@@ -71,7 +71,7 @@ Regra: o gancho fala de **uma** professora, numa **situação** específica, com
 - **Mais de uma ideia por vídeo** → divida em dois Reels.
 - **Promoção em mais de 20% dos vídeos do plano** → reequilibre com dicas e identificação.
 - **Número ou depoimento sem fonte** → peça confirmação; nunca invente.
-- **Narração com voz sintética** → lembre a tensão com "feito por professores, não por robô".
+- **Roteiro sem narração** → todo Reel da Prof+ leva voz sintética de narrador: escreva a fala de cada cena, para o ouvido (números por extenso, frases curtas, "Prof Mais").
 - **Plano impossível de manter** (ex.: 1 Reel por dia sozinha) → reduza e proponha produção em lote.
 
 ## Formato da resposta
