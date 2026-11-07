@@ -1,0 +1,2050 @@
+{
+ "fps": 30,
+ "bpm": 110,
+ "beat": 16.363636363636363,
+ "total": 1058,
+ "encerramento": 998,
+ "cortes": [
+  0,
+  131,
+  229,
+  376,
+  491,
+  605,
+  785,
+  916,
+  998
+ ],
+ "frases": [
+  {
+   "n": 1,
+   "inicio": 0.3,
+   "fim": 4.407,
+   "toks": [
+    {
+     "mostra": "SEU",
+     "falado": "seu",
+     "chave": false,
+     "t0": 0.3,
+     "t1": 0.479
+    },
+    {
+     "mostra": "ALUNO",
+     "falado": "aluno",
+     "chave": false,
+     "t0": 0.479,
+     "t1": 1.014
+    },
+    {
+     "mostra": "ESQUECE",
+     "falado": "esquece",
+     "chave": false,
+     "t0": 1.014,
+     "t1": 1.55
+    },
+    {
+     "mostra": "MAIS",
+     "falado": "mais",
+     "chave": false,
+     "t0": 1.55,
+     "t1": 1.729
+    },
+    {
+     "mostra": "DA",
+     "falado": "da",
+     "chave": false,
+     "t0": 1.729,
+     "t1": 1.907
+    },
+    {
+     "mostra": "METADE",
+     "falado": "metade",
+     "chave": true,
+     "t0": 1.907,
+     "t1": 2.443
+    },
+    {
+     "mostra": "DA",
+     "falado": "da",
+     "chave": false,
+     "t0": 2.443,
+     "t1": 2.621
+    },
+    {
+     "mostra": "AULA",
+     "falado": "aula",
+     "chave": false,
+     "t0": 2.621,
+     "t1": 2.979
+    },
+    {
+     "mostra": "EM",
+     "falado": "em",
+     "chave": false,
+     "t0": 2.979,
+     "t1": 3.157
+    },
+    {
+     "mostra": "24",
+     "falado": "vinte e quatro",
+     "chave": false,
+     "t0": 3.157,
+     "t1": 4.05
+    },
+    {
+     "mostra": "HORAS.",
+     "falado": "horas",
+     "chave": false,
+     "t0": 4.05,
+     "t1": 4.407
+    }
+   ],
+   "texto": "SEU ALUNO ESQUECE MAIS DA METADE DA AULA EM 24 HORAS."
+  },
+  {
+   "n": 2,
+   "inicio": 4.907,
+   "fim": 7.529,
+   "toks": [
+    {
+     "mostra": "ISSO",
+     "falado": "isso",
+     "chave": false,
+     "t0": 4.907,
+     "t1": 5.264
+    },
+    {
+     "mostra": "TEM",
+     "falado": "tem",
+     "chave": false,
+     "t0": 5.264,
+     "t1": 5.443
+    },
+    {
+     "mostra": "NOME:",
+     "falado": "nome:",
+     "chave": false,
+     "t0": 5.443,
+     "t1": 5.8
+    },
+    {
+     "mostra": "CURVA",
+     "falado": "curva",
+     "chave": false,
+     "t0": 6.1,
+     "t1": 6.457
+    },
+    {
+     "mostra": "DO",
+     "falado": "do",
+     "chave": false,
+     "t0": 6.457,
+     "t1": 6.636
+    },
+    {
+     "mostra": "ESQUECIMENTO.",
+     "falado": "esquecimento",
+     "chave": true,
+     "t0": 6.636,
+     "t1": 7.529
+    }
+   ],
+   "texto": "ISSO TEM NOME: CURVA DO ESQUECIMENTO."
+  },
+  {
+   "n": 3,
+   "inicio": 8.029,
+   "fim": 12.534,
+   "toks": [
+    {
+     "mostra": "FOI",
+     "falado": "foi",
+     "chave": false,
+     "t0": 8.029,
+     "t1": 8.207
+    },
+    {
+     "mostra": "DESCOBERTA",
+     "falado": "descoberta",
+     "chave": false,
+     "t0": 8.207,
+     "t1": 8.921
+    },
+    {
+     "mostra": "POR",
+     "falado": "por",
+     "chave": false,
+     "t0": 8.921,
+     "t1": 9.1
+    },
+    {
+     "mostra": "HERMANN",
+     "falado": "hermann",
+     "chave": false,
+     "t0": 9.1,
+     "t1": 9.457
+    },
+    {
+     "mostra": "EBBINGHAUS,",
+     "falado": "ebbinghaus,",
+     "chave": false,
+     "t0": 9.457,
+     "t1": 9.993
+    },
+    {
+     "mostra": "EM",
+     "falado": "em",
+     "chave": false,
+     "t0": 10.213,
+     "t1": 10.391
+    },
+    {
+     "mostra": "1885",
+     "falado": "mil oitocentos e oitenta e cinco",
+     "chave": true,
+     "t0": 10.391,
+     "t1": 12.534
+    }
+   ],
+   "texto": "FOI DESCOBERTA POR HERMANN EBBINGHAUS, EM 1885"
+  },
+  {
+   "n": 4,
+   "inicio": 13.034,
+   "fim": 16.111,
+   "toks": [
+    {
+     "mostra": "SEM",
+     "falado": "sem",
+     "chave": false,
+     "t0": 13.034,
+     "t1": 13.213
+    },
+    {
+     "mostra": "REVISÃO,",
+     "falado": "revisão,",
+     "chave": false,
+     "t0": 13.213,
+     "t1": 13.749
+    },
+    {
+     "mostra": "A",
+     "falado": "a",
+     "chave": false,
+     "t0": 13.969,
+     "t1": 14.147
+    },
+    {
+     "mostra": "MEMÓRIA",
+     "falado": "memória",
+     "chave": false,
+     "t0": 14.147,
+     "t1": 14.683
+    },
+    {
+     "mostra": "DESPENCA",
+     "falado": "despenca",
+     "chave": true,
+     "t0": 14.683,
+     "t1": 15.219
+    },
+    {
+     "mostra": "NOS",
+     "falado": "nos",
+     "chave": false,
+     "t0": 15.219,
+     "t1": 15.397
+    },
+    {
+     "mostra": "PRIMEIROS",
+     "falado": "primeiros",
+     "chave": false,
+     "t0": 15.397,
+     "t1": 15.933
+    },
+    {
+     "mostra": "DIAS.",
+     "falado": "dias",
+     "chave": false,
+     "t0": 15.933,
+     "t1": 16.111
+    }
+   ],
+   "texto": "SEM REVISÃO, A MEMÓRIA DESPENCA NOS PRIMEIROS DIAS."
+  },
+  {
+   "n": 5,
+   "inicio": 16.611,
+   "fim": 20.183,
+   "toks": [
+    {
+     "mostra": "MAS",
+     "falado": "mas",
+     "chave": false,
+     "t0": 16.611,
+     "t1": 16.79
+    },
+    {
+     "mostra": "CADA",
+     "falado": "cada",
+     "chave": false,
+     "t0": 16.79,
+     "t1": 17.147
+    },
+    {
+     "mostra": "REVISÃO",
+     "falado": "revisão",
+     "chave": true,
+     "t0": 17.147,
+     "t1": 17.683
+    },
+    {
+     "mostra": "NO",
+     "falado": "no",
+     "chave": false,
+     "t0": 17.683,
+     "t1": 17.861
+    },
+    {
+     "mostra": "TEMPO",
+     "falado": "tempo",
+     "chave": false,
+     "t0": 17.861,
+     "t1": 18.219
+    },
+    {
+     "mostra": "CERTO",
+     "falado": "certo",
+     "chave": false,
+     "t0": 18.219,
+     "t1": 18.576
+    },
+    {
+     "mostra": "FAZ",
+     "falado": "faz",
+     "chave": false,
+     "t0": 18.576,
+     "t1": 18.754
+    },
+    {
+     "mostra": "A",
+     "falado": "a",
+     "chave": false,
+     "t0": 18.754,
+     "t1": 18.933
+    },
+    {
+     "mostra": "CURVA",
+     "falado": "curva",
+     "chave": false,
+     "t0": 18.933,
+     "t1": 19.29
+    },
+    {
+     "mostra": "CAIR",
+     "falado": "cair",
+     "chave": false,
+     "t0": 19.29,
+     "t1": 19.469
+    },
+    {
+     "mostra": "MAIS",
+     "falado": "mais",
+     "chave": false,
+     "t0": 19.469,
+     "t1": 19.647
+    },
+    {
+     "mostra": "DEVAGAR.",
+     "falado": "devagar",
+     "chave": false,
+     "t0": 19.647,
+     "t1": 20.183
+    }
+   ],
+   "texto": "MAS CADA REVISÃO NO TEMPO CERTO FAZ A CURVA CAIR MAIS DEVAGAR."
+  },
+  {
+   "n": 6,
+   "inicio": 20.683,
+   "fim": 25.861,
+   "toks": [
+    {
+     "mostra": "POR",
+     "falado": "por",
+     "chave": false,
+     "t0": 20.683,
+     "t1": 20.861
+    },
+    {
+     "mostra": "ISSO",
+     "falado": "isso",
+     "chave": false,
+     "t0": 20.861,
+     "t1": 21.219
+    },
+    {
+     "mostra": "REVISAR",
+     "falado": "revisar",
+     "chave": false,
+     "t0": 21.219,
+     "t1": 21.754
+    },
+    {
+     "mostra": "NA",
+     "falado": "na",
+     "chave": false,
+     "t0": 21.754,
+     "t1": 21.933
+    },
+    {
+     "mostra": "AULA",
+     "falado": "aula",
+     "chave": true,
+     "t0": 21.933,
+     "t1": 22.29
+    },
+    {
+     "mostra": "SEGUINTE",
+     "falado": "seguinte",
+     "chave": true,
+     "t0": 22.29,
+     "t1": 22.826
+    },
+    {
+     "mostra": "VALE",
+     "falado": "vale",
+     "chave": false,
+     "t0": 22.826,
+     "t1": 23.183
+    },
+    {
+     "mostra": "MAIS",
+     "falado": "mais",
+     "chave": false,
+     "t0": 23.183,
+     "t1": 23.361
+    },
+    {
+     "mostra": "QUE",
+     "falado": "que",
+     "chave": false,
+     "t0": 23.361,
+     "t1": 23.54
+    },
+    {
+     "mostra": "UMA",
+     "falado": "uma",
+     "chave": false,
+     "t0": 23.54,
+     "t1": 23.897
+    },
+    {
+     "mostra": "REVISÃO",
+     "falado": "revisão",
+     "chave": false,
+     "t0": 23.897,
+     "t1": 24.433
+    },
+    {
+     "mostra": "GIGANTE",
+     "falado": "gigante",
+     "chave": false,
+     "t0": 24.433,
+     "t1": 24.969
+    },
+    {
+     "mostra": "ANTES",
+     "falado": "antes",
+     "chave": false,
+     "t0": 24.969,
+     "t1": 25.326
+    },
+    {
+     "mostra": "DA",
+     "falado": "da",
+     "chave": false,
+     "t0": 25.326,
+     "t1": 25.504
+    },
+    {
+     "mostra": "PROVA.",
+     "falado": "prova",
+     "chave": false,
+     "t0": 25.504,
+     "t1": 25.861
+    }
+   ],
+   "texto": "POR ISSO REVISAR NA AULA SEGUINTE VALE MAIS QUE UMA REVISÃO GIGANTE ANTES DA PROVA."
+  },
+  {
+   "n": 7,
+   "inicio": 26.361,
+   "fim": 30.469,
+   "toks": [
+    {
+     "mostra": "NO",
+     "falado": "no",
+     "chave": false,
+     "t0": 26.361,
+     "t1": 26.54
+    },
+    {
+     "mostra": "PROF+",
+     "falado": "prof mais,",
+     "chave": true,
+     "t0": 26.54,
+     "t1": 26.897
+    },
+    {
+     "mostra": "A",
+     "falado": "a",
+     "chave": false,
+     "t0": 26.897,
+     "t1": 27.076
+    },
+    {
+     "mostra": "SUA",
+     "falado": "sua",
+     "chave": false,
+     "t0": 27.076,
+     "t1": 27.254
+    },
+    {
+     "mostra": "SEQUÊNCIA",
+     "falado": "sequência",
+     "chave": false,
+     "t0": 27.254,
+     "t1": 27.79
+    },
+    {
+     "mostra": "DIDÁTICA",
+     "falado": "didática",
+     "chave": false,
+     "t0": 27.79,
+     "t1": 28.504
+    },
+    {
+     "mostra": "JÁ",
+     "falado": "já",
+     "chave": false,
+     "t0": 28.504,
+     "t1": 28.683
+    },
+    {
+     "mostra": "VEM",
+     "falado": "vem",
+     "chave": false,
+     "t0": 28.683,
+     "t1": 28.861
+    },
+    {
+     "mostra": "COM",
+     "falado": "com",
+     "chave": false,
+     "t0": 28.861,
+     "t1": 29.04
+    },
+    {
+     "mostra": "AS",
+     "falado": "as",
+     "chave": false,
+     "t0": 29.04,
+     "t1": 29.219
+    },
+    {
+     "mostra": "REVISÕES",
+     "falado": "revisões",
+     "chave": false,
+     "t0": 29.219,
+     "t1": 29.754
+    },
+    {
+     "mostra": "PLANEJADAS.",
+     "falado": "planejadas",
+     "chave": false,
+     "t0": 29.754,
+     "t1": 30.469
+    }
+   ],
+   "texto": "NO PROF+ A SUA SEQUÊNCIA DIDÁTICA JÁ VEM COM AS REVISÕES PLANEJADAS."
+  },
+  {
+   "n": 8,
+   "inicio": 30.969,
+   "fim": 32.933,
+   "toks": [
+    {
+     "mostra": "CHAMA",
+     "falado": "chama",
+     "chave": false,
+     "t0": 30.969,
+     "t1": 31.326
+    },
+    {
+     "mostra": "NO",
+     "falado": "no",
+     "chave": false,
+     "t0": 31.326,
+     "t1": 31.504
+    },
+    {
+     "mostra": "WHATSAPP",
+     "falado": "uótsápi",
+     "chave": true,
+     "t0": 31.504,
+     "t1": 32.04
+    },
+    {
+     "mostra": "PELO",
+     "falado": "pelo",
+     "chave": false,
+     "t0": 32.04,
+     "t1": 32.397
+    },
+    {
+     "mostra": "LINK",
+     "falado": "link",
+     "chave": false,
+     "t0": 32.397,
+     "t1": 32.576
+    },
+    {
+     "mostra": "DA",
+     "falado": "da",
+     "chave": false,
+     "t0": 32.576,
+     "t1": 32.754
+    },
+    {
+     "mostra": "BIO.",
+     "falado": "bio",
+     "chave": false,
+     "t0": 32.754,
+     "t1": 32.933
+    }
+   ],
+   "texto": "CHAMA NO WHATSAPP PELO LINK DA BIO."
+  }
+ ],
+ "paginas": [
+  {
+   "frase": 1,
+   "toks": [
+    {
+     "mostra": "SEU",
+     "falado": "seu",
+     "chave": false,
+     "t0": 0.3,
+     "t1": 0.479
+    },
+    {
+     "mostra": "ALUNO",
+     "falado": "aluno",
+     "chave": false,
+     "t0": 0.479,
+     "t1": 1.014
+    },
+    {
+     "mostra": "ESQUECE",
+     "falado": "esquece",
+     "chave": false,
+     "t0": 1.014,
+     "t1": 1.55
+    }
+   ],
+   "de": 0,
+   "ate": 45
+  },
+  {
+   "frase": 1,
+   "toks": [
+    {
+     "mostra": "MAIS",
+     "falado": "mais",
+     "chave": false,
+     "t0": 1.55,
+     "t1": 1.729
+    },
+    {
+     "mostra": "DA",
+     "falado": "da",
+     "chave": false,
+     "t0": 1.729,
+     "t1": 1.907
+    },
+    {
+     "mostra": "METADE",
+     "falado": "metade",
+     "chave": true,
+     "t0": 1.907,
+     "t1": 2.443
+    }
+   ],
+   "de": 45,
+   "ate": 71
+  },
+  {
+   "frase": 1,
+   "toks": [
+    {
+     "mostra": "DA",
+     "falado": "da",
+     "chave": false,
+     "t0": 2.443,
+     "t1": 2.621
+    },
+    {
+     "mostra": "AULA",
+     "falado": "aula",
+     "chave": false,
+     "t0": 2.621,
+     "t1": 2.979
+    },
+    {
+     "mostra": "EM",
+     "falado": "em",
+     "chave": false,
+     "t0": 2.979,
+     "t1": 3.157
+    },
+    {
+     "mostra": "24",
+     "falado": "vinte e quatro",
+     "chave": false,
+     "t0": 3.157,
+     "t1": 4.05
+    },
+    {
+     "mostra": "HORAS.",
+     "falado": "horas",
+     "chave": false,
+     "t0": 4.05,
+     "t1": 4.407
+    }
+   ],
+   "de": 71,
+   "ate": 140
+  },
+  {
+   "frase": 2,
+   "toks": [
+    {
+     "mostra": "ISSO",
+     "falado": "isso",
+     "chave": false,
+     "t0": 4.907,
+     "t1": 5.264
+    },
+    {
+     "mostra": "TEM",
+     "falado": "tem",
+     "chave": false,
+     "t0": 5.264,
+     "t1": 5.443
+    },
+    {
+     "mostra": "NOME:",
+     "falado": "nome:",
+     "chave": false,
+     "t0": 5.443,
+     "t1": 5.8
+    }
+   ],
+   "de": 145,
+   "ate": 181
+  },
+  {
+   "frase": 2,
+   "toks": [
+    {
+     "mostra": "CURVA",
+     "falado": "curva",
+     "chave": false,
+     "t0": 6.1,
+     "t1": 6.457
+    },
+    {
+     "mostra": "DO",
+     "falado": "do",
+     "chave": false,
+     "t0": 6.457,
+     "t1": 6.636
+    },
+    {
+     "mostra": "ESQUECIMENTO.",
+     "falado": "esquecimento",
+     "chave": true,
+     "t0": 6.636,
+     "t1": 7.529
+    }
+   ],
+   "de": 181,
+   "ate": 234
+  },
+  {
+   "frase": 3,
+   "toks": [
+    {
+     "mostra": "FOI",
+     "falado": "foi",
+     "chave": false,
+     "t0": 8.029,
+     "t1": 8.207
+    },
+    {
+     "mostra": "DESCOBERTA",
+     "falado": "descoberta",
+     "chave": false,
+     "t0": 8.207,
+     "t1": 8.921
+    }
+   ],
+   "de": 239,
+   "ate": 266
+  },
+  {
+   "frase": 3,
+   "toks": [
+    {
+     "mostra": "POR",
+     "falado": "por",
+     "chave": false,
+     "t0": 8.921,
+     "t1": 9.1
+    },
+    {
+     "mostra": "HERMANN",
+     "falado": "hermann",
+     "chave": false,
+     "t0": 9.1,
+     "t1": 9.457
+    },
+    {
+     "mostra": "EBBINGHAUS,",
+     "falado": "ebbinghaus,",
+     "chave": false,
+     "t0": 9.457,
+     "t1": 9.993
+    }
+   ],
+   "de": 266,
+   "ate": 304
+  },
+  {
+   "frase": 3,
+   "toks": [
+    {
+     "mostra": "EM",
+     "falado": "em",
+     "chave": false,
+     "t0": 10.213,
+     "t1": 10.391
+    },
+    {
+     "mostra": "1885",
+     "falado": "mil oitocentos e oitenta e cinco",
+     "chave": true,
+     "t0": 10.391,
+     "t1": 12.534
+    }
+   ],
+   "de": 304,
+   "ate": 384
+  },
+  {
+   "frase": 4,
+   "toks": [
+    {
+     "mostra": "SEM",
+     "falado": "sem",
+     "chave": false,
+     "t0": 13.034,
+     "t1": 13.213
+    },
+    {
+     "mostra": "REVISÃO,",
+     "falado": "revisão,",
+     "chave": false,
+     "t0": 13.213,
+     "t1": 13.749
+    }
+   ],
+   "de": 389,
+   "ate": 417
+  },
+  {
+   "frase": 4,
+   "toks": [
+    {
+     "mostra": "A",
+     "falado": "a",
+     "chave": false,
+     "t0": 13.969,
+     "t1": 14.147
+    },
+    {
+     "mostra": "MEMÓRIA",
+     "falado": "memória",
+     "chave": false,
+     "t0": 14.147,
+     "t1": 14.683
+    },
+    {
+     "mostra": "DESPENCA",
+     "falado": "despenca",
+     "chave": true,
+     "t0": 14.683,
+     "t1": 15.219
+    }
+   ],
+   "de": 417,
+   "ate": 455
+  },
+  {
+   "frase": 4,
+   "toks": [
+    {
+     "mostra": "NOS",
+     "falado": "nos",
+     "chave": false,
+     "t0": 15.219,
+     "t1": 15.397
+    },
+    {
+     "mostra": "PRIMEIROS",
+     "falado": "primeiros",
+     "chave": false,
+     "t0": 15.397,
+     "t1": 15.933
+    },
+    {
+     "mostra": "DIAS.",
+     "falado": "dias",
+     "chave": false,
+     "t0": 15.933,
+     "t1": 16.111
+    }
+   ],
+   "de": 455,
+   "ate": 491
+  },
+  {
+   "frase": 5,
+   "toks": [
+    {
+     "mostra": "MAS",
+     "falado": "mas",
+     "chave": false,
+     "t0": 16.611,
+     "t1": 16.79
+    },
+    {
+     "mostra": "CADA",
+     "falado": "cada",
+     "chave": false,
+     "t0": 16.79,
+     "t1": 17.147
+    },
+    {
+     "mostra": "REVISÃO",
+     "falado": "revisão",
+     "chave": true,
+     "t0": 17.147,
+     "t1": 17.683
+    }
+   ],
+   "de": 496,
+   "ate": 528
+  },
+  {
+   "frase": 5,
+   "toks": [
+    {
+     "mostra": "NO",
+     "falado": "no",
+     "chave": false,
+     "t0": 17.683,
+     "t1": 17.861
+    },
+    {
+     "mostra": "TEMPO",
+     "falado": "tempo",
+     "chave": false,
+     "t0": 17.861,
+     "t1": 18.219
+    },
+    {
+     "mostra": "CERTO",
+     "falado": "certo",
+     "chave": false,
+     "t0": 18.219,
+     "t1": 18.576
+    }
+   ],
+   "de": 528,
+   "ate": 555
+  },
+  {
+   "frase": 5,
+   "toks": [
+    {
+     "mostra": "FAZ",
+     "falado": "faz",
+     "chave": false,
+     "t0": 18.576,
+     "t1": 18.754
+    },
+    {
+     "mostra": "A",
+     "falado": "a",
+     "chave": false,
+     "t0": 18.754,
+     "t1": 18.933
+    },
+    {
+     "mostra": "CURVA",
+     "falado": "curva",
+     "chave": false,
+     "t0": 18.933,
+     "t1": 19.29
+    },
+    {
+     "mostra": "CAIR",
+     "falado": "cair",
+     "chave": false,
+     "t0": 19.29,
+     "t1": 19.469
+    }
+   ],
+   "de": 555,
+   "ate": 582
+  },
+  {
+   "frase": 5,
+   "toks": [
+    {
+     "mostra": "MAIS",
+     "falado": "mais",
+     "chave": false,
+     "t0": 19.469,
+     "t1": 19.647
+    },
+    {
+     "mostra": "DEVAGAR.",
+     "falado": "devagar",
+     "chave": false,
+     "t0": 19.647,
+     "t1": 20.183
+    }
+   ],
+   "de": 582,
+   "ate": 613
+  },
+  {
+   "frase": 6,
+   "toks": [
+    {
+     "mostra": "POR",
+     "falado": "por",
+     "chave": false,
+     "t0": 20.683,
+     "t1": 20.861
+    },
+    {
+     "mostra": "ISSO",
+     "falado": "isso",
+     "chave": false,
+     "t0": 20.861,
+     "t1": 21.219
+    },
+    {
+     "mostra": "REVISAR",
+     "falado": "revisar",
+     "chave": false,
+     "t0": 21.219,
+     "t1": 21.754
+    }
+   ],
+   "de": 618,
+   "ate": 651
+  },
+  {
+   "frase": 6,
+   "toks": [
+    {
+     "mostra": "NA",
+     "falado": "na",
+     "chave": false,
+     "t0": 21.754,
+     "t1": 21.933
+    },
+    {
+     "mostra": "AULA",
+     "falado": "aula",
+     "chave": true,
+     "t0": 21.933,
+     "t1": 22.29
+    },
+    {
+     "mostra": "SEGUINTE",
+     "falado": "seguinte",
+     "chave": true,
+     "t0": 22.29,
+     "t1": 22.826
+    }
+   ],
+   "de": 651,
+   "ate": 683
+  },
+  {
+   "frase": 6,
+   "toks": [
+    {
+     "mostra": "VALE",
+     "falado": "vale",
+     "chave": false,
+     "t0": 22.826,
+     "t1": 23.183
+    },
+    {
+     "mostra": "MAIS",
+     "falado": "mais",
+     "chave": false,
+     "t0": 23.183,
+     "t1": 23.361
+    },
+    {
+     "mostra": "QUE",
+     "falado": "que",
+     "chave": false,
+     "t0": 23.361,
+     "t1": 23.54
+    },
+    {
+     "mostra": "UMA",
+     "falado": "uma",
+     "chave": false,
+     "t0": 23.54,
+     "t1": 23.897
+    },
+    {
+     "mostra": "REVISÃO",
+     "falado": "revisão",
+     "chave": false,
+     "t0": 23.897,
+     "t1": 24.433
+    }
+   ],
+   "de": 683,
+   "ate": 731
+  },
+  {
+   "frase": 6,
+   "toks": [
+    {
+     "mostra": "GIGANTE",
+     "falado": "gigante",
+     "chave": false,
+     "t0": 24.433,
+     "t1": 24.969
+    },
+    {
+     "mostra": "ANTES",
+     "falado": "antes",
+     "chave": false,
+     "t0": 24.969,
+     "t1": 25.326
+    },
+    {
+     "mostra": "DA",
+     "falado": "da",
+     "chave": false,
+     "t0": 25.326,
+     "t1": 25.504
+    },
+    {
+     "mostra": "PROVA.",
+     "falado": "prova",
+     "chave": false,
+     "t0": 25.504,
+     "t1": 25.861
+    }
+   ],
+   "de": 731,
+   "ate": 784
+  },
+  {
+   "frase": 7,
+   "toks": [
+    {
+     "mostra": "NO",
+     "falado": "no",
+     "chave": false,
+     "t0": 26.361,
+     "t1": 26.54
+    },
+    {
+     "mostra": "PROF+",
+     "falado": "prof mais,",
+     "chave": true,
+     "t0": 26.54,
+     "t1": 26.897
+    },
+    {
+     "mostra": "A",
+     "falado": "a",
+     "chave": false,
+     "t0": 26.897,
+     "t1": 27.076
+    },
+    {
+     "mostra": "SUA",
+     "falado": "sua",
+     "chave": false,
+     "t0": 27.076,
+     "t1": 27.254
+    },
+    {
+     "mostra": "SEQUÊNCIA",
+     "falado": "sequência",
+     "chave": false,
+     "t0": 27.254,
+     "t1": 27.79
+    }
+   ],
+   "de": 789,
+   "ate": 832
+  },
+  {
+   "frase": 7,
+   "toks": [
+    {
+     "mostra": "DIDÁTICA",
+     "falado": "didática",
+     "chave": false,
+     "t0": 27.79,
+     "t1": 28.504
+    },
+    {
+     "mostra": "JÁ",
+     "falado": "já",
+     "chave": false,
+     "t0": 28.504,
+     "t1": 28.683
+    },
+    {
+     "mostra": "VEM",
+     "falado": "vem",
+     "chave": false,
+     "t0": 28.683,
+     "t1": 28.861
+    }
+   ],
+   "de": 832,
+   "ate": 864
+  },
+  {
+   "frase": 7,
+   "toks": [
+    {
+     "mostra": "COM",
+     "falado": "com",
+     "chave": false,
+     "t0": 28.861,
+     "t1": 29.04
+    },
+    {
+     "mostra": "AS",
+     "falado": "as",
+     "chave": false,
+     "t0": 29.04,
+     "t1": 29.219
+    },
+    {
+     "mostra": "REVISÕES",
+     "falado": "revisões",
+     "chave": false,
+     "t0": 29.219,
+     "t1": 29.754
+    },
+    {
+     "mostra": "PLANEJADAS.",
+     "falado": "planejadas",
+     "chave": false,
+     "t0": 29.754,
+     "t1": 30.469
+    }
+   ],
+   "de": 864,
+   "ate": 922
+  },
+  {
+   "frase": 8,
+   "toks": [
+    {
+     "mostra": "CHAMA",
+     "falado": "chama",
+     "chave": false,
+     "t0": 30.969,
+     "t1": 31.326
+    },
+    {
+     "mostra": "NO",
+     "falado": "no",
+     "chave": false,
+     "t0": 31.326,
+     "t1": 31.504
+    },
+    {
+     "mostra": "WHATSAPP",
+     "falado": "uótsápi",
+     "chave": true,
+     "t0": 31.504,
+     "t1": 32.04
+    }
+   ],
+   "de": 927,
+   "ate": 959
+  },
+  {
+   "frase": 8,
+   "toks": [
+    {
+     "mostra": "PELO",
+     "falado": "pelo",
+     "chave": false,
+     "t0": 32.04,
+     "t1": 32.397
+    },
+    {
+     "mostra": "LINK",
+     "falado": "link",
+     "chave": false,
+     "t0": 32.397,
+     "t1": 32.576
+    },
+    {
+     "mostra": "DA",
+     "falado": "da",
+     "chave": false,
+     "t0": 32.576,
+     "t1": 32.754
+    },
+    {
+     "mostra": "BIO.",
+     "falado": "bio",
+     "chave": false,
+     "t0": 32.754,
+     "t1": 32.933
+    }
+   ],
+   "de": 959,
+   "ate": 996
+  }
+ ],
+ "palavras": [
+  {
+   "mostra": "SEU",
+   "falado": "seu",
+   "chave": false,
+   "t0": 0.3,
+   "t1": 0.479,
+   "frase": 1,
+   "q": 7
+  },
+  {
+   "mostra": "ALUNO",
+   "falado": "aluno",
+   "chave": false,
+   "t0": 0.479,
+   "t1": 1.014,
+   "frase": 1,
+   "q": 12
+  },
+  {
+   "mostra": "ESQUECE",
+   "falado": "esquece",
+   "chave": false,
+   "t0": 1.014,
+   "t1": 1.55,
+   "frase": 1,
+   "q": 28
+  },
+  {
+   "mostra": "MAIS",
+   "falado": "mais",
+   "chave": false,
+   "t0": 1.55,
+   "t1": 1.729,
+   "frase": 1,
+   "q": 45
+  },
+  {
+   "mostra": "DA",
+   "falado": "da",
+   "chave": false,
+   "t0": 1.729,
+   "t1": 1.907,
+   "frase": 1,
+   "q": 50
+  },
+  {
+   "mostra": "METADE",
+   "falado": "metade",
+   "chave": true,
+   "t0": 1.907,
+   "t1": 2.443,
+   "frase": 1,
+   "q": 55
+  },
+  {
+   "mostra": "DA",
+   "falado": "da",
+   "chave": false,
+   "t0": 2.443,
+   "t1": 2.621,
+   "frase": 1,
+   "q": 71
+  },
+  {
+   "mostra": "AULA",
+   "falado": "aula",
+   "chave": false,
+   "t0": 2.621,
+   "t1": 2.979,
+   "frase": 1,
+   "q": 77
+  },
+  {
+   "mostra": "EM",
+   "falado": "em",
+   "chave": false,
+   "t0": 2.979,
+   "t1": 3.157,
+   "frase": 1,
+   "q": 87
+  },
+  {
+   "mostra": "24",
+   "falado": "vinte e quatro",
+   "chave": false,
+   "t0": 3.157,
+   "t1": 4.05,
+   "frase": 1,
+   "q": 93
+  },
+  {
+   "mostra": "HORAS.",
+   "falado": "horas",
+   "chave": false,
+   "t0": 4.05,
+   "t1": 4.407,
+   "frase": 1,
+   "q": 120
+  },
+  {
+   "mostra": "ISSO",
+   "falado": "isso",
+   "chave": false,
+   "t0": 4.907,
+   "t1": 5.264,
+   "frase": 2,
+   "q": 145
+  },
+  {
+   "mostra": "TEM",
+   "falado": "tem",
+   "chave": false,
+   "t0": 5.264,
+   "t1": 5.443,
+   "frase": 2,
+   "q": 156
+  },
+  {
+   "mostra": "NOME:",
+   "falado": "nome:",
+   "chave": false,
+   "t0": 5.443,
+   "t1": 5.8,
+   "frase": 2,
+   "q": 161
+  },
+  {
+   "mostra": "CURVA",
+   "falado": "curva",
+   "chave": false,
+   "t0": 6.1,
+   "t1": 6.457,
+   "frase": 2,
+   "q": 181
+  },
+  {
+   "mostra": "DO",
+   "falado": "do",
+   "chave": false,
+   "t0": 6.457,
+   "t1": 6.636,
+   "frase": 2,
+   "q": 192
+  },
+  {
+   "mostra": "ESQUECIMENTO.",
+   "falado": "esquecimento",
+   "chave": true,
+   "t0": 6.636,
+   "t1": 7.529,
+   "frase": 2,
+   "q": 197
+  },
+  {
+   "mostra": "FOI",
+   "falado": "foi",
+   "chave": false,
+   "t0": 8.029,
+   "t1": 8.207,
+   "frase": 3,
+   "q": 239
+  },
+  {
+   "mostra": "DESCOBERTA",
+   "falado": "descoberta",
+   "chave": false,
+   "t0": 8.207,
+   "t1": 8.921,
+   "frase": 3,
+   "q": 244
+  },
+  {
+   "mostra": "POR",
+   "falado": "por",
+   "chave": false,
+   "t0": 8.921,
+   "t1": 9.1,
+   "frase": 3,
+   "q": 266
+  },
+  {
+   "mostra": "HERMANN",
+   "falado": "hermann",
+   "chave": false,
+   "t0": 9.1,
+   "t1": 9.457,
+   "frase": 3,
+   "q": 271
+  },
+  {
+   "mostra": "EBBINGHAUS,",
+   "falado": "ebbinghaus,",
+   "chave": false,
+   "t0": 9.457,
+   "t1": 9.993,
+   "frase": 3,
+   "q": 282
+  },
+  {
+   "mostra": "EM",
+   "falado": "em",
+   "chave": false,
+   "t0": 10.213,
+   "t1": 10.391,
+   "frase": 3,
+   "q": 304
+  },
+  {
+   "mostra": "1885",
+   "falado": "mil oitocentos e oitenta e cinco",
+   "chave": true,
+   "t0": 10.391,
+   "t1": 12.534,
+   "frase": 3,
+   "q": 310
+  },
+  {
+   "mostra": "SEM",
+   "falado": "sem",
+   "chave": false,
+   "t0": 13.034,
+   "t1": 13.213,
+   "frase": 4,
+   "q": 389
+  },
+  {
+   "mostra": "REVISÃO,",
+   "falado": "revisão,",
+   "chave": false,
+   "t0": 13.213,
+   "t1": 13.749,
+   "frase": 4,
+   "q": 394
+  },
+  {
+   "mostra": "A",
+   "falado": "a",
+   "chave": false,
+   "t0": 13.969,
+   "t1": 14.147,
+   "frase": 4,
+   "q": 417
+  },
+  {
+   "mostra": "MEMÓRIA",
+   "falado": "memória",
+   "chave": false,
+   "t0": 14.147,
+   "t1": 14.683,
+   "frase": 4,
+   "q": 422
+  },
+  {
+   "mostra": "DESPENCA",
+   "falado": "despenca",
+   "chave": true,
+   "t0": 14.683,
+   "t1": 15.219,
+   "frase": 4,
+   "q": 438
+  },
+  {
+   "mostra": "NOS",
+   "falado": "nos",
+   "chave": false,
+   "t0": 15.219,
+   "t1": 15.397,
+   "frase": 4,
+   "q": 455
+  },
+  {
+   "mostra": "PRIMEIROS",
+   "falado": "primeiros",
+   "chave": false,
+   "t0": 15.397,
+   "t1": 15.933,
+   "frase": 4,
+   "q": 460
+  },
+  {
+   "mostra": "DIAS.",
+   "falado": "dias",
+   "chave": false,
+   "t0": 15.933,
+   "t1": 16.111,
+   "frase": 4,
+   "q": 476
+  },
+  {
+   "mostra": "MAS",
+   "falado": "mas",
+   "chave": false,
+   "t0": 16.611,
+   "t1": 16.79,
+   "frase": 5,
+   "q": 496
+  },
+  {
+   "mostra": "CADA",
+   "falado": "cada",
+   "chave": false,
+   "t0": 16.79,
+   "t1": 17.147,
+   "frase": 5,
+   "q": 502
+  },
+  {
+   "mostra": "REVISÃO",
+   "falado": "revisão",
+   "chave": true,
+   "t0": 17.147,
+   "t1": 17.683,
+   "frase": 5,
+   "q": 512
+  },
+  {
+   "mostra": "NO",
+   "falado": "no",
+   "chave": false,
+   "t0": 17.683,
+   "t1": 17.861,
+   "frase": 5,
+   "q": 528
+  },
+  {
+   "mostra": "TEMPO",
+   "falado": "tempo",
+   "chave": false,
+   "t0": 17.861,
+   "t1": 18.219,
+   "frase": 5,
+   "q": 534
+  },
+  {
+   "mostra": "CERTO",
+   "falado": "certo",
+   "chave": false,
+   "t0": 18.219,
+   "t1": 18.576,
+   "frase": 5,
+   "q": 545
+  },
+  {
+   "mostra": "FAZ",
+   "falado": "faz",
+   "chave": false,
+   "t0": 18.576,
+   "t1": 18.754,
+   "frase": 5,
+   "q": 555
+  },
+  {
+   "mostra": "A",
+   "falado": "a",
+   "chave": false,
+   "t0": 18.754,
+   "t1": 18.933,
+   "frase": 5,
+   "q": 561
+  },
+  {
+   "mostra": "CURVA",
+   "falado": "curva",
+   "chave": false,
+   "t0": 18.933,
+   "t1": 19.29,
+   "frase": 5,
+   "q": 566
+  },
+  {
+   "mostra": "CAIR",
+   "falado": "cair",
+   "chave": false,
+   "t0": 19.29,
+   "t1": 19.469,
+   "frase": 5,
+   "q": 577
+  },
+  {
+   "mostra": "MAIS",
+   "falado": "mais",
+   "chave": false,
+   "t0": 19.469,
+   "t1": 19.647,
+   "frase": 5,
+   "q": 582
+  },
+  {
+   "mostra": "DEVAGAR.",
+   "falado": "devagar",
+   "chave": false,
+   "t0": 19.647,
+   "t1": 20.183,
+   "frase": 5,
+   "q": 587
+  },
+  {
+   "mostra": "POR",
+   "falado": "por",
+   "chave": false,
+   "t0": 20.683,
+   "t1": 20.861,
+   "frase": 6,
+   "q": 618
+  },
+  {
+   "mostra": "ISSO",
+   "falado": "isso",
+   "chave": false,
+   "t0": 20.861,
+   "t1": 21.219,
+   "frase": 6,
+   "q": 624
+  },
+  {
+   "mostra": "REVISAR",
+   "falado": "revisar",
+   "chave": false,
+   "t0": 21.219,
+   "t1": 21.754,
+   "frase": 6,
+   "q": 635
+  },
+  {
+   "mostra": "NA",
+   "falado": "na",
+   "chave": false,
+   "t0": 21.754,
+   "t1": 21.933,
+   "frase": 6,
+   "q": 651
+  },
+  {
+   "mostra": "AULA",
+   "falado": "aula",
+   "chave": true,
+   "t0": 21.933,
+   "t1": 22.29,
+   "frase": 6,
+   "q": 656
+  },
+  {
+   "mostra": "SEGUINTE",
+   "falado": "seguinte",
+   "chave": true,
+   "t0": 22.29,
+   "t1": 22.826,
+   "frase": 6,
+   "q": 667
+  },
+  {
+   "mostra": "VALE",
+   "falado": "vale",
+   "chave": false,
+   "t0": 22.826,
+   "t1": 23.183,
+   "frase": 6,
+   "q": 683
+  },
+  {
+   "mostra": "MAIS",
+   "falado": "mais",
+   "chave": false,
+   "t0": 23.183,
+   "t1": 23.361,
+   "frase": 6,
+   "q": 693
+  },
+  {
+   "mostra": "QUE",
+   "falado": "que",
+   "chave": false,
+   "t0": 23.361,
+   "t1": 23.54,
+   "frase": 6,
+   "q": 699
+  },
+  {
+   "mostra": "UMA",
+   "falado": "uma",
+   "chave": false,
+   "t0": 23.54,
+   "t1": 23.897,
+   "frase": 6,
+   "q": 704
+  },
+  {
+   "mostra": "REVISÃO",
+   "falado": "revisão",
+   "chave": false,
+   "t0": 23.897,
+   "t1": 24.433,
+   "frase": 6,
+   "q": 715
+  },
+  {
+   "mostra": "GIGANTE",
+   "falado": "gigante",
+   "chave": false,
+   "t0": 24.433,
+   "t1": 24.969,
+   "frase": 6,
+   "q": 731
+  },
+  {
+   "mostra": "ANTES",
+   "falado": "antes",
+   "chave": false,
+   "t0": 24.969,
+   "t1": 25.326,
+   "frase": 6,
+   "q": 747
+  },
+  {
+   "mostra": "DA",
+   "falado": "da",
+   "chave": false,
+   "t0": 25.326,
+   "t1": 25.504,
+   "frase": 6,
+   "q": 758
+  },
+  {
+   "mostra": "PROVA.",
+   "falado": "prova",
+   "chave": false,
+   "t0": 25.504,
+   "t1": 25.861,
+   "frase": 6,
+   "q": 763
+  },
+  {
+   "mostra": "NO",
+   "falado": "no",
+   "chave": false,
+   "t0": 26.361,
+   "t1": 26.54,
+   "frase": 7,
+   "q": 789
+  },
+  {
+   "mostra": "PROF+",
+   "falado": "prof mais,",
+   "chave": true,
+   "t0": 26.54,
+   "t1": 26.897,
+   "frase": 7,
+   "q": 794
+  },
+  {
+   "mostra": "A",
+   "falado": "a",
+   "chave": false,
+   "t0": 26.897,
+   "t1": 27.076,
+   "frase": 7,
+   "q": 805
+  },
+  {
+   "mostra": "SUA",
+   "falado": "sua",
+   "chave": false,
+   "t0": 27.076,
+   "t1": 27.254,
+   "frase": 7,
+   "q": 810
+  },
+  {
+   "mostra": "SEQUÊNCIA",
+   "falado": "sequência",
+   "chave": false,
+   "t0": 27.254,
+   "t1": 27.79,
+   "frase": 7,
+   "q": 816
+  },
+  {
+   "mostra": "DIDÁTICA",
+   "falado": "didática",
+   "chave": false,
+   "t0": 27.79,
+   "t1": 28.504,
+   "frase": 7,
+   "q": 832
+  },
+  {
+   "mostra": "JÁ",
+   "falado": "já",
+   "chave": false,
+   "t0": 28.504,
+   "t1": 28.683,
+   "frase": 7,
+   "q": 853
+  },
+  {
+   "mostra": "VEM",
+   "falado": "vem",
+   "chave": false,
+   "t0": 28.683,
+   "t1": 28.861,
+   "frase": 7,
+   "q": 858
+  },
+  {
+   "mostra": "COM",
+   "falado": "com",
+   "chave": false,
+   "t0": 28.861,
+   "t1": 29.04,
+   "frase": 7,
+   "q": 864
+  },
+  {
+   "mostra": "AS",
+   "falado": "as",
+   "chave": false,
+   "t0": 29.04,
+   "t1": 29.219,
+   "frase": 7,
+   "q": 869
+  },
+  {
+   "mostra": "REVISÕES",
+   "falado": "revisões",
+   "chave": false,
+   "t0": 29.219,
+   "t1": 29.754,
+   "frase": 7,
+   "q": 875
+  },
+  {
+   "mostra": "PLANEJADAS.",
+   "falado": "planejadas",
+   "chave": false,
+   "t0": 29.754,
+   "t1": 30.469,
+   "frase": 7,
+   "q": 891
+  },
+  {
+   "mostra": "CHAMA",
+   "falado": "chama",
+   "chave": false,
+   "t0": 30.969,
+   "t1": 31.326,
+   "frase": 8,
+   "q": 927
+  },
+  {
+   "mostra": "NO",
+   "falado": "no",
+   "chave": false,
+   "t0": 31.326,
+   "t1": 31.504,
+   "frase": 8,
+   "q": 938
+  },
+  {
+   "mostra": "WHATSAPP",
+   "falado": "uótsápi",
+   "chave": true,
+   "t0": 31.504,
+   "t1": 32.04,
+   "frase": 8,
+   "q": 943
+  },
+  {
+   "mostra": "PELO",
+   "falado": "pelo",
+   "chave": false,
+   "t0": 32.04,
+   "t1": 32.397,
+   "frase": 8,
+   "q": 959
+  },
+  {
+   "mostra": "LINK",
+   "falado": "link",
+   "chave": false,
+   "t0": 32.397,
+   "t1": 32.576,
+   "frase": 8,
+   "q": 970
+  },
+  {
+   "mostra": "DA",
+   "falado": "da",
+   "chave": false,
+   "t0": 32.576,
+   "t1": 32.754,
+   "frase": 8,
+   "q": 975
+  },
+  {
+   "mostra": "BIO.",
+   "falado": "bio",
+   "chave": false,
+   "t0": 32.754,
+   "t1": 32.933,
+   "frase": 8,
+   "q": 981
+  }
+ ]
+}
