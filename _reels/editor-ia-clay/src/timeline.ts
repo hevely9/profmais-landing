@@ -6,21 +6,23 @@ export const FPS = 30;
 export const LEAD = 0.2;
 export const GAP1_AT = 40.55, GAP1 = 2.2;   // depois de "...faz as animações."
 export const GAP2_AT = 52.95, GAP2 = 2.2;   // depois de "...música e cor."
+// A narração termina em "...igual um editor de verdade."; o CTA final é só visual.
+export const NARR_FIM = 70.12;
 export const o = (t: number) => t + LEAD + (t >= GAP1_AT ? GAP1 : 0) + (t >= GAP2_AT ? GAP2 : 0);
 export const NARR_SEGS = [
   { from: o(0), start: 0, end: GAP1_AT },
   { from: o(GAP1_AT), start: GAP1_AT, end: GAP2_AT },
-  { from: o(GAP2_AT), start: GAP2_AT, end: 74.2 },
+  { from: o(GAP2_AT), start: GAP2_AT, end: NARR_FIM },
 ];
 export const CLAY_LINES = [
   { from: o(GAP1_AT) - GAP1 + 0.1, start: 0, end: 1.95, texto: "Instalei e testei tudo!" },
   { from: o(GAP2_AT) - GAP2 + 0.1, start: 3.3, end: 5.15, texto: "Folha de estilo pronta!" },
 ];
-export const TOTAL = Math.ceil((o(74.16) + 2.1) * FPS);
+export const TOTAL = Math.ceil((o(NARR_FIM) + 4.8) * FPS);
 
 type W = { text: string; type: string; start: number; end: number };
 export const WORDS = (palavras as { words: W[] }).words
-  .filter((w) => w.type === "word" && !w.text.startsWith("["))
+  .filter((w) => w.type === "word" && !w.text.startsWith("[") && w.start < NARR_FIM)
   .map((w) => ({ text: w.text.replace(/["“”]/g, ""), start: o(w.start), end: o(w.end) }));
 const wordAt = (txt: string, n = 0) => WORDS.filter((w) => w.text.toLowerCase().startsWith(txt.toLowerCase()))[n].start;
 
@@ -39,8 +41,8 @@ export const SHOTS: Shot[] = [
   { src: "c5", from: o(GAP2_AT) - GAP2 - 0.4, to: o(GAP2_AT), rate: 1, startFrom: 2.4 },
   { src: "c6", from: o(GAP2_AT), to: o(58.6), rate: 0.9 },
   { src: "c6", from: o(58.6), to: o(66.5), rate: 0.3, startFrom: 2.0, blur: true },
-  { src: "c2", from: o(66.5), to: o(70.25), rate: 1, startFrom: 1.4 },
-  { src: "c7", from: o(70.25), to: TOTAL / FPS, rate: 0.85 },
+  { src: "c2", from: o(66.5), to: o(69.95), rate: 1, startFrom: 1.4 },
+  { src: "c7", from: o(69.95), to: TOTAL / FPS, rate: 0.9 },
 ];
 export const CUTS = SHOTS.map((s) => s.from).slice(1);
 
@@ -58,7 +60,7 @@ export const P = {
   ferramentas: { de: o(30.3), ate: o(GAP1_AT) - GAP1, itens: [wordAt("FFmpeg"), wordAt("Whisper"), wordAt("yt-dlp"), wordAt("HyperFrames")] },
   folha: { de: o(46.4), ate: o(GAP2_AT) - GAP2 - 0.4, itens: [wordAt("cortes"), wordAt("legenda", 1), wordAt("ritmo"), wordAt("música"), wordAt("cor.")] },
   prompt: { de: o(58.6), ate: o(66.5) },
-  cta: { de: o(70.25), clayver: wordAt("CLAYVER") },
+  cta: { de: o(70.15), pill: o(70.85), sub: o(71.6) },
 };
 
 // Efeitos (ElevenLabs Sound Effects), 2–3 quadros antes do visual.
@@ -76,5 +78,5 @@ export const SFX: { src: string; at: number; vol?: number }[] = [
   { src: "sfx-impressora", at: o(GAP2_AT) - GAP2 - 0.45, vol: 0.8 },
   { src: "sfx-rec", at: o(53.6), vol: 0.6 },
   { src: "sfx-teclado", at: o(58.7), vol: 0.45 }, { src: "sfx-teclado", at: o(60.5), vol: 0.45 },
-  { src: "sfx-notificacao", at: P.cta.clayver - pre, vol: 0.7 },
+  { src: "sfx-notificacao", at: P.cta.pill - pre, vol: 0.7 },
 ];

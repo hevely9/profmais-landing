@@ -237,22 +237,25 @@ const Balao: React.FC<{ from: number; texto: string }> = ({ from, texto }) => {
 const CTA: React.FC = () => {
   const f = useCurrentFrame(); const { fps } = useVideoConfig();
   if (f < q(P.cta.de)) return null;
-  const p = spring({ frame: f - q(P.cta.clayver), fps, config: SP.bouncy });
-  const p0 = spring({ frame: f - q(P.cta.de) - 6, fps, config: SP.smooth });
-  const pulse = 1 + 0.035 * Math.sin((f - q(P.cta.clayver)) / 4);
+  const p0 = spring({ frame: f - q(P.cta.de), fps, config: SP.smooth });
+  const p = spring({ frame: f - q(P.cta.pill), fps, config: SP.bouncy });
+  const p2 = spring({ frame: f - q(P.cta.sub), fps, config: SP.smooth });
+  const pulse = 1 + 0.03 * Math.sin((f - q(P.cta.pill)) / 4);
   return (
-    <div style={{ position: "absolute", top: 1010, left: SAFE_X, right: SAFE_X, display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
-      <div style={{ fontFamily: DISPLAY, fontWeight: 900, fontSize: 58, color: C.creme, opacity: p0, transform: `translateY(${(1 - p0) * 30}px)`,
-        textShadow: "0 6px 26px rgba(0,0,0,0.6)" }}>COMENTA</div>
-      <div style={{ background: C.laranja, color: C.creme, borderRadius: 34, padding: "18px 46px", fontFamily: DISPLAY, fontWeight: 900, fontSize: 104,
-        letterSpacing: "-0.02em", transform: `scale(${p * (f > q(P.cta.clayver) + 15 ? pulse : 1)}) rotate(${(1 - p) * -12}deg)`, opacity: Math.min(1, p * 2),
-        boxShadow: "0 30px 70px -10px rgba(232,116,59,0.55)" }}>CLAYVER</div>
+    <div style={{ position: "absolute", top: 330, left: SAFE_X - 40, right: SAFE_X - 40, display: "flex", flexDirection: "column", alignItems: "center", gap: 14 }}>
+      <div style={{ fontFamily: DISPLAY, fontWeight: 900, fontSize: 66, color: C.creme, opacity: p0, transform: `translateY(${(1 - p0) * 30}px)`,
+        letterSpacing: "-0.01em", textShadow: "0 6px 26px rgba(0,0,0,0.6)" }}>FICOU DÚVIDA?</div>
+      <div style={{ background: C.laranja, color: C.creme, borderRadius: 34, padding: "16px 40px", fontFamily: DISPLAY, fontWeight: 900, fontSize: 86,
+        letterSpacing: "-0.02em", whiteSpace: "nowrap", transform: `scale(${p * (f > q(P.cta.pill) + 15 ? pulse : 1)}) rotate(${(1 - p) * -10}deg)`, opacity: Math.min(1, p * 2),
+        boxShadow: "0 30px 70px -10px rgba(232,116,59,0.55)" }}>COMENTA AQUI</div>
+      <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 44, color: C.areia, opacity: p2, transform: `translateY(${(1 - p2) * 20}px)`,
+        textShadow: "0 4px 18px rgba(0,0,0,0.65)" }}>que eu te ajudo</div>
     </div>
   );
 };
 
 // ── legenda karaokê (tempo por palavra do ElevenLabs Speech to Text) ───────
-const KEY = /^(ia|passo|ffmpeg|whisper|yt-dlp|hyperframes|clayver|local|estilo|storyboard|referências|ambiente|ferramentas)/i;
+const KEY = /^(ia|passo|ffmpeg|whisper|yt-dlp|hyperframes|dúvida|comenta|local|estilo|storyboard|referências|ambiente|ferramentas)/i;
 const PAGES: { de: number; ate: number; w: typeof WORDS }[] = (() => {
   const out: { de: number; ate: number; w: typeof WORDS }[] = []; let cur: typeof WORDS = [];
   WORDS.forEach((w, i) => {
