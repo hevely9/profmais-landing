@@ -1,0 +1,8 @@
+node_modules/
+out/
+public/audio/
+public/video/
+public/audio/
+public/img/
+out/
+out-render.log
