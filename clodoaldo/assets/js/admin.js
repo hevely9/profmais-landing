@@ -6,6 +6,7 @@
   "use strict";
 
   const DEFAULTS = { owner: "hevely9", repo: "profmais-landing", branch: "main", base: "clodoaldo" };
+  const ALLOWED_API = "https://api.github.com"; // único destino de rede permitido (também fixado na CSP)
   const PDFJS = "assets/vendor/pdfjs/"; // pdf.js 3.11.174 hospedado no próprio site
 
   const $ = (s, r = document) => r.querySelector(s);
