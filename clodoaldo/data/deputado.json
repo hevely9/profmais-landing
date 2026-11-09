@@ -5,26 +5,59 @@
   "partido": "Progressistas (PP)",
   "estado": "Acre",
   "lema": "Nossa missão é servir",
-  "foto": "assets/img/deputado-retrato.jpg",
+  "foto": "",
   "resumo": "Natural de Cruzeiro do Sul, Clodoaldo Rodrigues é historiador, servidor público e policial civil. Deputado estadual desde 2023, foi reeleito em 2026 e mantém forte ligação com a região do Juruá e com as demandas da população acreana.",
   "biografia": "Francisco Clodoaldo de Souza Rodrigues, conhecido como Clodoaldo Rodrigues, é político brasileiro, natural de Cruzeiro do Sul, no Acre. Historiador, servidor público e policial civil, iniciou sua trajetória política em 2008, quando concorreu pela primeira vez ao cargo de vereador.\n\nEm 2012, foi eleito vereador de Cruzeiro do Sul e, em 2016, conquistou a reeleição. Presidiu a Câmara Municipal no biênio 2019/2020 e, em agosto de 2020, assumiu interinamente a Prefeitura de Cruzeiro do Sul, após decisão judicial que afastou o prefeito e o vice-prefeito.\n\nEm 2022, foi eleito deputado estadual pelo Acre, com 8.227 votos, tomando posse em 1º de fevereiro de 2023. Nas eleições de 2026, foi novamente eleito para a Assembleia Legislativa do Acre, pelo Progressistas (PP), com 13.575 votos.",
   "trajetoriaPessoal": "",
   "trajetoriaPolitica": [
-    { "periodo": "2008", "descricao": "Primeira candidatura, ao cargo de vereador de Cruzeiro do Sul." },
-    { "periodo": "2012", "descricao": "Eleito vereador de Cruzeiro do Sul." },
-    { "periodo": "2016", "descricao": "Reeleito vereador de Cruzeiro do Sul." },
-    { "periodo": "2019 e 2020", "descricao": "Presidente da Câmara Municipal de Cruzeiro do Sul." },
-    { "periodo": "Agosto de 2020", "descricao": "Assume interinamente a Prefeitura de Cruzeiro do Sul, após decisão judicial que afastou o prefeito e o vice-prefeito." },
-    { "periodo": "2022", "descricao": "Eleito deputado estadual pelo Acre, com 8.227 votos. Toma posse em 1º de fevereiro de 2023." },
-    { "periodo": "2026", "descricao": "Reeleito deputado estadual pelo Progressistas (PP), com 13.575 votos." }
+    {
+      "periodo": "2008",
+      "descricao": "Primeira candidatura, ao cargo de vereador de Cruzeiro do Sul."
+    },
+    {
+      "periodo": "2012",
+      "descricao": "Eleito vereador de Cruzeiro do Sul."
+    },
+    {
+      "periodo": "2016",
+      "descricao": "Reeleito vereador de Cruzeiro do Sul."
+    },
+    {
+      "periodo": "2019 e 2020",
+      "descricao": "Presidente da Câmara Municipal de Cruzeiro do Sul."
+    },
+    {
+      "periodo": "Agosto de 2020",
+      "descricao": "Assume interinamente a Prefeitura de Cruzeiro do Sul, após decisão judicial que afastou o prefeito e o vice-prefeito."
+    },
+    {
+      "periodo": "2022",
+      "descricao": "Eleito deputado estadual pelo Acre, com 8.227 votos, pelo Republicanos. Toma posse em 1º de fevereiro de 2023."
+    },
+    {
+      "periodo": "2026",
+      "descricao": "Reeleito deputado estadual, agora pelo Progressistas (PP), com 13.575 votos. A posse do novo mandato ocorre em fevereiro de 2027."
+    }
   ],
   "atuacaoParlamentar": "Sua atuação política tem forte ligação com a região do Juruá e com as demandas da população acreana.",
   "areasDeAtuacao": [],
   "destaques": [],
   "fontes": [
-    { "titulo": "Diário do Acre: trajetória política e posse como deputado", "url": "https://diariodoacre.com.br/clodoaldo-rodrigues-e-empossado-deputado-estadual-e-reafirma-compromisso-com-o-jurua/" },
-    { "titulo": "Assembleia Legislativa do Acre: perfil parlamentar", "url": "https://sapl.al.ac.leg.br/parlamentar/259" },
-    { "titulo": "Itatiaia: dados eleitorais de 2026", "url": "https://www.itatiaia.com.br/politica/eleicoes/2026/candidatos/ac/deputado-estadual/pp/clodoaldo-rodrigues/11555/" },
-    { "titulo": "O Palaciano: histórico político e profissional", "url": "https://opalaciano.com.br/acre/executiva-do-republicanos-em-cruzeiro-do-sul-tem-novo-presidente-clodoaldo-rodrigues/" }
+    {
+      "titulo": "Diário do Acre: trajetória política e posse como deputado",
+      "url": "https://diariodoacre.com.br/clodoaldo-rodrigues-e-empossado-deputado-estadual-e-reafirma-compromisso-com-o-jurua/"
+    },
+    {
+      "titulo": "Assembleia Legislativa do Acre: perfil parlamentar",
+      "url": "https://sapl.al.ac.leg.br/parlamentar/259"
+    },
+    {
+      "titulo": "Itatiaia: dados eleitorais de 2026",
+      "url": "https://www.itatiaia.com.br/politica/eleicoes/2026/candidatos/ac/deputado-estadual/pp/clodoaldo-rodrigues/11555/"
+    },
+    {
+      "titulo": "O Palaciano: histórico político e profissional",
+      "url": "https://opalaciano.com.br/acre/executiva-do-republicanos-em-cruzeiro-do-sul-tem-novo-presidente-clodoaldo-rodrigues/"
+    }
   ]
 }
