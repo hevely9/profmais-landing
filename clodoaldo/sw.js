@@ -1,7 +1,7 @@
 /* Service worker: deixa o portal utilizável em conexões lentas ou instáveis.
    Páginas e dados: rede primeiro, cache como reserva. Arquivos estáticos: cache primeiro.
    PDFs são guardados depois de abertos uma vez. */
-const VERSION = "v2026-11-10b";
+const VERSION = "v2026-11-10c";
 const SHELL = `shell-${VERSION}`, DATA = `data-${VERSION}`, DOCS = "docs-v1";
 const BASE = new URL(self.registration.scope).pathname;
 const PRECACHE = ["", "index.html", "projetos.html", "projeto.html", "deputado.html",

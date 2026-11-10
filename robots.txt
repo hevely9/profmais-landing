@@ -1,0 +1,7 @@
+# profmais.online
+User-agent: *
+Allow: /
+Disallow: /clodoaldo/admin.html
+
+Sitemap: https://profmais.online/sitemap.xml
+Sitemap: https://profmais.online/clodoaldo/sitemap.xml

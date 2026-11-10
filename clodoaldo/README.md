@@ -54,14 +54,20 @@ somadas, sem separar por projeto. O painel administrativo não é medido.
 
 ## Segurança
 
+- Painel: o token do GitHub fica só na sessão do navegador e some ao fechar a aba;
+  o painel não abre dentro de iframe; PDFs são conferidos pelo conteúdo (assinatura `%PDF-`)
+  e limitados a 25 MB; fotos só JPG, PNG ou WebP até 15 MB; links só `https://`;
+  número, ano e datas validados; leitor de PDF com execução de código desativada.
+- Cada alteração de projetos no painel regenera o `sitemap.xml`.
+- Na raiz do domínio: `robots.txt` (bloqueia o painel para buscadores), `sitemap.xml`,
+  `llms.txt` e `404.html`.
+
 - `Content-Security-Policy` em todas as páginas: scripts só do próprio site e do medidor da Cloudflare; fontes só do próprio site;
   o painel libera apenas `api.github.com`.
 - Todo texto vindo dos JSON passa por escape antes de entrar no HTML; todo link passa
   por validação (`http(s)` ou caminho relativo; `javascript:` e `data:` são descartados).
 - O painel não tem servidor nem banco: grava no repositório via API do GitHub com um
-  token pessoal de escopo mínimo (apenas este repositório, permissão Contents). O
-  token fica no navegador, na sessão por padrão; "manter conectado" grava no
-  `localStorage` e deve ser usado só em computador pessoal.
+  token pessoal de escopo mínimo (apenas este repositório, permissão Contents).
 - `admin.html` tem `noindex` e não é guardado pelo service worker.
 - Links externos abrem com `rel="noopener"`.
 
