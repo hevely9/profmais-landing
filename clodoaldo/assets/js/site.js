@@ -145,13 +145,6 @@
     if (!("serviceWorker" in navigator) || location.protocol !== "https:" && location.hostname !== "localhost") return;
     window.addEventListener("load", () => { navigator.serviceWorker.register(BASE + "sw.js", { scope: BASE }).catch(() => {}); });
   }
-  function themeChips(list, limit) {
-    const counts = new Map();
-    list.forEach((p) => (p.palavrasChave || []).forEach((k) => { const key = String(k).trim(); if (key) counts.set(key, (counts.get(key) || 0) + 1); }));
-    return Array.from(counts.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "pt-BR")).slice(0, limit)
-      .map(([k, n]) => `<a class="chip" href="projetos.html?q=${encodeURIComponent(k)}">${esc(k)} <small>${n}</small></a>`).join("");
-  }
-
   // ---------- início ----------
   async function initHome(cfg) {
     const [projetos, dep] = await Promise.all([getJSON("data/projetos.json", []), getJSON("data/deputado.json", {})]);
@@ -168,8 +161,6 @@
         <div class="hero-stat"><b>${aprov}</b><span>aprovados pela Assembleia</span></div>
         <div class="hero-stat"><b>${fim - ini + 1}</b><span>anos de atuação, de ${ini} a ${fim}</span></div>`;
     } else if (stats) { stats.hidden = true; }
-    const temas = $("#temas");
-    if (temas) { const html = themeChips(all, 10); if (html) temas.innerHTML = html; else temas.closest("section").hidden = true; }
     const resumo = $("#sobre-resumo");
     if (resumo) { if (dep.resumo) resumo.textContent = dep.resumo; else resumo.hidden = true; }
     if (dep.foto) $$("[data-foto]").forEach((img) => { img.src = dep.foto; img.removeAttribute("srcset"); });
@@ -311,7 +302,6 @@
     if (list.length) {
       const anos = list.map((p) => numValue(p.ano)).filter(Boolean), aprov = list.filter((p) => statusClass(p.situacao) === "ok").length;
       atu.push(`<div class="stat-row"><div class="stat"><b>${list.length}</b><span>projetos de lei apresentados</span></div><div class="stat"><b>${aprov}</b><span>aprovados pela Assembleia</span></div><div class="stat"><b>${Math.min(...anos)} a ${Math.max(...anos)}</b><span>período com projetos na biblioteca</span></div></div>`);
-      const chips = themeChips(list, 8); if (chips) atu.push(`<h3 class="sr-only">Temas mais frequentes</h3><div class="chips chips-spaced">${chips}</div>`);
     }
     fill("atuacao", "bio-atuacao", atu.join(""));
     const dest = Array.isArray(dep.destaques) ? dep.destaques.filter(Boolean) : [];
