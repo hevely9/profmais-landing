@@ -50,7 +50,7 @@ Edite/duplique `cenas/*.html`. Regras:
 
 Veja `references/design-reels.md` para ritmo, durações e receitas de cena.
 
-⚠ **Antes de desenhar**, leia `.claude/skills/video-content-strategist/references/aprendizados-virais.md`: um universo visual (não uma paleta por cena), transições por transformação, legenda karaokê, HUD de progresso, trilha contínua e @ fixo.
+⚠ **Antes de desenhar**, leia `.claude/skills/video-content-strategist/references/padrao-aprovado.md` (padrão aprovado pelo usuário) e `.claude/skills/video-content-strategist/references/aprendizados-virais.md`: um universo visual (não uma paleta por cena), transições por transformação, legenda karaokê, HUD de progresso, trilha contínua e @ fixo.
 
 ### 4. Configure `reel.json`
 ```json

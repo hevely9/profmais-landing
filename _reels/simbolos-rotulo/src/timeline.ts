@@ -6,7 +6,9 @@ export const LEAD = 0.3;
 export const VOZ_FIM = 37.15;
 export const o = (t: number) => t + LEAD;
 export const q = (t: number) => Math.round(t * FPS);
-export const TOTAL = Math.ceil((o(VOZ_FIM) + 1.3) * FPS);
+// Tela final da marca (Explica Farmácia) entra logo depois da última palavra.
+export const FIM = o(VOZ_FIM) + 0.1;
+export const TOTAL = Math.ceil((FIM + 3.7) * FPS);
 
 type W = { text: string; start: number; end: number };
 export const WORDS = (palavras as { words: W[] }).words.map((w) => ({ text: w.text, start: o(w.start), end: o(w.end) }));
@@ -78,4 +80,8 @@ export const SFX: { src: string; at: number; vol?: number }[] = [
   { src: "sfx-lapis", at: T.recic2, vol: 0.4 },
   { src: "sfx-ding", at: T.ler - pre, vol: 0.45 },
   { src: "sfx-notificacao", at: T.salva - pre, vol: 0.55 },
+  { src: "sfx-whoosh", at: FIM - 0.1, vol: 0.35 },
+  { src: "sfx-massinha", at: FIM - 0.1, vol: 0.55 },
+  { src: "sfx-massinha", at: FIM + 0.75, vol: 0.4 },
+  { src: "sfx-ding", at: FIM + 1.75, vol: 0.5 },
 ];

@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill, Audio, Easing, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
-import { CAM, Cam, FPS, ICON_X, ICON_Y, LEAD, SEG, SFX, T, TOTAL, VAL, WORDS, q } from "./timeline";
+import { CAM, Cam, FIM, FPS, ICON_X, ICON_Y, LEAD, SEG, SFX, T, TOTAL, VAL, WORDS, q } from "./timeline";
 import { Frasco, ICONES, INK, IconAmpulheta, IconCoelho, IconPAO, IconPontoVerde, IconTriangulo, Moeda, Predio, Salvar } from "./icones";
 
 // ── tema: papel pontilhado, tinta, marca-texto rosa ────────────────────────
@@ -333,6 +333,55 @@ const Final: React.FC = () => {
   </>;
 };
 
+// ── tela final da marca ─────────────────────────────────────────────────
+// Logo da Explica Farmácia redesenhado em vetor (nítido em qualquer tamanho), a partir do original.
+const LogoExplica: React.FC<{ size: number }> = ({ size }) => (
+  <svg width={size} height={size} viewBox="0 0 420 420" style={{ display: "block" }}>
+    <circle cx="210" cy="210" r="210" fill="#E0929B" />
+    <g fontFamily="Titan One" textAnchor="middle" fill="#F8EBE1" stroke="#F8EBE1" strokeWidth={2} strokeLinejoin="round" paintOrder="stroke">
+      <text x="210" y="208" fontSize="77" textLength="294" lengthAdjust="spacingAndGlyphs">EXPLICA</text>
+      <text x="210" y="284" fontSize="77" textLength="332" lengthAdjust="spacingAndGlyphs">FARMÁCIA</text>
+    </g>
+  </svg>
+);
+const IG = "linear-gradient(90deg, #F9A23B 0%, #F2643A 22%, #E1306C 50%, #C13584 72%, #7B4DE0 100%)";
+const TelaMarca: React.FC = () => {
+  const { f, fps, t } = useT();
+  if (t < FIM - 0.25) return null;
+  const fundo = lin(t, FIM - 0.25, FIM + 0.1);
+  const logo = sp(f, fps, FIM - 0.12, SP.mola);
+  const arroba = sp(f, fps, FIM + 0.7, SP.suave);
+  const botao = sp(f, fps, FIM + 1.0, SP.pop);
+  const toque = lin(t, FIM + 1.6, FIM + 1.75) * (1 - lin(t, FIM + 1.75, FIM + 1.95));
+  const seguindo = t >= FIM + 1.75;
+  const mao = lin(t, FIM + 1.15, FIM + 1.6, Easing.out(Easing.cubic)) * (1 - lin(t, FIM + 2.1, FIM + 2.4));
+  return (
+    <AbsoluteFill>
+      <AbsoluteFill style={{ opacity: fundo, background: C.papel, backgroundImage: `radial-gradient(${C.ponto} 1.6px, transparent 1.9px)`, backgroundSize: "34px 34px" }} />
+      <Escrita at={FIM + 0.2} dur={0.7} size={92} color={C.rosaForte} sub style={{ left: 190, width: 700, top: 360 }}>gostou? segue a gente!</Escrita>
+      <div style={{ position: "absolute", left: 540 - 240, top: 560, width: 480, height: 480, borderRadius: "50%",
+        boxShadow: "0 40px 80px -30px rgba(120,60,70,0.55)", transform: `scale(${logo}) rotate(${(1 - logo) * -25}deg)`, opacity: Math.min(1, logo * 2) }}>
+        <LogoExplica size={480} />
+      </div>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 1100, textAlign: "center", opacity: arroba, transform: `translateY(${(1 - arroba) * 24}px)` }}>
+        <span style={{ fontFamily: SANS, fontWeight: 800, fontSize: 84, letterSpacing: "-0.04em", backgroundImage: IG, WebkitBackgroundClip: "text", backgroundClip: "text",
+          color: "transparent" }}>@explicafarmacia</span>
+      </div>
+      <div style={{ position: "absolute", left: 540 - 210, top: 1250, width: 420, height: 110, borderRadius: 55, display: "flex", alignItems: "center", justifyContent: "center", gap: 14,
+        background: seguindo ? C.branco : C.tinta, border: `4px solid ${C.tinta}`, color: seguindo ? C.tinta : C.branco,
+        fontFamily: SANS, fontWeight: 800, fontSize: 46, letterSpacing: "-0.02em", boxShadow: "0 24px 50px -24px rgba(40,30,20,0.6)",
+        transform: `scale(${botao * (1 - 0.08 * toque)})`, opacity: Math.min(1, botao * 2) }}>
+        {seguindo ? <><svg width="40" height="40" viewBox="0 0 20 20"><path d="M3.5 10.5 L8 15 L16.5 5.5" fill="none" stroke={C.rosaForte} strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" /></svg>SEGUINDO</>
+          : <><span style={{ fontSize: 58, lineHeight: 1, marginTop: -6 }}>+</span>SEGUIR</>}
+      </div>
+      {mao > 0.001 && <svg width="120" height="140" viewBox="0 0 60 70" style={{ position: "absolute", left: 640 - 90 * (1 - mao), top: 1305 + 120 * (1 - mao), opacity: Math.min(1, mao * 1.5),
+        transform: `scale(${1 - 0.1 * toque})`, transformOrigin: "20% 10%" }}>
+        <path d="M18 6 C18 2 24 2 24 6 V30 L27 22 C29 18 34 20 32 25 L35 24 C37 21 42 23 40 28 L43 28 C46 27 48 30 46 34 L42 52 C41 58 36 62 30 62 H24 C18 62 14 58 11 53 L4 40 C2 36 7 33 10 37 L18 46 Z"
+          fill={C.branco} stroke={C.tinta} strokeWidth="3.2" strokeLinejoin="round" /></svg>}
+    </AbsoluteFill>
+  );
+};
+
 // ── legenda karaokê (marca-texto rosa na palavra falada) ─────────────────
 const PAGES = (() => {
   const out: { de: number; ate: number; w: typeof WORDS }[] = []; let cur: typeof WORDS = [];
@@ -405,6 +454,7 @@ export const Reel: React.FC<{ legenda: boolean }> = ({ legenda }) => {
       <NotaValidade />
       <Final />
       {legenda && <Legenda />}
+      <TelaMarca />
       <Acabamento />
       <Sons />
     </AbsoluteFill>

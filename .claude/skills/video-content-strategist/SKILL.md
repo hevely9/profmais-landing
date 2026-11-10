@@ -11,7 +11,7 @@ entende a rotina dela confia mais do que em dez posts estáticos.
 
 **Antes de tudo:** leia `.claude/product-marketing-context.md`. Só pergunte o que não estiver lá.
 
-**Leia também `references/aprendizados-virais.md`**: o que fez vídeos de referência viralizarem e o que fez o nosso Ep.01 falhar. Todo roteiro precisa seguir essas regras.
+**Leia primeiro `references/padrao-aprovado.md`** (o formato que o usuário aprovou como perfeito, incluindo o final obrigatório da @explicafarmacia). **Leia também `references/aprendizados-virais.md`**: o que fez vídeos de referência viralizarem e o que fez o nosso Ep.01 falhar. Todo roteiro precisa seguir essas regras.
 
 ## Perguntas iniciais (só as que faltarem, todas de uma vez)
 1. Objetivo do vídeo: alcance (novos seguidores), confiança (prova) ou venda (WhatsApp)?
