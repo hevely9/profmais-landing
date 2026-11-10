@@ -36,53 +36,85 @@ const Escrita: React.FC<{ at: number; dur?: number; size?: number; color?: strin
 
 // ── CENA A: o rosto ───────────────────────────────────────────────────────
 const P = { x: 668, y: 1140 }; // ponto da bochecha onde a câmera entra
+const mix = (a: number, b: number, p: number) => a + (b - a) * p;
+const PISCA = [0.55, 2.05, 16.5, 18.75, 19.85];
 const Rosto: React.FC<{ t: number }> = ({ t }) => {
   const { f, fps } = useT();
   const depois = t >= T.volta[0];
-  const pisca = !depois && Math.abs(t - 0.32) < 0.05 ? 0.15 : 1;
+  const relax = lin(t, T.relaxa, T.relaxa + 0.4);
+  const w = depois ? 1 - relax : lin(t, T.preocupa, T.preocupa + 0.4);            // preocupação (sobrancelhas, boca)
+  const olhar = depois ? 1 - relax : lin(t, T.preocupa - 0.05, T.preocupa + 0.25); // olhos vão para a bochecha
+  const pisca = PISCA.some((x) => Math.abs(t - x) < 0.06) ? 0.12 : 1;
   const mira = sp(f, fps, T.mira, SP.pop) * (1 - lin(t, T.mergulho[0] + 0.25, T.mergulho[0] + 0.45));
   const esp = sp(f, fps, T.espinha, SP.pop);
-  const olho = depois ? 7 : 0;
-  const balanco = Math.sin(t * 1.8) * 4;
+  const duvida = sp(f, fps, T.preocupa + 0.2, SP.pop) * (1 - lin(t, T.mira + 0.2, T.mira + 0.45));
+  // mão: sobe, toca duas vezes, recua (antes) · sobe para espremer e desiste (depois)
+  const REST = { x: 930, y: 2090 }, TOQUE = { x: 744, y: 1224 }, RECUO = { x: 806, y: 1306 }, QUASE = { x: 772, y: 1254 };
+  let H = REST;
+  if (!depois) {
+    const sobe = lin(t, T.mao[0], T.mao[1], Easing.out(Easing.cubic));
+    const bate = t > T.mao[1] && t < T.mao[1] + 0.6 ? Math.abs(Math.sin(((t - T.mao[1]) * Math.PI) / 0.3)) : 0;
+    const recuo = lin(t, T.mira - 0.12, T.mira + 0.22);
+    H = { x: mix(mix(REST.x, TOQUE.x, sobe), RECUO.x, recuo) + bate * 11, y: mix(mix(REST.y, TOQUE.y, sobe), RECUO.y, recuo) + bate * 12 };
+  } else {
+    const p = lin(t, T.espreme[0], T.espreme[1], Easing.out(Easing.cubic)) * (1 - lin(t, T.nao + 0.4, T.nao + 1.0, Easing.in(Easing.cubic)));
+    H = { x: mix(REST.x, QUASE.x, p), y: mix(REST.y, QUASE.y, p) + Math.sin(t * 20) * 3 * p * (t < T.nao ? 1 : 0) };
+  }
+  const dl = Math.hypot(P.x - H.x, P.y - H.y) || 1, dx = (P.x - H.x) / dl, dy = (P.y - H.y) / dl;
+  const S = { x: 812, y: 1570 }, W = { x: H.x - dx * 44, y: H.y - dy * 44 };
+  const E = { x: (S.x + W.x) / 2 + 95, y: (S.y + W.y) / 2 + 40 };
+  const naoBal = t > T.nao && t < T.nao + 0.8 ? Math.sin((t - T.nao) * 16) * 4.5 * (1 - lin(t, T.nao + 0.4, T.nao + 0.8)) : 0;
+  const tilt = (depois ? 2 * (1 - relax) : 3.2 * lin(t, T.mao[0] + 0.3, T.mao[1])) + naoBal;
+  const balanco = Math.sin(t * 1.8) * 4, respira = 1 + 0.012 * Math.sin(t * 2.4);
+  const ondulada = depois && relax < 0.5;
+  const m = depois ? 0.6 * relax : mix(1, -0.3, w);
   return (
     <svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
       <g transform={`translate(0 ${balanco})`}>
-        <path d="M250 1010 C230 700 380 600 540 600 C700 600 850 700 830 1010 L852 1430 C760 1480 320 1480 228 1430 Z" fill={C.cabelo} />
-        <path d="M150 1960 C150 1580 320 1450 470 1415 L610 1415 C760 1450 930 1580 930 1960 Z" fill="#E0929B" />
-        <rect x="468" y="1220" width="144" height="210" rx="40" fill={C.peleSombra} />
-        <ellipse cx="540" cy="1420" rx="100" ry="34" fill={C.peleSombra} />
-        <ellipse cx="300" cy="1035" rx="34" ry="54" fill={C.pele} stroke={C.peleSombra} strokeWidth="5" />
-        <ellipse cx="780" cy="1035" rx="34" ry="54" fill={C.pele} stroke={C.peleSombra} strokeWidth="5" />
-        <path d="M300 980 C300 760 420 720 540 720 C660 720 780 760 780 980 C780 1180 660 1300 540 1300 C420 1300 300 1180 300 980 Z" fill={C.pele} />
-        <path d="M292 1000 C276 760 420 688 560 698 C704 700 804 790 788 1000 C764 884 700 824 604 802 C522 864 400 884 332 872 C306 904 296 956 292 1000 Z" fill={C.cabelo} />
-        <ellipse cx="392" cy="1100" rx="48" ry="28" fill="#F0A1A1" opacity="0.42" />
-        <ellipse cx="690" cy="1100" rx="48" ry="28" fill="#F0A1A1" opacity="0.42" />
-        {/* sobrancelhas */}
-        {depois ? <>
-          <path d="M392 934 Q440 902 492 906" fill="none" stroke={C.cabelo} strokeWidth="12" strokeLinecap="round" />
-          <path d="M588 906 Q640 902 688 934" fill="none" stroke={C.cabelo} strokeWidth="12" strokeLinecap="round" />
-        </> : <>
-          <path d="M394 926 Q440 900 490 918" fill="none" stroke={C.cabelo} strokeWidth="12" strokeLinecap="round" />
-          <path d="M590 918 Q640 900 686 926" fill="none" stroke={C.cabelo} strokeWidth="12" strokeLinecap="round" />
-        </>}
-        {/* olhos */}
-        {[445, 635].map((x) => <g key={x} transform={`translate(${x + olho} ${990 + olho}) scale(1 ${pisca})`}>
-          <ellipse rx="21" ry="27" fill="#2A1E18" /><circle cx="-6" cy="-9" r="7" fill="#fff" /></g>)}
-        <path d="M540 1035 Q524 1090 548 1096" fill="none" stroke="#D9A27E" strokeWidth="8" strokeLinecap="round" />
-        {depois
-          ? <path d="M494 1186 Q518 1164 540 1182 Q562 1200 588 1178" fill="none" stroke="#B5524F" strokeWidth="12" strokeLinecap="round" />
-          : <path d="M480 1166 Q540 1222 600 1166" fill="none" stroke="#B5524F" strokeWidth="12" strokeLinecap="round" />}
-        {/* mira no poro */}
-        {mira > 0.01 && <g transform={`translate(${P.x} ${P.y}) scale(${mira}) rotate(${t * 90})`}>
-          <circle r="46" fill="none" stroke={C.rosaForte} strokeWidth="6" strokeDasharray="20 12" strokeLinecap="round" />
-          <circle r="4" fill={C.rosaForte} /></g>}
-        {/* a espinha */}
-        {depois && <g transform={`translate(${P.x} ${P.y}) scale(${esp})`}>
-          <circle r="38" fill="#F08080" opacity="0.4" />
-          <circle r="18" fill="#DE5A57" /><circle cx="-5" cy="-6" r="5.5" fill="#fff" opacity="0.85" />
-          {[-50, -5, 40].map((a) => <line key={a} x1="50" y1="0" x2="72" y2="0" stroke={C.rosaForte} strokeWidth="6" strokeLinecap="round" transform={`rotate(${a - 20})`}
-            opacity={lin(t, T.espinha + 0.1, T.espinha + 0.3)} />)}
-        </g>}
+        <g transform={`translate(540 1500) scale(1 ${respira}) translate(-540 ${-1500 - 8 * w})`}>
+          <path d="M150 1960 C150 1580 320 1450 470 1415 L610 1415 C760 1450 930 1580 930 1960 Z" fill="#E0929B" />
+        </g>
+        <g transform={`rotate(${tilt} 540 1330)`}>
+          <path d="M250 1010 C230 700 380 600 540 600 C700 600 850 700 830 1010 L852 1430 C760 1480 320 1480 228 1430 Z" fill={C.cabelo} />
+          <rect x="468" y="1220" width="144" height="210" rx="40" fill={C.peleSombra} />
+          <ellipse cx="540" cy="1420" rx="100" ry="34" fill={C.peleSombra} />
+          <ellipse cx="300" cy="1035" rx="34" ry="54" fill={C.pele} stroke={C.peleSombra} strokeWidth="5" />
+          <ellipse cx="780" cy="1035" rx="34" ry="54" fill={C.pele} stroke={C.peleSombra} strokeWidth="5" />
+          <path d="M300 980 C300 760 420 720 540 720 C660 720 780 760 780 980 C780 1180 660 1300 540 1300 C420 1300 300 1180 300 980 Z" fill={C.pele} />
+          <path d="M292 1000 C276 760 420 688 560 698 C704 700 804 790 788 1000 C764 884 700 824 604 802 C522 864 400 884 332 872 C306 904 296 956 292 1000 Z" fill={C.cabelo} />
+          <ellipse cx="392" cy="1100" rx="48" ry="28" fill="#F0A1A1" opacity="0.42" />
+          <ellipse cx="690" cy="1100" rx="48" ry="28" fill="#F0A1A1" opacity="0.42" />
+          <path d={`M${mix(394, 392, w)} ${mix(926, 936, w)} Q440 ${mix(900, 900, w)} ${mix(490, 494, w)} ${mix(918, 902, w)}`} fill="none" stroke={C.cabelo} strokeWidth="12" strokeLinecap="round" />
+          <path d={`M${mix(590, 586, w)} ${mix(918, 902, w)} Q640 ${mix(900, 900, w)} ${mix(686, 688, w)} ${mix(926, 936, w)}`} fill="none" stroke={C.cabelo} strokeWidth="12" strokeLinecap="round" />
+          {[445, 635].map((x) => <g key={x} transform={`translate(${x + 9 * olhar} ${990 + 8 * olhar}) scale(1 ${pisca})`}>
+            <ellipse rx="21" ry="27" fill="#2A1E18" /><circle cx="-6" cy="-9" r="7" fill="#fff" /></g>)}
+          <path d="M540 1035 Q524 1090 548 1096" fill="none" stroke="#D9A27E" strokeWidth="8" strokeLinecap="round" />
+          {ondulada
+            ? <path d="M494 1186 Q518 1164 540 1182 Q562 1200 588 1178" fill="none" stroke="#B5524F" strokeWidth="12" strokeLinecap="round" />
+            : <path d={`M${mix(492, 480, Math.max(0, m))} 1170 Q540 ${1170 + 54 * m} ${mix(588, 600, Math.max(0, m))} 1170`} fill="none" stroke="#B5524F" strokeWidth="12" strokeLinecap="round" />}
+          {mira > 0.01 && <g transform={`translate(${P.x} ${P.y}) scale(${mira}) rotate(${t * 90})`}>
+            <circle r="46" fill="none" stroke={C.rosaForte} strokeWidth="6" strokeDasharray="20 12" strokeLinecap="round" />
+            <circle r="4" fill={C.rosaForte} /></g>}
+          {depois && <g transform={`translate(${P.x} ${P.y}) scale(${esp})`}>
+            <circle r={38 + 3 * Math.sin(t * 6)} fill="#F08080" opacity="0.4" />
+            <circle r="18" fill="#DE5A57" /><circle cx="-5" cy="-6" r="5.5" fill="#fff" opacity="0.85" />
+            {[-50, -5, 40].map((a) => <line key={a} x1="50" y1="0" x2="72" y2="0" stroke={C.rosaForte} strokeWidth="6" strokeLinecap="round" transform={`rotate(${a - 20})`}
+              opacity={lin(t, T.espinha + 0.1, T.espinha + 0.3) * (1 - lin(t, T.espinha + 1.0, T.espinha + 1.4))} />)}
+          </g>}
+        </g>
+        {/* "?" de dúvida */}
+        {duvida > 0.01 && <g transform={`translate(840 770) scale(${duvida}) rotate(${12 + Math.sin(t * 5) * 5})`}>
+          <text fontFamily={MAO} fontWeight={700} fontSize="230" fill={C.rosaForte} textAnchor="middle">?</text></g>}
+        {/* braço e mão */}
+        <path d={`M${S.x} ${S.y} Q${E.x} ${E.y} ${W.x} ${W.y}`} fill="none" stroke="#CF7F8B" strokeWidth="104" strokeLinecap="round" />
+        <path d={`M${S.x} ${S.y} Q${E.x} ${E.y} ${W.x} ${W.y}`} fill="none" stroke="#E0929B" strokeWidth="94" strokeLinecap="round" />
+        <g transform={`translate(${H.x} ${H.y}) rotate(${(Math.atan2(dy, dx) * 180) / Math.PI})`}>
+          <rect x="-6" y="-17" width="100" height="34" rx="17" fill={C.pele} stroke={C.peleSombra} strokeWidth="5" />
+          <circle r="50" fill={C.pele} stroke={C.peleSombra} strokeWidth="5" />
+          <rect x="-4" y="-14" width="60" height="28" rx="14" fill={C.pele} />
+          {[0, 1, 2].map((k) => <circle key={k} cx={30 - k * 6} cy={30 + k * 9 - 4} r="15" fill={C.pele} stroke={C.peleSombra} strokeWidth="4" />)}
+          <circle cx="2" cy="6" r="40" fill={C.pele} />
+        </g>
       </g>
     </svg>
   );
@@ -98,7 +130,7 @@ const FLOCOS = [
 const BACT = Array.from({ length: 15 }, (_, i) => {
   const ger = Math.floor(Math.log2(i + 1));
   return { x: 540 + (((i * 37) % 7) - 3) * 11, y: 730 + ((i * 5) % 15) * 28, rot: (i * 53) % 180, pai: i === 0 ? 0 : Math.floor((i - 1) / 2),
-    at: T.p2 + 0.15 + ger * 0.3 + (i % 3) * 0.04 };
+    at: T.p3 + 0.3 + ger * 0.45 + (i % 3) * 0.05 };
 });
 const DEFESA = [
   { x0: 120, y0: 1380, x1: 440, y1: 830 }, { x0: 960, y0: 1380, x1: 640, y1: 830 }, { x0: 60, y0: 1050, x1: 428, y1: 980 }, { x0: 1020, y0: 1050, x1: 652, y1: 700 },
@@ -116,10 +148,11 @@ const Rotulo: React.FC<{ x: number; y: number; de: number; ate: number; seta: st
 
 const Pele: React.FC<{ t: number }> = ({ t }) => {
   const { f, fps } = useT();
-  const sebo = lin(t, T.p1 + 0.2, T.p1 + 1.6);
-  const infl = lin(t, T.p3 + 0.1, T.p3 + 1.5);
-  const b = lin(t, T.p3 + 0.35, T.p3 + 1.6, Easing.out(Easing.cubic));
-  const pulso = t > T.p1 && t < T.p2 ? 1 + 0.045 * Math.sin((t - T.p1) * 11) : 1;
+  const sebo = 0.4 * lin(t, T.p1 + 0.4, T.p2 - 0.4) + 0.6 * lin(t, T.p2 + 1.0, T.p2 + 2.3);
+  const cresce = 1 + 0.2 * lin(t, T.p1 + 0.3, T.p1 + 1.7);
+  const infl = lin(t, T.p4 + 0.2, T.p4 + 2.2);
+  const b = lin(t, T.p4 + 0.6, T.p4 + 2.5, Easing.out(Easing.cubic));
+  const pulso = cresce * (t > T.p1 && t < T.p3 ? 1 + 0.045 * Math.sin((t - T.p1) * 11) : 1);
   const bate = 1 + 0.03 * infl * Math.sin(t * 16);
   const ySebo = 960 - 365 * sebo + Math.sin(t * 5) * 4;
   const w = 150 + 120 * b, h = 118 * b;
@@ -171,8 +204,11 @@ const Pele: React.FC<{ t: number }> = ({ t }) => {
         </g>
         <path d="M540 1262 C534 1000 540 760 548 560 C552 470 566 400 590 330" fill="none" stroke="#5B4033" strokeWidth="15" strokeLinecap="round" />
         {/* gotas de sebo saindo da glândula */}
-        {t > T.p1 && t < T.p3 && [0, 1, 2].map((i) => { const pp = ((t - T.p1) * 1.3 + i / 3) % 1;
+        {t > T.p1 && t < T.p4 && [0, 1, 2].map((i) => { const pp = ((t - T.p1) * 1.3 + i / 3) % 1;
           return <circle key={i} cx={655 - 70 * pp} cy={957 - 55 * pp} r={10} fill={C.seboClaro} opacity={Math.sin(pp * Math.PI)} />; })}
+        {/* pele saudável: o sebo sai pelo poro e protege a pele */}
+        {t > T.p1 - 1 && t < T.p2 + 0.9 && [0, 1, 2].map((i) => { const pp = (t * 0.7 + i / 3) % 1; const sai = 1 - lin(t, T.p2 + 0.5, T.p2 + 0.9);
+          return <circle key={i} cx={566 + (pp > 0.85 ? (pp - 0.85) * 300 : 0)} cy={ySebo - Math.min(pp, 0.85) / 0.85 * (ySebo - 548)} r={9} fill={C.sebo} stroke="#D9A93F" strokeWidth="2" opacity={Math.sin(pp * Math.PI) * sai} />; })}
         {/* bactérias */}
         {BACT.map((bc, i) => { const p = sp(f, fps, bc.at, SP.pop); if (p <= 0.001) return null; const pa = BACT[bc.pai];
           const x = pa.x + (bc.x - pa.x) * Math.min(1, p), y = pa.y + (bc.y - pa.y) * Math.min(1, p);
@@ -182,7 +218,7 @@ const Pele: React.FC<{ t: number }> = ({ t }) => {
       {/* superfície: camada córnea */}
       {superficie.map((x, i) => <rect key={i} x={x} y={548 + (i % 2) * 5} width="64" height="15" rx="7.5" fill="#EFCDB4" stroke="#D6A98A" strokeWidth="1.6" />)}
       {/* células mortas caindo no poro */}
-      {FLOCOS.map((fl, i) => { const p = lin(t, T.p1 + 0.5 + i * 0.13, T.p1 + 1.0 + i * 0.13); if (p <= 0) return null;
+      {FLOCOS.map((fl, i) => { const p = lin(t, T.p2 + 0.4 + i * 0.14, T.p2 + 1.0 + i * 0.14); if (p <= 0) return null;
         const borda = fl.x0 < 540 ? 470 : 610; const a = Math.min(1, p / 0.6), c = Math.max(0, (p - 0.6) / 0.4);
         const x = fl.x0 + (borda - fl.x0) * a + (fl.x1 - borda) * c, y = 545 + (fl.y1 - 545) * c - (1 - b) * 0 - h * 0.55 * b;
         return <polygon key={i} points={FLOCO} transform={`translate(${x} ${y}) rotate(${fl.r * (a + c)})`} fill="#EBCFB6" stroke="#B98F70" strokeWidth="3" strokeLinejoin="round" />; })}
@@ -194,15 +230,17 @@ const Pele: React.FC<{ t: number }> = ({ t }) => {
         <ellipse cx={540 - w * 0.28} cy={566 - h * 0.9} rx={w * 0.12} ry={h * 0.12} fill="#fff" opacity={0.45 * b} />
       </g>}
       {/* células de defesa */}
-      {DEFESA.map((d, i) => { const p = lin(t, T.p3 + 0.2 + i * 0.07, T.p3 + 1.1 + i * 0.07, Easing.out(Easing.cubic)); if (p <= 0) return null;
+      {DEFESA.map((d, i) => { const p = lin(t, T.p4 + 0.5 + i * 0.1, T.p4 + 1.7 + i * 0.1, Easing.out(Easing.cubic)); if (p <= 0) return null;
         const x = d.x0 + (d.x1 - d.x0) * p, y = d.y0 + (d.y1 - d.y0) * p + Math.sin(t * 7 + i) * 6;
         return <g key={i} transform={`translate(${x} ${y})`} opacity={Math.min(1, p * 4)}>
           <circle r="25" fill="#FFFFFF" stroke="#9FB4DD" strokeWidth="5" /><circle cx="4" cy="3" r="10" fill="#B9C9EC" /></g>; })}
       {/* rótulos à mão */}
-      <Rotulo x={690} y={1210} de={T.p1 + 0.25} ate={T.p2 - 0.35} seta="M800 1150 C820 1120 810 1100 790 1085">glândula sebácea</Rotulo>
-      <Rotulo x={640} y={770} de={T.p1 + 0.7} ate={T.p2 - 0.35} seta="M650 775 C620 790 600 800 578 815">sebo</Rotulo>
-      <Rotulo x={70} y={455} de={T.p1 + 0.9} ate={T.p2 - 0.35} seta="M300 470 C340 490 370 510 400 535">células mortas</Rotulo>
-      <Rotulo x={150} y={1300} de={T.p3 + 0.6} ate={T.volta[0] - 0.1} seta="M330 1245 C360 1210 390 1170 425 1130">células de defesa</Rotulo>
+      <Rotulo x={300} y={500} de={T.p1 + 0.2} ate={T.p2 - 0.4} seta="M392 512 C420 522 446 536 466 554">poro</Rotulo>
+      <Rotulo x={680} y={1225} de={T.p1 + 0.6} ate={T.p2 - 0.4} seta="M800 1168 C820 1140 812 1118 792 1102">glândula sebácea</Rotulo>
+      <Rotulo x={648} y={800} de={T.p1 + 1.2} ate={T.p2 - 0.4} seta="M650 806 C624 818 604 826 580 838">sebo</Rotulo>
+      <Rotulo x={70} y={455} de={T.p2 + 0.5} ate={T.p3 - 0.4} seta="M300 470 C340 490 370 510 400 535">células mortas</Rotulo>
+      <Rotulo x={650} y={700} de={T.p2 + 1.7} ate={T.p3 - 0.4} seta="M648 706 C624 716 606 722 584 730">sebo preso</Rotulo>
+      <Rotulo x={150} y={1300} de={T.p4 + 1.0} ate={T.volta[0] - 0.1} seta="M330 1245 C360 1210 390 1170 425 1130">células de defesa</Rotulo>
     </svg>
   );
 };
@@ -226,7 +264,7 @@ const Titulo: React.FC = () => {
     color: C.tinta, opacity: Math.min(1, p * 1.6) * (1 - e), transform: `translateY(${(1 - p) * 40 - e * 40}px) scale(${1 + e * 0.15})` }}>
     COMO NASCE<br />UMA <Marca p={lin(t, 0.3, 0.7)}>ESPINHA</Marca>?</div>;
 };
-const Passo: React.FC<{ n: number; de: number; ate: number; titulo: string; sub: string; size?: number }> = ({ n, de, ate, titulo, sub, size = 60 }) => {
+const Passo: React.FC<{ n: number; de: number; ate: number; titulo: string; sub: string; size?: number; subSize?: number }> = ({ n, de, ate, titulo, sub, size = 60, subSize = 58 }) => {
   const { f, fps, t } = useT();
   if (t < de || t > ate + 0.25) return null;
   const p = sp(f, fps, de, SP.mola), e = lin(t, ate, ate + 0.22, Easing.in(Easing.cubic));
@@ -238,7 +276,7 @@ const Passo: React.FC<{ n: number; de: number; ate: number; titulo: string; sub:
       <div style={{ position: "absolute", left: 34, top: 44, width: 112, height: 112, borderRadius: 56, background: C.rosaForte, color: C.branco, display: "grid", placeItems: "center",
         fontFamily: SANS, fontWeight: 800, fontSize: 68, transform: `scale(${chip}) rotate(${(1 - chip) * -40}deg)` }}>{n}</div>
       <div style={{ position: "absolute", left: 176, top: 40, fontFamily: SANS, fontWeight: 800, fontSize: size, letterSpacing: "-0.04em", color: C.tinta, whiteSpace: "nowrap" }}>{titulo}</div>
-      <Escrita at={de + 0.25} dur={0.55} size={58} color={C.rosaForte} style={{ left: 176, top: 112, textAlign: "left", whiteSpace: "nowrap" }}>{sub}</Escrita>
+      <Escrita at={de + 0.3} dur={0.7} size={subSize} color={C.rosaForte} style={{ left: 176, top: 112, textAlign: "left", whiteSpace: "nowrap" }}>{sub}</Escrita>
     </div>
   );
 };
@@ -246,15 +284,20 @@ const Resultado: React.FC = () => {
   const { f, fps, t } = useT();
   if (t < T.espinha) return null;
   const p = sp(f, fps, T.espinha + 0.1, SP.mola), e = lin(t, T.fim - 0.3, T.fim - 0.05);
-  const n = sp(f, fps, T.espinha + 0.45, SP.mola);
+  const n = sp(f, fps, T.higiene, SP.mola);
+  const nao = sp(f, fps, T.nao, SP.pop);
   return <>
     <div style={{ position: "absolute", left: 0, right: 0, top: 170, textAlign: "center", fontFamily: SANS, fontWeight: 800, fontSize: 104, lineHeight: 1.0, letterSpacing: "-0.045em",
       color: C.tinta, opacity: Math.min(1, p * 1.6) * (1 - e), transform: `translateY(${(1 - p) * 40}px)` }}>
       E ASSIM NASCE<br />A <Marca p={lin(t, T.espinha + 0.4, T.espinha + 0.8)}>ESPINHA</Marca>!</div>
     <div style={{ position: "absolute", left: 150, top: 1490, width: 780, height: 150, borderRadius: 36, background: C.branco, boxShadow: "0 30px 60px -30px rgba(50,40,30,0.55)",
       opacity: Math.min(1, n * 1.6) * (1 - e), transform: `translateY(${(1 - n) * 50}px) rotate(-2.5deg)` }}>
-      <Escrita at={T.espinha + 0.55} dur={0.6} size={78} sub style={{ left: 30, width: 720, top: 24 }}>não é falta de higiene!</Escrita>
+      <Escrita at={T.higiene + 0.1} dur={0.6} size={78} sub style={{ left: 30, width: 720, top: 24 }}>não é falta de higiene!</Escrita>
     </div>
+    {t >= T.nao && <div style={{ position: "absolute", left: 50, top: 1270, width: 500, height: 132, borderRadius: 34, background: C.rosaForte, color: C.branco, display: "flex",
+      alignItems: "center", justifyContent: "center", gap: 14, fontFamily: SANS, fontWeight: 800, fontSize: 56, letterSpacing: "-0.03em", boxShadow: "0 30px 60px -26px rgba(150,40,70,0.7)",
+      opacity: Math.min(1, nao * 2) * (1 - e), transform: `scale(${nao}) rotate(${-5 + Math.sin((t - T.nao) * 18) * 3 * (1 - lin(t, T.nao, T.nao + 0.6))}deg)` }}>
+      <svg width="56" height="56" viewBox="0 0 20 20"><path d="M4 4 L16 16 M16 4 L4 16" stroke="#fff" strokeWidth="3.6" strokeLinecap="round" /></svg>NÃO ESPREMA!</div>}
   </>;
 };
 
@@ -333,9 +376,10 @@ export const Reel: React.FC = () => {
       {/* luz cinematográfica dentro da pele */}
       <AbsoluteFill style={{ opacity: bOp, background: "radial-gradient(ellipse 75% 60% at 50% 48%, rgba(255,240,225,0.16) 0%, transparent 55%, rgba(70,20,30,0.42) 100%)" }} />
       <Titulo />
-      <Passo n={1} de={T.p1 + 0.1} ate={T.p2 - 0.22} titulo="O PORO ENTOPE" sub="sebo + células mortas" size={66} />
-      <Passo n={2} de={T.p2 + 0.05} ate={T.p3 - 0.22} titulo="A BACTÉRIA SE MULTIPLICA" sub="Cutibacterium acnes" size={49} />
-      <Passo n={3} de={T.p3 + 0.05} ate={T.volta[0] - 0.05} titulo="A PELE INFLAMA" sub="vermelhidão e inchaço" size={66} />
+      <Passo n={1} de={T.p1 + 0.1} ate={T.p2 - 0.22} titulo="SEBO DEMAIS" sub="a glândula acelera a produção" size={66} subSize={54} />
+      <Passo n={2} de={T.p2 + 0.05} ate={T.p3 - 0.22} titulo="O PORO ENTOPE" sub="sebo + células mortas" size={66} />
+      <Passo n={3} de={T.p3 + 0.05} ate={T.p4 - 0.22} titulo="A BACTÉRIA SE MULTIPLICA" sub="a C. acnes se alimenta do sebo" size={49} subSize={52} />
+      <Passo n={4} de={T.p4 + 0.05} ate={T.volta[0] - 0.05} titulo="A PELE INFLAMA" sub="o corpo reage e a pele incha" size={66} subSize={54} />
       <Resultado />
       <TelaMarca />
       <AbsoluteFill style={{ backgroundImage: NOISE, backgroundSize: "220px", backgroundPosition: `${(f * 7) % 220}px ${(f * 13) % 220}px`, opacity: 0.05, mixBlendMode: "multiply" }} />
