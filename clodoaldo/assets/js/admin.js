@@ -28,6 +28,9 @@
     owner: /^[A-Za-z0-9-]{1,39}$/, repo: /^[A-Za-z0-9._-]{1,100}$/, branch: /^[A-Za-z0-9._/-]{1,100}$/, base: /^[a-z0-9_-]{0,60}$/
   };
   const httpsOk = (v) => !v || /^https:\/\/[^\s<>"'`]+$/i.test(v);
+  // Link seguro para exibir: https:// ou caminho relativo do próprio site; qualquer outro esquema é descartado.
+  const safeHref = (v) => { const t = String(v || "").trim(); if (!t) return ""; if (/^https:\/\//i.test(t)) return t; if (/^[a-z][a-z0-9+.-]*:/i.test(t) || t.startsWith("//")) return ""; return t; };
+  const safeImg = (v) => { const t = String(v || "").trim(); return /^assets\/img\/[A-Za-z0-9._-]+\.(jpe?g|png|webp)$/i.test(t) ? t : ""; };
   const clip = (v, n) => String(v || "").slice(0, n);
   async function assertPdf(file) {
     if (file.size > MAX_PDF) throw new Error(`"${file.name}" tem ${(file.size / 1048576).toFixed(1)} MB. O limite é 25 MB.`);
@@ -144,7 +147,7 @@
       <td><strong>${esc(p.tipo)}</strong><br>Nº ${esc(p.numero)}/${esc(p.ano)}</td>
       <td><div class="ementa">${esc(p.ementa)}</div></td>
       <td>${esc(p.situacao || "-")}</td>
-      <td>${p.pdf ? `<a href="${esc(p.pdf)}" target="_blank" rel="noopener">abrir</a>` : '<span class="flag warn">sem PDF</span>'}</td>
+      <td>${safeHref(p.pdf) ? `<a href="${esc(safeHref(p.pdf))}" target="_blank" rel="noopener">abrir</a>` : '<span class="flag warn">sem PDF</span>'}</td>
       <td><div class="actions"><button class="btn btn-outline btn-sm" data-edit="${esc(p.id)}">Editar</button><button class="btn btn-danger btn-sm" data-del="${esc(p.id)}">Remover</button></div></td>
     </tr>`).join("");
   }
@@ -363,7 +366,7 @@
     f.elements.areasDeAtuacao.value = (deputado.areasDeAtuacao || []).join(", ");
     f.elements.destaques.value = (deputado.destaques || []).join("\n");
     $("#d-tl").innerHTML = ""; (deputado.trajetoriaPolitica || []).forEach(tlRow);
-    $("#d-foto-prev").src = deputado.foto || "assets/img/deputado-retrato.jpg";
+    $("#d-foto-prev").src = safeImg(deputado.foto) || "assets/img/retrato-480.jpg";
   }
   let novaFoto = null;
   async function resizeImage(file, max = 1400) {
