@@ -45,9 +45,16 @@ A situação oficial aparece na ficha do projeto. Nos cards, o rótulo é simpli
   conexão, o portal continua navegável e mostra um aviso.
 - `manifest.webmanifest`: permite "Adicionar à tela inicial".
 
+## Estatísticas de acesso
+
+Cloudflare Web Analytics (sem cookies), carregado nas quatro páginas públicas. O painel
+fica em dash.cloudflare.com → Web Analytics → profmais.online. O serviço não registra
+parâmetros de URL nem eventos personalizados, então as visitas a `projeto.html` aparecem
+somadas, sem separar por projeto. O painel administrativo não é medido.
+
 ## Segurança
 
-- `Content-Security-Policy` em todas as páginas: scripts e fontes só do próprio site;
+- `Content-Security-Policy` em todas as páginas: scripts só do próprio site e do medidor da Cloudflare; fontes só do próprio site;
   o painel libera apenas `api.github.com`.
 - Todo texto vindo dos JSON passa por escape antes de entrar no HTML; todo link passa
   por validação (`http(s)` ou caminho relativo; `javascript:` e `data:` são descartados).
