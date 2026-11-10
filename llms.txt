@@ -1,0 +1,21 @@
+# profmais.online
+
+> Domínio com dois sites independentes: a landing page da Prof+ (materiais pedagógicos personalizados para professores) e o Portal de Transparência Legislativa do deputado estadual Clodoaldo Rodrigues (Acre).
+
+## Prof+
+
+- [Página inicial](https://profmais.online/): serviço de materiais pedagógicos personalizados (sequências didáticas, provas, atividades) para professores.
+
+## Portal Clodoaldo Rodrigues
+
+Consulta pública e download gratuito dos projetos de lei apresentados pelo deputado na Assembleia Legislativa do Estado do Acre (ALEAC). A fonte oficial dos documentos é a ALEAC; em caso de divergência, prevalece a versão oficial.
+
+- [Início](https://profmais.online/clodoaldo/): apresentação do portal e projetos mais recentes.
+- [Projetos de lei](https://profmais.online/clodoaldo/projetos.html): lista completa por ano, com busca.
+- [Conheça o deputado](https://profmais.online/clodoaldo/deputado.html): biografia e trajetória política.
+- [Dados dos projetos (JSON)](https://profmais.online/clodoaldo/data/projetos.json): número, ano, ementa, situação, datas de tramitação e link do PDF de cada projeto.
+- [Perfil oficial na ALEAC](https://sapl.al.ac.leg.br/parlamentar/259): fonte oficial de tramitação.
+
+## Opcional
+
+- [Detalhe de um projeto](https://profmais.online/clodoaldo/projeto.html?id=projeto-de-lei-27-2026): formato `projeto.html?id=<id>`, com o `id` vindo do JSON.

@@ -36,8 +36,7 @@
           <input class="in" id="l-branch" placeholder="branch" aria-label="Branch">
           <input class="in" id="l-base" placeholder="pasta do portal" aria-label="Pasta do portal">
         </div></details>
-      <label style="display:flex;gap:8px;align-items:center;font-size:14px"><input type="checkbox" id="l-lembrar"> Manter conectado neste computador</label>
-      <p class="hint">Marque apenas em um computador pessoal. Em computador compartilhado, deixe desmarcado: o acesso termina ao fechar a aba.</p>
+      <p class="hint">Por segurança, o acesso termina quando a aba é fechada.</p>
       <button class="btn btn-primary" type="submit" style="justify-content:center">Entrar</button>
       <p class="hint" id="l-erro" style="color:#b42318"></p>
     </form>
@@ -129,7 +128,7 @@
     <div class="row">
       <div><label class="muted">Tipo *</label><input class="in" name="tipo" list="tipos" required></div>
       <div><label class="muted">Número *</label><input class="in" name="numero" required></div>
-      <div><label class="muted">Ano *</label><input class="in" name="ano" inputmode="numeric" pattern="\d{4}" required></div>
+      <div><label class="muted">Ano *</label><input class="in" name="ano" inputmode="numeric" pattern="(19|20)\d{2}" required></div>
       <div><label class="muted">Data de apresentação</label><input class="in" name="dataApresentacao" type="date"></div>
     </div>
     <div><label class="muted">Ementa *</label><textarea class="ta" name="ementa" required></textarea></div>

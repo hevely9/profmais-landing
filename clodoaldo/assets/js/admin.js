@@ -4,6 +4,7 @@
    Cada "salvar" gera um único commit, com histórico completo e reversível. */
 (function () {
   "use strict";
+  if (window.top !== window.self) { document.documentElement.textContent = ""; return; } // anti-clickjacking
 
   const DEFAULTS = { owner: "hevely9", repo: "profmais-landing", branch: "main", base: "clodoaldo" };
   const ALLOWED_API = "https://api.github.com"; // único destino de rede permitido (também fixado na CSP)
@@ -14,11 +15,26 @@
   const esc = (v) => String(v == null ? "" : v).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const norm = (v) => String(v == null ? "" : v).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().trim();
   const slug = (v) => norm(v).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-  const store = { get: (k) => { try { return sessionStorage.getItem(k) || localStorage.getItem(k); } catch { return null; } },
-    set: (k, v, persist) => { try { (persist ? localStorage : sessionStorage).setItem(k, v); } catch {} },
+  const store = { get: (k) => { try { return sessionStorage.getItem(k); } catch { return null; } },
+    set: (k, v) => { try { sessionStorage.setItem(k, v); } catch {} },
     clear: () => { try { ["gh_token", "gh_cfg"].forEach((k) => { sessionStorage.removeItem(k); localStorage.removeItem(k); }); } catch {} } };
 
   let repo = null, token = null;
+
+  // ---------- validação de entradas ----------
+  const MAX_PDF = 25 * 1024 * 1024, MAX_IMG = 15 * 1024 * 1024;
+  const RE = {
+    ano: /^(19|20)\d{2}$/, numero: /^\d{1,5}[A-Za-z]?$/, data: /^\d{4}-\d{2}-\d{2}$/,
+    owner: /^[A-Za-z0-9-]{1,39}$/, repo: /^[A-Za-z0-9._-]{1,100}$/, branch: /^[A-Za-z0-9._/-]{1,100}$/, base: /^[a-z0-9_-]{0,60}$/
+  };
+  const httpsOk = (v) => !v || /^https:\/\/[^\s<>"'`]+$/i.test(v);
+  const clip = (v, n) => String(v || "").slice(0, n);
+  async function assertPdf(file) {
+    if (file.size > MAX_PDF) throw new Error(`"${file.name}" tem ${(file.size / 1048576).toFixed(1)} MB. O limite é 25 MB.`);
+    const head = new Uint8Array(await file.slice(0, 5).arrayBuffer());
+    if (String.fromCharCode(...head) !== "%PDF-") throw new Error(`"${file.name}" não é um PDF válido.`);
+  }
+
   let projetos = [], deputado = {}, config = {};
 
   function toast(msg, err) {
@@ -72,6 +88,7 @@
         results[path] = next;
         files = files.filter((f) => f.path !== path).concat([{ path, b64: utf8ToB64(JSON.stringify(next, null, 2) + "\n") }]);
       }
+      if (results["data/projetos.json"]) files = files.filter((f) => f.path !== "sitemap.xml").concat([{ path: "sitemap.xml", b64: utf8ToB64(sitemapXML(results["data/projetos.json"])) }]);
       for (const f of files) {
         const blob = await gh(`${R()}/git/blobs`, { method: "POST", body: JSON.stringify({ content: f.b64, encoding: "base64" }) });
         tree.push({ path: P(f.path), mode: "100644", type: "blob", sha: blob.sha });
@@ -87,13 +104,22 @@
     throw new Error("O repositório mudou durante o envio. Recarregue a página e tente novamente.");
   }
 
+  function sitemapXML(list) {
+    const site = "https://profmais.online/" + (repo.base ? repo.base.replace(/\/$/, "") + "/" : "");
+    const x = (u) => `  <url><loc>${u.replace(/&/g, "&amp;")}</loc></url>\n`;
+    return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+      [site, site + "projetos.html", site + "deputado.html"].concat((list || []).map((p) => site + "projeto.html?id=" + encodeURIComponent(p.id))).map(x).join("") + "</urlset>\n";
+  }
+
   // ---------- login ----------
-  async function login(tok, cfg, persist) {
+  async function login(tok, cfg) {
+    if (!RE.owner.test(cfg.owner) || !RE.repo.test(cfg.repo) || !RE.branch.test(cfg.branch) || !RE.base.test(cfg.base)) throw new Error("Configuração do repositório inválida.");
+    if (!/^[A-Za-z0-9_]{20,255}$/.test(tok)) throw new Error("O token não tem o formato de um token do GitHub.");
     token = tok; repo = cfg;
     const info = await gh(R());
     if (!info.permissions || !info.permissions.push) throw new Error("Este token não tem permissão de escrita no repositório.");
     let user = ""; try { user = (await gh("/user")).login; } catch {}
-    store.set("gh_token", tok, persist); store.set("gh_cfg", JSON.stringify(cfg), persist);
+    store.set("gh_token", tok); store.set("gh_cfg", JSON.stringify(cfg));
     $("#who-name").textContent = user ? "Conectado como " + user : "Conectado";
     $("#who").hidden = false; $("#v-login").hidden = true; $("#v-app").hidden = false;
     await loadAll();
@@ -146,12 +172,19 @@
       ementa: v("ementa"), descricao: v("descricao"), situacao: v("situacao"), linkOficial: v("linkOficial"),
       palavrasChave: v("palavrasChave").split(",").map((s) => s.trim()).filter(Boolean)
     };
+    p.ementa = clip(p.ementa, 2000); p.descricao = clip(p.descricao, 2000); p.tipo = clip(p.tipo, 80); p.situacao = clip(p.situacao, 120);
+    p.palavrasChave = p.palavrasChave.slice(0, 15).map((k) => clip(k, 40));
+    if (!RE.ano.test(p.ano)) { toast("Ano inválido. Use 4 dígitos, por exemplo 2026.", true); return; }
+    if (!RE.numero.test(p.numero)) { toast("Número inválido. Use só o número, por exemplo 27.", true); return; }
+    if (p.dataApresentacao && !RE.data.test(p.dataApresentacao)) { toast("Data de apresentação inválida.", true); return; }
+    if (!httpsOk(p.linkOficial) || !httpsOk(v("pdfUrl"))) { toast("Os links precisam começar com https://", true); return; }
     p.id = projId(p);
     const oldId = editing && editing.id;
     if (p.id !== oldId && projetos.some((x) => x.id === p.id)) { toast("Já existe um projeto com esse tipo, número e ano.", true); return; }
     const file = f.elements.arquivo.files[0];
     const files = [], deletes = [];
     if (file) {
+      try { await assertPdf(file); } catch (err) { toast(err.message, true); return; }
       p.pdf = pdfPath(p);
       files.push({ path: p.pdf, b64: bufToB64(await file.arrayBuffer()) });
       if (editing && editing.pdf && !/^https?:/i.test(editing.pdf) && editing.pdf !== p.pdf) deletes.push(editing.pdf);
@@ -200,7 +233,7 @@
 
   async function pdfText(buf) {
     const lib = await loadPdfJs();
-    const doc = await lib.getDocument({ data: buf.slice(0) }).promise;
+    const doc = await lib.getDocument({ data: buf.slice(0), isEvalSupported: false, enableXfa: false }).promise;
     let out = "";
     for (let i = 1; i <= Math.min(doc.numPages, 2); i++) {
       const page = await doc.getPage(i);
@@ -253,6 +286,9 @@
     for (const file of arr) {
       const item = { file, sel: true, status: "lendo" };
       fila.push(item); renderFila();
+      try {
+        await assertPdf(file);
+      } catch (err) { fila.pop(); renderFila(); toast(err.message, true); continue; }
       try {
         item.buf = await file.arrayBuffer();
         const txt = await pdfText(item.buf);
@@ -331,6 +367,8 @@
   }
   let novaFoto = null;
   async function resizeImage(file, max = 1400) {
+    if (!/^image\/(jpeg|png|webp)$/.test(file.type)) throw new Error("Use uma foto JPG, PNG ou WebP.");
+    if (file.size > MAX_IMG) throw new Error("A foto passa de 15 MB.");
     const img = await createImageBitmap(file);
     const s = Math.min(1, max / Math.max(img.width, img.height));
     const c = document.createElement("canvas"); c.width = Math.round(img.width * s); c.height = Math.round(img.height * s);
@@ -362,6 +400,9 @@
     e.preventDefault();
     const f = e.target, d = {};
     ["aleacUrl", "aleacProjetosUrl", "instagram", "facebook", "whatsappGrupo"].forEach((k) => { d[k] = f.elements[k].value.trim(); });
+    if (!Object.values(d).every(httpsOk)) { toast("Todos os links precisam começar com https://", true); return; }
+    if (d.whatsappGrupo && !/^https:\/\/chat\.whatsapp\.com\/[A-Za-z0-9]+$/.test(d.whatsappGrupo.split("?")[0])) { toast("O link do grupo deve ser do tipo https://chat.whatsapp.com/…", true); return; }
+    if (d.whatsappGrupo) d.whatsappGrupo = d.whatsappGrupo.split("?")[0];
     f.classList.add("busy");
     try {
       const res = await commit("Atualiza links oficiais", { json: { "data/config.json": (cur) => ({ ...(cur || {}), ...d, atualizadoEm: new Date().toISOString().slice(0, 10) }) } });
@@ -379,12 +420,12 @@
       e.preventDefault(); $("#l-erro").textContent = "";
       const cfg = { owner: $("#l-owner").value.trim(), repo: $("#l-repo").value.trim(), branch: $("#l-branch").value.trim() || "main", base: $("#l-base").value.trim() };
       e.target.classList.add("busy");
-      try { await login($("#l-token").value.trim(), cfg, $("#l-lembrar").checked); }
+      try { await login($("#l-token").value.trim(), cfg); }
       catch (err) { $("#l-erro").textContent = err.status === 401 ? "Token inválido ou expirado." : err.status === 404 ? "Repositório não encontrado ou sem acesso para este token." : err.message; }
       finally { e.target.classList.remove("busy"); }
     });
     const tok = store.get("gh_token");
-    if (tok) login(tok, saved, !!localStorage.getItem("gh_token")).catch(() => { store.clear(); });
+    if (tok) login(tok, saved).catch(() => { store.clear(); });
     $("#sair").addEventListener("click", () => { store.clear(); location.reload(); });
 
     $$(".tab").forEach((t) => t.addEventListener("click", () => {
@@ -417,7 +458,8 @@
     $("#d-tl-add").addEventListener("click", () => tlRow());
     $("#d-foto").addEventListener("change", async (e) => {
       const f = e.target.files[0]; if (!f) return;
-      novaFoto = await resizeImage(f); $("#d-foto-prev").src = URL.createObjectURL(novaFoto.blob);
+      try { novaFoto = await resizeImage(f); } catch (err) { toast(err.message, true); e.target.value = ""; return; }
+      $("#d-foto-prev").src = URL.createObjectURL(novaFoto.blob);
       toast("Foto pronta. Clique em “Salvar biografia” para publicar.");
     });
     $("#f-dep").addEventListener("submit", saveDeputado);
