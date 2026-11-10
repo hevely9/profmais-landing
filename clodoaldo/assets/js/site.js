@@ -163,7 +163,7 @@
     } else if (stats) { stats.hidden = true; }
     const resumo = $("#sobre-resumo");
     if (resumo) { if (dep.resumo) resumo.textContent = dep.resumo; else resumo.hidden = true; }
-    if (dep.foto) $$("[data-foto]").forEach((img) => { img.src = dep.foto; img.removeAttribute("srcset"); });
+    if (/^assets\/img\/[A-Za-z0-9._-]+\.(jpe?g|png|webp)$/i.test(dep.foto || "")) $$("[data-foto]").forEach((img) => { img.src = dep.foto; img.removeAttribute("srcset"); });
   }
 
   // ---------- biblioteca ----------
@@ -288,7 +288,7 @@
       if (!sec || !el) return;
       if (html) { el.innerHTML = html; sec.hidden = false; } else { sec.hidden = true; const a = $(`.toc a[href="#${block}"]`); if (a) a.hidden = true; }
     };
-    if (dep.foto) $$("[data-foto]").forEach((img) => { img.src = dep.foto; img.removeAttribute("srcset"); });
+    if (/^assets\/img\/[A-Za-z0-9._-]+\.(jpe?g|png|webp)$/i.test(dep.foto || "")) $$("[data-foto]").forEach((img) => { img.src = dep.foto; img.removeAttribute("srcset"); });
     if (dep.nomeCompleto) { const el = $("#nome-completo"); if (el) el.innerHTML = `Nome completo: <strong>${esc(dep.nomeCompleto)}</strong>`; }
     const linha = [dep.cargo, dep.partido, dep.estado].filter(Boolean).map(esc).join(" · ");
     if (linha) { const el = $("#cargo-linha"); if (el) el.innerHTML = linha; }
