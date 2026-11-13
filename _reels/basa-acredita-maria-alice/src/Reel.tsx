@@ -215,23 +215,102 @@ const CenaAgil: React.FC = () => {
   );
 };
 
+// ── cena "como funciona" ─────────────────────────────────────────────────
+const Passo: React.FC<{ n: number; at: number; top: number; icone: React.ReactNode; titulo: string; sub: string }> = ({ n, at, top, icone, titulo, sub }) => {
+  const { f, fps, t } = useT();
+  const p = sp(f, fps, at, SP.mola), num = sp(f, fps, at + 0.05, SP.pop);
+  const ativo = t >= at;
+  return (
+    <div style={{ position: "absolute", left: 60, right: 60, top, height: 166, display: "flex", alignItems: "center", gap: 26, opacity: ativo ? Math.min(1, p * 1.6) : 0,
+      transform: `translateX(${(1 - p) * 260}px)` }}>
+      <div style={{ width: 96, height: 96, borderRadius: 48, background: C.lima, color: C.fundo, display: "grid", placeItems: "center", fontFamily: F, fontWeight: 900, fontSize: 56,
+        flexShrink: 0, transform: `scale(${num}) rotate(${(1 - num) * -40}deg)`, boxShadow: "0 12px 26px -10px rgba(0,0,0,0.6)" }}>{n}</div>
+      <div style={{ flex: 1, height: 150, borderRadius: 34, background: C.cinza, display: "flex", alignItems: "center", gap: 22, padding: "0 28px", boxShadow: "0 24px 50px -28px rgba(0,0,0,0.7)" }}>
+        <div style={{ width: 92, height: 92, borderRadius: 46, background: C.medio, display: "grid", placeItems: "center", flexShrink: 0 }}>{icone}</div>
+        <div>
+          <div style={{ fontFamily: F, fontWeight: 900, fontSize: 42, color: C.verde, letterSpacing: "-0.03em", lineHeight: 1.0 }}>{titulo}</div>
+          <div style={{ fontFamily: F, fontWeight: 500, fontSize: 30, color: "#3C4A40", marginTop: 6 }}>{sub}</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+const IcChat = <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinejoin="round"><path d="M4 5h16v11H9l-5 4z" /><path d="M8 10.5h.01M12 10.5h.01M16 10.5h.01" strokeLinecap="round" strokeWidth="3" /></svg>;
+const IcLuz = <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" /></svg>;
+const IcCresce = <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M3 17l6-6 4 4 8-8" /><path d="M15 7h6v6" /></svg>;
+const Balao: React.FC<{ at: number; ate: number; x: number; y: number; cauda: "esq" | "dir"; children: React.ReactNode }> = ({ at, ate, x, y, cauda, children }) => {
+  const { f, fps, t } = useT();
+  if (t < at || t > ate + 0.25) return null;
+  const p = sp(f, fps, at, SP.pop), e = lin(t, ate, ate + 0.22);
+  return <div style={{ position: "absolute", left: x, top: y, transform: `scale(${p * (1 - e)})`, transformOrigin: cauda === "esq" ? "15% 100%" : "85% 100%" }}>
+    <div style={{ padding: "22px 30px", borderRadius: 40, background: C.branco, boxShadow: "0 18px 36px -18px rgba(0,0,0,0.6)", display: "flex", alignItems: "center", gap: 14 }}>{children}</div>
+    <div style={{ position: "absolute", [cauda === "esq" ? "left" : "right"]: 46, bottom: -22, width: 0, height: 0, borderLeft: "18px solid transparent", borderRight: "18px solid transparent", borderTop: `26px solid ${C.branco}` } as React.CSSProperties} />
+  </div>;
+};
+const CenaComo: React.FC = () => {
+  const { f, fps, t } = useT();
+  const tit = sp(f, fps, T.e - 0.1, SP.mola);
+  const linha = lin(t, T.conversa, T.aprovado + 0.2, Easing.linear);
+  const festa = lin(t, T.aprovado + 0.2, T.aprovado + 0.6);
+  const dots = (k: number) => 0.35 + 0.65 * Math.max(0, Math.sin(t * 9 - k * 0.9));
+  return (
+    <Cena de={CENA.como.de} ate={CENA.como.ate}>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 160, textAlign: "center", fontFamily: F, fontWeight: 900, fontSize: 92, letterSpacing: "-0.04em", color: C.branco,
+        opacity: Math.min(1, tit * 1.6), transform: `translateY(${(1 - tit) * 40}px)` }}>COMO <span style={{ color: C.lima }}>FUNCIONA?</span></div>
+      <div style={{ position: "absolute", left: 106, top: 400, width: 6, height: 400 * linha, borderRadius: 3, background: C.lima, opacity: 0.6 }} />
+      <Passo n={1} at={T.conversa - 0.15} top={316} icone={IcChat} titulo="VOCÊ CONVERSA" sub="com a sua assessora" />
+      <Passo n={2} at={T.entende - 0.15} top={506} icone={IcLuz} titulo="ELA TE ORIENTA" sub="na melhor opção pro seu negócio" />
+      <Passo n={3} at={T.aprovado - 0.15} top={696} icone={IcCresce} titulo="CRÉDITO APROVADO" sub="é só investir e crescer" />
+      {/* Maria Alice e a empreendedora conversando */}
+      <div style={{ position: "absolute", left: -10, top: 1110, transform: "scale(0.82)", transformOrigin: "0 0" }}>
+        <Pessoa estilo="maria" pele="#E3AE88" peleSombra="#C98F6A" cabelo="#1E1512" camisa={C.verde} camisaSombra="#0A4126" humor={1} pisca={piscaDe(t, 0.7)}
+          boca={t > T.entende - 0.1 && t < T.aprovado - 0.2 ? bocaDe(t) : 0} olhar={[10, 0]} inclina={2 * Math.sin(t * 2)}
+          bracoD={t > T.investir - 0.1 ? { ombro: 70, cotovelo: 30 } : { ombro: 40 + 14 * Math.sin(t * 4) * (t > T.entende && t < T.aprovado ? 1 : 0), cotovelo: 70 }}
+          bracoE={{ ombro: 12, cotovelo: 8 }} detalhe={<EstampaBasa />} />
+      </div>
+      <div style={{ position: "absolute", left: 572, top: 1110, transform: "scale(0.82)", transformOrigin: "0 0" }}>
+        <Pessoa estilo="coque" pele="#A86B4C" peleSombra="#8E573C" cabelo="#2B1B14" camisa="#F2B33D" camisaSombra="#D99A22" humor={festa > 0.3 ? 1 : 0.3} pisca={piscaDe(t, 1.5)}
+          boca={t > T.conversa - 0.1 && t < T.entende - 0.2 ? bocaDe(t) : 0} olhar={[-10, 0]}
+          bracoE={festa > 0 ? { ombro: 10 + 140 * festa, cotovelo: -20 * festa + 8 * Math.sin(t * 9) * festa } : { ombro: 36, cotovelo: 80 }}
+          bracoD={festa > 0 ? { ombro: 10 + 140 * festa, cotovelo: -20 * festa - 8 * Math.sin(t * 9) * festa } : { ombro: 12, cotovelo: 8 }} detalhe={<Avental />} />
+      </div>
+      <Balao at={T.conversa - 0.1} ate={T.entende - 0.25} x={650} y={930} cauda="esq">
+        {[0, 1, 2].map((k) => <div key={k} style={{ width: 26, height: 26, borderRadius: 13, background: C.medio, opacity: dots(k), transform: `translateY(${-6 * dots(k)}px)` }} />)}
+      </Balao>
+      <Balao at={T.entende - 0.1} ate={T.aprovado - 0.25} x={70} y={930} cauda="dir">
+        <svg width="62" height="62" viewBox="0 0 24 24" fill="none" stroke={C.medio} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" /></svg>
+        <div style={{ fontFamily: F, fontWeight: 900, fontSize: 40, color: C.verde }}>melhor opção</div>
+      </Balao>
+      {t > T.aprovado && <div style={{ position: "absolute", left: 540 - 70, top: 980, width: 140, height: 140, borderRadius: 70, background: C.lima, display: "grid", placeItems: "center",
+        transform: `scale(${sp(f, fps, T.aprovado + 0.05, SP.pop) * (1 - lin(t, T.investir - 0.2, T.investir))})`, boxShadow: "0 0 0 16px rgba(125,186,62,0.25)" }}>
+        <svg width="84" height="84" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg></div>}
+      {[0, 1, 2].map((i) => { const a = T.investir + i * 0.25; const p = lin(t, a, a + 0.55, Easing.inOut(Easing.quad)); if (t < a || t > a + 0.7) return null;
+        const x = 380 + (720 - 380) * p, y = 1330 - Math.sin(p * Math.PI) * 260;
+        return <div key={i} style={{ position: "absolute", left: x - 40, top: y - 40, opacity: 1 - lin(t, a + 0.5, a + 0.7), transform: `rotate(${p * 300}deg)` }}>
+          <svg width="80" height="80" viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" fill={C.ouro} stroke="#C99A2E" strokeWidth="6" /><text x="50" y="66" textAnchor="middle" fontFamily={F} fontWeight={900} fontSize="44" fill="#8A6A16">$</text></svg></div>; })}
+      {t > T.crescer2 - 0.1 && <div style={{ position: "absolute", left: 0, right: 0, top: 1010, textAlign: "center", fontFamily: MAO, fontWeight: 700, fontSize: 92, color: C.limaClaro,
+        transform: `scale(${sp(f, fps, T.crescer2 - 0.1, SP.pop)}) rotate(-4deg)` }}>e crescer! ✦</div>}
+    </Cena>
+  );
+};
+
 // ── cena 4: Maria Alice ──────────────────────────────────────────────────
 const CenaMaria: React.FC = () => {
   const { f, fps, t } = useT();
   const ent = sp(f, fps, CENA.maria.de, SP.mola);
   const nome = sp(f, fps, T.maria - 0.1, SP.mola);
-  const btn = sp(f, fps, T.chama - 0.1, SP.pop);
-  const acena = t < T.chama - 0.2;
-  const aponta = lin(t, T.chama - 0.25, T.chama + 0.15);
+  const btn = sp(f, fps, T.chame - 0.1, SP.pop);
+  const acena = t < T.chame - 0.2;
+  const aponta = lin(t, T.chame - 0.25, T.chame + 0.15);
   const toque = lin(t, FIM_VOZ + 0.5, FIM_VOZ + 0.62) * (1 - lin(t, FIM_VOZ + 0.62, FIM_VOZ + 0.85));
-  const pulso = t > T.chama + 0.4 ? 1 + 0.035 * Math.sin((t - T.chama) * 7) : 1;
+  const pulso = t > T.chame + 0.4 ? 1 + 0.035 * Math.sin((t - T.chame) * 7) : 1;
   const enviado = t > FIM_VOZ + 0.62;
   const mao = lin(t, FIM_VOZ + 0.05, FIM_VOZ + 0.5, Easing.out(Easing.cubic)) * (1 - lin(t, FIM_VOZ + 1.2, FIM_VOZ + 1.5));
   return (
     <Cena de={CENA.maria.de} ate={CENA.maria.ate}>
       {/* nome */}
       <div style={{ position: "absolute", left: 70, right: 70, top: 190, opacity: Math.min(1, nome * 1.6), transform: `translateY(${(1 - nome) * 50}px)` }}>
-        <div style={{ fontFamily: F, fontWeight: 800, fontSize: 40, color: C.limaClaro, letterSpacing: "0.04em" }}>FALA COM A</div>
+        <div style={{ fontFamily: F, fontWeight: 800, fontSize: 40, color: C.limaClaro, letterSpacing: "0.04em" }}>FALE COM A</div>
         <div style={{ fontFamily: F, fontWeight: 900, fontSize: 118, color: C.branco, letterSpacing: "-0.045em", lineHeight: 1 }}>Maria Alice</div>
         <div style={{ fontFamily: MAO, fontWeight: 700, fontSize: 74, color: C.lima, marginTop: 4, clipPath: `inset(0 ${100 - lin(t, T.sua, T.sua + 0.9) * 100}% 0 0)` }}>sua assessora financeira</div>
       </div>
@@ -242,7 +321,7 @@ const CenaMaria: React.FC = () => {
           boxShadow: "0 24px 50px -20px rgba(0,0,0,0.6)" }}>
           <svg width="76" height="76" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill={enviado ? C.whats : "#fff"} /><path d="M9 23l1.3-3.6A7.6 7.6 0 1 1 13 22l-4 1z" fill="none" stroke={enviado ? "#fff" : C.whats} strokeWidth="2" strokeLinejoin="round" />
             <path d="M13 12.5c.2 2.6 2.4 5 5.2 5.6l1.1-1.4-1.8-.9-.8.8c-1-.5-1.9-1.4-2.4-2.4l.8-.8-.9-1.8z" fill={enviado ? "#fff" : C.whats} /></svg>
-          <div style={{ fontFamily: F, fontWeight: 900, fontSize: 56, color: enviado ? C.verde : C.branco, letterSpacing: "-0.02em" }}>{enviado ? "VAMOS CONVERSAR!" : "CHAMA NO WHATSAPP"}</div>
+          <div style={{ fontFamily: F, fontWeight: 900, fontSize: 56, color: enviado ? C.verde : C.branco, letterSpacing: "-0.02em" }}>{enviado ? "VAMOS CONVERSAR!" : "CHAME NO WHATSAPP"}</div>
         </div>
         <div style={{ fontFamily: F, fontWeight: 900, fontSize: 86, color: C.branco, letterSpacing: "-0.02em", lineHeight: 1 }}>68 99227-8563</div>
         <div style={{ fontFamily: F, fontWeight: 600, fontSize: 32, color: C.limaClaro, opacity: lin(t, FIM_VOZ - 0.2, FIM_VOZ + 0.3) }}>O crédito que impulsiona você.</div>
@@ -277,7 +356,7 @@ export const Reel: React.FC = () => {
   return (
     <AbsoluteFill style={{ overflow: "hidden", background: C.fundo }}>
       <Fundo />
-      <CenaDuvida /><CenaSolucao /><CenaAgil /><CenaMaria />
+      <CenaDuvida /><CenaSolucao /><CenaAgil /><CenaComo /><CenaMaria />
       <AbsoluteFill style={{ backgroundImage: NOISE, backgroundSize: "220px", backgroundPosition: `${(f * 7) % 220}px ${(f * 13) % 220}px`, opacity: 0.05, mixBlendMode: "overlay" }} />
       <AbsoluteFill style={{ background: "radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.35) 100%)" }} />
       <Sons />

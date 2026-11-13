@@ -28,3 +28,15 @@ Feedback literal: "o resto tá perfeito, não mexi em nada, ficou maravilhosamen
 ## Processo que o usuário aprova
 - Mostrar o plano/roteiro antes de gastar crédito; testar uma cena antes de gerar tudo.
 - Conferir quadros (folha de contato) e áudio antes de entregar; corrigir sobreposições de texto.
+
+## Vídeo para cliente aprovado ("ficou maravilhoso") — 13/11/2026
+Referência: `_reels/basa-acredita-maria-alice` (assessora de crédito Maria Alice, BASA Acredita).
+- **Cores da marca do cliente** medidas do material dele (aqui: verde-escuro `#012E1B`, verde `#0F5A33`, lima `#7DBA3E`, cinza `#EEF0EB`).
+- **Personagem da cliente** desenhada em vetor, parecida com ela (cabelo, camiseta da marca, acessório marcante),
+  que pisca, acena, fala (boca sincronizada à narração) e aponta para o contato.
+- Estrutura que funcionou (~25 s): **dor** (empreendedora preocupada) → **solução** (logo + cartões) → **benefícios**
+  (agilidade, menos burocracia, carimbo "crédito liberado", negócio cresce) → **"Como funciona?" em 3 passos curtos**
+  com as duas personagens conversando → **chamada para o WhatsApp** com nome, número e frase da marca.
+- Português correto no imperativo com "você": **"Fale com…", "Chame no WhatsApp"** (não "Fala/Chama").
+- Não prometer aprovação nem citar taxas/valores que não estejam no material do cliente.
+- Entregar também uma versão leve 720×1280 para **Status do WhatsApp**.
