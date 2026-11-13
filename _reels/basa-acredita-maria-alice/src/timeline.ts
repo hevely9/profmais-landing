@@ -66,7 +66,7 @@ export const SFX: { src: string; at: number; vol?: number }[] = [
   { src: "sfx-whoosh", at: CENA.maria.de - 0.3, vol: 0.4 },
   { src: "sfx-massinha", at: T.maria - 0.05, vol: 0.5 },
   { src: "sfx-lapis", at: T.assessora, vol: 0.35 },
-  { src: "sfx-notificacao", at: T.chame - 0.05, vol: 0.6 },
+  { src: "sfx-notificacao", at: FIM_VOZ + 0.05, vol: 0.18 }, // depois da fala, para não cobrir "Chame no WhatsApp"
   { src: "esp-toque", at: FIM_VOZ + 0.6, vol: 0.55 },
   { src: "sfx-ding", at: FIM_VOZ + 0.7, vol: 0.45 },
 ];
