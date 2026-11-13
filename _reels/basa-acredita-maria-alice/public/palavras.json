@@ -1,0 +1,382 @@
+{
+"words": [
+{
+"text": "Precisando",
+"start": 0.0,
+"end": 0.62,
+"p": 0.93
+},
+{
+"text": "de",
+"start": 0.62,
+"end": 0.76,
+"p": 1.0
+},
+{
+"text": "crédito",
+"start": 0.76,
+"end": 1.22,
+"p": 1.0
+},
+{
+"text": "pra",
+"start": 1.22,
+"end": 1.38,
+"p": 0.86
+},
+{
+"text": "fazer",
+"start": 1.38,
+"end": 1.64,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 1.64,
+"end": 1.78,
+"p": 1.0
+},
+{
+"text": "seu",
+"start": 1.78,
+"end": 1.86,
+"p": 1.0
+},
+{
+"text": "negócio",
+"start": 1.86,
+"end": 2.2,
+"p": 1.0
+},
+{
+"text": "crescer?",
+"start": 2.2,
+"end": 2.66,
+"p": 1.0
+},
+{
+"text": "Com",
+"start": 3.0,
+"end": 3.14,
+"p": 0.97
+},
+{
+"text": "o",
+"start": 3.14,
+"end": 3.32,
+"p": 0.96
+},
+{
+"text": "BASA",
+"start": 3.32,
+"end": 3.54,
+"p": 0.64
+},
+{
+"text": "Acredita,",
+"start": 3.54,
+"end": 4.2,
+"p": 0.89
+},
+{
+"text": "você",
+"start": 4.34,
+"end": 4.58,
+"p": 1.0
+},
+{
+"text": "tem",
+"start": 4.58,
+"end": 4.76,
+"p": 1.0
+},
+{
+"text": "microcrédito",
+"start": 4.76,
+"end": 5.52,
+"p": 1.0
+},
+{
+"text": "pensado",
+"start": 5.52,
+"end": 6.04,
+"p": 1.0
+},
+{
+"text": "pra",
+"start": 6.04,
+"end": 6.16,
+"p": 0.95
+},
+{
+"text": "você,",
+"start": 6.16,
+"end": 6.48,
+"p": 1.0
+},
+{
+"text": "mais",
+"start": 6.72,
+"end": 7.0,
+"p": 1.0
+},
+{
+"text": "agilidade",
+"start": 7.0,
+"end": 7.66,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 7.66,
+"end": 7.9,
+"p": 1.0
+},
+{
+"text": "menos",
+"start": 7.9,
+"end": 8.22,
+"p": 1.0
+},
+{
+"text": "burocracia.",
+"start": 8.22,
+"end": 8.92,
+"p": 1.0
+},
+{
+"text": "É",
+"start": 9.18,
+"end": 9.5,
+"p": 1.0
+},
+{
+"text": "simples,",
+"start": 9.5,
+"end": 9.98,
+"p": 1.0
+},
+{
+"text": "você",
+"start": 10.2,
+"end": 10.5,
+"p": 1.0
+},
+{
+"text": "conversa",
+"start": 10.5,
+"end": 11.0,
+"p": 1.0
+},
+{
+"text": "com",
+"start": 11.0,
+"end": 11.1,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 11.1,
+"end": 11.2,
+"p": 1.0
+},
+{
+"text": "sua",
+"start": 11.2,
+"end": 11.32,
+"p": 1.0
+},
+{
+"text": "assessora,",
+"start": 11.32,
+"end": 11.86,
+"p": 1.0
+},
+{
+"text": "ela",
+"start": 12.04,
+"end": 12.2,
+"p": 1.0
+},
+{
+"text": "entende",
+"start": 12.2,
+"end": 12.62,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 12.62,
+"end": 12.74,
+"p": 0.98
+},
+{
+"text": "seu",
+"start": 12.74,
+"end": 12.8,
+"p": 1.0
+},
+{
+"text": "negócio",
+"start": 12.8,
+"end": 13.28,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 13.28,
+"end": 13.5,
+"p": 1.0
+},
+{
+"text": "te",
+"start": 13.5,
+"end": 13.62,
+"p": 1.0
+},
+{
+"text": "orienta",
+"start": 13.62,
+"end": 14.04,
+"p": 1.0
+},
+{
+"text": "na",
+"start": 14.04,
+"end": 14.12,
+"p": 1.0
+},
+{
+"text": "melhor",
+"start": 14.12,
+"end": 14.34,
+"p": 1.0
+},
+{
+"text": "opção.",
+"start": 14.34,
+"end": 14.8,
+"p": 1.0
+},
+{
+"text": "Com",
+"start": 15.06,
+"end": 15.38,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 15.38,
+"end": 15.54,
+"p": 1.0
+},
+{
+"text": "crédito",
+"start": 15.54,
+"end": 15.86,
+"p": 1.0
+},
+{
+"text": "aprovado,",
+"start": 15.86,
+"end": 16.4,
+"p": 1.0
+},
+{
+"text": "é",
+"start": 16.58,
+"end": 16.72,
+"p": 1.0
+},
+{
+"text": "só",
+"start": 16.72,
+"end": 16.9,
+"p": 1.0
+},
+{
+"text": "investir",
+"start": 16.9,
+"end": 17.36,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 17.36,
+"end": 17.58,
+"p": 1.0
+},
+{
+"text": "crescer.",
+"start": 17.58,
+"end": 18.02,
+"p": 1.0
+},
+{
+"text": "Fale",
+"start": 18.42,
+"end": 18.74,
+"p": 1.0
+},
+{
+"text": "com",
+"start": 18.74,
+"end": 18.9,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 18.9,
+"end": 19.02,
+"p": 1.0
+},
+{
+"text": "Maria",
+"start": 19.02,
+"end": 19.22,
+"p": 0.99
+},
+{
+"text": "Alice,",
+"start": 19.22,
+"end": 19.62,
+"p": 0.98
+},
+{
+"text": "sua",
+"start": 19.86,
+"end": 20.04,
+"p": 1.0
+},
+{
+"text": "assessora",
+"start": 20.04,
+"end": 20.56,
+"p": 1.0
+},
+{
+"text": "financeira.",
+"start": 20.56,
+"end": 21.24,
+"p": 1.0
+},
+{
+"text": "Chame",
+"start": 21.58,
+"end": 21.92,
+"p": 0.76
+},
+{
+"text": "no",
+"start": 21.92,
+"end": 22.16,
+"p": 0.99
+},
+{
+"text": "WhatsApp!",
+"start": 22.16,
+"end": 22.5,
+"p": 0.93
+}
+]
+}

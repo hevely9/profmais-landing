@@ -1,0 +1,19 @@
+{
+  "titulo": "O número que quase não existiu · Ep.01 (v2)",
+  "fps": 30,
+  "voz": null,
+  "motor_voz": "edge",
+  "musica": null,
+  "capa": {
+    "cena": 0,
+    "tempo": 0.6
+  },
+  "saida": "reel-sem-legenda.mp4",
+  "saida_capa": "capa-sem-legenda.jpg",
+  "cenas": [
+    {
+      "arquivo": "cena-sem-legenda.html",
+      "duracao": 56.38
+    }
+  ]
+}

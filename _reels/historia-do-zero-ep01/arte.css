@@ -1,0 +1,89 @@
+/* arte.css: série "A História dos Números" (vídeo de público/autoridade da Prof+) */
+:root {
+  --verde: #0E4B3C; --verde-noite: #10261F; --laranja: #E36B1F; --areia: #EFDCA9; --offwhite: #F6F1E3;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; }
+body { font-family: 'Inter', sans-serif; color: var(--offwhite); background: var(--verde-noite); position: relative; -webkit-font-smoothing: antialiased; }
+
+.camada { position: absolute; inset: 0; }
+.ceu { background: linear-gradient(180deg, var(--c1), var(--c2) 70%); }
+.cenario { position: absolute; left: 0; right: 0; top: 620px; height: 900px; transform-origin: 50% 80%; }
+.cenario svg { width: 100%; height: 100%; display: block; }
+.chao { position: absolute; left: 0; right: 0; top: 1380px; bottom: 0; background: linear-gradient(180deg, var(--chao), color-mix(in srgb, var(--chao) 70%, black)); }
+.vinheta { background: radial-gradient(120% 70% at 50% 45%, transparent 55%, rgba(0,0,0,.45)); }
+
+.personagem { position: absolute; width: 500px; height: 800px; left: 290px; top: 470px; transform-origin: 50% 100%; }
+.personagem.esq { left: 40px; } .personagem.dir { left: 500px; }
+.personagem svg { width: 100%; height: 100%; overflow: visible; }
+
+.prop { position: absolute; left: 72px; right: 150px; top: 300px; display: flex; justify-content: center; align-items: center; }
+
+/* legenda: uma camada só, grande e com contraste */
+.legenda { position: absolute; left: 72px; right: 150px; bottom: 430px; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; }
+.legenda .linha { font-size: 88px; font-weight: 900; line-height: 1.0; letter-spacing: -0.02em; text-transform: uppercase;
+  color: #fff; paint-order: stroke fill; -webkit-text-stroke: 14px rgba(10,16,14,.92); text-shadow: 0 10px 30px rgba(0,0,0,.5); }
+.legenda .linha.menor { font-size: 62px; }
+.legenda b { color: var(--acento, var(--laranja)); font-weight: 900; }
+
+.selo-serie { position: absolute; top: 270px; left: 72px; right: 150px; text-align: center; font-weight: 900; font-size: 40px; letter-spacing: .06em; text-transform: uppercase; color: #fff; -webkit-text-stroke: 8px rgba(10,16,14,.9); paint-order: stroke fill; }
+.selo-serie b { color: var(--laranja); }
+.selo-serie small { display: inline-block; margin-top: 12px; font-size: 28px; letter-spacing: .3em; padding: 8px 18px; background: rgba(10,16,14,.85); -webkit-text-stroke: 0; border-radius: 8px; color: var(--areia); }
+.assinatura { position: absolute; left: 72px; bottom: 440px; font-weight: 800; font-size: 28px; color: rgba(255,255,255,.75); letter-spacing: .02em; display: none; }
+
+/* objetos */
+.numero { font-weight: 900; font-size: 380px; line-height: 1; color: #F5C542; text-shadow: 0 18px 0 rgba(0,0,0,.25); }
+.carimbo { position: relative; font-weight: 900; font-size: 120px; color: #E0352B; border: 14px solid #E0352B; border-radius: 18px; padding: 4px 28px; transform: rotate(-12deg); letter-spacing: .02em; background: rgba(255,255,255,.08); }
+.cartao-pix { width: 840px; background: #14171C; border-radius: 40px; padding: 44px 54px; box-shadow: 0 30px 80px rgba(0,0,0,.5); border: 3px solid rgba(255,255,255,.08); }
+.cartao-pix .topo { display: flex; align-items: center; gap: 18px; font-size: 40px; font-weight: 700; color: #fff; }
+.cartao-pix .ok { width: 56px; height: 56px; border-radius: 50%; background: #32BCAD; display: grid; place-items: center; font-size: 36px; color: #fff; }
+.cartao-pix .valor { font-size: 150px; font-weight: 900; color: #fff; margin-top: 18px; letter-spacing: -0.03em; white-space: nowrap; }
+.cartao-pix .zeros { display: inline-block; color: var(--laranja); }
+.lousa { background: #1F3B2F; border: 22px solid #8B5A2B; border-radius: 16px; padding: 30px 50px; box-shadow: 0 24px 60px rgba(0,0,0,.45); font-family: 'Inter'; font-weight: 800; font-size: 96px; color: #F4F1E6; line-height: 1.25; text-align: center; min-width: 620px; position: relative; }
+.livro { width: 720px; background: #F3E6C4; color: #3B2A1A; border-radius: 12px; padding: 40px 50px; box-shadow: 0 24px 60px rgba(0,0,0,.45), inset 0 0 0 6px #D9C49A; font-family: Georgia, serif; position: relative; }
+.livro .cab { font-size: 38px; font-style: italic; border-bottom: 3px solid #B79A63; padding-bottom: 10px; margin-bottom: 20px; }
+.livro .lin { font-size: 96px; font-weight: 700; display: flex; justify-content: space-between; }
+.romano { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; font-size: 150px; color: #FFE7A8; text-shadow: 0 10px 0 rgba(0,0,0,.3); letter-spacing: .02em; text-align: center; line-height: 1.05; }
+
+/* ── animações (CSS; o gerador controla o relógio) ── */
+.a { animation-fill-mode: both; animation-timing-function: var(--ease); animation-delay: var(--d, 0s); animation-duration: var(--t, .6s); }
+.sobe { animation-name: sobe; } .entra-e { animation-name: entraE; } .entra-d { animation-name: entraD; }
+.pop { animation-name: pop; } .zoom-in { animation-name: zoomIn; } .some { animation-name: some; }
+.carimba { animation-name: carimba; --t: .45s; }
+.voa { animation-name: voa; --t: .9s; }
+.treme { animation: treme .5s ease-in-out var(--d, 0s) both; }
+.lento { animation: lento 6s linear 0s both; }
+.balanca { animation: balanca 2.4s ease-in-out var(--d, 0s) infinite both; transform-origin: 50% 100%; }
+.flutua { animation: flutua 3s ease-in-out var(--d, 0s) infinite both; }
+.chuva { animation: chuva var(--t, 4s) linear var(--d, 0s) infinite both; }
+.risca-x { position: relative; }
+.risca-x::after { content: ''; position: absolute; left: -4%; right: -4%; top: 50%; height: 14px; background: #E0352B; border-radius: 8px; transform-origin: left; transform: rotate(-8deg) scaleX(0); animation: riscaX .45s var(--ease) var(--d, 0s) both; }
+.desenha { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: desenha var(--t, .8s) var(--ease) var(--d, 0s) both; }
+
+@keyframes sobe { from { opacity: 0; transform: translateY(90px); } to { opacity: 1; transform: none; } }
+@keyframes entraE { from { opacity: 0; transform: translateX(-260px); } to { opacity: 1; transform: none; } }
+@keyframes entraD { from { opacity: 0; transform: translateX(260px); } to { opacity: 1; transform: none; } }
+@keyframes pop { 0% { opacity: 0; transform: scale(.4); } 70% { opacity: 1; transform: scale(1.08); } 100% { opacity: 1; transform: none; } }
+@keyframes zoomIn { from { opacity: 0; transform: scale(1.5); } to { opacity: 1; transform: none; } }
+@keyframes some { from { opacity: 1; } to { opacity: 0; transform: scale(.9); } }
+@keyframes carimba { 0% { opacity: 0; transform: rotate(-12deg) scale(2.4); } 100% { opacity: 1; transform: rotate(-12deg) scale(1); } }
+@keyframes voa { 0% { opacity: 1; transform: none; } 100% { opacity: 0; transform: translateY(-420px) rotate(25deg) scale(.6); } }
+@keyframes treme { 0%,100% { transform: none; } 20% { transform: translateX(-14px) rotate(-1deg); } 40% { transform: translateX(14px) rotate(1deg); } 60% { transform: translateX(-10px); } 80% { transform: translateX(8px); } }
+@keyframes lento { from { transform: scale(1.0); } to { transform: scale(1.07); } }
+@keyframes balanca { 0%,100% { transform: rotate(-1.2deg); } 50% { transform: rotate(1.2deg) translateY(-6px); } }
+@keyframes flutua { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-18px); } }
+@keyframes chuva { from { transform: translateY(-1100px); } to { transform: translateY(1100px); } }
+@keyframes riscaX { to { transform: rotate(-8deg) scaleX(1); } }
+@keyframes desenha { to { stroke-dashoffset: 0; } }
+
+body.guias::after { content: ''; position: absolute; z-index: 99; top: 250px; bottom: 420px; left: 72px; right: 150px; outline: 4px dashed #ff2d75; box-shadow: 0 0 0 4000px rgba(255,45,117,.18); }
+.suave { animation-name: suave; --t: .9s; } /* visível já no 1º quadro */
+@keyframes suave { from { transform: scale(1.08); } to { transform: none; } }
+.carimbo.suave { animation-name: suaveCarimbo; }
+@keyframes suaveCarimbo { from { transform: rotate(-12deg) scale(1.15); } to { transform: rotate(-12deg) scale(1); } }
+.troca { position: relative; display: inline-block; }
+.troca .de, .troca .para { display: inline-block; }
+.troca .para { position: absolute; left: 0; top: 0; color: #E0352B; }
+.arabe { font-family: 'FreeSerif', serif; font-size: 200px; color: #F5D27A; line-height: 1; text-shadow: 0 10px 0 rgba(0,0,0,.35); }
+.binario { position: absolute; top: 0; font-family: 'DejaVu Sans Mono', monospace; font-size: 40px; font-weight: 700; color: #3DDC97; opacity: .55; line-height: 1.1; white-space: pre; text-shadow: 0 0 12px #3DDC97; }

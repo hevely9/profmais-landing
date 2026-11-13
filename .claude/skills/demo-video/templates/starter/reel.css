@@ -1,0 +1,116 @@
+/* reel.css: base visual dos Reels da Prof+ (1080x1920, 9:16).
+   Cores e fonte vêm do manual da marca (mesmos tokens do index.html). */
+:root {
+  --verde: #0E4B3C;        /* primária */
+  --verde-noite: #1E3A30;
+  --verde-musgo: #27493F;
+  --laranja: #E36B1F;      /* destaque e chamada para ação */
+  --areia: #EFDCA9;
+  --offwhite: #F6F1E3;
+  --texto: #1A1A1A;
+  --branco: #FFFFFF;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Zona segura: a interface do Instagram cobre o topo (barra "Reels"),
+     a base (nome, legenda, música) e a lateral direita (curtir/comentar). */
+  --safe-top: 250px;
+  --safe-bottom: 420px;
+  --safe-left: 72px;
+  --safe-right: 150px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--verde);
+  color: var(--offwhite);
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+/* Área útil: tudo que importa fica aqui dentro */
+.palco {
+  position: absolute;
+  top: var(--safe-top); bottom: var(--safe-bottom);
+  left: var(--safe-left); right: var(--safe-right);
+  display: flex; flex-direction: column; justify-content: center; gap: 48px;
+}
+
+/* Fundos */
+.fundo-verde   { background: radial-gradient(120% 80% at 20% 10%, var(--verde-musgo), var(--verde) 55%, var(--verde-noite)); }
+.fundo-areia   { background: var(--offwhite); color: var(--texto); }
+.fundo-laranja { background: var(--laranja); color: var(--branco); }
+.padrao::before { /* textura sutil da marca */
+  content: ''; position: absolute; inset: 0; opacity: .045;
+  background: url('../../assets/pattern-modular.png') center / 540px repeat;
+}
+
+/* Tipografia: grande, porque o Reel é visto no celular e quase sempre sem som */
+.selo    { font-size: 34px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--areia); }
+.gancho  { font-size: 104px; font-weight: 900; line-height: 1.02; letter-spacing: -0.03em; }
+.titulo  { font-size: 84px;  font-weight: 850; line-height: 1.05; letter-spacing: -0.025em; }
+.texto   { font-size: 50px;  font-weight: 600; line-height: 1.25; }
+.pequeno { font-size: 36px;  font-weight: 500; line-height: 1.3; opacity: .85; }
+.destaque { color: var(--laranja); }
+.fundo-laranja .destaque { color: var(--verde); }
+.marca-texto { /* grifo laranja atrás da palavra */
+  background: linear-gradient(transparent 58%, rgba(227,107,31,.9) 58%);
+  padding: 0 .08em;
+}
+
+/* Lista com marcadores */
+.lista { list-style: none; display: flex; flex-direction: column; gap: 30px; }
+.lista li { font-size: 50px; font-weight: 700; line-height: 1.2; display: flex; gap: 24px; align-items: flex-start; }
+.lista li::before { content: ''; flex: 0 0 22px; height: 22px; margin-top: 18px; border-radius: 50%; background: var(--laranja); }
+
+/* Cartão / polaroid para mostrar material real */
+.cartao {
+  background: var(--branco); color: var(--texto);
+  border-radius: 28px; padding: 24px;
+  box-shadow: 0 30px 80px rgba(0,0,0,.35);
+}
+.cartao img { display: block; width: 100%; border-radius: 14px; }
+.cartao figcaption { font-size: 32px; font-weight: 700; padding: 20px 6px 4px; }
+
+/* Botão de chamada para ação */
+.cta {
+  align-self: flex-start;
+  background: var(--laranja); color: var(--branco);
+  font-size: 48px; font-weight: 850; letter-spacing: .01em;
+  padding: 34px 52px; border-radius: 999px;
+  box-shadow: 0 16px 40px rgba(227,107,31,.45);
+}
+.logo { height: 92px; width: auto; }
+.mascote { position: absolute; right: 0; bottom: var(--safe-bottom); width: 520px; }
+
+/* ── Animações (só CSS: o script controla o relógio quadro a quadro) ──
+   Use: class="entra" style="--d: 0.4s"  (--d = atraso a partir do início da cena) */
+.entra, .sobe, .zoom, .pop, .risca, .imediato { animation-fill-mode: both; animation-timing-function: var(--ease); animation-delay: var(--d, 0s); }
+.entra { animation-name: entra; animation-duration: .7s; }
+.sobe  { animation-name: sobe;  animation-duration: .8s; }
+.zoom  { animation-name: zoom;  animation-duration: .9s; }
+.pop   { animation-name: pop;   animation-duration: .6s; }
+.imediato { animation-name: imediato; animation-duration: .9s; } /* visível já no 1º quadro: use no gancho */
+.pulsa { animation: pulsa 1.4s ease-in-out var(--d, 0s) infinite both; }
+.risca { position: relative; animation-name: none; }
+.risca::after { content: ''; position: absolute; left: -2%; top: 52%; height: 10px; width: 104%;
+  background: var(--laranja); transform-origin: left; border-radius: 6px;
+  animation: risca .5s var(--ease) var(--d, 0s) both; }
+.lento { animation: lento 12s linear 0s both; } /* zoom lento de fundo (efeito Ken Burns) */
+
+@keyframes entra { from { opacity: 0; transform: translateX(-60px); } to { opacity: 1; transform: none; } }
+@keyframes sobe  { from { opacity: 0; transform: translateY(80px); }  to { opacity: 1; transform: none; } }
+@keyframes zoom  { from { opacity: 0; transform: scale(.85); }        to { opacity: 1; transform: none; } }
+@keyframes pop   { 0% { opacity: 0; transform: scale(.6); } 70% { opacity: 1; transform: scale(1.06); } 100% { transform: none; } }
+@keyframes pulsa { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+@keyframes risca { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes imediato { from { transform: scale(1.06); } to { transform: none; } }
+@keyframes lento { from { transform: scale(1); } to { transform: scale(1.08); } }
+
+/* Guias da zona segura: abra a cena no navegador com ?guias para conferir */
+body.guias::after {
+  content: ''; position: absolute; pointer-events: none; z-index: 99;
+  top: var(--safe-top); bottom: var(--safe-bottom); left: var(--safe-left); right: var(--safe-right);
+  outline: 4px dashed #ff2d75; box-shadow: 0 0 0 4000px rgba(255,45,117,.18);
+}
