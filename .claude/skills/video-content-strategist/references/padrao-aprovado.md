@@ -40,3 +40,7 @@ Referência: `_reels/basa-acredita-maria-alice` (assessora de crédito Maria Ali
 - Português correto no imperativo com "você": **"Fale com…", "Chame no WhatsApp"** (não "Fala/Chama").
 - Não prometer aprovação nem citar taxas/valores que não estejam no material do cliente.
 - Entregar também uma versão leve 720×1280 para **Status do WhatsApp**.
+- **Final aprovado:** a narração termina no nome/cargo ("Fale com a Maria Alice, sua assessora financeira.") e a
+  chamada "CHAME NO WHATSAPP" + número aparece **só na tela, sem narração**, com pop e notificação baixa depois da fala.
+- **Nunca pôr efeito sonoro alto em cima da voz** (a notificação sobre "Chame no WhatsApp" fez o limitador "travar" o áudio).
+  Medir o volume do trecho final antes de entregar.
