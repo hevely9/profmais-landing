@@ -29,7 +29,8 @@ Feedback literal: "o resto tá perfeito, não mexi em nada, ficou maravilhosamen
 - Mostrar o plano/roteiro antes de gastar crédito; testar uma cena antes de gerar tudo.
 - Conferir quadros (folha de contato) e áudio antes de entregar; corrigir sobreposições de texto.
 
-## Vídeo para cliente aprovado ("ficou maravilhoso") — 13/11/2026
+## Vídeo para cliente aprovado como PERFEITO — 13/11/2026
+Feedback do usuário: "ficou maravilhoso" e, na versão final, "ficou perfeito". **A versão final (`out/v4`, 26,6 s) é o modelo a seguir.**
 Referência: `_reels/basa-acredita-maria-alice` (assessora de crédito Maria Alice, BASA Acredita).
 - **Cores da marca do cliente** medidas do material dele (aqui: verde-escuro `#012E1B`, verde `#0F5A33`, lima `#7DBA3E`, cinza `#EEF0EB`).
 - **Personagem da cliente** desenhada em vetor, parecida com ela (cabelo, camiseta da marca, acessório marcante),
