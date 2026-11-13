@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill, Audio, Easing, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
-import { CENA, FIM_VOZ, FPS, GAP_AT, LEAD, SFX, T, TOTAL, WORDS, o, q } from "./timeline";
+import { CENA, FIM_VOZ, FPS, GAP_AT, LEAD, SFX, T, TOTAL, VOZ_CORTE, WORDS_FALA, o, q } from "./timeline";
 import { Avental, EstampaBasa, Pessoa } from "./pessoas";
 
 // ── identidade (cores medidas do material da Maria Alice) ────────────────
@@ -13,7 +13,7 @@ const ease = Easing.bezier(0.65, 0, 0.35, 1);
 const lin = (t: number, a: number, b: number, e: (n: number) => number = ease) => interpolate(t, [a, b], [0, 1], { ...clamp, easing: e });
 const useT = () => { const f = useCurrentFrame(); const { fps } = useVideoConfig(); return { f, fps, t: f / fps }; };
 const sp = (f: number, fps: number, at: number, cfg: { damping: number; stiffness?: number } = SP.suave) => spring({ frame: f - q(at), fps, config: cfg });
-const falando = (t: number) => WORDS.some((w) => t >= w.start && t < w.end + 0.02);
+const falando = (t: number) => WORDS_FALA.some((w) => t >= w.start && t < w.end + 0.02);
 const bocaDe = (t: number) => (falando(t) ? 0.35 + 0.65 * Math.abs(Math.sin(t * 17)) : 0);
 const piscaDe = (t: number, off = 0) => (((t + off) % 2.9) < 0.1 ? 0.12 : 1);
 
@@ -346,7 +346,7 @@ const NOISE = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'
 const Sons: React.FC = () => (
   <>
     <Sequence from={q(LEAD)} durationInFrames={q(GAP_AT) + 2}><Audio src={staticFile("audio/voz.mp3")} endAt={q(GAP_AT)} volume={1} /></Sequence>
-    <Sequence from={q(o(GAP_AT))}><Audio src={staticFile("audio/voz.mp3")} startFrom={q(GAP_AT)} volume={1} /></Sequence>
+    <Sequence from={q(o(GAP_AT))} durationInFrames={q(VOZ_CORTE - GAP_AT) + 2}><Audio src={staticFile("audio/voz.mp3")} startFrom={q(GAP_AT)} endAt={q(VOZ_CORTE)} volume={(fr) => interpolate(fr, [q(VOZ_CORTE - GAP_AT) - 4, q(VOZ_CORTE - GAP_AT)], [1, 0], clamp)} /></Sequence>
     <Audio src={staticFile("audio/trilha.mp3")} startFrom={q(20)} volume={(fr) => 0.1 * interpolate(fr, [0, 10], [0, 1], clamp) * interpolate(fr, [TOTAL - q(1.2), TOTAL - 2], [1, 0], clamp)} />
     {SFX.map((s, i) => <Sequence key={i} from={Math.max(0, q(s.at))} durationInFrames={q(2.2)}><Audio src={staticFile(`audio/${s.src}.mp3`)} volume={s.vol ?? 0.5} /></Sequence>)}
   </>
