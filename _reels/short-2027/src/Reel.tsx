@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill, Audio, Easing, OffthreadVideo, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
-import { FIM_VOZ, FPS, LEAD, MARCA, PASSOS, SFX, SHOTS, T, TOTAL, WORDS, q } from "./timeline";
+import { FIM_VOZ, FPS, TRECHOS, o, MARCA, PASSOS, SFX, SHOTS, T, TOTAL, WORDS, q } from "./timeline";
 
 // ── identidade do canal: preto, dourado e branco ─────────────────────────
 const C = { preto: "#0A0A0A", ouro: "#F5B82E", ouroClaro: "#FFD66B", branco: "#FFFFFF", vermelho: "#E53935", cinza: "#3A3A3A" };
@@ -197,7 +197,7 @@ const Legenda: React.FC = () => {
 // ── som ──────────────────────────────────────────────────────────────────
 const Sons: React.FC = () => (
   <>
-    <Sequence from={q(LEAD)}><Audio src={staticFile("audio/voz.mp3")} volume={1} /></Sequence>
+    {TRECHOS.map(([a, b], i) => <Sequence key={"v" + i} from={q(o(a))} durationInFrames={q(b - a) + 1}><Audio src={staticFile("audio/voz-welliton.mp3")} startFrom={q(a)} endAt={q(b)} volume={1} /></Sequence>)}
     <Audio src={staticFile("audio/trilha.mp3")} volume={(fr) => interpolate(fr, [q(FIM_VOZ - 0.3), q(FIM_VOZ + 0.6)], [0.17, 0.4], clamp) * interpolate(fr, [TOTAL - q(1.4), TOTAL - 2], [1, 0], clamp)} />
     {SFX.map((s, i) => <Sequence key={i} from={Math.max(0, q(s.at))} durationInFrames={q(2)}><Audio src={staticFile(`audio/${s.src}.mp3`)} volume={s.vol ?? 0.4} /></Sequence>)}
   </>
@@ -206,7 +206,7 @@ const Sons: React.FC = () => (
 export const Reel: React.FC = () => (
   <AbsoluteFill style={{ background: C.preto, overflow: "hidden" }}>
     <Clipes /><Grade /><Flash />
-    <Gancho /><Progresso />
+    <Gancho />
     {PASSOS.map((p) => <Passo key={p.n} {...p} />)}
     <Meta />
     <Legenda />

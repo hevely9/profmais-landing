@@ -1,0 +1,880 @@
+{
+"words": [
+{
+"text": "A",
+"start": 0.0,
+"end": 0.12,
+"p": 0.96
+},
+{
+"text": "maioria",
+"start": 0.12,
+"end": 0.32,
+"p": 1.0
+},
+{
+"text": "das",
+"start": 0.32,
+"end": 0.48,
+"p": 1.0
+},
+{
+"text": "pessoas",
+"start": 0.48,
+"end": 0.74,
+"p": 1.0
+},
+{
+"text": "vai",
+"start": 0.74,
+"end": 0.9,
+"p": 1.0
+},
+{
+"text": "terminar",
+"start": 0.9,
+"end": 1.22,
+"p": 1.0
+},
+{
+"text": "2027",
+"start": 1.22,
+"end": 2.28,
+"p": 0.96
+},
+{
+"text": "exatamente",
+"start": 2.28,
+"end": 2.9,
+"p": 0.79
+},
+{
+"text": "como",
+"start": 2.9,
+"end": 3.3,
+"p": 1.0
+},
+{
+"text": "começou,",
+"start": 3.3,
+"end": 3.78,
+"p": 1.0
+},
+{
+"text": "sem",
+"start": 4.14,
+"end": 4.44,
+"p": 1.0
+},
+{
+"text": "dinheiro.",
+"start": 4.44,
+"end": 4.86,
+"p": 1.0
+},
+{
+"text": "Se",
+"start": 5.18,
+"end": 5.46,
+"p": 1.0
+},
+{
+"text": "você",
+"start": 5.46,
+"end": 5.62,
+"p": 1.0
+},
+{
+"text": "fizer",
+"start": 5.62,
+"end": 5.86,
+"p": 1.0
+},
+{
+"text": "essas",
+"start": 5.86,
+"end": 6.06,
+"p": 1.0
+},
+{
+"text": "seis",
+"start": 6.06,
+"end": 6.28,
+"p": 0.66
+},
+{
+"text": "coisas,",
+"start": 6.28,
+"end": 6.62,
+"p": 1.0
+},
+{
+"text": "você",
+"start": 6.76,
+"end": 6.84,
+"p": 1.0
+},
+{
+"text": "não",
+"start": 6.84,
+"end": 6.96,
+"p": 1.0
+},
+{
+"text": "vai.",
+"start": 6.96,
+"end": 7.2,
+"p": 1.0
+},
+{
+"text": "1.",
+"start": 7.88,
+"end": 8.04,
+"p": 0.79
+},
+{
+"text": "Anota",
+"start": 8.26,
+"end": 8.66,
+"p": 0.99
+},
+{
+"text": "cada",
+"start": 8.66,
+"end": 8.96,
+"p": 1.0
+},
+{
+"text": "real",
+"start": 8.96,
+"end": 9.26,
+"p": 0.99
+},
+{
+"text": "que",
+"start": 9.26,
+"end": 9.46,
+"p": 0.99
+},
+{
+"text": "sai",
+"start": 9.46,
+"end": 9.68,
+"p": 1.0
+},
+{
+"text": "durante",
+"start": 9.68,
+"end": 9.96,
+"p": 1.0
+},
+{
+"text": "30",
+"start": 9.96,
+"end": 10.3,
+"p": 1.0
+},
+{
+"text": "dias.",
+"start": 10.3,
+"end": 10.82,
+"p": 1.0
+},
+{
+"text": "Ninguém",
+"start": 11.12,
+"end": 11.46,
+"p": 1.0
+},
+{
+"text": "controla",
+"start": 11.46,
+"end": 11.94,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 11.94,
+"end": 12.04,
+"p": 1.0
+},
+{
+"text": "que",
+"start": 12.04,
+"end": 12.12,
+"p": 1.0
+},
+{
+"text": "não",
+"start": 12.12,
+"end": 12.22,
+"p": 1.0
+},
+{
+"text": "enxerga.",
+"start": 12.22,
+"end": 12.66,
+"p": 1.0
+},
+{
+"text": "2.",
+"start": 13.12,
+"end": 13.5,
+"p": 1.0
+},
+{
+"text": "Mata",
+"start": 13.94,
+"end": 14.3,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 14.3,
+"end": 14.46,
+"p": 1.0
+},
+{
+"text": "dívida",
+"start": 14.46,
+"end": 14.66,
+"p": 1.0
+},
+{
+"text": "mais",
+"start": 14.66,
+"end": 14.92,
+"p": 1.0
+},
+{
+"text": "cara",
+"start": 14.92,
+"end": 15.16,
+"p": 1.0
+},
+{
+"text": "primeiro.",
+"start": 15.16,
+"end": 15.5,
+"p": 1.0
+},
+{
+"text": "Cartão",
+"start": 15.72,
+"end": 16.08,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 16.08,
+"end": 16.16,
+"p": 0.99
+},
+{
+"text": "cheque",
+"start": 16.16,
+"end": 16.4,
+"p": 1.0
+},
+{
+"text": "especial",
+"start": 16.4,
+"end": 16.84,
+"p": 1.0
+},
+{
+"text": "vem",
+"start": 16.84,
+"end": 17.04,
+"p": 0.81
+},
+{
+"text": "antes",
+"start": 17.04,
+"end": 17.28,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 17.28,
+"end": 17.4,
+"p": 1.0
+},
+{
+"text": "qualquer",
+"start": 17.4,
+"end": 17.68,
+"p": 1.0
+},
+{
+"text": "investimento.",
+"start": 17.68,
+"end": 18.36,
+"p": 1.0
+},
+{
+"text": "3.",
+"start": 18.7,
+"end": 19.04,
+"p": 1.0
+},
+{
+"text": "Monta",
+"start": 19.8,
+"end": 20.08,
+"p": 1.0
+},
+{
+"text": "sua",
+"start": 20.08,
+"end": 20.22,
+"p": 0.94
+},
+{
+"text": "reserva",
+"start": 20.22,
+"end": 20.58,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 20.58,
+"end": 20.68,
+"p": 1.0
+},
+{
+"text": "emergência",
+"start": 20.68,
+"end": 21.16,
+"p": 1.0
+},
+{
+"text": "para",
+"start": 21.16,
+"end": 21.3,
+"p": 0.94
+},
+{
+"text": "que",
+"start": 21.3,
+"end": 21.42,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 21.42,
+"end": 21.54,
+"p": 1.0
+},
+{
+"text": "imprevisto",
+"start": 21.54,
+"end": 22.1,
+"p": 1.0
+},
+{
+"text": "não",
+"start": 22.1,
+"end": 22.28,
+"p": 1.0
+},
+{
+"text": "vire",
+"start": 22.28,
+"end": 22.56,
+"p": 1.0
+},
+{
+"text": "uma",
+"start": 22.56,
+"end": 22.7,
+"p": 1.0
+},
+{
+"text": "nova",
+"start": 22.7,
+"end": 22.96,
+"p": 1.0
+},
+{
+"text": "dívida.",
+"start": 22.96,
+"end": 23.36,
+"p": 1.0
+},
+{
+"text": "4.",
+"start": 23.62,
+"end": 24.16,
+"p": 1.0
+},
+{
+"text": "Se",
+"start": 24.3,
+"end": 24.42,
+"p": 1.0
+},
+{
+"text": "paga",
+"start": 24.42,
+"end": 24.7,
+"p": 1.0
+},
+{
+"text": "primeiro.",
+"start": 24.7,
+"end": 25.12,
+"p": 1.0
+},
+{
+"text": "Recebeu?",
+"start": 25.3,
+"end": 25.86,
+"p": 1.0
+},
+{
+"text": "Uma",
+"start": 26.14,
+"end": 26.7,
+"p": 0.99
+},
+{
+"text": "parte",
+"start": 26.7,
+"end": 27.04,
+"p": 1.0
+},
+{
+"text": "já",
+"start": 27.04,
+"end": 27.2,
+"p": 1.0
+},
+{
+"text": "vai",
+"start": 27.2,
+"end": 27.44,
+"p": 1.0
+},
+{
+"text": "para",
+"start": 27.44,
+"end": 27.58,
+"p": 0.98
+},
+{
+"text": "guardar,",
+"start": 27.58,
+"end": 28.12,
+"p": 1.0
+},
+{
+"text": "depois",
+"start": 28.54,
+"end": 29.0,
+"p": 1.0
+},
+{
+"text": "você",
+"start": 29.0,
+"end": 29.24,
+"p": 1.0
+},
+{
+"text": "gasta.",
+"start": 29.24,
+"end": 29.68,
+"p": 1.0
+},
+{
+"text": "5.",
+"start": 30.0,
+"end": 30.68,
+"p": 0.82
+},
+{
+"text": "Aumenta",
+"start": 31.5,
+"end": 31.86,
+"p": 0.98
+},
+{
+"text": "sua",
+"start": 31.86,
+"end": 32.02,
+"p": 0.78
+},
+{
+"text": "renda.",
+"start": 32.02,
+"end": 32.44,
+"p": 1.0
+},
+{
+"text": "Cortar",
+"start": 32.8,
+"end": 33.36,
+"p": 0.98
+},
+{
+"text": "gasto",
+"start": 33.36,
+"end": 33.88,
+"p": 1.0
+},
+{
+"text": "tem",
+"start": 33.88,
+"end": 34.04,
+"p": 1.0
+},
+{
+"text": "limite.",
+"start": 34.04,
+"end": 34.48,
+"p": 1.0
+},
+{
+"text": "Ganhar",
+"start": 34.94,
+"end": 35.5,
+"p": 0.96
+},
+{
+"text": "mais",
+"start": 35.5,
+"end": 35.78,
+"p": 1.0
+},
+{
+"text": "não.",
+"start": 35.78,
+"end": 35.92,
+"p": 0.47
+},
+{
+"text": "E",
+"start": 36.06,
+"end": 36.14,
+"p": 0.63
+},
+{
+"text": "6.",
+"start": 36.14,
+"end": 36.42,
+"p": 1.0
+},
+{
+"text": "O",
+"start": 36.86,
+"end": 36.92,
+"p": 0.94
+},
+{
+"text": "mais",
+"start": 36.92,
+"end": 37.12,
+"p": 1.0
+},
+{
+"text": "difícil.",
+"start": 37.12,
+"end": 37.54,
+"p": 1.0
+},
+{
+"text": "Para",
+"start": 37.78,
+"end": 38.22,
+"p": 0.99
+},
+{
+"text": "de",
+"start": 38.22,
+"end": 38.38,
+"p": 1.0
+},
+{
+"text": "gastar",
+"start": 38.38,
+"end": 38.92,
+"p": 1.0
+},
+{
+"text": "para",
+"start": 38.92,
+"end": 39.06,
+"p": 0.79
+},
+{
+"text": "impressionar",
+"start": 39.06,
+"end": 39.66,
+"p": 1.0
+},
+{
+"text": "quem",
+"start": 39.66,
+"end": 39.82,
+"p": 1.0
+},
+{
+"text": "nem",
+"start": 39.82,
+"end": 40.0,
+"p": 1.0
+},
+{
+"text": "lembra",
+"start": 40.0,
+"end": 40.34,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 40.34,
+"end": 40.44,
+"p": 1.0
+},
+{
+"text": "você.",
+"start": 40.44,
+"end": 40.76,
+"p": 1.0
+},
+{
+"text": "Parecer",
+"start": 41.34,
+"end": 41.84,
+"p": 0.98
+},
+{
+"text": "rico",
+"start": 41.84,
+"end": 42.1,
+"p": 1.0
+},
+{
+"text": "não",
+"start": 42.1,
+"end": 42.22,
+"p": 1.0
+},
+{
+"text": "é",
+"start": 42.22,
+"end": 42.34,
+"p": 1.0
+},
+{
+"text": "ficar",
+"start": 42.34,
+"end": 42.56,
+"p": 1.0
+},
+{
+"text": "rico.",
+"start": 42.56,
+"end": 42.92,
+"p": 1.0
+},
+{
+"text": "Esse",
+"start": 43.22,
+"end": 43.68,
+"p": 0.98
+},
+{
+"text": "canal",
+"start": 43.68,
+"end": 44.0,
+"p": 1.0
+},
+{
+"text": "acabou",
+"start": 44.0,
+"end": 44.42,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 44.42,
+"end": 44.62,
+"p": 1.0
+},
+{
+"text": "nascer.",
+"start": 44.62,
+"end": 45.14,
+"p": 1.0
+},
+{
+"text": "E",
+"start": 45.36,
+"end": 45.82,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 45.82,
+"end": 45.92,
+"p": 1.0
+},
+{
+"text": "nossa",
+"start": 45.92,
+"end": 46.12,
+"p": 1.0
+},
+{
+"text": "primeira",
+"start": 46.12,
+"end": 46.42,
+"p": 1.0
+},
+{
+"text": "meta",
+"start": 46.42,
+"end": 46.82,
+"p": 1.0
+},
+{
+"text": "é",
+"start": 46.82,
+"end": 46.96,
+"p": 1.0
+},
+{
+"text": "chegar",
+"start": 46.96,
+"end": 47.24,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 47.24,
+"end": 47.42,
+"p": 1.0
+},
+{
+"text": "100",
+"start": 47.42,
+"end": 47.62,
+"p": 1.0
+},
+{
+"text": "inscritos.",
+"start": 47.62,
+"end": 48.32,
+"p": 1.0
+},
+{
+"text": "Se",
+"start": 48.5,
+"end": 48.96,
+"p": 1.0
+},
+{
+"text": "esse",
+"start": 48.96,
+"end": 49.18,
+"p": 1.0
+},
+{
+"text": "vídeo",
+"start": 49.18,
+"end": 49.44,
+"p": 1.0
+},
+{
+"text": "te",
+"start": 49.44,
+"end": 49.58,
+"p": 1.0
+},
+{
+"text": "ajudou,",
+"start": 49.58,
+"end": 50.06,
+"p": 1.0
+},
+{
+"text": "se",
+"start": 50.22,
+"end": 50.42,
+"p": 1.0
+},
+{
+"text": "inscreve",
+"start": 50.42,
+"end": 50.82,
+"p": 1.0
+},
+{
+"text": "agora",
+"start": 50.82,
+"end": 51.08,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 51.08,
+"end": 51.22,
+"p": 1.0
+},
+{
+"text": "comenta.",
+"start": 51.22,
+"end": 51.66,
+"p": 1.0
+},
+{
+"text": "É",
+"start": 51.82,
+"end": 52.18,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 52.18,
+"end": 52.26,
+"p": 1.0
+},
+{
+"text": "meu",
+"start": 52.26,
+"end": 52.38,
+"p": 1.0
+},
+{
+"text": "ano.",
+"start": 52.38,
+"end": 52.66,
+"p": 1.0
+},
+{
+"text": "Bora",
+"start": 52.92,
+"end": 53.36,
+"p": 1.0
+},
+{
+"text": "começar",
+"start": 53.36,
+"end": 53.78,
+"p": 1.0
+},
+{
+"text": "2027",
+"start": 53.78,
+"end": 54.8,
+"p": 0.98
+},
+{
+"text": "juntos.",
+"start": 54.8,
+"end": 55.32,
+"p": 1.0
+}
+]
+}
