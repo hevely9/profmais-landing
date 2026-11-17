@@ -188,7 +188,7 @@ const Legenda: React.FC = () => {
   if (!pg) return null;
   const pin = spring({ frame: f - q(pg.de - 0.05), fps, config: { damping: 14, stiffness: 260 } });
   return (
-    <div style={{ position: "absolute", left: 70, right: 150, top: 1330, display: "flex", justifyContent: "center", flexWrap: "wrap", columnGap: 34,
+    <div style={{ position: "absolute", left: 70, right: 150, top: 1330, display: "flex", justifyContent: "center", flexWrap: "wrap", columnGap: 44,
       transform: `scale(${0.85 + 0.15 * pin})`, opacity: Math.min(1, pin * 2) }}>
       {pg.w.map((w, i) => {
         const on = t >= w.start - 0.05, ativo = on && t < w.end + 0.05;
