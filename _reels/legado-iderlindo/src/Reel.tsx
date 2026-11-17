@@ -21,7 +21,8 @@ const Cena: React.FC<{ de: number; ate: number; children: React.ReactNode }> = (
   if (t < de - 0.05 || t > ate + 0.5) return null;
   const en = de <= 0 ? 1 : lin(t, de, de + 0.55, Easing.out(Easing.cubic));
   const e = lin(t, ate, ate + 0.45, Easing.in(Easing.cubic));
-  return <AbsoluteFill style={{ opacity: en * (1 - e), transform: `scale(${1.04 - 0.04 * en + 0.03 * e})`, filter: e > 0.02 || en < 0.98 ? `blur(${(1 - en) * 6 + e * 6}px)` : undefined }}>{children}</AbsoluteFill>;
+  const kb = interpolate(t, [de, ate + 0.45], [0, 1], clamp);
+  return <AbsoluteFill style={{ opacity: en * (1 - e), transform: `scale(${1.04 - 0.04 * en + 0.03 * e + 0.045 * kb})`, filter: e > 0.02 || en < 0.98 ? `blur(${(1 - en) * 6 + e * 6}px)` : undefined }}>{children}</AbsoluteFill>;
 };
 const Traco: React.FC<{ d: string; p: number; len?: number; w?: number; color?: string; dash?: string }> = ({ d, p, len = 800, w = 6, color = C.giz }) => (
   <path d={d} fill="none" stroke={color} strokeWidth={w} strokeLinecap="round" strokeLinejoin="round" strokeDasharray={len} strokeDashoffset={len * (1 - p)} />
@@ -39,6 +40,8 @@ const POEIRA = Array.from({ length: 34 }, (_, i) => ({ x: (i * 397) % 1080, y: (
 const Fundo: React.FC = () => {
   const { t } = useT();
   return <AbsoluteFill style={{ background: `radial-gradient(ellipse 85% 60% at 50% 40%, ${C.fundo2} 0%, ${C.fundo} 72%)` }}>
+    <div style={{ position: "absolute", left: -200, top: -300, width: 900, height: 2600, transform: `rotate(${-24 + Math.sin(t * 0.3) * 2}deg)`, transformOrigin: "50% 0",
+      background: "linear-gradient(90deg, transparent, rgba(241,207,134,0.07) 35%, rgba(241,207,134,0.11) 50%, rgba(241,207,134,0.07) 65%, transparent)", filter: "blur(18px)" }} />
     <svg width={1080} height={1920} style={{ position: "absolute" }}>
       {POEIRA.map((p, i) => <circle key={i} cx={(p.x + Math.sin(t * 0.4 + i) * 20) % 1080} cy={((p.y - t * p.v) % 1920 + 1920) % 1920} r={p.r} fill={C.ouroClaro} opacity={0.12 + 0.12 * Math.sin(t + i)} />)}
     </svg>
@@ -54,7 +57,8 @@ const PALAVRAS_QUADRO = [
 ];
 const Andante: React.FC<{ x: number; y: number; s: number; cor: string; fase: number }> = ({ x, y, s, cor, fase }) => (
   <g transform={`translate(${x} ${y + Math.abs(Math.sin(fase)) * -8}) scale(${s})`}>
-    <circle cx="0" cy="-150" r="34" fill={cor} />
+    <ellipse cx="0" cy="98" rx="60" ry="10" fill="#000" opacity="0.25" />
+    <circle cx="0" cy="-150" r="34" fill={cor} /><circle cx="-10" cy="-160" r="12" fill="#fff" opacity="0.08" />
     <path d="M-44 -108 Q0 -126 44 -108 L52 0 L-52 0 Z" fill={cor} />
     <path d={`M-18 0 L${-18 + Math.sin(fase) * 22} 92 M18 0 L${18 - Math.sin(fase) * 22} 92`} stroke={cor} strokeWidth="26" strokeLinecap="round" />
   </g>
@@ -71,7 +75,12 @@ const CenaQuadro: React.FC = () => {
     <Cena de={CENA.passam.de} ate={CENA.apagar.ate}>
       {/* quadro */}
       <div style={{ position: "absolute", left: 60, top: 190, width: 960, height: 700, borderRadius: 18, background: C.moldura, boxShadow: "0 40px 80px -30px rgba(0,0,0,0.8)" }}>
+        <div style={{ position: "absolute", left: 30, right: 30, bottom: -26, height: 26, borderRadius: "0 0 10px 10px", background: "#4A3726" }}>
+          <div style={{ position: "absolute", left: 120, top: 6, width: 70, height: 12, borderRadius: 6, background: C.giz }} />
+          <div style={{ position: "absolute", left: 220, top: 7, width: 46, height: 11, borderRadius: 6, background: C.ouroClaro }} /></div>
         <div style={{ position: "absolute", inset: 22, borderRadius: 8, background: `radial-gradient(ellipse at 40% 30%, #233633, ${C.quadro})`, overflow: "hidden" }}>
+          <div style={{ position: "absolute", inset: 0, backgroundImage: NOISE, backgroundSize: "300px", opacity: 0.16, mixBlendMode: "screen" }} />
+          <div style={{ position: "absolute", left: 60, top: 400, width: 500, height: 120, borderRadius: 60, background: "rgba(236,232,222,0.05)", filter: "blur(20px)" }} />
           {PALAVRAS_QUADRO.map((w, i) => {
             const x0 = w.x - 60; const apagado = lin(borrX - 22, x0, x0 + 280, Easing.linear);
             return <div key={i} style={{ opacity: 1 - apagado * 0.95 }}><Giz at={w.at()} size={88} style={{ left: w.x - 82, top: w.y - 212, transform: `rotate(${w.r}deg)` }}>{w.txt}</Giz></div>;
@@ -360,7 +369,7 @@ const Sons: React.FC = () => (
   <>
     {VOZ_SEGS.map((g, i) => <Sequence key={i} from={q(o(g.s))} durationInFrames={q(g.e - g.s) + 2}>
       <Audio src={staticFile("audio/voz.mp3")} startFrom={q(g.s)} endAt={q(g.e)} volume={1} /></Sequence>)}
-    <Audio src={staticFile("audio/piano.mp3")} volume={(fr) => 0.42 * interpolate(fr, [0, 20], [0, 1], clamp) * interpolate(fr, [TOTAL - q(2.5), TOTAL - 2], [1, 0], clamp)} />
+    <Audio src={staticFile("audio/trilha-el.mp3")} volume={(fr) => interpolate(fr, [q(FIM_VOZ - 0.2), q(FIM_VOZ + 0.8)], [0.62, 1], clamp) * interpolate(fr, [0, 20], [0, 1], clamp) * interpolate(fr, [TOTAL - q(2.5), TOTAL - 2], [1, 0], clamp)} />
     {SFX.map((s, i) => <Sequence key={i} from={Math.max(0, q(s.at))} durationInFrames={q(2.2)}><Audio src={staticFile(`audio/${s.src}.mp3`)} volume={s.vol ?? 0.3} /></Sequence>)}
   </>
 );

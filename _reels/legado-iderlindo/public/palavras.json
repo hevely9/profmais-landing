@@ -3,661 +3,661 @@
 {
 "text": "Existem",
 "start": 0.0,
-"end": 0.68,
-"p": 1.0
+"end": 0.36,
+"p": 0.99
 },
 {
 "text": "pessoas",
-"start": 0.68,
-"end": 1.18,
+"start": 0.36,
+"end": 0.86,
 "p": 1.0
 },
 {
 "text": "que",
-"start": 1.18,
-"end": 1.42,
+"start": 0.86,
+"end": 1.14,
 "p": 1.0
 },
 {
 "text": "passam",
-"start": 1.42,
-"end": 1.76,
+"start": 1.14,
+"end": 1.52,
 "p": 1.0
 },
 {
 "text": "pela",
-"start": 1.76,
-"end": 1.96,
+"start": 1.52,
+"end": 1.74,
 "p": 1.0
 },
 {
 "text": "vida",
-"start": 1.96,
-"end": 2.2,
+"start": 1.74,
+"end": 2.02,
 "p": 1.0
 },
 {
 "text": "ensinando",
-"start": 2.2,
-"end": 2.74,
+"start": 2.02,
+"end": 2.58,
 "p": 1.0
 },
 {
 "text": "conteúdos.",
-"start": 2.74,
-"end": 3.46,
+"start": 2.58,
+"end": 3.4,
 "p": 1.0
 },
 {
 "text": "Outras",
-"start": 4.12,
-"end": 4.88,
+"start": 3.84,
+"end": 4.52,
 "p": 1.0
 },
 {
 "text": "deixam",
-"start": 4.88,
-"end": 5.24,
-"p": 1.0
+"start": 4.52,
+"end": 5.1,
+"p": 0.99
 },
 {
 "text": "algo",
-"start": 5.24,
-"end": 5.58,
+"start": 5.1,
+"end": 5.38,
 "p": 1.0
 },
 {
 "text": "que",
-"start": 5.58,
-"end": 5.74,
+"start": 5.38,
+"end": 5.54,
 "p": 1.0
 },
 {
 "text": "o",
-"start": 5.74,
-"end": 5.86,
+"start": 5.54,
+"end": 5.66,
 "p": 1.0
 },
 {
 "text": "tempo",
-"start": 5.86,
-"end": 6.16,
+"start": 5.66,
+"end": 5.9,
 "p": 1.0
 },
 {
 "text": "não",
-"start": 6.16,
-"end": 6.38,
+"start": 5.9,
+"end": 6.22,
 "p": 1.0
 },
 {
 "text": "consegue",
-"start": 6.38,
-"end": 6.88,
+"start": 6.22,
+"end": 6.76,
 "p": 1.0
 },
 {
 "text": "apagar.",
-"start": 6.88,
-"end": 7.34,
+"start": 6.76,
+"end": 7.3,
 "p": 1.0
 },
 {
 "text": "Porque",
-"start": 7.96,
-"end": 8.58,
-"p": 1
+"start": 7.62,
+"end": 8.08,
+"p": 0.79
 },
 {
 "text": "ensinar",
-"start": 8.58,
-"end": 9.06,
+"start": 8.08,
+"end": 8.6,
 "p": 1.0
 },
 {
 "text": "nunca",
-"start": 9.06,
-"end": 9.42,
+"start": 8.6,
+"end": 8.86,
 "p": 1.0
 },
 {
 "text": "foi",
-"start": 9.42,
-"end": 9.66,
+"start": 8.86,
+"end": 9.08,
 "p": 1.0
 },
 {
 "text": "apenas",
-"start": 9.66,
-"end": 10.06,
+"start": 9.08,
+"end": 9.42,
 "p": 1.0
 },
 {
 "text": "transmitir",
-"start": 10.06,
-"end": 10.64,
+"start": 9.42,
+"end": 10.0,
 "p": 1.0
 },
 {
 "text": "palavras,",
-"start": 10.64,
-"end": 11.14,
+"start": 10.0,
+"end": 10.58,
 "p": 1.0
 },
 {
 "text": "explicar",
-"start": 11.46,
-"end": 12.0,
+"start": 10.9,
+"end": 11.26,
 "p": 1.0
 },
 {
 "text": "teorias",
-"start": 12.0,
-"end": 12.56,
+"start": 11.26,
+"end": 11.94,
 "p": 1.0
 },
 {
 "text": "ou",
-"start": 12.56,
-"end": 12.72,
-"p": 1.0
+"start": 11.94,
+"end": 12.12,
+"p": 0.99
 },
 {
 "text": "escrever",
-"start": 12.72,
-"end": 13.08,
+"start": 12.12,
+"end": 12.44,
 "p": 1.0
 },
 {
 "text": "no",
-"start": 13.08,
-"end": 13.36,
+"start": 12.44,
+"end": 12.7,
 "p": 1.0
 },
 {
 "text": "quadro.",
-"start": 13.36,
-"end": 13.78,
+"start": 12.7,
+"end": 13.08,
 "p": 1.0
 },
 {
 "text": "É",
-"start": 14.46,
-"end": 14.84,
+"start": 13.24,
+"end": 13.62,
 "p": 1.0
 },
 {
 "text": "despertar",
-"start": 14.84,
-"end": 15.44,
+"start": 13.62,
+"end": 14.12,
 "p": 1.0
 },
 {
 "text": "pensamentos,",
-"start": 15.44,
-"end": 16.14,
+"start": 14.12,
+"end": 14.92,
 "p": 1.0
 },
 {
 "text": "abrir",
-"start": 16.46,
-"end": 16.82,
+"start": 15.26,
+"end": 15.6,
 "p": 1.0
 },
 {
 "text": "caminhos",
-"start": 16.82,
-"end": 17.26,
+"start": 15.6,
+"end": 16.18,
 "p": 1.0
 },
 {
 "text": "e",
-"start": 17.26,
-"end": 17.38,
+"start": 16.18,
+"end": 16.34,
 "p": 1.0
 },
 {
 "text": "plantar",
-"start": 17.38,
-"end": 17.78,
+"start": 16.34,
+"end": 16.72,
 "p": 1.0
 },
 {
 "text": "conhecimentos",
-"start": 17.78,
-"end": 18.5,
+"start": 16.72,
+"end": 17.42,
 "p": 1.0
 },
 {
 "text": "que",
-"start": 18.5,
-"end": 18.74,
+"start": 17.42,
+"end": 17.66,
 "p": 1.0
 },
 {
 "text": "continuarão",
-"start": 18.74,
-"end": 19.3,
+"start": 17.66,
+"end": 18.28,
 "p": 1.0
 },
 {
 "text": "crescendo",
-"start": 19.3,
-"end": 19.74,
+"start": 18.28,
+"end": 18.78,
 "p": 1.0
 },
 {
 "text": "mesmo",
-"start": 19.74,
-"end": 20.1,
+"start": 18.78,
+"end": 19.24,
 "p": 1.0
 },
 {
 "text": "quando",
-"start": 20.1,
-"end": 20.4,
+"start": 19.24,
+"end": 19.58,
 "p": 1.0
 },
 {
 "text": "a",
-"start": 20.4,
-"end": 20.52,
+"start": 19.58,
+"end": 19.68,
 "p": 1.0
 },
 {
 "text": "aula",
-"start": 20.52,
-"end": 20.76,
+"start": 19.68,
+"end": 19.88,
 "p": 1.0
 },
 {
 "text": "terminar.",
-"start": 20.76,
-"end": 21.2,
+"start": 19.88,
+"end": 20.28,
 "p": 1.0
 },
 {
 "text": "Na",
-"start": 21.8,
-"end": 22.42,
+"start": 20.76,
+"end": 21.04,
 "p": 1.0
 },
 {
 "text": "jornada",
-"start": 22.42,
-"end": 22.94,
+"start": 21.04,
+"end": 21.46,
 "p": 1.0
 },
 {
 "text": "de",
-"start": 22.94,
-"end": 23.1,
+"start": 21.46,
+"end": 21.58,
 "p": 1.0
 },
 {
 "text": "um",
-"start": 23.1,
-"end": 23.24,
+"start": 21.58,
+"end": 21.66,
 "p": 1.0
 },
 {
 "text": "educador,",
-"start": 23.24,
-"end": 23.78,
+"start": 21.66,
+"end": 22.2,
 "p": 1.0
 },
 {
 "text": "cada",
-"start": 24.0,
-"end": 24.26,
+"start": 22.52,
+"end": 22.7,
 "p": 1.0
 },
 {
 "text": "palavra",
-"start": 24.26,
-"end": 24.68,
+"start": 22.7,
+"end": 23.16,
 "p": 1.0
 },
 {
 "text": "pode",
-"start": 24.68,
-"end": 25.0,
+"start": 23.16,
+"end": 23.44,
 "p": 1.0
 },
 {
 "text": "representar",
-"start": 25.0,
-"end": 25.62,
+"start": 23.44,
+"end": 24.0,
 "p": 1.0
 },
 {
 "text": "uma",
-"start": 25.62,
-"end": 25.76,
+"start": 24.0,
+"end": 24.14,
 "p": 1.0
 },
 {
 "text": "descoberta,",
-"start": 25.76,
-"end": 26.5,
+"start": 24.14,
+"end": 24.88,
 "p": 1.0
 },
 {
 "text": "cada",
-"start": 26.5,
-"end": 26.88,
-"p": 0.79
+"start": 25.12,
+"end": 25.44,
+"p": 1.0
 },
 {
 "text": "ensinamento",
-"start": 26.88,
-"end": 27.56,
+"start": 25.44,
+"end": 26.1,
 "p": 1.0
 },
 {
 "text": "pode",
-"start": 27.56,
-"end": 27.86,
+"start": 26.1,
+"end": 26.36,
 "p": 1.0
 },
 {
 "text": "mudar",
-"start": 27.86,
-"end": 28.16,
+"start": 26.36,
+"end": 26.62,
 "p": 1.0
 },
 {
 "text": "uma",
-"start": 28.16,
-"end": 28.36,
+"start": 26.62,
+"end": 26.82,
 "p": 1.0
 },
 {
 "text": "perspectiva",
-"start": 28.36,
-"end": 29.08,
+"start": 26.82,
+"end": 27.62,
 "p": 1.0
 },
 {
 "text": "e",
-"start": 29.08,
-"end": 29.2,
-"p": 1.0
+"start": 27.62,
+"end": 28.04,
+"p": 0.83
 },
 {
 "text": "cada",
-"start": 29.2,
-"end": 29.42,
+"start": 28.04,
+"end": 28.42,
 "p": 1.0
 },
 {
 "text": "aluno",
-"start": 29.42,
-"end": 29.76,
+"start": 28.42,
+"end": 28.82,
 "p": 1.0
 },
 {
 "text": "pode",
-"start": 29.76,
-"end": 30.06,
+"start": 28.82,
+"end": 29.1,
 "p": 1.0
 },
 {
 "text": "levar",
-"start": 30.06,
-"end": 30.36,
+"start": 29.1,
+"end": 29.36,
 "p": 1.0
 },
 {
 "text": "consigo",
-"start": 30.36,
-"end": 30.8,
+"start": 29.36,
+"end": 29.8,
 "p": 1.0
 },
 {
 "text": "um",
-"start": 30.8,
-"end": 31.08,
+"start": 29.8,
+"end": 30.1,
 "p": 1.0
 },
 {
 "text": "pouco",
-"start": 31.08,
-"end": 31.34,
+"start": 30.1,
+"end": 30.48,
 "p": 1.0
 },
 {
 "text": "daquilo",
-"start": 31.34,
-"end": 31.76,
+"start": 30.48,
+"end": 30.9,
 "p": 1.0
 },
 {
 "text": "que",
-"start": 31.76,
-"end": 31.9,
+"start": 30.9,
+"end": 31.02,
 "p": 1.0
 },
 {
 "text": "aprendeu.",
-"start": 31.9,
-"end": 32.44,
+"start": 31.02,
+"end": 31.5,
 "p": 1.0
 },
 {
 "text": "Iderlindo",
-"start": 33.42,
-"end": 34.02,
-"p": 0.93
+"start": 32.88,
+"end": 33.96,
+"p": 1
 },
 {
 "text": "Lopes,",
-"start": 34.02,
-"end": 34.48,
-"p": 1.0
+"start": 33.96,
+"end": 34.42,
+"p": 0.83
 },
 {
 "text": "professor",
-"start": 34.94,
-"end": 35.98,
+"start": 34.72,
+"end": 35.18,
 "p": 1.0
 },
 {
 "text": "de",
-"start": 35.98,
-"end": 36.28,
+"start": 35.18,
+"end": 35.42,
 "p": 1.0
 },
 {
 "text": "Letras,",
-"start": 36.28,
-"end": 36.76,
-"p": 0.99
+"start": 35.42,
+"end": 35.88,
+"p": 0.96
 },
 {
 "text": "mas,",
-"start": 36.98,
-"end": 37.42,
+"start": 36.08,
+"end": 36.3,
 "p": 1.0
 },
 {
 "text": "acima",
-"start": 37.66,
-"end": 38.14,
+"start": 36.5,
+"end": 36.9,
 "p": 1.0
 },
 {
 "text": "de",
-"start": 38.14,
-"end": 38.34,
+"start": 36.9,
+"end": 37.04,
 "p": 1.0
 },
 {
 "text": "tudo,",
-"start": 38.34,
-"end": 38.62,
+"start": 37.04,
+"end": 37.34,
 "p": 1.0
 },
 {
 "text": "alguém",
-"start": 38.82,
-"end": 39.1,
+"start": 37.64,
+"end": 37.92,
 "p": 1.0
 },
 {
 "text": "que",
-"start": 39.1,
-"end": 39.28,
+"start": 37.92,
+"end": 38.08,
 "p": 1.0
 },
 {
 "text": "faz",
-"start": 39.28,
-"end": 39.54,
+"start": 38.08,
+"end": 38.34,
 "p": 1.0
 },
 {
 "text": "das",
-"start": 39.54,
-"end": 39.7,
+"start": 38.34,
+"end": 38.5,
 "p": 1.0
 },
 {
 "text": "palavras",
-"start": 39.7,
-"end": 40.14,
+"start": 38.5,
+"end": 39.02,
 "p": 1.0
 },
 {
 "text": "um",
-"start": 40.14,
-"end": 40.34,
+"start": 39.02,
+"end": 39.24,
 "p": 1.0
 },
 {
 "text": "instrumento",
-"start": 40.34,
-"end": 40.94,
+"start": 39.24,
+"end": 39.9,
 "p": 1.0
 },
 {
 "text": "de",
-"start": 40.94,
-"end": 41.04,
+"start": 39.9,
+"end": 40.02,
 "p": 1.0
 },
 {
 "text": "transformação.",
-"start": 41.04,
-"end": 41.84,
+"start": 40.02,
+"end": 40.98,
 "p": 1.0
 },
 {
 "text": "Porque",
-"start": 42.44,
-"end": 43.14,
-"p": 1
+"start": 41.18,
+"end": 41.72,
+"p": 1.0
 },
 {
 "text": "o",
-"start": 43.14,
-"end": 43.26,
+"start": 41.72,
+"end": 41.84,
 "p": 1.0
 },
 {
 "text": "verdadeiro",
-"start": 43.26,
-"end": 43.76,
+"start": 41.84,
+"end": 42.36,
 "p": 1.0
 },
 {
 "text": "conhecimento",
-"start": 43.76,
-"end": 44.52,
+"start": 42.36,
+"end": 43.06,
 "p": 1.0
 },
 {
 "text": "não",
-"start": 44.52,
-"end": 44.72,
+"start": 43.06,
+"end": 43.36,
 "p": 1.0
 },
 {
 "text": "termina",
-"start": 44.72,
-"end": 45.18,
+"start": 43.36,
+"end": 43.88,
 "p": 1.0
 },
 {
 "text": "na",
-"start": 45.18,
-"end": 45.34,
+"start": 43.88,
+"end": 44.02,
 "p": 1.0
 },
 {
 "text": "sala",
-"start": 45.34,
-"end": 45.58,
+"start": 44.02,
+"end": 44.24,
 "p": 1.0
 },
 {
 "text": "de",
-"start": 45.58,
-"end": 45.76,
+"start": 44.24,
+"end": 44.4,
 "p": 1.0
 },
 {
 "text": "aula.",
-"start": 45.76,
-"end": 46.06,
+"start": 44.4,
+"end": 44.66,
 "p": 1.0
 },
 {
 "text": "Ele",
-"start": 46.64,
-"end": 47.24,
+"start": 44.82,
+"end": 45.18,
 "p": 1.0
 },
 {
 "text": "permanece",
-"start": 47.24,
-"end": 47.9,
+"start": 45.18,
+"end": 45.82,
 "p": 1.0
 },
 {
 "text": "naqueles",
-"start": 47.9,
-"end": 48.38,
+"start": 45.82,
+"end": 46.38,
 "p": 1.0
 },
 {
 "text": "que",
-"start": 48.38,
-"end": 48.54,
+"start": 46.38,
+"end": 46.54,
 "p": 1.0
 },
 {
 "text": "foram",
-"start": 48.54,
-"end": 48.8,
+"start": 46.54,
+"end": 46.78,
 "p": 1.0
 },
 {
 "text": "tocados",
-"start": 48.8,
-"end": 49.34,
+"start": 46.78,
+"end": 47.4,
 "p": 1.0
 },
 {
 "text": "por",
-"start": 49.34,
-"end": 49.62,
+"start": 47.4,
+"end": 47.64,
 "p": 1.0
 },
 {
 "text": "ele.",
-"start": 49.62,
-"end": 49.88,
+"start": 47.64,
+"end": 47.86,
 "p": 1.0
 }
 ]

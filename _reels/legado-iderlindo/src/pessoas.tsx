@@ -52,9 +52,9 @@ export const Pessoa: React.FC<PessoaProps> = ({ pele, peleSombra, cabelo, camisa
       {detalhe}
       <g transform={`rotate(${inclina} 300 560)`}>
         <rect x="262" y="440" width="76" height="110" rx="30" fill={peleSombra} />
-        <ellipse cx="160" cy="320" rx="26" ry="40" fill={pele} stroke={peleSombra} strokeWidth="4" />
-        <ellipse cx="440" cy="320" rx="26" ry="40" fill={pele} stroke={peleSombra} strokeWidth="4" />
-        <path d="M156 286 C156 150 230 120 300 120 C370 120 444 150 444 286 C444 410 380 480 300 480 C220 480 156 410 156 286 Z" fill={pele} />
+        <ellipse cx={estilo === "homem" ? 172 : 160} cy="320" rx="26" ry="40" fill={pele} stroke={peleSombra} strokeWidth="4" />
+        <ellipse cx={estilo === "homem" ? 428 : 440} cy="320" rx="26" ry="40" fill={pele} stroke={peleSombra} strokeWidth="4" />
+        <path d={estilo === "homem" ? "M170 280 C168 150 236 116 300 116 C364 116 432 150 430 280 C430 392 400 448 360 482 C336 500 316 506 300 506 C284 506 264 500 240 482 C200 448 170 392 170 280 Z" : "M156 286 C156 150 230 120 300 120 C370 120 444 150 444 286 C444 410 380 480 300 480 C220 480 156 410 156 286 Z"} fill={pele} />
         {/* cabelo da frente */}
         {estilo === "maria"
           ? <>
@@ -78,11 +78,14 @@ export const Pessoa: React.FC<PessoaProps> = ({ pele, peleSombra, cabelo, camisa
         <ellipse cx="382" cy="350" rx="30" ry="17" fill="#E8828A" opacity={estilo === "homem" ? 0.12 : 0.35} />
         {brow(238, -1)}{brow(362, 1)}
         {[238, 362].map((x) => <g key={x} transform={`translate(${x + olhar[0]} ${294 + olhar[1]}) scale(1 ${pisca})`}>
-          <ellipse rx="17" ry="22" fill="#24180F" /><circle cx="-5" cy="-8" r="6" fill="#fff" /></g>)}
-        <path d="M300 318 Q288 352 306 356" fill="none" stroke={peleSombra} strokeWidth="7" strokeLinecap="round" />
+          {estilo === "homem"
+            ? <><ellipse rx="22" ry="12" fill="#FBF6EE" /><circle r="11" fill="#24180F" /><circle cx="-4" cy="-4" r="3.5" fill="#fff" />
+                <path d="M-26 -6 Q0 -18 26 -6" fill="none" stroke="#2A1C14" strokeWidth="5" strokeLinecap="round" /></>
+            : <><ellipse rx="17" ry="22" fill="#24180F" /><circle cx="-5" cy="-8" r="6" fill="#fff" /></>}</g>)}
+        <path d={estilo === "homem" ? "M296 300 Q284 344 288 356 Q300 366 316 356" : "M300 318 Q288 352 306 356"} fill="none" stroke={peleSombra} strokeWidth={estilo === "homem" ? 8 : 7} strokeLinecap="round" />
         {boca > 0.05
           ? <path d={`M${300 - larg} ${bocaY} Q300 ${bocaY + curva + 20 * boca + 8} ${300 + larg} ${bocaY} Q300 ${bocaY + 8} ${300 - larg} ${bocaY} Z`} fill="#8E3B3B" stroke="#8E3B3B" strokeWidth="6" strokeLinejoin="round" />
-          : <path d={`M${300 - larg} ${bocaY} Q300 ${bocaY + curva} ${300 + larg} ${bocaY}`} fill="none" stroke="#9C4545" strokeWidth="10" strokeLinecap="round" />}
+          : <path d={`M${300 - larg} ${bocaY + (estilo === "homem" ? 14 : 0)} Q300 ${bocaY + curva * (estilo === "homem" ? 0.45 : 1) + (estilo === "homem" ? 14 : 0)} ${300 + larg} ${bocaY + (estilo === "homem" ? 14 : 0)}`} fill="none" stroke={estilo === "homem" ? "#6E3B30" : "#9C4545"} strokeWidth={estilo === "homem" ? 8 : 10} strokeLinecap="round" />}
       </g>
       {braco(E, 196)}{braco(D, 404)}
     </svg>

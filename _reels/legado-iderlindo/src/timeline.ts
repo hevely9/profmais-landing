@@ -4,10 +4,10 @@ import palavras from "../public/palavras.json";
 export const FPS = 30;
 export const LEAD = 0.6;
 // Respiros entre parágrafos (tempo da narração, duração). O maior vem antes do nome.
-export const GAPS: [number, number][] = [[7.6, 0.5], [14.1, 0.5], [21.5, 0.6], [32.9, 1.0], [42.15, 0.6]];
+export const GAPS: [number, number][] = [[7.45, 0.35], [13.16, 0.45], [20.5, 0.35], [32.2, 0.4], [41.08, 0.5], [44.74, 0.25]];
 export const o = (t: number) => t + LEAD + GAPS.reduce((s, [at, g]) => s + (t >= at ? g : 0), 0);
 export const q = (t: number) => Math.round(t * FPS);
-export const VOZ_FIM_RAW = 50.0;
+export const VOZ_FIM_RAW = 48.0;
 export const FIM_VOZ = o(VOZ_FIM_RAW);
 export const TOTAL = q(FIM_VOZ + 5.2);
 
@@ -41,24 +41,22 @@ export const CENA = {
   fim: { de: FIM_VOZ + 0.35, ate: TOTAL / FPS + 1 },
 };
 
+// Efeitos gerados no ElevenLabs (el-*), discretos e sem cobrir a voz.
 export const SFX: { src: string; at: number; vol?: number }[] = [
-  ...[0, 1, 2, 3].map((i) => ({ src: "sfx-lapis", at: T.pessoas + i * 0.62, vol: 0.28 })),
-  { src: "papel", at: T.apagar - 0.25, vol: 0.4 },
-  { src: "esp-brilho", at: T.apagar + 0.45, vol: 0.3 },
-  { src: "sfx-whoosh", at: CENA.apenas.de - 0.25, vol: 0.22 },
-  { src: "sfx-massinha", at: T.palavras - 0.05, vol: 0.3 }, { src: "sfx-massinha", at: T.teorias - 0.05, vol: 0.3 }, { src: "sfx-lapis", at: T.quadro - 0.05, vol: 0.3 },
-  { src: "sfx-whoosh", at: CENA.semente.de - 0.25, vol: 0.22 },
-  { src: "esp-brilho", at: T.despertar + 0.1, vol: 0.3 },
-  { src: "esp-toque", at: T.plantar + 0.15, vol: 0.35 },
-  { src: "esp-brilho", at: T.crescendo, vol: 0.25 },
-  { src: "sfx-whoosh", at: CENA.jornada.de - 0.25, vol: 0.22 },
-  { src: "esp-brilho", at: T.descoberta + 0.1, vol: 0.28 },
-  { src: "sfx-whoosh", at: T.perspectiva - 0.1, vol: 0.2 },
-  { src: "sfx-whoosh", at: CENA.mestre.de - 0.3, vol: 0.28 },
-  { src: "esp-brilho", at: T.iderlindo - 0.1, vol: 0.4 },
-  { src: "sfx-lapis", at: T.acima, vol: 0.28 },
-  { src: "esp-brilho", at: T.transformacao + 0.2, vol: 0.32 },
-  { src: "sfx-whoosh", at: CENA.permanece.de - 0.25, vol: 0.22 },
-  { src: "esp-brilho", at: T.tocados, vol: 0.3 },
-  { src: "esp-brilho", at: CENA.fim.de + 0.2, vol: 0.35 },
+  { src: "el-giz", at: T.pessoas - 0.05, vol: 0.35 }, { src: "el-giz", at: T.ensinando - 0.05, vol: 0.3 },
+  { src: "el-apagador", at: T.tempo + 0.3, vol: 0.45 },
+  { src: "el-brilho", at: T.apagar + 0.35, vol: 0.4 },
+  { src: "el-whoosh", at: CENA.apenas.de - 0.25, vol: 0.35 },
+  { src: "el-giz", at: T.quadro - 0.1, vol: 0.25 },
+  { src: "el-whoosh", at: CENA.semente.de - 0.25, vol: 0.35 },
+  { src: "el-brilho", at: T.despertar + 0.15, vol: 0.32 },
+  { src: "el-semente", at: T.plantar + 0.1, vol: 0.45 },
+  { src: "el-whoosh", at: CENA.jornada.de - 0.25, vol: 0.35 },
+  { src: "el-brilho", at: T.descoberta + 0.1, vol: 0.3 },
+  { src: "el-whoosh", at: CENA.mestre.de - 0.3, vol: 0.4 },
+  { src: "el-brilho", at: T.iderlindo - 0.15, vol: 0.45 },
+  { src: "el-giz", at: T.acima, vol: 0.25 },
+  { src: "el-porta", at: T.porque2 - 0.1, vol: 0.4 },
+  { src: "el-brilho", at: T.tocados, vol: 0.3 },
+  { src: "el-brilho", at: CENA.fim.de + 0.2, vol: 0.45 },
 ];
