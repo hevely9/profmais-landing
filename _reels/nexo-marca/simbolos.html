@@ -1,0 +1,32 @@
+<html><head><style>body{margin:0;background:#000;font-family:sans-serif}
+.row{display:flex;gap:40px;padding:50px;background:radial-gradient(ellipse at 50% 40%,#0B1230,#000 70%)}
+.c{width:420px;text-align:center;color:#8FA3FF;font-size:26px;letter-spacing:4px}
+.t{width:420px;height:420px;border-radius:40px;background:#05060C;border:1px solid #1B2350;display:grid;place-items:center;margin-bottom:22px}
+.small{display:flex;gap:30px;justify-content:center;margin-top:18px;align-items:center}
+.av{width:90px;height:90px;border-radius:50%;background:#000;display:grid;place-items:center;border:1px solid #333}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+ <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A9B8FF"/><stop offset=".55" stop-color="#4F6FFF"/><stop offset="1" stop-color="#2A3FD6"/></linearGradient>
+ <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <symbol id="A" viewBox="0 0 100 100"><!-- estrela de conexões: brilho com 4 nós nas pontas -->
+  <path d="M50 8 C53 36 64 47 92 50 C64 53 53 64 50 92 C47 64 36 53 8 50 C36 47 47 36 50 8 Z" fill="url(#g)"/>
+  <path d="M22 22 L78 78 M78 22 L22 78" stroke="#fff" stroke-width="2.2" stroke-linecap="round" opacity=".85"/>
+  <circle cx="22" cy="22" r="6" fill="#fff"/><circle cx="78" cy="78" r="6" fill="#fff"/><circle cx="78" cy="22" r="6" fill="#fff"/><circle cx="22" cy="78" r="6" fill="#fff"/>
+  <circle cx="50" cy="50" r="5" fill="#fff"/></symbol>
+ <symbol id="B" viewBox="0 0 100 100"><!-- N em rede: 4 nós ligados formam um N escondido -->
+  <path d="M24 78 L24 22 L76 78 L76 22" fill="none" stroke="url(#g)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="24" cy="78" r="9" fill="#fff"/><circle cx="24" cy="22" r="9" fill="#4F6FFF" stroke="#fff" stroke-width="3"/><circle cx="76" cy="78" r="9" fill="#4F6FFF" stroke="#fff" stroke-width="3"/><circle cx="76" cy="22" r="9" fill="#fff"/>
+  <path d="M50 42 L52.5 48 L58 50 L52.5 52 L50 58 L47.5 52 L42 50 L47.5 48 Z" fill="#fff"/></symbol>
+ <symbol id="C" viewBox="0 0 100 100"><!-- nó de conexão: dois arcos que se entrelaçam formando um X -->
+  <path d="M20 20 C45 40 55 60 80 80" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M80 20 C70 30 64 36 57 43 M43 57 C36 64 30 70 20 80" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="50" cy="50" r="15" fill="none" stroke="#4F6FFF" stroke-width="3" opacity=".6"/></symbol>
+</defs></svg>
+<div class=row>
+ <div class=c><div class=t><svg width="300" height="300" filter="url(#glow)"><use href="#A"/></svg></div>A · ESTRELA DE CONEXÕES
+  <div class=small><div class=av><svg width="58" height="58"><use href="#A"/></svg></div><svg width="22" height="22"><use href="#A"/></svg></div></div>
+ <div class=c><div class=t><svg width="300" height="300" filter="url(#glow)"><use href="#B"/></svg></div>B · N EM REDE
+  <div class=small><div class=av><svg width="58" height="58"><use href="#B"/></svg></div><svg width="22" height="22"><use href="#B"/></svg></div></div>
+ <div class=c><div class=t><svg width="300" height="300" filter="url(#glow)"><use href="#C"/></svg></div>C · NÓ DE CONEXÃO
+  <div class=small><div class=av><svg width="58" height="58"><use href="#C"/></svg></div><svg width="22" height="22"><use href="#C"/></svg></div></div>
+</div></body></html>
