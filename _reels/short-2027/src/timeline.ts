@@ -13,7 +13,7 @@ export const q = (t: number) => Math.round(t * FPS);
 export const FIM_VOZ = o(59.6);
 // Tela final da marca NEXO depois da última fala.
 export const MARCA = FIM_VOZ + 0.35;
-export const TOTAL = q(MARCA + 3.0);
+export const TOTAL = q(MARCA + 3.6);
 
 type W = { text: string; start: number; end: number };
 export const WORDS = (palavras as { words: W[] }).words.map((w) => ({ text: w.text, start: o(w.start), end: o(w.end) }));
@@ -67,4 +67,6 @@ export const SFX: { src: string; at: number; vol?: number }[] = [
   { src: "el-whoosh", at: MARCA - 0.25, vol: 0.4 },
   { src: "boom", at: MARCA + 0.15, vol: 0.45 },
   { src: "el-brilho", at: MARCA + 0.5, vol: 0.4 },
+  { src: "clique", at: MARCA + 2.22, vol: 0.75 },
+  { src: "sfx-ding", at: MARCA + 2.32, vol: 0.45 },
 ];

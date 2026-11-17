@@ -153,6 +153,15 @@ const TelaMarca: React.FC = () => {
   const sim = lin(t, MARCA + 0.45, MARCA + 1.05, Easing.out(Easing.cubic));
   const slog = sp(f, fps, MARCA + 0.8), insc = sp(f, fps, MARCA + 1.3, { damping: 11, stiffness: 200 });
   const brilho = 0.5 + 0.5 * Math.sin((t - MARCA) * 3);
+  // mouse: entra pela direita, para no botão e clica
+  const CLIQUE = MARCA + 2.25;
+  const ida = lin(t, MARCA + 1.45, CLIQUE - 0.12, Easing.bezier(0.25, 0.8, 0.3, 1));
+  const mx = interpolate(ida, [0, 1], [1150, 600]), my = interpolate(ida, [0, 1], [1750, 1420]);
+  const cur = lin(t, MARCA + 1.4, MARCA + 1.6);
+  const clicou = t >= CLIQUE - 0.06 && t < CLIQUE + 0.1 ? 1 : 0;
+  const onda = t >= CLIQUE ? Math.min(1, (t - CLIQUE) / 0.45) : 0;
+  const inscrito = t >= CLIQUE;
+  const aperta = t >= CLIQUE - 0.04 && t < CLIQUE + 0.12 ? 0.93 : 1;
   return (
     <AbsoluteFill style={{ opacity: fundo, background: `radial-gradient(ellipse at 50% 34%, #0E1A55 0%, #050816 55%, #000 100%)` }}>
       <div style={{ position: "absolute", left: 0, right: 0, top: 250, display: "flex", justifyContent: "center", transform: `translateY(${flutua + (1 - m) * 80}px) scale(${0.6 + 0.4 * m})`, opacity: Math.min(1, m * 1.5) }}>
@@ -165,8 +174,21 @@ const TelaMarca: React.FC = () => {
       </div>
       <div style={{ position: "absolute", left: 60, right: 60, top: 1145, textAlign: "center", fontFamily: SANS, fontWeight: 800, fontSize: 50, lineHeight: 1.2, color: C.branco,
         opacity: slog, transform: `translateY(${(1 - slog) * 20}px)` }}>Conexões, conhecimento<br /><span style={{ color: "#8FA2FF" }}>e oportunidades.</span></div>
-      <div style={{ position: "absolute", left: 0, right: 0, top: 1360, display: "flex", justifyContent: "center", transform: `scale(${insc})` }}>
-        <div style={{ padding: "24px 56px", borderRadius: 999, background: C.vermelho, color: C.branco, fontFamily: SANS, fontWeight: 800, fontSize: 52, boxShadow: "0 20px 50px rgba(0,0,0,0.6)" }}>INSCREVA-SE</div>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 1360, display: "flex", justifyContent: "center", transform: `scale(${insc * aperta})` }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 18, padding: "26px 60px", borderRadius: 999, background: inscrito ? "#272727" : "#FF0000", color: "#FFFFFF",
+          fontFamily: "Roboto, " + SANS, fontWeight: 700, fontSize: 54, boxShadow: inscrito ? "0 20px 50px rgba(0,0,0,0.6)" : "0 0 50px rgba(255,0,0,0.55), 0 20px 50px rgba(0,0,0,0.6)" }}>
+          {inscrito ? <>
+            <svg width="50" height="50" viewBox="0 0 24 24" style={{ transform: `rotate(${Math.sin((t - CLIQUE) * 30) * 22 * Math.max(0, 1 - (t - CLIQUE) * 1.6)}deg)`, transformOrigin: "50% 10%" }}>
+              <path d="M12 22a2.5 2.5 0 0 0 2.4-2h-4.8A2.5 2.5 0 0 0 12 22Zm7-6V11a7 7 0 0 0-5.5-6.8V3.5a1.5 1.5 0 0 0-3 0v.7A7 7 0 0 0 5 11v5l-2 2v1h18v-1l-2-2Z" fill="#fff" /></svg>
+            INSCRITO</> : "INSCREVA-SE"}
+        </div>
+      </div>
+      {/* mouse que entra e clica no botão */}
+      <div style={{ position: "absolute", left: 0, top: 0, transform: `translate(${mx}px, ${my}px) scale(${1 - 0.18 * clicou})`, opacity: cur, transformOrigin: "8px 6px" }}>
+        <div style={{ position: "absolute", left: -46, top: -46, width: 100, height: 100, borderRadius: "50%", border: "6px solid rgba(255,255,255,0.9)",
+          transform: `scale(${0.3 + onda * 1.4})`, opacity: onda > 0 ? 1 - onda : 0 }} />
+        <svg width="96" height="120" viewBox="0 0 24 30" style={{ filter: "drop-shadow(0 8px 14px rgba(0,0,0,0.7))" }}>
+          <path d="M2 1 L2 23 L7.5 17.8 L11.3 27 L15 25.4 L11.2 16.5 L19 16.5 Z" fill="#fff" stroke="#000" strokeWidth="1.4" strokeLinejoin="round" /></svg>
       </div>
     </AbsoluteFill>
   );
