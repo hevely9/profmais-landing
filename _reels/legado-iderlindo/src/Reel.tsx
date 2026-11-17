@@ -317,13 +317,13 @@ const CenaFim: React.FC = () => {
   const ret = sp(f, fps, a + 0.1, SP.mola), tit = sp(f, fps, a + 0.5, SP.mola), lin2 = lin(t, a + 1.1, a + 1.8);
   return (
     <Cena de={a} ate={TOTAL / FPS + 1}>
-      <div style={{ position: "absolute", left: 540 - 250, top: 260, width: 500, height: 500, borderRadius: 250, overflow: "hidden", background: `radial-gradient(circle at 50% 40%, ${C.azul}, ${C.fundo})`,
+      <div style={{ position: "absolute", left: 540 - 250, top: 430, width: 500, height: 500, borderRadius: 250, overflow: "hidden", background: `radial-gradient(circle at 50% 40%, ${C.azul}, ${C.fundo})`,
         border: `8px solid ${C.ouro}`, boxShadow: `0 0 80px -10px ${C.ouro}88`, transform: `scale(${ret})` }}>
-        <div style={{ position: "absolute", left: -50, top: 40, transform: "scale(1.0)", transformOrigin: "0 0" }}>
+        <div style={{ position: "absolute", left: 40, top: 14, transform: "scale(0.7)", transformOrigin: "0 0" }}>
           <Pessoa {...PROF} humor={0.7} pisca={piscaDe(t, 1)} bracoD={{ ombro: 12, cotovelo: 10 }} bracoE={{ ombro: 12, cotovelo: 10 }} detalhe={<CamisaProfessor />} />
         </div>
       </div>
-      <div style={{ position: "absolute", left: 0, right: 0, top: 830, textAlign: "center", opacity: Math.min(1, tit * 1.5), transform: `translateY(${(1 - tit) * 40}px)` }}>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 1000, textAlign: "center", opacity: Math.min(1, tit * 1.5), transform: `translateY(${(1 - tit) * 40}px)` }}>
         <div style={{ fontFamily: TIT, fontWeight: 900, fontSize: 104, color: C.creme, letterSpacing: "-0.045em", lineHeight: 1 }}>Iderlindo Lopes</div>
         <div style={{ width: 520 * lin2, height: 5, borderRadius: 3, background: C.ouro, margin: "26px auto" }} />
         <div style={{ fontFamily: MAO, fontWeight: 700, fontSize: 96, color: C.ouroClaro, lineHeight: 1, clipPath: `inset(-20% ${100 - lin2 * 100}% -30% 0)` }}>O legado de quem ensina</div>
