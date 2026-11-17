@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Audio, Easing, OffthreadVideo, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Audio, Easing, Img, OffthreadVideo, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { FIM_VOZ, FPS, TRECHOS, o, MARCA, PASSOS, SFX, SHOTS, T, TOTAL, WORDS, q } from "./timeline";
 
 // ── identidade do canal: preto, dourado e branco ─────────────────────────
@@ -125,42 +125,48 @@ const Meta: React.FC = () => {
 };
 
 // ── marca NEXO: o X é uma conexão (duas linhas que se cruzam, com nós nas pontas) ──
-const LogoNexo: React.FC<{ h: number; p?: number; cor?: string }> = ({ h, p = 1, cor = C.branco }) => {
-  const d = 100 * (1 - p);
+// Símbolo NEXO ("estrela de conexões") — mesmo desenho de _reels/nexo-marca/simbolo-nexo.svg, sem texto.
+const AZUL = "#4F6FFF";
+const SimboloNexo: React.FC<{ s: number; p?: number }> = ({ s, p = 1 }) => {
+  const d = 80 * (1 - Math.min(1, p * 1.3)), no = Math.min(1, Math.max(0, p * 1.6 - 0.4));
   return (
-    <svg height={h} viewBox="0 0 262 100" style={{ overflow: "visible", display: "block" }}>
-      <text x="0" y="86" fontFamily={TIT} fontSize="104" fill={cor} letterSpacing="1">NE</text>
-      <g transform="translate(112 12)">
-        <line x1="6" y1="6" x2="70" y2="70" stroke={C.ouro} strokeWidth="13" strokeLinecap="round" strokeDasharray="100" strokeDashoffset={d} />
-        <line x1="70" y1="6" x2="6" y2="70" stroke={C.ouro} strokeWidth="13" strokeLinecap="round" strokeDasharray="100" strokeDashoffset={d} />
-        {[[6, 6], [70, 70], [70, 6], [6, 70]].map(([x, y], k) => <circle key={k} cx={x} cy={y} r={11 * Math.min(1, p * 1.4)} fill={C.ouro} stroke={C.preto} strokeWidth="3" />)}
-        <circle cx="38" cy="38" r={9 * p} fill={cor} />
-      </g>
-      <text x="198" y="86" fontFamily={TIT} fontSize="104" fill={cor}>O</text>
+    <svg width={s} height={s} viewBox="0 0 100 100" style={{ overflow: "visible", display: "block" }}>
+      <defs><linearGradient id="gnx" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#A9B8FF" /><stop offset=".55" stopColor={AZUL} /><stop offset="1" stopColor="#2A3FD6" /></linearGradient></defs>
+      <path d="M50 8 C53 36 64 47 92 50 C64 53 53 64 50 92 C47 64 36 53 8 50 C36 47 47 36 50 8 Z" fill="url(#gnx)" transform={`translate(50 50) rotate(${(1 - p) * -90}) scale(${p}) translate(-50 -50)`} />
+      <path d="M22 22 L78 78 M78 22 L22 78" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" opacity=".85" strokeDasharray="80" strokeDashoffset={d} />
+      {[[22, 22], [78, 78], [78, 22], [22, 78]].map(([x, y], k) => <circle key={k} cx={x} cy={y} r={6 * no} fill="#fff" />)}
+      <circle cx="50" cy="50" r={5 * no} fill="#fff" />
     </svg>
   );
 };
 const MarcaDagua: React.FC = () => {
   const { t } = useT();
   if (t > MARCA) return null;
-  return <div style={{ position: "absolute", left: 70, top: 120, opacity: 0.85 * lin(t, 0.3, 0.8) * (1 - lin(t, MARCA - 0.3, MARCA)) }}><LogoNexo h={46} /></div>;
+  return <div style={{ position: "absolute", left: 70, top: 120, opacity: 0.85 * lin(t, 0.3, 0.8) * (1 - lin(t, MARCA - 0.3, MARCA)) }}><div style={{ filter: `drop-shadow(0 0 14px ${AZUL}AA)` }}><SimboloNexo s={86} /></div></div>;
 };
 const TelaMarca: React.FC = () => {
   const { f, fps, t } = useT();
   if (t < MARCA - 0.3) return null;
   const fundo = lin(t, MARCA - 0.3, MARCA);
-  const lg = lin(t, MARCA + 0.05, MARCA + 0.6, Easing.out(Easing.cubic));
-  const sc = sp(f, fps, MARCA + 0.05, { damping: 12, stiffness: 150 });
-  const slog = sp(f, fps, MARCA + 0.75), insc = sp(f, fps, MARCA + 1.2, { damping: 11, stiffness: 200 });
+  const m = sp(f, fps, MARCA + 0.05, { damping: 13, stiffness: 140 });
+  const flutua = Math.sin((t - MARCA) * 2.4) * 10;
+  const sim = lin(t, MARCA + 0.45, MARCA + 1.05, Easing.out(Easing.cubic));
+  const slog = sp(f, fps, MARCA + 0.8), insc = sp(f, fps, MARCA + 1.3, { damping: 11, stiffness: 200 });
+  const brilho = 0.5 + 0.5 * Math.sin((t - MARCA) * 3);
   return (
-    <AbsoluteFill style={{ opacity: fundo, background: `radial-gradient(ellipse at 50% 42%, #1E1A10 0%, ${C.preto} 65%)` }}>
-      <div style={{ position: "absolute", left: 0, right: 0, top: 640, display: "flex", justifyContent: "center", transform: `scale(${0.8 + 0.2 * sc})` }}>
-        <div style={{ filter: `drop-shadow(0 0 ${40 * lg}px ${C.ouro}66)` }}><LogoNexo h={190} p={lg} /></div>
+    <AbsoluteFill style={{ opacity: fundo, background: `radial-gradient(ellipse at 50% 34%, #0E1A55 0%, #050816 55%, #000 100%)` }}>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 250, display: "flex", justifyContent: "center", transform: `translateY(${flutua + (1 - m) * 80}px) scale(${0.6 + 0.4 * m})`, opacity: Math.min(1, m * 1.5) }}>
+        <div style={{ width: 640, height: 640, borderRadius: "50%", overflow: "hidden", boxShadow: `0 0 ${70 + 40 * brilho}px ${AZUL}88, 0 0 0 6px ${AZUL}55` }}>
+          <Img src={staticFile("mascote.jpg")} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        </div>
       </div>
-      <div style={{ position: "absolute", left: 60, right: 60, top: 900, textAlign: "center", fontFamily: SANS, fontWeight: 800, fontSize: 46, color: C.ouroClaro, letterSpacing: "0.04em",
-        opacity: slog, transform: `translateY(${(1 - slog) * 20}px)` }}>Conexões, conhecimento<br />e oportunidades.</div>
-      <div style={{ position: "absolute", left: 0, right: 0, top: 1100, display: "flex", justifyContent: "center", transform: `scale(${insc})` }}>
-        <div style={{ padding: "22px 48px", borderRadius: 999, background: C.vermelho, color: C.branco, fontFamily: SANS, fontWeight: 800, fontSize: 50, boxShadow: "0 20px 50px rgba(0,0,0,0.6)" }}>INSCREVA-SE</div>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 960, display: "flex", justifyContent: "center", filter: `drop-shadow(0 0 ${30 * sim}px ${AZUL})` }}>
+        <SimboloNexo s={150} p={sim} />
+      </div>
+      <div style={{ position: "absolute", left: 60, right: 60, top: 1145, textAlign: "center", fontFamily: SANS, fontWeight: 800, fontSize: 50, lineHeight: 1.2, color: C.branco,
+        opacity: slog, transform: `translateY(${(1 - slog) * 20}px)` }}>Conexões, conhecimento<br /><span style={{ color: "#8FA2FF" }}>e oportunidades.</span></div>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 1360, display: "flex", justifyContent: "center", transform: `scale(${insc})` }}>
+        <div style={{ padding: "24px 56px", borderRadius: 999, background: C.vermelho, color: C.branco, fontFamily: SANS, fontWeight: 800, fontSize: 52, boxShadow: "0 20px 50px rgba(0,0,0,0.6)" }}>INSCREVA-SE</div>
       </div>
     </AbsoluteFill>
   );
