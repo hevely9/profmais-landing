@@ -4,13 +4,13 @@ import palavras from "../public/palavras.json";
 export const FPS = 30;
 export const LEAD = 0.2;
 // Respiros: depois do gancho ("...sem dinheiro.") a fala segura um tempo antes de seguir.
-export const GAPS: [number, number][] = [[5.0, 1.1], [7.5, 0.35]];
+export const GAPS: [number, number][] = [[6.4, 0.6]];
 export const o = (t: number) => t + LEAD + GAPS.reduce((s, [at, g]) => s + (t >= at ? g : 0), 0);
 // Trechos da narração (tempo bruto) para tocar com os respiros.
-export const VOZ_FIM_RAW = 55.8;
+export const VOZ_FIM_RAW = 59.7;
 export const TRECHOS: [number, number][] = [0, ...GAPS.map(([at]) => at)].map((a, i, arr) => [a, arr[i + 1] ?? VOZ_FIM_RAW]);
 export const q = (t: number) => Math.round(t * FPS);
-export const FIM_VOZ = o(55.4);
+export const FIM_VOZ = o(59.6);
 // Tela final da marca NEXO depois da última fala.
 export const MARCA = FIM_VOZ + 0.35;
 export const TOTAL = q(MARCA + 3.0);
