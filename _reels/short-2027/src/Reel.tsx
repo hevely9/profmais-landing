@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill, Audio, Easing, OffthreadVideo, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
-import { FIM_VOZ, FPS, LEAD, PASSOS, SFX, SHOTS, T, TOTAL, WORDS, q } from "./timeline";
+import { FIM_VOZ, FPS, LEAD, MARCA, PASSOS, SFX, SHOTS, T, TOTAL, WORDS, q } from "./timeline";
 
 // ── identidade do canal: preto, dourado e branco ─────────────────────────
 const C = { preto: "#0A0A0A", ouro: "#F5B82E", ouroClaro: "#FFD66B", branco: "#FFFFFF", vermelho: "#E53935", cinza: "#3A3A3A" };
@@ -124,6 +124,48 @@ const Meta: React.FC = () => {
   );
 };
 
+// ── marca NEXO: o X é uma conexão (duas linhas que se cruzam, com nós nas pontas) ──
+const LogoNexo: React.FC<{ h: number; p?: number; cor?: string }> = ({ h, p = 1, cor = C.branco }) => {
+  const d = 100 * (1 - p);
+  return (
+    <svg height={h} viewBox="0 0 262 100" style={{ overflow: "visible", display: "block" }}>
+      <text x="0" y="86" fontFamily={TIT} fontSize="104" fill={cor} letterSpacing="1">NE</text>
+      <g transform="translate(112 12)">
+        <line x1="6" y1="6" x2="70" y2="70" stroke={C.ouro} strokeWidth="13" strokeLinecap="round" strokeDasharray="100" strokeDashoffset={d} />
+        <line x1="70" y1="6" x2="6" y2="70" stroke={C.ouro} strokeWidth="13" strokeLinecap="round" strokeDasharray="100" strokeDashoffset={d} />
+        {[[6, 6], [70, 70], [70, 6], [6, 70]].map(([x, y], k) => <circle key={k} cx={x} cy={y} r={11 * Math.min(1, p * 1.4)} fill={C.ouro} stroke={C.preto} strokeWidth="3" />)}
+        <circle cx="38" cy="38" r={9 * p} fill={cor} />
+      </g>
+      <text x="198" y="86" fontFamily={TIT} fontSize="104" fill={cor}>O</text>
+    </svg>
+  );
+};
+const MarcaDagua: React.FC = () => {
+  const { t } = useT();
+  if (t > MARCA) return null;
+  return <div style={{ position: "absolute", left: 70, top: 120, opacity: 0.85 * lin(t, 0.3, 0.8) * (1 - lin(t, MARCA - 0.3, MARCA)) }}><LogoNexo h={46} /></div>;
+};
+const TelaMarca: React.FC = () => {
+  const { f, fps, t } = useT();
+  if (t < MARCA - 0.3) return null;
+  const fundo = lin(t, MARCA - 0.3, MARCA);
+  const lg = lin(t, MARCA + 0.05, MARCA + 0.6, Easing.out(Easing.cubic));
+  const sc = sp(f, fps, MARCA + 0.05, { damping: 12, stiffness: 150 });
+  const slog = sp(f, fps, MARCA + 0.75), insc = sp(f, fps, MARCA + 1.2, { damping: 11, stiffness: 200 });
+  return (
+    <AbsoluteFill style={{ opacity: fundo, background: `radial-gradient(ellipse at 50% 42%, #1E1A10 0%, ${C.preto} 65%)` }}>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 640, display: "flex", justifyContent: "center", transform: `scale(${0.8 + 0.2 * sc})` }}>
+        <div style={{ filter: `drop-shadow(0 0 ${40 * lg}px ${C.ouro}66)` }}><LogoNexo h={190} p={lg} /></div>
+      </div>
+      <div style={{ position: "absolute", left: 60, right: 60, top: 900, textAlign: "center", fontFamily: SANS, fontWeight: 800, fontSize: 46, color: C.ouroClaro, letterSpacing: "0.04em",
+        opacity: slog, transform: `translateY(${(1 - slog) * 20}px)` }}>Conexões, conhecimento<br />e oportunidades.</div>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 1100, display: "flex", justifyContent: "center", transform: `scale(${insc})` }}>
+        <div style={{ padding: "22px 48px", borderRadius: 999, background: C.vermelho, color: C.branco, fontFamily: SANS, fontWeight: 800, fontSize: 50, boxShadow: "0 20px 50px rgba(0,0,0,0.6)" }}>INSCREVA-SE</div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 // ── legenda palavra a palavra ────────────────────────────────────────────
 const PAGES = (() => {
   const out: { de: number; ate: number; w: typeof WORDS }[] = []; let cur: typeof WORDS = [];
@@ -168,6 +210,8 @@ export const Reel: React.FC = () => (
     {PASSOS.map((p) => <Passo key={p.n} {...p} />)}
     <Meta />
     <Legenda />
+    <MarcaDagua />
+    <TelaMarca />
     <Sons />
   </AbsoluteFill>
 );
