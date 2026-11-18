@@ -75,3 +75,6 @@ Referência: `_reels/basa-acredita-maria-alice` (assessora de crédito Maria Ali
   pouco conhecido, 6 capítulos, ficha/documentos + fotos reais licenciadas + cenas em movimento (estrada, carros, chuva, neve), carimbos, marcadores,
   reconstituições sinalizadas, tela final com pergunta. Orçamento: **até 2.500 créditos por vídeo** (estimate_only antes; 1 versão), **1 a 3 minutos**.
 - Casos com crianças/atentados em escola: sem foto nem destaque ao nome do autor, sem motivações/manifesto; foco em vítimas, quem ajudou e o que mudou.
+- **Formato novo (Caso 005): "ACHE A MENTIRA"** — interativo inspirado nos vídeos de detetive do TikTok dos EUA: versão do suspeito (ficha) →
+  3 pistas numeradas → "PAUSE AGORA" + contagem regressiva em silêncio (5 s) → revelação com dados → veredito → CTA "comenta ACHEI".
+  Projeto: `_reels/alibi-005` (caso Dabate/Fitbit).
