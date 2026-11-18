@@ -45,3 +45,12 @@ Referência: `_reels/basa-acredita-maria-alice` (assessora de crédito Maria Ali
   chamada "CHAME NO WHATSAPP" + número aparece **só na tela, sem narração**, com pop e notificação baixa depois da fala.
 - **Nunca pôr efeito sonoro alto em cima da voz** (a notificação sobre "Chame no WhatsApp" fez o limitador "travar" o áudio).
   Medir o volume do trecho final antes de entregar.
+
+## Canal NEXO (YouTube) — preferências do usuário (18/11/2026)
+- **Não repetir o mesmo formato em todo vídeo.** Uma ideia aprovada é referência de qualidade, não molde: cada vídeo novo deve ter formato/visual diferente.
+- **Voz:** Welliton (`VtMklhKDP2Y2mBvBbLwL`) no modelo **eleven_v4**, com tags de tom ([calm, warm]…) e **sem acelerar nem cortar pausas** —
+  multilingual_v2 + atempo soou "robotizado" e foi reprovado. A voz clonada do usuário também foi reprovada.
+- **Não gerar imagens com IA** sem pedido explícito ("pare de gerar imagem, já chega").
+- Gancho precisa de **respiro** (~1–1,5 s) antes do resto do vídeo. Sem barra de progresso no topo.
+- Tela final NEXO: mascote + símbolo azul + botão INSCREVA-SE vermelho do YouTube com mouse clicando → INSCRITO.
+- Formato pedido: **tela dividida** (famoso em cima, vídeo satisfatório embaixo) com narração própria.
