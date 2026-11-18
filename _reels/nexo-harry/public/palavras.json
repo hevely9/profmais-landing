@@ -4,7 +4,7 @@
 "text": "Doze",
 "start": 0.0,
 "end": 0.44,
-"p": 0.9
+"p": 0.88
 },
 {
 "text": "editoras",
@@ -28,7 +28,7 @@
 "text": "para",
 "start": 1.86,
 "end": 2.12,
-"p": 0.76
+"p": 0.78
 },
 {
 "text": "o",
@@ -39,18 +39,18 @@
 {
 "text": "Harry",
 "start": 2.16,
-"end": 2.34,
+"end": 2.36,
 "p": 1.0
 },
 {
 "text": "Potter.",
-"start": 2.34,
+"start": 2.36,
 "end": 2.74,
 "p": 1.0
 },
 {
 "text": "Ela",
-"start": 3.8,
+"start": 3.78,
 "end": 4.4,
 "p": 1.0
 },
@@ -75,18 +75,18 @@
 {
 "text": "desempregada,",
 "start": 5.62,
-"end": 6.46,
+"end": 6.48,
 "p": 1.0
 },
 {
 "text": "vivendo",
 "start": 6.68,
-"end": 6.98,
+"end": 7.0,
 "p": 1.0
 },
 {
 "text": "de",
-"start": 6.98,
+"start": 7.0,
 "end": 7.12,
 "p": 1.0
 },
@@ -122,7 +122,7 @@
 },
 {
 "text": "Escrevia",
-"start": 9.0,
+"start": 8.98,
 "end": 9.6,
 "p": 1.0
 },
@@ -212,13 +212,13 @@
 },
 {
 "text": "Não,",
-"start": 14.64,
+"start": 14.66,
 "end": 14.9,
 "p": 1.0
 },
 {
 "text": "não,",
-"start": 15.42,
+"start": 15.36,
 "end": 15.78,
 "p": 1.0
 },
@@ -248,7 +248,7 @@
 },
 {
 "text": "A",
-"start": 18.96,
+"start": 19.22,
 "end": 19.56,
 "p": 1.0
 },
@@ -256,7 +256,7 @@
 "text": "décima",
 "start": 19.56,
 "end": 19.86,
-"p": 0.98
+"p": 0.97
 },
 {
 "text": "terceira",
@@ -291,12 +291,12 @@
 {
 "text": "filha",
 "start": 21.62,
-"end": 21.92,
+"end": 21.9,
 "p": 1.0
 },
 {
 "text": "de",
-"start": 21.92,
+"start": 21.9,
 "end": 22.06,
 "p": 1.0
 },
@@ -316,7 +316,7 @@
 "text": "do",
 "start": 22.62,
 "end": 22.8,
-"p": 0.97
+"p": 0.96
 },
 {
 "text": "presidente",
@@ -435,14 +435,14 @@
 {
 "text": "história.",
 "start": 29.42,
-"end": 29.88,
+"end": 29.84,
 "p": 1.0
 },
 {
 "text": "Mais",
 "start": 30.0,
 "end": 30.5,
-"p": 0.55
+"p": 0.66
 },
 {
 "text": "de",
@@ -453,103 +453,421 @@
 {
 "text": "500",
 "start": 30.64,
-"end": 31.2,
+"end": 31.18,
 "p": 0.96
 },
 {
 "text": "milhões",
-"start": 31.2,
-"end": 31.68,
+"start": 31.18,
+"end": 31.66,
 "p": 1.0
 },
 {
 "text": "de",
-"start": 31.68,
+"start": 31.66,
 "end": 32.0,
 "p": 1.0
 },
 {
 "text": "cópias.",
 "start": 32.0,
-"end": 32.56,
+"end": 32.54,
+"p": 1.0
+},
+{
+"text": "Agora",
+"start": 32.94,
+"end": 33.54,
+"p": 1.0
+},
+{
+"text": "pensa,",
+"start": 33.54,
+"end": 34.0,
+"p": 0.96
+},
+{
+"text": "se",
+"start": 34.22,
+"end": 34.58,
+"p": 1.0
+},
+{
+"text": "ela",
+"start": 34.58,
+"end": 34.7,
+"p": 1.0
+},
+{
+"text": "tivesse",
+"start": 34.7,
+"end": 35.04,
+"p": 1.0
+},
+{
+"text": "desistido",
+"start": 35.04,
+"end": 35.68,
+"p": 1.0
+},
+{
+"text": "no",
+"start": 35.68,
+"end": 35.84,
+"p": 1.0
+},
+{
+"text": "décimo",
+"start": 35.84,
+"end": 36.38,
+"p": 0.85
+},
+{
+"text": "segundo",
+"start": 36.38,
+"end": 36.82,
+"p": 1.0
+},
+{
+"text": "não,",
+"start": 36.82,
+"end": 37.18,
+"p": 0.81
+},
+{
+"text": "o",
+"start": 37.56,
+"end": 37.9,
+"p": 1.0
+},
+{
+"text": "mundo",
+"start": 37.9,
+"end": 38.14,
+"p": 1.0
+},
+{
+"text": "nunca",
+"start": 38.14,
+"end": 38.62,
+"p": 1.0
+},
+{
+"text": "teria",
+"start": 38.62,
+"end": 38.86,
+"p": 1.0
+},
+{
+"text": "conhecido",
+"start": 38.86,
+"end": 39.48,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 39.48,
+"end": 39.6,
+"p": 0.37
+},
+{
+"text": "Harry",
+"start": 39.6,
+"end": 39.72,
+"p": 1.0
+},
+{
+"text": "Potter.",
+"start": 39.72,
+"end": 40.12,
+"p": 1.0
+},
+{
+"text": "E",
+"start": 40.5,
+"end": 40.82,
+"p": 1.0
+},
+{
+"text": "você,",
+"start": 40.82,
+"end": 41.12,
+"p": 1.0
+},
+{
+"text": "quantos",
+"start": 41.52,
+"end": 42.08,
+"p": 1.0
+},
+{
+"text": "nãos",
+"start": 42.08,
+"end": 42.38,
+"p": 0.64
+},
+{
+"text": "você",
+"start": 42.38,
+"end": 42.7,
+"p": 0.95
+},
+{
+"text": "já",
+"start": 42.7,
+"end": 42.9,
+"p": 1.0
+},
+{
+"text": "ouviu",
+"start": 42.9,
+"end": 43.4,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 43.4,
+"end": 43.78,
+"p": 1.0
+},
+{
+"text": "parou",
+"start": 43.78,
+"end": 44.04,
+"p": 1.0
+},
+{
+"text": "no",
+"start": 44.04,
+"end": 44.16,
+"p": 1.0
+},
+{
+"text": "terceiro?",
+"start": 44.16,
+"end": 44.68,
+"p": 1.0
+},
+{
+"text": "O",
+"start": 45.56,
+"end": 46.2,
+"p": 1.0
+},
+{
+"text": "não",
+"start": 46.2,
+"end": 46.46,
+"p": 1.0
+},
+{
+"text": "que",
+"start": 46.46,
+"end": 46.62,
+"p": 1.0
+},
+{
+"text": "você",
+"start": 46.62,
+"end": 46.86,
+"p": 1.0
+},
+{
+"text": "recebeu",
+"start": 46.86,
+"end": 47.32,
+"p": 1.0
+},
+{
+"text": "hoje",
+"start": 47.32,
+"end": 47.62,
+"p": 1.0
+},
+{
+"text": "não",
+"start": 47.62,
+"end": 47.92,
+"p": 0.99
+},
+{
+"text": "é",
+"start": 47.92,
+"end": 48.16,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 48.16,
+"end": 48.28,
+"p": 1.0
+},
+{
+"text": "fim",
+"start": 48.28,
+"end": 48.44,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 48.44,
+"end": 48.58,
+"p": 1.0
+},
+{
+"text": "sua",
+"start": 48.58,
+"end": 48.72,
+"p": 1.0
+},
+{
+"text": "história.",
+"start": 48.72,
+"end": 49.1,
+"p": 1.0
+},
+{
+"text": "Talvez",
+"start": 49.4,
+"end": 49.76,
+"p": 1.0
+},
+{
+"text": "seja",
+"start": 49.76,
+"end": 50.02,
+"p": 1.0
+},
+{
+"text": "só",
+"start": 50.02,
+"end": 50.3,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 50.3,
+"end": 50.44,
+"p": 1.0
+},
+{
+"text": "porta",
+"start": 50.44,
+"end": 50.64,
+"p": 1.0
+},
+{
+"text": "errada.",
+"start": 50.64,
+"end": 51.06,
 "p": 1.0
 },
 {
 "text": "Doze",
-"start": 33.3,
-"end": 34.06,
-"p": 0.74
-},
-{
-"text": "pessoas",
-"start": 34.06,
-"end": 34.56,
-"p": 1.0
+"start": 51.6,
+"end": 52.02,
+"p": 0.95
 },
 {
 "text": "disseram",
-"start": 34.56,
-"end": 35.1,
+"start": 52.02,
+"end": 52.5,
 "p": 1.0
 },
 {
-"text": "não.",
-"start": 35.1,
-"end": 35.36,
+"text": "não,",
+"start": 52.5,
+"end": 52.68,
 "p": 1.0
 },
 {
-"text": "Só",
-"start": 35.66,
-"end": 35.96,
+"text": "só",
+"start": 53.0,
+"end": 53.26,
 "p": 1.0
 },
 {
 "text": "precisava",
-"start": 35.96,
-"end": 36.5,
+"start": 53.26,
+"end": 53.8,
 "p": 1.0
 },
 {
 "text": "de",
-"start": 36.5,
-"end": 36.64,
+"start": 53.8,
+"end": 53.98,
 "p": 1.0
 },
 {
 "text": "um",
-"start": 36.64,
-"end": 36.78,
+"start": 53.98,
+"end": 54.2,
 "p": 1.0
 },
 {
 "text": "sim.",
-"start": 36.78,
-"end": 37.08,
+"start": 54.2,
+"end": 54.5,
 "p": 1.0
 },
 {
 "text": "Continua",
-"start": 37.62,
-"end": 38.16,
+"start": 55.0,
+"end": 55.48,
+"p": 0.99
+},
+{
+"text": "batendo.",
+"start": 55.48,
+"end": 55.98,
 "p": 1.0
 },
 {
-"text": "batendo",
-"start": 38.16,
-"end": 38.54,
+"text": "O",
+"start": 56.18,
+"end": 56.44,
+"p": 1.0
+},
+{
+"text": "seu",
+"start": 56.44,
+"end": 56.64,
+"p": 1.0
+},
+{
+"text": "sim",
+"start": 56.64,
+"end": 57.0,
+"p": 1.0
+},
+{
+"text": "pode",
+"start": 57.0,
+"end": 57.3,
+"p": 1.0
+},
+{
+"text": "estar",
+"start": 57.3,
+"end": 57.54,
 "p": 1.0
 },
 {
 "text": "na",
-"start": 38.54,
-"end": 38.66,
+"start": 57.54,
+"end": 57.72,
+"p": 1.0
+},
+{
+"text": "próxima",
+"start": 57.72,
+"end": 58.18,
 "p": 1.0
 },
 {
 "text": "porta.",
-"start": 38.66,
-"end": 39.02,
+"start": 58.18,
+"end": 58.62,
 "p": 1.0
 }
 ]

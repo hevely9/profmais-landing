@@ -41,14 +41,14 @@ const Etiqueta: React.FC<{ at: number; x: number; y: number; cor?: string; texto
   return <div style={{ position: "absolute", left: x, top: y, transform: `translate(-50%,-50%) scale(${s}) rotate(${rot}deg)`, padding: "10px 26px", borderRadius: 14,
     background: cor, color: escuro ? C.preto : C.branco, fontFamily: SANS, fontWeight: 800, fontSize: size, letterSpacing: "0.02em", whiteSpace: "nowrap", boxShadow: "0 12px 30px rgba(0,0,0,0.55)" }}>{texto}</div>;
 };
-const Carimbo: React.FC<{ at: number; x: number; y: number; rot: number; s?: number; texto?: string }> = ({ at, x, y, rot, s = 1, texto = "REJEITADO" }) => {
+const Carimbo: React.FC<{ at: number; x: number; y: number; rot: number; s?: number; texto?: string; papel?: boolean }> = ({ at, x, y, rot, s = 1, texto = "REJEITADO", papel = false }) => {
   const { t } = useT();
   if (t < at - 0.01) return null;
   const k = lin(t, at - 0.01, at + 0.09, Easing.in(Easing.cubic));
   const sc = interpolate(k, [0, 1], [2.6, 1]) * s;
   return <div style={{ position: "absolute", left: x, top: y, transform: `translate(-50%,-50%) rotate(${rot}deg) scale(${sc})`, opacity: Math.min(1, k * 1.6),
     border: `9px solid ${C.vermelho}`, borderRadius: 14, padding: "6px 22px", color: C.vermelho, fontFamily: TIT, fontSize: 92, letterSpacing: "0.04em", lineHeight: 1,
-    mixBlendMode: "multiply", filter: "url(#gasto)" }}>{texto}</div>;
+    mixBlendMode: papel ? "multiply" : "normal", filter: "url(#gasto)", textShadow: papel ? "none" : "0 0 20px rgba(229,57,53,0.5)", background: papel ? "transparent" : "rgba(0,0,0,0.25)" }}>{texto}</div>;
 };
 // Símbolo NEXO ("estrela de conexões") — mesmo desenho de _reels/nexo-marca/simbolo-nexo.svg, sem texto.
 const AZUL = "#4F6FFF";
@@ -184,7 +184,7 @@ const Carimbos: React.FC = () => {
         <div style={{ fontSize: 20, textAlign: "center", marginTop: 14, opacity: 0.7 }}>manuscrito — J. K. Rowling</div>
         {Array.from({ length: 14 }, (_, i) => <div key={i} style={{ height: 9, background: "rgba(0,0,0,0.13)", marginTop: i === 0 ? 50 : 24, width: `${70 + ((i * 37) % 30)}%` }} />)}
       </div>
-      {CARIMBOS.map((c, i) => <Carimbo key={i} at={c} x={pos[i][0]} y={pos[i][1]} rot={pos[i][2]} s={i < 3 ? 1 : 0.62} />)}
+      {CARIMBOS.map((c, i) => <Carimbo key={i} at={c} x={pos[i][0]} y={pos[i][1]} rot={pos[i][2]} s={i < 3 ? 1 : 0.62} papel={i < 3} />)}
     </div>
     <div style={{ position: "absolute", right: 40, top: 40, fontFamily: TIT, fontSize: 84, color: C.vermelho, textShadow: "0 4px 18px rgba(0,0,0,0.9)", opacity: n > 0 ? 1 : 0 }}>{n}× NÃO</div>
   </Janela>;
@@ -268,6 +268,88 @@ const Final: React.FC = () => {
   </Janela>;
 };
 
+const Desistiu: React.FC = () => {
+  const { f, fps } = useT();
+  const [de, ate] = CENA.desistiu;
+  const a = sp(f, fps, T.se - 0.05, { damping: 12, stiffness: 180 });
+  return <Janela de={de} ate={ate}>
+    <Foto src="rowling2010" de={de} ate={ate} pos="50% 18%" credito="Daniel Ogren · CC BY 2.0" zoom={[1.0, 1.12]} />
+    <Escuro a={0.45} />
+    <div style={{ position: "absolute", left: 50, right: 50, top: 120, textAlign: "center", fontFamily: TIT, fontSize: 104, lineHeight: 1.02, color: C.branco, textShadow: SOMBRA,
+      opacity: a, transform: `translateY(${(1 - a) * 40}px)` }}>E SE ELA TIVESSE<br /><span style={{ color: C.vermelho }}>DESISTIDO?</span></div>
+  </Janela>;
+};
+const Apagou: React.FC = () => {
+  const { t } = useT();
+  const [de, ate] = CENA.apagou;
+  const k = lin(t, T.mundo, T.potter2 + 0.4, Easing.inOut(Easing.cubic));
+  return <Janela de={de} ate={ate}>
+    <AbsoluteFill style={{ filter: `grayscale(${k}) brightness(${1 - 0.75 * k})` }}>
+      <Foto src="hogwarts" de={de - 3} ate={ate} pos="50% 50%" credito="CapStudio (Clementp.fr) · CC BY-SA 4.0" zoom={[1.2, 1.3]} />
+    </AbsoluteFill>
+    <div style={{ position: "absolute", left: 0, right: 0, top: 340, textAlign: "center", fontFamily: TIT, fontSize: 96, lineHeight: 1.05, color: C.branco,
+      opacity: lin(t, T.mundo + 0.6, T.potter2), textShadow: "0 0 30px #000, 0 6px 24px #000" }}>NADA DISSO<br />TERIA EXISTIDO</div>
+  </Janela>;
+};
+const Voce: React.FC = () => {
+  const { f, fps, t } = useT();
+  const [de, ate] = CENA.voce;
+  const a = sp(f, fps, T.voce - 0.05, { damping: 9, stiffness: 200 });
+  const p = sp(f, fps, T.parou - 0.05, { damping: 12, stiffness: 200 });
+  const zoom = 1 + 0.06 * lin(t, de, ate, Easing.linear);
+  return <Janela de={de} ate={ate}>
+    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 40%, #16204A 0%, #03050C 70%)", transform: `scale(${zoom})` }} />
+    <div style={{ position: "absolute", left: 0, right: 0, top: 90, textAlign: "center", fontFamily: TIT, fontSize: 230, lineHeight: 1, color: C.branco,
+      transform: `scale(${2 - a})`, opacity: Math.min(1, a * 2), textShadow: "0 0 50px rgba(79,111,255,0.6)" }}>E VOCÊ?</div>
+    {[0, 0.3, 0.6].map((d, i) => <Carimbo key={i} at={T.nao_s + d} x={250 + i * 290} y={480} rot={[-10, 6, -4][i]} s={0.8} texto="NÃO" />)}
+    <div style={{ position: "absolute", left: 0, right: 0, top: 640, textAlign: "center", fontFamily: SANS, fontWeight: 800, fontSize: 64, color: "#C9CFE0",
+      opacity: p, transform: `translateY(${(1 - p) * 30}px)` }}>…e parou no <span style={{ color: C.vermelho }}>3º</span>?</div>
+  </Janela>;
+};
+const Porta: React.FC = () => {
+  const [de, ate] = CENA.porta;
+  return <Janela de={de} ate={ate}>
+    <Foto src="plataforma" de={de} ate={ate} pos="50% 35%" credito="Nelo Hotsuma · CC BY 2.0" zoom={[1.05, 1.2]} />
+    <Escuro a={0.45} />
+    <Etiqueta at={T.fim - 0.05} x={540} y={250} texto="NÃO É O FIM DA SUA HISTÓRIA" size={48} rot={-2} />
+    <Etiqueta at={T.porta - 0.1} x={540} y={360} texto="🚪 É SÓ A PORTA ERRADA" size={52} cor="#4F6FFF" rot={1.5} />
+  </Janela>;
+};
+const Batendo: React.FC = () => {
+  const { f, fps, t } = useT();
+  const [de, ate] = CENA.batendo;
+  const batidas = [0, 0.34, 0.68].map((d) => T.batendo - 0.05 + d);
+  const treme = batidas.some((x) => t >= x && t < x + 0.1) ? Math.sin(t * 150) * 12 : 0;
+  const luz = lin(t, T.sim2 - 0.2, T.proxima + 0.4, Easing.out(Easing.cubic));
+  const a = sp(f, fps, T.seu - 0.05, { damping: 12, stiffness: 170 });
+  return <Janela de={de} ate={ate}>
+    <AbsoluteFill style={{ background: "#03050C" }} />
+    {/* porta: frestas de luz que se abrem no "seu sim" */}
+    <div style={{ position: "absolute", left: 340, top: 120, width: 400, height: 700, transform: `translateX(${treme}px)` }}>
+      <div style={{ position: "absolute", inset: 0, background: `linear-gradient(180deg, #FFFFFF, #8FA2FF)`, opacity: luz, boxShadow: `0 0 ${200 * luz}px ${60 * luz}px rgba(143,162,255,0.7)` }} />
+      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg, #2A2018, #3B2C20 50%, #2A2018)", border: "10px solid #1A130D", boxSizing: "border-box",
+        transformOrigin: "0% 50%", transform: `perspective(1200px) rotateY(${-75 * luz}deg)` }}>
+        <div style={{ position: "absolute", right: 34, top: 330, width: 26, height: 26, borderRadius: 13, background: "#C9A44C" }} />
+        {[60, 380].map((y) => <div key={y} style={{ position: "absolute", left: 40, right: 40, top: y, height: 260, border: "6px solid #1A130D" }} />)}
+      </div>
+    </div>
+    <div style={{ position: "absolute", left: 0, right: 0, top: 40, textAlign: "center", fontFamily: TIT, fontSize: 92, color: C.branco, textShadow: SOMBRA,
+      opacity: 1 - a }}>CONTINUA BATENDO</div>
+    <div style={{ position: "absolute", left: 40, right: 40, top: 30, textAlign: "center", fontFamily: TIT, fontSize: 86, lineHeight: 1.02, color: C.branco,
+      opacity: a, transform: `scale(${0.9 + 0.1 * a})`, textShadow: "0 0 40px rgba(79,111,255,0.9), 0 6px 20px #000" }}>O SEU SIM PODE ESTAR<br /><span style={{ color: C.azulClaro }}>NA PRÓXIMA PORTA</span></div>
+  </Janela>;
+};
+// Chamada para comentar na tela final (engajamento).
+const Comenta: React.FC = () => {
+  const { f, fps, t } = useT();
+  if (t < MARCA + 0.9) return null;
+  const s = sp(f, fps, MARCA + 0.95, { damping: 11, stiffness: 200 });
+  return <div style={{ position: "absolute", left: 0, right: 0, top: 120, display: "flex", justifyContent: "center", transform: `scale(${s}) rotate(-2deg)` }}>
+    <div style={{ padding: "16px 34px", borderRadius: 24, background: C.branco, color: C.preto, fontFamily: SANS, fontWeight: 800, fontSize: 46, boxShadow: "0 16px 40px rgba(0,0,0,0.6)" }}>
+      💬 comenta: <span style={{ color: "#2A3FD6" }}>EU NÃO DESISTO</span></div>
+  </div>;
+};
+
 // ── parte de baixo: satisfatório ─────────────────────────────────────────
 const Baixo: React.FC = () => {
   const { t } = useT();
@@ -328,12 +410,13 @@ export const Reel: React.FC = () => (
   <AbsoluteFill style={{ background: C.preto, overflow: "hidden" }}>
     <svg width="0" height="0" style={{ position: "absolute" }}><filter id="gasto"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" /><feDisplacementMap in="SourceGraphic" scale="6" /></filter></svg>
     <div style={{ position: "absolute", left: 0, top: 0, width: 1080, height: H, overflow: "hidden" }}>
-      <Gancho /><Mae /><Cafe /><Placa /><Envio /><Carimbos /><Treze /><Leitura /><Hogwarts /><Vendas /><Final />
+      <Gancho /><Mae /><Cafe /><Placa /><Envio /><Carimbos /><Treze /><Leitura /><Hogwarts /><Vendas /><Desistiu /><Apagou /><Voce /><Porta /><Final /><Batendo />
     </div>
     <Baixo />
     <Legenda />
     <MarcaDagua />
     <TelaMarca />
+    <Comenta />
     <Sons />
   </AbsoluteFill>
 );
