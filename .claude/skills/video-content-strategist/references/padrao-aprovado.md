@@ -67,3 +67,7 @@ Referência: `_reels/basa-acredita-maria-alice` (assessora de crédito Maria Ali
   (medir picos dos trechos de efeito vs. p99.5 da voz antes de entregar). Para trocar só o áudio: `remotion render ... out/audio.wav --codec wav` e juntar com `-c:v copy`.
 - Vídeos ÁLIBI: começo, meio e fim com capítulos; entregar o caso completo (não só suspense); nunca sobrepor texto de cena à legenda (zona da legenda y 1320–1480);
   gerar a voz com 1 versão só (generations_count 1) para economizar.
+- **Feedback 18/11 (Caso 002):** "o vídeo dos carros na neve ficou muito perfeito, melhorou muito o vídeo" — clipe Mixkit 3317
+  (carro em estrada de floresta com neve, P&B). Usar mais **cenas reais em movimento de lugares/estradas/clima** (carros, estrada à noite,
+  neve, neblina) entre os documentos — dão "cara de documentário" e respiro. Entregar sempre também uma **versão leve (~45 MB)** em anexo,
+  porque o app não deixou baixar o arquivo de 108 MB.
