@@ -71,3 +71,7 @@ Referência: `_reels/basa-acredita-maria-alice` (assessora de crédito Maria Ali
   (carro em estrada de floresta com neve, P&B). Usar mais **cenas reais em movimento de lugares/estradas/clima** (carros, estrada à noite,
   neve, neblina) entre os documentos — dão "cara de documentário" e respiro. Entregar sempre também uma **versão leve (~45 MB)** em anexo,
   porque o app não deixou baixar o arquivo de 108 MB.
+- **Caso 003 (BTK) = PADRÃO APROVADO** ("perfeito cara, quero que siga assim todos os vídeos"): `_reels/alibi-003`. Gancho que promete o detalhe
+  pouco conhecido, 6 capítulos, ficha/documentos + fotos reais licenciadas + cenas em movimento (estrada, carros, chuva, neve), carimbos, marcadores,
+  reconstituições sinalizadas, tela final com pergunta. Orçamento: **até 2.500 créditos por vídeo** (estimate_only antes; 1 versão), **1 a 3 minutos**.
+- Casos com crianças/atentados em escola: sem foto nem destaque ao nome do autor, sem motivações/manifesto; foco em vítimas, quem ajudou e o que mudou.
