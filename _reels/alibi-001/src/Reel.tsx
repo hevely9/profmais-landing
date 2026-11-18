@@ -11,6 +11,8 @@ const useT = () => { const f = useCurrentFrame(); const { fps } = useVideoConfig
 const spT = (f: number, fps: number, at: number, cfg = { damping: 18, stiffness: 120 }) => spring({ frame: f - q(at), fps, config: cfg });
 // sp recebe tempo BRUTO da narração
 const sp = (f: number, fps: number, r: number, cfg = { damping: 18, stiffness: 120 }) => spT(f, fps, o(r), cfg);
+// Efeitos sempre discretos: nunca competir com a voz.
+const SFX_GANHO = 0.45;
 const SOMBRA = "0 4px 30px rgba(0,0,0,0.9)";
 
 // janela de cena (tempo bruto) com fade curto de entrada/saída
@@ -368,7 +370,7 @@ const Sons: React.FC = () => (
   <>
     {TRECHOS.map(([a, b], i) => <Sequence key={"v" + i} from={q(o(a))} durationInFrames={q(b - a) + 1}><Audio src={staticFile("audio/voz.mp3")} startFrom={q(a)} endAt={q(b)} /></Sequence>)}
     <Audio src={staticFile("audio/trilha.mp3")} volume={(fr) => interpolate(fr, [0, 45, q(FIM_VOZ), q(FINAL + 0.5)], [0, 0.42, 0.42, 0.65], clamp) * interpolate(fr, [TOTAL - 50, TOTAL - 2], [1, 0], clamp)} />
-    {SFX.map((s, i) => { const at = s.t ?? o(s.r ?? 0); return <Sequence key={i} from={Math.max(0, q(at))} durationInFrames={q(3.2)}><Audio src={staticFile(`audio/${s.src}.mp3`)} volume={s.vol ?? 0.4} /></Sequence>; })}
+    {SFX.map((s, i) => { const at = s.t ?? o(s.r ?? 0); return <Sequence key={i} from={Math.max(0, q(at))} durationInFrames={q(3.2)}><Audio src={staticFile(`audio/${s.src}.mp3`)} volume={(s.vol ?? 0.4) * SFX_GANHO} /></Sequence>; })}
   </>
 );
 

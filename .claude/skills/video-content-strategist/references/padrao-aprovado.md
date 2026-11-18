@@ -63,3 +63,7 @@ Referência: `_reels/basa-acredita-maria-alice` (assessora de crédito Maria Ali
 - Voz escolhida: **James – Deep Narrator** (`WrT2M515LQuE5m5EYh0W`), dirigir com calma (tensão por pausas, não volume).
 - Imagens: só fontes públicas/licenciadas (registros policiais oficiais, FBI Vault, tribunais, Commons); nada de sangue/corpos; nada de rostos reais gerados por IA.
 - Perfil: silhueta de sobretudo e chapéu sob poste (ElevenLabs gpt-image-2.5), recorte quadrado em `_reels/alibi-marca/entrega/`.
+- **Efeitos sonoros discretos (pedido 18/11):** ganho global `SFX_GANHO = 0.45` nos projetos ÁLIBI; nenhum efeito pode passar do pico típico da voz
+  (medir picos dos trechos de efeito vs. p99.5 da voz antes de entregar). Para trocar só o áudio: `remotion render ... out/audio.wav --codec wav` e juntar com `-c:v copy`.
+- Vídeos ÁLIBI: começo, meio e fim com capítulos; entregar o caso completo (não só suspense); nunca sobrepor texto de cena à legenda (zona da legenda y 1320–1480);
+  gerar a voz com 1 versão só (generations_count 1) para economizar.
