@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill, Audio, Easing, Img, OffthreadVideo, Sequence, interpolate, random, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
-import { CAPITULOS, FIM_VOZ, FINAL, FPS, GAPS, SFX, TOTAL, TRECHOS, WORDS, o, q, w } from "./timeline";
+import { CAPITULOS, FIM_VOZ, FINAL, FPS, GAPS, INS_DUR, INS_RAW, INS_T0, SFX, TOTAL, TRECHOS, WORDS, o, q, w } from "./timeline";
 
 // ── ÁLIBI: grafite, chumbo, branco-osso, vermelho-lacre e âmbar de fita policial ──
 const C = { preto: "#0A0A0B", osso: "#ECE7DC", ossoE: "#9C978E", lacre: "#A3141C", papel: "#E4DDCB", tinta: "#1A1714", fita: "#C9A227" };
@@ -258,12 +258,16 @@ const Assinatura: React.FC = () => {
       <Titulo r={w("carta") - 0.1} top={400} size={66}>UMA CARTA<br />DENTRO DE UM LIVRO</Titulo>
       <Rotulo r={w("biblioteca")} texto="biblioteca pública de Wichita" top={620} size={34} />
     </Cena>
-    <Cena r={[71.2, 81.5]}>
-      <Clip src="c21333" r0={71.2} from={1} zoom={[1.15, 1.25]} dur={10} />
+    <Cena r={[71.2, 77.0]}>
+      <Clip src="c21333" r0={71.2} from={1} zoom={[1.15, 1.25]} dur={6} />
       <Escuro a={0.55} />
       <Rotulo r={72.4} texto="O APELIDO ESCOLHIDO POR ELE" top={330} cor={C.ossoE} size={32} />
       <Titulo r={75.6} top={420} size={210}>BTK</Titulo>
-      <Rotulo r={77.6} texto="cartas · poemas · para jornais e TVs" top={720} size={32} />
+    </Cena>
+    <Cena r={[77.0, 81.5]}>
+      <Clip src="c21333" r0={77.0} from={6} zoom={[1.2, 1.28]} dur={4.5} />
+      <Escuro a={0.55} />
+      <Rotulo r={77.6} texto="cartas · poemas · para jornais e TVs" top={560} size={32} />
     </Cena>
     <Cena r={[81.5, 87.0]}>
       <Fundo />
@@ -466,6 +470,65 @@ const OFim: React.FC = () => (
     </Cena>
   </>
 );
+// ── trecho inserido: o método (tempo de vídeo; sem detalhes gráficos) ──
+const Metodo: React.FC = () => {
+  const { f, fps, t } = useT();
+  const t0 = INS_T0, fim = o(INS_RAW) - 0.15;
+  if (t < t0 - 0.3 || t > fim + 0.3) return null;
+  const s = t - t0;
+  const op = lin(t, t0 - 0.3, t0) * (1 - lin(t, fim, fim + 0.3));
+  const letra = (i: number, at: number, en: string, pt: string, ) => {
+    const k = spT(f, fps, t0 + at, { damping: 14, stiffness: 160 });
+    return <div key={i} style={{ flex: 1, textAlign: "center", opacity: Math.min(1, k * 1.5), transform: `translateY(${(1 - k) * 30}px)` }}>
+      <div style={{ fontFamily: MONT, fontWeight: 800, fontSize: 200, color: C.osso, lineHeight: 1 }}>{en[0]}</div>
+      <div style={{ fontFamily: COURIER, fontSize: 26, color: C.ossoE, marginTop: 6 }}>{en}</div>
+      <div style={{ fontFamily: COURIER, fontWeight: 700, fontSize: 34, color: "#E0353F", marginTop: 8 }}>{pt}</div>
+    </div>;
+  };
+  const linha = (at: number, txt: string) => <div style={{ fontFamily: COURIER, fontWeight: 700, fontSize: 34, lineHeight: 1.55, opacity: lin(t, t0 + at - 0.05, t0 + at + 0.3) }}>{txt}</div>;
+  return <AbsoluteFill style={{ opacity: op }}>
+    {s < 5.9 && <AbsoluteFill>
+      <Fundo cor={C.preto} />
+      <div style={{ position: "absolute", left: 0, right: 0, top: 330, textAlign: "center", fontFamily: COURIER, fontSize: 30, letterSpacing: "0.2em", color: C.ossoE, opacity: lin(t, t0, t0 + 0.5) }}>O QUE AS LETRAS SIGNIFICAVAM</div>
+      <div style={{ position: "absolute", left: 80, right: 80, top: 450, display: "flex" }}>
+        {letra(0, 2.9, "BIND", "amarrar")}{letra(1, 3.8, "TORTURE", "torturar")}{letra(2, 4.7, "KILL", "matar")}
+      </div>
+    </AbsoluteFill>}
+    {s >= 5.9 && s < 12.9 && <AbsoluteFill>
+      <Fundo />
+      <Papel top={360} h={620} rot={-1}>
+        <Cabec sup="PERFIL CRIMINAL" titulo="O MÉTODO" />
+        {linha(6.1, "— escolhia as vítimas antes")}
+        {linha(8.5, "— observava por semanas")}
+        {linha(10.6, "— chamava cada uma de")}
+        <div style={{ position: "relative", height: 90 }}>
+          <div style={{ position: "absolute", left: 120, top: 10, transform: "rotate(-6deg)", border: `7px solid ${C.lacre}`, padding: "4px 20px", fontFamily: ELITE, fontSize: 56, color: C.lacre,
+            opacity: lin(t, t0 + 10.9, t0 + 11.05), transformOrigin: "center", scale: `${interpolate(lin(t, t0 + 10.9, t0 + 11.05), [0, 1], [2, 1])}` }}>“PROJETO”</div>
+        </div>
+      </Papel>
+    </AbsoluteFill>}
+    {s >= 12.9 && <AbsoluteFill>
+      <Clip2 t0={t0 + 12.9} />
+      <Escuro a={0.62} />
+      <div style={{ position: "absolute", left: 90, right: 90, top: 330, color: C.osso, textShadow: SOMBRA }}>
+        <div style={{ fontFamily: COURIER, fontSize: 28, letterSpacing: "0.16em", color: C.ossoE, marginBottom: 20 }}>PADRÃO DOS CRIMES</div>
+        {linha(13.3, "✕ cortava a linha do telefone")}
+        {linha(15.6, "✕ entrava na casa")}
+        {linha(17.0, "✕ às vezes esperava lá dentro")}
+        {linha(18.3, "✕ usava cordas")}
+        {linha(20.8, "✕ a maioria: estrangulada")}
+        {linha(22.7, "✕ levava objetos como “lembrança”")}
+      </div>
+    </AbsoluteFill>}
+  </AbsoluteFill>;
+};
+const Clip2: React.FC<{ t0: number }> = ({ t0 }) => {
+  const { t } = useT();
+  const k = lin(t, t0, t0 + 14, Easing.linear);
+  return <Sequence from={q(t0)} layout="none"><AbsoluteFill style={{ transform: `scale(${1.15 + 0.1 * k})` }}>
+    <OffthreadVideo src={staticFile("v/c2026.mp4")} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} /></AbsoluteFill></Sequence>;
+};
+
 const TelaFinal: React.FC = () => {
   const { f, fps, t } = useT();
   if (t < FINAL - 0.4) return null;
@@ -533,13 +596,14 @@ const Sons: React.FC = () => (
   <>
     {TRECHOS.map(([a, b], i) => <Sequence key={"v" + i} from={q(o(a))} durationInFrames={q(b - a) + 1}><Audio src={staticFile("audio/voz.mp3")} startFrom={q(a)} endAt={q(b)} /></Sequence>)}
     <Audio src={staticFile("audio/trilha.mp3")} volume={(fr) => interpolate(fr, [0, 45, q(FIM_VOZ), q(FINAL + 0.5)], [0, 0.4, 0.4, 0.62], clamp) * interpolate(fr, [TOTAL - 50, TOTAL - 2], [1, 0], clamp)} />
+    <Sequence from={q(INS_T0)}><Audio src={staticFile("audio/insercao.mp3")} /></Sequence>
     {SFX.map((s, i) => { const at = s.t ?? o(s.r ?? 0); return <Sequence key={i} from={Math.max(0, q(at))} durationInFrames={q(3.2)}><Audio src={staticFile(`audio/${s.src}.mp3`)} volume={(s.vol ?? 0.4) * SFX_GANHO} /></Sequence>; })}
   </>
 );
 
 export const Reel: React.FC = () => (
   <AbsoluteFill style={{ background: C.preto, overflow: "hidden" }}>
-    <Gancho /><Pergunta r={[15.6, 18.75]} /><HomemComum /><Assinatura /><Volta /><APergunta /><Prova /><OFim />
+    <Gancho /><Pergunta r={[15.6, 18.75]} /><HomemComum /><Assinatura /><Metodo /><Volta /><APergunta /><Prova /><OFim />
     <Legenda />
     <Cartela />
     {CAPITULOS.map(([r, n, ti]) => <Capitulo key={n} r={r} n={n} titulo={ti} />)}
