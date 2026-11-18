@@ -78,3 +78,7 @@ Referência: `_reels/basa-acredita-maria-alice` (assessora de crédito Maria Ali
 - **Formato novo (Caso 005): "ACHE A MENTIRA"** — interativo inspirado nos vídeos de detetive do TikTok dos EUA: versão do suspeito (ficha) →
   3 pistas numeradas → "PAUSE AGORA" + contagem regressiva em silêncio (5 s) → revelação com dados → veredito → CTA "comenta ACHEI".
   Projeto: `_reels/alibi-005` (caso Dabate/Fitbit).
+- **Feedback 18/11 (aberturas):** NÃO abrir vídeo com o clipe do carro embaçado (Mixkit 42039, vista de dentro do carro à noite) nem com imagens
+  desfocadas/escuras demais: "dá impressão de qualidade ruim e as pessoas pulam". Os primeiros 2 s precisam de imagem **nítida e impactante**
+  (foto real do caso, documento, texto forte em fundo limpo). **Não repetir os mesmos clipes entre vídeos** (42039, 4331, 3317, 46898 já usados):
+  buscar imagens novas a cada caso — ter criatividade e variar.
