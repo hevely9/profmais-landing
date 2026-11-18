@@ -54,3 +54,12 @@ Referência: `_reels/basa-acredita-maria-alice` (assessora de crédito Maria Ali
 - Gancho precisa de **respiro** (~1–1,5 s) antes do resto do vídeo. Sem barra de progresso no topo.
 - Tela final NEXO: mascote + símbolo azul + botão INSCREVA-SE vermelho do YouTube com mouse clicando → INSCRITO.
 - Formato pedido: **tela dividida** (famoso em cima, vídeo satisfatório embaixo) com narração própria.
+
+## Canal ÁLIBI (TikTok, true crime) — decisões de 18/11/2026
+- Conceito aprovado: cada caso contado pelo **álibi** — "o que ele disse" × "o que as provas mostraram".
+  Abertura fixa "Onde você estava naquela noite?", fechamento "…e esse era o álibi.", cartela "ÁLIBI · CASO Nº 00X · local · data" com som de cassete/REC.
+- Paleta: grafite #0A0A0B, chumbo #1C1C1F, branco-osso #ECE7DC, vermelho-lacre #A3141C (uma vez por cena). Sem amarelo de fita policial.
+- Fontes: títulos serifados pesados (Playfair Display Black), dossiê em máquina de escrever (Special Elite), legenda limpa.
+- Voz escolhida: **James – Deep Narrator** (`WrT2M515LQuE5m5EYh0W`), dirigir com calma (tensão por pausas, não volume).
+- Imagens: só fontes públicas/licenciadas (registros policiais oficiais, FBI Vault, tribunais, Commons); nada de sangue/corpos; nada de rostos reais gerados por IA.
+- Perfil: silhueta de sobretudo e chapéu sob poste (ElevenLabs gpt-image-2.5), recorte quadrado em `_reels/alibi-marca/entrega/`.
