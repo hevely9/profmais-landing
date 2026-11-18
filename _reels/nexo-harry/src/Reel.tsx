@@ -284,22 +284,28 @@ const PAGES = (() => {
   let cur: typeof WORDS = [];
   WORDS.forEach((w, i) => {
     cur.push(w);
-    const fim = /[.,?!]$/.test(w.text) || cur.length >= 3 || i === WORDS.length - 1;
+    const fim = /[.,?!]$/.test(w.text) || cur.length >= 2 || i === WORDS.length - 1;
     if (fim) { pages.push({ de: cur[0].start, ate: 0, ws: cur }); cur = []; }
   });
   pages.forEach((p, i) => { p.ate = i < pages.length - 1 ? pages[i + 1].de : FIM_VOZ + 0.3; });
   return pages;
 })();
+// Legenda na divisa das duas metades: zona mais segura do Short (longe dos botões da direita e do título embaixo)
+// e onde o olho passa o tempo todo. Máx. 2 palavras por vez, grande, com a palavra falada numa pílula azul.
 const Legenda: React.FC = () => {
   const { f, fps, t } = useT();
   const pg = PAGES.find((p) => t >= p.de - 0.05 && t < p.ate - 0.05);
   if (!pg || t > FIM_VOZ + 0.3) return null;
-  const pin = spring({ frame: f - q(pg.de - 0.05), fps, config: { damping: 14, stiffness: 260 } });
-  return <div style={{ position: "absolute", left: 40, right: 40, top: H - 62, display: "flex", justifyContent: "center", flexWrap: "wrap", columnGap: 30, transform: `scale(${0.85 + 0.15 * pin})` }}>
+  const pin = spring({ frame: f - q(pg.de - 0.05), fps, config: { damping: 13, stiffness: 280 } });
+  return <div style={{ position: "absolute", left: 30, right: 30, top: H - 70, height: 140, display: "flex", alignItems: "center", justifyContent: "center", columnGap: 18,
+    transform: `scale(${0.8 + 0.2 * pin})` }}>
     {pg.ws.map((w, i) => {
-      const ativo = t >= w.start - 0.03 && t < w.end + 0.1;
-      return <span key={i} style={{ fontFamily: SANS, fontWeight: 800, fontSize: 74, lineHeight: 1.05, textTransform: "uppercase",
-        color: ativo ? C.azulClaro : C.branco, WebkitTextStroke: "12px #000", paintOrder: "stroke fill", transform: `scale(${ativo ? 1.08 : 1})`, display: "inline-block" }}>{w.text.replace(/[,;:]$/, "")}</span>;
+      const ativo = t >= w.start - 0.03 && t < w.end + 0.12;
+      const txt = w.text.replace(/[,;:.!?]$/, "");
+      return <span key={i} style={{ fontFamily: SANS, fontWeight: 800, fontSize: txt.length > 9 ? 84 : 98, lineHeight: 1, textTransform: "uppercase", letterSpacing: "-0.01em",
+        padding: "10px 22px 14px", borderRadius: 22, background: ativo ? "#4F6FFF" : "transparent", boxShadow: ativo ? "0 10px 30px rgba(0,0,0,0.55)" : "none",
+        color: C.branco, WebkitTextStroke: ativo ? "0px" : "14px #000", paintOrder: "stroke fill", textShadow: ativo ? "0 3px 0 rgba(0,0,0,0.35)" : "0 6px 18px rgba(0,0,0,0.6)",
+        transform: `scale(${ativo ? 1.06 : 1}) rotate(${ativo ? -2 : 0}deg)`, display: "inline-block", whiteSpace: "nowrap" }}>{txt}</span>;
     })}
   </div>;
 };
