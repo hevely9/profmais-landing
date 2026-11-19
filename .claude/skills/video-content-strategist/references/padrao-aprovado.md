@@ -98,3 +98,8 @@ Referência: `_reels/basa-acredita-maria-alice` (assessora de crédito Maria Ali
   (= Caso 007) perdeu a maioria em 0:01 por abrir com título parado sobre foto parada. Regra: movimento + voz no quadro 0,
   texto do gancho palavra a palavra, "Caso nº" só na capa/legenda (HUD após 3 s), nada parado > 4 s, tela final
   "Amanhã 19h30 · próximo caso · Segue o Álibi", postagem diária 19h30 (Brasília) e PACOTE DE POSTAGEM em toda entrega.
+- **Decisão do usuário (19/11, noite):** postar **cerca de 3 vídeos por dia** (manhã, tarde, noite), mas sem data fixa — às vezes
+  no mesmo dia, às vezes 1–2 dias depois. **Nunca prometer dia nem hora do próximo vídeo** (voz, tela final ou legenda):
+  usar "Próximo caso no perfil · Segue o Álibi". Os vídeos 008–011 já saíram com "Amanhã 19h30" e ficam assim (usuário disse
+  "deixa assim"). **Não alterar vídeos entregues e não gerar vídeo novo sem o usuário pedir.** O usuário não queria as
+  alterações nos 008–011, mas aprovou o resultado ("o restante tá excelente").

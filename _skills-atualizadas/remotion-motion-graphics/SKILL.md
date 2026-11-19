@@ -250,6 +250,6 @@ lacre #A3141C / #E0353F; Playfair 900, Montserrat 800, Special Elite, Courier Pr
   soco 1,25→1 em ~0,4 s, voz começando em ≤ 0,1 s e texto do gancho entrando palavra a palavra com a fala.
 - **Sem "Caso nº X" na abertura**: o HUD com o número só entra depois de 3 s (o número vai na capa e na legenda).
 - Corte a cada 3–5 s, nada parado > 4 s, legenda sempre ativa (y 1320–1480, margem direita 170).
-- Tela final: ÁLIBI + "AMANHÃ 19H30 · <próximo caso>" + "SEGUE O ÁLIBI" (últimos ~3 s).
+- Tela final: ÁLIBI + "PRÓXIMO CASO" + "SEGUE O ÁLIBI" (nunca prometer dia/hora) (últimos ~3 s).
 - 60–90 s; efeitos com `SFX_GANHO = 0.45`; trilha sintetizada; export yuv420p nível 4.1, -14 LUFS, < 50 MB.
 - Gerar a capa (≤ 5 palavras, nº do caso) e o PACOTE DE POSTAGEM (ver `alibi-perfil` §5) em toda entrega.

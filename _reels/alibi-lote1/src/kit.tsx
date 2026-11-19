@@ -215,7 +215,7 @@ export const TelaFinal: React.FC = () => {
       <div style={{ height: 3, width: 260, margin: "10px auto 20px", background: C.lacre }} />
       <div style={{ fontFamily: ELITE, fontSize: 34, color: C.ossoE, opacity: b }}>toda história tem um álibi.</div>
       {v.proximo && <div style={{ marginTop: 34, opacity: b }}>
-        <div style={{ fontFamily: COURIER, fontWeight: 700, fontSize: 34, letterSpacing: "0.12em", color: C.verm }}>AMANHÃ · 19H30</div>
+        <div style={{ fontFamily: COURIER, fontWeight: 700, fontSize: 34, letterSpacing: "0.12em", color: C.verm }}>PRÓXIMO CASO</div>
         <div style={{ fontFamily: MONT, fontWeight: 800, fontSize: 52, color: C.osso, marginTop: 8, lineHeight: 1.1, padding: "0 70px" }}>{v.proximo}</div>
         <div style={{ display: "inline-block", marginTop: 22, padding: "10px 26px", background: C.lacre, fontFamily: SANS, fontWeight: 800, fontSize: 38, color: C.osso }}>SEGUE O ÁLIBI</div>
       </div>}

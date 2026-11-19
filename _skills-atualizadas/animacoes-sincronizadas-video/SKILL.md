@@ -59,6 +59,6 @@ Diga onde está o arquivo, o que foi aplicado e em que palavras, e o que a checa
 Além da checagem final acima, um vídeo do ÁLIBI só passa se:
 - o **1º frame já tem movimento e voz** (nada de título parado sobre foto parada; nada de "Caso nº X" na abertura);
 - há **mudança visual a cada 3–5 s** e **nenhuma imagem parada > 4 s** (`freezedetect` + folha de contato a cada 2 s);
-- existe um **laço aberto** no meio e a **tela final puxa o próximo caso** ("Amanhã, 19h30 … Segue o Álibi");
+- existe um **laço aberto** no meio e a **tela final puxa o próximo caso** ("Próximo caso no perfil · Segue o Álibi", sem dia/hora);
 - efeitos discretos (ganho 0,45; nenhum pico acima da voz) e a legenda nunca some.
 Entrega sempre acompanhada do PACOTE DE POSTAGEM (skill `alibi-perfil` §5).

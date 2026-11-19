@@ -1,6 +1,6 @@
 ---
 name: alibi-perfil
-description: Regras do perfil ÁLIBI (@alibi.criminal, TikTok, true crime PT-BR) — gancho em 1 segundo, roteiro de 60-90 s, temas seguros, edição em Remotion com o kit do lote 1, rotina de postagem às 19h30 e o PACOTE DE POSTAGEM obrigatório em toda entrega. Use sempre que o pedido for um vídeo, roteiro, capa, legenda ou análise do ÁLIBI.
+description: Regras do perfil ÁLIBI (@alibi.criminal, TikTok, true crime PT-BR) — gancho em 1 segundo, roteiro de 60-90 s, temas seguros, edição em Remotion com o kit do lote 1, rotina de postagem (cerca de 3 por dia, sem prometer dia/hora) e o PACOTE DE POSTAGEM obrigatório em toda entrega. Use sempre que o pedido for um vídeo, roteiro, capa, legenda ou análise do ÁLIBI.
 ---
 
 # PERFIL ÁLIBI — regras de roteiro, edição e postagem
@@ -27,7 +27,7 @@ c) **Duração 60–90 s** (máx. 2 min) enquanto a conta for nova.
 d) **Quebra visual a cada 3–5 s** (zoom, corte, b-roll, texto, mapa, documento). **Nenhuma imagem parada > 4 s.**
 e) **Laço aberto no meio**: "mas o detalhe que entregou ele foi outro…".
 f) **Final** = revelação → assinatura curta da marca "Onde você estava naquela noite? …e esse era o álibi." (decisão do
-   usuário, mantida) → **CTA que puxa o próximo caso**: "Amanhã, 19h30: <próximo caso>. Segue o Álibi."
+   usuário, mantida) → **CTA que puxa o próximo caso**: "Próximo caso no perfil. Segue o Álibi." (sem prometer dia nem hora)
    O CTA vai na voz (roteiros novos) e também na tela final.
 g) **Temas**: golpes, roubos, fugas, investigações, casos resolvidos por um detalhe, mistérios.
    **Evitar**: violência gráfica, massacres, vítimas crianças, corpos/sangue. Respeito às vítimas; nunca glamourizar o criminoso.
@@ -44,17 +44,20 @@ sem acelerar o áudio, frases curtas). Orçamento até 2.500 créditos por víde
 - "ÁLIBI · CASO Nº X" (HUD) só aparece **depois do gancho (≥ 3 s)**; número também na capa e na legenda.
 - Corte a cada 3–5 s (componente `Plano`); Ken Burns em toda foto; nada parado > 4 s.
 - Legenda: Inter 800, 56 px, máx. 3 palavras, chave em #E0353F, faixa y 1320–1480, margem direita 170 px (botões do app).
-- Tela final (últimos ~3 s): ÁLIBI + "AMANHÃ 19H30 · <próximo caso>" + "SEGUE O ÁLIBI".
+- Tela final (últimos ~3 s): ÁLIBI + "PRÓXIMO CASO" + "SEGUE O ÁLIBI" (nunca prometer dia/hora).
 - Imagens só reais e licenciadas (Commons/FBI/Agência Brasil) com crédito; **conferir se a imagem baixada é mesmo o que o
   nome diz** (já veio carta no lugar de quadro). Wikimedia: miniaturas 1920/960 px sem `?utm`.
 - Exportar: `-profile:v high -level:v 4.1 -pix_fmt yuv420p -movflags +faststart`, -14 LUFS, < 50 MB.
 - Capa 1080×1920: até 5 palavras grandes, 1 palavra em faixa vermelha, nº do caso no topo, texto no miolo 3:4 (y 240–1680).
 
-## 4. Rotina de postagem
-- **Todo dia às 19h30 (Brasília) = 17h30 (Acre)**, 1 vídeo por dia, por 14 dias seguidos.
+## 4. Rotina de postagem (decisão do usuário, 19/11)
+- **Cerca de 3 vídeos por dia** (manhã, tarde e noite), mas a frequência varia: às vezes no mesmo dia, às vezes
+  com 1–2 dias de intervalo. **Quem decide quando postar é o usuário.**
+- **Nunca prometer dia nem hora do próximo vídeo** (nem na voz, nem na tela final, nem na legenda). Usar
+  "Próximo caso no perfil · Segue o Álibi".
 - Série numerada "Caso nº 008, 009…" — **só na legenda e na capa**, nunca como abertura do vídeo.
-- No 15º dia comparar as views das primeiras 2 h; se baixas, testar 12h00 (Brasília) por 7 dias.
 - Ao postar: ficar 15–20 min respondendo comentários.
+- **Não alterar vídeos já entregues nem gerar vídeos novos sem o usuário pedir.**
 
 ## 5. ENTREGA OBRIGATÓRIA — "PACOTE DE POSTAGEM" (sem o usuário pedir)
 Em toda entrega de vídeo, mandar junto:
@@ -63,13 +66,13 @@ Em toda entrega de vídeo, mandar junto:
 [3] **Legenda — 3 opções**, marcar a recomendada. Cada uma com 4 linhas:
    - L1: gancho que repete a curiosidade sem spoiler (≤ 80 caracteres — é o que aparece antes do "mais");
    - L2: um detalhe intrigante; L3: pergunta que provoca comentário;
-   - L4: "Caso novo todo dia às 19h30. Segue o Álibi."
+   - L4: "Tem caso novo no perfil. Segue o Álibi." (sem prometer dia/hora)
    Tom misterioso, direto, PT-BR natural, no máx. 2 emojis discretos (🔎 🕯️), sem clichê de IA.
 [4] **Hashtags: 4 a 6** — 2 amplas (#truecrime #casosreais) + 2 de nicho (#truecrimebrasil #casosmisteriosos,
    alternando com #crimesreais #casoreal) + 1–2 do caso. **Proibido**: #fyp #foryou #foyou #viral #paravoce, erro de
    digitação ou sem relação (#serie, #quartafeira, #prisonbreak).
 [5] **Comentário para fixar** (pergunta ou bastidor)
-[6] **Horário**: "Postar hoje às 19h30 (Brasília) / 17h30 (Acre)"
+[6] **Turno sugerido** (manhã, tarde ou noite) — quem decide quando postar é o usuário
 [7] **Checklist**: gancho no 1º segundo? 60–90 s? nada parado > 4 s? CTA no final? hashtags conferidas?
 
 Antes de entregar, revisar a legenda como editor exigente: cortar palavras, conferir ortografia e garantir que a L1

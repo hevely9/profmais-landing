@@ -369,15 +369,15 @@ maioria em 0:01. Público 25–54 anos (79%), 57% homens, Brasil 97,7%. Posts co
 2. 1ª frase ≤ 12 palavras com o absurdo/contradição ("Ele roubou 160 milhões. E foi preso por causa de um carro.").
 3. 60–90 s (máx. 2 min). Quebra visual a cada 3–5 s; indicar nas notas de produção o que muda na tela em cada frase.
 4. Laço aberto no meio ("mas o detalhe que entregou ele foi outro…").
-5. Final: revelação → "Onde você estava naquela noite? …e esse era o álibi." → "Amanhã, 19h30: <próximo caso>. Segue o Álibi."
+5. Final: revelação → "Onde você estava naquela noite? …e esse era o álibi." → "Próximo caso no perfil. Segue o Álibi." (sem prometer dia nem hora)
 6. Temas: golpes, roubos, fugas, investigações, casos resolvidos por detalhe, mistérios. Nada de violência gráfica,
    massacres, vítimas crianças, corpos/sangue; respeito às vítimas; não glamourizar o criminoso.
 7. Narração original; voz James – Deep Narrator (eleven_v4), frases curtas, sem acelerar.
 
 **Toda entrega vem com o PACOTE DE POSTAGEM** (sem o usuário pedir): [1] título interno + nº do caso · [2] texto da capa
 (≤ 5 palavras) · [3] 3 legendas de 4 linhas (L1 gancho ≤ 80 caracteres sem spoiler · L2 detalhe · L3 pergunta ·
-L4 "Caso novo todo dia às 19h30. Segue o Álibi."), marcar a recomendada, máx. 2 emojis discretos · [4] 4–6 hashtags
+L4 "Tem caso novo no perfil. Segue o Álibi." (sem prometer dia/hora)), marcar a recomendada, máx. 2 emojis discretos · [4] 4–6 hashtags
 (#truecrime #casosreais + 2 de nicho #truecrimebrasil #casosmisteriosos ou #crimesreais #casoreal + 1–2 do caso;
 proibido #fyp #foryou #foyou #viral #paravoce e tags erradas/sem relação) · [5] comentário para fixar ·
-[6] "Postar hoje às 19h30 (Brasília) / 17h30 (Acre)" · [7] checklist (gancho 1 s, 60–90 s, nada parado > 4 s, CTA, hashtags).
+[6] sugestão de turno (manhã, tarde ou noite) — quem decide é o usuário · [7] checklist (gancho 1 s, 60–90 s, nada parado > 4 s, CTA, hashtags).
 Revisar a legenda como editor exigente antes de entregar.
