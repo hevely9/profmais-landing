@@ -94,3 +94,7 @@ Referência: `_reels/basa-acredita-maria-alice` (assessora de crédito Maria Ali
   - Teste A/B: série em partes (BC Fortaleza 1 e 2) × casos completos (Alcatraz, Jules Rimet, Gardner).
   - Fecho mantido: "Onde você estava naquela noite? …e esse era o álibi." (Parte 1 termina com "Parte 2, no perfil").
   - Wikimedia: usar miniaturas **1920px ou 960px** (1280 dá 429) e **remover `?utm_...`** da URL; ir devagar (12 s entre arquivos).
+- **Relatório 19/11 (PDF do usuário) → skill `alibi-perfil`** (`.claude/skills/alibi-perfil/SKILL.md`): o orgânico "3,5 toneladas"
+  (= Caso 007) perdeu a maioria em 0:01 por abrir com título parado sobre foto parada. Regra: movimento + voz no quadro 0,
+  texto do gancho palavra a palavra, "Caso nº" só na capa/legenda (HUD após 3 s), nada parado > 4 s, tela final
+  "Amanhã 19h30 · próximo caso · Segue o Álibi", postagem diária 19h30 (Brasília) e PACOTE DE POSTAGEM em toda entrega.
