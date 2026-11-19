@@ -1,9 +1,12 @@
 import palavras from "../public/palavras.json";
+import palavrasIns from "../public/palavras-insercao.json";
 
 // ÁLIBI · Caso nº 006 — D. B. Cooper (EUA, 1971). Abertura nítida com o bilhete real (FBI).
 export const FPS = 30;
 export const LEAD = 0.4;
-export const GAPS: [number, number][] = [[19.5, 0.9], [20.4, 1.2], [55.2, 1.2], [80.0, 1.2], [99.0, 1.2], [126.6, 1.2], [155.4, 1.2]];
+// Inserção (pedido do usuário): curiosidade das séries (Prison Break e Loki), depois de "ficou para sempre" (bruto 155.25).
+export const INS_RAW = 155.25, INS_DUR = 19.6;
+export const GAPS: [number, number][] = [[19.5, 0.9], [20.4, 1.2], [55.2, 1.2], [80.0, 1.2], [99.0, 1.2], [126.6, 1.2], [INS_RAW, INS_DUR], [155.4, 1.2]];
 export const o = (t: number) => t + LEAD + GAPS.reduce((s, [at, g]) => s + (t >= at ? g : 0), 0);
 export const q = (t: number) => Math.round(t * FPS);
 export const VOZ_FIM_RAW = 193.2;
@@ -14,7 +17,11 @@ export const TOTAL = q(FINAL + 5.0);
 
 type W = { text: string; start: number; end: number };
 const RAW = (palavras as { words: W[] }).words;
-export const WORDS = RAW.map((w) => ({ text: w.text, start: o(w.start), end: o(w.end) }));
+export const INS_T0 = o(INS_RAW) - INS_DUR + 0.25;
+export const WORDS = [
+  ...RAW.map((w) => ({ text: w.text, start: o(w.start), end: o(w.end) })),
+  ...(palavrasIns as { words: W[] }).words.map((w) => ({ text: w.text, start: INS_T0 + w.start, end: INS_T0 + w.end })),
+].sort((a, b) => a.start - b.start);
 const limpa = (s: string) => s.toLowerCase().replace(/[.,?!;:…]/g, "");
 export const w = (txt: string, n = 0) => {
   const m = RAW.filter((x) => limpa(x.text) === txt)[n];
@@ -48,6 +55,9 @@ export const SFX: { src: string; r?: number; t?: number; vol?: number }[] = [
   { src: "impacto", r: 144.3, vol: 0.4 },
   { src: "carimbo", r: 150.1, vol: 0.45 },
   { src: "impacto", r: 177.1, vol: 0.45 },
+  { src: "impacto", t: INS_T0 + 1.5, vol: 0.4 },
+  { src: "impacto", t: INS_T0 + 11.2, vol: 0.4 },
+  { src: "tecla", t: INS_T0 + 7.9, vol: 0.3 },
   { src: "coracao", r: 186.0, vol: 0.4 },
   { src: "cassete", r: 193.2, vol: 0.6 },
 ];

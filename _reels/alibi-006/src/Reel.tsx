@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill, Audio, Easing, Img, OffthreadVideo, Sequence, interpolate, random, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
-import { CAPITULOS, FIM_VOZ, FINAL, FPS, GAPS, SFX, TOTAL, TRECHOS, WORDS, o, q, w } from "./timeline";
+import { CAPITULOS, FIM_VOZ, FINAL, FPS, GAPS, INS_DUR, INS_RAW, INS_T0, SFX, TOTAL, TRECHOS, WORDS, o, q, w } from "./timeline";
 
 // ── ÁLIBI: grafite, chumbo, branco-osso, vermelho-lacre e âmbar de fita policial ──
 const C = { preto: "#0A0A0B", osso: "#ECE7DC", ossoE: "#9C978E", lacre: "#A3141C", papel: "#E4DDCB", tinta: "#1A1714", fita: "#C9A227" };
@@ -353,7 +353,7 @@ const Pistas: React.FC = () => {
         <div style={{ fontFamily: COURIER, fontSize: 18, opacity: 0.6, marginTop: 20 }}>conclusão de pesquisadores independentes</div>
       </Papel>
     </Cena>
-    <Cena r={[141.0, 155.4]}>
+    <Cena r={[141.0, 155.25]}>
       <Fundo cor={C.preto} />
       <Rotulo r={141.22} texto="O DETALHE QUE QUASE NINGUÉM SABE" top={420} cor={C.ossoE} size={30} />
       <div style={{ position: "absolute", left: 0, right: 0, top: 560, textAlign: "center", fontFamily: MONT, fontWeight: 800, fontSize: 140, color: C.osso, opacity: lin(t, o(144.2), o(144.6)) }}>
@@ -398,6 +398,36 @@ const SemFim: React.FC = () => (
     </Cena>
   </>
 );
+// ── inserção: D. B. Cooper na ficção (só texto, sem trechos das séries) ──
+const NaFiccao: React.FC = () => {
+  const { f, fps, t } = useT();
+  const t0 = INS_T0 - 0.25, fim = o(INS_RAW) - 0.1;
+  if (t < t0 - 0.3 || t > fim + 0.3) return null;
+  const s = t - INS_T0;
+  const op = lin(t, t0 - 0.3, t0) * (1 - lin(t, fim, fim + 0.3));
+  const a = spT(f, fps, INS_T0 + 1.4, { damping: 14, stiffness: 140 }), b = spT(f, fps, INS_T0 + 11.1, { damping: 14, stiffness: 140 });
+  const aparece = (at: number) => lin(t, INS_T0 + at - 0.05, INS_T0 + at + 0.35);
+  return <AbsoluteFill style={{ opacity: op }}>
+    <Fundo cor="radial-gradient(ellipse at 50% 40%, #1E1C26 0%, #0A0A0B 72%)" />
+    <AbsoluteFill style={{ opacity: 0.18 }}><Img src={staticFile("img/retrato.jpg")} style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(1) blur(1px)" }} /></AbsoluteFill>
+    <div style={{ position: "absolute", left: 0, right: 0, top: 260, textAlign: "center", fontFamily: COURIER, fontWeight: 700, fontSize: 30, letterSpacing: "0.2em", color: C.ossoE, opacity: aparece(0) }}>ELE VIROU LENDA</div>
+    {s < 11.0 ? <div style={{ position: "absolute", left: 70, right: 70, top: 400, textAlign: "center", opacity: a, transform: `scale(${0.9 + 0.1 * a})` }}>
+      <div style={{ fontFamily: COURIER, fontSize: 26, color: C.ossoE, letterSpacing: "0.12em" }}>NA SÉRIE</div>
+      <div style={{ fontFamily: MONT, fontWeight: 800, fontSize: 120, color: C.osso, lineHeight: 1, marginTop: 10 }}>PRISON<br />BREAK</div>
+      <div style={{ height: 3, width: 220, margin: "26px auto", background: C.lacre }} />
+      <div style={{ fontFamily: COURIER, fontWeight: 700, fontSize: 36, color: C.osso, opacity: aparece(3.6) }}>Charles Westmoreland,<br />o preso mais velho de Fox River</div>
+      <div style={{ fontFamily: ELITE, fontSize: 46, color: "#E0353F", marginTop: 26, opacity: aparece(7.9) }}>“eu sou D. B. Cooper”</div>
+    </div> : <div style={{ position: "absolute", left: 70, right: 70, top: 400, textAlign: "center", opacity: b, transform: `scale(${0.9 + 0.1 * b})` }}>
+      <div style={{ fontFamily: COURIER, fontSize: 26, color: C.ossoE, letterSpacing: "0.12em" }}>MARVEL · DISNEY+</div>
+      <div style={{ fontFamily: MONT, fontWeight: 800, fontSize: 150, color: C.osso, lineHeight: 1, marginTop: 10 }}>LOKI</div>
+      <div style={{ height: 3, width: 220, margin: "26px auto", background: C.lacre }} />
+      <div style={{ fontFamily: COURIER, fontWeight: 700, fontSize: 36, color: C.osso, opacity: aparece(13.5) }}>o sequestrador do voo 305 era…</div>
+      <div style={{ fontFamily: ELITE, fontSize: 50, color: "#E0353F", marginTop: 26, opacity: aparece(16.6) }}>o deus da trapaça</div>
+    </div>}
+    <div style={{ position: "absolute", left: 0, right: 0, top: 1170, textAlign: "center", fontFamily: COURIER, fontSize: 20, color: C.ossoE }}>referências de ficção</div>
+  </AbsoluteFill>;
+};
+
 const TelaFinal: React.FC = () => {
   const { f, fps, t } = useT();
   if (t < FINAL - 0.4) return null;
@@ -437,7 +467,7 @@ const PAGES = (() => {
   pages.forEach((p, i) => { p.ate = i < pages.length - 1 ? Math.min(pages[i + 1].de, p.ws[p.ws.length - 1].end + 0.6) : FIM_VOZ + 0.2; });
   return pages;
 })();
-const CHAVE = /^(encontrado|bomba|paraquedas|saltado|gravata|nada|sequestro|titânio|erro|cooper|álibi|frio)$/i;
+const CHAVE = /^(encontrado|bomba|paraquedas|saltado|gravata|nada|sequestro|titânio|erro|cooper|álibi|frio|lenda|loki|trapaça)$/i;
 const Legenda: React.FC = () => {
   const { t } = useT();
   const pg = PAGES.find((p) => t >= p.de - 0.05 && t < p.ate);
@@ -465,13 +495,14 @@ const Sons: React.FC = () => (
   <>
     {TRECHOS.map(([a, b], i) => <Sequence key={"v" + i} from={q(o(a))} durationInFrames={q(b - a) + 1}><Audio src={staticFile("audio/voz.mp3")} startFrom={q(a)} endAt={q(b)} /></Sequence>)}
     <Audio src={staticFile("audio/trilha.mp3")} volume={(fr) => interpolate(fr, [0, 45, q(FIM_VOZ), q(FINAL + 0.5)], [0, 0.4, 0.4, 0.62], clamp) * interpolate(fr, [TOTAL - 50, TOTAL - 2], [1, 0], clamp)} />
+    <Sequence from={q(INS_T0)}><Audio src={staticFile("audio/insercao.mp3")} /></Sequence>
     {SFX.map((s, i) => { const at = s.t ?? o(s.r ?? 0); return <Sequence key={i} from={Math.max(0, q(at))} durationInFrames={q(3.2)}><Audio src={staticFile(`audio/${s.src}.mp3`)} volume={(s.vol ?? 0.4) * SFX_GANHO} /></Sequence>; })}
   </>
 );
 
 export const Reel: React.FC = () => (
   <AbsoluteFill style={{ background: C.preto, overflow: "hidden" }}>
-    <Gancho /><Pergunta r={[16.9, 19.45]} /><Passageiro /><Exigencias /><Salto /><Cacada /><Pistas /><SemFim />
+    <Gancho /><Pergunta r={[16.9, 19.45]} /><Passageiro /><Exigencias /><Salto /><Cacada /><Pistas /><NaFiccao /><SemFim />
     <Legenda />
     <Cartela />
     {CAPITULOS.map(([r, n, ti]) => <Capitulo key={n} r={r} n={n} titulo={ti} />)}
