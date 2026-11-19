@@ -82,3 +82,5 @@ Referência: `_reels/basa-acredita-maria-alice` (assessora de crédito Maria Ali
   desfocadas/escuras demais: "dá impressão de qualidade ruim e as pessoas pulam". Os primeiros 2 s precisam de imagem **nítida e impactante**
   (foto real do caso, documento, texto forte em fundo limpo). **Não repetir os mesmos clipes entre vídeos** (42039, 4331, 3317, 46898 já usados):
   buscar imagens novas a cada caso — ter criatividade e variar.
+- **Entrega compatível com celular (19/11):** o render do Remotion sai em `yuvj420p` nível 5.0 e o app do usuário não abriu.
+  Sempre exportar a versão final com `-profile:v high -level:v 4.1 -pix_fmt yuv420p -color_range tv -movflags +faststart` (~1,6 Mbps, < 50 MB).
