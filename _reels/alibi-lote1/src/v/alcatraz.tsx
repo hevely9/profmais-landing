@@ -70,11 +70,11 @@ export const Alcatraz: React.FC = () => (
       <Titulo r={2.35} top={300} size={76}>A PRISÃO MAIS<br />SEGURA DOS EUA</Titulo>
     </Plano>
     <Plano r={[4.7, 6.7]}>
-      <Cheia src="a-ilha" r={[4.7, 6.7]} credito="Carol M. Highsmith · Biblioteca do Congresso · domínio público" zoom={[1.15, 1.3]} />
+      <Cheia src="a-ilha" alt={{ clip: "c11304" }} r={[4.7, 6.7]} credito="Carol M. Highsmith · Biblioteca do Congresso · domínio público" zoom={[1.15, 1.3]} />
       <Titulo r={4.75} top={360} size={140}>ALCATRAZ</Titulo>
     </Plano>
     <Plano r={[6.7, 8.8]}>
-      <Foto src="a-cellhouse" r={[6.7, 8.8]} credito="Daniel Ramirez · CC BY 2.0" top={420} h={760} zoom={[1.05, 1.18]} cinza />
+      <Foto src="a-cellhouse" alt={{ clip: "c17536" }} r={[6.7, 8.8]} credito="Daniel Ramirez · CC BY 2.0" top={420} h={760} zoom={[1.05, 1.18]} cinza />
       <Titulo r={6.75} top={250} size={96}>11 · 06 · 1962</Titulo>
     </Plano>
     <Plano r={[8.8, 13.3]}><Trio /></Plano>
@@ -83,7 +83,7 @@ export const Alcatraz: React.FC = () => (
       <Titulo r={13.35} top={170} size={80}>MESES CAVANDO</Titulo>
     </Plano>
     <Plano r={[15.3, 17.3]}>
-      <Foto src="a-duto" r={[15.3, 17.3]} credito="Benlechlitner · domínio público" top={380} h={700} zoom={[1.1, 1.3]} cinza />
+      <Foto src="a-duto" alt={{ clip: "c23247" }} r={[15.3, 17.3]} credito="Benlechlitner · domínio público" top={380} h={700} zoom={[1.1, 1.3]} cinza />
       <Faixa r={w("colheres") - 0.05} texto="COM COLHERES" top={1130} size={70} />
     </Plano>
     <Plano r={[17.3, 19.9]}>
@@ -110,11 +110,11 @@ export const Alcatraz: React.FC = () => (
       <Titulo r={26.65} top={380} size={96}>VIRARAM<br />UMA JANGADA</Titulo>
     </Plano>
     <Plano r={[28.9, 31.8]}>
-      <Foto src="a-celafuga2" r={[28.9, 31.8]} credito="Samantha Marx · CC BY 2.0" top={360} w={780} h={860} zoom={[1.0, 1.12]} pos="50% 60%" cinza />
+      <Foto src="a-celafuga2" alt={{ img: "a-celafuga", credito: "Supercarwaar · CC BY-SA 4.0" }} r={[28.9, 31.8]} credito="Samantha Marx · CC BY 2.0" top={360} w={780} h={860} zoom={[1.0, 1.12]} pos="50% 60%" cinza />
       <Titulo r={28.95} top={180} size={84}>NAQUELA NOITE</Titulo>
     </Plano>
     <Plano r={[31.8, 34.1]}>
-      <Foto src="a-corredor" r={[31.8, 34.1]} credito="Tom.k · CC BY-SA 3.0" top={330} w={760} h={880} zoom={[1.0, 1.15]} cinza />
+      <Foto src="a-corredor" alt={{ clip: "c46139" }} r={[31.8, 34.1]} credito="Tom.k · CC BY-SA 3.0" top={330} w={760} h={880} zoom={[1.0, 1.15]} cinza />
       <Rotulo r={31.85} texto="DUTOS → TELHADO" top={200} size={50} />
     </Plano>
     <Plano r={[34.1, 37.4]}>
@@ -123,12 +123,12 @@ export const Alcatraz: React.FC = () => (
       <Rotulo r={35.9} texto="correntes fortes · 2 km até a costa" top={480} size={32} />
     </Plano>
     <Plano r={[37.4, 40.8]}>
-      <Foto src="a-celas" r={[37.4, 40.8]} credito="Superchilum · CC BY-SA 3.0" top={330} w={760} h={860} zoom={[1.0, 1.12]} cinza />
+      <Foto src="a-celas" alt={{ img: "a-cabeca", credito: "FBI · domínio público" }} r={[37.4, 40.8]} credito="Superchilum · CC BY-SA 3.0" top={330} w={760} h={860} zoom={[1.0, 1.12]} cinza />
       <Titulo r={37.45} top={180} size={76}>NA MANHÃ SEGUINTE</Titulo>
       <Carimbo r={w("cabeças", 2)} texto="FUGA" y={760} size={150} />
     </Plano>
     <Plano r={[40.8, 43.7]}>
-      <Foto src="a-procurado" r={[40.8, 43.7]} credito="Cartaz do FBI · domínio público" top={330} w={860} h={860} zoom={[1.0, 1.1]} />
+      <Foto src="a-procurado" alt={{ img: "a-clarence", credito: "Governo dos EUA · domínio público" }} r={[40.8, 43.7]} credito="Cartaz do FBI · domínio público" top={330} w={860} h={860} zoom={[1.0, 1.1]} />
       <Titulo r={41.3} top={1100} size={70}>NUNCA MAIS VISTOS</Titulo>
     </Plano>
     <Plano r={[43.7, 47.3]}>

@@ -152,7 +152,7 @@ export const Fortaleza1: React.FC = () => (
       <Grande r={5.2} top={700} size={84}>e ninguém<br />ouviu nada.</Grande>
     </Plano>
     <Plano r={[7.5, 9.2]}>
-      <Cheia src="f-cidade" r={[7.5, 9.2]} credito="deltafrut · CC BY 2.0" zoom={[1.1, 1.22]} a={0.45} />
+      <Cheia src="f-cidade" alt={{ clip: "c1919" }} r={[7.5, 9.2]} credito="deltafrut · CC BY 2.0" zoom={[1.1, 1.22]} a={0.45} />
       <Titulo r={7.55} top={380} size={110}>FORTALEZA</Titulo>
       <Titulo r={w1("2005") - 0.1} top={520} size={110} cor={C.verm}>2005</Titulo>
     </Plano>
@@ -247,11 +247,10 @@ export const Fortaleza2: React.FC = () => (
   <Reel ctx={ctx2}>
     {/* GANCHO — texto no quadro 0 */}
     <Plano r={[-0.1, 3.2]} soco={false}>
-      <Clip src="c18305" r0={-0.1} dur={3.3} a={0.5} />
+      <Clip src="c46981" r0={-0.1} dur={3.3} a={0.35} />
       <Titulo r={-1} top={260} size={92}>ROUBARAM<br />R$ 164 MILHÕES</Titulo>
       <Faixa r={-1} texto="E FORAM PEGOS POR 11 CARROS" top={560} size={52} />
-      <Rotulo r={-1} texto="BANCO CENTRAL · PARTE 2" top={1180} size={30} cor={C.ossoE} />
-    </Plano>
+          </Plano>
     <Plano r={[3.2, 5.5]}>
       <Clip src="c1919" r0={3.2} dur={2.3} a={0.45} />
       <Grande r={3.3} top={680} size={88}>agora era<br />só sumir.</Grande>
@@ -282,7 +281,7 @@ export const Fortaleza2: React.FC = () => (
       <Carimbo r={w2("parou") - 0.05} texto="PARADO" y={820} size={110} />
     </Plano>
     <Plano r={[22.1, 25.5]}>
-      <Clip src="c46981" r0={22.1} from={3} dur={3.4} a={0.5} />
+      <Clip src="c46980" r0={22.1} from={2} dur={3.4} a={0.5} />
       <Rotulo r={22.15} texto="DENTRO DOS CARROS" top={340} size={44} cor={C.ossoE} />
       <Faixa r={w2("fundos") - 0.15} texto="FUNDOS FALSOS" top={420} size={84} />
     </Plano>

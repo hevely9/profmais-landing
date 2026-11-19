@@ -1,4 +1,5 @@
 import React, { createContext, useContext } from "react";
+import { DISPONIVEIS } from "./disponiveis";
 import { AbsoluteFill, Audio, Easing, Img, OffthreadVideo, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 
 // ── ÁLIBI · lote 1 — formato curto (60–75 s): gancho no 0 s, corte a cada 2–3 s, marca só no fim ──
@@ -53,8 +54,12 @@ export const Clip: React.FC<{ src: string; r0: number; from?: number; zoom?: [nu
   </Sequence>;
 };
 // foto em tela cheia (só imagens grandes e nítidas)
-export const Cheia: React.FC<{ src: string; r: readonly [number, number]; credito: string; pos?: string; zoom?: [number, number]; a?: number; cinza?: boolean }> = ({ src, r, credito, pos = "50% 50%", zoom = [1.04, 1.16], a = 0.35, cinza = true }) => {
+export type Alt = { img?: string; clip?: string; credito?: string };
+const temImg = (s: string) => DISPONIVEIS.includes(s);
+export const Cheia: React.FC<{ src: string; r: readonly [number, number]; credito: string; pos?: string; zoom?: [number, number]; a?: number; cinza?: boolean; alt?: Alt }> = ({ src, r, credito, pos = "50% 50%", zoom = [1.04, 1.16], a = 0.35, cinza = true, alt }) => {
   const { t, o } = useT();
+  if (!temImg(src) && alt?.clip) return <Clip src={alt.clip} r0={r[0]} dur={r[1] - r[0]} a={a + 0.1} />;
+  if (!temImg(src) && alt?.img) return <Foto src={alt.img} r={r} credito={alt.credito ?? ""} top={400} h={760} cinza />;
   const k = lin(t, o(r[0]), o(r[1]), Easing.linear);
   return <>
     <AbsoluteFill><Img src={staticFile(`img/${src}.jpg`)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: pos, transform: `scale(${zoom[0] + (zoom[1] - zoom[0]) * k})`, filter: `${cinza ? "grayscale(0.85) " : ""}contrast(1.1) brightness(0.9)` }} /></AbsoluteFill>
@@ -64,9 +69,14 @@ export const Cheia: React.FC<{ src: string; r: readonly [number, number]; credit
 };
 const Credito: React.FC<{ texto: string }> = ({ texto }) => <div style={{ position: "absolute", right: 34, top: 1262, fontFamily: SANS, fontWeight: 600, fontSize: 17, color: "rgba(236,231,220,0.6)", textShadow: "0 1px 4px #000" }}>{texto}</div>;
 // foto de arquivo emoldurada sobre um fundo desfocado dela mesma (sem tela preta vazia)
-export const Foto: React.FC<{ src: string; r: readonly [number, number]; credito: string; top?: number; w?: number; h?: number; pos?: string; zoom?: [number, number]; rot?: number; cover?: boolean; cinza?: boolean; ext?: string }> =
-  ({ src, r, credito, top = 300, w = 940, h = 800, pos = "50% 50%", zoom = [1.0, 1.1], rot = 0, cover = true, cinza = false, ext = "jpg" }) => {
+export const Foto: React.FC<{ src: string; r: readonly [number, number]; credito: string; top?: number; w?: number; h?: number; pos?: string; zoom?: [number, number]; rot?: number; cover?: boolean; cinza?: boolean; ext?: string; alt?: Alt }> =
+  ({ src, r, credito, top = 300, w = 940, h = 800, pos = "50% 50%", zoom = [1.0, 1.1], rot = 0, cover = true, cinza = false, ext = "jpg", alt }) => {
   const { t, o } = useT();
+  if (!temImg(src)) {
+    if (alt?.clip) return <Clip src={alt.clip} r0={r[0]} dur={r[1] - r[0]} a={0.45} />;
+    if (alt?.img && temImg(alt.img)) return <Foto src={alt.img} r={r} credito={alt.credito ?? ""} top={top} w={w} h={h} zoom={zoom} cinza={cinza} />;
+    return <Fundo />;
+  }
   const k = lin(t, o(r[0]), o(r[1]), Easing.linear);
   const file = staticFile(`img/${src}.${ext}`);
   return <>

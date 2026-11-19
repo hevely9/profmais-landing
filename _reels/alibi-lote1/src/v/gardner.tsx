@@ -48,12 +48,12 @@ export const Gardner: React.FC = () => (
       <Faixa r={w("1990") - 0.1} texto="DESDE 1990" top={1110} size={60} />
     </Plano>
     <Plano r={[3.0, 6.9]}>
-      <Cheia src="g-patio" r={[3.0, 6.9]} credito="Sintakso · CC BY-SA 4.0" zoom={[1.05, 1.2]} cinza={false} a={0.45} />
+      <Cheia src="g-patio" alt={{ clip: "c49294" }} r={[3.0, 6.9]} credito="Sintakso · CC BY-SA 4.0" zoom={[1.05, 1.2]} cinza={false} a={0.45} />
       <Titulo r={3.05} top={320} size={80}>E CONTINUAM<br />NA PAREDE</Titulo>
       <Rotulo r={4.2} texto="MUSEU ISABELLA STEWART GARDNER" top={560} size={30} />
     </Plano>
     <Plano r={[6.9, 10.1]}>
-      <Foto src="g-fachada" r={[6.9, 10.1]} credito="King of Hearts · CC BY-SA 4.0" top={430} h={720} zoom={[1.1, 1.25]} cinza />
+      <Foto src="g-fachada" alt={{ clip: "c31379" }} r={[6.9, 10.1]} credito="King of Hearts · CC BY-SA 4.0" top={430} h={720} zoom={[1.1, 1.25]} cinza />
       <Titulo r={w("18") - 0.1} top={190} size={96}>18 · 03 · 1990</Titulo>
       <Rotulo r={w("boston") - 0.1} texto="01H24 · BOSTON" top={320} size={40} cor={C.verm} />
     </Plano>
@@ -89,7 +89,7 @@ export const Gardner: React.FC = () => (
       <Rotulo r={24.9} texto="MINUTOS LIVRES NO MUSEU" top={700} size={40} />
     </Plano>
     <Plano r={[27.9, 29.9]}>
-      <Foto src="g-poster" r={[27.9, 29.9]} credito="Cartaz do FBI · domínio público" top={330} w={860} h={880} zoom={[1.0, 1.08]} pos="50% 30%" />
+      <Foto src="g-poster" alt={{ clip: "c20842" }} r={[27.9, 29.9]} credito="Cartaz do FBI · domínio público" top={330} w={860} h={880} zoom={[1.0, 1.08]} pos="50% 30%" />
       <Faixa r={w("13") - 0.1} texto="13 OBRAS" top={170} size={84} />
     </Plano>
     <Plano r={[29.9, 31.5]}>
@@ -107,7 +107,7 @@ export const Gardner: React.FC = () => (
       <Contador r={35.9} ate={37.6} valor={500} prefixo="US$ " sufixo=" mi" top={480} size={150} />
     </Plano>
     <Plano r={[38.7, 41.6]}>
-      <Foto src="g-tortoni" r={[38.7, 41.6]} credito="Manet · Chez Tortoni · domínio público" top={420} w={900} h={680} zoom={[1.0, 1.1]} />
+      <Foto src="g-tortoni" alt={{ img: "g-tempestade", credito: "Rembrandt · domínio público" }} r={[38.7, 41.6]} credito="Manet · Chez Tortoni · domínio público" top={420} w={900} h={680} zoom={[1.0, 1.1]} />
       <Titulo r={38.75} top={180} size={66}>O MAIOR ROUBO<br />DE ARTE DA HISTÓRIA</Titulo>
       <Rotulo r={39.0} texto="também levado naquela noite" top={1140} size={28} cor={C.ossoE} />
     </Plano>
@@ -128,11 +128,11 @@ export const Gardner: React.FC = () => (
       </Papel>
     </Plano>
     <Plano r={[48.3, 50.7]}>
-      <Foto src="g-isabella" r={[48.3, 50.7]} credito="Anders Zorn, 1894 · domínio público" top={330} w={700} h={880} zoom={[1.0, 1.1]} pos="50% 20%" />
+      <Foto src="g-isabella" alt={{}} r={[48.3, 50.7]} credito="Anders Zorn, 1894 · domínio público" top={330} w={700} h={880} zoom={[1.0, 1.1]} pos="50% 20%" />
       <Rotulo r={w("fundadora") - 0.2} texto="ISABELLA STEWART GARDNER" top={190} size={38} />
     </Plano>
     <Plano r={[50.7, 53.1]}>
-      <Cheia src="g-patio2" r={[50.7, 53.1]} credito="Sintakso · CC BY-SA 4.0" zoom={[1.05, 1.18]} cinza={false} a={0.45} />
+      <Cheia src="g-patio2" alt={{ clip: "c20841" }} r={[50.7, 53.1]} credito="Sintakso · CC BY-SA 4.0" zoom={[1.05, 1.18]} cinza={false} a={0.45} />
       <Titulo r={w("nada") - 0.1} top={340} size={80}>NADA PODE<br />MUDAR DE LUGAR</Titulo>
       <Rotulo r={51.5} texto="regra do testamento da fundadora" top={560} size={30} />
     </Plano>
