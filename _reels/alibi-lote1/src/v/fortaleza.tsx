@@ -9,7 +9,7 @@ const words1 = (p1 as { words: W[] }).words, words2 = (p2 as { words: W[] }).wor
 const w1 = achar(words1), w2 = achar(words2);
 
 export const ctx1 = mkCtx({
-  caso: "Nº 007", audio: "fortaleza1", words: words1, lead: 0.1, fimVozRaw: 60.3, final: "parte2",
+  caso: "Nº 007", parte: "PARTE 1", audio: "fortaleza1", words: words1, lead: 0.1, fimVozRaw: 60.3, final: "parte2",
   cta: ["", ""],
   chave: /^(terra|nada|túnel|cofre|concreto|destruição|registrada|r\$164|erro|2)$/i,
   semLegenda: [],
@@ -22,7 +22,7 @@ export const ctx1 = mkCtx({
   ],
 });
 export const ctx2 = mkCtx({
-  caso: "Nº 008", audio: "fortaleza2", words: words2, lead: 0.1, fimVozRaw: 58.4, final: "alibi",
+  caso: "Nº 008", parte: "PARTE 2", audio: "fortaleza2", words: words2, lead: 0.1, fimVozRaw: 58.4, final: "alibi",
   cta: ["Onde está o resto do dinheiro?", "comenta seu palpite ↓"],
   chave: /^(sumir|11|vivo|caminhão|falsos|cofre|meada|condenadas|60|apareceu|sumidos|álibi)$/i,
   semLegenda: [[54.0, 70]],
@@ -139,7 +139,7 @@ export const Fortaleza1: React.FC = () => (
   <Reel ctx={ctx1}>
     {/* GANCHO — texto no quadro 0, prédio real do Banco Central */}
     <Plano r={[-0.1, 2.5]} soco={false}>
-      <Cheia src="f-bc" r={[-0.1, 2.5]} credito="Joelkaula · CC BY-SA 4.0" zoom={[1.0, 1.1]} a={0.4} />
+      <Foto src="f-bc" r={[-0.1, 2.5]} credito="Joelkaula · CC BY-SA 4.0" top={520} w={760} h={740} zoom={[1.0, 1.1]} pos="50% 35%" cinza />
       <Titulo r={-1} top={200} size={88}>3,5 TONELADAS<br />DE DINHEIRO</Titulo>
       <Rotulo r={-1} texto="BANCO CENTRAL · FORTALEZA" top={440} size={34} cor={C.verm} />
     </Plano>
@@ -317,7 +317,7 @@ export const Fortaleza2: React.FC = () => (
     <Plano r={[39.9, 45.6]}><Barras r={39.95} rec={w2("60") - 0.1} /></Plano>
     <Plano r={[45.6, 48.3]}><Barras r={30} rec={30} carimbo={w2("nunca") - 0.05} /></Plano>
     <Plano r={[48.3, 51.3]}>
-      <Cheia src="f-bc" r={[48.3, 51.3]} credito="Joelkaula · CC BY-SA 4.0" zoom={[1.1, 1.22]} a={0.45} />
+      <Foto src="f-bc" r={[48.3, 51.3]} credito="Joelkaula · CC BY-SA 4.0" top={500} w={760} h={760} zoom={[1.05, 1.18]} pos="50% 35%" cinza />
       <Titulo r={48.35} top={330} size={110}>ATÉ HOJE</Titulo>
     </Plano>
     <Plano r={[51.3, 54.0]}>

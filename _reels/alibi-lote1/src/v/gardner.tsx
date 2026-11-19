@@ -22,7 +22,7 @@ export const ctx = mkCtx({
 });
 
 // moldura dourada; o quadro some e fica só a parede (reconstituição)
-const Moldura: React.FC<{ r: readonly [number, number]; some?: [number, number]; vazia?: boolean; zoom?: [number, number] }> = ({ r, some, vazia, zoom = [1.0, 1.06] }) => {
+export const Moldura: React.FC<{ r: readonly [number, number]; some?: [number, number]; vazia?: boolean; zoom?: [number, number] }> = ({ r, some, vazia, zoom = [1.0, 1.06] }) => {
   const { t, o } = useT();
   const k = lin(t, o(r[0]), o(r[1]));
   const sumiu = vazia ? 1 : some ? lin(t, o(some[0]), o(some[1])) : 0;

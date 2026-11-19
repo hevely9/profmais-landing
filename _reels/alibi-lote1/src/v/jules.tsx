@@ -23,7 +23,7 @@ export const ctx = mkCtx({
 });
 
 // vitrine de vidro com a taça; pode trincar e ficar vazia
-const Vitrine: React.FC<{ r: readonly [number, number]; trinca?: number; some?: number; img?: string }> = ({ r, trinca, some, img = "j-lafleur" }) => {
+export const Vitrine: React.FC<{ r: readonly [number, number]; trinca?: number; some?: number; img?: string }> = ({ r, trinca, some, img = "j-lafleur" }) => {
   const { t, o } = useT();
   const k = lin(t, o(r[0]), o(r[1]), (x) => x);
   const tr = trinca !== undefined ? lin(t, o(trinca) - 0.02, o(trinca) + 0.12) : 0;

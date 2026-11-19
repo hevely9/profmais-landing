@@ -14,7 +14,7 @@ export const SOMBRA = "0 4px 30px rgba(0,0,0,0.9)";
 
 type W = { text: string; start: number; end: number };
 export type Video = {
-  caso: string; audio: string; words: W[]; lead: number; fimVozRaw: number; final: "alibi" | "parte2";
+  caso: string; parte?: string; audio: string; words: W[]; lead: number; fimVozRaw: number; final: "alibi" | "parte2";
   cta: [string, string]; chave: RegExp; semLegenda?: [number, number][]; sfx: { src: string; r: number; vol?: number }[];
 };
 type Ctx = Video & { o: (r: number) => number; FIM_VOZ: number; FINAL: number; TOTAL: number; WORDS: W[] };
@@ -193,10 +193,10 @@ export const TelaFinal: React.FC = () => {
 };
 export const Hud: React.FC = () => {
   const { t, v } = useT();
-  const vis = lin(t, 2.6, 3.0) * (1 - lin(t, v.FIM_VOZ - 0.2, v.FIM_VOZ + 0.2));
+  const vis = 1 - lin(t, v.FIM_VOZ - 0.2, v.FIM_VOZ + 0.2);
   if (vis <= 0) return null;
-  return <div style={{ position: "absolute", left: 60, right: 60, top: 140, display: "flex", justifyContent: "space-between", fontFamily: COURIER, fontWeight: 700, fontSize: 26, color: "rgba(236,231,220,0.65)", opacity: vis }}>
-    <span><span style={{ color: C.lacre, opacity: Math.floor(t * 1.5) % 2 ? 1 : 0.25 }}>●</span> REC</span><span>ÁLIBI · CASO {v.caso}</span>
+  return <div style={{ position: "absolute", left: 60, right: 60, top: 70, display: "flex", justifyContent: "space-between", fontFamily: COURIER, fontWeight: 700, fontSize: 26, color: "rgba(236,231,220,0.65)", opacity: vis }}>
+    <span><span style={{ color: C.lacre, opacity: Math.floor(t * 1.5) % 2 ? 1 : 0.25 }}>●</span> REC</span><span style={{ background: "rgba(10,10,11,0.55)", padding: "4px 12px" }}>ÁLIBI · CASO {v.caso}{v.parte ? <span style={{ color: C.verm }}> · {v.parte}</span> : null}</span>
   </div>;
 };
 export const Legenda: React.FC = () => {
