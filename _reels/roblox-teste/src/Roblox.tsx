@@ -24,13 +24,13 @@ export const ctx = mkCtx({
 });
 
 // figurinha animada com fundo transparente (GIFs enviados pelo usuário)
-const Figurinha: React.FC<{ src: string; r: number; x: number; y: number; h: number; de?: "esq" | "dir" | "baixo"; flip?: boolean }> = ({ src, r, x, y, h, de = "baixo", flip }) => {
+const Figurinha: React.FC<{ src: string; r: number; x: number; y: number; h: number; de?: "esq" | "dir" | "baixo"; flip?: boolean; fadeBase?: boolean }> = ({ src, r, x, y, h, de = "baixo", flip, fadeBase }) => {
   const { f, fps, o } = useT();
   const k = spring({ frame: f - q(o(r)), fps, config: { damping: 13, stiffness: 140 } });
   const dx = de === "esq" ? -700 : de === "dir" ? 700 : 0, dy = de === "baixo" ? 500 : 0;
   return <Sequence from={q(o(r))} layout="none">
     <div style={{ position: "absolute", left: x, top: y, height: h, transform: `translate(${dx * (1 - k)}px, ${dy * (1 - k)}px) scaleX(${flip ? -1 : 1})`, filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.7))" }}>
-      <OffthreadVideo src={staticFile(`v/${src}.webm`)} transparent muted style={{ height: h }} />
+      <OffthreadVideo src={staticFile(`v/${src}.webm`)} transparent muted style={{ height: h, ...(fadeBase ? { WebkitMaskImage: "linear-gradient(#000 72%, transparent 92%)", maskImage: "linear-gradient(#000 72%, transparent 92%)" } : {}) }} />
     </div>
   </Sequence>;
 };
@@ -312,7 +312,7 @@ export const Roblox: React.FC = () => (
     {/* FIM */}
     <Plano r={[72.7, 75.9]}>
       <Fundo cor="radial-gradient(ellipse at 50% 55%, #1E2A44 0%, #0A0A0B 75%)" />
-      <Figurinha src="s-pin5" r={72.75} x={60} y={560} h={560} de="esq" />
+      <Figurinha src="s-pin5" r={72.75} x={20} y={560} h={600} de="esq" fadeBase />
       <Figurinha src="s-pin1" r={73.1} x={560} y={600} h={520} de="dir" />
       <Titulo r={w("agora") - 0.05} top={240} size={90}>AGORA VOCÊ SABE</Titulo>
       <Faixa r={w("quem") - 0.1} texto="QUEM SABE, NÃO CAI" top={400} size={66} />
