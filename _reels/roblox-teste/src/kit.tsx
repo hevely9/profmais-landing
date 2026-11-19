@@ -16,7 +16,7 @@ export const SOMBRA = "0 4px 30px rgba(0,0,0,0.9)";
 type W = { text: string; start: number; end: number };
 export type Video = {
   caso: string; parte?: string; audio: string; words: W[]; lead: number; fimVozRaw: number; final: "alibi" | "parte2";
-  cta: [string, string]; proximo?: string; chave: RegExp; semLegenda?: [number, number][]; sfx: { src: string; r: number; vol?: number }[];
+  cta: [string, string]; proximo?: string; semMarca?: boolean; fecho?: string; chave: RegExp; semLegenda?: [number, number][]; sfx: { src: string; r: number; vol?: number }[];
 };
 type Ctx = Video & { o: (r: number) => number; FIM_VOZ: number; FINAL: number; TOTAL: number; WORDS: W[] };
 const VC = createContext<Ctx | null>(null);
@@ -191,6 +191,18 @@ export const TelaFinal: React.FC = () => {
   if (t < FINAL - 0.3) return null;
   const sp = (at: number, cfg = { damping: 18, stiffness: 120 }) => spring({ frame: f - q(at), fps, config: cfg });
   const a = sp(FINAL, { damping: 20, stiffness: 90 }), b = sp(FINAL + 0.5), c = sp(FINAL + 1.0);
+  if (v.semMarca) {
+    return <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 40%, #1E2A44 0%, #0A0A0B 75%)", opacity: lin(t, FINAL - 0.3, FINAL) }}>
+      <div style={{ position: "absolute", left: 60, right: 60, top: 470, textAlign: "center", opacity: a, transform: `scale(${0.9 + 0.1 * a})` }}>
+        <div style={{ fontFamily: MONT, fontWeight: 800, fontSize: 104, lineHeight: 1.02, color: C.osso }}>{v.fecho ?? "SEGUE PRA MAIS DICAS"}</div>
+        <div style={{ display: "inline-block", marginTop: 34, padding: "12px 30px", background: "#E3B23C", fontFamily: MONT, fontWeight: 800, fontSize: 52, color: "#111" }}>DE ROBLOX</div>
+      </div>
+      <div style={{ position: "absolute", left: 90, right: 90, top: 1020, textAlign: "center", padding: "26px 30px", border: `2px solid rgba(236,231,220,0.35)`, opacity: c }}>
+        <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 44, color: C.osso, lineHeight: 1.25 }}>{v.cta[0]}</div>
+        <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 34, color: "#E3B23C", marginTop: 12 }}>{v.cta[1]}</div>
+      </div>
+    </AbsoluteFill>;
+  }
   if (v.final === "parte2") {
     const pisca = Math.floor(t * 2) % 2 === 0;
     return <AbsoluteFill style={{ background: C.preto, opacity: lin(t, FINAL - 0.3, FINAL) }}>
@@ -228,6 +240,7 @@ export const TelaFinal: React.FC = () => {
 };
 export const Hud: React.FC = () => {
   const { t, v } = useT();
+  if (v.semMarca) return null;
   const vis = lin(t, 3.0, 3.4) * (1 - lin(t, v.FIM_VOZ - 0.2, v.FIM_VOZ + 0.2));
   if (vis <= 0) return null;
   return <div style={{ position: "absolute", left: 60, right: 60, top: 70, display: "flex", justifyContent: "space-between", fontFamily: COURIER, fontWeight: 700, fontSize: 26, color: "rgba(236,231,220,0.65)", opacity: vis }}>

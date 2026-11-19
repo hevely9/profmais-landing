@@ -3,11 +3,11 @@ import { AbsoluteFill, Easing, Img, OffthreadVideo, Sequence, spring, staticFile
 import palavras from "../public/palavras.json";
 import { C, COURIER, Carimbo, Cheia, Clip, ELITE, Faixa, Foto, Fundo, Grande, MONT, Plano, Reel, Rotulo, SANS, SOMBRA, Titulo, TituloVivo, achar, lin, mkCtx, q, useT } from "./kit";
 
-// ÁLIBI · especial — "5 coisas que você nunca deve fazer no Roblox" (teste, público jovem 13+).
+// Teste para um possível perfil infantil de Roblox (sem marca Álibi) — "5 coisas que você nunca deve fazer no Roblox" (teste, público jovem 13+).
 const words = (palavras as { words: { text: string; start: number; end: number }[] }).words;
 const w = achar(words);
 export const ctx = mkCtx({
-  caso: "ROBLOX", audio: "voz", words, lead: 0.1, fimVozRaw: 78.7, final: "alibi",
+  caso: "ROBLOX", semMarca: true, audio: "voz", words, lead: 0.1, fimVozRaw: 77.5, final: "alibi",
   cta: ["Você já caiu em algum desses?", "comenta o número ↓"],
   chave: /^(robux|grátis|senha|código|hack|ladrões|banimento|troca|pet|nome|escola|mora|adulto|denunciar|login|existe)$/i,
   sfx: [

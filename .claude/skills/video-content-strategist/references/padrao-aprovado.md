@@ -103,3 +103,14 @@ Referência: `_reels/basa-acredita-maria-alice` (assessora de crédito Maria Ali
   usar "Próximo caso no perfil · Segue o Álibi". Os vídeos 008–011 já saíram com "Amanhã 19h30" e ficam assim (usuário disse
   "deixa assim"). **Não alterar vídeos entregues e não gerar vídeo novo sem o usuário pedir.** O usuário não queria as
   alterações nos 008–011, mas aprovou o resultado ("o restante tá excelente").
+
+## Teste ROBLOX (19/11) — possível NOVO perfil infantil, NÃO é do ÁLIBI
+- Projeto `_reels/roblox-teste`: "5 coisas que você nunca deve fazer no Roblox", voz **Nandinha** (`2X9Z76WMMBAwEqPIZQjd`,
+  eleven_flash_v2_5 — custou ~1 crédito/caractere, igual à James). **Sem marca Álibi** (sem HUD, sem "Segue o Álibi",
+  tela final neutra "Segue pra mais dicas de Roblox"); capa com selo "DICAS DE ROBLOX".
+- Imagens: GIFs/vídeos do Pinterest que o usuário manda (Pinterest liberado no ambiente) + prints do app + ilustrações;
+  usuário aceita imagens que "ilustrem bem o Roblox", não precisam ser gameplay real.
+- **Feedback de qualidade:** imagens pequenas ficaram ruins. Agora toda imagem/GIF/vídeo pequeno passa pelo upscaler
+  Real-ESRGAN animevideov3 em ONNX (HF `Tomoali/realesr-animevideov3-onnx`, BSD), com transferência de detalhe
+  (mantém a cor do original e soma só a nitidez) — scripts em `_reels/roblox-teste/ferramentas/` (modelo baixado do HF para o scratchpad).
+  Exportar este formato a ~3,8 Mbps (cenas muito coloridas/animadas comprimem pior).
