@@ -1,0 +1,922 @@
+{
+"words": [
+{
+"text": "Essa",
+"start": 0.0,
+"end": 0.28,
+"p": 0.89
+},
+{
+"text": "cabeça",
+"start": 0.28,
+"end": 0.82,
+"p": 1.0
+},
+{
+"text": "enganou",
+"start": 0.82,
+"end": 1.22,
+"p": 1.0
+},
+{
+"text": "os",
+"start": 1.22,
+"end": 1.38,
+"p": 1.0
+},
+{
+"text": "guardas",
+"start": 1.38,
+"end": 1.78,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 1.78,
+"end": 1.9,
+"p": 1.0
+},
+{
+"text": "prisão",
+"start": 1.9,
+"end": 2.28,
+"p": 1.0
+},
+{
+"text": "mais",
+"start": 2.28,
+"end": 2.66,
+"p": 1.0
+},
+{
+"text": "segura",
+"start": 2.66,
+"end": 3.22,
+"p": 1.0
+},
+{
+"text": "dos",
+"start": 3.22,
+"end": 3.42,
+"p": 1.0
+},
+{
+"text": "Estados",
+"start": 3.42,
+"end": 3.74,
+"p": 0.99
+},
+{
+"text": "Unidos.",
+"start": 3.74,
+"end": 4.22,
+"p": 1.0
+},
+{
+"text": "Alcatraz,",
+"start": 4.78,
+"end": 5.5,
+"p": 1.0
+},
+{
+"text": "11",
+"start": 5.84,
+"end": 6.18,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 6.18,
+"end": 6.36,
+"p": 1.0
+},
+{
+"text": "junho",
+"start": 6.36,
+"end": 6.74,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 6.74,
+"end": 6.9,
+"p": 1.0
+},
+{
+"text": "1962.",
+"start": 6.9,
+"end": 8.24,
+"p": 1.0
+},
+{
+"text": "Três",
+"start": 8.92,
+"end": 9.52,
+"p": 1.0
+},
+{
+"text": "presos,",
+"start": 9.52,
+"end": 10.02,
+"p": 1.0
+},
+{
+"text": "Frank",
+"start": 10.28,
+"end": 10.62,
+"p": 1.0
+},
+{
+"text": "Morris",
+"start": 10.62,
+"end": 11.02,
+"p": 0.99
+},
+{
+"text": "e",
+"start": 11.02,
+"end": 11.28,
+"p": 0.99
+},
+{
+"text": "os",
+"start": 11.28,
+"end": 11.42,
+"p": 1.0
+},
+{
+"text": "irmãos",
+"start": 11.42,
+"end": 11.78,
+"p": 1.0
+},
+{
+"text": "John",
+"start": 11.78,
+"end": 12.1,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 12.1,
+"end": 12.3,
+"p": 1.0
+},
+{
+"text": "Clarence",
+"start": 12.3,
+"end": 12.72,
+"p": 1.0
+},
+{
+"text": "Anglin,",
+"start": 12.72,
+"end": 13.14,
+"p": 0.97
+},
+{
+"text": "passaram",
+"start": 13.38,
+"end": 13.78,
+"p": 1.0
+},
+{
+"text": "meses",
+"start": 13.78,
+"end": 14.3,
+"p": 1.0
+},
+{
+"text": "cavando",
+"start": 14.3,
+"end": 14.74,
+"p": 0.99
+},
+{
+"text": "as",
+"start": 14.74,
+"end": 14.88,
+"p": 1.0
+},
+{
+"text": "paredes",
+"start": 14.88,
+"end": 15.32,
+"p": 1.0
+},
+{
+"text": "das",
+"start": 15.32,
+"end": 15.5,
+"p": 1.0
+},
+{
+"text": "celas",
+"start": 15.5,
+"end": 15.9,
+"p": 0.89
+},
+{
+"text": "com",
+"start": 15.9,
+"end": 16.1,
+"p": 1.0
+},
+{
+"text": "colheres",
+"start": 16.1,
+"end": 16.52,
+"p": 1.0
+},
+{
+"text": "afiadas.",
+"start": 16.52,
+"end": 17.18,
+"p": 1.0
+},
+{
+"text": "Fizeram",
+"start": 17.42,
+"end": 18.14,
+"p": 1.0
+},
+{
+"text": "cabeças",
+"start": 18.14,
+"end": 18.54,
+"p": 1.0
+},
+{
+"text": "falsas",
+"start": 18.54,
+"end": 19.06,
+"p": 1.0
+},
+{
+"text": "com",
+"start": 19.06,
+"end": 19.22,
+"p": 1.0
+},
+{
+"text": "sabão,",
+"start": 19.22,
+"end": 19.72,
+"p": 1.0
+},
+{
+"text": "papel",
+"start": 19.94,
+"end": 20.22,
+"p": 1.0
+},
+{
+"text": "higiênico",
+"start": 20.22,
+"end": 20.8,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 20.8,
+"end": 21.0,
+"p": 1.0
+},
+{
+"text": "cabelo",
+"start": 21.0,
+"end": 21.42,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 21.42,
+"end": 21.58,
+"p": 1.0
+},
+{
+"text": "verdade,",
+"start": 21.58,
+"end": 22.1,
+"p": 1.0
+},
+{
+"text": "recolhido",
+"start": 22.3,
+"end": 22.86,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 22.86,
+"end": 23.0,
+"p": 1.0
+},
+{
+"text": "barbearia",
+"start": 23.0,
+"end": 23.52,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 23.52,
+"end": 23.7,
+"p": 1.0
+},
+{
+"text": "prisão.",
+"start": 23.7,
+"end": 24.1,
+"p": 1.0
+},
+{
+"text": "E",
+"start": 24.32,
+"end": 24.78,
+"p": 1.0
+},
+{
+"text": "colaram",
+"start": 24.78,
+"end": 25.12,
+"p": 1.0
+},
+{
+"text": "mais",
+"start": 25.12,
+"end": 25.36,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 25.36,
+"end": 25.5,
+"p": 1.0
+},
+{
+"text": "50",
+"start": 25.5,
+"end": 26.1,
+"p": 0.92
+},
+{
+"text": "capas",
+"start": 26.1,
+"end": 26.58,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 26.58,
+"end": 26.76,
+"p": 1.0
+},
+{
+"text": "chuva",
+"start": 26.76,
+"end": 27.12,
+"p": 1.0
+},
+{
+"text": "para",
+"start": 27.12,
+"end": 27.34,
+"p": 1.0
+},
+{
+"text": "fazer",
+"start": 27.34,
+"end": 27.64,
+"p": 1.0
+},
+{
+"text": "uma",
+"start": 27.64,
+"end": 27.8,
+"p": 1.0
+},
+{
+"text": "jangada.",
+"start": 27.8,
+"end": 28.32,
+"p": 1.0
+},
+{
+"text": "Naquela",
+"start": 28.96,
+"end": 29.28,
+"p": 1.0
+},
+{
+"text": "noite,",
+"start": 29.28,
+"end": 29.64,
+"p": 1.0
+},
+{
+"text": "deixaram",
+"start": 29.82,
+"end": 30.28,
+"p": 1.0
+},
+{
+"text": "as",
+"start": 30.28,
+"end": 30.42,
+"p": 1.0
+},
+{
+"text": "cabeças",
+"start": 30.42,
+"end": 30.84,
+"p": 1.0
+},
+{
+"text": "nas",
+"start": 30.84,
+"end": 31.02,
+"p": 1.0
+},
+{
+"text": "camas,",
+"start": 31.02,
+"end": 31.52,
+"p": 1.0
+},
+{
+"text": "subiram",
+"start": 31.88,
+"end": 32.24,
+"p": 1.0
+},
+{
+"text": "pelos",
+"start": 32.24,
+"end": 32.52,
+"p": 1.0
+},
+{
+"text": "dutos",
+"start": 32.52,
+"end": 32.84,
+"p": 1.0
+},
+{
+"text": "até",
+"start": 32.84,
+"end": 33.1,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 33.1,
+"end": 33.26,
+"p": 1.0
+},
+{
+"text": "telhado",
+"start": 33.26,
+"end": 33.72,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 33.72,
+"end": 34.18,
+"p": 1.0
+},
+{
+"text": "entraram",
+"start": 34.18,
+"end": 34.72,
+"p": 1.0
+},
+{
+"text": "na",
+"start": 34.72,
+"end": 34.86,
+"p": 1.0
+},
+{
+"text": "água",
+"start": 34.86,
+"end": 35.08,
+"p": 1.0
+},
+{
+"text": "gelada",
+"start": 35.08,
+"end": 35.72,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 35.72,
+"end": 35.88,
+"p": 1.0
+},
+{
+"text": "Baía",
+"start": 35.88,
+"end": 36.2,
+"p": 0.93
+},
+{
+"text": "de",
+"start": 36.2,
+"end": 36.34,
+"p": 1.0
+},
+{
+"text": "São",
+"start": 36.34,
+"end": 36.5,
+"p": 1.0
+},
+{
+"text": "Francisco.",
+"start": 36.5,
+"end": 37.06,
+"p": 1.0
+},
+{
+"text": "Na",
+"start": 37.44,
+"end": 37.8,
+"p": 1.0
+},
+{
+"text": "manhã",
+"start": 37.8,
+"end": 38.0,
+"p": 1.0
+},
+{
+"text": "seguinte,",
+"start": 38.0,
+"end": 38.42,
+"p": 1.0
+},
+{
+"text": "os",
+"start": 38.72,
+"end": 38.9,
+"p": 1.0
+},
+{
+"text": "guardas",
+"start": 38.9,
+"end": 39.3,
+"p": 1.0
+},
+{
+"text": "encontraram",
+"start": 39.3,
+"end": 39.94,
+"p": 1.0
+},
+{
+"text": "as",
+"start": 39.94,
+"end": 40.06,
+"p": 1.0
+},
+{
+"text": "cabeças.",
+"start": 40.06,
+"end": 40.52,
+"p": 1.0
+},
+{
+"text": "Os",
+"start": 40.82,
+"end": 41.3,
+"p": 1.0
+},
+{
+"text": "três",
+"start": 41.3,
+"end": 41.58,
+"p": 1.0
+},
+{
+"text": "nunca",
+"start": 41.58,
+"end": 42.42,
+"p": 1.0
+},
+{
+"text": "mais",
+"start": 42.42,
+"end": 42.8,
+"p": 1.0
+},
+{
+"text": "foram",
+"start": 42.8,
+"end": 43.02,
+"p": 1.0
+},
+{
+"text": "vistos.",
+"start": 43.02,
+"end": 43.54,
+"p": 1.0
+},
+{
+"text": "O",
+"start": 43.8,
+"end": 44.22,
+"p": 1.0
+},
+{
+"text": "FBI",
+"start": 44.22,
+"end": 44.64,
+"p": 1.0
+},
+{
+"text": "concluiu",
+"start": 44.64,
+"end": 45.28,
+"p": 1.0
+},
+{
+"text": "que",
+"start": 45.28,
+"end": 45.42,
+"p": 1.0
+},
+{
+"text": "eles",
+"start": 45.42,
+"end": 45.62,
+"p": 1.0
+},
+{
+"text": "provavelmente",
+"start": 45.62,
+"end": 46.3,
+"p": 1.0
+},
+{
+"text": "se",
+"start": 46.3,
+"end": 46.56,
+"p": 1.0
+},
+{
+"text": "afogaram,",
+"start": 46.56,
+"end": 47.12,
+"p": 1.0
+},
+{
+"text": "mas",
+"start": 47.32,
+"end": 47.74,
+"p": 1.0
+},
+{
+"text": "os",
+"start": 47.74,
+"end": 47.9,
+"p": 1.0
+},
+{
+"text": "corpos",
+"start": 47.9,
+"end": 48.32,
+"p": 1.0
+},
+{
+"text": "nunca",
+"start": 48.32,
+"end": 48.84,
+"p": 1.0
+},
+{
+"text": "apareceram.",
+"start": 48.84,
+"end": 49.56,
+"p": 1.0
+},
+{
+"text": "E,",
+"start": 49.72,
+"end": 50.22,
+"p": 1.0
+},
+{
+"text": "em",
+"start": 50.36,
+"end": 50.54,
+"p": 1.0
+},
+{
+"text": "2018,",
+"start": 50.54,
+"end": 51.24,
+"p": 1.0
+},
+{
+"text": "veio",
+"start": 51.78,
+"end": 51.94,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 51.94,
+"end": 52.1,
+"p": 0.99
+},
+{
+"text": "público",
+"start": 52.1,
+"end": 52.38,
+"p": 0.99
+},
+{
+"text": "uma",
+"start": 52.38,
+"end": 52.7,
+"p": 1.0
+},
+{
+"text": "carta",
+"start": 52.7,
+"end": 53.02,
+"p": 1.0
+},
+{
+"text": "enviada",
+"start": 53.02,
+"end": 53.46,
+"p": 1.0
+},
+{
+"text": "à",
+"start": 53.46,
+"end": 53.56,
+"p": 1.0
+},
+{
+"text": "polícia,",
+"start": 53.56,
+"end": 54.04,
+"p": 1.0
+},
+{
+"text": "supostamente",
+"start": 54.2,
+"end": 55.06,
+"p": 1.0
+},
+{
+"text": "por",
+"start": 55.06,
+"end": 55.36,
+"p": 1.0
+},
+{
+"text": "John",
+"start": 55.36,
+"end": 55.66,
+"p": 1.0
+},
+{
+"text": "Anglin.",
+"start": 55.66,
+"end": 56.0,
+"p": 0.89
+},
+{
+"text": "Ela",
+"start": 56.36,
+"end": 56.68,
+"p": 1.0
+},
+{
+"text": "começava",
+"start": 56.68,
+"end": 57.2,
+"p": 1.0
+},
+{
+"text": "assim.",
+"start": 57.2,
+"end": 57.48,
+"p": 1.0
+},
+{
+"text": "Eu",
+"start": 57.48,
+"end": 58.26,
+"p": 0.72
+},
+{
+"text": "escapei",
+"start": 58.26,
+"end": 58.86,
+"p": 0.99
+},
+{
+"text": "de",
+"start": 58.86,
+"end": 58.94,
+"p": 1.0
+},
+{
+"text": "Alcatraz.",
+"start": 58.94,
+"end": 59.54,
+"p": 0.99
+},
+{
+"text": "Será",
+"start": 60.28,
+"end": 60.66,
+"p": 0.94
+},
+{
+"text": "que",
+"start": 60.66,
+"end": 60.8,
+"p": 1.0
+},
+{
+"text": "eles",
+"start": 60.8,
+"end": 60.96,
+"p": 1.0
+},
+{
+"text": "conseguiram?",
+"start": 60.96,
+"end": 61.56,
+"p": 1.0
+},
+{
+"text": "Onde",
+"start": 62.1,
+"end": 62.72,
+"p": 1.0
+},
+{
+"text": "você",
+"start": 62.72,
+"end": 63.0,
+"p": 1.0
+},
+{
+"text": "estava",
+"start": 63.0,
+"end": 63.44,
+"p": 1.0
+},
+{
+"text": "naquela",
+"start": 63.44,
+"end": 63.78,
+"p": 1.0
+},
+{
+"text": "noite?",
+"start": 63.78,
+"end": 64.16,
+"p": 1.0
+},
+{
+"text": "E",
+"start": 64.54,
+"end": 65.16,
+"p": 1.0
+},
+{
+"text": "esse",
+"start": 65.16,
+"end": 65.5,
+"p": 1.0
+},
+{
+"text": "era",
+"start": 65.5,
+"end": 66.12,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 66.12,
+"end": 66.26,
+"p": 1.0
+},
+{
+"text": "álibi.",
+"start": 66.26,
+"end": 66.6,
+"p": 0.94
+}
+]
+}

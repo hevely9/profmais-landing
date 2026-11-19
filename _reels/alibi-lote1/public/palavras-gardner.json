@@ -1,0 +1,820 @@
+{
+"words": [
+{
+"text": "Essas",
+"start": 0.0,
+"end": 0.28,
+"p": 1.0
+},
+{
+"text": "molduras",
+"start": 0.28,
+"end": 0.78,
+"p": 1.0
+},
+{
+"text": "estão",
+"start": 0.78,
+"end": 1.08,
+"p": 1.0
+},
+{
+"text": "vazias",
+"start": 1.08,
+"end": 1.62,
+"p": 1.0
+},
+{
+"text": "desde",
+"start": 1.62,
+"end": 2.1,
+"p": 1.0
+},
+{
+"text": "1990",
+"start": 2.1,
+"end": 3.0,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 3.0,
+"end": 4.42,
+"p": 0.9
+},
+{
+"text": "continuam",
+"start": 4.42,
+"end": 5.06,
+"p": 1.0
+},
+{
+"text": "penduradas",
+"start": 5.06,
+"end": 5.6,
+"p": 1.0
+},
+{
+"text": "na",
+"start": 5.6,
+"end": 5.72,
+"p": 1.0
+},
+{
+"text": "parede.",
+"start": 5.72,
+"end": 6.18,
+"p": 1.0
+},
+{
+"text": "Madrugada",
+"start": 6.96,
+"end": 7.78,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 7.78,
+"end": 7.94,
+"p": 1.0
+},
+{
+"text": "18",
+"start": 7.94,
+"end": 8.34,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 8.34,
+"end": 8.5,
+"p": 1.0
+},
+{
+"text": "março,",
+"start": 8.5,
+"end": 8.92,
+"p": 1.0
+},
+{
+"text": "Boston.",
+"start": 9.3,
+"end": 9.7,
+"p": 1.0
+},
+{
+"text": "Dois",
+"start": 10.12,
+"end": 10.74,
+"p": 1.0
+},
+{
+"text": "homens",
+"start": 10.74,
+"end": 11.08,
+"p": 1.0
+},
+{
+"text": "vestidos",
+"start": 11.08,
+"end": 11.6,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 11.6,
+"end": 11.74,
+"p": 1.0
+},
+{
+"text": "policiais",
+"start": 11.74,
+"end": 12.38,
+"p": 1.0
+},
+{
+"text": "tocam",
+"start": 12.38,
+"end": 12.8,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 12.8,
+"end": 12.92,
+"p": 1.0
+},
+{
+"text": "campainha",
+"start": 12.92,
+"end": 13.42,
+"p": 1.0
+},
+{
+"text": "do",
+"start": 13.42,
+"end": 13.56,
+"p": 1.0
+},
+{
+"text": "Museu",
+"start": 13.56,
+"end": 13.98,
+"p": 0.83
+},
+{
+"text": "Isabella",
+"start": 13.98,
+"end": 14.64,
+"p": 0.96
+},
+{
+"text": "Stewart",
+"start": 14.64,
+"end": 14.98,
+"p": 0.67
+},
+{
+"text": "Gardner.",
+"start": 14.98,
+"end": 15.54,
+"p": 0.99
+},
+{
+"text": "Dizem",
+"start": 15.94,
+"end": 16.5,
+"p": 1.0
+},
+{
+"text": "que",
+"start": 16.5,
+"end": 16.62,
+"p": 1.0
+},
+{
+"text": "receberam",
+"start": 16.62,
+"end": 17.14,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 17.14,
+"end": 17.26,
+"p": 0.78
+},
+{
+"text": "chamado.",
+"start": 17.26,
+"end": 17.68,
+"p": 1.0
+},
+{
+"text": "O",
+"start": 18.04,
+"end": 18.48,
+"p": 1.0
+},
+{
+"text": "vigia",
+"start": 18.48,
+"end": 18.92,
+"p": 1.0
+},
+{
+"text": "abre",
+"start": 18.92,
+"end": 19.26,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 19.26,
+"end": 19.4,
+"p": 1.0
+},
+{
+"text": "porta.",
+"start": 19.4,
+"end": 19.7,
+"p": 1.0
+},
+{
+"text": "Em",
+"start": 20.12,
+"end": 20.38,
+"p": 1.0
+},
+{
+"text": "minutos,",
+"start": 20.38,
+"end": 20.8,
+"p": 1.0
+},
+{
+"text": "os",
+"start": 21.28,
+"end": 21.36,
+"p": 1.0
+},
+{
+"text": "dois",
+"start": 21.36,
+"end": 21.58,
+"p": 1.0
+},
+{
+"text": "seguranças",
+"start": 21.58,
+"end": 22.16,
+"p": 1.0
+},
+{
+"text": "estão",
+"start": 22.16,
+"end": 22.52,
+"p": 1.0
+},
+{
+"text": "amarrados",
+"start": 22.52,
+"end": 23.18,
+"p": 1.0
+},
+{
+"text": "no",
+"start": 23.18,
+"end": 23.32,
+"p": 1.0
+},
+{
+"text": "porão.",
+"start": 23.32,
+"end": 23.64,
+"p": 1.0
+},
+{
+"text": "Por",
+"start": 23.88,
+"end": 24.34,
+"p": 1.0
+},
+{
+"text": "81",
+"start": 24.34,
+"end": 24.9,
+"p": 1.0
+},
+{
+"text": "minutos,",
+"start": 24.9,
+"end": 25.52,
+"p": 1.0
+},
+{
+"text": "os",
+"start": 25.8,
+"end": 26.02,
+"p": 1.0
+},
+{
+"text": "ladrões",
+"start": 26.02,
+"end": 26.44,
+"p": 1.0
+},
+{
+"text": "andam",
+"start": 26.44,
+"end": 26.74,
+"p": 1.0
+},
+{
+"text": "livres",
+"start": 26.74,
+"end": 27.12,
+"p": 1.0
+},
+{
+"text": "pelo",
+"start": 27.12,
+"end": 27.44,
+"p": 1.0
+},
+{
+"text": "museu.",
+"start": 27.44,
+"end": 27.84,
+"p": 0.99
+},
+{
+"text": "Levam",
+"start": 28.04,
+"end": 28.74,
+"p": 0.99
+},
+{
+"text": "13",
+"start": 28.74,
+"end": 29.08,
+"p": 0.99
+},
+{
+"text": "obras.",
+"start": 29.08,
+"end": 29.54,
+"p": 1.0
+},
+{
+"text": "Entre",
+"start": 30.0,
+"end": 30.3,
+"p": 0.72
+},
+{
+"text": "elas,",
+"start": 30.3,
+"end": 30.66,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 30.9,
+"end": 31.08,
+"p": 1.0
+},
+{
+"text": "Vermeer",
+"start": 31.08,
+"end": 31.58,
+"p": 0.87
+},
+{
+"text": "e",
+"start": 31.58,
+"end": 32.02,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 32.02,
+"end": 32.16,
+"p": 1.0
+},
+{
+"text": "único",
+"start": 32.16,
+"end": 32.6,
+"p": 1.0
+},
+{
+"text": "mar",
+"start": 32.6,
+"end": 32.96,
+"p": 0.99
+},
+{
+"text": "que",
+"start": 32.96,
+"end": 33.12,
+"p": 1.0
+},
+{
+"text": "Rembrandt",
+"start": 33.12,
+"end": 33.6,
+"p": 0.89
+},
+{
+"text": "pintou",
+"start": 33.6,
+"end": 33.96,
+"p": 1.0
+},
+{
+"text": "na",
+"start": 33.96,
+"end": 34.08,
+"p": 1.0
+},
+{
+"text": "vida.",
+"start": 34.08,
+"end": 34.4,
+"p": 1.0
+},
+{
+"text": "Valor",
+"start": 34.8,
+"end": 35.32,
+"p": 0.99
+},
+{
+"text": "de",
+"start": 35.32,
+"end": 35.44,
+"p": 1.0
+},
+{
+"text": "hoje,",
+"start": 35.44,
+"end": 35.74,
+"p": 1.0
+},
+{
+"text": "mais",
+"start": 35.96,
+"end": 36.4,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 36.4,
+"end": 36.56,
+"p": 1.0
+},
+{
+"text": "500",
+"start": 36.56,
+"end": 37.12,
+"p": 0.98
+},
+{
+"text": "milhões",
+"start": 37.12,
+"end": 37.68,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 37.68,
+"end": 38.06,
+"p": 1.0
+},
+{
+"text": "dólares.",
+"start": 38.06,
+"end": 38.4,
+"p": 1.0
+},
+{
+"text": "É",
+"start": 38.82,
+"end": 39.2,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 39.2,
+"end": 39.3,
+"p": 1.0
+},
+{
+"text": "maior",
+"start": 39.3,
+"end": 39.66,
+"p": 1.0
+},
+{
+"text": "roubo",
+"start": 39.66,
+"end": 40.1,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 40.1,
+"end": 40.26,
+"p": 1.0
+},
+{
+"text": "arte",
+"start": 40.26,
+"end": 40.54,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 40.54,
+"end": 40.7,
+"p": 1.0
+},
+{
+"text": "história.",
+"start": 40.7,
+"end": 41.18,
+"p": 1.0
+},
+{
+"text": "Ninguém",
+"start": 41.72,
+"end": 42.14,
+"p": 1.0
+},
+{
+"text": "foi",
+"start": 42.14,
+"end": 42.34,
+"p": 1.0
+},
+{
+"text": "preso.",
+"start": 42.34,
+"end": 42.78,
+"p": 1.0
+},
+{
+"text": "Nenhuma",
+"start": 43.12,
+"end": 43.58,
+"p": 1.0
+},
+{
+"text": "obra",
+"start": 43.58,
+"end": 43.92,
+"p": 1.0
+},
+{
+"text": "apareceu.",
+"start": 43.92,
+"end": 44.48,
+"p": 1.0
+},
+{
+"text": "O",
+"start": 44.78,
+"end": 45.08,
+"p": 1.0
+},
+{
+"text": "museu",
+"start": 45.08,
+"end": 45.44,
+"p": 0.99
+},
+{
+"text": "oferece",
+"start": 45.44,
+"end": 45.94,
+"p": 1.0
+},
+{
+"text": "10",
+"start": 45.94,
+"end": 46.26,
+"p": 1.0
+},
+{
+"text": "milhões",
+"start": 46.26,
+"end": 46.72,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 46.72,
+"end": 46.96,
+"p": 1.0
+},
+{
+"text": "dólares",
+"start": 46.96,
+"end": 47.32,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 47.32,
+"end": 47.52,
+"p": 1.0
+},
+{
+"text": "recompensa.",
+"start": 47.52,
+"end": 48.18,
+"p": 1.0
+},
+{
+"text": "E,",
+"start": 48.4,
+"end": 48.84,
+"p": 1.0
+},
+{
+"text": "por",
+"start": 49.0,
+"end": 49.22,
+"p": 1.0
+},
+{
+"text": "vontade",
+"start": 49.22,
+"end": 49.62,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 49.62,
+"end": 49.82,
+"p": 1.0
+},
+{
+"text": "fundadora,",
+"start": 49.82,
+"end": 50.34,
+"p": 1.0
+},
+{
+"text": "nada",
+"start": 50.78,
+"end": 51.18,
+"p": 1.0
+},
+{
+"text": "no",
+"start": 51.18,
+"end": 51.36,
+"p": 1.0
+},
+{
+"text": "museu",
+"start": 51.36,
+"end": 51.76,
+"p": 1.0
+},
+{
+"text": "pode",
+"start": 51.76,
+"end": 52.0,
+"p": 1.0
+},
+{
+"text": "mudar",
+"start": 52.0,
+"end": 52.3,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 52.3,
+"end": 52.5,
+"p": 1.0
+},
+{
+"text": "lugar.",
+"start": 52.5,
+"end": 52.76,
+"p": 1.0
+},
+{
+"text": "Por",
+"start": 53.14,
+"end": 53.48,
+"p": 1.0
+},
+{
+"text": "isso,",
+"start": 53.48,
+"end": 53.76,
+"p": 1.0
+},
+{
+"text": "as",
+"start": 53.96,
+"end": 54.3,
+"p": 1.0
+},
+{
+"text": "molduras",
+"start": 54.3,
+"end": 54.7,
+"p": 1.0
+},
+{
+"text": "vazias",
+"start": 54.7,
+"end": 55.26,
+"p": 1.0
+},
+{
+"text": "continuam",
+"start": 55.26,
+"end": 55.9,
+"p": 1.0
+},
+{
+"text": "lá.",
+"start": 55.9,
+"end": 56.12,
+"p": 1.0
+},
+{
+"text": "Esperando.",
+"start": 56.66,
+"end": 57.34,
+"p": 1.0
+},
+{
+"text": "Onde",
+"start": 58.06,
+"end": 58.74,
+"p": 0.88
+},
+{
+"text": "você",
+"start": 58.74,
+"end": 59.02,
+"p": 1.0
+},
+{
+"text": "estava",
+"start": 59.02,
+"end": 59.42,
+"p": 1.0
+},
+{
+"text": "naquela",
+"start": 59.42,
+"end": 59.76,
+"p": 1.0
+},
+{
+"text": "noite?",
+"start": 59.76,
+"end": 60.1,
+"p": 1.0
+},
+{
+"text": "E",
+"start": 60.4,
+"end": 60.92,
+"p": 1.0
+},
+{
+"text": "esse",
+"start": 60.92,
+"end": 61.28,
+"p": 1.0
+},
+{
+"text": "era",
+"start": 61.28,
+"end": 61.92,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 61.92,
+"end": 62.06,
+"p": 1.0
+},
+{
+"text": "álibi.",
+"start": 62.06,
+"end": 62.4,
+"p": 0.95
+}
+]
+}

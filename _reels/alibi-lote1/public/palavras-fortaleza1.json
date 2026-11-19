@@ -1,0 +1,796 @@
+{
+"words": [
+{
+"text": "Três",
+"start": 0.0,
+"end": 0.3,
+"p": 0.93
+},
+{
+"text": "toneladas",
+"start": 0.3,
+"end": 0.84,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 0.84,
+"end": 1.08,
+"p": 1.0
+},
+{
+"text": "meia",
+"start": 1.08,
+"end": 1.48,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 1.48,
+"end": 1.64,
+"p": 1.0
+},
+{
+"text": "dinheiro",
+"start": 1.64,
+"end": 2.02,
+"p": 1.0
+},
+{
+"text": "saíram",
+"start": 2.02,
+"end": 2.52,
+"p": 1.0
+},
+{
+"text": "do",
+"start": 2.52,
+"end": 2.64,
+"p": 1.0
+},
+{
+"text": "Banco",
+"start": 2.64,
+"end": 2.9,
+"p": 0.99
+},
+{
+"text": "Central",
+"start": 2.9,
+"end": 3.34,
+"p": 1.0
+},
+{
+"text": "por",
+"start": 3.34,
+"end": 3.98,
+"p": 0.96
+},
+{
+"text": "baixo",
+"start": 3.98,
+"end": 4.4,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 4.4,
+"end": 4.64,
+"p": 1.0
+},
+{
+"text": "terra.",
+"start": 4.64,
+"end": 4.98,
+"p": 1.0
+},
+{
+"text": "E",
+"start": 5.24,
+"end": 5.64,
+"p": 1.0
+},
+{
+"text": "ninguém",
+"start": 5.64,
+"end": 6.04,
+"p": 1.0
+},
+{
+"text": "ouviu",
+"start": 6.04,
+"end": 6.52,
+"p": 0.78
+},
+{
+"text": "nada.",
+"start": 6.52,
+"end": 6.94,
+"p": 1.0
+},
+{
+"text": "Fortaleza,",
+"start": 7.64,
+"end": 8.34,
+"p": 0.97
+},
+{
+"text": "2005",
+"start": 8.54,
+"end": 9.26,
+"p": 1.0
+},
+{
+"text": "Do",
+"start": 9.26,
+"end": 10.24,
+"p": 0.3
+},
+{
+"text": "outro",
+"start": 10.24,
+"end": 10.5,
+"p": 1.0
+},
+{
+"text": "lado",
+"start": 10.5,
+"end": 10.78,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 10.78,
+"end": 10.96,
+"p": 1.0
+},
+{
+"text": "rua",
+"start": 10.96,
+"end": 11.18,
+"p": 0.98
+},
+{
+"text": "do",
+"start": 11.18,
+"end": 11.32,
+"p": 1.0
+},
+{
+"text": "Banco",
+"start": 11.32,
+"end": 11.58,
+"p": 1.0
+},
+{
+"text": "Central,",
+"start": 11.58,
+"end": 12.02,
+"p": 1.0
+},
+{
+"text": "abre",
+"start": 12.2,
+"end": 12.54,
+"p": 1.0
+},
+{
+"text": "uma",
+"start": 12.54,
+"end": 12.7,
+"p": 1.0
+},
+{
+"text": "empresa",
+"start": 12.7,
+"end": 13.04,
+"p": 1.0
+},
+{
+"text": "nova,",
+"start": 13.04,
+"end": 13.46,
+"p": 1.0
+},
+{
+"text": "uma",
+"start": 13.68,
+"end": 14.14,
+"p": 1.0
+},
+{
+"text": "loja",
+"start": 14.14,
+"end": 14.56,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 14.56,
+"end": 14.72,
+"p": 1.0
+},
+{
+"text": "grama",
+"start": 14.72,
+"end": 14.98,
+"p": 1.0
+},
+{
+"text": "sintética.",
+"start": 14.98,
+"end": 15.7,
+"p": 1.0
+},
+{
+"text": "Os",
+"start": 15.94,
+"end": 16.44,
+"p": 1.0
+},
+{
+"text": "vizinhos",
+"start": 16.44,
+"end": 16.86,
+"p": 1.0
+},
+{
+"text": "estranhavam.",
+"start": 16.86,
+"end": 17.62,
+"p": 1.0
+},
+{
+"text": "Quase",
+"start": 17.92,
+"end": 18.4,
+"p": 1.0
+},
+{
+"text": "não",
+"start": 18.4,
+"end": 18.54,
+"p": 1.0
+},
+{
+"text": "entrava",
+"start": 18.54,
+"end": 18.88,
+"p": 1.0
+},
+{
+"text": "cliente,",
+"start": 18.88,
+"end": 19.44,
+"p": 1.0
+},
+{
+"text": "mas",
+"start": 19.52,
+"end": 19.98,
+"p": 1.0
+},
+{
+"text": "saía",
+"start": 19.98,
+"end": 20.32,
+"p": 0.99
+},
+{
+"text": "muita",
+"start": 20.32,
+"end": 20.86,
+"p": 0.99
+},
+{
+"text": "terra.",
+"start": 20.86,
+"end": 21.24,
+"p": 1.0
+},
+{
+"text": "Por",
+"start": 21.62,
+"end": 22.04,
+"p": 1.0
+},
+{
+"text": "três",
+"start": 22.04,
+"end": 22.4,
+"p": 1.0
+},
+{
+"text": "meses,",
+"start": 22.4,
+"end": 22.88,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 23.08,
+"end": 23.18,
+"p": 1.0
+},
+{
+"text": "grupo",
+"start": 23.18,
+"end": 23.4,
+"p": 0.99
+},
+{
+"text": "cavou",
+"start": 23.4,
+"end": 23.76,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 23.76,
+"end": 23.92,
+"p": 1.0
+},
+{
+"text": "túnel",
+"start": 23.92,
+"end": 24.18,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 24.18,
+"end": 24.36,
+"p": 1.0
+},
+{
+"text": "quase",
+"start": 24.36,
+"end": 24.64,
+"p": 1.0
+},
+{
+"text": "80",
+"start": 24.64,
+"end": 25.18,
+"p": 0.99
+},
+{
+"text": "metros,",
+"start": 25.18,
+"end": 25.64,
+"p": 1.0
+},
+{
+"text": "com",
+"start": 25.64,
+"end": 26.18,
+"p": 1.0
+},
+{
+"text": "luz,",
+"start": 26.18,
+"end": 26.58,
+"p": 1.0
+},
+{
+"text": "ventilação",
+"start": 26.84,
+"end": 27.5,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 27.5,
+"end": 27.8,
+"p": 1.0
+},
+{
+"text": "paredes",
+"start": 27.8,
+"end": 28.24,
+"p": 1.0
+},
+{
+"text": "reforçadas",
+"start": 28.24,
+"end": 28.94,
+"p": 1.0
+},
+{
+"text": "com",
+"start": 28.94,
+"end": 29.16,
+"p": 1.0
+},
+{
+"text": "madeira.",
+"start": 29.16,
+"end": 29.6,
+"p": 1.0
+},
+{
+"text": "O",
+"start": 30.0,
+"end": 30.22,
+"p": 0.91
+},
+{
+"text": "túnel",
+"start": 30.22,
+"end": 30.5,
+"p": 1.0
+},
+{
+"text": "passou",
+"start": 30.5,
+"end": 30.82,
+"p": 1.0
+},
+{
+"text": "por",
+"start": 30.82,
+"end": 31.04,
+"p": 1.0
+},
+{
+"text": "baixo",
+"start": 31.04,
+"end": 31.32,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 31.32,
+"end": 31.48,
+"p": 1.0
+},
+{
+"text": "uma",
+"start": 31.48,
+"end": 31.6,
+"p": 1.0
+},
+{
+"text": "avenida",
+"start": 31.6,
+"end": 32.0,
+"p": 1.0
+},
+{
+"text": "inteira",
+"start": 32.0,
+"end": 32.58,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 32.58,
+"end": 32.88,
+"p": 0.99
+},
+{
+"text": "parou",
+"start": 32.88,
+"end": 33.2,
+"p": 1.0
+},
+{
+"text": "exatamente",
+"start": 33.2,
+"end": 33.88,
+"p": 1.0
+},
+{
+"text": "embaixo",
+"start": 33.88,
+"end": 34.46,
+"p": 1.0
+},
+{
+"text": "do",
+"start": 34.46,
+"end": 34.74,
+"p": 1.0
+},
+{
+"text": "cofre.",
+"start": 34.74,
+"end": 35.14,
+"p": 1.0
+},
+{
+"text": "Num",
+"start": 35.52,
+"end": 35.84,
+"p": 0.99
+},
+{
+"text": "fim",
+"start": 35.84,
+"end": 36.02,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 36.02,
+"end": 36.16,
+"p": 1.0
+},
+{
+"text": "semana,",
+"start": 36.16,
+"end": 36.56,
+"p": 1.0
+},
+{
+"text": "eles",
+"start": 36.82,
+"end": 37.02,
+"p": 1.0
+},
+{
+"text": "furaram",
+"start": 37.02,
+"end": 37.4,
+"p": 1.0
+},
+{
+"text": "mais",
+"start": 37.4,
+"end": 37.68,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 37.68,
+"end": 37.84,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 37.84,
+"end": 37.98,
+"p": 0.89
+},
+{
+"text": "metro",
+"start": 37.98,
+"end": 38.36,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 38.36,
+"end": 38.54,
+"p": 1.0
+},
+{
+"text": "concreto",
+"start": 38.54,
+"end": 38.98,
+"p": 1.0
+},
+{
+"text": "armado.",
+"start": 38.98,
+"end": 39.48,
+"p": 1.0
+},
+{
+"text": "Lá",
+"start": 39.72,
+"end": 40.16,
+"p": 1.0
+},
+{
+"text": "dentro,",
+"start": 40.16,
+"end": 40.48,
+"p": 1.0
+},
+{
+"text": "notas",
+"start": 40.92,
+"end": 41.3,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 41.3,
+"end": 41.48,
+"p": 1.0
+},
+{
+"text": "R$50",
+"start": 41.48,
+"end": 42.1,
+"p": 0.57
+},
+{
+"text": "separadas",
+"start": 42.1,
+"end": 43.16,
+"p": 0.87
+},
+{
+"text": "para",
+"start": 43.16,
+"end": 43.4,
+"p": 1.0
+},
+{
+"text": "destruição.",
+"start": 43.4,
+"end": 44.12,
+"p": 0.95
+},
+{
+"text": "Notas",
+"start": 44.5,
+"end": 44.92,
+"p": 1.0
+},
+{
+"text": "usadas,",
+"start": 44.92,
+"end": 45.44,
+"p": 1.0
+},
+{
+"text": "sem",
+"start": 45.64,
+"end": 46.02,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 46.02,
+"end": 46.12,
+"p": 0.98
+},
+{
+"text": "numeração",
+"start": 46.12,
+"end": 46.58,
+"p": 1.0
+},
+{
+"text": "registrada.",
+"start": 46.58,
+"end": 47.22,
+"p": 1.0
+},
+{
+"text": "Na",
+"start": 47.6,
+"end": 48.24,
+"p": 1.0
+},
+{
+"text": "segunda-feira,",
+"start": 48.24,
+"end": 49.0,
+"p": 1.0
+},
+{
+"text": "quando",
+"start": 49.2,
+"end": 49.4,
+"p": 1.0
+},
+{
+"text": "abriram",
+"start": 49.4,
+"end": 49.82,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 49.82,
+"end": 49.96,
+"p": 1.0
+},
+{
+"text": "cofre,",
+"start": 49.96,
+"end": 50.34,
+"p": 1.0
+},
+{
+"text": "faltavam",
+"start": 50.72,
+"end": 51.12,
+"p": 1.0
+},
+{
+"text": "R$164",
+"start": 51.12,
+"end": 52.48,
+"p": 0.99
+},
+{
+"text": "milhões.",
+"start": 52.48,
+"end": 53.0,
+"p": 1.0
+},
+{
+"text": "Mas",
+"start": 53.86,
+"end": 54.5,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 54.5,
+"end": 54.62,
+"p": 1.0
+},
+{
+"text": "maior",
+"start": 54.62,
+"end": 54.94,
+"p": 1.0
+},
+{
+"text": "erro",
+"start": 54.94,
+"end": 55.22,
+"p": 1.0
+},
+{
+"text": "deles",
+"start": 55.22,
+"end": 55.68,
+"p": 1.0
+},
+{
+"text": "ainda",
+"start": 55.68,
+"end": 56.38,
+"p": 1.0
+},
+{
+"text": "estava",
+"start": 56.38,
+"end": 56.8,
+"p": 1.0
+},
+{
+"text": "por",
+"start": 56.8,
+"end": 57.04,
+"p": 1.0
+},
+{
+"text": "vir.",
+"start": 57.04,
+"end": 57.3,
+"p": 1.0
+},
+{
+"text": "Parte",
+"start": 58.06,
+"end": 58.7,
+"p": 0.97
+},
+{
+"text": "2",
+"start": 58.7,
+"end": 59.06,
+"p": 0.97
+},
+{
+"text": "No",
+"start": 59.06,
+"end": 59.68,
+"p": 0.21
+},
+{
+"text": "perfil",
+"start": 59.68,
+"end": 60.2,
+"p": 1.0
+}
+]
+}

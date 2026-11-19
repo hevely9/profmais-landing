@@ -84,3 +84,13 @@ Referência: `_reels/basa-acredita-maria-alice` (assessora de crédito Maria Ali
   buscar imagens novas a cada caso — ter criatividade e variar.
 - **Entrega compatível com celular (19/11):** o render do Remotion sai em `yuvj420p` nível 5.0 e o app do usuário não abriu.
   Sempre exportar a versão final com `-profile:v high -level:v 4.1 -pix_fmt yuv420p -color_range tv -movflags +faststart` (~1,6 Mbps, < 50 MB).
+- **Diagnóstico das métricas (19/11) → FORMATO CURTO "LOTE 1"** (`_reels/alibi-lote1`, kit reutilizável em `src/kit.tsx`):
+  as pessoas saíam aos 8–10 s (cartelas de marca e pausas no começo, narração lenta, abertura escura) e os vídeos longos/violentos
+  não entravam no Para Você. Regras novas:
+  - **60–75 s**; **gancho falado na 1ª frase** + **texto do gancho na tela já no quadro 0** sobre imagem real e nítida (LEAD 0,1 s).
+  - **Sem cartela/capítulo no começo**; marca ÁLIBI só no **fim** (últimos ~3 s, com pergunta-CTA de comentário).
+  - **Corte seco a cada 2–3 s** (componente `Plano` com "soco" de escala), sem pausas longas na voz (nada de acelerar o áudio).
+  - Temas **não violentos** (golpes, roubos, fugas, mistérios) para não cair em "não qualificado para o Para Você".
+  - Teste A/B: série em partes (BC Fortaleza 1 e 2) × casos completos (Alcatraz, Jules Rimet, Gardner).
+  - Fecho mantido: "Onde você estava naquela noite? …e esse era o álibi." (Parte 1 termina com "Parte 2, no perfil").
+  - Wikimedia: usar miniaturas **1920px ou 960px** (1280 dá 429) e **remover `?utm_...`** da URL; ir devagar (12 s entre arquivos).
