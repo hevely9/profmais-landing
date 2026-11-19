@@ -4,10 +4,10 @@ import { C, MONT, COURIER, SANS } from "./kit";
 
 // Capa de TikTok (1080×1920). Texto dentro do miolo 3:4 (y 240–1680) que aparece na grade do perfil.
 type Linha = { t: string; destaque?: boolean };
-export const Capa: React.FC<{ caso: string; parte?: string; linhas: Linha[]; sub: string; img?: string; clip?: string; de?: number; pos?: string; fundo?: React.ReactNode; tam?: number }> =
-  ({ caso, parte, linhas, sub, img, clip, de = 0, pos = "50% 40%", fundo, tam = 138 }) => (
+export const Capa: React.FC<{ caso: string; parte?: string; linhas: Linha[]; sub: string; img?: string; clip?: string; de?: number; cor?: boolean; pos?: string; fundo?: React.ReactNode; tam?: number }> =
+  ({ caso, parte, linhas, sub, img, clip, de = 0, cor = false, pos = "50% 40%", fundo, tam = 138 }) => (
   <AbsoluteFill style={{ background: C.preto, overflow: "hidden" }}>
-    {img && <AbsoluteFill><Img src={staticFile(`img/${img}.jpg`)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: pos, filter: "grayscale(0.85) contrast(1.2) brightness(0.85)" }} /></AbsoluteFill>}
+    {img && <AbsoluteFill><Img src={staticFile(`img/${img}.jpg`)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: pos, filter: cor ? "contrast(1.15) brightness(0.9) saturate(1.2)" : "grayscale(0.85) contrast(1.2) brightness(0.85)" }} /></AbsoluteFill>}
     {clip && <AbsoluteFill><OffthreadVideo src={staticFile(`v/${clip}.mp4`)} startFrom={de} muted style={{ width: "100%", height: "100%", objectFit: "cover", filter: "contrast(1.15)" }} /></AbsoluteFill>}
     {fundo}
     <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(10,10,11,0.75) 0%, rgba(10,10,11,0.1) 30%, rgba(10,10,11,0.15) 48%, rgba(10,10,11,0.92) 78%, #0A0A0B 100%)" }} />

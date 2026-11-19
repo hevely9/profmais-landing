@@ -1,6 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Img, staticFile } from "remotion";
 import palavras from "../../public/palavras-gardner.json";
+import { DISPONIVEIS } from "../disponiveis";
 import { C, COURIER, Cabec, Carimbo, Cheia, Clip, Contador, ELITE, Faixa, Foto, Fundo, Grande, Papel, Plano, Reel, Rotulo, SOMBRA, Titulo, achar, lin, mkCtx, useT, Datilo, Assinatura } from "../kit";
 
 const words = (palavras as { words: { text: string; start: number; end: number }[] }).words;
@@ -22,7 +23,7 @@ export const ctx = mkCtx({
 });
 
 // moldura dourada; o quadro some e fica só a parede (reconstituição)
-export const Moldura: React.FC<{ r: readonly [number, number]; some?: [number, number]; vazia?: boolean; zoom?: [number, number] }> = ({ r, some, vazia, zoom = [1.0, 1.06] }) => {
+export const Moldura: React.FC<{ r: readonly [number, number]; some?: [number, number]; vazia?: boolean; zoom?: [number, number]; img?: string }> = ({ r, some, vazia, zoom = [1.0, 1.06], img = "g-tempestade" }) => {
   const { t, o } = useT();
   const k = lin(t, o(r[0]), o(r[1]));
   const sumiu = vazia ? 1 : some ? lin(t, o(some[0]), o(some[1])) : 0;
@@ -32,7 +33,7 @@ export const Moldura: React.FC<{ r: readonly [number, number]; some?: [number, n
     <div style={{ position: "absolute", left: 170, top: 380, width: 740, height: 820, transform: `scale(${zoom[0] + (zoom[1] - zoom[0]) * k})` }}>
       <div style={{ position: "absolute", inset: 0, border: "46px solid transparent", borderImage: "linear-gradient(135deg, #8A6A2B, #E7C873 25%, #7A5A1E 50%, #D9B65E 75%, #6B4E18) 1", boxShadow: "0 40px 90px rgba(0,0,0,0.9), inset 0 0 40px rgba(0,0,0,0.85)" }} />
       <div style={{ position: "absolute", inset: 46, background: "#151C17", boxShadow: "inset 0 0 60px rgba(0,0,0,0.9)" }}>
-        <Img src={staticFile("img/g-concerto.jpg")} style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 1 - sumiu, filter: `contrast(1.05) brightness(${1 - sumiu * 0.5})` }} />
+        <Img src={staticFile(`img/${img}.jpg`)} style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 1 - sumiu, filter: `contrast(1.05) brightness(${1 - sumiu * 0.5})` }} />
       </div>
     </div>
   </>;
@@ -44,7 +45,7 @@ export const Gardner: React.FC = () => (
     <Plano r={[-0.1, 3.0]} soco={false}>
       <Moldura r={[-0.1, 3.0]} some={[0.35, 1.3]} />
       <Titulo r={-1} top={150} size={84}>ESSAS MOLDURAS<br />ESTÃO VAZIAS</Titulo>
-      <Rotulo r={1.3} texto="reconstituição · O Concerto, de Vermeer" top={1240} size={24} cor={C.ossoE} />
+      <Rotulo r={1.3} texto="reconstituição · A Tempestade, de Rembrandt" top={1240} size={24} cor={C.ossoE} />
       <Faixa r={w("1990") - 0.1} texto="DESDE 1990" top={1110} size={60} />
     </Plano>
     <Plano r={[3.0, 6.9]}>
@@ -93,7 +94,7 @@ export const Gardner: React.FC = () => (
       <Faixa r={w("13") - 0.1} texto="13 OBRAS" top={170} size={84} />
     </Plano>
     <Plano r={[29.9, 31.5]}>
-      <Foto src="g-concerto" r={[29.9, 31.5]} credito="Vermeer · domínio público" top={300} w={820} h={900} zoom={[1.0, 1.08]} />
+      {DISPONIVEIS.includes("g-concerto") ? <Foto src="g-concerto" r={[29.9, 31.5]} credito="Vermeer · domínio público" top={300} w={820} h={900} zoom={[1.0, 1.08]} /> : <Moldura r={[29.9, 31.5]} vazia />}
       <Rotulo r={29.95} texto="VERMEER · O CONCERTO" top={200} size={40} />
     </Plano>
     <Plano r={[31.5, 34.7]}>
@@ -128,7 +129,7 @@ export const Gardner: React.FC = () => (
       </Papel>
     </Plano>
     <Plano r={[48.3, 50.7]}>
-      <Foto src="g-isabella" alt={{}} r={[48.3, 50.7]} credito="Anders Zorn, 1894 · domínio público" top={330} w={700} h={880} zoom={[1.0, 1.1]} pos="50% 20%" />
+      <Foto src="g-isabella" alt={{ clip: "c49294" }} r={[48.3, 50.7]} credito="Anders Zorn, 1894 · domínio público" top={330} w={700} h={880} zoom={[1.0, 1.1]} pos="50% 20%" />
       <Rotulo r={w("fundadora") - 0.2} texto="ISABELLA STEWART GARDNER" top={190} size={38} />
     </Plano>
     <Plano r={[50.7, 53.1]}>

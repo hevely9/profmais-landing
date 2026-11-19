@@ -1,6 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Img, staticFile } from "remotion";
 import palavras from "../../public/palavras-jules.json";
+import { DISPONIVEIS } from "../disponiveis";
 import { C, COURIER, Cabec, Carimbo, Clip, ELITE, Faixa, Foto, Fundo, Grande, Linha, MONT, Papel, Plano, Reel, Rotulo, SOMBRA, Titulo, achar, lin, mkCtx, useT, Assinatura } from "../kit";
 
 const words = (palavras as { words: { text: string; start: number; end: number }[] }).words;
@@ -82,7 +83,7 @@ const Derrete: React.FC<{ r: readonly [number, number] }> = ({ r }) => {
   return <>
     <Clip src="c20906" r0={r[0]} dur={4} a={0.35} />
     <div style={{ position: "absolute", left: 290, top: 360, width: 500, height: 760, display: "flex", justifyContent: "center", transform: `scaleY(${1 - 0.25 * k}) translateY(${k * 120}px)`, transformOrigin: "bottom" }}>
-      <Img src={staticFile("img/j-preston.jpg")} style={{ height: "100%", objectFit: "contain", filter: `sepia(${k}) saturate(${1 + 3 * k}) hue-rotate(${-10 * k}deg) brightness(${1 + 0.6 * k}) blur(${k * 6}px)`, opacity: 1 - 0.5 * k }} />
+      <Img src={staticFile(`img/${DISPONIVEIS.includes("j-preston") ? "j-preston" : "j-lafleur"}.jpg`)} style={{ height: "100%", objectFit: "contain", filter: `sepia(${k}) saturate(${1 + 3 * k}) hue-rotate(${-10 * k}deg) brightness(${1 + 0.6 * k}) blur(${k * 6}px)`, opacity: 1 - 0.5 * k }} />
     </div>
   </>;
 };
@@ -91,15 +92,15 @@ export const Jules: React.FC = () => (
   <Reel ctx={ctx}>
     {/* GANCHO — texto no quadro 0, a taça em foto real */}
     <Plano r={[-0.1, 2.4]} soco={false}>
-      <Foto src="j-replica" r={[-0.1, 2.4]} credito="Fabio Rodrigues Pozzebom/ABr · CC BY 3.0" top={430} w={700} h={800} zoom={[1.0, 1.12]} />
+      <Foto src="j-replica" alt={{ img: "j-lafleur", credito: "Wikimedia Commons · CC BY 2.0" }} r={[-0.1, 2.4]} credito="Fabio Rodrigues Pozzebom/ABr · CC BY 3.0" top={480} w={700} h={760} zoom={[1.0, 1.12]} />
       <Titulo r={-1} top={160} size={84}>O BRASIL GANHOU<br />ESSA TAÇA<br />PARA SEMPRE</Titulo>
     </Plano>
     <Plano r={[2.4, 4.6]}>
-      <Vitrine r={[2.4, 4.6]} some={2.5} />
+      <Vitrine r={[2.4, 4.6]} some={w("noite") - 0.1} />
       <Faixa r={w("perdeu") - 0.1} texto="E PERDEU NUMA NOITE" top={200} size={70} />
     </Plano>
     <Plano r={[4.6, 7.6]}>
-      <Foto src="j-preston" r={[4.6, 7.6]} credito="Abel Lafleur · CC BY 2.0" top={330} w={640} h={880} zoom={[1.0, 1.1]} cover={false} />
+      <Foto src="j-preston" alt={{ img: "j-lafleur", credito: "Wikimedia Commons · CC BY 2.0" }} r={[4.6, 7.6]} credito="Abel Lafleur · CC BY 2.0" top={330} w={640} h={880} zoom={[1.0, 1.1]} cover={false} />
       <Rotulo r={4.7} texto="TAÇA JULES RIMET" top={190} size={50} />
       <Rotulo r={w("copa") - 0.1} texto="o troféu da Copa de 1930 a 1970" top={260} size={30} cor={C.ossoE} />
     </Plano>
@@ -108,7 +109,7 @@ export const Jules: React.FC = () => (
       <Titulo r={7.65} top={420} size={240}>1970</Titulo>
     </Plano>
     <Plano r={[10.3, 12.3]}>
-      <Foto src="j-camisa" r={[10.3, 12.3]} credito="Mike Peel · CC BY-SA 4.0 · Museu do Futebol" top={330} w={620} h={880} zoom={[1.0, 1.1]} pos="50% 30%" />
+      <Foto src="j-camisa" alt={{ clip: "c30326" }} r={[10.3, 12.3]} credito="Mike Peel · CC BY-SA 4.0 · Museu do Futebol" top={330} w={620} h={880} zoom={[1.0, 1.1]} pos="50% 30%" />
       <Faixa r={w("tricampeão") - 0.1} texto="TRICAMPEÃO" top={190} size={80} />
     </Plano>
     <Plano r={[12.3, 14.6]}>
@@ -176,7 +177,7 @@ export const Jules: React.FC = () => (
     </Plano>
     <Plano r={[44.4, 46.6]}><Tres carimbo={w("negaram") - 0.1} /></Plano>
     <Plano r={[46.6, 49.3]}>
-      <Foto src="j-replica" r={[46.6, 49.3]} credito="Fabio Rodrigues Pozzebom/ABr · CC BY 3.0" top={360} w={640} h={780} zoom={[1.05, 1.15]} />
+      <Foto src="j-replica" alt={{ img: "j-lafleur", credito: "Wikimedia Commons · CC BY 2.0" }} r={[46.6, 49.3]} credito="Fabio Rodrigues Pozzebom/ABr · CC BY 3.0" top={360} w={640} h={780} zoom={[1.05, 1.15]} />
       <Faixa r={w("réplica") - 0.15} texto="SÓ UMA RÉPLICA" top={190} size={74} />
     </Plano>
     <Plano r={[49.3, 51.7]}>
@@ -189,7 +190,7 @@ export const Jules: React.FC = () => (
       <Rotulo r={w("inglaterra") - 0.05} texto="LONDRES · INGLATERRA" top={880} size={44} />
     </Plano>
     <Plano r={[54.0, 56.3]}>
-      <Foto src="j-national" r={[54.0, 56.3]} credito="Ank Kumar · CC BY-SA 4.0" top={330} w={640} h={860} zoom={[1.0, 1.12]} />
+      <Foto src="j-national" alt={{ img: "j-lafleur", credito: "Wikimedia Commons · CC BY 2.0" }} r={[54.0, 56.3]} credito="Ank Kumar · CC BY-SA 4.0" top={330} w={640} h={860} zoom={[1.0, 1.12]} />
       <Carimbo r={w("roubada") - 0.05} texto="ROUBADA" y={800} size={120} />
     </Plano>
     <Plano r={[56.3, 60.2]}>
