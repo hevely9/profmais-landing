@@ -1,13 +1,13 @@
 import React from "react";
-import { Img, staticFile } from "remotion";
+import { AbsoluteFill, Img, staticFile } from "remotion";
 import palavras from "../../public/palavras-alcatraz.json";
-import { C, COURIER, Carimbo, Cheia, Clip, Contador, ELITE, Faixa, Foto, Fundo, Grande, Papel, Plano, Reel, Rotulo, Titulo, achar, lin, mkCtx, useT, Cabec, Linha, Datilo, Assinatura } from "../kit";
+import { C, COURIER, Carimbo, Cheia, Clip, Contador, ELITE, Faixa, Foto, Fundo, Grande, Papel, Plano, Reel, Rotulo, Titulo, achar, lin, mkCtx, useT, Cabec, Linha, Datilo, Assinatura, TituloVivo } from "../kit";
 
 const words = (palavras as { words: { text: string; start: number; end: number }[] }).words;
 const w = achar(words);
 export const ctx = mkCtx({
   caso: "Nº 009", audio: "alcatraz", words, lead: 0.1, fimVozRaw: 66.9, final: "alibi",
-  cta: ["Eles sobreviveram?", "comenta: VIVOS ou MORTOS ↓"],
+  cta: ["Eles sobreviveram?", "comenta: VIVOS ou MORTOS ↓"], proximo: "A TAÇA QUE O BRASIL PERDEU",
   chave: /^(cabeça|alcatraz|colheres|sabão|cabelo|jangada|gelada|cabeças|vistos|afogaram|apareceram|escapei|conseguiram|álibi)$/i,
   semLegenda: [[62.0, 70]],
   sfx: [
@@ -60,10 +60,10 @@ const Carta: React.FC = () => (
 export const Alcatraz: React.FC = () => (
   <Reel ctx={ctx}>
     {/* GANCHO — texto no quadro 0, foto real e nítida */}
-    <Plano r={[-0.1, 2.3]} soco={false}>
-      <Foto src="a-cabeca" r={[-0.1, 2.3]} credito="Cabeça falsa · FBI · domínio público" top={430} w={880} h={700} zoom={[1.0, 1.12]} pos="50% 40%" />
-      <Titulo r={-1} top={170} size={78}>ESSA CABEÇA<br />ENGANOU ALCATRAZ</Titulo>
-      <Rotulo r={-1} texto="FOTO REAL · FBI · 1962" top={1160} cor={C.verm} size={34} />
+    <Plano r={[-0.1, 2.3]} forte>
+      <Foto src="a-cabeca" fundo="c45612" r={[-0.1, 2.3]} credito="Cabeça falsa · FBI · domínio público" top={450} w={860} h={690} zoom={[1.0, 1.15]} pos="50% 40%" />
+      <TituloVivo top={160} size={82} destaque="GUARDAS" linhas={[[["ESSA", 0], ["CABEÇA", 0.28]], [["ENGANOU", 0.82], ["OS", 1.22], ["GUARDAS", 1.38]]]} />
+      <Rotulo r={1.0} texto="FOTO REAL · FBI · 1962" top={1170} cor={C.verm} size={34} />
     </Plano>
     <Plano r={[2.3, 4.7]}>
       <Clip src="c11201" r0={2.3} dur={2.4} a={0.35} />
@@ -145,7 +145,8 @@ export const Alcatraz: React.FC = () => (
       <Titulo r={w("2018") - 0.1} top={560} size={220}>2018</Titulo>
       <Rotulo r={w("carta") - 0.1} texto="uma carta chega a público" top={860} size={40} cor={C.verm} />
     </Plano>
-    <Plano r={[52.6, 60.2]}><Carta /></Plano>
+    <Plano r={[52.6, 56.3]}><Carta /></Plano>
+    <Plano r={[56.3, 60.2]}><AbsoluteFill style={{ transform: "scale(1.22)", transformOrigin: "40% 50%" }}><Carta /></AbsoluteFill></Plano>
     <Plano r={[60.2, 62.0]}>
       <Foto src="a-john" r={[60.2, 62.0]} credito="Governo dos EUA · domínio público" top={330} w={640} h={840} zoom={[1.0, 1.1]} pos="50% 25%" cinza />
       <Titulo r={60.25} top={180} size={78}>ELES CONSEGUIRAM?</Titulo>

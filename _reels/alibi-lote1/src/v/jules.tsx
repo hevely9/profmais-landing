@@ -2,13 +2,13 @@ import React from "react";
 import { AbsoluteFill, Img, staticFile } from "remotion";
 import palavras from "../../public/palavras-jules.json";
 import { DISPONIVEIS } from "../disponiveis";
-import { C, COURIER, Cabec, Carimbo, Clip, ELITE, Faixa, Foto, Fundo, Grande, Linha, MONT, Papel, Plano, Reel, Rotulo, SOMBRA, Titulo, achar, lin, mkCtx, useT, Assinatura } from "../kit";
+import { C, COURIER, Cabec, Carimbo, Clip, ELITE, Faixa, Foto, Fundo, Grande, Linha, MONT, Papel, Plano, Reel, Rotulo, SOMBRA, Titulo, achar, lin, mkCtx, useT, Assinatura, TituloVivo } from "../kit";
 
 const words = (palavras as { words: { text: string; start: number; end: number }[] }).words;
 const w = achar(words);
 export const ctx = mkCtx({
   caso: "Nº 010", audio: "jules", words, lead: 0.1, fimVozRaw: 64.5, final: "alibi",
-  cta: ["A taça ainda existe?", "comenta: SIM ou NÃO ↓"],
+  cta: ["A taça ainda existe?", "comenta: SIM ou NÃO ↓"], proximo: "O MAIOR ROUBO DE ARTE DA HISTÓRIA",
   chave: /^(sempre|noite|tricampeão|definitivamente|balas|taça|mentor|condenadas|derretida|ouro|negaram|réplica|cachorro|pickles|álibi)$/i,
   semLegenda: [[60.2, 70]],
   sfx: [
@@ -91,9 +91,9 @@ const Derrete: React.FC<{ r: readonly [number, number] }> = ({ r }) => {
 export const Jules: React.FC = () => (
   <Reel ctx={ctx}>
     {/* GANCHO — texto no quadro 0, a taça em foto real */}
-    <Plano r={[-0.1, 2.4]} soco={false}>
-      <Foto src="j-replica" alt={{ img: "j-lafleur", credito: "Wikimedia Commons · CC BY 2.0" }} r={[-0.1, 2.4]} credito="Fabio Rodrigues Pozzebom/ABr · CC BY 3.0" top={480} w={700} h={760} zoom={[1.0, 1.12]} />
-      <Titulo r={-1} top={160} size={84}>O BRASIL GANHOU<br />ESSA TAÇA<br />PARA SEMPRE</Titulo>
+    <Plano r={[-0.1, 2.4]} forte>
+      <Foto src="j-replica" fundo="c30326" alt={{ img: "j-lafleur", credito: "Wikimedia Commons · CC BY 2.0" }} r={[-0.1, 2.4]} credito="Fabio Rodrigues Pozzebom/ABr · CC BY 3.0" top={500} w={680} h={740} zoom={[1.0, 1.15]} />
+      <TituloVivo top={150} size={82} destaque="SEMPRE" linhas={[[["O", 0], ["BRASIL", 0.12], ["GANHOU", 0.46]], [["ESSA", 0.88], ["TAÇA", 1.12]], [["PARA", 1.54], ["SEMPRE", 1.84]]]} />
     </Plano>
     <Plano r={[2.4, 4.6]}>
       <Vitrine r={[2.4, 4.6]} some={w("noite") - 0.1} />

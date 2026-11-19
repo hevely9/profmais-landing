@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill } from "remotion";
 import p1 from "../../public/palavras-fortaleza1.json";
 import p2 from "../../public/palavras-fortaleza2.json";
-import { C, COURIER, Cabec, Carimbo, Cheia, Clip, Contador, ELITE, Faixa, Foto, Fundo, Grande, Linha, MONT, Papel, Plano, Reel, Rotulo, SOMBRA, Titulo, achar, lin, mkCtx, useT, Marcador, Assinatura } from "../kit";
+import { C, COURIER, Cabec, Carimbo, Cheia, Clip, Contador, ELITE, Faixa, Foto, Fundo, Grande, Linha, MONT, Papel, Plano, Reel, Rotulo, SOMBRA, Titulo, achar, lin, mkCtx, useT, Marcador, Assinatura, TituloVivo } from "../kit";
 
 type W = { text: string; start: number; end: number };
 const words1 = (p1 as { words: W[] }).words, words2 = (p2 as { words: W[] }).words;
@@ -23,7 +23,7 @@ export const ctx1 = mkCtx({
 });
 export const ctx2 = mkCtx({
   caso: "Nº 008", parte: "PARTE 2", audio: "fortaleza2", words: words2, lead: 0.1, fimVozRaw: 58.4, final: "alibi",
-  cta: ["Onde está o resto do dinheiro?", "comenta seu palpite ↓"],
+  cta: ["Onde está o resto do dinheiro?", "comenta seu palpite ↓"], proximo: "A FUGA DE ALCATRAZ",
   chave: /^(sumir|11|vivo|caminhão|falsos|cofre|meada|condenadas|60|apareceu|sumidos|álibi)$/i,
   semLegenda: [[54.0, 70]],
   sfx: [
@@ -246,10 +246,10 @@ export const Fortaleza1: React.FC = () => (
 export const Fortaleza2: React.FC = () => (
   <Reel ctx={ctx2}>
     {/* GANCHO — texto no quadro 0 */}
-    <Plano r={[-0.1, 3.2]} soco={false}>
+    <Plano r={[-0.1, 3.2]} forte>
       <Clip src="c46981" r0={-0.1} dur={3.3} a={0.35} />
-      <Titulo r={-1} top={260} size={92}>ROUBARAM<br />R$ 164 MILHÕES</Titulo>
-      <Faixa r={-1} texto="E FORAM PEGOS POR 11 CARROS" top={560} size={52} />
+      <TituloVivo top={250} size={92} linhas={[[["ROUBARAM", 0]], [["R$ 164", 0.78], ["MILHÕES", 1.54]]]} />
+      <Faixa r={2.3} texto="E FORAM PEGOS POR 11 CARROS" top={560} size={52} />
           </Plano>
     <Plano r={[3.2, 5.5]}>
       <Clip src="c1919" r0={3.2} dur={2.3} a={0.45} />
@@ -313,7 +313,8 @@ export const Fortaleza2: React.FC = () => (
       <Contador r={37.3} ate={38.6} valor={100} prefixo="+" top={560} size={240} />
       <Rotulo r={38.8} texto="CONDENADOS" top={830} size={56} />
     </Plano>
-    <Plano r={[39.9, 45.6]}><Barras r={39.95} rec={w2("60") - 0.1} /></Plano>
+    <Plano r={[39.9, 42.7]}><Barras r={39.95} rec={w2("60") - 0.1} /></Plano>
+    <Plano r={[42.7, 45.6]}><AbsoluteFill style={{ transform: "scale(1.12)", transformOrigin: "75% 60%" }}><Barras r={39.95} rec={w2("60") - 0.1} /></AbsoluteFill></Plano>
     <Plano r={[45.6, 48.3]}><Barras r={30} rec={30} carimbo={w2("nunca") - 0.05} /></Plano>
     <Plano r={[48.3, 51.3]}>
       <Foto src="f-bc" r={[48.3, 51.3]} credito="Joelkaula · CC BY-SA 4.0" top={500} w={760} h={760} zoom={[1.05, 1.18]} pos="50% 35%" cinza />

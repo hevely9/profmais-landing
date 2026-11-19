@@ -2,13 +2,13 @@ import React from "react";
 import { AbsoluteFill, Img, staticFile } from "remotion";
 import palavras from "../../public/palavras-gardner.json";
 import { DISPONIVEIS } from "../disponiveis";
-import { C, COURIER, Cabec, Carimbo, Cheia, Clip, Contador, ELITE, Faixa, Foto, Fundo, Grande, Papel, Plano, Reel, Rotulo, SOMBRA, Titulo, achar, lin, mkCtx, useT, Datilo, Assinatura } from "../kit";
+import { C, COURIER, Cabec, Carimbo, Cheia, Clip, Contador, ELITE, Faixa, Foto, Fundo, Grande, Papel, Plano, Reel, Rotulo, SOMBRA, Titulo, achar, lin, mkCtx, useT, Datilo, Assinatura, TituloVivo } from "../kit";
 
 const words = (palavras as { words: { text: string; start: number; end: number }[] }).words;
 const w = achar(words);
 export const ctx = mkCtx({
   caso: "Nº 011", audio: "gardner", words, lead: 0.1, fimVozRaw: 62.6, final: "alibi",
-  cta: ["Onde estão os quadros?", "comenta seu palpite ↓"],
+  cta: ["Onde estão os quadros?", "comenta seu palpite ↓"], proximo: "NOVO CASO",
   chave: /^(vazias|policiais|amarrados|81|13|vermeer|rembrandt|500|preso|apareceu|recompensa|esperando|álibi)$/i,
   semLegenda: [[57.9, 70]],
   sfx: [
@@ -39,12 +39,20 @@ export const Moldura: React.FC<{ r: readonly [number, number]; some?: [number, n
   </>;
 };
 
+// facho de lanterna varrendo a parede (movimento desde o quadro 0)
+const Lanterna: React.FC = () => {
+  const { t } = useT();
+  const x = 200 + 680 * (0.5 + 0.5 * Math.sin(t * 1.6 - 1.2)), y = 760 + 120 * Math.sin(t * 1.1);
+  return <AbsoluteFill style={{ background: `radial-gradient(circle 360px at ${x}px ${y}px, rgba(255,240,200,0.16), rgba(0,0,0,0) 70%)`, mixBlendMode: "screen" }} />;
+};
+
 export const Gardner: React.FC = () => (
   <Reel ctx={ctx}>
     {/* GANCHO — texto no quadro 0; o quadro desaparece da moldura */}
-    <Plano r={[-0.1, 3.0]} soco={false}>
-      <Moldura r={[-0.1, 3.0]} some={[0.35, 1.3]} />
-      <Titulo r={-1} top={150} size={84}>ESSAS MOLDURAS<br />ESTÃO VAZIAS</Titulo>
+    <Plano r={[-0.1, 3.0]} forte>
+      <Moldura r={[-0.1, 3.0]} some={[0.5, 1.4]} />
+      <Lanterna />
+      <TituloVivo top={150} size={84} destaque="VAZIAS" linhas={[[["ESSAS", 0], ["MOLDURAS", 0.28]], [["ESTÃO", 0.78], ["VAZIAS", 1.08]]]} />
       <Rotulo r={1.3} texto="reconstituição · A Tempestade, de Rembrandt" top={1240} size={24} cor={C.ossoE} />
       <Faixa r={w("1990") - 0.1} texto="DESDE 1990" top={1110} size={60} />
     </Plano>
@@ -137,8 +145,13 @@ export const Gardner: React.FC = () => (
       <Titulo r={w("nada") - 0.1} top={340} size={80}>NADA PODE<br />MUDAR DE LUGAR</Titulo>
       <Rotulo r={51.5} texto="regra do testamento da fundadora" top={560} size={30} />
     </Plano>
-    <Plano r={[53.1, 57.9]}>
-      <Moldura r={[53.1, 57.9]} vazia zoom={[1.0, 1.18]} />
+    <Plano r={[53.1, 55.5]}>
+      <Moldura r={[53.1, 55.5]} vazia zoom={[1.0, 1.1]} />
+      <Rotulo r={53.2} texto="AS MOLDURAS CONTINUAM LÁ" top={230} size={40} />
+    </Plano>
+    <Plano r={[55.5, 57.9]}>
+      <Moldura r={[55.5, 57.9]} vazia zoom={[1.15, 1.3]} />
+      <Lanterna />
       <Grande r={w("esperando") - 0.1} top={1060} size={84}>esperando.</Grande>
     </Plano>
     <Plano r={[57.9, 70]} soco={false}>

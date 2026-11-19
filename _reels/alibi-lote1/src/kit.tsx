@@ -16,7 +16,7 @@ export const SOMBRA = "0 4px 30px rgba(0,0,0,0.9)";
 type W = { text: string; start: number; end: number };
 export type Video = {
   caso: string; parte?: string; audio: string; words: W[]; lead: number; fimVozRaw: number; final: "alibi" | "parte2";
-  cta: [string, string]; chave: RegExp; semLegenda?: [number, number][]; sfx: { src: string; r: number; vol?: number }[];
+  cta: [string, string]; proximo?: string; chave: RegExp; semLegenda?: [number, number][]; sfx: { src: string; r: number; vol?: number }[];
 };
 type Ctx = Video & { o: (r: number) => number; FIM_VOZ: number; FINAL: number; TOTAL: number; WORDS: W[] };
 const VC = createContext<Ctx | null>(null);
@@ -36,12 +36,32 @@ export const achar = (words: W[]) => (txt: string, n = 0) => {
 };
 
 // ── plano: corte seco com "soco" de escala + Ken Burns lento ──
-export const Plano: React.FC<{ r: readonly [number, number]; children: React.ReactNode; soco?: boolean }> = ({ r, children, soco = true }) => {
+export const Plano: React.FC<{ r: readonly [number, number]; children: React.ReactNode; soco?: boolean; forte?: boolean }> = ({ r, children, soco = true, forte = false }) => {
   const { t, o } = useT();
-  const de = o(r[0]), ate = o(r[1]);
+  const de = Math.max(0, o(r[0])), ate = o(r[1]);
   if (t < de - 0.001 || t >= ate) return null;
+  if (forte) {
+    // gancho: entra já em movimento no quadro 0 (soco 1,25→1 + leve tremor que assenta)
+    const k = lin(t, 0, 0.45, Easing.out(Easing.cubic));
+    const tremor = (1 - lin(t, 0, 0.6)) * 6;
+    return <AbsoluteFill style={{ transform: `scale(${1.25 - 0.25 * k}) translate(${Math.sin(t * 60) * tremor}px, ${Math.cos(t * 47) * tremor}px)` }}>{children}</AbsoluteFill>;
+  }
   const k = soco ? lin(t, de, de + 0.32, Easing.out(Easing.cubic)) : 1;
   return <AbsoluteFill style={{ transform: `scale(${1.07 - 0.07 * k})` }}>{children}</AbsoluteFill>;
+};
+// texto do gancho que entra palavra a palavra junto com a voz (nunca bloco parado)
+export const TituloVivo: React.FC<{ linhas: [string, number][][]; top: number; size?: number; destaque?: string }> = ({ linhas, top, size = 92, destaque }) => {
+  const { t, o } = useT();
+  return <div style={{ position: "absolute", left: 50, right: 50, top, textAlign: "center" }}>
+    {linhas.map((ln, i) => <div key={i} style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", columnGap: size * 0.28 }}>
+      {ln.map(([p, r], j) => {
+        const k = lin(t, Math.max(0, o(r) - 0.06), Math.max(0, o(r) - 0.06) + 0.22, Easing.out(Easing.back(1.8)));
+        const ehChave = destaque !== undefined && p === destaque;
+        return <span key={j} style={{ fontFamily: MONT, fontWeight: 800, fontSize: size, lineHeight: 1.08, color: C.osso, opacity: Math.min(1, k * 1.4), transform: `scale(${1.35 - 0.35 * k}) translateY(${(1 - k) * 20}px)`, display: "inline-block",
+          textShadow: SOMBRA, background: ehChave ? C.lacre : "none", padding: ehChave ? "0 14px" : 0 }}>{p}</span>;
+      })}
+    </div>)}
+  </div>;
 };
 export const Clip: React.FC<{ src: string; r0: number; from?: number; zoom?: [number, number]; dur?: number; a?: number }> = ({ src, r0, from = 0, zoom = [1.04, 1.14], dur = 4, a = 0.42 }) => {
   const { t, o } = useT();
@@ -69,18 +89,18 @@ export const Cheia: React.FC<{ src: string; r: readonly [number, number]; credit
 };
 const Credito: React.FC<{ texto: string }> = ({ texto }) => <div style={{ position: "absolute", right: 34, top: 1262, fontFamily: SANS, fontWeight: 600, fontSize: 17, color: "rgba(236,231,220,0.6)", textShadow: "0 1px 4px #000" }}>{texto}</div>;
 // foto de arquivo emoldurada sobre um fundo desfocado dela mesma (sem tela preta vazia)
-export const Foto: React.FC<{ src: string; r: readonly [number, number]; credito: string; top?: number; w?: number; h?: number; pos?: string; zoom?: [number, number]; rot?: number; cover?: boolean; cinza?: boolean; ext?: string; alt?: Alt }> =
-  ({ src, r, credito, top = 300, w = 940, h = 800, pos = "50% 50%", zoom = [1.0, 1.1], rot = 0, cover = true, cinza = false, ext = "jpg", alt }) => {
+export const Foto: React.FC<{ src: string; r: readonly [number, number]; credito: string; top?: number; w?: number; h?: number; pos?: string; zoom?: [number, number]; rot?: number; cover?: boolean; cinza?: boolean; ext?: string; alt?: Alt; fundo?: string }> =
+  ({ src, r, credito, top = 300, w = 940, h = 800, pos = "50% 50%", zoom = [1.0, 1.1], rot = 0, cover = true, cinza = false, ext = "jpg", alt, fundo }) => {
   const { t, o } = useT();
   if (!temImg(src)) {
     if (alt?.clip) return <Clip src={alt.clip} r0={r[0]} dur={r[1] - r[0]} a={0.45} />;
-    if (alt?.img && temImg(alt.img)) return <Foto src={alt.img} r={r} credito={alt.credito ?? ""} top={top} w={w} h={h} zoom={zoom} cinza={cinza} />;
+    if (alt?.img && temImg(alt.img)) return <Foto src={alt.img} r={r} credito={alt.credito ?? ""} top={top} w={w} h={h} zoom={zoom} cinza={cinza} fundo={fundo} />;
     return <Fundo />;
   }
   const k = lin(t, o(r[0]), o(r[1]), Easing.linear);
   const file = staticFile(`img/${src}.${ext}`);
   return <>
-    <AbsoluteFill><Img src={file} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: pos, filter: "blur(38px) grayscale(0.7) brightness(0.38)", transform: "scale(1.25)" }} /></AbsoluteFill>
+    {fundo ? <Clip src={fundo} r0={r[0]} dur={r[1] - r[0]} a={0.55} /> : <AbsoluteFill><Img src={file} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: pos, filter: "blur(38px) grayscale(0.7) brightness(0.38)", transform: "scale(1.25)" }} /></AbsoluteFill>}
     <div style={{ position: "absolute", left: (1080 - w) / 2, top, width: w, height: h, transform: `rotate(${rot}deg)`, boxShadow: "0 30px 90px rgba(0,0,0,0.9)", background: "#111", border: "10px solid #D9D2C0", boxSizing: "border-box", overflow: "hidden" }}>
       <Img src={file} style={{ width: "100%", height: "100%", objectFit: cover ? "cover" : "contain", objectPosition: pos, transform: `scale(${zoom[0] + (zoom[1] - zoom[0]) * k})`, filter: `${cinza ? "grayscale(0.8) " : ""}contrast(1.08) sepia(0.12)` }} />
     </div>
@@ -187,15 +207,20 @@ export const TelaFinal: React.FC = () => {
     </AbsoluteFill>;
   }
   return <AbsoluteFill style={{ background: C.preto, opacity: lin(t, FINAL - 0.3, FINAL) }}>
-    <div style={{ position: "absolute", left: 0, right: 0, top: 290, display: "flex", justifyContent: "center", opacity: a, transform: `scale(${0.92 + 0.08 * a})` }}>
-      <div style={{ width: 340, height: 340, borderRadius: "50%", overflow: "hidden", border: `2px solid rgba(236,231,220,0.3)` }}><Img src={staticFile("img/perfil.png")} style={{ width: "100%", height: "100%", objectFit: "cover" }} /></div>
+    <div style={{ position: "absolute", left: 0, right: 0, top: v.proximo ? 200 : 290, display: "flex", justifyContent: "center", opacity: a, transform: `scale(${0.92 + 0.08 * a})` }}>
+      <div style={{ width: v.proximo ? 260 : 340, height: v.proximo ? 260 : 340, borderRadius: "50%", overflow: "hidden", border: `2px solid rgba(236,231,220,0.3)` }}><Img src={staticFile("img/perfil.png")} style={{ width: "100%", height: "100%", objectFit: "cover" }} /></div>
     </div>
-    <div style={{ position: "absolute", left: 0, right: 0, top: 680, textAlign: "center", opacity: a }}>
+    <div style={{ position: "absolute", left: 0, right: 0, top: v.proximo ? 490 : 680, textAlign: "center", opacity: a }}>
       <div style={{ fontFamily: SERIF, fontWeight: 900, fontSize: 130, letterSpacing: "0.12em", color: C.osso }}>ÁLIBI</div>
       <div style={{ height: 3, width: 260, margin: "10px auto 20px", background: C.lacre }} />
       <div style={{ fontFamily: ELITE, fontSize: 34, color: C.ossoE, opacity: b }}>toda história tem um álibi.</div>
+      {v.proximo && <div style={{ marginTop: 34, opacity: b }}>
+        <div style={{ fontFamily: COURIER, fontWeight: 700, fontSize: 34, letterSpacing: "0.12em", color: C.verm }}>AMANHÃ · 19H30</div>
+        <div style={{ fontFamily: MONT, fontWeight: 800, fontSize: 52, color: C.osso, marginTop: 8, lineHeight: 1.1, padding: "0 70px" }}>{v.proximo}</div>
+        <div style={{ display: "inline-block", marginTop: 22, padding: "10px 26px", background: C.lacre, fontFamily: SANS, fontWeight: 800, fontSize: 38, color: C.osso }}>SEGUE O ÁLIBI</div>
+      </div>}
     </div>
-    <div style={{ position: "absolute", left: 90, right: 90, top: 1040, textAlign: "center", padding: "26px 30px", border: `2px solid rgba(236,231,220,0.35)`, opacity: c }}>
+    <div style={{ position: "absolute", left: 90, right: 90, top: v.proximo ? 1150 : 1040, textAlign: "center", padding: "26px 30px", border: `2px solid rgba(236,231,220,0.35)`, opacity: c }}>
       <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 42, color: C.osso, lineHeight: 1.25 }}>{v.cta[0]}</div>
       <div style={{ fontFamily: ELITE, fontSize: 32, color: C.verm, marginTop: 12 }}>{v.cta[1]}</div>
     </div>
@@ -203,7 +228,7 @@ export const TelaFinal: React.FC = () => {
 };
 export const Hud: React.FC = () => {
   const { t, v } = useT();
-  const vis = 1 - lin(t, v.FIM_VOZ - 0.2, v.FIM_VOZ + 0.2);
+  const vis = lin(t, 3.0, 3.4) * (1 - lin(t, v.FIM_VOZ - 0.2, v.FIM_VOZ + 0.2));
   if (vis <= 0) return null;
   return <div style={{ position: "absolute", left: 60, right: 60, top: 70, display: "flex", justifyContent: "space-between", fontFamily: COURIER, fontWeight: 700, fontSize: 26, color: "rgba(236,231,220,0.65)", opacity: vis }}>
     <span><span style={{ color: C.lacre, opacity: Math.floor(t * 1.5) % 2 ? 1 : 0.25 }}>●</span> REC</span><span style={{ background: "rgba(10,10,11,0.55)", padding: "4px 12px" }}>ÁLIBI · CASO {v.caso}{v.parte ? <span style={{ color: C.verm }}> · {v.parte}</span> : null}</span>
