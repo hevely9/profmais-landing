@@ -62,7 +62,7 @@ export const Telexfree: React.FC = () => (
     <Plano r={[18.5, 22.0]}>
       <Clip src="c4603" r0={18.5} dur={3.5} a={0.45} />
       <Titulo r={w("vender") - 0.2} top={360} size={76}>“PLANOS DE TELEFONE<br />PELA INTERNET”</Titulo>
-      <Rotulo r={19.4} texto="o que a empresa dizia vender (VoIP)" top={560} size={34} cor={C.ossoE} />
+      <Rotulo r={19.4} texto="o que a empresa dizia vender (VoIP)" top={660} size={34} cor={C.ossoE} />
     </Plano>
     <Plano r={[22.0, 25.7]}>
       <Fundo />
