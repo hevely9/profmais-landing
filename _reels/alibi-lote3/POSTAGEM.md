@@ -1,7 +1,7 @@
 # PACOTE DE POSTAGEM — ÁLIBI · CASO Nº 016
 
 **[1] Título interno:** Caso Nº 016 — Portuguesa × Flamengo (Brasileirão 2013, casos Héverton e André Santos)
-Arquivos: `entrega/ALIBI-016-Portuguesa-x-Flamengo.mp4` (≈2:28) · capa `entrega/CAPA-016.jpg`
+Arquivos: `entrega/ALIBI-016-Portuguesa-x-Flamengo.mp4` (2:27, 42 MB) · capa `entrega/CAPA-016.jpg`
 
 **[2] Texto da capa:** QUEM ERA PRA CAIR? (4 palavras; "PRA CAIR?" na faixa vermelha)
 
@@ -34,7 +34,7 @@ Tem caso novo no perfil. Segue o Álibi. 🕯️
 
 **[7] Checklist**
 - Gancho no 1º segundo? ✅ voz + foto do André Santos com "soco" no quadro 0; 1ª frase com 11 palavras
-- Duração: ⚠️ 2:28. Fica fora dos 60–90 s, mas foi pedido seu (1:30–2:30) para explicar o caso inteiro
+- Duração: ⚠️ 2:27. Fica fora dos 60–90 s, mas foi pedido seu (1:30–2:30) para explicar o caso inteiro
 - Nada parado > 4 s? ✅ corte a cada 1,5–4 s; a tabela muda a cada 3–5 s (pontos caem, times trocam de lugar)
 - CTA no final? ✅ "Próximo caso no perfil. Segue o Álibi." (sem dia/hora) + tela final "comenta: FLA ou LUSA"
 - Hashtags conferidas? ✅ 5, sem #fyp/#viral
