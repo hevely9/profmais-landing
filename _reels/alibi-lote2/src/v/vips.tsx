@@ -58,7 +58,7 @@ export const Vips: React.FC = () => (
       <Rotulo r={w("empresários") - 0.05} texto="EMPRESÁRIOS" top={520} size={66} />
     </Plano>
     <Plano r={[21.3, 24.4]}>
-      <Foto src="v-r-amaury" r={[21.3, 24.4]} credito="Reprodução · Programa Amaury Jr." top={460} w={980} h={620} zoom={[1.0, 1.12]} pos="30% 40%" />
+      <Foto src="v-r-amaury2001" r={[21.3, 24.4]} credito="Reprodução · Marcelo e Amaury Jr., 2001" top={450} w={980} h={640} zoom={[1.0, 1.12]} pos="40% 35%" />
       <Titulo r={w("amaury") - 0.1} top={190} size={84}>AMAURY JR.</Titulo>
       <Faixa r={w("entrevistou") - 0.1} texto="ENTREVISTOU O “HERDEIRO”" top={1150} size={54} />
     </Plano>
@@ -97,10 +97,8 @@ export const Vips: React.FC = () => (
       <Titulo r={w("piloto") - 0.15} top={420} size={96}>PILOTO<br />DO TRÁFICO</Titulo>
     </Plano>
     <Plano r={[46.2, 48.4]}>
-      <Fundo />
-      <Rotulo r={46.25} texto="PRESO EM" top={560} size={44} cor={C.ossoE} />
-      <Contador r={46.6} ate={47.6} valor={12} top={630} size={250} />
-      <Rotulo r={47.5} texto="ESTADOS" top={900} size={56} />
+      <Foto src="v-r-jornal" r={[46.2, 48.4]} credito="Reprodução · recorte de jornal" top={300} w={640} h={900} zoom={[1.0, 1.05]} rot={-3} pos="50% 0%" />
+      <Carimbo r={47.1} texto="PRESO EM 12 ESTADOS" y={1150} rot={-6} size={72} />
     </Plano>
     <Plano r={[48.4, 50.8]}>
       <Clip src="c25261" r0={48.4} dur={2.4} a={0.45} />
