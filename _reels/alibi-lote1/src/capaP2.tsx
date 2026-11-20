@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, OffthreadVideo, staticFile } from "remotion";
+import { AbsoluteFill, Img, staticFile } from "remotion";
 import { C, COURIER, MONT, SANS } from "./kit";
 
 // Capa chamativa da PARTE 2 (BC Fortaleza): legível na grade do perfil (miolo 3:4, y 240–1680).
@@ -18,7 +18,7 @@ const Fita: React.FC<{ y: number; rot: number; texto: string }> = ({ y, rot, tex
 
 export const CapaParte2: React.FC = () => (
   <AbsoluteFill style={{ background: C.preto, overflow: "hidden" }}>
-    <AbsoluteFill><OffthreadVideo src={staticFile("v/c46981.mp4")} startFrom={45} muted style={{ width: "100%", height: "100%", objectFit: "cover", filter: "contrast(1.2) brightness(0.95)" }} /></AbsoluteFill>
+    <AbsoluteFill><Img src={staticFile("img/f-bc.jpg")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 30%", filter: "grayscale(0.85) contrast(1.2) brightness(0.9)" }} /></AbsoluteFill>
     <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(10,10,11,0.55) 0%, rgba(10,10,11,0.2) 30%, rgba(10,10,11,0.75) 55%, rgba(10,10,11,0.96) 80%, #0A0A0B 100%)" }} />
     <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 50%, transparent 50%, rgba(0,0,0,0.65) 100%)" }} />
     <Fita y={150} rot={-9} texto="BANCO CENTRAL · NÃO ULTRAPASSE · " />
@@ -28,17 +28,14 @@ export const CapaParte2: React.FC = () => (
         <div style={{ fontFamily: MONT, fontWeight: 800, fontSize: 180, lineHeight: 1, color: C.osso, letterSpacing: "0.02em" }}>PARTE 2</div>
       </div>
     </div>
-    {/* 11 carros */}
-    <div style={{ position: "absolute", left: 60, right: 60, top: 700, display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "10px 18px", filter: "drop-shadow(0 8px 16px rgba(0,0,0,0.9))" }}>
-      {Array.from({ length: 11 }, (_, i) => <Carro key={i} s={0.92} />)}
-    </div>
-    {/* texto principal */}
-    <div style={{ position: "absolute", left: 40, right: 40, top: 1000, textAlign: "center" }}>
-      <div style={{ fontFamily: MONT, fontWeight: 800, fontSize: 168, lineHeight: 0.98, color: C.osso, textShadow: "0 8px 40px rgba(0,0,0,0.95)" }}>11 CARROS</div>
-      <div style={{ display: "flex", justifyContent: "center", marginTop: 14 }}>
-        <div style={{ background: C.lacre, padding: "4px 26px 12px", fontFamily: MONT, fontWeight: 800, fontSize: 104, lineHeight: 1.02, color: C.osso }}>ENTREGARAM TUDO</div>
+    {/* texto principal: liga direto ao vídeo 1 */}
+    <div style={{ position: "absolute", left: 40, right: 40, top: 780, textAlign: "center" }}>
+      <div style={{ fontFamily: MONT, fontWeight: 800, fontSize: 112, lineHeight: 1.0, color: C.osso, textShadow: "0 8px 40px rgba(0,0,0,0.95)" }}>O ROUBO DO</div>
+      <div style={{ display: "flex", justifyContent: "center", marginTop: 16 }}>
+        <div style={{ background: C.lacre, padding: "6px 28px 14px", fontFamily: MONT, fontWeight: 800, fontSize: 118, lineHeight: 1.0, color: C.osso }}>BANCO<br />CENTRAL</div>
       </div>
-      <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 48, color: C.osso, marginTop: 26, textShadow: "0 3px 14px #000" }}>o erro do maior furto do Brasil</div>
+      <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 52, color: C.osso, marginTop: 30, textShadow: "0 3px 14px #000" }}>Fortaleza · o túnel até o cofre</div>
+      <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 44, color: C.fita, marginTop: 14, textShadow: "0 3px 14px #000" }}>o que aconteceu depois</div>
     </div>
     <div style={{ position: "absolute", left: 0, right: 0, top: 1600, textAlign: "center", fontFamily: COURIER, fontWeight: 700, fontSize: 36, letterSpacing: "0.14em", color: "rgba(236,231,220,0.8)" }}>ÁLIBI · CASO Nº 008</div>
   </AbsoluteFill>
