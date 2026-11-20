@@ -1,0 +1,664 @@
+{
+"words": [
+{
+"text": "Existem",
+"start": 0.0,
+"end": 0.36,
+"p": 0.99
+},
+{
+"text": "pessoas",
+"start": 0.36,
+"end": 0.86,
+"p": 1.0
+},
+{
+"text": "que",
+"start": 0.86,
+"end": 1.14,
+"p": 1.0
+},
+{
+"text": "passam",
+"start": 1.14,
+"end": 1.52,
+"p": 1.0
+},
+{
+"text": "pela",
+"start": 1.52,
+"end": 1.74,
+"p": 1.0
+},
+{
+"text": "vida",
+"start": 1.74,
+"end": 2.02,
+"p": 1.0
+},
+{
+"text": "ensinando",
+"start": 2.02,
+"end": 2.58,
+"p": 1.0
+},
+{
+"text": "conteúdos.",
+"start": 2.58,
+"end": 3.4,
+"p": 1.0
+},
+{
+"text": "Outras",
+"start": 3.84,
+"end": 4.52,
+"p": 1.0
+},
+{
+"text": "deixam",
+"start": 4.52,
+"end": 5.1,
+"p": 0.99
+},
+{
+"text": "algo",
+"start": 5.1,
+"end": 5.38,
+"p": 1.0
+},
+{
+"text": "que",
+"start": 5.38,
+"end": 5.54,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 5.54,
+"end": 5.66,
+"p": 1.0
+},
+{
+"text": "tempo",
+"start": 5.66,
+"end": 5.9,
+"p": 1.0
+},
+{
+"text": "não",
+"start": 5.9,
+"end": 6.22,
+"p": 1.0
+},
+{
+"text": "consegue",
+"start": 6.22,
+"end": 6.76,
+"p": 1.0
+},
+{
+"text": "apagar.",
+"start": 6.76,
+"end": 7.3,
+"p": 1.0
+},
+{
+"text": "Porque",
+"start": 7.62,
+"end": 8.08,
+"p": 0.79
+},
+{
+"text": "ensinar",
+"start": 8.08,
+"end": 8.6,
+"p": 1.0
+},
+{
+"text": "nunca",
+"start": 8.6,
+"end": 8.86,
+"p": 1.0
+},
+{
+"text": "foi",
+"start": 8.86,
+"end": 9.08,
+"p": 1.0
+},
+{
+"text": "apenas",
+"start": 9.08,
+"end": 9.42,
+"p": 1.0
+},
+{
+"text": "transmitir",
+"start": 9.42,
+"end": 10.0,
+"p": 1.0
+},
+{
+"text": "palavras,",
+"start": 10.0,
+"end": 10.58,
+"p": 1.0
+},
+{
+"text": "explicar",
+"start": 10.9,
+"end": 11.26,
+"p": 1.0
+},
+{
+"text": "teorias",
+"start": 11.26,
+"end": 11.94,
+"p": 1.0
+},
+{
+"text": "ou",
+"start": 11.94,
+"end": 12.12,
+"p": 0.99
+},
+{
+"text": "escrever",
+"start": 12.12,
+"end": 12.44,
+"p": 1.0
+},
+{
+"text": "no",
+"start": 12.44,
+"end": 12.7,
+"p": 1.0
+},
+{
+"text": "quadro.",
+"start": 12.7,
+"end": 13.08,
+"p": 1.0
+},
+{
+"text": "É",
+"start": 13.24,
+"end": 13.62,
+"p": 1.0
+},
+{
+"text": "despertar",
+"start": 13.62,
+"end": 14.12,
+"p": 1.0
+},
+{
+"text": "pensamentos,",
+"start": 14.12,
+"end": 14.92,
+"p": 1.0
+},
+{
+"text": "abrir",
+"start": 15.26,
+"end": 15.6,
+"p": 1.0
+},
+{
+"text": "caminhos",
+"start": 15.6,
+"end": 16.18,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 16.18,
+"end": 16.34,
+"p": 1.0
+},
+{
+"text": "plantar",
+"start": 16.34,
+"end": 16.72,
+"p": 1.0
+},
+{
+"text": "conhecimentos",
+"start": 16.72,
+"end": 17.42,
+"p": 1.0
+},
+{
+"text": "que",
+"start": 17.42,
+"end": 17.66,
+"p": 1.0
+},
+{
+"text": "continuarão",
+"start": 17.66,
+"end": 18.28,
+"p": 1.0
+},
+{
+"text": "crescendo",
+"start": 18.28,
+"end": 18.78,
+"p": 1.0
+},
+{
+"text": "mesmo",
+"start": 18.78,
+"end": 19.24,
+"p": 1.0
+},
+{
+"text": "quando",
+"start": 19.24,
+"end": 19.58,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 19.58,
+"end": 19.68,
+"p": 1.0
+},
+{
+"text": "aula",
+"start": 19.68,
+"end": 19.88,
+"p": 1.0
+},
+{
+"text": "terminar.",
+"start": 19.88,
+"end": 20.28,
+"p": 1.0
+},
+{
+"text": "Na",
+"start": 20.76,
+"end": 21.04,
+"p": 1.0
+},
+{
+"text": "jornada",
+"start": 21.04,
+"end": 21.46,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 21.46,
+"end": 21.58,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 21.58,
+"end": 21.66,
+"p": 1.0
+},
+{
+"text": "educador,",
+"start": 21.66,
+"end": 22.2,
+"p": 1.0
+},
+{
+"text": "cada",
+"start": 22.52,
+"end": 22.7,
+"p": 1.0
+},
+{
+"text": "palavra",
+"start": 22.7,
+"end": 23.16,
+"p": 1.0
+},
+{
+"text": "pode",
+"start": 23.16,
+"end": 23.44,
+"p": 1.0
+},
+{
+"text": "representar",
+"start": 23.44,
+"end": 24.0,
+"p": 1.0
+},
+{
+"text": "uma",
+"start": 24.0,
+"end": 24.14,
+"p": 1.0
+},
+{
+"text": "descoberta,",
+"start": 24.14,
+"end": 24.88,
+"p": 1.0
+},
+{
+"text": "cada",
+"start": 25.12,
+"end": 25.44,
+"p": 1.0
+},
+{
+"text": "ensinamento",
+"start": 25.44,
+"end": 26.1,
+"p": 1.0
+},
+{
+"text": "pode",
+"start": 26.1,
+"end": 26.36,
+"p": 1.0
+},
+{
+"text": "mudar",
+"start": 26.36,
+"end": 26.62,
+"p": 1.0
+},
+{
+"text": "uma",
+"start": 26.62,
+"end": 26.82,
+"p": 1.0
+},
+{
+"text": "perspectiva",
+"start": 26.82,
+"end": 27.62,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 27.62,
+"end": 28.04,
+"p": 0.83
+},
+{
+"text": "cada",
+"start": 28.04,
+"end": 28.42,
+"p": 1.0
+},
+{
+"text": "aluno",
+"start": 28.42,
+"end": 28.82,
+"p": 1.0
+},
+{
+"text": "pode",
+"start": 28.82,
+"end": 29.1,
+"p": 1.0
+},
+{
+"text": "levar",
+"start": 29.1,
+"end": 29.36,
+"p": 1.0
+},
+{
+"text": "consigo",
+"start": 29.36,
+"end": 29.8,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 29.8,
+"end": 30.1,
+"p": 1.0
+},
+{
+"text": "pouco",
+"start": 30.1,
+"end": 30.48,
+"p": 1.0
+},
+{
+"text": "daquilo",
+"start": 30.48,
+"end": 30.9,
+"p": 1.0
+},
+{
+"text": "que",
+"start": 30.9,
+"end": 31.02,
+"p": 1.0
+},
+{
+"text": "aprendeu.",
+"start": 31.02,
+"end": 31.5,
+"p": 1.0
+},
+{
+"text": "Iderlindo",
+"start": 32.88,
+"end": 33.96,
+"p": 1
+},
+{
+"text": "Lopes,",
+"start": 33.96,
+"end": 34.42,
+"p": 0.83
+},
+{
+"text": "professor",
+"start": 34.72,
+"end": 35.18,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 35.18,
+"end": 35.42,
+"p": 1.0
+},
+{
+"text": "Letras,",
+"start": 35.42,
+"end": 35.88,
+"p": 0.96
+},
+{
+"text": "mas,",
+"start": 36.08,
+"end": 36.3,
+"p": 1.0
+},
+{
+"text": "acima",
+"start": 36.5,
+"end": 36.9,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 36.9,
+"end": 37.04,
+"p": 1.0
+},
+{
+"text": "tudo,",
+"start": 37.04,
+"end": 37.34,
+"p": 1.0
+},
+{
+"text": "alguém",
+"start": 37.64,
+"end": 37.92,
+"p": 1.0
+},
+{
+"text": "que",
+"start": 37.92,
+"end": 38.08,
+"p": 1.0
+},
+{
+"text": "faz",
+"start": 38.08,
+"end": 38.34,
+"p": 1.0
+},
+{
+"text": "das",
+"start": 38.34,
+"end": 38.5,
+"p": 1.0
+},
+{
+"text": "palavras",
+"start": 38.5,
+"end": 39.02,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 39.02,
+"end": 39.24,
+"p": 1.0
+},
+{
+"text": "instrumento",
+"start": 39.24,
+"end": 39.9,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 39.9,
+"end": 40.02,
+"p": 1.0
+},
+{
+"text": "transformação.",
+"start": 40.02,
+"end": 40.98,
+"p": 1.0
+},
+{
+"text": "Porque",
+"start": 41.18,
+"end": 41.72,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 41.72,
+"end": 41.84,
+"p": 1.0
+},
+{
+"text": "verdadeiro",
+"start": 41.84,
+"end": 42.36,
+"p": 1.0
+},
+{
+"text": "conhecimento",
+"start": 42.36,
+"end": 43.06,
+"p": 1.0
+},
+{
+"text": "não",
+"start": 43.06,
+"end": 43.36,
+"p": 1.0
+},
+{
+"text": "termina",
+"start": 43.36,
+"end": 43.88,
+"p": 1.0
+},
+{
+"text": "na",
+"start": 43.88,
+"end": 44.02,
+"p": 1.0
+},
+{
+"text": "sala",
+"start": 44.02,
+"end": 44.24,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 44.24,
+"end": 44.4,
+"p": 1.0
+},
+{
+"text": "aula.",
+"start": 44.4,
+"end": 44.66,
+"p": 1.0
+},
+{
+"text": "Ele",
+"start": 44.82,
+"end": 45.18,
+"p": 1.0
+},
+{
+"text": "permanece",
+"start": 45.18,
+"end": 45.82,
+"p": 1.0
+},
+{
+"text": "naqueles",
+"start": 45.82,
+"end": 46.38,
+"p": 1.0
+},
+{
+"text": "que",
+"start": 46.38,
+"end": 46.54,
+"p": 1.0
+},
+{
+"text": "foram",
+"start": 46.54,
+"end": 46.78,
+"p": 1.0
+},
+{
+"text": "tocados",
+"start": 46.78,
+"end": 47.4,
+"p": 1.0
+},
+{
+"text": "por",
+"start": 47.4,
+"end": 47.64,
+"p": 1.0
+},
+{
+"text": "ele.",
+"start": 47.64,
+"end": 47.86,
+"p": 1.0
+}
+]
+}

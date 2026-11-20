@@ -1,0 +1,2974 @@
+{
+"words": [
+{
+"text": "Dias",
+"start": 0.0,
+"end": 0.42,
+"p": 0.99
+},
+{
+"text": "antes",
+"start": 0.42,
+"end": 0.66,
+"p": 1.0
+},
+{
+"text": "do",
+"start": 0.66,
+"end": 0.86,
+"p": 1.0
+},
+{
+"text": "crime,",
+"start": 0.86,
+"end": 1.2,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 1.42,
+"end": 1.74,
+"p": 1.0
+},
+{
+"text": "fazendeiro",
+"start": 1.74,
+"end": 2.28,
+"p": 1.0
+},
+{
+"text": "alemão",
+"start": 2.28,
+"end": 2.7,
+"p": 1.0
+},
+{
+"text": "encontrou",
+"start": 2.7,
+"end": 3.16,
+"p": 1.0
+},
+{
+"text": "pegadas",
+"start": 3.16,
+"end": 3.76,
+"p": 1.0
+},
+{
+"text": "na",
+"start": 3.76,
+"end": 3.9,
+"p": 1.0
+},
+{
+"text": "neve.",
+"start": 3.9,
+"end": 4.26,
+"p": 1.0
+},
+{
+"text": "Elas",
+"start": 4.54,
+"end": 5.06,
+"p": 1.0
+},
+{
+"text": "saíam",
+"start": 5.06,
+"end": 5.38,
+"p": 0.92
+},
+{
+"text": "da",
+"start": 5.38,
+"end": 5.48,
+"p": 1.0
+},
+{
+"text": "floresta",
+"start": 5.48,
+"end": 6.12,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 6.12,
+"end": 6.32,
+"p": 1.0
+},
+{
+"text": "iam",
+"start": 6.32,
+"end": 6.54,
+"p": 1.0
+},
+{
+"text": "até",
+"start": 6.54,
+"end": 6.82,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 6.82,
+"end": 7.0,
+"p": 1.0
+},
+{
+"text": "casa",
+"start": 7.0,
+"end": 7.2,
+"p": 1.0
+},
+{
+"text": "dele,",
+"start": 7.2,
+"end": 7.56,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 7.68,
+"end": 8.12,
+"p": 1.0
+},
+{
+"text": "nenhuma",
+"start": 8.12,
+"end": 8.5,
+"p": 1.0
+},
+{
+"text": "voltava.",
+"start": 8.5,
+"end": 9.16,
+"p": 1.0
+},
+{
+"text": "À",
+"start": 9.58,
+"end": 9.88,
+"p": 0.99
+},
+{
+"text": "noite,",
+"start": 9.88,
+"end": 10.26,
+"p": 1.0
+},
+{
+"text": "ele",
+"start": 10.44,
+"end": 10.74,
+"p": 1.0
+},
+{
+"text": "ouvia",
+"start": 10.74,
+"end": 10.98,
+"p": 1.0
+},
+{
+"text": "passos",
+"start": 10.98,
+"end": 11.52,
+"p": 1.0
+},
+{
+"text": "no",
+"start": 11.52,
+"end": 11.68,
+"p": 1.0
+},
+{
+"text": "sótão.",
+"start": 11.68,
+"end": 12.12,
+"p": 0.99
+},
+{
+"text": "Na",
+"start": 13.8,
+"end": 14.16,
+"p": 1.0
+},
+{
+"text": "noite",
+"start": 14.16,
+"end": 14.44,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 14.44,
+"end": 14.64,
+"p": 1.0
+},
+{
+"text": "31",
+"start": 14.64,
+"end": 15.18,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 15.18,
+"end": 15.38,
+"p": 1.0
+},
+{
+"text": "março",
+"start": 15.38,
+"end": 15.8,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 15.8,
+"end": 15.96,
+"p": 1.0
+},
+{
+"text": "1922,",
+"start": 15.96,
+"end": 17.28,
+"p": 1.0
+},
+{
+"text": "as",
+"start": 17.8,
+"end": 18.14,
+"p": 0.99
+},
+{
+"text": "seis",
+"start": 18.14,
+"end": 18.44,
+"p": 0.99
+},
+{
+"text": "pessoas",
+"start": 18.44,
+"end": 18.98,
+"p": 1.0
+},
+{
+"text": "daquela",
+"start": 18.98,
+"end": 19.36,
+"p": 1.0
+},
+{
+"text": "casa",
+"start": 19.36,
+"end": 19.72,
+"p": 1.0
+},
+{
+"text": "foram",
+"start": 19.72,
+"end": 20.0,
+"p": 1.0
+},
+{
+"text": "mortas,",
+"start": 20.0,
+"end": 20.58,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 20.72,
+"end": 21.22,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 21.22,
+"end": 21.3,
+"p": 1.0
+},
+{
+"text": "assassino",
+"start": 21.3,
+"end": 21.92,
+"p": 1.0
+},
+{
+"text": "ficou",
+"start": 21.92,
+"end": 22.58,
+"p": 1.0
+},
+{
+"text": "lá",
+"start": 22.58,
+"end": 22.88,
+"p": 1.0
+},
+{
+"text": "por",
+"start": 22.88,
+"end": 23.58,
+"p": 0.63
+},
+{
+"text": "dias.",
+"start": 23.58,
+"end": 24.12,
+"p": 1.0
+},
+{
+"text": "Onde",
+"start": 24.98,
+"end": 25.62,
+"p": 0.98
+},
+{
+"text": "você",
+"start": 25.62,
+"end": 25.92,
+"p": 1.0
+},
+{
+"text": "estava",
+"start": 25.92,
+"end": 26.4,
+"p": 1.0
+},
+{
+"text": "naquela",
+"start": 26.4,
+"end": 26.76,
+"p": 1.0
+},
+{
+"text": "noite?",
+"start": 26.76,
+"end": 27.12,
+"p": 1.0
+},
+{
+"text": "Hinterkaifeck",
+"start": 28.92,
+"end": 29.5,
+"p": 0.88
+},
+{
+"text": "era",
+"start": 29.5,
+"end": 29.72,
+"p": 0.99
+},
+{
+"text": "uma",
+"start": 29.72,
+"end": 29.88,
+"p": 1.0
+},
+{
+"text": "fazenda",
+"start": 29.88,
+"end": 30.3,
+"p": 1.0
+},
+{
+"text": "isolada",
+"start": 30.3,
+"end": 30.96,
+"p": 1.0
+},
+{
+"text": "no",
+"start": 30.96,
+"end": 31.16,
+"p": 1.0
+},
+{
+"text": "sul",
+"start": 31.16,
+"end": 31.4,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 31.4,
+"end": 31.54,
+"p": 1.0
+},
+{
+"text": "Alemanha,",
+"start": 31.54,
+"end": 32.04,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 32.28,
+"end": 32.36,
+"p": 1.0
+},
+{
+"text": "uns",
+"start": 32.36,
+"end": 32.48,
+"p": 1.0
+},
+{
+"text": "70",
+"start": 32.48,
+"end": 32.98,
+"p": 0.99
+},
+{
+"text": "quilômetros",
+"start": 32.98,
+"end": 33.6,
+"p": 0.98
+},
+{
+"text": "de",
+"start": 33.6,
+"end": 33.76,
+"p": 1.0
+},
+{
+"text": "Munique.",
+"start": 33.76,
+"end": 34.16,
+"p": 0.99
+},
+{
+"text": "Moravam",
+"start": 34.62,
+"end": 35.2,
+"p": 1.0
+},
+{
+"text": "ali",
+"start": 35.2,
+"end": 35.48,
+"p": 1.0
+},
+{
+"text": "Andreas",
+"start": 35.48,
+"end": 36.06,
+"p": 0.69
+},
+{
+"text": "Gruber,",
+"start": 36.06,
+"end": 36.58,
+"p": 0.98
+},
+{
+"text": "de",
+"start": 36.72,
+"end": 36.86,
+"p": 1.0
+},
+{
+"text": "63",
+"start": 36.86,
+"end": 37.46,
+"p": 1.0
+},
+{
+"text": "anos,",
+"start": 37.46,
+"end": 37.88,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 38.08,
+"end": 38.34,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 38.34,
+"end": 38.42,
+"p": 1.0
+},
+{
+"text": "esposa,",
+"start": 38.42,
+"end": 38.94,
+"p": 1.0
+},
+{
+"text": "Cäzilia,",
+"start": 39.16,
+"end": 39.68,
+"p": 0.7
+},
+{
+"text": "de",
+"start": 39.84,
+"end": 40.02,
+"p": 1.0
+},
+{
+"text": "72.",
+"start": 40.02,
+"end": 40.62,
+"p": 1.0
+},
+{
+"text": "A",
+"start": 41.02,
+"end": 41.54,
+"p": 1.0
+},
+{
+"text": "filha",
+"start": 41.54,
+"end": 41.78,
+"p": 1.0
+},
+{
+"text": "deles,",
+"start": 41.78,
+"end": 42.1,
+"p": 1.0
+},
+{
+"text": "Viktoria,",
+"start": 42.44,
+"end": 42.8,
+"p": 0.89
+},
+{
+"text": "de",
+"start": 43.08,
+"end": 43.24,
+"p": 1.0
+},
+{
+"text": "35,",
+"start": 43.24,
+"end": 43.78,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 44.12,
+"end": 44.52,
+"p": 1.0
+},
+{
+"text": "os",
+"start": 44.52,
+"end": 44.66,
+"p": 1.0
+},
+{
+"text": "dois",
+"start": 44.66,
+"end": 44.84,
+"p": 1.0
+},
+{
+"text": "filhos",
+"start": 44.84,
+"end": 45.18,
+"p": 1.0
+},
+{
+"text": "dela,",
+"start": 45.18,
+"end": 45.46,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 45.7,
+"end": 46.02,
+"p": 1.0
+},
+{
+"text": "pequena",
+"start": 46.02,
+"end": 46.36,
+"p": 1.0
+},
+{
+"text": "Cäzilia,",
+"start": 46.36,
+"end": 46.94,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 47.1,
+"end": 47.18,
+"p": 1.0
+},
+{
+"text": "7",
+"start": 47.18,
+"end": 47.48,
+"p": 0.99
+},
+{
+"text": "anos,",
+"start": 47.48,
+"end": 47.86,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 48.02,
+"end": 48.28,
+"p": 1.0
+},
+{
+"text": "Josef,",
+"start": 48.28,
+"end": 48.82,
+"p": 0.95
+},
+{
+"text": "de",
+"start": 49.0,
+"end": 49.1,
+"p": 1.0
+},
+{
+"text": "2.",
+"start": 49.1,
+"end": 49.34,
+"p": 1.0
+},
+{
+"text": "O",
+"start": 49.66,
+"end": 50.24,
+"p": 1.0
+},
+{
+"text": "marido",
+"start": 50.24,
+"end": 50.56,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 50.56,
+"end": 50.7,
+"p": 1.0
+},
+{
+"text": "Viktoria,",
+"start": 50.7,
+"end": 51.08,
+"p": 1.0
+},
+{
+"text": "Karl,",
+"start": 51.4,
+"end": 51.72,
+"p": 0.51
+},
+{
+"text": "tinha",
+"start": 51.98,
+"end": 52.16,
+"p": 1.0
+},
+{
+"text": "morrido",
+"start": 52.16,
+"end": 52.58,
+"p": 1.0
+},
+{
+"text": "na",
+"start": 52.58,
+"end": 52.72,
+"p": 1.0
+},
+{
+"text": "Primeira",
+"start": 52.72,
+"end": 53.14,
+"p": 0.98
+},
+{
+"text": "Guerra.",
+"start": 53.14,
+"end": 53.48,
+"p": 1.0
+},
+{
+"text": "Pelo",
+"start": 53.74,
+"end": 54.2,
+"p": 1.0
+},
+{
+"text": "menos",
+"start": 54.2,
+"end": 54.48,
+"p": 1.0
+},
+{
+"text": "foi",
+"start": 54.48,
+"end": 54.66,
+"p": 0.99
+},
+{
+"text": "o",
+"start": 54.66,
+"end": 54.74,
+"p": 1.0
+},
+{
+"text": "que",
+"start": 54.74,
+"end": 54.82,
+"p": 1.0
+},
+{
+"text": "disseram.",
+"start": 54.82,
+"end": 55.34,
+"p": 1.0
+},
+{
+"text": "O",
+"start": 55.34,
+"end": 55.94,
+"p": 0.96
+},
+{
+"text": "corpo",
+"start": 55.94,
+"end": 56.24,
+"p": 1.0
+},
+{
+"text": "dele",
+"start": 56.24,
+"end": 56.56,
+"p": 1.0
+},
+{
+"text": "nunca",
+"start": 56.56,
+"end": 57.12,
+"p": 1.0
+},
+{
+"text": "voltou.",
+"start": 57.12,
+"end": 57.62,
+"p": 1.0
+},
+{
+"text": "Seis",
+"start": 58.6,
+"end": 59.32,
+"p": 1.0
+},
+{
+"text": "meses",
+"start": 59.32,
+"end": 59.6,
+"p": 1.0
+},
+{
+"text": "antes,",
+"start": 59.6,
+"end": 60.0,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 60.28,
+"end": 60.42,
+"p": 1.0
+},
+{
+"text": "empregada",
+"start": 60.42,
+"end": 60.92,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 60.92,
+"end": 61.08,
+"p": 1.0
+},
+{
+"text": "casa",
+"start": 61.08,
+"end": 61.38,
+"p": 1.0
+},
+{
+"text": "foi",
+"start": 61.38,
+"end": 61.6,
+"p": 1.0
+},
+{
+"text": "embora.",
+"start": 61.6,
+"end": 61.98,
+"p": 1.0
+},
+{
+"text": "Disse",
+"start": 62.3,
+"end": 62.78,
+"p": 1.0
+},
+{
+"text": "que",
+"start": 62.78,
+"end": 62.9,
+"p": 1.0
+},
+{
+"text": "ouvia",
+"start": 62.9,
+"end": 63.18,
+"p": 1.0
+},
+{
+"text": "barulhos",
+"start": 63.18,
+"end": 63.64,
+"p": 1.0
+},
+{
+"text": "estranhos",
+"start": 63.64,
+"end": 64.46,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 64.46,
+"end": 64.86,
+"p": 0.99
+},
+{
+"text": "que",
+"start": 64.86,
+"end": 64.98,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 64.98,
+"end": 65.06,
+"p": 1.0
+},
+{
+"text": "casa",
+"start": 65.06,
+"end": 65.4,
+"p": 1.0
+},
+{
+"text": "era",
+"start": 65.4,
+"end": 65.56,
+"p": 1.0
+},
+{
+"text": "assombrada.",
+"start": 65.56,
+"end": 66.3,
+"p": 1.0
+},
+{
+"text": "Nos",
+"start": 66.76,
+"end": 67.16,
+"p": 1.0
+},
+{
+"text": "dias",
+"start": 67.16,
+"end": 67.42,
+"p": 1.0
+},
+{
+"text": "antes",
+"start": 67.42,
+"end": 67.78,
+"p": 1.0
+},
+{
+"text": "do",
+"start": 67.78,
+"end": 67.98,
+"p": 1.0
+},
+{
+"text": "crime,",
+"start": 67.98,
+"end": 68.3,
+"p": 1.0
+},
+{
+"text": "Andreas",
+"start": 68.72,
+"end": 68.98,
+"p": 0.55
+},
+{
+"text": "contou",
+"start": 68.98,
+"end": 69.42,
+"p": 1.0
+},
+{
+"text": "aos",
+"start": 69.42,
+"end": 69.6,
+"p": 1.0
+},
+{
+"text": "vizinhos",
+"start": 69.6,
+"end": 70.04,
+"p": 1.0
+},
+{
+"text": "coisas",
+"start": 70.04,
+"end": 70.44,
+"p": 1.0
+},
+{
+"text": "que",
+"start": 70.44,
+"end": 70.66,
+"p": 1.0
+},
+{
+"text": "não",
+"start": 70.66,
+"end": 70.9,
+"p": 1.0
+},
+{
+"text": "faziam",
+"start": 70.9,
+"end": 71.3,
+"p": 1.0
+},
+{
+"text": "sentido.",
+"start": 71.3,
+"end": 71.8,
+"p": 1.0
+},
+{
+"text": "As",
+"start": 72.14,
+"end": 72.56,
+"p": 1.0
+},
+{
+"text": "pegadas",
+"start": 72.56,
+"end": 73.0,
+"p": 1.0
+},
+{
+"text": "na",
+"start": 73.0,
+"end": 73.16,
+"p": 1.0
+},
+{
+"text": "neve,",
+"start": 73.16,
+"end": 73.58,
+"p": 1.0
+},
+{
+"text": "os",
+"start": 73.84,
+"end": 74.08,
+"p": 1.0
+},
+{
+"text": "passos",
+"start": 74.08,
+"end": 74.56,
+"p": 1.0
+},
+{
+"text": "no",
+"start": 74.56,
+"end": 74.74,
+"p": 1.0
+},
+{
+"text": "sótão,",
+"start": 74.74,
+"end": 75.22,
+"p": 0.99
+},
+{
+"text": "um",
+"start": 75.56,
+"end": 75.76,
+"p": 1.0
+},
+{
+"text": "jornal",
+"start": 75.76,
+"end": 76.16,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 76.16,
+"end": 76.32,
+"p": 1.0
+},
+{
+"text": "Munique",
+"start": 76.32,
+"end": 76.72,
+"p": 0.94
+},
+{
+"text": "que",
+"start": 76.72,
+"end": 76.9,
+"p": 1.0
+},
+{
+"text": "ninguém",
+"start": 76.9,
+"end": 77.26,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 77.26,
+"end": 77.54,
+"p": 1.0
+},
+{
+"text": "casa",
+"start": 77.54,
+"end": 77.84,
+"p": 1.0
+},
+{
+"text": "tinha",
+"start": 77.84,
+"end": 78.06,
+"p": 1.0
+},
+{
+"text": "comprado,",
+"start": 78.06,
+"end": 78.62,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 78.88,
+"end": 79.26,
+"p": 1.0
+},
+{
+"text": "as",
+"start": 79.26,
+"end": 79.44,
+"p": 1.0
+},
+{
+"text": "chaves",
+"start": 79.44,
+"end": 79.82,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 79.82,
+"end": 79.98,
+"p": 1.0
+},
+{
+"text": "casa",
+"start": 79.98,
+"end": 80.42,
+"p": 1.0
+},
+{
+"text": "tinham",
+"start": 80.42,
+"end": 80.88,
+"p": 1.0
+},
+{
+"text": "sumido.",
+"start": 80.88,
+"end": 81.5,
+"p": 1.0
+},
+{
+"text": "Mesmo",
+"start": 81.92,
+"end": 82.48,
+"p": 1.0
+},
+{
+"text": "assim,",
+"start": 82.48,
+"end": 82.76,
+"p": 1.0
+},
+{
+"text": "ninguém",
+"start": 83.24,
+"end": 83.56,
+"p": 1.0
+},
+{
+"text": "chamou",
+"start": 83.56,
+"end": 84.02,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 84.02,
+"end": 84.12,
+"p": 1.0
+},
+{
+"text": "polícia.",
+"start": 84.12,
+"end": 84.54,
+"p": 1.0
+},
+{
+"text": "Na",
+"start": 85.34,
+"end": 85.86,
+"p": 0.99
+},
+{
+"text": "tarde",
+"start": 85.86,
+"end": 86.22,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 86.22,
+"end": 86.44,
+"p": 1.0
+},
+{
+"text": "31",
+"start": 86.44,
+"end": 86.92,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 86.92,
+"end": 87.06,
+"p": 1.0
+},
+{
+"text": "março,",
+"start": 87.06,
+"end": 87.52,
+"p": 1.0
+},
+{
+"text": "chegou",
+"start": 87.76,
+"end": 88.0,
+"p": 1.0
+},
+{
+"text": "uma",
+"start": 88.0,
+"end": 88.22,
+"p": 1.0
+},
+{
+"text": "nova",
+"start": 88.22,
+"end": 88.52,
+"p": 1.0
+},
+{
+"text": "empregada,",
+"start": 88.52,
+"end": 89.14,
+"p": 1.0
+},
+{
+"text": "Maria",
+"start": 89.46,
+"end": 89.8,
+"p": 1.0
+},
+{
+"text": "Baumgartner,",
+"start": 89.8,
+"end": 90.58,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 90.72,
+"end": 90.86,
+"p": 1.0
+},
+{
+"text": "44",
+"start": 90.86,
+"end": 91.44,
+"p": 1.0
+},
+{
+"text": "anos.",
+"start": 91.44,
+"end": 91.94,
+"p": 1.0
+},
+{
+"text": "Ela",
+"start": 92.42,
+"end": 92.78,
+"p": 1.0
+},
+{
+"text": "não",
+"start": 92.78,
+"end": 93.06,
+"p": 1.0
+},
+{
+"text": "passou",
+"start": 93.06,
+"end": 93.5,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 93.5,
+"end": 93.66,
+"p": 1.0
+},
+{
+"text": "primeira",
+"start": 93.66,
+"end": 94.02,
+"p": 1.0
+},
+{
+"text": "noite.",
+"start": 94.02,
+"end": 94.5,
+"p": 1.0
+},
+{
+"text": "Segundo",
+"start": 95.7,
+"end": 96.36,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 96.36,
+"end": 96.46,
+"p": 1.0
+},
+{
+"text": "investigação,",
+"start": 96.46,
+"end": 97.14,
+"p": 1.0
+},
+{
+"text": "quatro",
+"start": 97.62,
+"end": 97.86,
+"p": 0.99
+},
+{
+"text": "deles",
+"start": 97.86,
+"end": 98.26,
+"p": 1.0
+},
+{
+"text": "foram",
+"start": 98.26,
+"end": 98.52,
+"p": 1.0
+},
+{
+"text": "atraídos,",
+"start": 98.52,
+"end": 99.28,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 99.4,
+"end": 99.64,
+"p": 1.0
+},
+{
+"text": "por",
+"start": 99.64,
+"end": 99.94,
+"p": 1.0
+},
+{
+"text": "um,",
+"start": 99.94,
+"end": 100.1,
+"p": 1.0
+},
+{
+"text": "até",
+"start": 100.26,
+"end": 100.54,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 100.54,
+"end": 100.66,
+"p": 1.0
+},
+{
+"text": "celeiro.",
+"start": 100.66,
+"end": 101.16,
+"p": 1.0
+},
+{
+"text": "Depois,",
+"start": 101.68,
+"end": 102.12,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 102.38,
+"end": 102.6,
+"p": 1.0
+},
+{
+"text": "assassino",
+"start": 102.6,
+"end": 103.06,
+"p": 1.0
+},
+{
+"text": "entrou",
+"start": 103.06,
+"end": 103.38,
+"p": 1.0
+},
+{
+"text": "na",
+"start": 103.38,
+"end": 103.52,
+"p": 1.0
+},
+{
+"text": "casa.",
+"start": 103.52,
+"end": 103.92,
+"p": 1.0
+},
+{
+"text": "Ninguém",
+"start": 104.34,
+"end": 104.98,
+"p": 1.0
+},
+{
+"text": "escapou.",
+"start": 104.98,
+"end": 105.56,
+"p": 1.0
+},
+{
+"text": "A",
+"start": 105.56,
+"end": 106.4,
+"p": 0.98
+},
+{
+"text": "arma",
+"start": 106.4,
+"end": 106.7,
+"p": 1.0
+},
+{
+"text": "era",
+"start": 106.7,
+"end": 106.9,
+"p": 1.0
+},
+{
+"text": "uma",
+"start": 106.9,
+"end": 107.04,
+"p": 1.0
+},
+{
+"text": "ferramenta",
+"start": 107.04,
+"end": 107.52,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 107.52,
+"end": 107.66,
+"p": 1.0
+},
+{
+"text": "lavoura,",
+"start": 107.66,
+"end": 108.22,
+"p": 1.0
+},
+{
+"text": "uma",
+"start": 108.36,
+"end": 108.56,
+"p": 1.0
+},
+{
+"text": "espécie",
+"start": 108.56,
+"end": 108.92,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 108.92,
+"end": 109.08,
+"p": 1.0
+},
+{
+"text": "enxada.",
+"start": 109.08,
+"end": 109.6,
+"p": 0.98
+},
+{
+"text": "Ela",
+"start": 109.84,
+"end": 110.28,
+"p": 1.0
+},
+{
+"text": "só",
+"start": 110.28,
+"end": 110.44,
+"p": 1.0
+},
+{
+"text": "foi",
+"start": 110.44,
+"end": 110.62,
+"p": 1.0
+},
+{
+"text": "encontrada",
+"start": 110.62,
+"end": 111.2,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 111.2,
+"end": 111.56,
+"p": 1.0
+},
+{
+"text": "ano",
+"start": 111.56,
+"end": 111.82,
+"p": 1.0
+},
+{
+"text": "depois,",
+"start": 111.82,
+"end": 112.3,
+"p": 1.0
+},
+{
+"text": "escondida",
+"start": 112.76,
+"end": 113.14,
+"p": 1.0
+},
+{
+"text": "no",
+"start": 113.14,
+"end": 113.32,
+"p": 1.0
+},
+{
+"text": "sótão,",
+"start": 113.32,
+"end": 113.8,
+"p": 0.99
+},
+{
+"text": "quando",
+"start": 114.08,
+"end": 114.2,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 114.2,
+"end": 114.3,
+"p": 1.0
+},
+{
+"text": "casa",
+"start": 114.3,
+"end": 114.56,
+"p": 1.0
+},
+{
+"text": "foi",
+"start": 114.56,
+"end": 114.74,
+"p": 1.0
+},
+{
+"text": "demolida.",
+"start": 114.74,
+"end": 115.28,
+"p": 1.0
+},
+{
+"text": "E",
+"start": 115.96,
+"end": 116.6,
+"p": 1.0
+},
+{
+"text": "aqui,",
+"start": 116.6,
+"end": 116.88,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 117.08,
+"end": 117.1,
+"p": 1.0
+},
+{
+"text": "caso",
+"start": 117.1,
+"end": 117.34,
+"p": 1.0
+},
+{
+"text": "fica",
+"start": 117.34,
+"end": 117.66,
+"p": 1.0
+},
+{
+"text": "ainda",
+"start": 117.66,
+"end": 117.94,
+"p": 1.0
+},
+{
+"text": "mais",
+"start": 117.94,
+"end": 118.4,
+"p": 1.0
+},
+{
+"text": "estranho.",
+"start": 118.4,
+"end": 119.04,
+"p": 1.0
+},
+{
+"text": "Nos",
+"start": 119.24,
+"end": 119.72,
+"p": 1.0
+},
+{
+"text": "dias",
+"start": 119.72,
+"end": 119.94,
+"p": 1.0
+},
+{
+"text": "seguintes,",
+"start": 119.94,
+"end": 120.6,
+"p": 1.0
+},
+{
+"text": "alguém",
+"start": 120.72,
+"end": 121.12,
+"p": 1.0
+},
+{
+"text": "continuou",
+"start": 121.12,
+"end": 121.78,
+"p": 1.0
+},
+{
+"text": "na",
+"start": 121.78,
+"end": 121.92,
+"p": 1.0
+},
+{
+"text": "fazenda.",
+"start": 121.92,
+"end": 122.4,
+"p": 1.0
+},
+{
+"text": "Os",
+"start": 122.66,
+"end": 122.98,
+"p": 1.0
+},
+{
+"text": "animais",
+"start": 122.98,
+"end": 123.42,
+"p": 1.0
+},
+{
+"text": "foram",
+"start": 123.42,
+"end": 123.62,
+"p": 1.0
+},
+{
+"text": "alimentados.",
+"start": 123.62,
+"end": 124.46,
+"p": 1.0
+},
+{
+"text": "A",
+"start": 124.66,
+"end": 124.92,
+"p": 1.0
+},
+{
+"text": "comida",
+"start": 124.92,
+"end": 125.3,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 125.3,
+"end": 125.48,
+"p": 1.0
+},
+{
+"text": "casa",
+"start": 125.48,
+"end": 125.8,
+"p": 1.0
+},
+{
+"text": "foi",
+"start": 125.8,
+"end": 126.0,
+"p": 1.0
+},
+{
+"text": "consumida.",
+"start": 126.0,
+"end": 126.7,
+"p": 1.0
+},
+{
+"text": "E",
+"start": 126.84,
+"end": 127.26,
+"p": 1.0
+},
+{
+"text": "vizinhos",
+"start": 127.26,
+"end": 127.82,
+"p": 1.0
+},
+{
+"text": "viram",
+"start": 127.82,
+"end": 128.16,
+"p": 1.0
+},
+{
+"text": "fumaça",
+"start": 128.16,
+"end": 128.82,
+"p": 1.0
+},
+{
+"text": "saindo",
+"start": 128.82,
+"end": 129.22,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 129.22,
+"end": 129.36,
+"p": 1.0
+},
+{
+"text": "chaminé.",
+"start": 129.36,
+"end": 129.82,
+"p": 1.0
+},
+{
+"text": "Só",
+"start": 130.1,
+"end": 130.74,
+"p": 1.0
+},
+{
+"text": "no",
+"start": 130.74,
+"end": 130.9,
+"p": 1.0
+},
+{
+"text": "dia",
+"start": 130.9,
+"end": 131.06,
+"p": 1.0
+},
+{
+"text": "4",
+"start": 131.06,
+"end": 131.5,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 131.5,
+"end": 131.68,
+"p": 1.0
+},
+{
+"text": "abril,",
+"start": 131.68,
+"end": 132.02,
+"p": 1.0
+},
+{
+"text": "quando",
+"start": 132.22,
+"end": 132.42,
+"p": 1.0
+},
+{
+"text": "ninguém",
+"start": 132.42,
+"end": 132.8,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 132.8,
+"end": 133.06,
+"p": 1.0
+},
+{
+"text": "família",
+"start": 133.06,
+"end": 133.42,
+"p": 1.0
+},
+{
+"text": "apareceu",
+"start": 133.42,
+"end": 133.9,
+"p": 1.0
+},
+{
+"text": "por",
+"start": 133.9,
+"end": 134.16,
+"p": 1.0
+},
+{
+"text": "dias,",
+"start": 134.16,
+"end": 134.56,
+"p": 1.0
+},
+{
+"text": "os",
+"start": 134.9,
+"end": 135.2,
+"p": 1.0
+},
+{
+"text": "vizinhos",
+"start": 135.2,
+"end": 135.62,
+"p": 1.0
+},
+{
+"text": "resolveram",
+"start": 135.62,
+"end": 136.26,
+"p": 1.0
+},
+{
+"text": "ir",
+"start": 136.26,
+"end": 136.42,
+"p": 1.0
+},
+{
+"text": "até",
+"start": 136.42,
+"end": 136.58,
+"p": 1.0
+},
+{
+"text": "lá.",
+"start": 136.58,
+"end": 136.78,
+"p": 1.0
+},
+{
+"text": "Quem",
+"start": 136.78,
+"end": 138.06,
+"p": 0.85
+},
+{
+"text": "abriu",
+"start": 138.06,
+"end": 138.36,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 138.36,
+"end": 138.5,
+"p": 0.52
+},
+{
+"text": "caminho",
+"start": 138.5,
+"end": 138.7,
+"p": 1.0
+},
+{
+"text": "foi",
+"start": 138.7,
+"end": 139.02,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 139.02,
+"end": 139.12,
+"p": 1.0
+},
+{
+"text": "vizinho,",
+"start": 139.12,
+"end": 139.62,
+"p": 1.0
+},
+{
+"text": "Lorenz",
+"start": 139.94,
+"end": 140.36,
+"p": 0.98
+},
+{
+"text": "Schlittenbauer.",
+"start": 140.36,
+"end": 141.16,
+"p": 0.97
+},
+{
+"text": "Ele",
+"start": 141.46,
+"end": 141.88,
+"p": 1.0
+},
+{
+"text": "tinha",
+"start": 141.88,
+"end": 142.1,
+"p": 1.0
+},
+{
+"text": "se",
+"start": 142.1,
+"end": 142.26,
+"p": 1.0
+},
+{
+"text": "relacionado",
+"start": 142.26,
+"end": 142.88,
+"p": 1.0
+},
+{
+"text": "com",
+"start": 142.88,
+"end": 143.04,
+"p": 1.0
+},
+{
+"text": "Viktoria",
+"start": 143.04,
+"end": 143.4,
+"p": 0.88
+},
+{
+"text": "e",
+"start": 143.4,
+"end": 143.88,
+"p": 0.99
+},
+{
+"text": "dizia",
+"start": 143.88,
+"end": 144.22,
+"p": 1.0
+},
+{
+"text": "ser",
+"start": 144.22,
+"end": 144.42,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 144.42,
+"end": 144.56,
+"p": 1.0
+},
+{
+"text": "pai",
+"start": 144.56,
+"end": 144.78,
+"p": 1.0
+},
+{
+"text": "do",
+"start": 144.78,
+"end": 144.92,
+"p": 1.0
+},
+{
+"text": "pequeno",
+"start": 144.92,
+"end": 145.26,
+"p": 1.0
+},
+{
+"text": "Josef.",
+"start": 145.26,
+"end": 145.78,
+"p": 0.75
+},
+{
+"text": "E",
+"start": 146.0,
+"end": 146.4,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 146.4,
+"end": 146.48,
+"p": 1.0
+},
+{
+"text": "comportamento",
+"start": 146.48,
+"end": 147.2,
+"p": 1.0
+},
+{
+"text": "dele",
+"start": 147.2,
+"end": 147.56,
+"p": 1.0
+},
+{
+"text": "chamou",
+"start": 147.56,
+"end": 148.08,
+"p": 1.0
+},
+{
+"text": "atenção.",
+"start": 148.08,
+"end": 148.44,
+"p": 0.66
+},
+{
+"text": "Ele",
+"start": 148.92,
+"end": 149.3,
+"p": 1.0
+},
+{
+"text": "conhecia",
+"start": 149.3,
+"end": 149.82,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 149.82,
+"end": 149.98,
+"p": 1.0
+},
+{
+"text": "casa,",
+"start": 149.98,
+"end": 150.3,
+"p": 1.0
+},
+{
+"text": "entrou",
+"start": 150.64,
+"end": 150.92,
+"p": 1.0
+},
+{
+"text": "sem",
+"start": 150.92,
+"end": 151.2,
+"p": 1.0
+},
+{
+"text": "medo",
+"start": 151.2,
+"end": 151.6,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 151.6,
+"end": 151.88,
+"p": 1.0
+},
+{
+"text": "mexeu",
+"start": 151.88,
+"end": 152.26,
+"p": 1.0
+},
+{
+"text": "nos",
+"start": 152.26,
+"end": 152.46,
+"p": 1.0
+},
+{
+"text": "corpos,",
+"start": 152.46,
+"end": 153.02,
+"p": 1.0
+},
+{
+"text": "dizendo",
+"start": 153.26,
+"end": 153.56,
+"p": 1.0
+},
+{
+"text": "que",
+"start": 153.56,
+"end": 153.72,
+"p": 1.0
+},
+{
+"text": "procurava",
+"start": 153.72,
+"end": 154.22,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 154.22,
+"end": 154.36,
+"p": 1.0
+},
+{
+"text": "filho.",
+"start": 154.36,
+"end": 154.68,
+"p": 1.0
+},
+{
+"text": "Ele",
+"start": 155.04,
+"end": 155.46,
+"p": 1.0
+},
+{
+"text": "foi",
+"start": 155.46,
+"end": 155.64,
+"p": 1.0
+},
+{
+"text": "interrogado",
+"start": 155.64,
+"end": 156.26,
+"p": 1.0
+},
+{
+"text": "várias",
+"start": 156.26,
+"end": 156.72,
+"p": 1.0
+},
+{
+"text": "vezes.",
+"start": 156.72,
+"end": 157.22,
+"p": 1.0
+},
+{
+"text": "Este",
+"start": 157.68,
+"end": 158.22,
+"p": 1.0
+},
+{
+"text": "é",
+"start": 158.22,
+"end": 158.44,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 158.44,
+"end": 158.5,
+"p": 1.0
+},
+{
+"text": "depoimento",
+"start": 158.5,
+"end": 159.0,
+"p": 1.0
+},
+{
+"text": "dele.",
+"start": 159.0,
+"end": 159.36,
+"p": 1.0
+},
+{
+"text": "Mas",
+"start": 159.6,
+"end": 160.06,
+"p": 1.0
+},
+{
+"text": "nunca",
+"start": 160.06,
+"end": 160.52,
+"p": 1.0
+},
+{
+"text": "foi",
+"start": 160.52,
+"end": 160.82,
+"p": 1.0
+},
+{
+"text": "acusado.",
+"start": 160.82,
+"end": 161.4,
+"p": 1.0
+},
+{
+"text": "Outros",
+"start": 162.22,
+"end": 162.92,
+"p": 1.0
+},
+{
+"text": "suspeitos",
+"start": 162.92,
+"end": 163.4,
+"p": 1.0
+},
+{
+"text": "apareceram.",
+"start": 163.4,
+"end": 164.18,
+"p": 1.0
+},
+{
+"text": "Até",
+"start": 164.18,
+"end": 164.78,
+"p": 0.47
+},
+{
+"text": "o",
+"start": 164.78,
+"end": 164.92,
+"p": 1.0
+},
+{
+"text": "marido",
+"start": 164.92,
+"end": 165.32,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 165.32,
+"end": 165.46,
+"p": 1.0
+},
+{
+"text": "Viktoria,",
+"start": 165.46,
+"end": 165.84,
+"p": 0.44
+},
+{
+"text": "que",
+"start": 166.1,
+"end": 166.3,
+"p": 1.0
+},
+{
+"text": "talvez",
+"start": 166.3,
+"end": 166.6,
+"p": 1.0
+},
+{
+"text": "nunca",
+"start": 166.6,
+"end": 167.08,
+"p": 1.0
+},
+{
+"text": "tivesse",
+"start": 167.08,
+"end": 167.52,
+"p": 1.0
+},
+{
+"text": "morrido",
+"start": 167.52,
+"end": 167.92,
+"p": 1.0
+},
+{
+"text": "na",
+"start": 167.92,
+"end": 168.04,
+"p": 1.0
+},
+{
+"text": "guerra.",
+"start": 168.04,
+"end": 168.36,
+"p": 1.0
+},
+{
+"text": "O",
+"start": 168.64,
+"end": 168.76,
+"p": 1.0
+},
+{
+"text": "dinheiro",
+"start": 168.76,
+"end": 169.08,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 169.08,
+"end": 169.26,
+"p": 1.0
+},
+{
+"text": "casa",
+"start": 169.26,
+"end": 169.64,
+"p": 1.0
+},
+{
+"text": "foi",
+"start": 169.64,
+"end": 169.88,
+"p": 1.0
+},
+{
+"text": "encontrado",
+"start": 169.88,
+"end": 170.38,
+"p": 1.0
+},
+{
+"text": "intacto.",
+"start": 170.38,
+"end": 171.1,
+"p": 1.0
+},
+{
+"text": "Não",
+"start": 171.3,
+"end": 171.66,
+"p": 1.0
+},
+{
+"text": "foi",
+"start": 171.66,
+"end": 171.96,
+"p": 1.0
+},
+{
+"text": "roubo.",
+"start": 171.96,
+"end": 172.3,
+"p": 1.0
+},
+{
+"text": "A",
+"start": 172.6,
+"end": 173.0,
+"p": 1.0
+},
+{
+"text": "polícia",
+"start": 173.0,
+"end": 173.32,
+"p": 1.0
+},
+{
+"text": "ofereceu",
+"start": 173.32,
+"end": 173.84,
+"p": 1.0
+},
+{
+"text": "100",
+"start": 173.84,
+"end": 174.26,
+"p": 0.99
+},
+{
+"text": "mil",
+"start": 174.26,
+"end": 174.54,
+"p": 1.0
+},
+{
+"text": "marcos",
+"start": 174.54,
+"end": 175.04,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 175.04,
+"end": 175.16,
+"p": 1.0
+},
+{
+"text": "recompensa.",
+"start": 175.16,
+"end": 175.82,
+"p": 1.0
+},
+{
+"text": "Chegou",
+"start": 176.16,
+"end": 176.62,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 176.62,
+"end": 176.72,
+"p": 1.0
+},
+{
+"text": "consultar",
+"start": 176.72,
+"end": 177.2,
+"p": 1.0
+},
+{
+"text": "videntes.",
+"start": 177.2,
+"end": 177.9,
+"p": 1.0
+},
+{
+"text": "Nada.",
+"start": 178.28,
+"end": 178.76,
+"p": 1.0
+},
+{
+"text": "Em",
+"start": 181.0,
+"end": 181.74,
+"p": 1.0
+},
+{
+"text": "1923,",
+"start": 181.74,
+"end": 182.48,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 183.04,
+"end": 183.36,
+"p": 1.0
+},
+{
+"text": "fazenda",
+"start": 183.36,
+"end": 183.86,
+"p": 0.99
+},
+{
+"text": "foi",
+"start": 183.86,
+"end": 184.1,
+"p": 1.0
+},
+{
+"text": "demolida.",
+"start": 184.1,
+"end": 184.68,
+"p": 1.0
+},
+{
+"text": "Em",
+"start": 185.1,
+"end": 185.64,
+"p": 1.0
+},
+{
+"text": "2007,",
+"start": 185.64,
+"end": 186.28,
+"p": 1.0
+},
+{
+"text": "alunos",
+"start": 186.82,
+"end": 187.36,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 187.36,
+"end": 187.46,
+"p": 1.0
+},
+{
+"text": "uma",
+"start": 187.46,
+"end": 187.58,
+"p": 1.0
+},
+{
+"text": "academia",
+"start": 187.58,
+"end": 187.92,
+"p": 0.99
+},
+{
+"text": "de",
+"start": 187.92,
+"end": 188.22,
+"p": 1.0
+},
+{
+"text": "polícia",
+"start": 188.22,
+"end": 188.64,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 188.64,
+"end": 188.78,
+"p": 1.0
+},
+{
+"text": "Baviera",
+"start": 188.78,
+"end": 189.34,
+"p": 1.0
+},
+{
+"text": "reabriram",
+"start": 189.34,
+"end": 190.22,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 190.22,
+"end": 190.36,
+"p": 1.0
+},
+{
+"text": "caso",
+"start": 190.36,
+"end": 190.72,
+"p": 1.0
+},
+{
+"text": "com",
+"start": 190.72,
+"end": 190.92,
+"p": 1.0
+},
+{
+"text": "técnicas",
+"start": 190.92,
+"end": 191.46,
+"p": 1.0
+},
+{
+"text": "modernas.",
+"start": 191.46,
+"end": 192.16,
+"p": 1.0
+},
+{
+"text": "Chegaram",
+"start": 192.16,
+"end": 193.14,
+"p": 0.77
+},
+{
+"text": "a",
+"start": 193.14,
+"end": 193.24,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 193.24,
+"end": 193.32,
+"p": 1.0
+},
+{
+"text": "suspeito",
+"start": 193.32,
+"end": 193.82,
+"p": 1.0
+},
+{
+"text": "provável,",
+"start": 193.82,
+"end": 194.5,
+"p": 1.0
+},
+{
+"text": "mas",
+"start": 194.84,
+"end": 195.52,
+"p": 1.0
+},
+{
+"text": "não",
+"start": 195.52,
+"end": 195.78,
+"p": 1.0
+},
+{
+"text": "divulgaram",
+"start": 195.78,
+"end": 196.42,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 196.42,
+"end": 196.52,
+"p": 1.0
+},
+{
+"text": "nome,",
+"start": 196.52,
+"end": 196.84,
+"p": 1.0
+},
+{
+"text": "por",
+"start": 196.88,
+"end": 197.24,
+"p": 1.0
+},
+{
+"text": "respeito",
+"start": 197.24,
+"end": 197.78,
+"p": 1.0
+},
+{
+"text": "aos",
+"start": 197.78,
+"end": 197.94,
+"p": 1.0
+},
+{
+"text": "descendentes",
+"start": 197.94,
+"end": 198.62,
+"p": 1.0
+},
+{
+"text": "que",
+"start": 198.62,
+"end": 198.86,
+"p": 1.0
+},
+{
+"text": "ainda",
+"start": 198.86,
+"end": 199.16,
+"p": 1.0
+},
+{
+"text": "vivem",
+"start": 199.16,
+"end": 199.58,
+"p": 1.0
+},
+{
+"text": "na",
+"start": 199.58,
+"end": 199.7,
+"p": 1.0
+},
+{
+"text": "região.",
+"start": 199.7,
+"end": 200.06,
+"p": 1.0
+},
+{
+"text": "Mais",
+"start": 201.42,
+"end": 202.14,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 202.14,
+"end": 202.36,
+"p": 1.0
+},
+{
+"text": "100",
+"start": 202.36,
+"end": 202.64,
+"p": 0.53
+},
+{
+"text": "anos",
+"start": 202.64,
+"end": 202.98,
+"p": 1.0
+},
+{
+"text": "depois,",
+"start": 202.98,
+"end": 203.34,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 203.74,
+"end": 203.96,
+"p": 1.0
+},
+{
+"text": "caso",
+"start": 203.96,
+"end": 204.24,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 204.24,
+"end": 204.42,
+"p": 1.0
+},
+{
+"text": "Hinterkaifeck",
+"start": 204.42,
+"end": 205.32,
+"p": 0.87
+},
+{
+"text": "continua",
+"start": 205.32,
+"end": 206.02,
+"p": 1.0
+},
+{
+"text": "sem",
+"start": 206.02,
+"end": 206.38,
+"p": 1.0
+},
+{
+"text": "solução.",
+"start": 206.38,
+"end": 206.96,
+"p": 1.0
+},
+{
+"text": "No",
+"start": 207.4,
+"end": 207.76,
+"p": 1.0
+},
+{
+"text": "lugar",
+"start": 207.76,
+"end": 208.0,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 208.0,
+"end": 208.16,
+"p": 1.0
+},
+{
+"text": "fazenda,",
+"start": 208.16,
+"end": 208.66,
+"p": 0.99
+},
+{
+"text": "hoje",
+"start": 208.94,
+"end": 209.34,
+"p": 1.0
+},
+{
+"text": "existe",
+"start": 209.34,
+"end": 209.68,
+"p": 1.0
+},
+{
+"text": "apenas",
+"start": 209.68,
+"end": 210.12,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 210.12,
+"end": 210.34,
+"p": 1.0
+},
+{
+"text": "pequeno",
+"start": 210.34,
+"end": 210.86,
+"p": 1.0
+},
+{
+"text": "memorial.",
+"start": 210.86,
+"end": 211.32,
+"p": 1.0
+},
+{
+"text": "Seis",
+"start": 212.6,
+"end": 213.32,
+"p": 0.98
+},
+{
+"text": "vidas,",
+"start": 213.32,
+"end": 213.86,
+"p": 1.0
+},
+{
+"text": "uma",
+"start": 214.08,
+"end": 214.56,
+"p": 1.0
+},
+{
+"text": "noite.",
+"start": 214.56,
+"end": 214.94,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 214.94,
+"end": 215.7,
+"p": 0.91
+},
+{
+"text": "um",
+"start": 215.7,
+"end": 215.8,
+"p": 1.0
+},
+{
+"text": "assassino",
+"start": 215.8,
+"end": 216.4,
+"p": 1.0
+},
+{
+"text": "que",
+"start": 216.4,
+"end": 216.58,
+"p": 1.0
+},
+{
+"text": "nunca",
+"start": 216.58,
+"end": 217.06,
+"p": 1.0
+},
+{
+"text": "precisou",
+"start": 217.06,
+"end": 217.64,
+"p": 1.0
+},
+{
+"text": "explicar",
+"start": 217.64,
+"end": 218.08,
+"p": 1.0
+},
+{
+"text": "onde",
+"start": 218.08,
+"end": 218.34,
+"p": 1.0
+},
+{
+"text": "estava.",
+"start": 218.34,
+"end": 218.78,
+"p": 1.0
+},
+{
+"text": "Onde",
+"start": 219.9,
+"end": 220.34,
+"p": 0.97
+},
+{
+"text": "você",
+"start": 220.34,
+"end": 220.62,
+"p": 1.0
+},
+{
+"text": "estava",
+"start": 220.62,
+"end": 221.06,
+"p": 1.0
+},
+{
+"text": "naquela",
+"start": 221.06,
+"end": 221.4,
+"p": 1.0
+},
+{
+"text": "noite?",
+"start": 221.4,
+"end": 221.76,
+"p": 1.0
+},
+{
+"text": "E",
+"start": 222.88,
+"end": 223.32,
+"p": 1.0
+},
+{
+"text": "esse",
+"start": 223.32,
+"end": 223.66,
+"p": 1.0
+},
+{
+"text": "era",
+"start": 223.66,
+"end": 224.4,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 224.4,
+"end": 224.54,
+"p": 1.0
+},
+{
+"text": "álibi.",
+"start": 224.54,
+"end": 224.88,
+"p": 0.95
+}
+]
+}
