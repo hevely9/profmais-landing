@@ -1,7 +1,7 @@
-# PACOTE DE POSTAGEM — ÁLIBI · CASO Nº 016 (v2: versão "o tribunal é você")
+# PACOTE DE POSTAGEM — ÁLIBI · CASO Nº 013 (v2: versão "o tribunal é você")
 
-**[1] Título interno:** Caso Nº 016 — Portuguesa × Flamengo (Brasileirão 2013, casos Héverton e André Santos)
-Arquivos: `entrega/ALIBI-016-Portuguesa-x-Flamengo.mp4` (≈2:30) · capa `entrega/CAPA-016.jpg`
+**[1] Título interno:** Caso Nº 013 — Portuguesa × Flamengo (Brasileirão 2013, casos Héverton e André Santos)
+Arquivos: `entrega/ALIBI-013-Portuguesa-x-Flamengo.mp4` (≈2:30) · capa `entrega/CAPA-013.jpg`
 Bordão adaptado: "Onde você estava aos 32 do segundo tempo? …cada torcida tem o seu álibi."
 
 **[2] Texto da capa:** QUEM ERA PRA CAIR? (4 palavras; "PRA CAIR?" na faixa vermelha)

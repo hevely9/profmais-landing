@@ -4,12 +4,12 @@ import palavras from "../../public/palavras-lusa.json";
 import { C, COURIER, Carimbo, Cheia, Clip, ELITE, Faixa, Foto, Fundo, Grande, MONT, Papel, Cabec, Linha, Plano, Reel, Rotulo, SANS, SOMBRA, Titulo, TituloVivo, achar, clamp, lin, mkCtx, useT } from "../kit";
 import { Ficha } from "../ui";
 
-// ÁLIBI · CASO Nº 016 — Portuguesa × Flamengo (Brasileirão 2013, casos Héverton e André Santos)
+// ÁLIBI · CASO Nº 013 — Portuguesa × Flamengo (Brasileirão 2013, casos Héverton e André Santos)
 // Tom neutro: os dois lados falam, nada de acusação. Fontes: STJD (16 e 27/12/2013), MP-SP (inquérito arquivado sem provas).
 const words = (palavras as { words: { text: string; start: number; end: number }[] }).words;
 const w = achar(words);
 export const ctx = mkCtx({
-  caso: "Nº 016", audio: "lusa", words, lead: 0.1, fimVozRaw: 146.38, final: "alibi", proximo: "NO PERFIL",
+  caso: "Nº 013", audio: "lusa", words, lead: 0.1, fimVozRaw: 146.38, final: "alibi", proximo: "NO PERFIL",
   cta: ["Quem tem razão?", "defende o seu time: FLA · LUSA · FLU ↓"],
   chave: /^(flamengo|portuguesa|héverton|andré|santos|suspenso|suspensão|tribunal|45|46|44|13|rebaixada|arquivado|fluminense|dinheiro|b|d|regra|mesa|você|time)$/i,
   semLegenda: [[138.0, 160]],
