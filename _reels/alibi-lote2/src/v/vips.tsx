@@ -24,7 +24,7 @@ export const Vips: React.FC = () => (
   <Reel ctx={ctx}>
     {/* GANCHO — avião da Gol entrando com impacto, decolagem ao fundo, texto com a voz */}
     <Plano r={[-0.1, 2.4]} forte>
-      <Foto src="v-gol" fundo="c7031" alt={{ clip: "c7031" }} r={[-0.1, 2.4]} credito="Ecliptics · CC BY-SA 4.0" top={560} w={960} h={600} zoom={[1.0, 1.15]} cinza />
+      <Foto src="v-r-piloto" fundo="c7031" r={[-0.1, 2.4]} credito="Reprodução · doc. “VIPs – Histórias Reais de um Mentiroso”" top={540} w={760} h={780} zoom={[1.0, 1.12]} pos="40% 30%" />
       <TituloVivo top={170} size={82} destaque="GOL" linhas={[[["ELE", 0], ["FINGIU", 0.16], ["SER", 0.78]], [["FILHO", 1.02], ["DO", 1.42], ["DONO", 1.62]], [["DA", 1.96], ["GOL", 2.1]]]} />
     </Plano>
     <Plano r={[2.4, 4.8]}>
@@ -41,7 +41,7 @@ export const Vips: React.FC = () => (
       <Titulo r={w("camarote") - 0.1} top={360} size={104}>CAMAROTE VIP</Titulo>
       <Rotulo r={w("rapaz") - 0.1} texto="aparece um rapaz de 24 anos" top={510} size={40} />
     </Plano>
-    <Plano r={[10.9, 13.2]}><Cracha r={11.0} /></Plano>
+    <Plano r={[10.9, 13.2]}><Cracha r={11.0} foto="v-r-piloto" /></Plano>
     <Plano r={[13.2, 16.5]}>
       <Foto src="v-gol2" alt={{ clip: "c27989", from: 5 }} r={[13.2, 16.5]} credito="Halley Pacheco de Oliveira · CC BY-SA 3.0" top={460} w={960} h={640} zoom={[1.05, 1.2]} cinza />
       <Faixa r={w("herdeiro") - 0.1} texto="O HERDEIRO" top={250} size={84} />
@@ -58,7 +58,7 @@ export const Vips: React.FC = () => (
       <Rotulo r={w("empresários") - 0.05} texto="EMPRESÁRIOS" top={520} size={66} />
     </Plano>
     <Plano r={[21.3, 24.4]}>
-      <Foto src="v-amaury" alt={{ clip: "c22998" }} r={[21.3, 24.4]} credito="Sérgio Savarese · CC BY 2.0" top={430} w={940} h={700} zoom={[1.0, 1.12]} cinza />
+      <Foto src="v-r-amaury" r={[21.3, 24.4]} credito="Reprodução · Programa Amaury Jr." top={460} w={980} h={620} zoom={[1.0, 1.12]} pos="30% 40%" />
       <Titulo r={w("amaury") - 0.1} top={190} size={84}>AMAURY JR.</Titulo>
       <Faixa r={w("entrevistou") - 0.1} texto="ENTREVISTOU O “HERDEIRO”" top={1150} size={54} />
     </Plano>
@@ -68,20 +68,20 @@ export const Vips: React.FC = () => (
       <Rotulo r={w("bordo") - 0.5} texto="com o apresentador a bordo" top={580} size={40} />
     </Plano>
     <Plano r={[28.0, 30.5]}>
-      <Cracha r={27.0} falso={w("constantino", 1) - 0.1} />
+      <Cracha r={27.0} falso={w("constantino", 1) - 0.1} foto="v-r-piloto" />
       <Carimbo r={w("não") - 0.02} texto="FALSO" y={930} rot={-10} size={150} />
     </Plano>
     <Plano r={[30.5, 32.9]}>
-      <Ficha sup="IDENTIDADE REAL" nome="MARCELO NASCIMENTO DA ROCHA" linhas={[[31.6, "— 24 anos"], [33.0, "— de Maringá (PR)"]]} />
+      <Ficha sup="IDENTIDADE REAL" nome="MARCELO NASCIMENTO DA ROCHA" foto="v-r-hoje" credito="foto: reprodução (anos depois)" linhas={[[31.6, "— 24 anos em 2001"], [33.0, "— de Maringá (PR)"]]} />
     </Plano>
     <Plano r={[32.9, 34.4]}>
       <Cheia src="v-maringa" alt={{ clip: "c4330" }} r={[32.9, 34.4]} credito="Luwikii2 · CC BY-SA 4.0" zoom={[1.05, 1.15]} a={0.4} />
       <Titulo r={32.95} top={380} size={110}>MARINGÁ · PR</Titulo>
     </Plano>
     <Plano r={[34.4, 37.9]}>
-      <Clip src="c47803" r0={34.4} dur={3.5} a={0.45} />
-      <Titulo r={w("polícia") - 0.1} top={360} size={90}>POLÍCIA FEDERAL</Titulo>
-      <Carimbo r={w("prendeu") - 0.02} texto="PRESO · 2001" y={820} rot={-7} size={96} />
+      <Foto src="v-r-preso" r={[34.4, 37.9]} credito="Reprodução · Band (uma das prisões de Marcelo)" top={460} w={980} h={620} zoom={[1.05, 1.2]} pos="55% 30%" cinza />
+      <Titulo r={w("polícia") - 0.1} top={230} size={90}>POLÍCIA FEDERAL</Titulo>
+      <Carimbo r={w("prendeu") - 0.02} texto="PRESO · 2001" y={1150} rot={-7} size={90} />
     </Plano>
     <Plano r={[37.9, 40.3]}>
       <Fundo cor={C.preto} />
@@ -114,10 +114,7 @@ export const Vips: React.FC = () => (
     </Plano>
     <Plano r={[54.0, 56.6]}>
       <Fundo />
-      <Papel top={560} h={400} rot={-1}>
-        <Cabec sup="MARCELO NASCIMENTO DA ROCHA" titulo="1976 – 2025" />
-        <Linha r={54.9} texto="morreu em dezembro de 2025" size={36} />
-      </Papel>
+      <Ficha sup="1976 – 2025" nome="MARCELO NASCIMENTO DA ROCHA" foto="v-r-hoje" credito="foto: reprodução" linhas={[[54.9, "— morreu em dezembro de 2025"]]} top={420} />
     </Plano>
     <Plano r={[56.6, 58.9]}>
       <Fundo />

@@ -114,3 +114,7 @@ Referência: `_reels/basa-acredita-maria-alice` (assessora de crédito Maria Ali
   Real-ESRGAN animevideov3 em ONNX (HF `Tomoali/realesr-animevideov3-onnx`, BSD), com transferência de detalhe
   (mantém a cor do original e soma só a nitidez) — scripts em `_reels/roblox-teste/ferramentas/` (modelo baixado do HF para o scratchpad).
   Exportar este formato a ~3,8 Mbps (cenas muito coloridas/animadas comprimem pior).
+- **Pedido 20/11 — fotos reais de pessoas:** em vídeos sobre pessoas, colocar a foto real delas sempre que possível ("as pessoas
+  pensam: eu já vi esse cara"). Sem foto livre, usar reprodução de reportagem/entrevista (miniaturas do YouTube via i.ytimg.com),
+  recortada sem letreiros, ampliada e com crédito "Reprodução · veículo". Aplicado no Caso 012 (Marcelo VIPs): gancho, crachá,
+  Amaury Jr., ficha, prisão e capa com o rosto real. O YouTube bloqueia download de vídeo aqui (pede login); miniaturas funcionam.

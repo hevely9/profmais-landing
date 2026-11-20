@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Easing } from "remotion";
+import { AbsoluteFill, Easing, Img, staticFile } from "remotion";
 import { C, COURIER, ELITE, MONT, SANS, SOMBRA, lin, useT } from "./kit";
 
 // ── peças gráficas do lote 2 ──
@@ -27,7 +27,7 @@ export const Cursor: React.FC<{ r: number; x: [number, number]; y: [number, numb
 };
 
 // crachá VIP do "herdeiro" (reconstituição)
-export const Cracha: React.FC<{ r: number; falso?: number }> = ({ r, falso }) => {
+export const Cracha: React.FC<{ r: number; falso?: number; foto?: string }> = ({ r, falso, foto }) => {
   const { t, o } = useT();
   const k = lin(t, o(r) - 0.1, o(r) + 0.35, Easing.out(Easing.back(1.5)));
   const balanco = Math.sin((t - o(r)) * 2.2) * 3;
@@ -38,7 +38,8 @@ export const Cracha: React.FC<{ r: number; falso?: number }> = ({ r, falso }) =>
     <div style={{ position: "absolute", left: 220, top: 400, width: 640, height: 820, borderRadius: 30, background: "linear-gradient(160deg, #F4EBD3, #D9C9A0)", boxShadow: "0 40px 90px rgba(0,0,0,0.9)", transform: `translateY(${(1 - k) * -500}px) rotate(${balanco}deg)`, transformOrigin: "50% -40%", overflow: "hidden" }}>
       <div style={{ height: 150, background: "#111", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: MONT, fontWeight: 800, fontSize: 92, letterSpacing: "0.2em", color: "#E7C873" }}>VIP</div>
       <div style={{ margin: "50px auto 0", width: 230, height: 290, background: "#CFC7B3", border: "4px solid #1A1714", position: "relative", overflow: "hidden" }}>
-        <svg viewBox="0 0 100 126" style={{ position: "absolute", left: 0, bottom: 0, width: "100%" }}><path d="M30 42 a20 21 0 1 0 40 0 a20 21 0 1 0 -40 0 Z M12 126 C14 94 30 80 50 80 C70 80 86 94 88 126 Z" fill="#2A2622" /></svg>
+        {foto ? <Img src={staticFile(`img/${foto}.jpg`)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "35% 25%", filter: "grayscale(0.3) contrast(1.1)" }} />
+          : <svg viewBox="0 0 100 126" style={{ position: "absolute", left: 0, bottom: 0, width: "100%" }}><path d="M30 42 a20 21 0 1 0 40 0 a20 21 0 1 0 -40 0 Z M12 126 C14 94 30 80 50 80 C70 80 86 94 88 126 Z" fill="#2A2622" /></svg>}
       </div>
       <div style={{ textAlign: "center", marginTop: 34, fontFamily: MONT, fontWeight: 800, fontSize: 48, color: C.tinta, lineHeight: 1.05, position: "relative" }}>HENRIQUE<br />CONSTANTINO
         {riscado > 0 && <div style={{ position: "absolute", left: 40, top: "50%", height: 12, width: `${riscado * 82}%`, background: C.lacre, transform: "rotate(-8deg)" }} />}
@@ -59,7 +60,7 @@ export const Flashes: React.FC<{ r: number; n?: number }> = ({ r, n = 6 }) => {
   })}</>;
 };
 // ficha com silhueta (quando não há foto livre da pessoa)
-export const Ficha: React.FC<{ nome: string; sup?: string; linhas?: [number, string][]; tremor?: boolean; top?: number }> = ({ nome, sup = "FICHA", linhas = [], tremor, top = 330 }) => {
+export const Ficha: React.FC<{ nome: string; sup?: string; linhas?: [number, string][]; tremor?: boolean; top?: number; foto?: string; credito?: string }> = ({ nome, sup = "FICHA", linhas = [], tremor, top = 330, foto, credito }) => {
   const { t, o } = useT();
   const tr = tremor ? Math.sin(t * 50) * 3 : 0;
   return <>
@@ -67,9 +68,10 @@ export const Ficha: React.FC<{ nome: string; sup?: string; linhas?: [number, str
     <div style={{ position: "absolute", left: 90, right: 90, top, padding: "40px 46px", background: C.papel, boxShadow: "0 30px 80px rgba(0,0,0,0.85)", transform: `rotate(-1.2deg) translateX(${tr}px)` }}>
       <div style={{ fontFamily: COURIER, fontSize: 26, letterSpacing: "0.16em", color: C.tinta, opacity: 0.7 }}>{sup}</div>
       <div style={{ display: "flex", gap: 34, marginTop: 20, alignItems: "flex-start" }}>
-        <div style={{ width: 250, height: 320, flexShrink: 0, background: "#CFC7B3", border: `3px solid ${C.tinta}`, position: "relative", overflow: "hidden", backgroundImage: "repeating-linear-gradient(0deg, rgba(26,23,20,0.25) 0 2px, transparent 2px 40px)" }}>
+        <div style={{ width: foto ? 360 : 250, height: foto ? 460 : 320, flexShrink: 0, background: "#CFC7B3", border: `3px solid ${C.tinta}`, position: "relative", overflow: "hidden", backgroundImage: "repeating-linear-gradient(0deg, rgba(26,23,20,0.25) 0 2px, transparent 2px 40px)" }}>
+          {foto ? <Img src={staticFile(`img/${foto}.jpg`)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 25%", filter: "grayscale(0.85) contrast(1.15)" }} /> : <>
           <svg viewBox="0 0 100 126" style={{ position: "absolute", left: 0, bottom: 0, width: "100%" }}><path d="M30 42 a20 21 0 1 0 40 0 a20 21 0 1 0 -40 0 Z M12 126 C14 94 30 80 50 80 C70 80 86 94 88 126 Z" fill="#2A2622" /></svg>
-          <div style={{ position: "absolute", left: 0, right: 0, bottom: 6, textAlign: "center", fontFamily: COURIER, fontSize: 15, color: "#E4DDCB" }}>silhueta ilustrativa</div>
+          <div style={{ position: "absolute", left: 0, right: 0, bottom: 6, textAlign: "center", fontFamily: COURIER, fontSize: 15, color: "#E4DDCB" }}>silhueta ilustrativa</div></>}
         </div>
         <div style={{ flex: 1 }}>
           <div style={{ fontFamily: MONT, fontWeight: 800, fontSize: 54, lineHeight: 1.05, color: C.tinta }}>{nome}</div>
@@ -80,6 +82,7 @@ export const Ficha: React.FC<{ nome: string; sup?: string; linhas?: [number, str
           })}
         </div>
       </div>
+      {credito && <div style={{ fontFamily: COURIER, fontSize: 18, color: C.tinta, opacity: 0.6, marginTop: 14 }}>{credito}</div>}
     </div>
   </>;
 };

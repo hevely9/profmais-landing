@@ -45,6 +45,7 @@ sem acelerar o áudio, frases curtas). Orçamento até 2.500 créditos por víde
 - Corte a cada 3–5 s (componente `Plano`); Ken Burns em toda foto; nada parado > 4 s.
 - Legenda: Inter 800, 56 px, máx. 3 palavras, chave em #E0353F, faixa y 1320–1480, margem direita 170 px (botões do app).
 - Tela final (últimos ~3 s): ÁLIBI + "PRÓXIMO CASO" + "SEGUE O ÁLIBI" (nunca prometer dia/hora).
+- **Pessoas reais: sempre que possível, mostrar a FOTO REAL da pessoa** (pedido do usuário, 20/11 — "gera curiosidade, as pessoas pensam: eu já vi esse cara"). Ordem: foto com licença livre (Commons/FBI/Agência Brasil); se não houver, reprodução de reportagem/entrevista (ex.: miniatura do YouTube em `i.ytimg.com/vi/<id>/maxresdefault.jpg`), recortada sem letreiros, melhorada com o upscaler e com crédito "Reprodução · <veículo>". Nunca rosto gerado por IA; nada de vítimas menores.
 - Imagens só reais e licenciadas (Commons/FBI/Agência Brasil) com crédito; **conferir se a imagem baixada é mesmo o que o
   nome diz** (já veio carta no lugar de quadro). Wikimedia: miniaturas 1920/960 px sem `?utm`.
 - Exportar: `-profile:v high -level:v 4.1 -pix_fmt yuv420p -movflags +faststart`, -14 LUFS, < 50 MB.
