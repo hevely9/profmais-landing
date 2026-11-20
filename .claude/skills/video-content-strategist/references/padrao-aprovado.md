@@ -118,3 +118,8 @@ Referência: `_reels/basa-acredita-maria-alice` (assessora de crédito Maria Ali
   pensam: eu já vi esse cara"). Sem foto livre, usar reprodução de reportagem/entrevista (miniaturas do YouTube via i.ytimg.com),
   recortada sem letreiros, ampliada e com crédito "Reprodução · veículo". Aplicado no Caso 012 (Marcelo VIPs): gancho, crachá,
   Amaury Jr., ficha, prisão e capa com o rosto real. O YouTube bloqueia download de vídeo aqui (pede login); miniaturas funcionam.
+
+### ÁLIBI — caso 016 Portuguesa × Flamengo (20/11)
+- Tema de torcida = "forçar" comentários, mas sem atacar nenhum lado: versões da Lusa, do Flamengo e do Fluminense com o
+  mesmo peso, "o tribunal é você", "defende o seu time nos comentários". Pode ir até 2:30 e gastar mais créditos.
+- Bordão adaptado ao caso (sem dia/noite): "Onde você estava aos 32 do segundo tempo? …cada torcida tem o seu álibi."

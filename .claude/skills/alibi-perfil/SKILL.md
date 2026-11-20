@@ -29,6 +29,13 @@ e) **Laço aberto no meio**: "mas o detalhe que entregou ele foi outro…".
 f) **Final** = revelação → assinatura curta da marca "Onde você estava naquela noite? …e esse era o álibi." (decisão do
    usuário, mantida) → **CTA que puxa o próximo caso**: "Próximo caso no perfil. Segue o Álibi." (sem prometer dia nem hora)
    O CTA vai na voz (roteiros novos) e também na tela final.
+   **Bordão adaptável (decisão do usuário, 20/11):** quando o caso permitir, adaptar a assinatura à realidade do vídeo de um
+   jeito interessante, sem só trocar "noite" por "dia"/"tarde". Mantém o "Onde você estava…" e o "álibi". Ex. (caso 016,
+   futebol): "Onde você estava aos 32 do segundo tempo? …cada torcida tem o seu álibi."
+j) **Vídeos de polêmica/torcida (ex.: futebol, caso 016)**: objetivo = comentário. Dar a CADA lado a sua "versão" com o
+   mesmo peso (um bloco por torcida, com as cores do clube), nunca acusar, e fechar com "o tribunal é você" + pergunta
+   binária + "defende o seu time nos comentários". Comentário fixado e respostas prontas que fazem o "advogado do diabo"
+   para os dois lados (sem atacar ninguém). Nesses temas o usuário aceita mais duração (até 2:30) e mais créditos.
 g) **Temas**: golpes, roubos, fugas, investigações, casos resolvidos por um detalhe, mistérios.
    **Evitar**: violência gráfica, massacres, vítimas crianças, corpos/sangue. Respeito às vítimas; nunca glamourizar o criminoso.
 h) **Conteúdo original**: narração e montagem próprias, imagens transformadas (zoom, recorte, texto). Nada de trechos longos
