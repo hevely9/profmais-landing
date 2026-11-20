@@ -1,0 +1,1186 @@
+{
+"words": [
+{
+"text": "Uma",
+"start": 0.0,
+"end": 0.22,
+"p": 0.75
+},
+{
+"text": "juíza",
+"start": 0.22,
+"end": 0.64,
+"p": 0.99
+},
+{
+"text": "do",
+"start": 0.64,
+"end": 0.84,
+"p": 1.0
+},
+{
+"text": "Acre",
+"start": 0.84,
+"end": 1.2,
+"p": 1.0
+},
+{
+"text": "parou",
+"start": 1.2,
+"end": 1.52,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 1.52,
+"end": 1.66,
+"p": 1.0
+},
+{
+"text": "esquema",
+"start": 1.66,
+"end": 2.04,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 2.04,
+"end": 2.26,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 2.26,
+"end": 2.66,
+"p": 0.5
+},
+{
+"text": "milhão",
+"start": 2.66,
+"end": 3.2,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 3.2,
+"end": 3.38,
+"p": 1.0
+},
+{
+"text": "brasileiros.",
+"start": 3.38,
+"end": 4.1,
+"p": 1.0
+},
+{
+"text": "2013.",
+"start": 4.64,
+"end": 5.32,
+"p": 0.43
+},
+{
+"text": "Em",
+"start": 5.86,
+"end": 6.34,
+"p": 1.0
+},
+{
+"text": "todo",
+"start": 6.34,
+"end": 6.54,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 6.54,
+"end": 6.7,
+"p": 1.0
+},
+{
+"text": "país,",
+"start": 6.7,
+"end": 6.94,
+"p": 1.0
+},
+{
+"text": "muita",
+"start": 7.24,
+"end": 7.7,
+"p": 1.0
+},
+{
+"text": "gente",
+"start": 7.7,
+"end": 8.04,
+"p": 1.0
+},
+{
+"text": "colocou",
+"start": 8.04,
+"end": 8.48,
+"p": 1.0
+},
+{
+"text": "as",
+"start": 8.48,
+"end": 8.62,
+"p": 1.0
+},
+{
+"text": "economias",
+"start": 8.62,
+"end": 9.16,
+"p": 1.0
+},
+{
+"text": "na",
+"start": 9.16,
+"end": 9.32,
+"p": 1.0
+},
+{
+"text": "Telexfree.",
+"start": 9.32,
+"end": 9.9,
+"p": 0.91
+},
+{
+"text": "A",
+"start": 10.12,
+"end": 10.56,
+"p": 1.0
+},
+{
+"text": "promessa",
+"start": 10.56,
+"end": 10.92,
+"p": 1.0
+},
+{
+"text": "parecia",
+"start": 10.92,
+"end": 11.34,
+"p": 1.0
+},
+{
+"text": "simples.",
+"start": 11.34,
+"end": 11.84,
+"p": 1.0
+},
+{
+"text": "Você",
+"start": 12.2,
+"end": 12.54,
+"p": 1.0
+},
+{
+"text": "comprava",
+"start": 12.54,
+"end": 12.96,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 12.96,
+"end": 13.04,
+"p": 1.0
+},
+{
+"text": "pacote,",
+"start": 13.04,
+"end": 13.56,
+"p": 1.0
+},
+{
+"text": "postava",
+"start": 13.8,
+"end": 14.2,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 14.2,
+"end": 14.32,
+"p": 1.0
+},
+{
+"text": "anúncio",
+"start": 14.32,
+"end": 14.72,
+"p": 1.0
+},
+{
+"text": "por",
+"start": 14.72,
+"end": 14.98,
+"p": 1.0
+},
+{
+"text": "dia",
+"start": 14.98,
+"end": 15.14,
+"p": 1.0
+},
+{
+"text": "na",
+"start": 15.14,
+"end": 15.28,
+"p": 1.0
+},
+{
+"text": "internet",
+"start": 15.28,
+"end": 15.82,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 15.82,
+"end": 16.3,
+"p": 0.98
+},
+{
+"text": "recebia",
+"start": 16.3,
+"end": 16.74,
+"p": 1.0
+},
+{
+"text": "em",
+"start": 16.74,
+"end": 16.84,
+"p": 0.99
+},
+{
+"text": "dólar,",
+"start": 16.84,
+"end": 17.26,
+"p": 1.0
+},
+{
+"text": "toda",
+"start": 17.38,
+"end": 17.86,
+"p": 1.0
+},
+{
+"text": "semana.",
+"start": 17.86,
+"end": 18.22,
+"p": 1.0
+},
+{
+"text": "A",
+"start": 18.62,
+"end": 18.94,
+"p": 1.0
+},
+{
+"text": "empresa",
+"start": 18.94,
+"end": 19.26,
+"p": 1.0
+},
+{
+"text": "dizia",
+"start": 19.26,
+"end": 19.66,
+"p": 1.0
+},
+{
+"text": "vender",
+"start": 19.66,
+"end": 19.94,
+"p": 1.0
+},
+{
+"text": "planos",
+"start": 19.94,
+"end": 20.44,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 20.44,
+"end": 20.56,
+"p": 1.0
+},
+{
+"text": "telefone",
+"start": 20.56,
+"end": 21.06,
+"p": 1.0
+},
+{
+"text": "pela",
+"start": 21.06,
+"end": 21.28,
+"p": 1.0
+},
+{
+"text": "internet.",
+"start": 21.28,
+"end": 21.74,
+"p": 1.0
+},
+{
+"text": "Mas,",
+"start": 22.14,
+"end": 22.58,
+"p": 1.0
+},
+{
+"text": "segundo",
+"start": 22.76,
+"end": 22.98,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 22.98,
+"end": 23.12,
+"p": 1.0
+},
+{
+"text": "Justiça,",
+"start": 23.12,
+"end": 23.64,
+"p": 0.88
+},
+{
+"text": "não",
+"start": 23.88,
+"end": 24.04,
+"p": 1.0
+},
+{
+"text": "era",
+"start": 24.04,
+"end": 24.18,
+"p": 1.0
+},
+{
+"text": "isso",
+"start": 24.18,
+"end": 24.52,
+"p": 1.0
+},
+{
+"text": "que",
+"start": 24.52,
+"end": 24.66,
+"p": 0.99
+},
+{
+"text": "atraía",
+"start": 24.66,
+"end": 24.98,
+"p": 0.98
+},
+{
+"text": "as",
+"start": 24.98,
+"end": 25.14,
+"p": 1.0
+},
+{
+"text": "pessoas.",
+"start": 25.14,
+"end": 25.52,
+"p": 1.0
+},
+{
+"text": "Era",
+"start": 25.78,
+"end": 26.16,
+"p": 1.0
+},
+{
+"text": "ganhar",
+"start": 26.16,
+"end": 26.54,
+"p": 1.0
+},
+{
+"text": "com",
+"start": 26.54,
+"end": 26.84,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 26.84,
+"end": 26.92,
+"p": 1.0
+},
+{
+"text": "entrada",
+"start": 26.92,
+"end": 27.28,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 27.28,
+"end": 27.48,
+"p": 1.0
+},
+{
+"text": "novos",
+"start": 27.48,
+"end": 27.86,
+"p": 1.0
+},
+{
+"text": "membros.",
+"start": 27.86,
+"end": 28.4,
+"p": 1.0
+},
+{
+"text": "Em",
+"start": 28.4,
+"end": 28.98,
+"p": 1.0
+},
+{
+"text": "junho,",
+"start": 28.98,
+"end": 29.42,
+"p": 1.0
+},
+{
+"text": "uma",
+"start": 29.62,
+"end": 29.84,
+"p": 1.0
+},
+{
+"text": "ação",
+"start": 29.84,
+"end": 30.12,
+"p": 1.0
+},
+{
+"text": "do",
+"start": 30.12,
+"end": 30.26,
+"p": 1.0
+},
+{
+"text": "Ministério",
+"start": 30.26,
+"end": 30.72,
+"p": 1.0
+},
+{
+"text": "Público",
+"start": 30.72,
+"end": 31.18,
+"p": 1.0
+},
+{
+"text": "do",
+"start": 31.18,
+"end": 31.3,
+"p": 1.0
+},
+{
+"text": "Acre",
+"start": 31.3,
+"end": 31.64,
+"p": 1.0
+},
+{
+"text": "chegou",
+"start": 31.64,
+"end": 31.98,
+"p": 0.99
+},
+{
+"text": "à",
+"start": 31.98,
+"end": 32.1,
+"p": 0.94
+},
+{
+"text": "juíza",
+"start": 32.1,
+"end": 32.46,
+"p": 1.0
+},
+{
+"text": "Thaís",
+"start": 32.46,
+"end": 32.86,
+"p": 0.79
+},
+{
+"text": "Khalil,",
+"start": 32.86,
+"end": 33.28,
+"p": 0.8
+},
+{
+"text": "de",
+"start": 33.42,
+"end": 33.48,
+"p": 1.0
+},
+{
+"text": "Rio",
+"start": 33.48,
+"end": 33.66,
+"p": 1.0
+},
+{
+"text": "Branco.",
+"start": 33.66,
+"end": 34.06,
+"p": 1.0
+},
+{
+"text": "Ela",
+"start": 34.36,
+"end": 34.64,
+"p": 1.0
+},
+{
+"text": "mandou",
+"start": 34.64,
+"end": 34.94,
+"p": 1.0
+},
+{
+"text": "parar",
+"start": 34.94,
+"end": 35.22,
+"p": 1.0
+},
+{
+"text": "tudo.",
+"start": 35.22,
+"end": 35.76,
+"p": 1.0
+},
+{
+"text": "Sem",
+"start": 36.06,
+"end": 36.42,
+"p": 0.99
+},
+{
+"text": "novos",
+"start": 36.42,
+"end": 36.74,
+"p": 1.0
+},
+{
+"text": "cadastros,",
+"start": 36.74,
+"end": 37.38,
+"p": 1.0
+},
+{
+"text": "sem",
+"start": 37.6,
+"end": 37.86,
+"p": 1.0
+},
+{
+"text": "pagamentos,",
+"start": 37.86,
+"end": 38.52,
+"p": 1.0
+},
+{
+"text": "no",
+"start": 38.68,
+"end": 38.88,
+"p": 1.0
+},
+{
+"text": "Brasil",
+"start": 38.88,
+"end": 39.3,
+"p": 1.0
+},
+{
+"text": "inteiro.",
+"start": 39.3,
+"end": 39.9,
+"p": 1.0
+},
+{
+"text": "A",
+"start": 40.28,
+"end": 40.62,
+"p": 1.0
+},
+{
+"text": "multa?",
+"start": 40.62,
+"end": 41.0,
+"p": 1.0
+},
+{
+"text": "500",
+"start": 41.2,
+"end": 41.86,
+"p": 0.58
+},
+{
+"text": "mil",
+"start": 41.86,
+"end": 42.24,
+"p": 1.0
+},
+{
+"text": "reais",
+"start": 42.24,
+"end": 42.58,
+"p": 1.0
+},
+{
+"text": "por",
+"start": 42.58,
+"end": 42.98,
+"p": 1.0
+},
+{
+"text": "dia.",
+"start": 42.98,
+"end": 43.32,
+"p": 1.0
+},
+{
+"text": "Divulgadores",
+"start": 43.8,
+"end": 44.4,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 44.4,
+"end": 44.62,
+"p": 1.0
+},
+{
+"text": "vários",
+"start": 44.62,
+"end": 44.98,
+"p": 1.0
+},
+{
+"text": "estados",
+"start": 44.98,
+"end": 45.58,
+"p": 1.0
+},
+{
+"text": "viajaram",
+"start": 45.58,
+"end": 46.24,
+"p": 1.0
+},
+{
+"text": "até",
+"start": 46.24,
+"end": 46.44,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 46.44,
+"end": 46.62,
+"p": 1.0
+},
+{
+"text": "Acre",
+"start": 46.62,
+"end": 46.92,
+"p": 1.0
+},
+{
+"text": "para",
+"start": 46.92,
+"end": 47.06,
+"p": 0.99
+},
+{
+"text": "protestar.",
+"start": 47.06,
+"end": 47.72,
+"p": 1.0
+},
+{
+"text": "Mas",
+"start": 48.5,
+"end": 48.84,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 48.84,
+"end": 48.96,
+"p": 1.0
+},
+{
+"text": "decisão",
+"start": 48.96,
+"end": 49.38,
+"p": 1.0
+},
+{
+"text": "foi",
+"start": 49.38,
+"end": 49.56,
+"p": 1.0
+},
+{
+"text": "mantida.",
+"start": 49.56,
+"end": 50.08,
+"p": 1.0
+},
+{
+"text": "E",
+"start": 50.24,
+"end": 50.58,
+"p": 1.0
+},
+{
+"text": "até",
+"start": 50.58,
+"end": 50.78,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 50.78,
+"end": 50.9,
+"p": 1.0
+},
+{
+"text": "perícia",
+"start": 50.9,
+"end": 51.32,
+"p": 1.0
+},
+{
+"text": "contratada",
+"start": 51.32,
+"end": 51.94,
+"p": 1.0
+},
+{
+"text": "pela",
+"start": 51.94,
+"end": 52.16,
+"p": 1.0
+},
+{
+"text": "própria",
+"start": 52.16,
+"end": 52.64,
+"p": 1.0
+},
+{
+"text": "defesa",
+"start": 52.64,
+"end": 53.22,
+"p": 0.98
+},
+{
+"text": "apontou",
+"start": 53.22,
+"end": 53.78,
+"p": 1.0
+},
+{
+"text": "características",
+"start": 53.78,
+"end": 54.42,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 54.42,
+"end": 54.72,
+"p": 1.0
+},
+{
+"text": "pirâmide.",
+"start": 54.72,
+"end": 55.3,
+"p": 1.0
+},
+{
+"text": "Nos",
+"start": 55.3,
+"end": 55.92,
+"p": 0.99
+},
+{
+"text": "Estados",
+"start": 55.92,
+"end": 56.24,
+"p": 1.0
+},
+{
+"text": "Unidos,",
+"start": 56.24,
+"end": 56.66,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 56.94,
+"end": 57.12,
+"p": 1.0
+},
+{
+"text": "dos",
+"start": 57.12,
+"end": 57.32,
+"p": 1.0
+},
+{
+"text": "donos",
+"start": 57.32,
+"end": 57.66,
+"p": 1.0
+},
+{
+"text": "foi",
+"start": 57.66,
+"end": 57.82,
+"p": 1.0
+},
+{
+"text": "condenado",
+"start": 57.82,
+"end": 58.32,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 58.32,
+"end": 58.46,
+"p": 1.0
+},
+{
+"text": "seis",
+"start": 58.46,
+"end": 58.76,
+"p": 0.85
+},
+{
+"text": "anos",
+"start": 58.76,
+"end": 59.08,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 59.08,
+"end": 59.26,
+"p": 1.0
+},
+{
+"text": "prisão.",
+"start": 59.26,
+"end": 59.64,
+"p": 1.0
+},
+{
+"text": "O",
+"start": 59.86,
+"end": 60.18,
+"p": 1.0
+},
+{
+"text": "outro",
+"start": 60.18,
+"end": 60.42,
+"p": 1.0
+},
+{
+"text": "fugiu,",
+"start": 60.42,
+"end": 60.88,
+"p": 1.0
+},
+{
+"text": "para",
+"start": 60.9,
+"end": 61.4,
+"p": 0.93
+},
+{
+"text": "o",
+"start": 61.4,
+"end": 61.46,
+"p": 1.0
+},
+{
+"text": "Brasil.",
+"start": 61.46,
+"end": 61.76,
+"p": 1.0
+},
+{
+"text": "Em",
+"start": 62.16,
+"end": 62.44,
+"p": 1.0
+},
+{
+"text": "2015,",
+"start": 62.44,
+"end": 63.0,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 63.38,
+"end": 63.58,
+"p": 1.0
+},
+{
+"text": "Justiça",
+"start": 63.58,
+"end": 64.0,
+"p": 0.73
+},
+{
+"text": "do",
+"start": 64.0,
+"end": 64.14,
+"p": 1.0
+},
+{
+"text": "Acre",
+"start": 64.14,
+"end": 64.46,
+"p": 1.0
+},
+{
+"text": "condenou",
+"start": 64.46,
+"end": 65.06,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 65.06,
+"end": 65.16,
+"p": 1.0
+},
+{
+"text": "empresa",
+"start": 65.16,
+"end": 65.5,
+"p": 1.0
+},
+{
+"text": "por",
+"start": 65.5,
+"end": 65.72,
+"p": 1.0
+},
+{
+"text": "pirâmide",
+"start": 65.72,
+"end": 66.22,
+"p": 1.0
+},
+{
+"text": "financeira.",
+"start": 66.22,
+"end": 66.92,
+"p": 1.0
+},
+{
+"text": "Hoje,",
+"start": 67.16,
+"end": 67.6,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 67.8,
+"end": 68.02,
+"p": 1.0
+},
+{
+"text": "dívida",
+"start": 68.02,
+"end": 68.38,
+"p": 1.0
+},
+{
+"text": "dela",
+"start": 68.38,
+"end": 68.66,
+"p": 1.0
+},
+{
+"text": "com",
+"start": 68.66,
+"end": 68.84,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 68.84,
+"end": 68.94,
+"p": 1.0
+},
+{
+"text": "governo",
+"start": 68.94,
+"end": 69.36,
+"p": 1.0
+},
+{
+"text": "passa",
+"start": 69.36,
+"end": 69.8,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 69.8,
+"end": 70.0,
+"p": 1.0
+},
+{
+"text": "5",
+"start": 70.0,
+"end": 70.46,
+"p": 0.56
+},
+{
+"text": "bilhões",
+"start": 70.46,
+"end": 71.22,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 71.22,
+"end": 71.4,
+"p": 1.0
+},
+{
+"text": "reais.",
+"start": 71.4,
+"end": 71.74,
+"p": 1.0
+},
+{
+"text": "Onde",
+"start": 72.72,
+"end": 72.92,
+"p": 1.0
+},
+{
+"text": "você",
+"start": 72.92,
+"end": 73.2,
+"p": 1.0
+},
+{
+"text": "estava",
+"start": 73.2,
+"end": 73.64,
+"p": 1.0
+},
+{
+"text": "naquela",
+"start": 73.64,
+"end": 73.98,
+"p": 1.0
+},
+{
+"text": "noite?",
+"start": 73.98,
+"end": 74.34,
+"p": 1.0
+},
+{
+"text": "E",
+"start": 74.62,
+"end": 75.16,
+"p": 1.0
+},
+{
+"text": "esse",
+"start": 75.16,
+"end": 75.5,
+"p": 1.0
+},
+{
+"text": "era",
+"start": 75.5,
+"end": 76.12,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 76.12,
+"end": 76.26,
+"p": 1.0
+},
+{
+"text": "álibi.",
+"start": 76.26,
+"end": 76.6,
+"p": 0.94
+},
+{
+"text": "Próximo",
+"start": 77.06,
+"end": 77.58,
+"p": 1.0
+},
+{
+"text": "caso",
+"start": 77.58,
+"end": 77.8,
+"p": 1.0
+},
+{
+"text": "no",
+"start": 77.8,
+"end": 77.96,
+"p": 1.0
+},
+{
+"text": "perfil.",
+"start": 77.96,
+"end": 78.4,
+"p": 0.97
+},
+{
+"text": "Segue",
+"start": 78.64,
+"end": 79.16,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 79.16,
+"end": 79.32,
+"p": 1.0
+},
+{
+"text": "Álibi.",
+"start": 79.32,
+"end": 79.62,
+"p": 1.0
+}
+]
+}
