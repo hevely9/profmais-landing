@@ -292,3 +292,12 @@ export const Reel: React.FC<{ ctx: Ctx; children: React.ReactNode }> = ({ ctx, c
 );
 export const Assinatura: React.FC<{ r: number }> = ({ r }) =>
   <Surge r={r} dur={0.6} style={{ top: 900, fontFamily: ELITE, fontSize: 54, color: C.ossoE, textShadow: SOMBRA }}>…e esse era o álibi.</Surge>;
+// moldura sem som e sem legenda (stories animados)
+export const Quadro: React.FC<{ ctx: Ctx; children: React.ReactNode }> = ({ ctx, children }) => (
+  <VC.Provider value={ctx}>
+    <AbsoluteFill style={{ background: C.preto, overflow: "hidden" }}>
+      {children}
+      <Textura />
+    </AbsoluteFill>
+  </VC.Provider>
+);

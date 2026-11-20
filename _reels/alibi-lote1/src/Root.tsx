@@ -2,6 +2,7 @@ import React from "react";
 import { Composition } from "remotion";
 import { FPS } from "./kit";
 import { Capa } from "./capas";
+import { DUR as SDUR, StoryAlcatraz, StoryBC, StoryGardner, StoryJules, StoryNovoCaso } from "./stories";
 import { DISPONIVEIS } from "./disponiveis";
 import { Alcatraz, ctx as cAlc } from "./v/alcatraz";
 import { Gardner, ctx as cGar } from "./v/gardner";
@@ -21,6 +22,7 @@ const comp = (id: string, c: React.FC, total: number) => <Composition id={id} co
 export const Root: React.FC = () => (
   <>
     {CAPAS}
+    {([["Story-NovoCaso", StoryNovoCaso], ["Story-007-008-BC", StoryBC], ["Story-009-Alcatraz", StoryAlcatraz], ["Story-010-Jules", StoryJules], ["Story-011-Gardner", StoryGardner]] as [string, React.FC][]).map(([id, c]) => <Composition key={id} id={id} component={c} durationInFrames={SDUR * FPS} fps={FPS} width={1080} height={1920} />)}
     {comp("Fortaleza1", Fortaleza1, cF1.TOTAL)}
     {comp("Fortaleza2", Fortaleza2, cF2.TOTAL)}
     {comp("Alcatraz", Alcatraz, cAlc.TOTAL)}

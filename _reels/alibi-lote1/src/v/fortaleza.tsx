@@ -35,7 +35,7 @@ export const ctx2 = mkCtx({
 });
 
 // mapa esquemático: loja → avenida → cofre do Banco Central
-const MapaTunel: React.FC<{ cava?: [number, number]; cofre?: number; zoom?: number; rotulos?: number }> = ({ cava, cofre, zoom = 1, rotulos = -99 }) => {
+export const MapaTunel: React.FC<{ cava?: [number, number]; cofre?: number; zoom?: number; rotulos?: number }> = ({ cava, cofre, zoom = 1, rotulos = -99 }) => {
   const { t, o } = useT();
   const k = cava ? lin(t, o(cava[0]), o(cava[1]), (x) => x) : 0;
   const mostra = (r: number) => lin(t, o(r) - 0.05, o(r) + 0.3);
