@@ -2,6 +2,7 @@ import React from "react";
 import { Composition } from "remotion";
 import { FPS } from "./kit";
 import { Capa } from "./capas";
+import { CapaParte2 } from "./capaP2";
 import { DUR2, SCamera, SDigital, SFita, SLupa, SMaquina, SQuadro, SSirene } from "./stories2";
 import { DUR as SDUR, StoryAlcatraz, StoryBC, StoryGardner, StoryJules, StoryNovoCaso } from "./stories";
 import { DISPONIVEIS } from "./disponiveis";
@@ -23,6 +24,7 @@ const comp = (id: string, c: React.FC, total: number) => <Composition id={id} co
 export const Root: React.FC = () => (
   <>
     {CAPAS}
+    <Composition id="Capa-008-v2" component={CapaParte2} durationInFrames={1} fps={FPS} width={1080} height={1920} />
     {([["Clima-1-Fita", SFita], ["Clima-2-Digital", SDigital], ["Clima-3-Evidencias", SQuadro], ["Clima-4-Camera", SCamera], ["Clima-5-Maquina", SMaquina], ["Clima-6-Sirene", SSirene], ["Clima-7-Lupa", SLupa]] as [string, React.FC][]).map(([id, c]) => <Composition key={id} id={id} component={c} durationInFrames={DUR2 * FPS} fps={FPS} width={1080} height={1920} />)}
     {([["Story-NovoCaso", StoryNovoCaso], ["Story-007-008-BC", StoryBC], ["Story-009-Alcatraz", StoryAlcatraz], ["Story-010-Jules", StoryJules], ["Story-011-Gardner", StoryGardner]] as [string, React.FC][]).map(([id, c]) => <Composition key={id} id={id} component={c} durationInFrames={SDUR * FPS} fps={FPS} width={1080} height={1920} />)}
     {comp("Fortaleza1", Fortaleza1, cF1.TOTAL)}
