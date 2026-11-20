@@ -24,7 +24,7 @@ export const Vips: React.FC = () => (
   <Reel ctx={ctx}>
     {/* GANCHO — avião da Gol entrando com impacto, decolagem ao fundo, texto com a voz */}
     <Plano r={[-0.1, 2.4]} forte>
-      <Foto src="v-gol" fundo="c27989" alt={{ clip: "c27989" }} r={[-0.1, 2.4]} credito="Ecliptics · CC BY-SA 4.0" top={560} w={960} h={600} zoom={[1.0, 1.15]} cinza />
+      <Foto src="v-gol" fundo="c7031" alt={{ clip: "c7031" }} r={[-0.1, 2.4]} credito="Ecliptics · CC BY-SA 4.0" top={560} w={960} h={600} zoom={[1.0, 1.15]} cinza />
       <TituloVivo top={170} size={82} destaque="GOL" linhas={[[["ELE", 0], ["FINGIU", 0.16], ["SER", 0.78]], [["FILHO", 1.02], ["DO", 1.42], ["DONO", 1.62]], [["DA", 1.96], ["GOL", 2.1]]]} />
     </Plano>
     <Plano r={[2.4, 4.8]}>
@@ -43,7 +43,7 @@ export const Vips: React.FC = () => (
     </Plano>
     <Plano r={[10.9, 13.2]}><Cracha r={11.0} /></Plano>
     <Plano r={[13.2, 16.5]}>
-      <Foto src="v-gol2" alt={{ clip: "c7031" }} r={[13.2, 16.5]} credito="Halley Pacheco de Oliveira · CC BY-SA 3.0" top={460} w={960} h={640} zoom={[1.05, 1.2]} cinza />
+      <Foto src="v-gol2" alt={{ clip: "c27989", from: 5 }} r={[13.2, 16.5]} credito="Halley Pacheco de Oliveira · CC BY-SA 3.0" top={460} w={960} h={640} zoom={[1.05, 1.2]} cinza />
       <Faixa r={w("herdeiro") - 0.1} texto="O HERDEIRO" top={250} size={84} />
       <Rotulo r={14.6} texto="de uma das maiores aéreas do país" top={1150} size={34} />
     </Plano>

@@ -59,7 +59,7 @@ export const Chefao: React.FC = () => (
       <Titulo r={w("paramount") - 0.1} top={250} size={96}>PARAMOUNT</Titulo>
     </Plano>
     <Plano r={[8.5, 9.9]}>
-      <Clip src="c100892" r0={8.5} dur={1.4} a={0.45} />
+      <Clip src="c18288" r0={8.5} dur={1.4} a={0.45} />
       <Rotulo r={8.55} texto="O LIVRO DE" top={420} size={44} cor={C.ossoE} />
       <Titulo r={w("mario") - 0.1} top={490} size={100}>MARIO PUZO</Titulo>
     </Plano>

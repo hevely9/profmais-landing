@@ -74,7 +74,7 @@ export const Clip: React.FC<{ src: string; r0: number; from?: number; zoom?: [nu
   </Sequence>;
 };
 // foto em tela cheia (só imagens grandes e nítidas)
-export type Alt = { img?: string; clip?: string; credito?: string };
+export type Alt = { img?: string; clip?: string; credito?: string; from?: number };
 const temImg = (s: string) => DISPONIVEIS.includes(s);
 export const Cheia: React.FC<{ src: string; r: readonly [number, number]; credito: string; pos?: string; zoom?: [number, number]; a?: number; cinza?: boolean; alt?: Alt }> = ({ src, r, credito, pos = "50% 50%", zoom = [1.04, 1.16], a = 0.35, cinza = true, alt }) => {
   const { t, o } = useT();
@@ -93,7 +93,7 @@ export const Foto: React.FC<{ src: string; r: readonly [number, number]; credito
   ({ src, r, credito, top = 300, w = 940, h = 800, pos = "50% 50%", zoom = [1.0, 1.1], rot = 0, cover = true, cinza = false, ext = "jpg", alt, fundo }) => {
   const { t, o } = useT();
   if (!temImg(src)) {
-    if (alt?.clip) return <Clip src={alt.clip} r0={r[0]} dur={r[1] - r[0]} a={0.45} />;
+    if (alt?.clip) return <Clip src={alt.clip} r0={r[0]} from={alt.from ?? 0} dur={r[1] - r[0]} a={0.45} />;
     if (alt?.img && temImg(alt.img)) return <Foto src={alt.img} r={r} credito={alt.credito ?? ""} top={top} w={w} h={h} zoom={zoom} cinza={cinza} fundo={fundo} />;
     return <Fundo />;
   }

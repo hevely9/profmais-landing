@@ -134,12 +134,12 @@ export const Lobo: React.FC = () => (
       <Faixa r={w("apresentando") - 0.1} texto="APRESENTANDO O DICAPRIO" top={1200} size={52} />
     </Plano>
     <Plano r={[67.0, 69.4]}>
-      <Clip src="c100306" r0={67.0} dur={2.4} a={0.45} />
+      <Clip src="c9585" r0={67.0} dur={2.4} a={0.45} />
       <Titulo r={w("hoje") - 0.1} top={400} size={110}>HOJE?</Titulo>
       <Rotulo r={w("palestras") - 0.2} texto="PALESTRAS" top={560} size={70} />
     </Plano>
     <Plano r={[69.4, 71.6]}>
-      <Clip src="c100306" r0={69.4} from={3} dur={2.2} a={0.5} />
+      <Clip src="c9585" r0={69.4} from={3} dur={2.2} a={0.5} />
       <Faixa r={w("como") - 0.2} texto="SOBRE COMO VENDER" top={600} size={74} />
     </Plano>
     <Plano r={[71.6, 95]} soco={false}>
