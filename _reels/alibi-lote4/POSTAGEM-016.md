@@ -1,11 +1,11 @@
 # PACOTE DE POSTAGEM — ÁLIBI · CASO Nº 016 · Natalee Holloway (Aruba, 2005)
 
-Arquivos: `entrega/ALIBI-016-Natalee-Holloway.mp4` (≈3:39) · capa `entrega/CAPA-016-Natalee.jpg` (3:4: `CAPA-016-Natalee-3x4.jpg`)
+Arquivos: `entrega/ALIBI-016-Natalee-Holloway.mp4` (≈3:45) · capa `entrega/CAPA-016-Natalee.jpg` (3:4: `CAPA-016-Natalee-3x4.jpg`)
 Momento: a série "Taken: Natalee Holloway" (Netflix, 04/11/2026) estreou em 1º lugar mundial e está no Top 10 do Brasil.
 
 **O que trouxemos do vídeo do Banco Central (200 mil views):**
 gancho com número + absurdo ("ele cobrou US$ 25 mil da mãe pra contar onde estava o corpo… e pegou o dinheiro"),
-laço aberto logo depois ("pra entender, a gente precisa voltar cinco anos" + ano rebobinando 2010 → 2005),
+motivo forte logo depois ("essa história virou série na Netflix e estreou em 1º lugar no mundo"), laço aberto ("pra entender, a gente precisa voltar cinco anos" + ano rebobinando 2010 → 2005),
 números contando na tela (125 formandos, US$ 250.000, US$ 10.000 + 15.000 = 25.000, 28 anos, 18 anos),
 mapa animado (Aruba ≈ 29 km da Venezuela) e linha do tempo que avança (2005 → 2008 → 2010 → 2023),
 detalhe humano estranho ("meu pai enterrou ela aqui" — o pai já tinha morrido), frase curta = imagem nova.
@@ -31,7 +31,7 @@ Caso Nº 016
 
 **[6] Turno sugerido:** noite (pega quem está maratonando a série). Quem decide é você.
 
-**[7] Checklist:** gancho no 1º segundo ✅ · ⚠️ 3:39 (pedido seu: vídeo longo e bem explicado; a narração saiu com 4:06 e eu cortei as repetições sem gastar crédito) · nada parado > 4 s ✅ · CTA sem dia/hora ✅ · hashtags sem #fyp ✅
+**[7] Checklist:** gancho no 1º segundo ✅ · ⚠️ ≈3:45 (pedido seu: vídeo longo e bem explicado; a narração saiu com 4:06, cortei repetições e acrescentei a frase da Netflix logo após o gancho) · nada parado > 4 s ✅ · CTA sem dia/hora ✅ · hashtags sem #fyp ✅
 
 ## Fatos (conferidos) — e o que ficou de fora
 - 26/05/2005: Natalee (18) chega a Aruba com 124 colegas formandos de Mountain Brook (Alabama). Planejava ser médica (mãe).

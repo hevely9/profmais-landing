@@ -21,6 +21,12 @@ Projeto-modelo do formato curto: `_reels/alibi-lote1` (kit em `src/kit.tsx`).
 ## 2. Regras de roteiro (obrigatórias)
 a) **Gancho em 1 segundo**: começa no meio da ação, com **voz e movimento no 1º frame**. Proibido abrir com tela de
    título parada, logo, vinheta ou "Caso nº X" sozinho.
+a2) **O que vem DEPOIS do gancho (análise do usuário, 21/11 — vídeo do Banco Central com 200 mil views)**: o gancho segura o
+   1º segundo, mas quem segura a pessoa é a frase seguinte — ela precisa confirmar que "esse vídeo pode ser bom": um motivo
+   forte (prova de relevância: "virou série na Netflix e estreou em 1º lugar", número absurdo, contradição) e logo o laço
+   ("pra entender, a gente precisa voltar…"). Motivo fraco depois do gancho = a pessoa sai. Fórmula que bateu 200 mil:
+   número + absurdo no gancho, números contando na tela, mapa/diagrama animado, detalhe humano estranho, frase curta = imagem
+   nova, laço aberto no fim. Conferir que nenhuma foto fica fora do enquadramento (rosto cortado) antes de renderizar.
 b) **1ª frase** = o absurdo/contradição do caso em **até 12 palavras** ("Ele roubou 160 milhões. E foi preso por causa de
    um carro."). Primeiro o mistério, depois o contexto.
 c) **Duração 60–90 s** (máx. 2 min) enquanto a conta for nova.
