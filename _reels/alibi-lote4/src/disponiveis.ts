@@ -1,1 +1,1 @@
-export const DISPONIVEIS: string[] = ["cor-p1","cor-p2","cor-p3","r-chantay-cap","r-chantay-grande","r-chantay-ng","r-inter-close","r-inter","r-ryan-church","r-snap-hunt"];
+export const DISPONIVEIS: string[] = ["cor-p1","cor-p2","cor-p3","n-beth-2005","n-beth-natalee","n-beth-press","n-beth-tribunal","n-extradicao","n-joran-2005","n-joran-2023","n-joran-peru","n-natalee-oxygen","n-natalee-sorriso","n-natalee-yb","n-peter","n-polis","n-rua-bar","n-sting","r-chantay-cap","r-chantay-grande","r-chantay-ng","r-inter-close","r-inter","r-ryan-church","r-snap-hunt"];
