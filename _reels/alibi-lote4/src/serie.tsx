@@ -19,7 +19,7 @@ export const Corte: React.FC<{ src: string; de: number; dur: number; cropY: [num
   </Sequence>;
 };
 export const Etiqueta: React.FC = () => (
-  <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "10px 20px", background: "rgba(10,10,11,0.92)", border: "2px solid rgba(236,231,220,0.35)", borderRadius: 8 }}>
+  <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "10px 20px", background: "#0A0A0B", border: "2px solid rgba(236,231,220,0.35)", borderRadius: 8 }}>
     <div style={{ width: 16, height: 16, borderRadius: 8, background: C.verm }} />
     <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 34, color: C.osso, letterSpacing: "0.02em" }}>LOUD CORINGA REAGINDO</div>
   </div>
