@@ -8,7 +8,7 @@ Nenhum vídeo promete dia ou hora do próximo ("Próximo caso no perfil · Segue
 | 012 | Marcelo VIPs, o falso herdeiro da Gol | ~70 s | manhã |
 | 014 | O Lobo de Wall Street de verdade | ~82 s | tarde |
 | 015 | A máfia e O Poderoso Chefão | ~76 s | noite |
-| 013 | Telexfree: a juíza do Acre | ~83 s | próximo dia (ou quando quiser) |
+| 014 | Telexfree: a juíza do Acre | ~83 s | próximo dia (ou quando quiser) |
 
 ---
 
@@ -39,8 +39,8 @@ Nenhum vídeo promete dia ou hora do próximo ("Próximo caso no perfil · Segue
 
 ---
 
-## Nº 013 · Telexfree
-**[1] Título interno:** ÁLIBI 013 — Telexfree, a juíza do Acre e 1 milhão de brasileiros (2013)
+## Nº 014 · Telexfree (renumerado em 21/11: o 013 virou Portuguesa × Flamengo)
+**[1] Título interno:** ÁLIBI 014 — Telexfree, a juíza do Acre e 1 milhão de brasileiros (2013)
 **[2] Capa:** UMA JUÍZA DO ACRE PAROU ISSO
 **[3] Legendas**
 - **A (recomendada)**

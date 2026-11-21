@@ -6,7 +6,7 @@ import { Botao, Cursor, Piramide, Tela } from "../ui";
 const words = (palavras as { words: { text: string; start: number; end: number }[] }).words;
 const w = achar(words);
 export const ctx = mkCtx({
-  caso: "Nº 013", audio: "telexfree", words, lead: 0.1, fimVozRaw: 79.45, final: "alibi", proximo: "NO PERFIL",
+  caso: "Nº 014", audio: "telexfree", words, lead: 0.1, fimVozRaw: 79.45, final: "alibi", proximo: "NO PERFIL",
   cta: ["Você conhece alguém que entrou?", "comenta: SIM ou NÃO ↓"],
   chave: /^(acre|milhão|telexfree|dólar|membros|parar|500|protestar|pirâmide|seis|brasil|bilhões)$/i,
   semLegenda: [[72.6, 90]],

@@ -66,6 +66,9 @@ sem acelerar o áudio, frases curtas). Orçamento até 2.500 créditos por víde
 - Série numerada "Caso nº 008, 009…" — **só na legenda e na capa**, nunca como abertura do vídeo.
 - Ao postar: ficar 15–20 min respondendo comentários.
 - **Não alterar vídeos já entregues nem gerar vídeos novos sem o usuário pedir.**
+- **Numeração sob demanda (21/11):** a ordem pode mudar (ex.: Portuguesa × Flamengo entrou como 013). A cada postagem o
+  usuário pede o PRÓXIMO vídeo: atualizar o nº só desse vídeo (selo no vídeo + capa + legenda), re-renderizar (0 crédito)
+  e mandar só ele, com capa no tamanho certo (texto na área segura x 90–990, y 380–1540; também a versão 3:4) e a legenda.
 
 ## 5. ENTREGA OBRIGATÓRIA — "PACOTE DE POSTAGEM" (sem o usuário pedir)
 Em toda entrega de vídeo, mandar junto:
