@@ -32,6 +32,11 @@ f) **Final** = revelação → assinatura curta da marca "Onde você estava naqu
    **Bordão adaptável (decisão do usuário, 20/11):** quando o caso permitir, adaptar a assinatura à realidade do vídeo de um
    jeito interessante, sem só trocar "noite" por "dia"/"tarde". Mantém o "Onde você estava…" e o "álibi". Ex. (caso 016,
    futebol): "Onde você estava aos 32 do segundo tempo? …cada torcida tem o seu álibi."
+k) **Gancho com corte de reação de famoso (21/11, ideia do usuário)**: abrir com 3–5 s de reação forte de streamer
+   conhecido (ex.: LOUD Coringa) que tenha relação direta com o caso; a narração entra logo depois, sem apresentar quem é.
+   Cobrir marca d'água de app (Cut.Pro etc.) com a etiqueta "LOUD CORINGA REAGINDO"; legendar a fala se o corte não tiver.
+   Testar reações diferentes e comparar retenção. Kit: `_reels/alibi-lote4/src/serie.tsx` (Corte, FalaCorte, Misterio, Compara).
+   Séries em partes: cada parte fecha com gancho e "segue o Álibi pra ver a parte X" (sem prometer quando sai).
 j) **Vídeos de polêmica/torcida (ex.: futebol, caso 016)**: objetivo = comentário. Dar a CADA lado a sua "versão" com o
    mesmo peso (um bloco por torcida, com as cores do clube), nunca acusar, e fechar com "o tribunal é você" + pergunta
    binária + "defende o seu time nos comentários". Comentário fixado e respostas prontas que fazem o "advogado do diabo"
