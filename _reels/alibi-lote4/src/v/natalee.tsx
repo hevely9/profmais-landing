@@ -111,11 +111,31 @@ const Ass: React.FC<{ r: number }> = ({ r }) => {
   return <div style={{ position: "absolute", left: 60, right: 60, top: 960, textAlign: "center", opacity: k, fontFamily: ELITE, fontSize: 60, color: C.osso, textShadow: SOMBRA }}>…e nenhum era o álibi.</div>;
 };
 
+// mãe e filha lado a lado (rostos inteiros, sem corte)
+const Dupla: React.FC<{ top: number; cinza?: boolean; fundo?: string; r: number; h?: number }> = ({ top, cinza, fundo, r, h = 560 }) => {
+  const { t, o } = useT();
+  const k = lin(t, o(r), o(r) + 5, Easing.linear);
+  const card = (img: string, label: string, left: number, rot: number, pos: string) => (
+    <div style={{ position: "absolute", left, top, width: 470, transform: `rotate(${rot}deg)` }}>
+      <div style={{ width: 470, height: h, border: "10px solid #D9D2C0", background: "#111", overflow: "hidden", boxShadow: "0 30px 80px rgba(0,0,0,0.9)" }}>
+        <Img src={staticFile(`img/${img}.jpg`)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: pos, transform: `scale(${1.02 + 0.06 * k})`, filter: `${cinza ? "grayscale(0.85) " : ""}contrast(1.08)` }} />
+      </div>
+      <div style={{ marginTop: 14, textAlign: "center", fontFamily: MONT, fontWeight: 800, fontSize: 38, color: C.osso, textShadow: SOMBRA }}>{label}</div>
+    </div>
+  );
+  return <>
+    {fundo ? <Clip src={fundo} r0={r} dur={6} a={0.6} /> : <Fundo />}
+    {card("n-beth-rosto", "BETH · A MÃE", 50, -2, "50% 40%")}
+    {card("n-natalee-yb", "NATALEE", 560, 2, "50% 25%")}
+    <div style={{ position: "absolute", right: 34, top: 1262, fontFamily: SANS, fontWeight: 600, fontSize: 17, color: "rgba(236,231,220,0.6)" }}>Reprodução · Access Hollywood / foto de família</div>
+  </>;
+};
+
 export const Natalee: React.FC = () => (
   <Reel ctx={ctxN}>
     {/* GANCHO — Beth com a foto da filha; texto entra com a voz */}
     <Plano r={[-0.1, 4.9]} forte>
-      <Foto src="n-beth-natalee" r={[-0.1, 4.9]} fundo="c18305" credito="Reprodução · Access Hollywood · Beth e a foto de Natalee" top={760} w={1040} h={440} pos="50% 70%" zoom={[1.0, 1.08]} />
+      <Dupla r={-0.1} top={660} h={500} fundo="c18305" />
       <TituloVivo top={170} size={84} destaque="US$ 25 MIL" linhas={[[["ELE", 0], ["COBROU", 0.16]], [["US$ 25 MIL", 0.56]], [["DA", 2.22], ["MÃE", 2.42], ["DELA", 2.6]], [["PRA", 2.92], ["CONTAR", 3.1], ["ONDE", 3.44]], [["ESTAVA", 3.88], ["O", 4.2], ["CORPO", 4.34]]]} />
     </Plano>
     <Plano r={[4.9, 6.55]}>
@@ -186,7 +206,7 @@ export const Natalee: React.FC = () => (
       <Faixa r={60.53} texto="NATALEE NÃO APARECE" top={640} size={66} />
     </Plano>
     <Plano r={[62.31, 66.51]}>
-      <Foto src="n-beth-2005" r={[62.31, 66.51]} credito="Reprodução · AP (Aruba, 2005)" top={420} w={940} h={700} pos="65% 30%" zoom={[1.0, 1.12]} />
+      <Foto src="n-beth-2005" r={[62.31, 66.51]} credito="Reprodução · AP (Aruba, 2005)" top={420} w={940} h={700} pos="50% 35%" zoom={[1.0, 1.12]} />
       <Faixa r={63.37} texto="BETH · A MÃE" top={260} size={66} />
       <Rotulo r={64.15} texto="voa pra Aruba no mesmo dia" top={1150} size={40} />
     </Plano>
@@ -317,8 +337,8 @@ export const Natalee: React.FC = () => (
       <Rotulo r={167.77} texto="de prisão no Peru" top={1170} size={40} />
     </Plano>
     <Plano r={[168.41, 172.21]}>
-      <Foto src="n-beth-natalee" r={[168.41, 172.21]} credito="Reprodução · Access Hollywood" top={420} w={1040} h={440} pos="50% 70%" cinza zoom={[1.0, 1.08]} />
-      <Grande r={168.49} top={940} size={70}>mas a mãe de Natalee<br />continuava sem resposta</Grande>
+      <Dupla r={168.41} top={300} cinza />
+      <Grande r={168.49} top={990} size={70}>mas a mãe de Natalee<br />continuava sem resposta</Grande>
     </Plano>
     <Plano r={[172.21, 174.51]}><LinhaTempo r={172.21} ativo={3} sub="18 anos depois do sumiço" /></Plano>
     <Plano r={[174.51, 179.81]}>
