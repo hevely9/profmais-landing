@@ -5,11 +5,16 @@ Momento: a Netflix estreia a série do caso em 23/11/2026. Caso que dividiu os E
 Número: 018 (o vídeo da Suzane não foi postado). Se mudar a ordem, me avisa que eu troco.
 
 **[1] Título interno:** "Eu bati nele" ou "Eu bati nele?": o caso Karen Read
-**[2] Capa:** MATOU OU FOI ARMAÇÃO? (o casal em cima, Karen no tribunal embaixo). O vídeo mostra os dois lados, então a capa promete só o que o vídeo entrega.
+**[2] Capa (para quem pesquisar a série):** `entrega/CAPA-018-KarenRead-Netflix.jpg` (3:4: `-3x4.jpg`)
+"NOVA SÉRIE NETFLIX · A HISTÓRIA REAL · KAREN READ" (John em cima, Karen na cena da série embaixo). O nome grande ajuda
+na busca (o TikTok lê o texto da capa) e promete só o que o vídeo entrega: a história real do caso.
+Opção B: `CAPA-018-KarenRead-Netflix-B.jpg` (Karen em cima, John embaixo, "KAREN READ · CULPADA OU ARMAÇÃO?").
+Opção antiga: `CAPA-018-KarenRead.jpg` (casal + "MATOU OU FOI ARMAÇÃO?"). A menção à Netflix é só texto (sem o logo oficial).
 
 **[3] Legenda (recomendada)**
 ```
-Um policial morto na neve. A namorada foi acusada. E a Netflix vai contar essa história.
+Karen Read: a história real por trás da nova série da Netflix.
+Um policial morto na neve. A namorada foi acusada.
 Uma pesquisa no Google feita às 2h27… ou às 6h24? Esse horário muda tudo.
 Dois julgamentos depois, ninguém foi condenado pela morte de John O'Keefe.
 Tem caso novo no perfil. Segue o Álibi. 🔎

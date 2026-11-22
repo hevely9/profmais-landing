@@ -53,3 +53,32 @@ export const CapaCoringa: React.FC<{ parte?: string; coringa: string; img: strin
     </div>
   </AbsoluteFill>
 );
+
+// Capa "de busca": nome do caso grande (o TikTok lê o texto da capa) + selo da série. Sem logo oficial de terceiros:
+// a menção à plataforma é só texto, na nossa fonte. Texto na ÁREA SEGURA (x 90–990, y 380–1540).
+export const CapaBusca: React.FC<{ topo: string; posTopo?: string; img: string; pos?: string; selo: [string, string]; linhas: { t: string; destaque?: boolean; size?: number }[]; caso: string; textoTop?: number }> =
+  ({ topo, posTopo = "50% 30%", img, pos = "50% 30%", selo, linhas, caso, textoTop = 700 }) => (
+  <AbsoluteFill style={{ background: C.preto, overflow: "hidden" }}>
+    <div style={{ position: "absolute", left: 0, right: 0, top: 0, height: 960, overflow: "hidden" }}>
+      <Img src={staticFile(`img/${topo}.jpg`)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: posTopo, filter: "contrast(1.1) saturate(1.05)" }} />
+      <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(10,10,11,0.4) 0%, rgba(10,10,11,0) 25%, rgba(10,10,11,0.1) 55%, rgba(10,10,11,0.9) 100%)" }} />
+    </div>
+    <div style={{ position: "absolute", left: 0, right: 0, top: 960, height: 960, overflow: "hidden" }}>
+      <Img src={staticFile(`img/${img}.jpg`)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: pos, filter: "contrast(1.12) brightness(0.88)" }} />
+      <AbsoluteFill style={{ background: "linear-gradient(0deg, rgba(10,10,11,0.95) 0%, rgba(10,10,11,0.15) 40%, rgba(10,10,11,0.75) 100%)" }} />
+    </div>
+    <div style={{ position: "absolute", left: 0, right: 0, top: 956, height: 8, background: "#E50914" }} />
+    <div style={{ position: "absolute", left: 90, right: 90, top: textoTop, textAlign: "center" }}>
+      <div style={{ display: "inline-flex", alignItems: "stretch", marginBottom: 22, boxShadow: "0 10px 30px rgba(0,0,0,0.7)" }}>
+        <div style={{ padding: "10px 18px", background: "#0A0A0B", fontFamily: SANS, fontWeight: 800, fontSize: 36, color: C.osso, letterSpacing: "0.04em" }}>{selo[0]}</div>
+        <div style={{ padding: "10px 20px", background: "#E50914", fontFamily: MONT, fontWeight: 800, fontSize: 40, color: "#fff", letterSpacing: "0.08em" }}>{selo[1]}</div>
+      </div>
+      {linhas.map((l, i) => <div key={i} style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ fontFamily: MONT, fontWeight: 800, fontSize: l.size ?? 120, lineHeight: 1.0, color: C.osso, padding: l.destaque ? "6px 22px 12px" : "0 0 6px", background: l.destaque ? C.lacre : "none", margin: l.destaque ? "12px 0" : 0, textShadow: l.destaque ? "none" : "0 6px 30px rgba(0,0,0,0.95)", boxShadow: l.destaque ? "0 0 0 5px rgba(236,231,220,0.9)" : "none", whiteSpace: "nowrap" }}>{l.t}</div>
+      </div>)}
+    </div>
+    <div style={{ position: "absolute", left: 0, right: 0, top: 1590, display: "flex", justifyContent: "center" }}>
+      <div style={{ padding: "8px 18px", border: `3px solid ${C.osso}`, fontFamily: COURIER, fontWeight: 700, fontSize: 30, color: C.osso, letterSpacing: "0.1em", background: "rgba(10,10,11,0.75)" }}>ÁLIBI · CASO {caso}</div>
+    </div>
+  </AbsoluteFill>
+);
