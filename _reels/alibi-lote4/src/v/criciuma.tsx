@@ -178,10 +178,10 @@ export const Criciuma: React.FC = () => (
       <Rotulo r={130.3} texto="NOVA VENEZA (SC) · ~20 KM DALI" top={1165} size={38} />
     </Plano>
     <Plano r={[133.3, 141.2]}>
-      <Clip src="c18249" r0={133.3} dur={7.9} a={0.6} />
-      <Rotulo r={133.42} texto="SEGUNDO A JUSTIÇA, A QUADRILHA LEVOU" top={420} size={36} cor={C.fita} />
-      <Contador r={136.12} ate={136.9} valor={130} prefixo="R$ " sufixo=" MILHÕES" top={500} size={88} cor={C.verm} />
-      <Rotulo r={138.58} texto="UM DOS MAIORES ROUBOS DO PAÍS" top={720} size={46} />
+      <Foto src="cr-dinheiro-pilha" r={[133.3, 141.2]} credito="Reprodução · CNN Brasil (notas deixadas na rua)" top={680} w={900} h={520} pos="50% 60%" cinza zoom={[1.05, 1.15]} />
+      <Rotulo r={133.42} texto="SEGUNDO A JUSTIÇA, A QUADRILHA LEVOU" top={250} size={36} cor={C.fita} />
+      <Contador r={136.12} ate={136.9} valor={130} prefixo="R$ " sufixo=" MILHÕES" top={320} size={88} cor={C.verm} />
+      <Rotulo r={138.58} texto="UM DOS MAIORES ROUBOS DO PAÍS" top={540} size={44} />
     </Plano>
     <Plano r={[141.2, 150.6]}>
       <Clip src="c47803" r0={141.2} dur={9.4} a={0.55} />
