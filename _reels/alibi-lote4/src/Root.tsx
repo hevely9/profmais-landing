@@ -7,6 +7,7 @@ import { Natalee, ctxN } from "./v/natalee";
 import { Suzane, ctxS } from "./v/suzane";
 import { Karen, ctxK } from "./v/karen";
 import { Criciuma, ctxC } from "./v/criciuma";
+import { Gardner, ctxG } from "./v/gardner";
 
 const comp = (id: string, c: React.FC, total: number) => <Composition id={id} component={c} durationInFrames={total} fps={FPS} width={1080} height={1920} />;
 const capaC = (id: string, props: React.ComponentProps<typeof CapaCoringa>) => <Composition id={id} component={CapaCoringa as React.FC<any>} defaultProps={props} durationInFrames={1} fps={FPS} width={1080} height={1920} />;
@@ -21,6 +22,8 @@ export const Root: React.FC = () => (
     {comp("018-Suzane", Suzane, ctxS.TOTAL)}
     {comp("018-Karen", Karen, ctxK.TOTAL)}
     {comp("019-Criciuma", Criciuma, ctxC.TOTAL)}
+    {comp("020-Gardner", Gardner, ctxG.TOTAL)}
+    {capaB("Capa-020-Gardner", { caso: "Nº 020", topo: "g-moldura3", posTopo: "50% 35%", img: "g-concert", pos: "50% 45%", selo: ["BOSTON · 1990", "CASO REAL"], linhas: [{ t: "US$ 500 MILHÕES", size: 104 }, { t: "EM 81", size: 120 }, { t: "MINUTOS", destaque: true, size: 124 }] })}
     {capaB("Capa-019-Criciuma", { caso: "Nº 019", topo: "cr-fuzil-carro", posTopo: "55% 25%", img: "cr-refens-capa", pos: "50% 30%", selo: ["CRICIÚMA (SC)", "IMAGENS REAIS"], linhas: [{ t: "30 HOMENS", size: 124 }, { t: "TOMARAM UMA", size: 100 }, { t: "CIDADE", destaque: true, size: 124 }] })}
     {capaB("Capa-018-Karen-A", { caso: "Nº 018", topo: "k-netflix-karen", posTopo: "50% 40%", img: "k-john-farda", pos: "50% 10%", selo: ["A SÉRIE DA", "NETFLIX"], linhas: [{ t: "KAREN READ", size: 128 }, { t: "CULPADA OU", size: 96 }, { t: "ARMAÇÃO?", destaque: true, size: 104 }] })}
     {capaB("Capa-018-Karen-B", { caso: "Nº 018", topo: "k-john-farda", posTopo: "50% 6%", img: "k-netflix-karen", pos: "50% 40%", selo: ["NOVA SÉRIE", "NETFLIX"], linhas: [{ t: "A HISTÓRIA REAL", size: 96 }, { t: "KAREN READ", destaque: true, size: 120 }] })}
