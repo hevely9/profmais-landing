@@ -1,6 +1,6 @@
 # PACOTE DE POSTAGEM — ÁLIBI · CASO Nº 018 · Karen Read (EUA)
 
-Arquivos: `entrega/ALIBI-018-KarenRead.mp4` (≈3:05, alta qualidade) · capa `entrega/CAPA-018-KarenRead.jpg` (3:4: `CAPA-018-KarenRead-3x4.jpg`)
+Arquivos: `entrega/ALIBI-018-KarenRead.mp4` (≈3:01, alta qualidade) · capa `entrega/CAPA-018-KarenRead.jpg` (3:4: `CAPA-018-KarenRead-3x4.jpg`)
 Momento: a Netflix estreia a série do caso em 23/11/2026. Caso que dividiu os EUA: tem torcida dos dois lados, e por isso rende comentário.
 Número: 018 (o vídeo da Suzane não foi postado). Se mudar a ordem, me avisa que eu troco.
 
@@ -11,27 +11,24 @@ Número: 018 (o vídeo da Suzane não foi postado). Se mudar a ordem, me avisa q
 ```
 Um policial morto na neve. A namorada foi acusada. E a Netflix vai contar essa história.
 Uma pesquisa no Google feita às 2h27… ou às 6h24? Esse horário muda tudo.
-Pra você: Karen Read matou o namorado ou foi armação? CULPADA ou ARMAÇÃO.
+Dois julgamentos depois, ninguém foi condenado pela morte de John O'Keefe.
 Tem caso novo no perfil. Segue o Álibi. 🔎
 Caso Nº 018
 
 #truecrime #casosreais #karenread #netflix #crimesreais
 ```
-**Opção B:** "“Eu bati nele.” Ou “Eu bati nele?” Uma frase, dois sentidos. 🕯️ / A paramédica ouviu uma coisa. A defesa diz que foi outra. / De que lado você fica? / Tem caso novo no perfil. Segue o Álibi."
-**Opção C:** "O investigador do caso chamava a acusada de “louca” por mensagem. E foi demitido. 🔎 / Dois julgamentos, ninguém condenado pela morte. / Justiça ou armação? / Tem caso novo no perfil. Segue o Álibi."
+**Opção B:** "“Eu bati nele.” Ou “Eu bati nele?” Uma frase, dois sentidos. 🕯️ / A paramédica ouviu uma coisa. A defesa diz que foi outra. / O caso que dividiu os Estados Unidos. / Tem caso novo no perfil. Segue o Álibi."
+**Opção C:** "O investigador do caso chamava a acusada de “louca” por mensagem. E foi demitido. 🔎 / Dois julgamentos, ninguém condenado pela morte. / A série chega à Netflix em 23 de novembro. / Tem caso novo no perfil. Segue o Álibi."
 
 **[4] Hashtags:** já estão na legenda (5, sem #fyp).
 
-**[5] Comentário fixado:** "Antes de responder, pensa no horário: 2h27 ou 6h24? 🕯️ Karen Read: CULPADA ou ARMAÇÃO? Comenta aqui."
+**[5] Comentário fixado (opcional, sem pedir resposta):** "John O'Keefe tinha 46 anos e criava os dois sobrinhos. 🕯️"
 
-**Respostas prontas:**
-- "Foi armação, óbvio": "O júri concordou em parte. Mas então quem matou o John? Ninguém foi condenado até hoje."
-- "Ela é culpada": "A lanterna quebrada pesa, né? E a pesquisa no Google, como você explica?"
-- "Já vi o doc / vou ver na Netflix": "Depois volta aqui e me fala se mudou de opinião."
+**Sem pedir comentário:** o vídeo, a tela final, a legenda e o comentário fixado não pedem resposta (decisão de 22/11).
 
 **[6] Turno:** noite (hoje, véspera da estreia, ou amanhã à noite, no dia da estreia).
 
-**[7] Checklist:** gancho no 1º segundo (imagem real da cena + "um policial morto na neve") ✅ · motivo logo depois (série da Netflix + ninguém condenado + pesquisa no Google) ✅ · capa só promete o que o vídeo mostra ✅ · ≈3:05 ✅ · nada parado > 4 s ✅ · imagens reais com crédito ✅ · sem cena gráfica ✅ · CTA sem dia/hora ✅ · hashtags sem #fyp ✅
+**[7] Checklist:** gancho no 1º segundo (imagem real da cena + "um policial morto na neve") ✅ · motivo logo depois (série da Netflix + ninguém condenado + pesquisa no Google) ✅ · capa só promete o que o vídeo mostra ✅ · ≈3:01 ✅ · nada parado > 4 s ✅ · imagens reais com crédito ✅ · sem cena gráfica ✅ · CTA só "segue o Álibi", sem pedir comentário e sem dia/hora ✅ · hashtags sem #fyp ✅
 
 ## Fatos (conferidos)
 - John O'Keefe, 46, policial de Boston (16 anos na corporação), criava os dois sobrinhos depois da morte da irmã (e do cunhado).

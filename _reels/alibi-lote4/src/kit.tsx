@@ -220,10 +220,10 @@ export const TelaFinal: React.FC = () => {
         <div style={{ display: "inline-block", marginTop: 22, padding: "10px 26px", background: C.lacre, fontFamily: SANS, fontWeight: 800, fontSize: 38, color: C.osso }}>SEGUE O ÁLIBI</div>
       </div>}
     </div>
-    <div style={{ position: "absolute", left: 90, right: 90, top: v.proximo ? 1150 : 1040, textAlign: "center", padding: "26px 30px", border: `2px solid rgba(236,231,220,0.35)`, opacity: c }}>
+    {v.cta[0] && <div style={{ position: "absolute", left: 90, right: 90, top: v.proximo ? 1150 : 1040, textAlign: "center", padding: "26px 30px", border: `2px solid rgba(236,231,220,0.35)`, opacity: c }}>
       <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 42, color: C.osso, lineHeight: 1.25 }}>{v.cta[0]}</div>
       <div style={{ fontFamily: ELITE, fontSize: 32, color: C.verm, marginTop: 12 }}>{v.cta[1]}</div>
-    </div>
+    </div>}
   </AbsoluteFill>;
 };
 export const Hud: React.FC = () => {

@@ -8,8 +8,8 @@ import { Fechamento, Hora, Mural } from "../dossie";
 // Fontes: cobertura de NBC Boston, WCVB, CBS Boston, Court TV, AP, CNN, People (2022–2025). Fatos conferidos; nada gráfico.
 type Ws = { words: { text: string; start: number; end: number }[] };
 export const ctxK = mkCtx({
-  caso: "Nº 018", audio: "karen", words: (palavras as Ws).words, lead: 0.1, fimVozRaw: 182.3, final: "alibi", proximo: "NO PERFIL",
-  cta: ["Karen Read matou o namorado ou foi armação?", "comenta: CULPADA ou ARMAÇÃO ↓"],
+  caso: "Nº 018", audio: "karen", words: (palavras as Ws).words, lead: 0.1, fimVozRaw: 177.45, final: "alibi", proximo: "NO PERFIL",
+  cta: ["", ""],
   chave: /^(karen|john|o'keefe|neve|namorada|netflix|google|lanterna|ré|bêbada|mccabe|frio|cachorro|demitido|absolvida|álibi|sobrinhos|armação)/i,
   semLegenda: [[166.0, 240]],
   sfx: [
@@ -69,7 +69,7 @@ const Aspas: React.FC<{ itens: [number, string, string, string][] }> = ({ itens 
   </AbsoluteFill>;
 };
 
-// defesa × acusação, uma em cima da outra (o tribunal é você)
+// defesa × acusação, uma em cima da outra
 const Lados: React.FC<{ cima: [number, string, string, string?]; baixo: [number, string, string, string?] }> = ({ cima, baixo }) => {
   const { t, o } = useT();
   const bloco = ([r, rot, txt, img]: [number, string, string, string?], top: number, cor: string) => {
@@ -230,7 +230,7 @@ export const Karen: React.FC = () => (
     </Plano>
     <Plano r={[119.9, 127.06]} soco={false}>
       <Lados cima={[120.2, "DEFESA", "mordida de cachorro: o pastor alemão da casa"]} baixo={[124.38, "ACUSAÇÃO", "a lanterna do carro", "k-lanterna"]} />
-      <Rotulo r={119.95} texto="O TRIBUNAL É VOCÊ" top={250} size={44} cor={C.fita} />
+      <Rotulo r={119.95} texto="DUAS VERSÕES" top={250} size={44} cor={C.fita} />
     </Plano>
     {/* o investigador */}
     <Plano r={[127.06, 132.2]}>
@@ -285,7 +285,7 @@ export const Karen: React.FC = () => (
       <Ass r={172.78} />
     </Plano>
     <Plano r={[174.64, 240]} soco={false}>
-      <Fechamento r={174.7} caso="Nº 018" status="SEM CULPADO" pergunta="Karen Read matou o namorado… ou foi armação?" />
+      <Fechamento r={174.7} caso="Nº 018" status="SEM CULPADO" pergunta="Dois julgamentos. Nenhum culpado pela morte de John." />
     </Plano>
   </Reel>
 );

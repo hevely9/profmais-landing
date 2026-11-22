@@ -101,19 +101,25 @@ sem acelerar o áudio, frases curtas). Orçamento até 2.500 créditos por víde
   4. Enquadramento: extrair 1 quadro por segundo do MP4 final e olhar todos: rosto inteiro, nada cortado pela borda,
      texto dentro da área segura, sem logo/marca d'água, documento sem texto cortado pela metade, carimbo sem cobrir rosto.
 
+- **SEM PEDIR COMENTÁRIO (22/11, decisão do usuário — vale até ele mudar):** o público ainda é pequeno e pedir resposta
+  deixa o vídeo "no vácuo". Nada de "me fala", "comenta", "responde SIM ou NÃO", "o tribunal é você", caixa de CTA com
+  pergunta na tela final (usar `cta: ["", ""]`), pergunta no Fechamento, nem pergunta na legenda/comentário fixado.
+  Só o caso, bem contado. Mantém: bordão do álibi + "Próximo caso no perfil. Segue o Álibi." A regra j (polêmica) fica
+  suspensa na parte de pedir torcida; mostrar os dois lados com fatos continua valendo.
+
 ## 5. ENTREGA OBRIGATÓRIA — "PACOTE DE POSTAGEM" (sem o usuário pedir)
 Em toda entrega de vídeo, mandar junto:
 [1] **Título interno + nº do caso**
 [2] **Texto da capa** (até 5 palavras, curiosidade)
 [3] **Legenda — 3 opções**, marcar a recomendada. Cada uma com 4 linhas:
    - L1: gancho que repete a curiosidade sem spoiler (≤ 80 caracteres — é o que aparece antes do "mais");
-   - L2: um detalhe intrigante; L3: pergunta que provoca comentário;
+   - L2: um detalhe intrigante; L3: outro fato forte do caso (NÃO pergunta pedindo resposta — ver regra "sem pedir comentário");
    - L4: "Tem caso novo no perfil. Segue o Álibi." (sem prometer dia/hora)
    Tom misterioso, direto, PT-BR natural, no máx. 2 emojis discretos (🔎 🕯️), sem clichê de IA.
 [4] **Hashtags: 4 a 6** — 2 amplas (#truecrime #casosreais) + 2 de nicho (#truecrimebrasil #casosmisteriosos,
    alternando com #crimesreais #casoreal) + 1–2 do caso. **Proibido**: #fyp #foryou #foyou #viral #paravoce, erro de
    digitação ou sem relação (#serie, #quartafeira, #prisonbreak).
-[5] **Comentário para fixar** (pergunta ou bastidor)
+[5] **Comentário para fixar** (opcional: um bastidor/fato extra; nunca pergunta pedindo resposta)
 [6] **Turno sugerido** (manhã, tarde ou noite) — quem decide quando postar é o usuário
 [7] **Checklist**: gancho no 1º segundo? 60–90 s? nada parado > 4 s? CTA no final? hashtags conferidas?
 
