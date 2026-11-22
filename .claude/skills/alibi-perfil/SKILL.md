@@ -74,7 +74,7 @@ sem acelerar o áudio, frases curtas). Orçamento até 2.500 créditos por víde
 - **Tom**: em casos com vítimas conhecidas, contar pelo lado delas (quem eram) — melancólico, respeitoso.
 - Imagens só reais e licenciadas (Commons/FBI/Agência Brasil) com crédito; **conferir se a imagem baixada é mesmo o que o
   nome diz** (já veio carta no lugar de quadro). Wikimedia: miniaturas 1920/960 px sem `?utm`.
-- Exportar: `-profile:v high -level:v 4.1 -pix_fmt yuv420p -movflags +faststart`, -14 LUFS, < 50 MB.
+- Exportar em ALTA qualidade (o TikTok recomprime; não economizar bitrate): `-crf 16 -maxrate 14M -profile:v high -pix_fmt yuv420p -movflags +faststart`, áudio AAC 192k, -14 LUFS. Nada de limitar a 50 MB (decisão de 22/11: vídeos de 13 MB perderam nitidez). TikTok: dá pra baixar trechos daqui com yt-dlp (testado); YouTube não (bloqueio de bot).
 - Capa 1080×1920: até 5 palavras grandes, 1 palavra em faixa vermelha, nº do caso no topo, texto no miolo 3:4 (y 240–1680).
 
 ## 4. Rotina de postagem (decisão do usuário, 19/11)
