@@ -107,6 +107,16 @@ sem acelerar o áudio, frases curtas). Orçamento até 2.500 créditos por víde
   Só o caso, bem contado. Mantém: bordão do álibi + "Próximo caso no perfil. Segue o Álibi." A regra j (polêmica) fica
   suspensa na parte de pedir torcida; mostrar os dois lados com fatos continua valendo.
 
+- **CARROSSEL (Modo Foto do TikTok), 22/11:** mini-história em **4 fotos** 1080×1920, PNG, qualidade máxima
+  (componente `alibi-lote4/src/carrossel.tsx`, composições `Car-*`). Sempre **imagens reais do caso** + **título** em cada
+  foto; 1ª foto = gancho que faz arrastar; cada foto vira a história; a 4ª **para antes da virada** e chama:
+  "Quer saber…? Comenta PALAVRA que a história completa vai pro perfil." (exceção à regra "sem pedir comentário",
+  decidida pelo usuário só pro carrossel; pedir UMA palavra). Imagem horizontal = modo `faixa` (inteira e nítida,
+  fundo desfocado), nunca esticar imagem pequena. Marca d'água coberta por etiqueta de crédito.
+  **Antes de sugerir caso, conferir a lista do que já foi feito** (alibi-001..006, lote1–4): Hinterkaifeck, BTK,
+  D.B. Cooper, BC Fortaleza, Alcatraz, Jules Rimet, Gardner (011), Marcelo VIPs, Portuguesa×Flamengo, Telexfree,
+  Lobo de Wall Street, Poderoso Chefão, Chantay, Natalee, Suzane (não postado), Karen Read, Criciúma.
+
 ## 5. ENTREGA OBRIGATÓRIA — "PACOTE DE POSTAGEM" (sem o usuário pedir)
 Em toda entrega de vídeo, mandar junto:
 [1] **Título interno + nº do caso**
