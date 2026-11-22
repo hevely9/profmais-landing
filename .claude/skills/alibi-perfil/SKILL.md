@@ -89,6 +89,10 @@ sem acelerar o áudio, frases curtas). Orçamento até 2.500 créditos por víde
   usuário pede o PRÓXIMO vídeo: atualizar o nº só desse vídeo (selo no vídeo + capa + legenda), re-renderizar (0 crédito)
   e mandar só ele, com capa no tamanho certo (texto na área segura x 90–990, y 380–1540; também a versão 3:4) e a legenda.
 
+- **Promessa = entrega (22/11, lição do Suzane reprovado):** gancho e capa só prometem o que o vídeo mostra. "O que a
+  Netflix não mostrou" + fatos que todo mundo já sabe = vídeo reprovado. Preferir casos/ângulos com uma virada concreta
+  (prova, horário, frase ambígua) e perguntas que dividem ("matou ou foi armação?"), mostrando os dois lados com fatos.
+
 ## 5. ENTREGA OBRIGATÓRIA — "PACOTE DE POSTAGEM" (sem o usuário pedir)
 Em toda entrega de vídeo, mandar junto:
 [1] **Título interno + nº do caso**
