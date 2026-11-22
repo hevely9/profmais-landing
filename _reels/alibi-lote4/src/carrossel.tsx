@@ -39,7 +39,7 @@ export const Slide: React.FC<SlideProps> = ({ img, pos = "50% 50%", zoom = 1, ci
       </div>}
     </div>
     {/* rodapé: seta / selo */}
-    <div style={{ position: "absolute", left: 90, right: 90, bottom: 400, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+    <div style={{ position: "absolute", left: 90, right: 90, bottom: faixa !== undefined ? 340 : 400, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
       <div style={{ fontFamily: COURIER, fontWeight: 700, fontSize: 26, color: "rgba(236,231,220,0.75)", letterSpacing: "0.14em" }}>{final && faixa !== undefined ? "" : "ÁLIBI · CASO REAL"}</div>
       {!final && <div style={{ fontFamily: MONT, fontWeight: 800, fontSize: 40, color: C.osso, display: "flex", alignItems: "center", gap: 12 }}>arrasta <span style={{ fontSize: 56, color: C.verm }}>→</span></div>}
     </div>

@@ -3,8 +3,8 @@
 Arquivos (na ordem): `entrega/carrossel-antuerpia/1.png` … `4.png` (1080×1920, PNG sem perda)
 Imagens reais do trailer oficial da Netflix "Stolen: Heist of the Century" (2025), marca coberta por etiqueta de crédito.
 
-1. ANTUÉRPIA · 2003 — Esvaziaram o cofre "impenetrável" dos diamantes. US$ 100 MILHÕES (o cofre revirado)
-2. FEVEREIRO · 2003 — Num fim de semana, entraram como se fossem de casa. Nada foi recuperado até hoje.
+1. ANTUÉRPIA · BÉLGICA · 2003 — Ladrões esvaziaram o cofre mais protegido da capital mundial dos diamantes: US$ 100 MILHÕES em pedras, ouro e joias (o cofre revirado)
+2. FEVEREIRO · 2003 — Ninguém percebeu nada. Só descobriram na SEGUNDA-FEIRA, quando abriram o cofre. Nada foi recuperado até hoje.
 3. O LÍDER — Um italiano que fingia ser comerciante de diamantes. Tinha sala no próprio prédio.
 4. A FUGA — Era o roubo perfeito. Até que jogaram um SACO DE LIXO no mato. → "Comenta LIXO…"
 
