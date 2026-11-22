@@ -19,7 +19,7 @@ export const Root: React.FC = () => (
     {capa("Capa-015-P2", { parte: "PARTE 2", img: "r-snap-hunt", pos: "35% 35%", linhas: [{ t: "O DNA" }, { t: "DESENHOU", destaque: true }, { t: "O ROSTO" }], sub: "e alguém reconheceu" })}
     {capa("Capa-015-P3", { parte: "PARTE 3", img: "r-ryan-church", pos: "50% 18%", linhas: [{ t: "CONFESSOU" }, { t: "NA IGREJA", destaque: true }], sub: "na frente de todo mundo" })}
     {capaC("CapaC-015-P1", { parte: "PARTE 1", coringa: "cor-p1", img: "r-chantay-ng", pos: "50% 20%", linhas: [{ t: "O ASSASSINO" }, { t: "FOI AO VELÓRIO", destaque: true }] })}
-    {capaC("CapaC-015-P2", { parte: "PARTE 2", coringa: "cor-p2", img: "r-snap-hunt", pos: "35% 25%", linhas: [{ t: "O DNA" }, { t: "DESENHOU", destaque: true }, { t: "O ROSTO" }] })}
+    {capaC("CapaC-015-P2", { caso: "Nº 017", parte: "PARTE 2", coringa: "cor-p2", img: "r-snap-hunt", pos: "35% 25%", linhas: [{ t: "O DNA" }, { t: "DESENHOU", destaque: true }, { t: "O ROSTO" }] })}
     {capaC("CapaC-015-P3", { parte: "PARTE 3", coringa: "cor-p3", img: "r-ryan-church", pos: "50% 12%", linhas: [{ t: "CONFESSOU" }, { t: "NA IGREJA", destaque: true }] })}
   </>
 );

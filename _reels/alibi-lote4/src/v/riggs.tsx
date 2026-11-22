@@ -139,7 +139,7 @@ export const Parte1: React.FC = () => (
 
 // ───────────────────────── PARTE 2 ─────────────────────────
 export const ctx2 = mkCtx({
-  caso: "Nº 015", parte: "PARTE 2", audio: "riggs2", words: (p2 as Ws).words, lead: 4.95, fimVozRaw: 61.1, final: "parte2",
+  caso: "Nº 017", parte: "PARTE 2", audio: "riggs2", words: (p2 as Ws).words, lead: 4.95, fimVozRaw: 61.1, final: "parte2",
   continua: ["PARTE 3", "a confissão no culto", SEGUE], cta: ["", ""], chave: CHAVE, semLegenda: [[59.2, 80]],
   sfx: [
     { src: "carimbo", r: 0.05, vol: 0.55 }, { src: "whoosh", r: 3.1, vol: 0.25 }, { src: "coracao", r: 6.3, vol: 0.45 }, { src: "whoosh", r: 10.8, vol: 0.25 },

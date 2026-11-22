@@ -28,7 +28,7 @@ Caso Nº 015 · Parte 1
 **Comentário fixado:** "Ele estava no velório, no meio da família. Chuta aí: quem você acha que era? A resposta vem na Parte 2."
 
 ## PARTE 2 — "O DNA desenhou o rosto"
-Arquivos: `entrega/ALIBI-015-Parte2-Chantay.mp4` · capa `entrega/CAPA-015-Parte2.jpg`
+Arquivos: `entrega/ALIBI-017-Parte2-Chantay.mp4` · capa `entrega/CAPA-017-Parte2.jpg` (renumerado: postado depois do 016)
 **Capa:** O DNA DESENHOU O ROSTO
 
 **Legenda (recomendada)**
@@ -37,7 +37,7 @@ Um DNA sem nome. Até que desenharam o rosto do assassino.
 A polícia divulgou a imagem e o irmão da vítima reconheceu na hora.
 Você já tinha ouvido falar dessa tecnologia?
 Segue o Álibi pra ver a Parte 3. 🔎
-Caso Nº 015 · Parte 2
+Caso Nº 017 · Parte 2
 
 #truecrime #casosreais #truecrimebrasil #dna #texas
 ```
