@@ -1,6 +1,6 @@
 # PACOTE DE POSTAGEM — ÁLIBI · CASO Nº 018 · Caso Richthofen (pelo lado das vítimas)
 
-Arquivos: `entrega/ALIBI-018-Richthofen.mp4` (≈3:34) · capa `entrega/CAPA-018-Suzane.jpg` (3:4: `CAPA-018-Suzane-3x4.jpg`)
+Arquivos: `entrega/ALIBI-018-Richthofen.mp4` (≈3:38, alta qualidade) · capa `entrega/CAPA-018-Suzane.jpg` (3:4: `CAPA-018-Suzane-3x4.jpg`)
 Momento: documentário "Suzane von Richthofen: O que o Tempo Não Apaga" (Netflix, 11/11/2026) — top 10 em 26 países e
 muito criticado ("dar palco a assassina", cachê de quase R$ 500 mil segundo a Folha). Ângulo diferente: o vídeo é sobre
 Marísia e Manfred, e termina com a pergunta que divide as pessoas.
@@ -9,6 +9,8 @@ Número: 018 (se a Parte 2 da Chantay já saiu como 017). Se mudar a ordem, me a
 **Novidades visuais (identidade do Álibi):** mural do investigador com fios vermelhos, planta da casa com o trajeto daquela
 noite, "versão × fato" (o que disseram × o que a polícia viu), manchetes reais da polêmica, relógio da noite (01:36 / 03:00)
 e o dossiê fechando com carimbo no fim.
+
+**Material real do trailer oficial da Netflix (via TikTok @netflixbrasil):** a voz da Suzane no documentário ("Eu podia ter parado, mas eu não parei"), viaturas na rua (2002), polícia/imprensa na prisão, Suzane e os Cravinhos no DHPP e a manchete da Folha "Filha confessa participação na morte de pais". Marca da Netflix e legendas embutidas cobertas/recortadas; crédito na tela. Cenas do filme de ficção (link 3) NÃO usadas.
 
 **[2] Capa:** O QUE A NETFLIX NÃO MOSTROU (Marísia e Manfred em cima, Suzane embaixo)
 

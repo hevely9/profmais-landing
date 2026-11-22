@@ -217,7 +217,7 @@ export const Suzane: React.FC = () => (
       <Grande r={172.14} top={1070} size={62}>perdeu os pais e a irmã<br />na mesma noite.</Grande>
     </Plano>
     <Plano r={[175.2, 179.89]}>
-      <ArquivoReal src="nf-sq" r={175.2} dur={4.69} cropY={[372, 1040]} top={380} credito="Reprodução · Netflix · “Suzane von Richthofen: O que o Tempo Não Apaga” (2026)" etiqueta="SUZANE, NO DOCUMENTÁRIO" />
+      <ArquivoReal src="nf-sq" r={175.2} dur={4.69} cropY={[250, 1040]} top={340} tapaDir={[290, 380, "DOCUMENTÁRIO · 2026"]} credito="Reprodução · Netflix · “Suzane von Richthofen: O que o Tempo Não Apaga” (2026)" etiqueta="SUZANE, NO DOCUMENTÁRIO" />
     </Plano>
     <Plano r={[179.89, 185.39]}>
       <Foto src="s-netflix-suzane" r={[179.89, 185.39]} credito="Reprodução · Netflix (2026)" top={440} w={860} h={640} pos="50% 30%" zoom={[1.05, 1.15]} />

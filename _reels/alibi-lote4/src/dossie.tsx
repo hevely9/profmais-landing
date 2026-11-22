@@ -173,7 +173,7 @@ export const Fechamento: React.FC<{ r: number; caso: string; status: string; per
 
 // trecho de vídeo REAL (arquivo/documentário), sem som, mostrado numa faixa recortada (esconde marca d'água e legenda embutida)
 import { OffthreadVideo, Sequence } from "remotion";
-export const ArquivoReal: React.FC<{ src: string; r: number; dur: number; cropY: [number, number]; top: number; credito: string; etiqueta?: string }> = ({ src, r, dur, cropY, top, credito, etiqueta }) => {
+export const ArquivoReal: React.FC<{ src: string; r: number; dur: number; cropY: [number, number]; top: number; credito: string; etiqueta?: string; tapaDir?: [number, number, string] }> = ({ src, r, dur, cropY, top, credito, etiqueta, tapaDir }) => {
   const { o } = useT();
   const h = cropY[1] - cropY[0];
   return <Sequence from={Math.round(o(r) * 30)} durationInFrames={Math.round(dur * 30)} layout="none">
@@ -181,6 +181,7 @@ export const ArquivoReal: React.FC<{ src: string; r: number; dur: number; cropY:
     <div style={{ position: "absolute", left: 0, top, width: 1080, height: h, overflow: "hidden", boxShadow: "0 24px 70px rgba(0,0,0,0.85)", borderTop: "4px solid #D9D2C0", borderBottom: "4px solid #D9D2C0" }}>
       <OffthreadVideo src={staticFile(`v/${src}.mp4`)} muted style={{ position: "absolute", left: 0, top: -cropY[0], width: 1080, height: 1920 }} />
       {etiqueta && <div style={{ position: "absolute", left: 24, top: 20, padding: "6px 14px", background: "#0A0A0B", fontFamily: SANS, fontWeight: 800, fontSize: 26, color: C.osso, display: "flex", alignItems: "center", gap: 10 }}><span style={{ width: 12, height: 12, borderRadius: 6, background: C.verm, display: "inline-block" }} />{etiqueta}</div>}
+      {tapaDir && <div style={{ position: "absolute", right: 0, top: tapaDir[0] - cropY[0], height: tapaDir[1] - tapaDir[0], width: 380, background: "#0A0A0B", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: SANS, fontWeight: 800, fontSize: 26, color: C.osso, letterSpacing: "0.04em" }}>{tapaDir[2]}</div>}
     </div>
     <div style={{ position: "absolute", right: 34, top: 1262, fontFamily: SANS, fontWeight: 600, fontSize: 17, color: "rgba(236,231,220,0.6)", textShadow: "0 1px 4px #000" }}>{credito}</div>
   </Sequence>;
