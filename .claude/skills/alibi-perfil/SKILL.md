@@ -64,6 +64,14 @@ sem acelerar o áudio, frases curtas). Orçamento até 2.500 créditos por víde
 - Legenda: Inter 800, 56 px, máx. 3 palavras, chave em #E0353F, faixa y 1320–1480, margem direita 170 px (botões do app).
 - Tela final (últimos ~3 s): ÁLIBI + "PRÓXIMO CASO" + "SEGUE O ÁLIBI" (nunca prometer dia/hora).
 - **Pessoas reais: sempre que possível, mostrar a FOTO REAL da pessoa** (pedido do usuário, 20/11 — "gera curiosidade, as pessoas pensam: eu já vi esse cara"). Ordem: foto com licença livre (Commons/FBI/Agência Brasil); se não houver, reprodução de reportagem/entrevista (ex.: miniatura do YouTube em `i.ytimg.com/vi/<id>/maxresdefault.jpg`), recortada sem letreiros, melhorada com o upscaler e com crédito "Reprodução · <veículo>". Nunca rosto gerado por IA; nada de vítimas menores.
+- **Imagens e vídeos reais do caso sempre que puder (usuário, 22/11)**: a casa/local do crime, reconstituição, perícia,
+  delegacia, prisão, tribunal, entrevistas da época (miniaturas de reportagens com crédito "Reprodução · veículo").
+  Limite: nada de corpos, sangue ou violência gráfica.
+- **Identidade visual do Álibi (dossiê, 22/11)** — usar em todo caso: `_reels/alibi-lote4/src/dossie.tsx`
+  (Mural do investigador com fios vermelhos, Planta da casa animada, VERSÃO × FATO, Manchetes reais, Hora da noite,
+  Fechamento do dossiê com carimbo). Conferir enquadramento: rosto inteiro, foto no formato certo (moldura com a mesma
+  proporção da imagem), sem letreiro/logo de TV.
+- **Tom**: em casos com vítimas conhecidas, contar pelo lado delas (quem eram) — melancólico, respeitoso.
 - Imagens só reais e licenciadas (Commons/FBI/Agência Brasil) com crédito; **conferir se a imagem baixada é mesmo o que o
   nome diz** (já veio carta no lugar de quadro). Wikimedia: miniaturas 1920/960 px sem `?utm`.
 - Exportar: `-profile:v high -level:v 4.1 -pix_fmt yuv420p -movflags +faststart`, -14 LUFS, < 50 MB.
