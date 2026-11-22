@@ -2,17 +2,17 @@ import React from "react";
 import { Easing } from "remotion";
 import palavras from "../../public/palavras-suzane.json";
 import { C, Carimbo, Clip, Contador, ELITE, Faixa, Foto, Fundo, Grande, Papel, Cabec, Linha, Plano, Reel, Rotulo, SOMBRA, Titulo, TituloVivo, lin, mkCtx, useT } from "../kit";
-import { Fechamento, Hora, Manchetes, Mural, Planta, VersaoFato } from "../dossie";
+import { ArquivoReal, Fechamento, Hora, Manchetes, Mural, Planta, VersaoFato } from "../dossie";
 
 // ÁLIBI · CASO Nº 018 — Caso Richthofen contado pelo lado das vítimas (Manfred e Marísia), no embalo do documentário da Netflix (nov/2026).
 // Fontes: Wikipedia (Richthofen case; Investigação do caso Richthofen), Gazeta do Povo, Observatório da Imprensa, DGABC, CNN Brasil,
 // Terra, Correio Braziliense, Pipoca Moderna. Valor do cachê: "segundo a Folha" (não confirmado pela Netflix). Nada gráfico.
 type Ws = { words: { text: string; start: number; end: number }[] };
 export const ctxS = mkCtx({
-  caso: "Nº 018", audio: "suzane", words: (palavras as Ws).words, lead: 0.1, fimVozRaw: 210.1, final: "alibi", proximo: "NO PERFIL",
+  caso: "Nº 018", audio: "suzane", words: (palavras as Ws).words, lead: 0.1, fimVozRaw: 214.79, final: "alibi", proximo: "NO PERFIL",
   cta: ["Quem comete um crime deveria poder lucrar com ele?", "comenta: SIM ou NÃO ↓"],
   chave: /^(marísia|manfred|suzane|andreas|netflix|álibi|motel|polícia|dólares|fantástico|presa|aberto|ouvida|alarme|filha)$/i,
-  semLegenda: [[195.2, 260]],
+  semLegenda: [[199.89, 264.69]],
   sfx: [
     { src: "coracao", r: 3.4, vol: 0.4 }, { src: "whoosh", r: 7.75, vol: 0.25 }, { src: "whoosh", r: 19.6, vol: 0.3 }, { src: "impacto", r: 23.8, vol: 0.4 },
     ...Array.from({ length: 8 }, (_, i) => ({ src: "tique", r: 27.0 + i * 0.12, vol: 0.22 })), { src: "tecla", r: 30.8, vol: 0.3 }, { src: "tecla", r: 31.6, vol: 0.3 },
@@ -23,7 +23,7 @@ export const ctxS = mkCtx({
     { src: "whoosh", r: 118.6, vol: 0.3 }, { src: "impacto", r: 122.74, vol: 0.4 }, { src: "carimbo", r: 127.54, vol: 0.5 }, { src: "carimbo", r: 128.52, vol: 0.5 },
     { src: "coracao", r: 133.2, vol: 0.45 }, { src: "whoosh", r: 136.7, vol: 0.25 }, { src: "trava", r: 144.94, vol: 0.4 }, { src: "carimbo", r: 151.48, vol: 0.5 },
     { src: "carimbo", r: 155.1, vol: 0.55 }, { src: "impacto", r: 160.56, vol: 0.45 }, { src: "impacto", r: 168.38, vol: 0.4 }, { src: "coracao", r: 172.1, vol: 0.45 },
-    { src: "subida", r: 175.2, vol: 0.3 }, { src: "coracao", r: 189.1, vol: 0.4 }, { src: "carimbo", r: 203.4, vol: 0.55 },
+    { src: "subida", r: 179.89, vol: 0.3 }, { src: "coracao", r: 193.79, vol: 0.4 }, { src: "carimbo", r: 208.09, vol: 0.55 },
   ],
 });
 
@@ -133,9 +133,12 @@ export const Suzane: React.FC = () => (
       <Hora r={93.32} hora="03:00" top={360} sub="BUSCAM ANDREAS NA LAN HOUSE" />
       <Grande r={96.94} top={760} size={66}>e voltam pra casa como se<br />nada tivesse acontecido</Grande>
     </Plano>
-    <Plano r={[100.25, 106.1]}>
-      <Foto src="s-jn-casa" r={[100.25, 106.1]} credito="Reprodução · TV Globo (Jornal Nacional, 2002)" top={440} w={940} h={680} pos="40% 30%" zoom={[1.0, 1.1]} />
+    <Plano r={[100.25, 104.0]}>
+      <Foto src="s-jn-casa" r={[100.25, 104.0]} credito="Reprodução · TV Globo (Jornal Nacional, 2002)" top={440} w={940} h={680} pos="40% 30%" zoom={[1.0, 1.1]} />
       <Titulo r={100.32} top={200} size={66}>ELES “DESCOBREM”<br />A CASA REVIRADA</Titulo>
+    </Plano>
+    <Plano r={[104.0, 106.1]}>
+      <ArquivoReal src="nf-a3" r={104.0} dur={2.1} cropY={[380, 1040]} top={420} credito="Reprodução · Netflix (imagens de arquivo do documentário)" etiqueta="IMAGEM REAL · 2002" />
       <Faixa r={104.02} texto="E CHAMAM A POLÍCIA" top={1150} size={58} />
     </Plano>
     <Plano r={[106.1, 108.75]}>
@@ -161,11 +164,18 @@ export const Suzane: React.FC = () => (
       <Clip src="c18249" r0={123.25} dur={3.65} a={0.55} />
       <Grande r={123.32} top={620} size={70}>os mesmos dólares<br />que tinham sumido<br />da casa</Grande>
     </Plano>
-    <Plano r={[126.9, 133.1]}>
-      <Foto src="s-presos-2002" r={[126.9, 133.1]} credito="Reprodução · TV Globo (Jornal Nacional, 2002)" top={430} w={1000} h={660} zoom={[1.0, 1.1]} />
+    <Plano r={[126.9, 129.4]}>
+      <ArquivoReal src="nf-a4" r={126.9} dur={2.5} cropY={[380, 1040]} top={420} credito="Reprodução · Netflix (imagens de arquivo do documentário)" etiqueta="IMAGEM REAL · 2002" />
       <Carimbo r={127.54} texto="PRESO" y={300} rot={-8} size={100} />
-      <Carimbo r={128.52} texto="CONFESSA" y={1170} rot={6} size={96} />
-      <Rotulo r={130.8} texto="Suzane e Daniel também confessam" top={1270} size={34} />
+      <Carimbo r={128.52} texto="CONFESSA" y={1180} rot={6} size={96} />
+    </Plano>
+    <Plano r={[129.4, 131.2]}>
+      <ArquivoReal src="nf-a1" r={129.4} dur={1.8} cropY={[380, 1040]} top={420} credito="Reprodução · Netflix (imagens de arquivo do documentário)" etiqueta="DHPP · 2002" />
+      <Rotulo r={129.52} texto="EM SEGUIDA, SUZANE E DANIEL…" top={260} size={38} cor={C.fita} />
+    </Plano>
+    <Plano r={[131.2, 133.1]}>
+      <ArquivoReal src="nf-a2" r={131.2} dur={1.9} cropY={[380, 1040]} top={420} credito="Reprodução · Netflix (imagens de arquivo do documentário)" etiqueta="FOLHA DE S.PAULO · 2002" />
+      <Faixa r={131.66} texto="TAMBÉM CONFESSAM" top={1150} size={62} />
     </Plano>
     <Plano r={[133.1, 136.7]}>
       <Fundo cor="radial-gradient(ellipse at 50% 45%, #2A1416 0%, #0A0A0B 70%)" />
@@ -206,29 +216,32 @@ export const Suzane: React.FC = () => (
       <Rotulo r={169.9} texto="ANDREAS, O MENINO DA LAN HOUSE…" top={190} size={38} cor={C.fita} />
       <Grande r={172.14} top={1070} size={62}>perdeu os pais e a irmã<br />na mesma noite.</Grande>
     </Plano>
-    <Plano r={[175.2, 180.7]}>
-      <Foto src="s-netflix-suzane" r={[175.2, 180.7]} credito="Reprodução · Netflix (2026)" top={440} w={860} h={640} pos="50% 30%" zoom={[1.05, 1.15]} />
-      <Rotulo r={175.24} texto="HOJE, O DOCUMENTÁRIO DELA ESTÁ NO" top={230} size={36} cor={C.fita} />
-      <Contador r={178.16} ate={179.0} valor={26} prefixo="TOP 10 · " sufixo=" PAÍSES" top={1120} size={70} cor={C.verm} />
+    <Plano r={[175.2, 179.89]}>
+      <ArquivoReal src="nf-sq" r={175.2} dur={4.69} cropY={[372, 1040]} top={380} credito="Reprodução · Netflix · “Suzane von Richthofen: O que o Tempo Não Apaga” (2026)" etiqueta="SUZANE, NO DOCUMENTÁRIO" />
     </Plano>
-    <Plano r={[180.7, 189.0]}>
+    <Plano r={[179.89, 185.39]}>
+      <Foto src="s-netflix-suzane" r={[179.89, 185.39]} credito="Reprodução · Netflix (2026)" top={440} w={860} h={640} pos="50% 30%" zoom={[1.05, 1.15]} />
+      <Rotulo r={179.93} texto="HOJE, O DOCUMENTÁRIO DELA ESTÁ NO" top={230} size={36} cor={C.fita} />
+      <Contador r={182.85} ate={183.69} valor={26} prefixo="TOP 10 · " sufixo=" PAÍSES" top={1120} size={70} cor={C.verm} />
+    </Plano>
+    <Plano r={[185.39, 193.69]}>
       <Fundo />
-      <Rotulo r={180.78} texto="A MÃE DA ISABELLA NARDONI PERGUNTOU:" top={420} size={38} cor={C.fita} />
-      <Grande r={183.4} top={540} size={70}>“até quando assassinos<br />vão ser protagonistas…<br />e vítimas, coadjuvantes?”</Grande>
+      <Rotulo r={185.47} texto="A MÃE DA ISABELLA NARDONI PERGUNTOU:" top={420} size={38} cor={C.fita} />
+      <Grande r={188.09} top={540} size={70}>“até quando assassinos<br />vão ser protagonistas…<br />e vítimas, coadjuvantes?”</Grande>
     </Plano>
-    <Plano r={[189.0, 195.2]}>
-      <Foto src="s-casal" r={[189.0, 195.2]} credito="Reprodução · arquivo da família (imprensa)" top={300} w={900} h={670} pos="50% 30%" cinza zoom={[1.0, 1.12]} />
-      <Grande r={189.1} top={1020} size={58}>Marísia passou a vida<br />ouvindo as pessoas.</Grande>
-      <Faixa r={192.26} texto="HOJE, FOI A VEZ DELA SER OUVIDA" top={200} size={46} />
+    <Plano r={[193.69, 199.89]}>
+      <Foto src="s-casal" r={[193.69, 199.89]} credito="Reprodução · arquivo da família (imprensa)" top={300} w={900} h={670} pos="50% 30%" cinza zoom={[1.0, 1.12]} />
+      <Grande r={193.79} top={1020} size={58}>Marísia passou a vida<br />ouvindo as pessoas.</Grande>
+      <Faixa r={196.95} texto="HOJE, FOI A VEZ DELA SER OUVIDA" top={200} size={46} />
     </Plano>
-    <Plano r={[195.2, 202.5]}>
-      <Clip src="c27291" r0={195.2} from={3} dur={7.3} a={0.65} />
-      <Grande r={195.26} top={560} size={84}>Onde você estava<br />naquela noite?</Grande>
-      <Rotulo r={197.16} texto="num motel. com nota fiscal." top={820} size={42} cor={C.ossoE} />
-      <Ass r={200.44} />
+    <Plano r={[199.89, 207.19]}>
+      <Clip src="c27291" r0={199.89} from={3} dur={7.3} a={0.65} />
+      <Grande r={199.95} top={560} size={84}>Onde você estava<br />naquela noite?</Grande>
+      <Rotulo r={201.85} texto="num motel. com nota fiscal." top={820} size={42} cor={C.ossoE} />
+      <Ass r={205.13} />
     </Plano>
-    <Plano r={[202.5, 260]} soco={false}>
-      <Fechamento r={202.6} caso="Nº 018" status="CONDENADOS" pergunta="Quem comete um crime deveria poder ganhar dinheiro contando ele?" />
+    <Plano r={[207.19, 264.69]} soco={false}>
+      <Fechamento r={207.29} caso="Nº 018" status="CONDENADOS" pergunta="Quem comete um crime deveria poder ganhar dinheiro contando ele?" />
     </Plano>
   </Reel>
 );
