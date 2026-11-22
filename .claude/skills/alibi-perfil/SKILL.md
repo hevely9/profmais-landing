@@ -93,6 +93,14 @@ sem acelerar o áudio, frases curtas). Orçamento até 2.500 créditos por víde
   Netflix não mostrou" + fatos que todo mundo já sabe = vídeo reprovado. Preferir casos/ângulos com uma virada concreta
   (prova, horário, frase ambígua) e perguntas que dividem ("matou ou foi armação?"), mostrando os dois lados com fatos.
 
+- **Revisão antes de entregar (22/11, pedido do usuário — obrigatória):**
+  1. Tempo de tela: todo texto/carimbo/faixa fica ≥ 1,5 s visível antes do corte; se não, estender a cena (a seguinte
+     começa um pouco depois) ou fazer o elemento entrar antes. Nada some "antes da hora".
+  2. Clipes de fundo: from + dur ≤ duração real do arquivo (senão o fundo congela/some no fim da cena).
+  3. Cenas contínuas, sem buraco nem sobreposição entre Planos.
+  4. Enquadramento: extrair 1 quadro por segundo do MP4 final e olhar todos: rosto inteiro, nada cortado pela borda,
+     texto dentro da área segura, sem logo/marca d'água, documento sem texto cortado pela metade, carimbo sem cobrir rosto.
+
 ## 5. ENTREGA OBRIGATÓRIA — "PACOTE DE POSTAGEM" (sem o usuário pedir)
 Em toda entrega de vídeo, mandar junto:
 [1] **Título interno + nº do caso**

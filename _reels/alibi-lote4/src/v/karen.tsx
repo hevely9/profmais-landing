@@ -74,7 +74,7 @@ const Lados: React.FC<{ cima: [number, string, string, string?]; baixo: [number,
   const { t, o } = useT();
   const bloco = ([r, rot, txt, img]: [number, string, string, string?], top: number, cor: string) => {
     const k = lin(t, o(r) - 0.1, o(r) + 0.3, Easing.out(Easing.cubic));
-    return <div style={{ position: "absolute", left: 60, right: 60, top, height: 440, opacity: k, transform: `translateX(${(1 - k) * (top < 700 ? -60 : 60)}px)`, background: "rgba(10,10,11,0.85)", border: `4px solid ${cor}`, overflow: "hidden" }}>
+    return <div style={{ position: "absolute", left: 60, right: 60, top, height: 300, opacity: k, transform: `translateX(${(1 - k) * (top < 600 ? -60 : 60)}px)`, background: "rgba(10,10,11,0.85)", border: `4px solid ${cor}`, overflow: "hidden" }}>
       {img && <Img src={staticFile(`img/${img}.jpg`)} style={{ position: "absolute", right: 0, top: 0, width: 420, height: "100%", objectFit: "cover", opacity: 0.85, filter: "contrast(1.08) sepia(0.12)" }} />}
       <div style={{ position: "absolute", left: 36, top: 34, right: img ? 450 : 36 }}>
         <div style={{ fontFamily: COURIER, fontWeight: 700, fontSize: 32, letterSpacing: "0.16em", color: cor }}>{rot}</div>
@@ -84,9 +84,9 @@ const Lados: React.FC<{ cima: [number, string, string, string?]; baixo: [number,
   };
   return <AbsoluteFill>
     <Fundo />
-    {bloco(cima, 250, "#9CC4E8")}
-    <div style={{ position: "absolute", left: 0, right: 0, top: 712, textAlign: "center", fontFamily: ELITE, fontSize: 60, color: C.fita, opacity: lin(t, o(baixo[0]) - 0.6, o(baixo[0]) - 0.2) }}>×</div>
-    {bloco(baixo, 800, C.verm)}
+    {bloco(cima, 340, "#9CC4E8")}
+    <div style={{ position: "absolute", left: 0, right: 0, top: 650, textAlign: "center", fontFamily: ELITE, fontSize: 60, color: C.fita, opacity: lin(t, o(baixo[0]) - 0.6, o(baixo[0]) - 0.2) }}>×</div>
+    {bloco(baixo, 760, C.verm)}
   </AbsoluteFill>;
 };
 
@@ -100,43 +100,43 @@ export const Karen: React.FC = () => (
       <TituloVivo top={260} size={96} destaque="NEVE" linhas={[[["UM", 0], ["POLICIAL", 0.14]], [["MORTO", 1.44], ["NA", 1.98], ["NEVE", 2.12]]]} />
       <Rotulo r={2.74} texto="na frente da casa de OUTRO policial" top={1215} size={40} cor={C.fita} />
     </Plano>
-    <Plano r={[5.4, 8.7]}>
-      <Foto src="k-casal" r={[5.4, 8.7]} credito="Reprodução · redes sociais (imprensa)" top={420} w={780} h={830} pos="50% 8%" zoom={[1.0, 1.1]} />
+    <Plano r={[5.4, 9.3]}>
+      <Foto src="k-casal" r={[5.4, 9.3]} credito="Reprodução · redes sociais (imprensa)" top={420} w={780} h={830} pos="50% 8%" zoom={[1.0, 1.1]} />
       <Rotulo r={5.48} texto="E A ACUSADA…" top={250} size={52} cor={C.fita} />
       <Faixa r={7.38} texto="ERA A NAMORADA DELE" top={1150} size={62} />
     </Plano>
-    <Plano r={[8.7, 11.86]}>
-      <Foto src="k-multidao" r={[8.7, 11.86]} credito="Reprodução · apoiadores em frente ao tribunal (imprensa)" top={460} w={1000} h={620} pos="50% 40%" zoom={[1.0, 1.1]} />
+    <Plano r={[9.3, 11.86]}>
+      <Foto src="k-multidao" r={[9.3, 11.86]} credito="Reprodução · apoiadores em frente ao tribunal (imprensa)" top={460} w={1000} h={620} pos="50% 40%" zoom={[1.0, 1.1]} />
       <Titulo r={9.54} top={210} size={74}>DIVIDIU OS EUA<br />AO MEIO</Titulo>
     </Plano>
-    <Plano r={[11.86, 15.62]}>
-      <Foto src="k-netflix-karen" r={[11.86, 15.62]} credito="Reprodução · Netflix (2026)" top={480} w={1000} h={560} pos="50% 30%" zoom={[1.0, 1.1]} />
+    <Plano r={[11.86, 16.0]}>
+      <Foto src="k-netflix-karen" r={[11.86, 16.0]} credito="Reprodução · Netflix (2026)" top={480} w={1000} h={560} pos="50% 30%" zoom={[1.0, 1.1]} />
       <Rotulo r={11.9} texto="A NETFLIX LANÇA A SÉRIE DO CASO" top={260} size={42} cor={C.fita} />
       <Faixa r={14.02} texto="23 DE NOVEMBRO" top={1130} size={70} />
     </Plano>
-    <Plano r={[15.62, 19.68]}>
-      <Foto src="k-john-farda" r={[15.62, 19.68]} credito="Reprodução · Polícia de Boston · John O'Keefe" top={280} w={700} h={840} pos="50% 25%" cinza zoom={[1.0, 1.1]} />
-      <Rotulo r={15.7} texto="ATÉ HOJE…" top={190} size={48} cor={C.fita} />
+    <Plano r={[16.0, 19.68]}>
+      <Foto src="k-john-farda" r={[16.0, 19.68]} credito="Reprodução · Polícia de Boston · John O'Keefe" top={280} w={700} h={840} pos="50% 25%" cinza zoom={[1.0, 1.1]} />
+      <Rotulo r={16.05} texto="ATÉ HOJE…" top={190} size={48} cor={C.fita} />
       <Carimbo r={17.56} texto="NINGUÉM CONDENADO" y={1225} rot={-4} size={76} />
     </Plano>
-    <Plano r={[19.68, 25.72]}>
-      <Clip src="c45661" r0={19.68} dur={6.04} a={0.6} />
+    <Plano r={[19.68, 26.0]}>
+      <Clip src="c45661" r0={19.68} dur={6.32} a={0.6} />
       <Rotulo r={20.46} texto="NO MEIO DESSA HISTÓRIA…" top={380} size={44} cor={C.fita} />
       <Busca r={21.9} texto="quanto tempo leva pra morrer no frio" dur={1} borrado top={560} />
       <Titulo r={23.0} top={820} size={86}>UMA PESQUISA<br />NO GOOGLE</Titulo>
       <Faixa r={24.18} texto="QUE MUDA TUDO" top={1080} size={70} />
     </Plano>
     {/* a noite */}
-    <Plano r={[25.72, 31.36]}>
-      <Foto src="k-dashcam" r={[25.72, 31.36]} credito="Reprodução · vídeo da polícia exibido no julgamento" top={640} w={1040} h={460} pos="50% 50%" zoom={[1.05, 1.2]} />
-      <Titulo r={25.72} top={240} size={86}>JANEIRO<br />DE 2022</Titulo>
+    <Plano r={[26.0, 31.7]}>
+      <Foto src="k-dashcam" r={[26.0, 31.7]} credito="Reprodução · vídeo da polícia exibido no julgamento" top={640} w={1040} h={460} pos="50% 50%" zoom={[1.05, 1.2]} />
+      <Titulo r={26.0} top={240} size={86}>JANEIRO<br />DE 2022</Titulo>
       <Rotulo r={28.02} texto="CANTON · PERTO DE BOSTON" top={1150} size={40} cor={C.fita} />
       <Faixa r={30.0} texto="UMA NEVASCA" top={470} size={60} />
     </Plano>
-    <Plano r={[31.36, 38.66]} soco={false}>
-      <Mural camera={[[31.36, 1.12, 60, 120], [34.1, 1.0, 0, 40], [37.0, 1.05, 0, -80], [38.66, 1.08, 0, -120]]}
+    <Plano r={[31.7, 38.66]} soco={false}>
+      <Mural camera={[[31.7, 1.12, 60, 120], [34.1, 1.0, 0, 40], [37.0, 1.05, 0, -80], [38.66, 1.08, 0, -120]]}
         itens={[
-          { id: "john", r: 31.4, x: 290, y: 280, w: 500, h: 600, img: "k-john-farda", titulo: "JOHN O'KEEFE", sub: "46 anos", rot: -2, pos: "50% 25%" },
+          { id: "john", r: 31.75, x: 290, y: 280, w: 500, h: 600, img: "k-john-farda", titulo: "JOHN O'KEEFE", sub: "46 anos", rot: -2, pos: "50% 25%" },
           { id: "pol", r: 34.12, x: 70, y: 1020, titulo: "POLICIAL DE BOSTON", sub: "há 16 anos na corporação", w: 430, rot: 2 },
           { id: "sob", r: 35.66, x: 580, y: 1040, titulo: "CRIAVA 2 SOBRINHOS", sub: "depois que a irmã morreu", w: 430, rot: -2 },
         ]}
@@ -145,7 +145,7 @@ export const Karen: React.FC = () => (
     <Plano r={[38.66, 42.78]}>
       <Foto src="k-casal" r={[38.66, 42.78]} fundo="c4043" credito="Reprodução · redes sociais (imprensa)" top={380} w={760} h={760} pos="50% 30%" zoom={[1.05, 1.15]} />
       <Rotulo r={38.7} texto="NAQUELA NOITE, UM BAR COM…" top={230} size={40} cor={C.fita} />
-      <Faixa r={41.6} texto="A NAMORADA: KAREN READ" top={1170} size={54} />
+      <Faixa r={40.78} texto="A NAMORADA: KAREN READ" top={1170} size={54} />
     </Plano>
     <Plano r={[42.78, 47.4]}>
       <Foto src="k-casa" r={[42.78, 47.4]} credito="Reprodução · a casa em Canton (imprensa)" top={560} w={1000} h={560} pos="50% 50%" zoom={[1.0, 1.1]} />
@@ -159,43 +159,43 @@ export const Karen: React.FC = () => (
       <Rotulo r={50.88} texto="📞 ligações para John…" top={860} size={46} />
       <Faixa r={51.74} texto="NUNCA MAIS ATENDIDAS" top={960} size={62} />
     </Plano>
-    <Plano r={[53.34, 61.54]}>
-      <Foto src="k-cena-noite" r={[53.34, 61.54]} credito="Reprodução · WCVB · Canton (2022)" top={640} w={1040} h={440} pos="50% 60%" cinza zoom={[1.15, 1.3]} />
+    <Plano r={[53.34, 62.6]}>
+      <Foto src="k-cena-noite" r={[53.34, 62.6]} credito="Reprodução · WCVB · Canton (2022)" top={640} w={1040} h={440} pos="50% 60%" cinza zoom={[1.15, 1.3]} />
       <Titulo r={53.34} top={220} size={86}>DE MANHÃ</Titulo>
       <Rotulo r={54.48} texto="KAREN VOLTA COM DUAS AMIGAS" top={370} size={42} cor={C.fita} />
       <Rotulo r={56.68} texto="John caído na neve, no gramado" top={480} size={44} />
       <Carimbo r={60.6} texto="MORTO" y={1210} rot={-6} size={100} />
     </Plano>
     {/* a frase */}
-    <Plano r={[61.54, 69.92]} soco={false}>
-      <Aspas itens={[[64.42, "PARAMÉDICA: KAREN REPETIA", "“EU BATI NELE.”", C.lacre], [68.42, "DEFESA: ELA PERGUNTAVA", "“EU BATI NELE?”", "#2F6FA8"]]} />
-      <Rotulo r={61.6} texto="UMA FRASE. DOIS SENTIDOS." top={190} size={42} cor={C.fita} />
+    <Plano r={[62.6, 70.4]} soco={false}>
+      <Aspas itens={[[64.1, "PARAMÉDICA: KAREN REPETIA", "“EU BATI NELE.”", C.lacre], [68.42, "DEFESA: ELA PERGUNTAVA", "“EU BATI NELE?”", "#2F6FA8"]]} />
+      <Rotulo r={62.65} texto="UMA FRASE. DOIS SENTIDOS." top={190} size={42} cor={C.fita} />
     </Plano>
-    <Plano r={[69.92, 73.44]}>
-      <Foto src="k-lanterna-tribunal" r={[69.92, 73.44]} credito={CRED_TV} top={400} w={900} h={680} pos="50% 40%" zoom={[1.0, 1.1]} />
-      <Rotulo r={69.96} texto="O CARRO DE KAREN:" top={170} size={44} cor={C.fita} />
+    <Plano r={[70.4, 74.3]}>
+      <Foto src="k-lanterna-tribunal" r={[70.4, 74.3]} credito={CRED_TV} top={400} w={900} h={680} pos="50% 40%" zoom={[1.0, 1.1]} />
+      <Rotulo r={70.45} texto="O CARRO DE KAREN:" top={170} size={44} cor={C.fita} />
       <Faixa r={71.84} texto="LANTERNA TRASEIRA" top={1110} size={60} />
       <Carimbo r={72.72} texto="QUEBRADA" y={300} rot={-6} size={84} />
     </Plano>
-    <Plano r={[73.44, 76.56]}>
-      <Foto src="k-lanterna" r={[73.44, 76.56]} credito="Reprodução · prova exibida no julgamento" top={340} w={860} h={780} pos="50% 50%" zoom={[1.0, 1.12]} />
+    <Plano r={[74.3, 76.56]}>
+      <Foto src="k-lanterna" r={[74.3, 76.56]} credito="Reprodução · prova exibida no julgamento" top={340} w={860} h={780} pos="50% 50%" zoom={[1.0, 1.12]} />
       <Faixa r={74.7} texto="PEDAÇOS ACHADOS NO LOCAL" top={1160} size={54} />
     </Plano>
-    <Plano r={[76.56, 83.0]}>
-      <Clip src="c27717" r0={76.56} dur={6.44} a={0.6} />
+    <Plano r={[76.56, 83.4]}>
+      <Clip src="c27717" r0={76.56} dur={6.84} a={0.6} />
       <Titulo r={76.6} top={330} size={72}>PRA ACUSAÇÃO,<br />É SIMPLES:</Titulo>
       <Rotulo r={78.8} texto="✗ deu ré" top={600} size={60} />
       <Rotulo r={79.52} texto="✗ bêbada" top={690} size={60} />
       <Rotulo r={80.42} texto="✗ atingiu o namorado" top={780} size={60} />
       <Rotulo r={81.92} texto="✗ foi embora" top={870} size={60} />
     </Plano>
-    <Plano r={[83.0, 85.34]}>
-      <Foto src="k-karen-tribunal" r={[83.0, 85.34]} credito={CRED_TV} top={460} w={1040} h={560} pos="35% 40%" zoom={[1.0, 1.08]} />
-      <Carimbo r={84.1} texto="ACUSADA DE ASSASSINATO" y={1150} rot={-5} size={70} />
+    <Plano r={[83.4, 85.6]}>
+      <Foto src="k-karen-tribunal" r={[83.4, 85.6]} credito={CRED_TV} top={460} w={1040} h={560} pos="35% 40%" zoom={[1.0, 1.08]} />
+      <Carimbo r={83.9} texto="ACUSADA DE ASSASSINATO" y={1150} rot={-5} size={70} />
     </Plano>
-    <Plano r={[85.34, 88.4]}>
+    <Plano r={[85.6, 88.4]}>
       <Fundo cor="radial-gradient(ellipse at 50% 45%, #2A1416 0%, #0A0A0B 70%)" />
-      <Rotulo r={85.4} texto="SÓ QUE AÍ…" top={560} size={50} cor={C.ossoE} />
+      <Rotulo r={85.65} texto="SÓ QUE AÍ…" top={560} size={50} cor={C.ossoE} />
       <Titulo r={86.6} top={660} size={110} cor={C.verm}>A HISTÓRIA<br />VIRA</Titulo>
     </Plano>
     {/* a pesquisa */}
@@ -211,26 +211,26 @@ export const Karen: React.FC = () => (
       <Faixa r={97.5} texto="O PROBLEMA É O HORÁRIO" top={880} size={60} />
     </Plano>
     <Plano r={[99.5, 106.94]}>
-      <Foto src="k-pesquisa" r={[99.5, 106.94]} credito="Reprodução · relatório pericial exibido no julgamento" top={720} w={900} h={520} pos="70% 50%" zoom={[1.0, 1.12]} />
+      <Foto src="k-pesquisa" r={[99.5, 106.94]} credito="Reprodução · relatório pericial exibido no julgamento" top={610} w={420} h={650} pos="50% 50%" zoom={[1.0, 1.08]} />
       <Rotulo r={99.54} texto="PERITO DA DEFESA:" top={200} size={44} cor="#9CC4E8" />
       <Hora r={102.42} hora="02:27" top={270} sub="HORAS ANTES DE ACHAREM O CORPO" />
     </Plano>
-    <Plano r={[106.94, 115.86]}>
-      <Clip src="c45661" r0={106.94} from={4} dur={8.92} a={0.65} />
+    <Plano r={[106.94, 116.3]}>
+      <Clip src="c45661" r0={106.94} from={1.4} dur={9.36} a={0.65} />
       <Rotulo r={106.98} texto="PERITOS DA ACUSAÇÃO:" top={200} size={44} cor={C.verm} />
-      <Hora r={109.42} hora="06:24" top={270} sub="JÁ NA CENA" />
+      <Hora r={109.15} hora="06:24" top={270} sub="JÁ NA CENA" />
       <Grande r={111.92} top={680} size={60}>“a pedido da<br />própria Karen”</Grande>
       <Carimbo r={114.42} texto="KAREN NEGA" y={1080} rot={-6} size={96} />
     </Plano>
     {/* o braço */}
-    <Plano r={[115.86, 119.56]}>
-      <Clip src="c46748" r0={115.86} dur={3.7} a={0.6} />
-      <Titulo r={115.9} top={420} size={78}>E NÃO PARA<br />POR AÍ</Titulo>
+    <Plano r={[116.3, 119.9]}>
+      <Clip src="c46748" r0={116.3} dur={3.6} a={0.6} />
+      <Titulo r={116.3} top={420} size={78}>E NÃO PARA<br />POR AÍ</Titulo>
       <Faixa r={118.14} texto="MARCAS NO BRAÇO DE JOHN" top={760} size={56} />
     </Plano>
-    <Plano r={[119.56, 127.06]} soco={false}>
-      <Lados cima={[119.8, "DEFESA", "mordida de cachorro: o pastor alemão da casa"]} baixo={[124.38, "ACUSAÇÃO", "a lanterna do carro", "k-lanterna"]} />
-      <Rotulo r={119.6} texto="O TRIBUNAL É VOCÊ" top={170} size={40} cor={C.fita} />
+    <Plano r={[119.9, 127.06]} soco={false}>
+      <Lados cima={[120.2, "DEFESA", "mordida de cachorro: o pastor alemão da casa"]} baixo={[124.38, "ACUSAÇÃO", "a lanterna do carro", "k-lanterna"]} />
+      <Rotulo r={119.95} texto="O TRIBUNAL É VOCÊ" top={250} size={44} cor={C.fita} />
     </Plano>
     {/* o investigador */}
     <Plano r={[127.06, 132.2]}>
@@ -267,14 +267,14 @@ export const Karen: React.FC = () => (
       <Faixa r={155.88} texto="A MULTIDÃO COMEMOROU" top={1130} size={60} />
     </Plano>
     {/* o lado da vítima */}
-    <Plano r={[157.66, 161.8]}>
-      <Foto src="k-john-farda" r={[157.66, 161.8]} credito="Reprodução · Polícia de Boston · John O'Keefe" top={300} w={680} h={820} pos="50% 25%" cinza zoom={[1.05, 1.15]} />
+    <Plano r={[157.66, 162.1]}>
+      <Foto src="k-john-farda" r={[157.66, 162.1]} credito="Reprodução · Polícia de Boston · John O'Keefe" top={300} w={680} h={820} pos="50% 25%" cinza zoom={[1.05, 1.15]} />
       <Rotulo r={157.7} texto="ATÉ HOJE, NINGUÉM FOI CONDENADO" top={190} size={38} cor={C.fita} />
-      <Faixa r={160.74} texto="PELA MORTE DE JOHN" top={1150} size={58} />
+      <Faixa r={160.2} texto="PELA MORTE DE JOHN" top={1150} size={58} />
     </Plano>
-    <Plano r={[161.8, 166.12]}>
-      <Clip src="c6925" r0={161.8} dur={4.32} a={0.45} />
-      <Grande r={161.86} top={600} size={66}>e os sobrinhos que<br />ele criava perderam<br />mais uma pessoa.</Grande>
+    <Plano r={[162.1, 166.12]}>
+      <Clip src="c6925" r0={162.1} dur={4.02} a={0.45} />
+      <Grande r={162.15} top={600} size={66}>e os sobrinhos que<br />ele criava perderam<br />mais uma pessoa.</Grande>
     </Plano>
     {/* bordão */}
     <Plano r={[166.12, 174.64]}>
