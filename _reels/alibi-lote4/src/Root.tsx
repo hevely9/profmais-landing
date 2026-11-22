@@ -2,6 +2,7 @@ import React from "react";
 import { Composition } from "remotion";
 import { FPS } from "./kit";
 import { CapaBusca, CapaCoringa, CapaSerie } from "./capaSerie";
+import { Slide } from "./carrossel";
 import { Parte1, Parte2, Parte3, ctx1, ctx2, ctx3 } from "./v/riggs";
 import { Natalee, ctxN } from "./v/natalee";
 import { Suzane, ctxS } from "./v/suzane";
@@ -12,6 +13,7 @@ import { Gardner, ctxG } from "./v/gardner";
 const comp = (id: string, c: React.FC, total: number) => <Composition id={id} component={c} durationInFrames={total} fps={FPS} width={1080} height={1920} />;
 const capaC = (id: string, props: React.ComponentProps<typeof CapaCoringa>) => <Composition id={id} component={CapaCoringa as React.FC<any>} defaultProps={props} durationInFrames={1} fps={FPS} width={1080} height={1920} />;
 const capaB = (id: string, props: React.ComponentProps<typeof CapaBusca>) => <Composition id={id} component={CapaBusca as React.FC<any>} defaultProps={props} durationInFrames={1} fps={FPS} width={1080} height={1920} />;
+const slide = (id: string, props: React.ComponentProps<typeof Slide>) => <Composition id={id} component={Slide as React.FC<any>} defaultProps={props} durationInFrames={1} fps={FPS} width={1080} height={1920} />;
 const capa = (id: string, props: React.ComponentProps<typeof CapaSerie>) => <Composition id={id} component={CapaSerie as React.FC<any>} defaultProps={props} durationInFrames={1} fps={FPS} width={1080} height={1920} />;
 export const Root: React.FC = () => (
   <>
@@ -23,6 +25,10 @@ export const Root: React.FC = () => (
     {comp("018-Karen", Karen, ctxK.TOTAL)}
     {comp("019-Criciuma", Criciuma, ctxC.TOTAL)}
     {comp("020-Gardner", Gardner, ctxG.TOTAL)}
+    {slide("Car-Grito-1", { img: "gr-grito", pos: "50% 30%", n: 1, total: 4, etiqueta: "OSLO · 1994", credito: "Reprodução · Munch, “O Grito” (1893), Galeria Nacional, Oslo · domínio público", linhas: [{ t: "Levaram o quadro", size: 84 }, { t: "mais famoso", size: 84 }, { t: "da Noruega em", size: 84 }, { t: "50 SEGUNDOS", destaque: true, size: 96 }] })}
+    {slide("Car-Grito-2", { img: "gr-sala", pos: "50% 45%", n: 2, total: 4, etiqueta: "12/02/1994", credito: "Reprodução · “O Grito” na Galeria Nacional de Oslo", linhas: [{ t: "Era o dia da", size: 80 }, { t: "abertura das", size: 80 }, { t: "OLIMPÍADAS", destaque: true, size: 92 }], sub: "O país inteiro estava olhando pra TV." })}
+    {slide("Car-Grito-3", { img: "gr-museu", pos: "50% 50%", n: 3, total: 4, etiqueta: "GALERIA NACIONAL", credito: "Reprodução · Galeria Nacional, Oslo", linhas: [{ t: "Dois homens", size: 82 }, { t: "encostaram uma", size: 82 }, { t: "ESCADA", destaque: true, size: 96 }, { t: "no museu.", size: 82 }], sub: "Quebraram a janela e arrancaram O Grito da parede." })}
+    {slide("Car-Grito-4", { img: "gr-grito", pos: "52% 32%", zoom: 1.9, cinza: true, n: 4, total: 4, etiqueta: "O BILHETE", credito: "Reprodução · Munch, “O Grito” (1893), Galeria Nacional, Oslo · domínio público", linhas: [{ t: "No lugar,", size: 84 }, { t: "deixaram um", size: 84 }, { t: "BILHETE.", destaque: true, size: 100 }], final: { pergunta: "Quer saber o que estava escrito?", palavra: "BILHETE", resto: "que a história completa vai pro perfil." } })}
     {capaB("Capa-020-Gardner", { caso: "Nº 020", topo: "g-moldura3", posTopo: "50% 35%", img: "g-concert", pos: "50% 45%", selo: ["BOSTON · 1990", "CASO REAL"], linhas: [{ t: "US$ 500 MILHÕES", size: 104 }, { t: "EM 81", size: 120 }, { t: "MINUTOS", destaque: true, size: 124 }] })}
     {capaB("Capa-019-Criciuma", { caso: "Nº 019", topo: "cr-fuzil-carro", posTopo: "55% 25%", img: "cr-refens-capa", pos: "50% 30%", selo: ["CRICIÚMA (SC)", "IMAGENS REAIS"], linhas: [{ t: "30 HOMENS", size: 124 }, { t: "TOMARAM UMA", size: 100 }, { t: "CIDADE", destaque: true, size: 124 }] })}
     {capaB("Capa-018-Karen-A", { caso: "Nº 018", topo: "k-netflix-karen", posTopo: "50% 40%", img: "k-john-farda", pos: "50% 10%", selo: ["A SÉRIE DA", "NETFLIX"], linhas: [{ t: "KAREN READ", size: 128 }, { t: "CULPADA OU", size: 96 }, { t: "ARMAÇÃO?", destaque: true, size: 104 }] })}
