@@ -1,6 +1,6 @@
 import React from "react";
 import { Composition } from "remotion";
-import { CapaOnde, Folha, FolhaProps, VersaoFatoPost } from "./carrossel2";
+import { CapaOnde, CapaVxF, Folha, FolhaProps, VersaoFatoPost } from "./carrossel2";
 import { C, FPS } from "./kit";
 
 // Conteúdo dos carrosséis (fatos conferidos em 25–26/11/2026; fontes no POSTAGEM-Carrosseis-2.md)
@@ -80,20 +80,21 @@ export const carrosseis2 = () => <>
   {HORA.map((p) => folha(`Car-Hora-${p.n}`, p))}
   <Composition id="Car-Onde-1" component={CapaOnde as React.FC<any>} defaultProps={{ total: 7, imgs: [["c2-suz-hoje", "45% 30%"], ["c2-nardoni", "50% 20%"], ["c2-elize", "50% 30%"], ["c2-bruno", "50% 30%"]] }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
   {ONDE.map((p) => folha(`Car-Onde-${p.n}`, p))}
-  <Composition id="VxF-Nardoni" component={VersaoFatoPost as React.FC<any>} defaultProps={{ caso: "CASO ISABELLA · 2008", img: "c2-nardoni", pos: "50% 25%", credito: "Reprodução · imprensa (2008)",
+  <Composition id="VxF-Nardoni" component={VersaoFatoPost as React.FC<any>} defaultProps={{ n: 2, total: 5, caso: "CASO ISABELLA · 2008", img: "c2-nardoni", pos: "50% 25%", credito: "Reprodução · imprensa (2008)",
     versao: "Uma terceira pessoa entrou no apartamento e jogou Isabella pela janela.",
     fatos: ["A perícia descartou a presença de outra pessoa", "A tela foi cortada meio metro acima do parapeito, alto demais pra Isabella", "Fiapos da tela foram achados na roupa de Alexandre", "O sangue dela foi limpo com fralda e toalha, dentro do apartamento"],
     desfecho: "2010: Alexandre, 31 anos · Anna Jatobá, 26 anos" }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
-  <Composition id="VxF-Elize" component={VersaoFatoPost as React.FC<any>} defaultProps={{ caso: "CASO MATSUNAGA · 2012", img: "c2-elize", pos: "50% 25%", credito: "Reprodução · imprensa (2012)",
+  <Composition id="VxF-Elize" component={VersaoFatoPost as React.FC<any>} defaultProps={{ n: 3, total: 5, caso: "CASO MATSUNAGA · 2012", img: "c2-elize", pos: "50% 25%", credito: "Reprodução · imprensa (2012)",
     versao: "Marcos saiu de casa levando roupas e dinheiro.",
     fatos: ["A câmera do elevador mostra Elize saindo do prédio com malas", "Em 4 de junho de 2012, o corpo de Marcos foi identificado", "Dois dias depois, Elize confessou o crime"],
     desfecho: "Condenada em 2016 · pena final: 16 anos e 3 meses" }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
-  <Composition id="VxF-Suzane" component={VersaoFatoPost as React.FC<any>} defaultProps={{ caso: "CASO RICHTHOFEN · 2002", img: "c2-suz-grade", pos: "55% 30%", credito: "Reprodução · imprensa (2002–2006)",
+  <Composition id="VxF-Suzane" component={VersaoFatoPost as React.FC<any>} defaultProps={{ n: 4, total: 5, caso: "CASO RICHTHOFEN · 2002", img: "c2-suz-grade", pos: "55% 30%", credito: "Reprodução · imprensa (2002–2006)",
     versao: "Foi um assalto. A gente estava num motel.",
     fatos: ["Nada foi arrombado; só o quarto do casal estava revirado", "Pediram nota fiscal no motel, e isso chamou atenção", "Cristian comprou uma moto pagando em dólares, logo depois do enterro", "Cerca de uma semana depois, os três confessaram"],
     desfecho: "2006: Suzane e Daniel, 39 anos e 6 meses" }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
-  <Composition id="VxF-Bruno" component={VersaoFatoPost as React.FC<any>} defaultProps={{ caso: "CASO ELIZA SAMUDIO · 2010", img: "c2-bruno", pos: "50% 30%", credito: "Reprodução · TV (julgamento, 2013)",
+  <Composition id="VxF-Bruno" component={VersaoFatoPost as React.FC<any>} defaultProps={{ n: 5, total: 5, caso: "CASO ELIZA SAMUDIO · 2010", img: "c2-bruno", pos: "50% 30%", credito: "Reprodução · TV (julgamento, 2013)",
     versao: "Não tenho nada a ver com o sumiço da Eliza.",
     fatos: ["O primo de Bruno, Jorge, confessou ter levado Eliza ao sítio do goleiro", "Macarrão, amigo e braço-direito, ligou Bruno à morte dela", "O corpo nunca foi achado, mas o júri condenou com base nas provas"],
-    desfecho: "2013: Bruno, 22 anos e 3 meses de prisão" }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
+    desfecho: "2013: Bruno, 22 anos e 3 meses de prisão", final: { palavra: "VERSÃO", resto: "que eu trago mais 4 casos" } }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
+  <Composition id="VxF-Capa" component={CapaVxF as React.FC<any>} defaultProps={{ total: 5, imgs: [["c2-nardoni", "50% 8%"], ["c2-elize", "50% 25%"], ["c2-suz-grade", "55% 30%"], ["c2-bruno", "50% 25%"]] }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
 </>;

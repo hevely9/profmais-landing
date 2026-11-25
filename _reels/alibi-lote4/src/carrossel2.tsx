@@ -102,26 +102,51 @@ export const CapaOnde: React.FC<{ imgs: [string, string][]; total: number }> = (
   </AbsoluteFill>
 );
 
-// VERSÃO × FATO (post de 1 imagem)
-export const VersaoFatoPost: React.FC<{ caso: string; img: string; pos?: string; credito: string; versao: string; fatos: string[]; desfecho: string }> = ({ caso, img, pos = "50% 30%", credito, versao, fatos, desfecho }) => (
+// VERSÃO × FATO — carrossel: capa (1) + um caso por foto
+const Rodape: React.FC<{ seta: boolean }> = ({ seta }) =>
+  <div style={{ position: "absolute", left: 90, right: 90, top: 1495, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+    <div style={{ fontFamily: SERIF, fontWeight: 900, fontSize: 30, letterSpacing: "0.12em", color: "rgba(236,231,220,0.7)" }}>ÁLIBI</div>
+    {seta && <div style={{ fontFamily: MONT, fontWeight: 800, fontSize: 36, color: C.osso }}>arrasta <span style={{ color: C.verm }}>→</span></div>}
+  </div>;
+const Topo: React.FC<{ esq: string; dir: string }> = ({ esq, dir }) =>
+  <div style={{ position: "absolute", left: 90, right: 90, top: 380, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+    <div style={{ padding: "7px 16px", background: C.lacre, fontFamily: MONT, fontWeight: 800, fontSize: 28, color: C.osso, letterSpacing: "0.05em" }}>{esq}</div>
+    <div style={{ fontFamily: COURIER, fontWeight: 700, fontSize: 30, color: C.osso, letterSpacing: "0.1em" }}>{dir}</div>
+  </div>;
+
+export const CapaVxF: React.FC<{ imgs: [string, string][]; total: number }> = ({ imgs, total }) => (
   <AbsoluteFill style={{ background: fundo }}>
-    <div style={{ position: "absolute", left: 90, right: 90, top: 380, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-      <div style={{ padding: "7px 16px", background: C.lacre, fontFamily: MONT, fontWeight: 800, fontSize: 28, color: C.osso, letterSpacing: "0.05em" }}>VERSÃO × FATO</div>
-      <div style={{ fontFamily: COURIER, fontWeight: 700, fontSize: 26, color: C.ossoE, letterSpacing: "0.06em" }}>{caso}</div>
+    <Topo esq="VERSÃO × FATO" dir={`1/${total}`} />
+    {imgs.map(([src, pos], i) => <React.Fragment key={i}>
+      <Foto src={src} pos={pos} cinza style={{ left: i % 2 ? 548 : 90, top: 460 + Math.floor(i / 2) * 300, width: 442, height: 284 }} />
+      <div style={{ position: "absolute", left: (i % 2 ? 548 : 90), width: 442, top: 460 + Math.floor(i / 2) * 300 + 232, display: "flex", justifyContent: "center" }}>
+        <div style={{ transform: "rotate(-6deg)", border: `5px solid ${C.verm}`, borderRadius: 6, padding: "2px 14px", fontFamily: ELITE, fontSize: 40, color: C.verm, background: "rgba(10,10,11,0.6)" }}>VERSÃO FALSA</div>
+      </div>
+    </React.Fragment>)}
+    <div style={{ position: "absolute", left: 90, right: 90, top: 1090 }}>
+      <div style={{ fontFamily: MONT, fontWeight: 800, fontSize: 70, lineHeight: 1.06, color: C.osso }}>{imgs.length} histórias contadas à polícia.</div>
+      <div style={{ display: "flex", marginTop: 12 }}><div style={{ fontFamily: MONT, fontWeight: 800, fontSize: 70, lineHeight: 1.06, color: C.osso, background: C.lacre, padding: "2px 16px 8px" }}>Nenhuma era verdade.</div></div>
+      <div style={{ marginTop: 18, fontFamily: ELITE, fontSize: 38, color: C.osso }}>arrasta e vê o que a perícia descobriu</div>
     </div>
+    <Rodape seta />
+  </AbsoluteFill>
+);
+
+export const VersaoFatoPost: React.FC<{ n?: number; total?: number; caso: string; img: string; pos?: string; credito: string; versao: string; fatos: string[]; desfecho: string; final?: { palavra: string; resto: string } }> = ({ n, total, caso, img, pos = "50% 30%", credito, versao, fatos, desfecho, final }) => (
+  <AbsoluteFill style={{ background: fundo }}>
+    <Topo esq={caso} dir={n ? `${n}/${total}` : ""} />
     <Foto src={img} pos={pos} style={{ left: 90, top: 450, width: 300, height: 380 }} />
     <div style={{ ...CRED, position: "absolute", left: 90, top: 838, width: 300, fontSize: 16 }}>{credito}</div>
-    {/* versão */}
     <div style={{ position: "absolute", left: 420, right: 90, top: 450, height: 380, padding: "22px 26px", boxSizing: "border-box", background: "rgba(236,231,220,0.08)", border: "2px solid rgba(236,231,220,0.3)" }}>
       <div style={{ fontFamily: COURIER, fontWeight: 700, fontSize: 28, color: C.ossoE, letterSpacing: "0.12em" }}>A VERSÃO</div>
       <div style={{ marginTop: 14, fontFamily: ELITE, fontSize: 38, lineHeight: 1.3, color: C.osso }}>{versao}</div>
     </div>
-    {/* fato */}
     <div style={{ position: "absolute", left: 90, right: 90, top: 880, padding: "24px 30px", background: "rgba(10,10,11,0.7)", borderLeft: `10px solid ${C.verm}` }}>
       <div style={{ fontFamily: MONT, fontWeight: 800, fontSize: 40, color: C.verm, letterSpacing: "0.03em" }}>O QUE A INVESTIGAÇÃO PROVOU</div>
       {fatos.map((f, i) => <div key={i} style={{ marginTop: 16, display: "flex", gap: 16, fontFamily: SANS, fontWeight: 700, fontSize: 36, lineHeight: 1.28, color: C.osso }}><span style={{ color: C.verm }}>✕</span><span>{f}</span></div>)}
     </div>
-    <div style={{ position: "absolute", left: 90, right: 90, top: 1440, fontFamily: SANS, fontWeight: 800, fontSize: 34, color: C.osso, textAlign: "center" }}>{desfecho}</div>
-    <div style={{ position: "absolute", left: 0, right: 0, top: 1500, textAlign: "center", fontFamily: SERIF, fontWeight: 900, fontSize: 30, letterSpacing: "0.12em", color: "rgba(236,231,220,0.7)" }}>ÁLIBI</div>
+    {final && <div style={{ position: "absolute", left: 90, right: 90, top: 1330, padding: "14px 20px", border: `3px solid ${C.osso}`, background: "rgba(10,10,11,0.6)", fontFamily: SANS, fontWeight: 800, fontSize: 32, color: C.osso, textAlign: "center" }}>Comenta <span style={{ background: C.lacre, padding: "0 10px" }}>{final.palavra}</span> {final.resto}</div>}
+    <div style={{ position: "absolute", left: 90, right: 90, top: 1440, fontFamily: SANS, fontWeight: 800, fontSize: 32, color: C.osso, textAlign: "center" }}>{desfecho}</div>
+    <Rodape seta={!!n && n < (total ?? 0)} />
   </AbsoluteFill>
 );

@@ -29,17 +29,15 @@ Situação de cada um conferida em notícias de 2026.
 ```
 ⚠️ Este é o que mais envelhece: se demorar a postar, me avise que eu reconfiro a situação de cada um.
 
-## 4) VERSÃO × FATO (2 posts de 1 foto cada)
-Nardoni:
+## 4) VERSÃO × FATO (carrossel de 5 fotos: capa + 4 casos)
+Ordem: 1 capa → 2 Isabella → 3 Matsunaga → 4 Richthofen → 5 Eliza Samudio.
 ```
-A versão: uma terceira pessoa. O que a perícia provou: 👇
-#truecrime #casoisabella #casoscriminais #alibi
+4 histórias contadas à polícia. Nenhuma era verdade. 🕵️
+Isabella Nardoni, Marcos Matsunaga, os Richthofen e Eliza Samudio: a versão e o que a investigação provou.
+
+#truecrime #casoscriminais #casoreal #pericia #alibi
 ```
-Elize:
-```
-"Ele saiu de casa levando roupas e dinheiro." Não foi isso.
-#truecrime #elizematsunaga #casoscriminais #alibi
-```
+Obs.: a frase de versão do Bruno é um resumo da negação dele, não citação literal.
 
 ---
 ### Cuidados aplicados
