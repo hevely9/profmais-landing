@@ -1,6 +1,6 @@
 # PUBLI (TikTok Shop) — jogo "Sob Investigação · A Queda de Mosco"
 
-Arquivo: `entrega/PUBLI-SobInvestigacao.mp4` (42 s, 1080×1920, alta qualidade)
+Arquivo: `entrega/PUBLI-SobInvestigacao.mp4` (≈42 s, 1080×1920, alta qualidade) — voz do perfil (James), assinatura ÁLIBI discreta, seta pro carrinho
 Imagens: vídeos da marca @sob.investigacao (você é afiliado/parceiro), sem pessoas, sem marca d'água/textos embutidos.
 Voz: "Jully" (ElevenLabs, voz de UGC/depoimento), tom de conversa, 1ª pessoa (a equipe jogou o caso).
 
