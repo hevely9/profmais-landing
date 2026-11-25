@@ -4,12 +4,12 @@ import palavras from "../../public/palavras-mckellar.json";
 import { C, Carimbo, Contador, ELITE, Faixa, Foto, Fundo, Grande, Plano, Reel, Rotulo, SOMBRA, Titulo, TituloVivo, lin, mkCtx, useT } from "../kit";
 import { Fechamento } from "../dossie";
 
-// ÁLIBI · CASO Nº 021 — Caroline Muirhead e Sandy McKellar (Escócia), vídeo único.
+// ÁLIBI · CASO Nº 025 — Caroline Muirhead e Sandy McKellar (Escócia), vídeo único.
 // Fontes: STV, Sky News, BBC Scotland ("Murder Case: The Vanishing Cyclist"), PA/Jersey Evening Post (sentença 25/08/2023),
 // Netflix Tudum / The Scotsman / Wikipedia ("Should I Marry a Murderer?", 29/04/2026; prisão 30/12/2020).
 type Ws = { words: { text: string; start: number; end: number }[] };
 export const ctxM = mkCtx({
-  caso: "Nº 021", audio: "mckellar", words: (palavras as Ws).words, lead: 0.1, fimVozRaw: 180.6, final: "alibi", proximo: "NO PERFIL", cta: ["", ""],
+  caso: "Nº 025", audio: "mckellar", words: (palavras as Ws).words, lead: 0.1, fimVozRaw: 180.6, final: "alibi", proximo: "NO PERFIL", cta: ["", ""],
   chave: /^(noivo|matou|provas|caroline|tinder|sandy|robert|gêmeo|segredo|tony|atropelou|corpo|presos|polícia|bebia|netflix)/i,
   semLegenda: [[169.5, 260]],
   sfx: [
@@ -172,7 +172,7 @@ export const McKellar: React.FC = () => (
       <Ass r={174.0} />
     </Plano>
     <Plano r={[177.8, 260]} soco={false}>
-      <Fechamento r={177.9} caso="Nº 021" status="CONDENADOS" pergunta="Tony Parsons, 63 anos. Encontrado 3 anos depois." />
+      <Fechamento r={177.9} caso="Nº 025" status="CONDENADOS" pergunta="Tony Parsons, 63 anos. Encontrado 3 anos depois." />
     </Plano>
   </Reel>
 );
