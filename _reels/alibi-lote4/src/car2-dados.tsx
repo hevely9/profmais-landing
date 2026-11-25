@@ -88,4 +88,8 @@ export const carrosseis2 = () => <>
     versao: "Marcos saiu de casa levando roupas e dinheiro.",
     fatos: ["A câmera do elevador mostra Elize saindo do prédio com malas", "Em 4 de junho de 2012, o corpo de Marcos foi identificado", "Dois dias depois, Elize confessou o crime"],
     desfecho: "Condenada em 2016 · pena final: 16 anos e 3 meses" }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
+  <Composition id="VxF-Suzane" component={VersaoFatoPost as React.FC<any>} defaultProps={{ caso: "CASO RICHTHOFEN · 2002", img: "c2-suz-grade", pos: "55% 30%", credito: "Reprodução · imprensa (2002–2006)",
+    versao: "Foi um assalto. A gente estava num motel.",
+    fatos: ["Nada foi arrombado; só o quarto do casal estava revirado", "Pediram nota fiscal no motel, e isso chamou atenção", "Cristian comprou uma moto pagando em dólares, logo depois do enterro", "Cerca de uma semana depois, os três confessaram"],
+    desfecho: "2006: Suzane e Daniel, 39 anos e 6 meses" }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
 </>;
