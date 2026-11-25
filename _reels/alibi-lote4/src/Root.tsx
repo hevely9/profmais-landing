@@ -3,6 +3,7 @@ import { Composition } from "remotion";
 import { FPS } from "./kit";
 import { CapaBusca, CapaCoringa, CapaSerie } from "./capaSerie";
 import { Slide } from "./carrossel";
+import { carrosseis2 } from "./car2-dados";
 import { Parte1, Parte2, Parte3, ctx1, ctx2, ctx3 } from "./v/riggs";
 import { Natalee, ctxN } from "./v/natalee";
 import { Suzane, ctxS } from "./v/suzane";
@@ -40,6 +41,7 @@ export const Root: React.FC = () => (
     <Composition id="Capa-Publi-Sob-2" component={CapaSob2} durationInFrames={1} fps={FPS} width={1080} height={1920} />
     {capaB("Capa-026", { caso: "Nº 026", topo: "mm-megan", posTopo: "50% 30%", img: "mm-josh", pos: "35% 50%", selo: ["EUA · 2006", "CASO REAL"], linhas: [{ t: "O NAMORADO", size: 116 }, { t: "DA INTERNET", size: 104 }, { t: "NUNCA EXISTIU", destaque: true, size: 96 }] })}
     {capaB("Capa-025", { caso: "Nº 025", topo: "mk-casal", posTopo: "50% 35%", img: "mk-gemeos", pos: "50% 30%", selo: ["ESCÓCIA", "CASO REAL"], linhas: [{ t: "O NAMORADO", size: 110 }, { t: "DO TINDER", size: 110 }, { t: "ERA UM ASSASSINO", destaque: true, size: 76 }] })}
+    {carrosseis2()}
     {slide("Car-Antuerpia-1", { img: "an-cofre", faixa: 330, tapa: [862, 100, 190, 80, "NETFLIX · 2025"], n: 1, total: 4, etiqueta: "ANTUÉRPIA · BÉLGICA · 2003", credito: "Reprodução · Netflix, “Stolen: Heist of the Century” (2025)", linhas: [{ t: "Ladrões esvaziaram o", size: 66 }, { t: "cofre mais protegido", size: 66 }, { t: "da capital mundial", size: 66 }, { t: "dos diamantes:", size: 66 }, { t: "US$ 100 MILHÕES", destaque: true, size: 84 }], sub: "em pedras, ouro e joias." })}
     {slide("Car-Antuerpia-2", { img: "an-entrada", faixa: 330, tapa: [862, 100, 190, 80, "NETFLIX · 2025"], n: 2, total: 4, etiqueta: "FEVEREIRO · 2003", credito: "Reprodução · Netflix, “Stolen: Heist of the Century” (2025)", linhas: [{ t: "Ninguém percebeu nada.", size: 64 }, { t: "Só descobriram na", size: 64 }, { t: "SEGUNDA-FEIRA", destaque: true, size: 80 }, { t: "quando abriram o cofre.", size: 64 }], sub: "Nada foi recuperado até hoje." })}
     {slide("Car-Antuerpia-3", { img: "an-lider", faixa: 330, tapa: [862, 100, 190, 80, "NETFLIX · 2025"], n: 3, total: 4, etiqueta: "O LÍDER", credito: "Reprodução · Netflix, “Stolen: Heist of the Century” (2025)", linhas: [{ t: "O líder era um", size: 70 }, { t: "italiano que fingia", size: 70 }, { t: "ser comerciante", size: 70 }, { t: "DE DIAMANTES", destaque: true, size: 78 }], sub: "Tinha sala no próprio prédio." })}
