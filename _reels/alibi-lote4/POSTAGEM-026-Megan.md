@@ -1,6 +1,6 @@
 # PACOTE DE POSTAGEM — ÁLIBI · CASO Nº 026 · Megan Meier (Missouri, 2006)
 
-Arquivo: `entrega/ALIBI-026-Megan.mp4` (≈3:28) · capa `entrega/CAPA-026-Megan.jpg` (3:4: `-3x4.jpg`)
+Arquivo: `entrega/ALIBI-026-Megan.mp4` (≈3:16) · capa `entrega/CAPA-026-Megan.jpg` (3:4: `-3x4.jpg`)
 Roteiro: adaptado do vídeo aprovado (@jennicooperr), com fatos corrigidos e sem detalhe do método (regra do TikTok
 para suicídio, ainda mais de menor). CVV 188 no fim do vídeo e na legenda.
 
