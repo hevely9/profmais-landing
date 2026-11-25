@@ -13,6 +13,9 @@ export const ctxKu = mkCtx({
   chave: /^(filme|kukaracha|cinema|ficção|verdade|real|marianne|anna|grabowski|tribunal|justiça)/i,
   semLegenda: [[135.3, 300]],
   sfx: [
+    // tiros: na cena do filme (antes da narração) e no trecho do filme de 1984 — CC0, freesound 385811
+    { src: "tiro", r: -2.55, vol: 0.75 }, { src: "tiro", r: -2.05, vol: 0.7 }, { src: "tiro", r: -1.5, vol: 0.7 },
+    { src: "tiro", r: 120.3, vol: 0.35 }, { src: "tiro", r: 120.9, vol: 0.32 }, { src: "tiro", r: 121.5, vol: 0.32 },
     { src: "whoosh", r: 15.0, vol: 0.25 }, { src: "carimbo", r: 19.6, vol: 0.5 }, { src: "tique", r: 40.6, vol: 0.35 }, { src: "tique", r: 42.2, vol: 0.35 },
     { src: "tique", r: 43.2, vol: 0.35 }, { src: "carimbo", r: 45.5, vol: 0.45 }, { src: "subida", r: 46.8, vol: 0.3 }, { src: "impacto", r: 50.8, vol: 0.45 },
     { src: "coracao", r: 58.9, vol: 0.35 }, { src: "tique", r: 80.9, vol: 0.4 }, { src: "impacto", r: 97.5, vol: 0.45 }, { src: "carimbo", r: 115.0, vol: 0.45 },
