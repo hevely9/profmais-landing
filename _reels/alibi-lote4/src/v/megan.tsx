@@ -137,7 +137,7 @@ export const Megan: React.FC = () => (
       <Rotulo r={186.4} texto="Tina criou uma fundação contra o cyberbullying" top={360} size={36} />
     </Plano>
     <Plano r={[190.0, 200.9]}>
-      <Foto src="mm-megan3" r={[190.0, 200.9]} credito={CR} top={260} w={700} h={640} pos="50% 30%" cinza zoom={[1.05, 1.15]} />
+      <Foto src="mm-myspace" r={[190.0, 200.9]} credito="Reprodução · AP (MySpace)" top={260} w={1000} h={600} pos="50% 50%" cinza zoom={[1.05, 1.15]} />
       <Grande r={190.1} top={900} size={62}>Onde você estava<br />naquela noite?</Grande>
       <Rotulo r={192.2} texto="Lori: em casa, a poucos metros" top={1050} size={38} cor={C.ossoE} />
       <Ass r={195.3} />
