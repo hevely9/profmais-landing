@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Audio, Easing, OffthreadVideo, Sequence, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Audio, Easing, Img, OffthreadVideo, Sequence, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import palavras from "../../public/palavras-sobinv.json";
 import { C, ELITE, MONT, SANS, SERIF } from "../kit";
 
@@ -117,5 +117,18 @@ export const SobInvestigacao: React.FC = () => (
     <Legenda />
     <Assinatura />
     <SetaCarrinho />
+  </AbsoluteFill>
+);
+
+// capa (1080×1920): foto real do produto + texto curto na área segura + assinatura discreta
+export const CapaSob: React.FC = () => (
+  <AbsoluteFill style={{ background: "#000" }}>
+    <Img src={staticFile("img/sob-capa.jpg")} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+    <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.0) 30%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.15) 85%)" }} />
+    <div style={{ position: "absolute", left: 90, right: 90, top: 860, textAlign: "center" }}>
+      <div style={{ fontFamily: MONT, fontWeight: 800, fontSize: 98, lineHeight: 1.02, color: "#fff", textShadow: "0 6px 26px rgba(0,0,0,0.85)" }}>UM CRIME PRA</div>
+      <div style={{ display: "inline-block", marginTop: 14, padding: "6px 26px 12px", background: C.lacre, fontFamily: MONT, fontWeight: 800, fontSize: 92, lineHeight: 1.02, color: "#fff", whiteSpace: "nowrap" }}>VOCÊ RESOLVER</div>
+    </div>
+    <div style={{ position: "absolute", left: 0, right: 0, top: 1420, display: "flex", justifyContent: "center" }}><MarcaTexto size={40} /></div>
   </AbsoluteFill>
 );
