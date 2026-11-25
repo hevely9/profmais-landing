@@ -67,7 +67,7 @@ const Nota: React.FC<{ de: number; ate: number; texto: string; top?: number; rot
 };
 
 // assinatura do Álibi: só o nome, com "marca-texto" vermelho (identidade do perfil: Playfair + vermelho lacre)
-const MarcaTexto: React.FC<{ size: number }> = ({ size }) => (
+export const MarcaTexto: React.FC<{ size: number }> = ({ size }) => (
   <span style={{ position: "relative", display: "inline-block", fontFamily: SERIF, fontWeight: 900, fontSize: size, letterSpacing: "0.1em", color: "#fff", padding: `0 ${size * 0.22}px` }}>
     <span style={{ position: "absolute", left: 0, right: 0, top: "38%", bottom: "4%", background: C.lacre, transform: "skewX(-12deg) rotate(-1.5deg)", borderRadius: 4, opacity: 0.95 }} />
     <span style={{ position: "relative" }}>ÁLIBI</span>

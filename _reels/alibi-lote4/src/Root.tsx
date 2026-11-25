@@ -12,6 +12,7 @@ import { Gardner, ctxG } from "./v/gardner";
 import { McKellar, ctxM } from "./v/mckellar";
 import { Megan, ctxMe } from "./v/megan";
 import { CapaSob, SobInvestigacao, SOB_TOTAL } from "./v/sobinv";
+import { CapaSob2, SobInvestigacao2, SOB2_TOTAL } from "./v/sobinv2";
 
 const comp = (id: string, c: React.FC, total: number) => <Composition id={id} component={c} durationInFrames={total} fps={FPS} width={1080} height={1920} />;
 const capaC = (id: string, props: React.ComponentProps<typeof CapaCoringa>) => <Composition id={id} component={CapaCoringa as React.FC<any>} defaultProps={props} durationInFrames={1} fps={FPS} width={1080} height={1920} />;
@@ -32,6 +33,8 @@ export const Root: React.FC = () => (
     {comp("026-Megan", Megan, ctxMe.TOTAL)}
     {comp("Publi-SobInvestigacao", SobInvestigacao, SOB_TOTAL)}
     <Composition id="Capa-Publi-Sob" component={CapaSob} durationInFrames={1} fps={FPS} width={1080} height={1920} />
+    {comp("Publi-Sob-2", SobInvestigacao2, SOB2_TOTAL)}
+    <Composition id="Capa-Publi-Sob-2" component={CapaSob2} durationInFrames={1} fps={FPS} width={1080} height={1920} />
     {capaB("Capa-026", { caso: "Nº 026", topo: "mm-megan", posTopo: "50% 30%", img: "mm-josh", pos: "35% 50%", selo: ["EUA · 2006", "CASO REAL"], linhas: [{ t: "O NAMORADO", size: 116 }, { t: "DA INTERNET", size: 104 }, { t: "NUNCA EXISTIU", destaque: true, size: 96 }] })}
     {capaB("Capa-025", { caso: "Nº 025", topo: "mk-casal", posTopo: "50% 35%", img: "mk-gemeos", pos: "50% 30%", selo: ["ESCÓCIA", "CASO REAL"], linhas: [{ t: "O NAMORADO", size: 110 }, { t: "DO TINDER", size: 110 }, { t: "ERA UM ASSASSINO", destaque: true, size: 76 }] })}
     {slide("Car-Antuerpia-1", { img: "an-cofre", faixa: 330, tapa: [862, 100, 190, 80, "NETFLIX · 2025"], n: 1, total: 4, etiqueta: "ANTUÉRPIA · BÉLGICA · 2003", credito: "Reprodução · Netflix, “Stolen: Heist of the Century” (2025)", linhas: [{ t: "Ladrões esvaziaram o", size: 66 }, { t: "cofre mais protegido", size: 66 }, { t: "da capital mundial", size: 66 }, { t: "dos diamantes:", size: 66 }, { t: "US$ 100 MILHÕES", destaque: true, size: 84 }], sub: "em pedras, ouro e joias." })}
