@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Img, OffthreadVideo, Sequence, staticFile } from "remotion";
 import palavras from "../../public/palavras-kuka.json";
-import { C, Carimbo, Cheia, Contador, ELITE, Faixa, Foto, Fundo, Grande, MONT, Plano, Reel, Rotulo, SANS, SOMBRA, Titulo, mkCtx, useT } from "../kit";
+import { C, Carimbo, Cheia, ELITE, Faixa, Foto, Fundo, Grande, MONT, Plano, Reel, Rotulo, SANS, SOMBRA, Titulo, mkCtx, useT } from "../kit";
 import { Fechamento, Hora } from "../dossie";
 
 // ÁLIBI · CASO Nº 027 — "o vídeo viral é FILME" (Kukaracha, Geórgia 1982) → o caso REAL parecido: Marianne Bachmeier (Lübeck, 1981).
@@ -150,11 +150,11 @@ export const Kuka: React.FC = () => (
     <Plano r={[111.3, 118.6]}>
       <Fundo />
       <Rotulo r={111.4} texto="CONDENADA EM 1983" top={420} size={46} cor={C.fita} />
-      <Contador r={114.1} ate={114.9} valor={6} sufixo=" ANOS" top={500} size={150} />
+      <Titulo r={114.1} top={500} size={150}>6 ANOS</Titulo>
       <Rotulo r={116.4} texto="cumpriu metade" top={720} size={48} cor={C.ossoE} />
     </Plano>
     <Plano r={[118.6, 122.0]}>
-      <Tela src="bach84" r={118.6} dur={3.4} top={400} w={820} h={1034} credito={CRB} etiqueta="FILME · 1984" />
+      <Tela src="bach84" r={118.6} dur={3.4} top={320} w={714} h={900} credito={CRB} etiqueta="FILME · 1984" />
       <Rotulo r={118.7} texto="A HISTÓRIA DELA VIROU FILME" top={240} size={44} cor={C.fita} />
     </Plano>
     <Plano r={[122.0, 129.9]}>
