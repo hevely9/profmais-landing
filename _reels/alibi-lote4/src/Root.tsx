@@ -11,6 +11,7 @@ import { Criciuma, ctxC } from "./v/criciuma";
 import { Gardner, ctxG } from "./v/gardner";
 import { McKellar, ctxM } from "./v/mckellar";
 import { Megan, ctxMe } from "./v/megan";
+import { CapaKuka, Kuka, ctxKu } from "./v/kuka";
 import { CapaSob, SobInvestigacao, SOB_TOTAL } from "./v/sobinv";
 import { CapaSob2, SobInvestigacao2, SOB2_TOTAL } from "./v/sobinv2";
 
@@ -31,6 +32,8 @@ export const Root: React.FC = () => (
     {comp("020-Gardner", Gardner, ctxG.TOTAL)}
     {comp("021-McKellar", McKellar, ctxM.TOTAL)}
     {comp("026-Megan", Megan, ctxMe.TOTAL)}
+    {comp("027-Kukaracha", Kuka, ctxKu.TOTAL)}
+    <Composition id="Capa-027-Kukaracha" component={CapaKuka} durationInFrames={1} fps={FPS} width={1080} height={1920} />
     {comp("Publi-SobInvestigacao", SobInvestigacao, SOB_TOTAL)}
     <Composition id="Capa-Publi-Sob" component={CapaSob} durationInFrames={1} fps={FPS} width={1080} height={1920} />
     {comp("Publi-Sob-2", SobInvestigacao2, SOB2_TOTAL)}
