@@ -8,7 +8,7 @@ Capas: `entrega/CAPA-Publi-Sob-2.jpg` (vertical) e `entrega/CAPA-Publi-Sob-2-3x4
 |---|---|---|
 | Ângulo | relato: "a gente jogou e descobriu que era um jogo" | desafio: "pra você que acha que resolveria qualquer caso" |
 | Gancho | história da equipe | provoca o espectador ("você resolveria?") |
-| Ritmo das imagens | 15 planos, ~2,8 s cada | **9 planos, ~4,8 s cada** (mín. 3,2 s), com câmera lenta leve e zoom suave |
+| Ritmo das imagens | 15 planos, ~2,8 s cada | **10 planos, ~4,3 s cada**, em velocidade real (sem câmera lenta), zoom bem suave |
 | Textos na tela | 8 notas | 5 notas, cada uma parada por 3,5 a 6 s |
 | Diferencial vendido | envelopes, pistas, robô | **sem gabarito: o delegado confirma no WhatsApp** + "3 a 6 h, a gente levou a noite toda" |
 | Capa | "UM CRIME PRA VOCÊ RESOLVER" | "VOCÊ RESOLVERIA ESSE CASO? · sem gabarito no final" |

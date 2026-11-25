@@ -5,7 +5,7 @@ import { C, ELITE, MONT, SANS } from "../kit";
 import { MarcaTexto } from "./sobinv";
 
 // Publi 2 (criativo de teste) — ângulo "desafio": "você que acha que resolveria qualquer caso".
-// Lição do 1º: imagens passaram rápido demais. Aqui: 8 planos longos (3,5–6,7 s), câmera lenta leve e zoom suave.
+// Lição do 1º: imagens passaram rápido demais. Aqui: planos longos (média ~4,3 s) em velocidade real (sem câmera lenta) e zoom bem suave.
 type W = { text: string; start: number; end: number };
 const WORDS = (palavras as { words: W[] }).words;
 const FIM = 41.3; // entra a assinatura
@@ -14,15 +14,16 @@ export const SOB2_TOTAL = Math.round(43.6 * 30);
 // [início, duração, fonte ("v:arquivo" ou "i:imagem"), segundo na fonte, velocidade, zoom ini, zoom fim, origem]
 type K = [number, number, string, number, number, number, number, string];
 const PLANOS: K[] = [
-  [0.0, 4.6, "v:sob-p3", 58.6, 1.0, 1.0, 1.08, "50% 50%"],   // mesa do caso: envelope, celular, jornal
-  [4.6, 5.5, "i:sob2-prova", 0, 1, 1.0, 1.16, "40% 30%"],     // "um empresário foi encontrado sem vida" (foto-evidência do jogo)
-  [10.1, 5.7, "v:sob-p3", 23.6, 1.0, 1.0, 1.08, "50% 45%"],   // jornal, relatório, fotos
-  [15.8, 4.9, "v:sob-p3", 37.4, 0.75, 1.02, 1.12, "50% 40%"], // fichas dos suspeitos
-  [20.7, 4.7, "v:sob-p3", 44.2, 1.0, 1.0, 1.08, "50% 45%"],   // senha do celular
-  [25.4, 3.2, "v:sob-p3", 32.2, 0.9, 1.0, 1.08, "50% 45%"],   // "não tem gabarito"
-  [28.6, 3.5, "v:sob-p3", 20.0, 0.63, 1.05, 1.18, "45% 55%"], // delegado no WhatsApp
-  [32.1, 5.4, "v:sob-p3", 10.0, 0.6, 1.0, 1.1, "50% 40%"],    // caixa: 3–6 h, difícil
-  [37.5, 6.1, "v:sob-p3", 0.0, 0.8, 1.0, 1.08, "50% 45%"],    // produto + carrinho + assinatura
+  [0.0, 4.6, "v:sob-p3", 58.6, 1, 1.0, 1.06, "50% 50%"],   // mesa do caso: envelope, celular, jornal
+  [4.6, 2.4, "i:sob2-prova", 0, 1, 1.0, 1.06, "40% 30%"],   // "um empresário foi encontrado sem vida" (foto-evidência do jogo)
+  [7.0, 3.1, "v:sob-p3", 15.2, 1, 1.0, 1.05, "50% 45%"],    // "você recebe o caso": envelopes do jogo
+  [10.1, 5.7, "v:sob-p3", 23.6, 1, 1.0, 1.06, "50% 45%"],   // jornal, relatório, fotos
+  [15.8, 4.9, "v:sob-p3", 37.4, 1, 1.0, 1.06, "50% 40%"],   // fichas dos suspeitos
+  [20.7, 4.7, "v:sob-p3", 44.2, 1, 1.0, 1.06, "50% 45%"],   // senha do celular
+  [25.4, 3.2, "v:sob-p3", 32.2, 1, 1.0, 1.05, "50% 45%"],   // "não tem gabarito"
+  [28.6, 3.5, "v:sob-p3", 19.4, 1, 1.03, 1.1, "45% 55%"],   // delegado no WhatsApp
+  [32.1, 5.4, "v:sob-p3", 9.4, 1, 1.0, 1.06, "50% 40%"],    // caixa: 3–6 h, difícil
+  [37.5, 6.1, "v:sob-p3", 0.0, 1, 1.0, 1.05, "50% 45%"],    // produto + carrinho + assinatura
 ];
 
 const Plano: React.FC<{ c: K }> = ({ c }) => {
