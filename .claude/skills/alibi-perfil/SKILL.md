@@ -117,8 +117,8 @@ sem acelerar o áudio, frases curtas). Orçamento até 2.500 créditos por víde
   D.B. Cooper, BC Fortaleza, Alcatraz, Jules Rimet, Gardner (011), Marcelo VIPs, Portuguesa×Flamengo, Telexfree,
   Lobo de Wall Street, Poderoso Chefão, Chantay, Natalee, Suzane (não postado), Karen Read, Criciúma.
 
-- **Bordão nunca sobre a foto da vítima (25/11, usuário):** a cena "Onde você estava naquela noite? … e esse era o álibi"
-  usa fundo neutro (clipe, local, tela, estrada, o lugar do crime sem pessoas) — foto da vítima ali fica desrespeitoso.
+- **SEM BORDÃO (25/11, usuário):** não usar mais "Onde você estava naquela noite? … e esse era o álibi" em nenhum vídeo
+  (fica estranho e desrespeitoso com a vítima). O vídeo termina no desfecho do caso + "Próximo caso no perfil. Segue o Álibi."
 
 ## 5. ENTREGA OBRIGATÓRIA — "PACOTE DE POSTAGEM" (sem o usuário pedir)
 Em toda entrega de vídeo, mandar junto:

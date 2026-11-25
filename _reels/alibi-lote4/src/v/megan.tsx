@@ -1,29 +1,23 @@
 import React from "react";
-import { Easing } from "remotion";
 import palavras from "../../public/palavras-megan.json";
-import { C, Carimbo, ELITE, Faixa, Foto, Fundo, Grande, Plano, Reel, Rotulo, SOMBRA, Titulo, TituloVivo, lin, mkCtx, useT } from "../kit";
+import { C, Carimbo, Faixa, Foto, Fundo, Grande, Plano, Reel, Rotulo, Titulo, TituloVivo, mkCtx } from "../kit";
 import { Fechamento } from "../dossie";
 
 // ÁLIBI · CASO Nº 026 — Megan Meier (Missouri, 2006). Roteiro adaptado do aprovado pelo usuário, com fatos corrigidos
 // (Wikipedia "Suicide of Megan Meier", US v. Drew, ABC News, Computerworld, PBS). Sem detalhe de método; CVV 188 no fim.
 type Ws = { words: { text: string; start: number; end: number }[] };
 export const ctxMe = mkCtx({
-  caso: "Nº 026", audio: "megan", words: (palavras as Ws).words, lead: 0.1, fimVozRaw: 203.5, final: "alibi", proximo: "NO PERFIL", cta: ["", ""],
+  caso: "Nº 026", audio: "megan", words: (palavras as Ws).words, lead: 0.1, fimVozRaw: 192.8, final: "alibi", proximo: "NO PERFIL", cta: ["", ""],
   chave: /^(megan|josh|internet|myspace|lori|sarah|tina|existiu|presa|feliz)/i,
-  semLegenda: [[190.0, 280]],
+  semLegenda: [[189.9, 280]],
   sfx: [
     { src: "coracao", r: 1.9, vol: 0.35 }, { src: "impacto", r: 10.6, vol: 0.4 }, { src: "whoosh", r: 16.9, vol: 0.25 }, { src: "whoosh", r: 39.3, vol: 0.25 },
     { src: "whoosh", r: 50.2, vol: 0.25 }, { src: "tique", r: 67.3, vol: 0.35 }, { src: "tique", r: 69.6, vol: 0.35 }, { src: "carimbo", r: 79.6, vol: 0.45 },
     { src: "coracao", r: 92.3, vol: 0.4 }, { src: "coracao", r: 103.7, vol: 0.4 }, { src: "subida", r: 120.2, vol: 0.3 }, { src: "impacto", r: 128.3, vol: 0.5 },
-    { src: "carimbo", r: 133.0, vol: 0.45 }, { src: "carimbo", r: 158.7, vol: 0.45 }, { src: "carimbo", r: 175.5, vol: 0.5 }, { src: "carimbo", r: 201.0, vol: 0.5 },
+    { src: "carimbo", r: 133.0, vol: 0.45 }, { src: "carimbo", r: 158.7, vol: 0.45 }, { src: "carimbo", r: 175.5, vol: 0.5 }, { src: "carimbo", r: 190.8, vol: 0.5 },
   ],
 });
 
-const Ass: React.FC<{ r: number }> = ({ r }) => {
-  const { t, o } = useT();
-  const k = lin(t, o(r) - 0.05, o(r) + 0.6, Easing.out(Easing.cubic));
-  return <div style={{ position: "absolute", left: 60, right: 60, top: 1130, textAlign: "center", opacity: k, fontFamily: ELITE, fontSize: 48, color: C.osso, textShadow: SOMBRA }}>…e esse era o álibi:<br />atrás de uma tela.</div>;
-};
 const CR = "Reprodução · fotos da família Meier (imprensa)";
 const CRL = "Reprodução · AP (Lori Drew, 2008)";
 const CRJ = "Reprodução · perfil falso “Josh Evans” (MySpace, imprensa)";
@@ -136,14 +130,8 @@ export const Megan: React.FC = () => (
       <Rotulo r={183.0} texto="leis contra o assédio pela internet" top={280} size={42} />
       <Rotulo r={186.4} texto="Tina criou uma fundação contra o cyberbullying" top={360} size={36} />
     </Plano>
-    <Plano r={[190.0, 200.9]}>
-      <Foto src="mm-myspace" r={[190.0, 200.9]} credito="Reprodução · AP (MySpace)" top={260} w={1000} h={600} pos="50% 50%" cinza zoom={[1.05, 1.15]} />
-      <Grande r={190.1} top={900} size={62}>Onde você estava<br />naquela noite?</Grande>
-      <Rotulo r={192.2} texto="Lori: em casa, a poucos metros" top={1050} size={38} cor={C.ossoE} />
-      <Ass r={195.3} />
-    </Plano>
-    <Plano r={[200.9, 280]} soco={false}>
-      <Fechamento r={201.0} caso="Nº 026" status="NINGUÉM PRESO" pergunta="Se você está passando por algo difícil, fale com o CVV: ligue 188." />
+    <Plano r={[190.0, 280]} soco={false}>
+      <Fechamento r={190.05} caso="Nº 026" status="NINGUÉM PRESO" pergunta="Se você está passando por algo difícil, fale com o CVV: ligue 188." />
     </Plano>
   </Reel>
 );
