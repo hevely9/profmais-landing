@@ -105,6 +105,11 @@ sem acelerar o áudio, frases curtas). Orçamento até 2.500 créditos por víde
      no mesmo top). Antes de renderizar: `python3 _reels/alibi-lote4/checa-textos.py src/v/<video>.tsx` (tem de dar OK).
      Na revisão do MP4, ler cada legenda e cada texto: palavra legível, sem letra em cima de letra, sem texto embaixo
      de outro, legenda de baixo sem colidir com rótulo da cena.
+  6. **ÁUDIO (25/11, usuário):** nada de silêncio longo no começo. A voz entra em até ~2,5 s, e uma abertura sem
+     narração pareceu "áudio atrasado". Efeito sonoro (tiro, impacto) cai no quadro exato da ação, conferido quadro a
+     quadro no clipe. Transcrever o MP4 final e comparar o tempo das palavras com a legenda (sincronia).
+  7. **Só entregar quando estiver 100% (25/11, usuário):** fazer toda a revisão (itens 1–6) no MP4 final ANTES de mandar.
+     Nunca mandar uma versão "pra ver" e corrigir depois.
 
 - **SEM PEDIR COMENTÁRIO (22/11, decisão do usuário — vale até ele mudar):** o público ainda é pequeno e pedir resposta
   deixa o vídeo "no vácuo". Nada de "me fala", "comenta", "responde SIM ou NÃO", "o tribunal é você", caixa de CTA com

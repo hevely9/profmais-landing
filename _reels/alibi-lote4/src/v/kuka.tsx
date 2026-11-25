@@ -6,15 +6,15 @@ import { Fechamento, Hora } from "../dossie";
 
 // ÁLIBI · CASO Nº 027 — "o vídeo viral é FILME" (Kukaracha, Geórgia 1982) → o caso REAL parecido: Marianne Bachmeier (Lübeck, 1981).
 // Fontes: Letterboxd/Wikipedia/Cavea (Kukaracha); Wikipedia, ZDF, Aventuras na História (Bachmeier). Sem detalhe do crime contra a criança.
-// A cena do filme roda SEM narração nos primeiros 5 s (lead 5.0); o desmentido vem cedo (r 18.6) pra ninguém sair achando que é real.
+// A cena do filme abre com os tiros (lead 2.3: a voz entra logo depois; 5 s de silêncio pareceu áudio atrasado); o desmentido vem cedo (r 18.6) pra ninguém sair achando que é real.
 type Ws = { words: { text: string; start: number; end: number }[] };
 export const ctxKu = mkCtx({
-  caso: "Nº 027", audio: "kuka", words: (palavras as Ws).words, lead: 5.0, fimVozRaw: 138.2, final: "alibi", proximo: "NO PERFIL", cta: ["", ""],
+  caso: "Nº 027", audio: "kuka", words: (palavras as Ws).words, lead: 2.3, fimVozRaw: 138.2, final: "alibi", proximo: "NO PERFIL", cta: ["", ""],
   chave: /^(filme|kukaracha|cinema|ficção|verdade|real|marianne|anna|grabowski|tribunal|justiça)/i,
   semLegenda: [[135.3, 300]],
   sfx: [
     // tiros: na cena do filme (antes da narração) e no trecho do filme de 1984 — CC0, freesound 385811
-    { src: "tiro", r: -2.55, vol: 0.75 }, { src: "tiro", r: -2.05, vol: 0.7 }, { src: "tiro", r: -1.5, vol: 0.7 },
+    { src: "tiro", r: -0.75, vol: 0.75 }, { src: "tiro", r: -0.35, vol: 0.7 }, { src: "tiro", r: 7.7, vol: 0.45 },
     { src: "tiro", r: 120.3, vol: 0.35 }, { src: "tiro", r: 120.9, vol: 0.32 }, { src: "tiro", r: 121.5, vol: 0.32 },
     { src: "whoosh", r: 15.0, vol: 0.25 }, { src: "carimbo", r: 19.6, vol: 0.5 }, { src: "tique", r: 40.6, vol: 0.35 }, { src: "tique", r: 42.2, vol: 0.35 },
     { src: "tique", r: 43.2, vol: 0.35 }, { src: "carimbo", r: 45.5, vol: 0.45 }, { src: "subida", r: 46.8, vol: 0.3 }, { src: "impacto", r: 50.8, vol: 0.45 },
@@ -28,13 +28,13 @@ const CRM = "Reprodução · imprensa alemã (Marianne Bachmeier, 1981)";
 const CRB = "Reprodução · Der Fall Bachmeier (filme, 1984)";
 
 // vídeo emoldurado (o recorte do filme é quase quadrado) sobre o fundo desfocado dele mesmo
-const Tela: React.FC<{ src: string; r: number; dur: number; top?: number; w?: number; h?: number; credito: string; etiqueta?: string }> = ({ src, r, dur, top = 420, w = 940, h = 810, credito, etiqueta }) => {
+const Tela: React.FC<{ src: string; r: number; dur: number; from?: number; top?: number; w?: number; h?: number; credito: string; etiqueta?: string }> = ({ src, r, dur, from = 0, top = 420, w = 940, h = 810, credito, etiqueta }) => {
   const { o } = useT();
   const v = staticFile(`v/${src}.mp4`);
   return <Sequence from={Math.max(0, Math.round(o(r) * 30))} durationInFrames={Math.round(dur * 30)} layout="none">
-    <AbsoluteFill><OffthreadVideo src={v} muted style={{ width: "100%", height: "100%", objectFit: "cover", filter: "blur(40px) brightness(0.35) grayscale(0.4)", transform: "scale(1.25)" }} /></AbsoluteFill>
+    <AbsoluteFill><OffthreadVideo src={v} startFrom={Math.round(from * 30)} muted style={{ width: "100%", height: "100%", objectFit: "cover", filter: "blur(40px) brightness(0.35) grayscale(0.4)", transform: "scale(1.25)" }} /></AbsoluteFill>
     <div style={{ position: "absolute", left: (1080 - w) / 2, top, width: w, height: h, overflow: "hidden", border: "8px solid #D9D2C0", boxSizing: "border-box", boxShadow: "0 30px 90px rgba(0,0,0,0.9)", background: "#000" }}>
-      <OffthreadVideo src={v} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+      <OffthreadVideo src={v} startFrom={Math.round(from * 30)} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />
       {etiqueta && <div style={{ position: "absolute", left: 18, top: 16, padding: "6px 14px", background: "#0A0A0B", fontFamily: SANS, fontWeight: 800, fontSize: 28, color: C.osso, display: "flex", alignItems: "center", gap: 10 }}><span style={{ width: 12, height: 12, borderRadius: 6, background: C.verm, display: "inline-block" }} />{etiqueta}</div>}
     </div>
     <div style={{ position: "absolute", right: 34, top: 1262, fontFamily: SANS, fontWeight: 600, fontSize: 17, color: "rgba(236,231,220,0.6)", textShadow: "0 1px 4px #000" }}>{credito}</div>
@@ -67,8 +67,8 @@ const Comparar: React.FC = () => <>
 export const Kuka: React.FC = () => (
   <Reel ctx={ctxKu}>
     {/* ── O VÍDEO VIRAL (filme), contínuo de -5 a 46,8 ── */}
-    <Tela src="kuka" r={-5.0} dur={51.8} credito={CRK} />
-    <Plano r={[-5.0, 15.0]} soco={false}><Viral ate={15.0} /></Plano>
+    <Tela src="kuka" r={-2.3} dur={49.1} from={1.2} credito={CRK} />
+    <Plano r={[-2.3, 15.0]} soco={false}><Viral ate={15.0} /></Plano>
     <Plano r={[15.0, 18.5]} soco={false}><Faixa r={15.1} texto="SÓ QUE TEM UM DETALHE…" top={250} size={56} /></Plano>
     <Plano r={[18.5, 22.0]} soco={false}>
       <Rotulo r={18.6} texto="ESSA CENA NUNCA ACONTECEU" top={250} size={46} cor={C.fita} />
