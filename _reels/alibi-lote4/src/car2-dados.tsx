@@ -92,4 +92,8 @@ export const carrosseis2 = () => <>
     versao: "Foi um assalto. A gente estava num motel.",
     fatos: ["Nada foi arrombado; só o quarto do casal estava revirado", "Pediram nota fiscal no motel, e isso chamou atenção", "Cristian comprou uma moto pagando em dólares, logo depois do enterro", "Cerca de uma semana depois, os três confessaram"],
     desfecho: "2006: Suzane e Daniel, 39 anos e 6 meses" }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
+  <Composition id="VxF-Bruno" component={VersaoFatoPost as React.FC<any>} defaultProps={{ caso: "CASO ELIZA SAMUDIO · 2010", img: "c2-bruno", pos: "50% 30%", credito: "Reprodução · TV (julgamento, 2013)",
+    versao: "Não tenho nada a ver com o sumiço da Eliza.",
+    fatos: ["O primo de Bruno, Jorge, confessou ter levado Eliza ao sítio do goleiro", "Macarrão, amigo e braço-direito, ligou Bruno à morte dela", "O corpo nunca foi achado, mas o júri condenou com base nas provas"],
+    desfecho: "2013: Bruno, 22 anos e 3 meses de prisão" }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
 </>;
