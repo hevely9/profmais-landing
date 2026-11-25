@@ -100,6 +100,11 @@ sem acelerar o áudio, frases curtas). Orçamento até 2.500 créditos por víde
   3. Cenas contínuas, sem buraco nem sobreposição entre Planos.
   4. Enquadramento: extrair 1 quadro por segundo do MP4 final e olhar todos: rosto inteiro, nada cortado pela borda,
      texto dentro da área segura, sem logo/marca d'água, documento sem texto cortado pela metade, carimbo sem cobrir rosto.
+  5. **LEGENDAS E TEXTOS SEM SOBREPOSIÇÃO (25/11, usuário — em TODO vídeo, sem ele precisar lembrar):** dois textos no
+     mesmo lugar ao mesmo tempo viram letras embaralhadas (aconteceu no Nº 027: "Geórgia · 1982" + "baseado no livro…"
+     no mesmo top). Antes de renderizar: `python3 _reels/alibi-lote4/checa-textos.py src/v/<video>.tsx` (tem de dar OK).
+     Na revisão do MP4, ler cada legenda e cada texto: palavra legível, sem letra em cima de letra, sem texto embaixo
+     de outro, legenda de baixo sem colidir com rótulo da cena.
 
 - **SEM PEDIR COMENTÁRIO (22/11, decisão do usuário — vale até ele mudar):** o público ainda é pequeno e pedir resposta
   deixa o vídeo "no vácuo". Nada de "me fala", "comenta", "responde SIM ou NÃO", "o tribunal é você", caixa de CTA com

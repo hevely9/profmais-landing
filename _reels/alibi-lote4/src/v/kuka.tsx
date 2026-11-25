@@ -77,8 +77,8 @@ export const Kuka: React.FC = () => (
     <Plano r={[22.0, 30.3]} soco={false}>
       <Rotulo r={22.0} texto="É DO FILME" top={180} size={42} cor={C.fita} />
       <Titulo r={22.6} top={240} size={92}>KUKARACHA</Titulo>
-      <Rotulo r={24.8} texto="Geórgia (antiga URSS) · 1982" top={1150} size={42} />
-      <Rotulo r={28.0} texto="baseado no livro de Nodar Dumbadze" top={1150} size={40} />
+      <Rotulo r={24.8} texto="Geórgia (antiga URSS) · 1982" top={1080} size={42} />
+      <Rotulo r={28.0} texto="baseado no livro de Nodar Dumbadze" top={1150} size={38} />
     </Plano>
     <Plano r={[30.3, 39.5]} soco={false}>
       <Rotulo r={30.4} texto="NO FILME:" top={190} size={42} cor={C.fita} />
