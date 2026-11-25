@@ -88,14 +88,14 @@ export const Kuka: React.FC = () => (
       <Rotulo r={40.6} texto="✓ close no rosto" top={225} size={44} />
       <Rotulo r={42.2} texto="✓ trilha sonora" top={290} size={44} />
       <Rotulo r={43.2} texto="✓ lembranças em flashback" top={355} size={44} />
-      <Carimbo r={45.4} texto="É TUDO CINEMA" y={830} rot={-7} size={92} />
+      <Carimbo r={44.9} texto="É TUDO CINEMA" y={830} rot={-7} size={92} />
     </Plano>
 
     {/* ── A PONTE: filme × real ── */}
     <Plano r={[46.8, 55.3]}>
       <Comparar />
       <Rotulo r={46.9} texto="MAS UMA CENA MUITO PARECIDA" top={230} size={46} cor={C.fita} />
-      <Titulo r={50.7} top={300} size={84} cor={C.verm}>ACONTECEU DE VERDADE</Titulo>
+      <Titulo r={50.7} top={310} size={64} cor={C.verm}>ACONTECEU DE VERDADE</Titulo>
     </Plano>
 
     {/* ── O CASO REAL ── */}
@@ -111,9 +111,10 @@ export const Kuka: React.FC = () => (
       <Fundo />
       <Rotulo r={64.5} texto="ela foi encontrada sem vida" top={420} size={44} cor={C.ossoE} />
       <Rotulo r={66.7} texto="O SUSPEITO, PRESO LOGO DEPOIS:" top={540} size={42} cor={C.fita} />
-      <Titulo r={69.0} top={610} size={96}>KLAUS GRABOWSKI</Titulo>
-      <Rotulo r={70.4} texto="vizinho · 35 anos" top={740} size={46} />
-      <Faixa r={72.8} texto="JÁ CONDENADO ANTES POR CRIMES CONTRA CRIANÇAS" top={880} size={38} />
+      <Titulo r={69.0} top={610} size={70}>KLAUS GRABOWSKI</Titulo>
+      <Rotulo r={70.4} texto="vizinho · 35 anos" top={720} size={46} />
+      <Faixa r={72.8} texto="JÁ TINHA SIDO CONDENADO ANTES" top={840} size={48} />
+      <Rotulo r={73.8} texto="por crimes contra crianças" top={940} size={42} />
     </Plano>
     <Plano r={[75.8, 80.8]}>
       <Foto src="bach-marianne" r={[75.8, 80.8]} credito={CRM} top={380} w={820} h={760} pos="50% 25%" zoom={[1.0, 1.06]} cinza />
@@ -143,18 +144,18 @@ export const Kuka: React.FC = () => (
       <Rotulo r={104.5} texto="pra uns: justiça de mãe" top={640} size={48} cor={C.fita} />
       <Rotulo r={107.3} texto="pra outros: ninguém faz justiça com as próprias mãos" top={730} size={38} />
     </Plano>
-    <Plano r={[111.3, 117.3]}>
+    <Plano r={[111.3, 118.6]}>
       <Fundo />
       <Rotulo r={111.4} texto="CONDENADA EM 1983" top={420} size={46} cor={C.fita} />
       <Contador r={114.1} ate={114.9} valor={6} sufixo=" ANOS" top={500} size={150} />
       <Rotulo r={116.4} texto="cumpriu metade" top={720} size={48} cor={C.ossoE} />
     </Plano>
-    <Plano r={[117.3, 120.8]}>
-      <Tela src="bach84" r={117.3} dur={3.5} top={400} w={820} h={1034} credito={CRB} etiqueta="FILME · 1984" />
-      <Rotulo r={117.4} texto="A HISTÓRIA DELA VIROU FILME" top={240} size={44} cor={C.fita} />
+    <Plano r={[118.6, 122.0]}>
+      <Tela src="bach84" r={118.6} dur={3.4} top={400} w={820} h={1034} credito={CRB} etiqueta="FILME · 1984" />
+      <Rotulo r={118.7} texto="A HISTÓRIA DELA VIROU FILME" top={240} size={44} cor={C.fita} />
     </Plano>
-    <Plano r={[120.8, 129.9]}>
-      <Foto src="bach-marianne" r={[120.8, 129.9]} credito={CRM} top={380} w={820} h={760} pos="50% 25%" zoom={[1.06, 1.0]} cinza />
+    <Plano r={[122.0, 129.9]}>
+      <Foto src="bach-marianne" r={[122.0, 129.9]} credito={CRM} top={380} w={820} h={760} pos="50% 25%" zoom={[1.06, 1.0]} cinza />
       <Rotulo r={122.4} texto="MARIANNE MORREU EM 1996" top={220} size={44} cor={C.fita} />
       <Rotulo r={125.5} texto="aos 46 anos" top={290} size={42} />
       <Faixa r={127.5} texto="ENTERRADA AO LADO DA FILHA" top={1160} size={50} />
@@ -162,7 +163,7 @@ export const Kuka: React.FC = () => (
     <Plano r={[129.9, 135.3]}>
       <Comparar />
       <Rotulo r={130.4} texto="A CENA É FICÇÃO" top={250} size={50} cor={C.ossoE} />
-      <Titulo r={132.3} top={320} size={84} cor={C.verm}>A DOR FOI REAL</Titulo>
+      <Titulo r={132.3} top={320} size={76} cor={C.verm}>A DOR FOI REAL</Titulo>
     </Plano>
     <Plano r={[135.3, 300]} soco={false}>
       <Fechamento r={135.35} caso="Nº 027" status="CASO REAL" pergunta="A cena viral é ficção. A história de Marianne, não." />
