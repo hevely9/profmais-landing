@@ -15,6 +15,7 @@ import { Megan, ctxMe } from "./v/megan";
 import { CapaKuka, Kuka, ctxKu } from "./v/kuka";
 import { Antuerpia, CapaAntu, ctxAn } from "./v/antuerpia";
 import { CorteGloria, GLORIA_TOTAL } from "./v/corte-gloria";
+import { CapaDp30, CorteGloria2, GLORIA2_TOTAL } from "./v/corte-gloria2";
 import { CapaSob, SobInvestigacao, SOB_TOTAL } from "./v/sobinv";
 import { CapaSob2, SobInvestigacao2, SOB2_TOTAL } from "./v/sobinv2";
 
@@ -38,6 +39,8 @@ export const Root: React.FC = () => (
     {comp("027-Kukaracha", Kuka, ctxKu.TOTAL)}
     {comp("028-Antuerpia", Antuerpia, ctxAn.TOTAL)}
     <Composition id="029-Gloria" component={CorteGloria} durationInFrames={GLORIA_TOTAL} fps={FPS} width={1080} height={1920} />
+    <Composition id="030-Gloria2" component={CorteGloria2} durationInFrames={GLORIA2_TOTAL} fps={FPS} width={1080} height={1920} />
+    <Composition id="Capa-030" component={CapaDp30} durationInFrames={1} fps={FPS} width={1080} height={1920} />
     <Composition id="Capa-028-Antuerpia" component={CapaAntu} durationInFrames={1} fps={FPS} width={1080} height={1920} />
     <Composition id="Capa-027-Kukaracha" component={CapaKuka} durationInFrames={1} fps={FPS} width={1080} height={1920} />
     {comp("Publi-SobInvestigacao", SobInvestigacao, SOB_TOTAL)}
