@@ -162,14 +162,16 @@ export const CorteGloria2: React.FC = () => {
 // capa do Nº 030 (vertical; a versão 3:4 é o recorte central 1080×1440, por isso o texto fica entre y=300 e y=1640)
 export const CapaDp30: React.FC = () => (
   <AbsoluteFill style={{ background: C.preto }}>
-    <Img src={staticFile("img/dp30/f150.jpg")} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "38% 40%" }} />
-    <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.25) 30%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.85) 78%)" }} />
+    <Img src={staticFile("img/dp30/f150.jpg")} style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover", filter: "blur(40px) brightness(0.35)", transform: "scale(1.2)" }} />
     <div style={{ position: "absolute", left: 80, right: 80, top: 330, textAlign: "center" }}>
       <div style={{ fontFamily: MONT, fontWeight: 800, fontSize: 104, lineHeight: 1.02, color: C.osso, textShadow: "0 6px 28px rgba(0,0,0,0.95)" }}>“CONTA DE<br />1 ATÉ 18”</div>
     </div>
-    <div style={{ position: "absolute", left: 80, right: 80, top: 1220, textAlign: "center" }}>
+    <div style={{ position: "absolute", left: 40, right: 40, top: 640, background: "#F4F1EA", padding: 16, transform: "rotate(-2deg)", boxShadow: "0 30px 70px rgba(0,0,0,0.8)" }}>
+      <Img src={staticFile("img/dp30/f150.jpg")} style={{ width: "100%", height: 540, objectFit: "cover", objectPosition: "40% 40%", display: "block" }} />
+    </div>
+    <div style={{ position: "absolute", left: 60, right: 60, top: 1280, textAlign: "center" }}>
       <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 50, color: C.osso, textShadow: "0 4px 18px #000" }}>Daniella Perez, 22 anos.</div>
-      <div style={{ display: "inline-block", marginTop: 16, padding: "6px 24px 10px", background: C.lacre, fontFamily: MONT, fontWeight: 800, fontSize: 62, color: C.osso }}>O CRIME QUE PAROU O BRASIL</div>
+      <div style={{ display: "inline-block", marginTop: 16, padding: "6px 22px 10px", background: C.lacre, fontFamily: MONT, fontWeight: 800, fontSize: 54, color: C.osso, whiteSpace: "nowrap" }}>O CRIME QUE PAROU O BRASIL</div>
     </div>
     <div style={{ position: "absolute", left: 0, right: 0, top: 1540, textAlign: "center", fontFamily: SERIF, fontWeight: 900, fontSize: 44, letterSpacing: "0.12em", color: C.osso }}>ÁLIBI</div>
   </AbsoluteFill>
