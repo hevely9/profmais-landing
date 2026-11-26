@@ -163,3 +163,5 @@ sozinha já faça a pessoa querer ver o vídeo.
   tremor nos pontos de virada, cortes mais rápidos no gancho. A cada vídeo, subir o nível em relação ao anterior.
 - **Trechos de trailer/documentário:** nunca deixar aparecer claquete de bastidor, cartela com título/data de estreia, logo
   ou faixa preta de cinema (zoom ≥ 1,55 em quadro letterbox). Mapear o trailer a cada 0,5 s antes de escolher os trechos.
+- **TAMANHO DO ARQUIVO (26/11, usuário não conseguiu baixar 104 MB):** entregar sempre um MP4 de até ~45 MB.
+  Se o export HQ passar de 50 MB, gerar a versão leve (x264 crf 21, maxrate 2300k, AAC 128k, faststart) e mandar ESSA.
