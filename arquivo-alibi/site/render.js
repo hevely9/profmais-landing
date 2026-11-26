@@ -12,7 +12,7 @@ const TIPO_ROTULO = {
 const img = (nome, ctx, cls = "", alt = "") => nome ? `<img class="${cls}" data-midia="${esc(nome)}"${ctx.src ? ` src="${esc(ctx.src(nome))}"` : ""} alt="${esc(alt)}" loading="lazy">` : "";
 const anexo = (a, ctx) => !a ? "" : `<figure class="anexo">${img(a.img, ctx, "zoomavel", a.legenda)}<figcaption>${esc(a.legenda)}</figcaption></figure>`;
 const audio = (nome, ctx, rotulo) => !nome ? "" : ctx.pdf
-  ? `<div class="audio-prova audio-pdf"><b>▶ ${esc(rotulo || "Ouça a gravação")}</b><span>Disponível na Central de Investigação, aba Dossiê.</span></div>`
+  ? `<div class="audio-prova audio-pdf"><b>▶ Ouça no celular:</b> <span>abra a Central &gt; Documentos &gt; ${esc(ctx.id || "")}</span></div>`
   : `<div class="audio-prova" data-audio="${esc(nome)}"><button type="button" class="audio-play" aria-label="${esc(rotulo || "Ouvir gravação")}">▶</button><div class="audio-info"><b>${esc(rotulo || "Ouvir gravação")}</b><span class="audio-tempo">toque para carregar</span></div></div>`;
 
 const tabela = (t) => !t ? "" : `${t.titulo ? `<div class="doc-sub">${esc(t.titulo)}</div>` : ""}<table class="doc-tab"><thead><tr>${t.cab.map((c) => `<th>${esc(c)}</th>`).join("")}</tr></thead><tbody>${t.linhas.map((l) => `<tr>${l.map((c) => `<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
@@ -33,16 +33,16 @@ const corpo = {
   app: (c) => `<div class="appcard"><div class="app-top">${esc(c.app)}</div>${campos(c.campos)}</div>`,
   lista: (c) => `<div class="of-orgao">${esc(c.orgao)}</div><div class="of-doc">${esc(c.documento)}</div>${tabela({ cab: ["Item", "Descrição", "Onde estava"], linhas: c.itens })}${c.nota ? `<p class="nota">${esc(c.nota)}</p>` : ""}`,
   foto: (c, ctx) => `<figure class="ilus foto">${img(c.img, ctx, "zoomavel", c.legenda)}<figcaption>${esc(c.legenda)}</figcaption></figure>${c.notas ? `<ul class="notas">${c.notas.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}`,
-  audio: (c, ctx) => `${campos([["Arquivo", c.arquivo], ["Trecho", c.inicio]])}<p>${esc(c.descricao)}</p>${audio(c.audio, ctx, "Ouvir a gravação")}${ctx.pdf ? "" : `<p class="nota">Não há transcrição: os detalhes desta prova estão só no áudio.</p>`}`,
+  audio: (c, ctx) => `${campos([["Arquivo", c.arquivo], ["Trecho", c.inicio]])}<p>${esc(c.descricao)}</p>${audio(c.audio, ctx, "Ouvir a gravação")}${!ctx.pdf && c.transcricao ? `<details class="transcricao"><summary>Ler transcrição</summary>${c.transcricao.map((l) => `<p>${esc(l)}</p>`).join("")}</details>` : ""}`,
   ilustracao: (c, ctx) => `<figure class="ilus">${(ILUS[c.svg] || (() => ""))(ctx)}<figcaption>${esc(c.legenda)}</figcaption></figure>${c.notas ? `<ul class="notas">${c.notas.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}`,
 };
 
 export function renderProva(p, ctx = {}) {
   const fn0 = corpo[p.tipo] || ((c) => paragrafos(c.corpo));
-  const fn = (c, x) => fn0(c, x) + anexo(c.anexo, x);
-  const bonus = p.origem !== "pdf";
+  const fn = (c, x) => fn0(c, { ...x, id: p.id }) + anexo(c.anexo, x);
+  const bonus = p.origem !== "pdf" && p.origem !== "final";
   return `<article class="doc doc-${p.tipo}${bonus ? " doc-bonus" : ""}" id="${esc(p.id)}">
-  <header class="doc-head"><span class="doc-tipo">${esc(TIPO_ROTULO[p.tipo] || "Documento")}${bonus ? " · PROVA BÔNUS" : ""}</span><span class="doc-id">${esc(p.id)}</span></header>
+  <header class="doc-head"><span class="doc-tipo">${esc(p.rotulo || TIPO_ROTULO[p.tipo] || "Documento")}${bonus ? " · PROVA BÔNUS" : ""}</span><span class="doc-id">${esc(p.id)}</span></header>
   <h2 class="doc-titulo">${esc(p.titulo)}</h2>
   <div class="doc-corpo">${fn(p.conteudo, ctx)}</div>
   <footer class="doc-pe">Caso fictício. Qualquer semelhança com fatos ou pessoas reais é coincidência.</footer>

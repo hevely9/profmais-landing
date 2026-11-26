@@ -163,3 +163,135 @@ fieldset { border: 0; padding: 0; margin: 0 0 16px; min-width: 0; } legend { fon
 @media (min-width: 720px) { .abas { grid-template-columns: repeat(6, 1fr); } .casos { grid-template-columns: 1fr 1fr; } }
 @media (prefers-reduced-motion: reduce) { .selo-ok, .selo-ok span { animation-duration: .01s; } }
 .vitima .pessoa-fotos { max-width: 520px; }
+
+/* ── V3: facilidade máxima (fonte ≥16px, toque ≥48px, uma ação principal por tela) ── */
+html, body { font-size: 16px; }
+body { font-weight: 500; line-height: 1.45; }
+.topo { top: env(safe-area-inset-top, 0px); padding: 10px 16px; }
+.btn-ajuda { background: var(--osso); color: var(--tinta); border: 0; border-radius: 999px; padding: 10px 14px; font-weight: 800; font-size: 16px; min-height: 48px; }
+.rodape { font-size: 14px; }
+body.com-abas main { padding-bottom: calc(110px + env(safe-area-inset-bottom, 0px)); }
+body.com-abas .rodape { padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px)); }
+.btn { min-height: 52px; font-size: 17px; border-radius: 10px; }
+.btn-grande { display: flex; width: 100%; min-height: 60px; font-size: 18px; margin: 12px 0 0; text-align: center; }
+.btn + .btn, .btn-g { margin-top: 10px; }
+.btn-g { width: 100%; display: flex; color: var(--osso); border-color: #5A524A; }
+.btn-g svg { width: 22px; height: 22px; }
+.link { font-size: 16px; padding: 14px 0; min-height: 48px; display: block; width: 100%; text-align: center; color: var(--osso); }
+.rotulo { display: block; font-weight: 800; margin-top: 8px; }
+.entrada h1 { font-size: clamp(30px, 8vw, 40px); }
+.entrada p, .intro, .lead { font-size: 16px; color: #D8D1C3; }
+.lead { font-size: 17px; line-height: 1.5; }
+.erro { font-size: 16px; font-weight: 700; }
+.continuar { margin: -10px 0 28px; }
+.pasta p, .selos span { font-size: 15px; }
+.cartao { padding: 20px 18px; }
+.centro { text-align: center; } .centro .intro { margin-top: 12px; }
+.h-grande { font-family: var(--f-impacto); font-size: 26px; line-height: 1.15; margin: 4px 0 14px; text-wrap: balance; }
+.h-sec { font-family: var(--f-impacto); font-size: 22px; margin: 4px 0 12px; }
+.ic-grande svg { width: 54px; height: 54px; color: var(--fita); }
+
+/* cabeçalho do caso: sempre mostra "Objetivo X de 3" */
+.caso-cab { position: relative; margin-bottom: 16px; }
+.caso-linha { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.caso-linha small { font-size: 14px; }
+.situ { background: var(--lacre); color: #fff; font-weight: 800; font-size: 16px; padding: 6px 12px; border-radius: 999px; white-space: nowrap; }
+.caso-cab h1 { font-size: clamp(22px, 6vw, 30px); margin: 8px 0 4px; }
+.troca { background: none; border: 0; color: var(--fita); text-decoration: underline; font-size: 16px; font-weight: 700; padding: 8px 0; min-height: 44px; }
+
+/* escolha do modo */
+.opcao-modo { display: grid; grid-template-columns: 56px 1fr; gap: 14px; align-items: center; width: 100%; text-align: left; background: var(--papel); color: var(--tinta); border: 3px solid transparent; border-radius: 14px; padding: 18px 16px; margin: 12px 0 0; font-size: 16px; line-height: 1.4; min-height: 96px; }
+.opcao-modo:hover, .opcao-modo:focus-visible { border-color: var(--fita); }
+.opcao-modo b { display: block; font-family: var(--f-impacto); font-size: 21px; margin-bottom: 4px; }
+.opcao-modo em { font-style: normal; font-family: var(--f-texto); font-size: 13px; background: #2E6B3A; color: #fff; padding: 3px 8px; border-radius: 999px; vertical-align: middle; margin-left: 6px; }
+.opcao-modo .ic svg { width: 48px; height: 48px; color: var(--lacre); }
+.passos-4 { counter-reset: p; list-style: none; padding: 0; margin: 0 0 6px; }
+.passos-4 li { counter-increment: p; display: grid; grid-template-columns: 44px 1fr; gap: 12px; align-items: center; font-size: 17px; line-height: 1.4; padding: 12px 0; border-bottom: 1px solid #2A2520; }
+.passos-4 li::before { content: counter(p); width: 44px; height: 44px; border-radius: 50%; background: var(--fita); color: var(--tinta); display: grid; place-items: center; font-family: var(--f-impacto); font-size: 22px; }
+.marcar { display: flex; gap: 10px; align-items: center; justify-content: center; font-size: 16px; padding: 14px 0 0; min-height: 48px; }
+.marcar input { width: 22px; height: 22px; accent-color: var(--lacre); }
+
+/* briefing */
+.brief-cab h2 { font-family: var(--f-impacto); font-size: 22px; margin: 2px 0; }
+.brief-texto { font-size: 16px; }
+.brief-fotos { font-size: 16px; }
+
+/* abas fixas embaixo (modo tela) */
+.abas-baixo { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; display: grid; grid-template-columns: repeat(3, 1fr); background: #12100D; border-top: 1px solid #3A342E; padding: 6px max(8px, env(safe-area-inset-left, 0px)) calc(6px + env(safe-area-inset-bottom, 0px)); }
+.abas-baixo a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 62px; text-decoration: none; color: var(--osso-e); font-size: 16px; font-weight: 800; border-radius: 12px; }
+.abas-baixo svg { width: 26px; height: 26px; }
+.abas-baixo a[aria-current="page"] { color: var(--tinta); background: var(--osso); }
+@media (min-width: 720px) { .abas-baixo { max-width: 720px; margin: 0 auto; border-radius: 16px 16px 0 0; border-left: 1px solid #3A342E; border-right: 1px solid #3A342E; } }
+
+/* objetivo */
+.pergunta { font-size: 17px; }
+legend { font-size: 17px; }
+.opc { font-size: 16px; min-height: 52px; align-items: center; padding: 12px 14px; }
+.opc input { width: 22px; height: 22px; margin: 0; flex: none; }
+.busca { width: 100%; padding: 14px; border-radius: 10px; border: 2px solid #3A342E; background: var(--preto); color: var(--osso); font: inherit; font-size: 16px; min-height: 52px; margin: 0 0 10px; }
+.busca:focus { outline: none; border-color: var(--fita); }
+.marcadas .cont { font-size: 16px; font-weight: 800; color: var(--osso); }
+.pill { font-size: 16px; padding: 10px 14px; min-height: 44px; }
+.provas-sel { max-height: 460px; }
+.grupo h4 { font-size: 14px; }
+.chip label { font-size: 16px; min-height: 52px; }
+.chip input { width: 22px; height: 22px; }
+.chip .ver { font-size: 16px; padding: 0 16px; min-width: 64px; text-decoration: underline; }
+.dica { font-size: 16px; }
+.resposta { font-size: 17px; font-weight: 700; }
+.acerto { text-align: center; } .acerto p { font-size: 17px; line-height: 1.5; }
+.selo-mini { display: inline-block; border: 5px solid var(--verm); color: var(--verm); font-family: var(--f-maquina); font-size: 30px; padding: 2px 16px; transform: rotate(-6deg); margin: 6px 0 10px; }
+
+/* documentos */
+.cat { font-size: 15px; }
+.doc-card { font-size: 16px; min-height: 60px; }
+.doc-card b { font-size: 15px; }
+.doc-card.realce { outline: 4px solid var(--fita); animation: pulso 1.2s ease-in-out 3; }
+@keyframes pulso { 50% { outline-color: transparent; } }
+.doc { font-size: 15.5px; }
+.transcricao { margin: 6px 0 10px; background: rgba(26,23,20,.06); border: 1px solid #B8AD96; border-radius: 6px; padding: 8px 12px; font-size: 15px; }
+.transcricao summary { font-weight: 800; cursor: pointer; min-height: 40px; display: flex; align-items: center; font-family: var(--f-texto); }
+.transcricao p { margin: 6px 0; }
+.btn-fechar { background: var(--osso); color: var(--tinta); border: 0; border-radius: 10px; font-weight: 800; font-size: 16px; padding: 0 16px; min-height: 48px; }
+.btn-ic { width: 48px; height: 48px; font-size: 22px; }
+.modal-barra > b { font-size: 16px; }
+.modal-acoes span { font-size: 14px; }
+.pessoa-txt h3 { font-size: 18px; } .pessoa-txt p { font-size: 16px; }
+.dia figcaption { font-size: 14px; }
+.cracha b, .cracha span { font-size: 14px; }
+
+/* modo papel: respostas por número */
+.opcoes-grandes { display: grid; gap: 8px; }
+.opc-grande { display: block; cursor: pointer; }
+.opc-grande input { position: absolute; opacity: 0; pointer-events: none; }
+.opc-grande span { display: block; background: #16130F; border: 2px solid #3A342E; border-radius: 12px; padding: 16px; font-size: 17px; font-weight: 700; min-height: 60px; line-height: 1.35; }
+.opc-grande input:checked + span { background: var(--osso); color: var(--tinta); border-color: var(--fita); }
+.opc-grande input:checked + span::before { content: "✓ "; color: var(--lacre); }
+.opc-grande input:focus-visible + span { outline: 3px solid var(--fita); }
+.campo-prova { display: grid; grid-template-columns: auto 1fr; gap: 8px; align-items: center; margin-bottom: 12px; }
+.campo-prova input { width: 100%; font-family: var(--f-doc); font-weight: 700; font-size: 26px; padding: 10px 14px; min-height: 60px; border-radius: 10px; border: 2px solid #3A342E; background: var(--preto); color: var(--osso); letter-spacing: .06em; }
+.campo-prova input:focus { outline: none; border-color: var(--fita); }
+.letra { display: flex; border: 2px solid #3A342E; border-radius: 10px; overflow: hidden; }
+.letra button { width: 52px; min-height: 56px; border: 0; background: #16130F; color: var(--osso-e); font-family: var(--f-doc); font-weight: 700; font-size: 22px; }
+.letra button[aria-pressed="true"] { background: var(--osso); color: var(--tinta); }
+.letra-fixa { font-family: var(--f-doc); font-weight: 700; font-size: 26px; color: var(--osso-e); padding: 0 4px; }
+.nome-prova { grid-column: 1 / -1; font-size: 16px; min-height: 1.2em; }
+.nome-prova.ok { color: #9BE3A5; } .nome-prova.ok::before { content: "✓ "; }
+.nome-prova.erro { color: #FFB0B4; }
+
+/* ajuda */
+.ajuda { list-style: none; padding: 0; margin: 0 0 10px; counter-reset: a; }
+.ajuda li { counter-increment: a; background: #16130F; border: 1px solid #2A2520; border-radius: 12px; padding: 12px; margin-bottom: 12px; }
+.ajuda li::before { content: "Passo " counter(a); display: block; font-family: var(--f-doc); color: var(--fita); font-size: 14px; letter-spacing: .1em; margin-bottom: 6px; }
+.ajuda img { width: 100%; max-width: 360px; display: block; margin: 0 auto 8px; border-radius: 10px; border: 1px solid #3A342E; }
+.ajuda p { margin: 0; font-size: 17px; line-height: 1.45; }
+
+/* linha do tempo e final */
+.tl-carta { font-size: 15px; } .tl-carta small { font-size: 13px; }
+.slot .hora { font-size: 14px; }
+.relatorio div { font-size: 15px; }
+.nivel { font-size: 17px; margin-bottom: 4px; }
+.aviso { font-size: 16px; }
+.share-fig figcaption, .teaser { font-size: 15px; }
+.modal { background: #0A0A0B; }
+.btn-ajuda { white-space: nowrap; padding: 10px 14px; }

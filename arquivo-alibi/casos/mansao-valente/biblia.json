@@ -1265,7 +1265,15 @@
     "arquivo": "VID_20240921_214910.mp4 — trilha de áudio",
     "inicio": "Trecho de 00:40 a 01:40 do vídeo (21:49:50 a 21:50:50)",
     "descricao": "Áudio extraído pela perícia do vídeo gravado por Helena na sala de música. Ouça com fone de ouvido.",
-    "transcricao": false
+    "transcricao": [
+     "[piano ao fundo, a música não para em nenhum momento]",
+     "00:46 — Helena (sussurrando): Isso, filho... devagar, que é a parte que o seu pai gosta.",
+     "00:59 — [passos rápidos subindo uma escada de madeira, ao longe; dois rangidos]",
+     "01:04 — Beatriz (sussurrando): Ué... o Caio não tinha ido pro carro?",
+     "01:08 — Helena (sussurrando): Shhh. Tô gravando.",
+     "01:15 — [palmas baixas, perto do celular]",
+     "01:40 — [fim do trecho; o piano continua]"
+    ]
    }
   },
   {
@@ -1281,7 +1289,18 @@
     "arquivo": "Gravação da central de emergência — chamada nº 46.318",
     "inicio": "21/09/2024, 22:46:09 · duração 0 min 50 s",
     "descricao": "Chamada feita do telefone fixo da Mansão Valente. Quem liga é a governanta, Lúcia Prado.",
-    "transcricao": false
+    "transcricao": [
+     "Atendente: Emergência, qual é o endereço da ocorrência?",
+     "Lúcia: Alameda dos Ipês, quatrocentos, Jardim das Cerejeiras! Pelo amor de Deus, vem rápido!",
+     "Atendente: Certo. O que aconteceu?",
+     "Lúcia: É o seu Augusto... ele tá caído no escritório, do lado da poltrona... eu vim buscar a bandeja e ele tava no chão...",
+     "Atendente: Ele está respirando? A senhora consegue ver o peito dele se mexer?",
+     "Lúcia: Não... não tô vendo... Seu Augusto! Seu Augusto! Não tá mexendo...",
+     "Atendente: A senhora sabe se ele tomou alguma coisa? Algum remédio?",
+     "Lúcia: Só o remédio do coração, de manhã... e o conhaque, ele toma o conhaque toda noite... o copo tá aqui, ele bebeu tudo...",
+     "Atendente: A ambulância já está a caminho. Fique na linha comigo. Tem mais alguém na casa?",
+     "Lúcia (gritando, longe do telefone): Dona Helena! Dona Helena, corre aqui! Seu Caio, chama a dona Helena, pelo amor de Deus!"
+    ]
    }
   },
   {

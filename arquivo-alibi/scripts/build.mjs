@@ -6,13 +6,14 @@
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
+import { execFileSync } from "node:child_process";
 import { derivar, chaveBruta, cifrar, normCodigo, canonCampos, canonResposta, sha } from "../site/cripto.js";
 
 const RAIZ = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const OUT = path.join(RAIZ, "dist", "site");
 const cfg = JSON.parse(fs.readFileSync(path.join(RAIZ, "config.json"), "utf8"));
 const sub = globalThis.crypto.subtle;
-const TIPOS_MIDIA = { webp: "image/webp", mp3: "audio/mpeg", jpg: "image/jpeg", png: "image/png" };
+const TIPOS_MIDIA = { webp: "image/webp", mp3: "audio/mpeg", jpg: "image/jpeg", png: "image/png", pdf: "application/pdf" };
 
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(path.join(OUT, "data"), { recursive: true });
@@ -39,16 +40,17 @@ function combinacoes(a) {
 function midiasEm(obj, acc = new Set()) {
   if (Array.isArray(obj)) obj.forEach((x) => midiasEm(x, acc));
   else if (obj && typeof obj === "object") for (const [k, v] of Object.entries(obj)) {
-    if (["img", "audio", "foto", "rosto", "ficha", "dia"].includes(k) && typeof v === "string") acc.add(v);
+    if (["img", "audio", "foto", "rosto", "ficha", "dia", "pdf"].includes(k) && typeof v === "string") acc.add(v);
     else midiasEm(v, acc);
   }
   return acc;
 }
 
-async function cifrarArquivo(chave, nome, dirMidia, destino) {
-  const arq = fs.readdirSync(dirMidia).find((f) => f.replace(/\.\w+$/, "") === nome);
+async function cifrarArquivo(chave, nome, dirs, destino) {
+  let arq, dir;
+  for (const d of dirs) { arq = fs.readdirSync(d).find((f) => f.replace(/\.\w+$/, "") === nome); if (arq) { dir = d; break; } }
   if (!arq) throw new Error(`mídia não encontrada: ${nome}`);
-  const bytes = fs.readFileSync(path.join(dirMidia, arq));
+  const bytes = fs.readFileSync(path.join(dir, arq));
   const iv = crypto.randomBytes(12);
   const ct = new Uint8Array(await sub.encrypt({ name: "AES-GCM", iv }, chave, bytes));
   const f = crypto.randomBytes(9).toString("hex") + ".bin";
@@ -64,7 +66,12 @@ for (const slug of fs.readdirSync(path.join(RAIZ, "casos")).sort()) {
   const b = JSON.parse(fs.readFileSync(arq, "utf8"));
   const codigo = normCodigo(b.codigo);
   proibidos.add(b.codigo); proibidos.add(codigo);
-  const dirMidia = path.join(RAIZ, "casos", slug, "midia");
+  // folhas de imprimir (modo papel): geradas antes e criptografadas como o resto
+  execFileSync("node", [path.join(RAIZ, "scripts", "impressos.mjs"), slug], { stdio: "inherit", env: { ...process.env, NODE_PATH: process.env.NODE_PATH || execFileSync("npm", ["root", "-g"]).toString().trim() } });
+  const dirImp = path.join(RAIZ, "dist", "impressos", slug);
+  const pags = JSON.parse(fs.readFileSync(path.join(dirImp, "paginas.json"), "utf8"));
+  const imp = (nome) => pags[nome] ? { pdf: nome, paginas: pags[nome] } : null;
+  const dirMidia = [path.join(RAIZ, "casos", slug, "midia"), dirImp];
   const dirOut = path.join(OUT, "data", slug); fs.mkdirSync(dirOut, { recursive: true });
   const chaveCaso = await derivar(codigo, `${slug}|caso`);
   const provasPdf = b.provas.filter((p) => p.origem === "pdf");
@@ -91,7 +98,8 @@ for (const slug of fs.readdirSync(path.join(RAIZ, "casos")).sort()) {
       const chaves = Object.keys(q.campos).sort();
       quase.push({ chaves, h: await sha(`${salt}|q|${canonCampos(chaves, q.campos)}`), msg: q.msg });
     }
-    const conteudo = { bonus: o.bonus.map((id) => b.provas.find((p) => p.id === id)), msg: o.msg_acerto, cartas: b.tempo_jogo.cartas.filter((c) => c[4] === o.n) };
+    const conteudo = { bonus: o.bonus.map((id) => b.provas.find((p) => p.id === id)), msg: o.msg_acerto, cartas: b.tempo_jogo.cartas.filter((c) => c[4] === o.n), impresso: imp(`impresso-obj${o.n}`) };
+    if (o.n === b.objetivos.length) conteudo.impressoSolucao = imp("impresso-solucao");
     if (o.n === b.objetivos.length) conteudo.solucao = { ...b.solucao, verdade: b.verdade, suspeitos: b.suspeitos.map(({ id, nome, segredo, inocenta }) => ({ id, nome, segredo, inocenta })) };
     conteudos[o.n] = conteudo;
     objetivos.push({ n: o.n, titulo: o.titulo, pergunta: o.pergunta, campos: o.campos, n_provas: o.n_provas, dicas: o.dicas, verificacao, embrulhos, quase, bonusIds: o.bonus });
@@ -101,7 +109,7 @@ for (const slug of fs.readdirSync(path.join(RAIZ, "casos")).sort()) {
   const publico = {
     slug, numero: b.numero, titulo: b.titulo, local: b.local, data_crime: b.data_crime, briefing: b.briefing, vitima: b.vitima,
     suspeitos: b.suspeitos.map(({ id, nome, idade, relacao, foto }) => ({ id, nome, idade, relacao, foto })),
-    provas: provasPdf, objetivos, tempo: { de: b.tempo_jogo.de, ate: b.tempo_jogo.ate, cartas: cartasBase },
+    provas: provasPdf, objetivos, impresso: imp("impresso-dossie"), tempo: { de: b.tempo_jogo.de, ate: b.tempo_jogo.ate, cartas: cartasBase },
   };
 
   // mídia: o que aparece no caso abre com o código; o resto só com o objetivo que libera
@@ -114,7 +122,7 @@ for (const slug of fs.readdirSync(path.join(RAIZ, "casos")).sort()) {
     const c = conteudos[o.n];
     const k = await chaveBruta(kRaws[o.n]);
     c.midia = {};
-    for (const n of midiasEm({ bonus: c.bonus, solucao: c.solucao })) {
+    for (const n of midiasEm({ bonus: c.bonus, solucao: c.solucao, impresso: c.impresso, impressoSolucao: c.impressoSolucao })) {
       if (jaCifradas.has(n)) continue;
       c.midia[n] = await cifrarArquivo(k, n, dirMidia, dirOut); jaCifradas.add(n);
     }
