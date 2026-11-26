@@ -4,7 +4,7 @@
  "titulo": "O Último Jantar na Mansão Valente",
  "subtitulo": "Ele reuniu a família para anunciar uma mudança. Não chegou à sobremesa do dia seguinte.",
  "sinopse": "Augusto Valente reuniu a família para um jantar e avisou: na segunda-feira, algumas coisas iam mudar. Uma hora depois, foi encontrado morto no escritório. O médico da família diz que foi o coração. Você acha que não.",
- "codigo": "VALENTE-7Q4K",
+ "codigo": "VALENTE-V9UZ-83JA",
  "acento": "#C9A227",
  "dificuldade": "Média",
  "duracao": "60–90 min",
@@ -145,12 +145,17 @@
    "alibi": "Sala de música com Rafael e Beatriz, das 21h45 às 22h30.",
    "segredo": "Tinha consultado uma advogada de família sobre divórcio (E-22).",
    "parece_culpada": "Comprou o frasco reserva de digoxina (E-17) e é a maior herdeira.",
-   "inocenta": "Aparece no vídeo das 21h49 (E-24) e a sala de música fica ocupada o tempo todo (E-18).",
+   "inocenta": "Ela é quem grava o vídeo das 21h49 (E-24) e a voz dela está no áudio (E-27); a sala de música fica ocupada o tempo todo (E-18).",
    "retrato": {
     "pele": "#E8C4A6",
     "cabelo": "#D9D4CC",
     "estilo": "curto",
     "roupa": "#3B4F6B"
+   },
+   "foto": {
+    "rosto": "rosto-helena",
+    "ficha": "ficha-helena",
+    "dia": "dia-helena"
    }
   },
   {
@@ -161,12 +166,17 @@
    "alibi": "Tocando piano na sala de música, das 21h45 às 22h30.",
    "segredo": "Dívidas com apostas; o pai negou dinheiro naquela tarde (E-20, E-21).",
    "parece_culpado": "Estava de camisa azul-marinho, como o homem que Lúcia viu subindo a escada (E-13).",
-   "inocenta": "Está ao piano no vídeo que começa às 21h49 (E-24), no exato momento em que alguém sobe a escada (21h50).",
+   "inocenta": "Está ao piano no vídeo que começa às 21h49 (E-24); no áudio (E-27) ele continua tocando enquanto alguém sobe a escada (21h50).",
    "retrato": {
     "pele": "#D9A982",
     "cabelo": "#2B2118",
     "estilo": "curto",
     "roupa": "#1E2A44"
+   },
+   "foto": {
+    "rosto": "rosto-rafael",
+    "ficha": "ficha-rafael",
+    "dia": "dia-rafael"
    }
   },
   {
@@ -183,6 +193,11 @@
     "cabelo": "#4A2A1A",
     "estilo": "longo",
     "roupa": "#6B1E2A"
+   },
+   "foto": {
+    "rosto": "rosto-beatriz",
+    "ficha": "ficha-beatriz",
+    "dia": "dia-beatriz"
    }
   },
   {
@@ -199,6 +214,15 @@
     "cabelo": "#3A2A1E",
     "estilo": "lateral",
     "roupa": "#1E2A44"
+   },
+   "foto": {
+    "rosto": "rosto-caio",
+    "ficha": "ficha-caio",
+    "dia": "dia-caio",
+    "cracha": {
+     "empresa": "CRISTAIS VALENTE",
+     "cargo": "Diretor Financeiro"
+    }
    }
   },
   {
@@ -215,6 +239,11 @@
     "cabelo": "#1E1A18",
     "estilo": "coque",
     "roupa": "#4A4A4A"
+   },
+   "foto": {
+    "rosto": "rosto-lucia",
+    "ficha": "ficha-lucia",
+    "dia": "dia-lucia"
    }
   },
   {
@@ -231,6 +260,11 @@
     "cabelo": "#8C8C8C",
     "estilo": "calvo",
     "roupa": "#2E3A2E"
+   },
+   "foto": {
+    "rosto": "rosto-renato",
+    "ficha": "ficha-renato",
+    "dia": "dia-renato"
    }
   }
  ],
@@ -351,13 +385,13 @@
   {
    "id": "E-04",
    "titulo": "Foto da cena — escritório",
-   "tipo": "ilustracao",
+   "tipo": "foto",
    "objetivos": [
     1
    ],
    "origem": "pdf",
    "conteudo": {
-    "svg": "escritorio",
+    "img": "cena-escritorio",
     "legenda": "Escritório, 23h40. Equipe de emergência já havia retirado a vítima; a posição foi marcada pela perícia.",
     "notas": [
      "1 — Decanter de cristal com conhaque (cerca de 3/4).",
@@ -427,18 +461,18 @@
   {
    "id": "E-06",
    "titulo": "Porta-comprimidos e frasco em uso",
-   "tipo": "ilustracao",
+   "tipo": "foto",
    "objetivos": [
     1
    ],
    "origem": "pdf",
    "conteudo": {
-    "svg": "porta",
+    "img": "cena-porta",
     "legenda": "Porta-comprimidos semanal da vítima, encontrado na cozinha. Fotografado em 22/09/2024, 01h10.",
     "notas": [
-     "Segundo Lúcia, ela abastece o porta-comprimidos todo sábado à tarde e entrega a dose a Augusto no café da manhã.",
-     "Compartimento SÁB 21/09: vazio (dose da manhã, entregue por Lúcia às 8h).",
-     "Compartimentos DOM 22 a SÁB 28: um comprimido em cada, todos presentes (abastecidos por Lúcia às 17h de 21/09).",
+     "Segundo Lúcia, ela abastece o porta-comprimidos aos sábados à tarde, de domingo a sexta, e entrega a dose a Augusto no café da manhã.",
+     "Compartimento de SÁBADO: aberto e vazio (dose de 21/09, entregue por Lúcia às 8h).",
+     "Compartimentos de DOMINGO a SEXTA: um comprimido em cada, todos presentes (abastecidos às 17h de 21/09).",
      "Frasco em uso (cozinha): 9 comprimidos, quantidade que bate com a receita e com as doses tomadas desde a compra anterior."
     ]
    }
@@ -484,7 +518,11 @@
      "O conhaque do decanter não continha a substância. A digoxina estava apenas no copo, em forma de comprimidos triturados, e no papel encontrado na lixeira, compatível com o uso para triturar e transportar o pó.",
      "Nenhuma impressão digital aproveitável foi encontrada no copo, que apresenta sinais de ter sido limpo por fora com tecido."
     ],
-    "assinatura": "Paulo Rezende Lima — Perito Criminal"
+    "assinatura": "Paulo Rezende Lima — Perito Criminal",
+    "anexo": {
+     "img": "cena-copo",
+     "legenda": "Anexo fotográfico: decanter (1) e copo (2) lacrados no laboratório."
+    }
    }
   },
   {
@@ -545,7 +583,9 @@
       "Como estava o casamento?",
       "Bem. Estava bem."
      ]
-    ]
+    ],
+    "audio": "dep-helena",
+    "foto": "rosto-helena"
    }
   },
   {
@@ -576,7 +616,9 @@
       "Você pediu dinheiro ao seu pai nos últimos dias?",
       "Pedi. Estou com umas dívidas. Ele disse não. Mas eu nunca faria mal ao meu pai."
      ]
-    ]
+    ],
+    "audio": "dep-rafael",
+    "foto": "rosto-rafael"
    }
   },
   {
@@ -607,7 +649,9 @@
       "Você sabe o que seu pai ia mudar no testamento?",
       "Não. Mas ele estava estranho comigo e com o Caio nos últimos dias."
      ]
-    ]
+    ],
+    "audio": "dep-beatriz",
+    "foto": "rosto-beatriz"
    }
   },
   {
@@ -638,7 +682,9 @@
       "Como vão os negócios da empresa?",
       "Bem. A auditoria que o meu sogro pediu é procedimento de rotina."
      ]
-    ]
+    ],
+    "audio": "dep-caio",
+    "foto": "rosto-caio"
    }
   },
   {
@@ -668,9 +714,11 @@
      ],
      [
       "A senhora cuida dos remédios dele?",
-      "Cuido. Abasteço o porta-comprimidos todo sábado à tarde e dou o comprimido no café da manhã. Hoje de manhã ele tomou o de sempre."
+      "Cuido. Eu abasteço o porta-comprimidos e dou o comprimido no café da manhã. Hoje de manhã ele tomou o de sempre."
      ]
-    ]
+    ],
+    "audio": "dep-lucia",
+    "foto": "rosto-lucia"
    }
   },
   {
@@ -698,27 +746,25 @@
       "O senhor receitava a digoxina?",
       "Sim. Digoxina 0,25 mg, um comprimido por dia. Uma dose muito maior pode ser fatal para alguém com o coração dele."
      ]
-    ]
+    ],
+    "audio": "dep-renato",
+    "foto": "rosto-renato"
    }
   },
   {
    "id": "E-15",
    "titulo": "Foto do jantar (20h31)",
-   "tipo": "ilustracao",
+   "tipo": "foto",
    "objetivos": [
     2
    ],
    "origem": "pdf",
    "conteudo": {
-    "svg": "jantar",
-    "legenda": "Foto feita por Helena às 20h31 e entregue à polícia. Posições à mesa, da esquerda para a direita.",
+    "img": "jantar",
+    "legenda": "Foto feita por Helena às 20h31, do lugar dela à mesa, e entregue à polícia. Helena não aparece porque é quem fotografa.",
     "notas": [
-     "Caio Moura — camisa azul-marinho.",
-     "Beatriz V. Moura — vestido vinho.",
-     "Augusto Valente (cabeceira) — paletó cinza.",
-     "Helena Valente — blazer azul.",
-     "Rafael Valente — camisa azul-marinho.",
-     "Dr. Renato Ilha — paletó verde-escuro."
+     "Da esquerda para a direita: Rafael Valente (camisa azul-marinho), Beatriz V. Moura (vestido vinho), Augusto Valente (cabeceira, paletó cinza), Caio Moura (camisa azul-marinho) e Dr. Renato Ilha (paletó verde-escuro).",
+     "Rafael e Caio usam camisas quase idênticas, da mesma cor."
     ]
    }
   },
@@ -904,7 +950,11 @@
       "Presença (várias pessoas)"
      ]
     ],
-    "nota": "S1 Garagem: nenhum evento entre 19:12 (chegada dos convidados) e 22:31. Teste da perícia em 22/09: o sensor S1 registra normalmente uma pessoa sentada dentro de qualquer veículo estacionado na garagem."
+    "nota": "S1 Garagem: nenhum evento entre 19:12 (chegada dos convidados) e 22:31. Teste da perícia em 22/09: o sensor S1 registra normalmente uma pessoa sentada dentro de qualquer veículo estacionado na garagem.",
+    "anexo": {
+     "img": "cena-garagem",
+     "legenda": "Anexo: garagem da residência. O sensor S1 fica no canto superior direito (marcador 1)."
+    }
    }
   },
   {
@@ -1088,19 +1138,20 @@
   {
    "id": "E-24",
    "titulo": "Vídeo do celular de Helena (quadros)",
-   "tipo": "ilustracao",
+   "tipo": "foto",
    "objetivos": [
     2
    ],
    "origem": "pdf",
    "conteudo": {
-    "svg": "video",
+    "img": "video-quadro",
     "legenda": "Arquivo VID_20240921_214910.mp4 — gravado no celular de Helena. Início: 21:49:10. Duração: 4 min 02 s (termina às 21:53:12).",
     "notas": [
-     "00:00 — Rafael ao piano, de camisa azul-marinho, de frente para a câmera.",
-     "01:15 — Beatriz aparece no canto do quadro, batendo palmas.",
+     "00:00 — Rafael ao piano, de camisa azul-marinho.",
+     "01:15 — Beatriz aparece no canto do quadro, batendo palmas (quadro acima).",
      "02:40 — Rafael continua tocando; a música não para em nenhum momento do vídeo.",
-     "03:50 — voz de Helena: 'manda um beijo pra Clarinha'."
+     "03:50 — voz de Helena: 'manda um beijo pra Clarinha'.",
+     "O som de um trecho do vídeo (00:40 a 01:40) está na prova E-27."
     ]
    }
   },
@@ -1148,7 +1199,11 @@
       "Nenhuma pessoa no pátio."
      ]
     ],
-    "nota": "Durante os 25 minutos em que Beatriz esteve no gazebo, não é possível confirmar pelas imagens o que ela fazia."
+    "nota": "Durante os 25 minutos em que Beatriz esteve no gazebo, não é possível confirmar pelas imagens o que ela fazia.",
+    "anexo": {
+     "img": "cftv-c1",
+     "legenda": "Quadro 1 — 22:04:12."
+    }
    }
   },
   {
@@ -1190,7 +1245,43 @@
       "No braço da poltrona"
      ]
     ],
-    "nota": "Resultados das análises dos itens 1, 2 e 3: ver laudo E-07."
+    "nota": "Resultados das análises dos itens 1, 2 e 3: ver laudo E-07.",
+    "anexo": {
+     "img": "cena-lixeira",
+     "legenda": "Item 3 sendo recolhido da lixeira (lado esquerdo da escrivaninha)."
+    }
+   }
+  },
+  {
+   "id": "E-27",
+   "titulo": "Áudio do vídeo de Helena (trecho 00:40–01:40)",
+   "tipo": "audio",
+   "objetivos": [
+    2
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "audio": "video-helena-audio",
+    "arquivo": "VID_20240921_214910.mp4 — trilha de áudio",
+    "inicio": "Trecho de 00:40 a 01:40 do vídeo (21:49:50 a 21:50:50)",
+    "descricao": "Áudio extraído pela perícia do vídeo gravado por Helena na sala de música. Ouça com fone de ouvido.",
+    "transcricao": false
+   }
+  },
+  {
+   "id": "E-28",
+   "titulo": "Ligação para a emergência (22:46)",
+   "tipo": "audio",
+   "objetivos": [
+    1
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "audio": "ligacao-192",
+    "arquivo": "Gravação da central de emergência — chamada nº 46.318",
+    "inicio": "21/09/2024, 22:46:09 · duração 0 min 50 s",
+    "descricao": "Chamada feita do telefone fixo da Mansão Valente. Quem liga é a governanta, Lúcia Prado.",
+    "transcricao": false
    }
   },
   {
@@ -1405,7 +1496,11 @@
     "corpo": [
      "Caio Moura declarou não ter subido ao andar superior na noite dos fatos e não ter acesso ao banheiro da suíte do casal."
     ],
-    "assinatura": "Neide Barcelos — Papiloscopista"
+    "assinatura": "Neide Barcelos — Papiloscopista",
+    "anexo": {
+     "img": "cena-rotulo",
+     "legenda": "Rótulo do frasco após aplicação de pó revelador. Fragmento de polegar no lado direito."
+    }
    }
   },
   {
@@ -1472,11 +1567,21 @@
    "aceitas": [
     {
      "fato": "c",
-     "provas": [
+     "combinacoes": [
       [
        "E-05",
        "E-06",
        "E-07"
+      ],
+      [
+       "E-05",
+       "E-06",
+       "E-26"
+      ],
+      [
+       "E-05",
+       "E-07",
+       "E-26"
       ],
       [
        "E-06",
@@ -1509,7 +1614,7 @@
      "campos": {
       "fato": "c"
      },
-     "msg": "Você descobriu o que aconteceu. Agora escolha as 3 provas que demonstram: o excesso no sangue, que não foi engano de dose e onde estava o veneno."
+     "msg": "Você descobriu o que aconteceu. Agora escolha 3 provas que demonstram: o excesso no sangue, que não foi engano de dose e onde estava o veneno."
     }
    ],
    "dicas": [
@@ -1565,35 +1670,38 @@
    "aceitas": [
     {
      "suspeito": "caio",
-     "provas": [
+     "papeis": [
+      {
+       "de": [
+        "E-12",
+        "E-02"
+       ],
+       "n": 1
+      },
+      {
+       "de": [
+        "E-18",
+        "B-02",
+        "B-04",
+        "E-27"
+       ],
+       "n": 2
+      }
+     ],
+     "combinacoes": [
       [
        "E-12",
-       "E-18",
+       "E-02",
+       "E-18"
+      ],
+      [
+       "E-12",
+       "E-02",
        "B-02"
       ],
       [
        "E-12",
-       "E-18",
-       "B-04"
-      ],
-      [
-       "E-12",
-       "B-02",
-       "B-04"
-      ],
-      [
        "E-02",
-       "E-18",
-       "B-02"
-      ],
-      [
-       "E-02",
-       "E-18",
-       "B-04"
-      ],
-      [
-       "E-02",
-       "B-02",
        "B-04"
       ]
      ]
@@ -1736,52 +1844,31 @@
      "suspeito": "caio",
      "metodo": "m1",
      "motivo": "mo2",
-     "provas": [
-      [
-       "B-07",
-       "B-01",
-       "B-06"
-      ],
-      [
-       "B-07",
-       "B-01",
-       "B-05"
-      ],
-      [
-       "B-07",
-       "B-01",
-       "B-08"
-      ],
-      [
-       "B-07",
-       "E-07",
-       "B-06"
-      ],
-      [
-       "B-07",
-       "E-07",
-       "B-05"
-      ],
-      [
-       "B-07",
-       "E-07",
-       "B-08"
-      ],
-      [
-       "B-07",
-       "E-26",
-       "B-06"
-      ],
-      [
-       "B-07",
-       "E-26",
-       "B-05"
-      ],
-      [
-       "B-07",
-       "E-26",
-       "B-08"
-      ]
+     "papeis": [
+      {
+       "de": [
+        "B-07"
+       ],
+       "n": 1
+      },
+      {
+       "de": [
+        "B-01",
+        "E-07",
+        "E-26",
+        "E-17"
+       ],
+       "n": 1
+      },
+      {
+       "de": [
+        "B-05",
+        "B-06",
+        "B-08",
+        "E-16"
+       ],
+       "n": 1
+      }
      ]
     }
    ],
@@ -1908,10 +1995,186 @@
     "B-05 + B-06",
     "Na segunda, Augusto ia entregar à polícia a prova do desvio de R$ 2,3 milhões."
    ]
-  ]
+  ],
+  "interrogatorio": {
+   "data": "24/09/2024, 16h40",
+   "declarante": "Caio Moura, 44 anos",
+   "audio": "dep-confissao",
+   "foto": "rosto-caio",
+   "qa": [
+    [
+     "Senhor Caio, a sua digital está no rótulo do frasco reserva. O senhor disse que não subiu. Quer mudar o seu depoimento?",
+     "Quero. Eu subi."
+    ],
+    [
+     "Por quê?",
+     "Eu ia devolver o dinheiro. Ia dar um jeito. Mas ele não ia me ouvir: ia direto na polícia, na segunda. Quando ele disse no jantar que as coisas iam mudar, olhando pra mim, eu entendi que não tinha mais tempo."
+    ],
+    [
+     "Como o senhor fez?",
+     "Eu sabia do conhaque, todo mundo sabia. Sabia do remédio, a Helena tinha comentado do frasco novo. Subi, desci... foram cinco minutos."
+    ],
+    [
+     "E depois?",
+     "Fiquei na varanda. Só fui pra garagem depois, pra fazer a ligação. Achei que ninguém ia pedir necropsia de um homem de 71 anos com o coração fraco. O Renato quase assinou. Quase."
+    ]
+   ]
+  }
  },
  "interrogatorio": {
   "ativo": false,
   "nota": "Preparado para a fase 2 do produto. Perguntas fixas por suspeito, respostas tiradas dos depoimentos."
+ },
+ "vitima": {
+  "nome": "Augusto Valente",
+  "idade": 71,
+  "relacao": "Fundador da Cristais Valente",
+  "foto": {
+   "rosto": "rosto-augusto",
+   "ficha": "ficha-augusto"
+  }
+ },
+ "briefing": {
+  "de": "Delegada Marta Siqueira",
+  "cargo": "Delegacia de Homicídios de Monte Albor",
+  "audio": "briefing",
+  "texto": [
+   "Sábado, 21 de setembro. Augusto Valente, 71 anos, fundador da Cristais Valente, foi encontrado morto no escritório da própria casa, às 22h44.",
+   "O médico da família quer assinar morte natural. Eu não assino. Seis pessoas jantaram com ele naquela noite. Todas têm uma versão. Pelo menos uma está mentindo.",
+   "O dossiê agora está com você: depoimentos, laudos, o registro do alarme, as fotos da perícia. Leia tudo. Compare os horários. Desconfie do que parece óbvio. Me traga provas, não palpites.",
+   "Boa sorte, investigador."
+  ]
+ },
+ "tempo_jogo": {
+  "de": "20:30",
+  "ate": "23:00",
+  "cartas": [
+   [
+    "t01",
+    "Foto do jantar",
+    "20:31",
+    "E-15",
+    0
+   ],
+   [
+    "t02",
+    "Augusto anuncia que \"coisas vão mudar\"",
+    "21:10",
+    "E-02",
+    0
+   ],
+   [
+    "t03",
+    "Lúcia deixa a bandeja no escritório",
+    "21:30",
+    "E-18",
+    0
+   ],
+   [
+    "t04",
+    "Dr. Renato sai pelo portão",
+    "21:38",
+    "E-18",
+    0
+   ],
+   [
+    "t05",
+    "Começa a música na sala de música",
+    "21:45",
+    "E-18",
+    0
+   ],
+   [
+    "t06",
+    "Helena começa a gravar o vídeo",
+    "21:49",
+    "E-24",
+    0
+   ],
+   [
+    "t07",
+    "Alguém sobe a escada",
+    "21:50",
+    "E-18",
+    0
+   ],
+   [
+    "t08",
+    "Alguém desce a escada",
+    "21:55",
+    "E-18",
+    0
+   ],
+   [
+    "t09",
+    "Movimento no corredor do escritório",
+    "21:56",
+    "E-18",
+    0
+   ],
+   [
+    "t10",
+    "Dr. Renato chega em casa",
+    "21:59",
+    "E-23",
+    0
+   ],
+   [
+    "t11",
+    "Beatriz atravessa o pátio rumo ao jardim",
+    "22:04",
+    "E-25",
+    0
+   ],
+   [
+    "t12",
+    "Beatriz começa uma ligação",
+    "22:06",
+    "B-03",
+    1
+   ],
+   [
+    "t13",
+    "Augusto entra no escritório",
+    "22:12",
+    "E-18",
+    0
+   ],
+   [
+    "t14",
+    "Beatriz volta pelo pátio",
+    "22:29",
+    "E-25",
+    0
+   ],
+   [
+    "t15",
+    "Primeiro movimento na garagem",
+    "22:31",
+    "E-18",
+    0
+   ],
+   [
+    "t16",
+    "Caio começa uma chamada de vídeo",
+    "22:32",
+    "B-02",
+    1
+   ],
+   [
+    "t17",
+    "Lúcia encontra Augusto",
+    "22:44",
+    "E-13",
+    0
+   ],
+   [
+    "t18",
+    "Ligação para a emergência",
+    "22:46",
+    "E-28",
+    0
+   ]
+  ]
  }
 }

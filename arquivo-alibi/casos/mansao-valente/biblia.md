@@ -4,7 +4,7 @@
 
 *Ele reuniu a família para anunciar uma mudança. Não chegou à sobremesa do dia seguinte.*
 
-- Código: `VALENTE-7Q4K` · Local: Mansão Valente — Alameda dos Ipês, 400, Jardim das Cerejeiras, Monte Albor · Data: Sábado, 21 de setembro de 2024
+- Código: `VALENTE-V9UZ-83JA` (8 caracteres aleatórios, sem 0/O/1/I/L) · Local: Mansão Valente — Alameda dos Ipês, 400, Jardim das Cerejeiras, Monte Albor · Data: Sábado, 21 de setembro de 2024
 - 1 a 4 jogadores · 60–90 min · dificuldade Média · 14+
 
 ## Sinopse
@@ -53,13 +53,13 @@ Caio Moura, genro de Augusto e diretor financeiro da Cristais Valente, desviou R
 - Álibi declarado: Sala de música com Rafael e Beatriz, das 21h45 às 22h30.
 - Segredo: Tinha consultado uma advogada de família sobre divórcio (E-22).
 - Por que parece culpado(a): Comprou o frasco reserva de digoxina (E-17) e é a maior herdeira.
-- O que inocenta: Aparece no vídeo das 21h49 (E-24) e a sala de música fica ocupada o tempo todo (E-18).
+- O que inocenta: Ela é quem grava o vídeo das 21h49 (E-24) e a voz dela está no áudio (E-27); a sala de música fica ocupada o tempo todo (E-18).
 
 ### Rafael Valente, 42 — Filho da vítima
 - Álibi declarado: Tocando piano na sala de música, das 21h45 às 22h30.
 - Segredo: Dívidas com apostas; o pai negou dinheiro naquela tarde (E-20, E-21).
 - Por que parece culpado(a): Estava de camisa azul-marinho, como o homem que Lúcia viu subindo a escada (E-13).
-- O que inocenta: Está ao piano no vídeo que começa às 21h49 (E-24), no exato momento em que alguém sobe a escada (21h50).
+- O que inocenta: Está ao piano no vídeo que começa às 21h49 (E-24); no áudio (E-27) ele continua tocando enquanto alguém sobe a escada (21h50).
 
 ### Beatriz Valente Moura, 39 — Filha da vítima, casada com Caio
 - Álibi declarado: Sala de música até 22h; depois no gazebo do jardim, fumando e ao telefone, até 22h30.
@@ -92,9 +92,9 @@ Caio Moura, genro de Augusto e diretor financeiro da Cristais Valente, desviou R
 | E-01 | pdf | oficio | Boletim de Ocorrência | 1 |
 | E-02 | pdf | oficio | Relatório preliminar da Delegada | 1, 2 |
 | E-03 | pdf | ilustracao | Planta da Mansão Valente | 2 |
-| E-04 | pdf | ilustracao | Foto da cena — escritório | 1 |
+| E-04 | pdf | foto | Foto da cena — escritório | 1 |
 | E-05 | pdf | oficio | Laudo toxicológico preliminar (IML) | 1 |
-| E-06 | pdf | ilustracao | Porta-comprimidos e frasco em uso | 1 |
+| E-06 | pdf | foto | Porta-comprimidos e frasco em uso | 1 |
 | E-07 | pdf | oficio | Laudo pericial — copo, decanter e papel | 1, 3 |
 | E-08 | pdf | carta | Rascunho de declaração de óbito | 1 |
 | E-09 | pdf | depoimento | Depoimento — Helena Valente | 1, 2 |
@@ -103,7 +103,7 @@ Caio Moura, genro de Augusto e diretor financeiro da Cristais Valente, desviou R
 | E-12 | pdf | depoimento | Depoimento — Caio Moura | 2 |
 | E-13 | pdf | depoimento | Depoimento — Lúcia Prado | 1, 2 |
 | E-14 | pdf | depoimento | Depoimento — Dr. Renato Ilha | 1, 2 |
-| E-15 | pdf | ilustracao | Foto do jantar (20h31) | 2 |
+| E-15 | pdf | foto | Foto do jantar (20h31) | 2 |
 | E-16 | pdf | agenda | Agenda de Augusto Valente | 3 |
 | E-17 | pdf | recibo | Recibo da farmácia (17/09) | 1, 3 |
 | E-18 | pdf | log | Registro do sistema de alarme (21/09) | 2 |
@@ -112,9 +112,11 @@ Caio Moura, genro de Augusto e diretor financeiro da Cristais Valente, desviou R
 | E-21 | pdf | extrato | Extrato bancário — Rafael Valente | 2 |
 | E-22 | pdf | carta | Carta encontrada no quarto de Helena | 2 |
 | E-23 | pdf | app | Recibo do aplicativo de transporte | 2 |
-| E-24 | pdf | ilustracao | Vídeo do celular de Helena (quadros) | 2 |
+| E-24 | pdf | foto | Vídeo do celular de Helena (quadros) | 2 |
 | E-25 | pdf | log | Relatório da câmera do pátio (C1) | 2 |
 | E-26 | pdf | lista | Lista de objetos recolhidos no escritório | 1, 3 |
+| E-27 | pdf | audio | Áudio do vídeo de Helena (trecho 00:40–01:40) | 2 |
+| E-28 | pdf | audio | Ligação para a emergência (22:46) | 1 |
 | B-01 | bonus1 | oficio | Contagem do frasco reserva de digoxina | 3 |
 | B-02 | bonus1 | log | Registro de chamadas — celular de Caio Moura | 2 |
 | B-03 | bonus1 | log | Registro de chamadas — celular de Beatriz | 2 |
@@ -131,13 +133,15 @@ Provas exigidas: 3
 
 **Respostas aceitas:**
 - {"fato": "c"} + E-05, E-06, E-07
+- {"fato": "c"} + E-05, E-06, E-26
+- {"fato": "c"} + E-05, E-07, E-26
 - {"fato": "c"} + E-06, E-07, E-26
 
 **Quase lá:**
 - {"fato": "a"} → Releia o laudo E-05. Aquele número no sangue combina com morte natural?
 - {"fato": "b"} → Se ele tivesse tomado remédio a mais por engano, a rotina dos remédios (E-06) contaria outra história.
 - {"fato": "d"} → Releia o laudo E-07 com atenção: o que deu positivo e o que deu negativo?
-- {"fato": "c"} → Você descobriu o que aconteceu. Agora escolha as 3 provas que demonstram: o excesso no sangue, que não foi engano de dose e onde estava o veneno.
+- {"fato": "c"} → Você descobriu o que aconteceu. Agora escolha 3 provas que demonstram: o excesso no sangue, que não foi engano de dose e onde estava o veneno.
 
 **Dicas:**
 1. Comece pelo laudo do IML. O que havia no sangue de Augusto?
@@ -154,12 +158,21 @@ Uma das pessoas da casa mentiu sobre onde estava enquanto o copo era envenenado.
 Provas exigidas: 3
 
 **Respostas aceitas:**
+- {"suspeito": "caio"} + E-12, E-02, E-18
+- {"suspeito": "caio"} + E-12, E-02, B-02
+- {"suspeito": "caio"} + E-12, E-02, B-04
 - {"suspeito": "caio"} + E-12, E-18, B-02
 - {"suspeito": "caio"} + E-12, E-18, B-04
+- {"suspeito": "caio"} + E-12, E-18, E-27
 - {"suspeito": "caio"} + E-12, B-02, B-04
+- {"suspeito": "caio"} + E-12, B-02, E-27
+- {"suspeito": "caio"} + E-12, B-04, E-27
 - {"suspeito": "caio"} + E-02, E-18, B-02
 - {"suspeito": "caio"} + E-02, E-18, B-04
+- {"suspeito": "caio"} + E-02, E-18, E-27
 - {"suspeito": "caio"} + E-02, B-02, B-04
+- {"suspeito": "caio"} + E-02, B-02, E-27
+- {"suspeito": "caio"} + E-02, B-04, E-27
 
 **Quase lá:**
 - {"suspeito": "rafael"} → A Lúcia só viu uma camisa escura de costas (E-13). Quem mais estava de azul-marinho (E-15)? E onde estava o Rafael às 21h50 (E-24)?
@@ -184,15 +197,22 @@ Monte a acusação: quem matou Augusto Valente, como e por quê?
 Provas exigidas: 3
 
 **Respostas aceitas:**
-- {"suspeito": "caio", "metodo": "m1", "motivo": "mo2"} + B-07, B-01, B-06
 - {"suspeito": "caio", "metodo": "m1", "motivo": "mo2"} + B-07, B-01, B-05
+- {"suspeito": "caio", "metodo": "m1", "motivo": "mo2"} + B-07, B-01, B-06
 - {"suspeito": "caio", "metodo": "m1", "motivo": "mo2"} + B-07, B-01, B-08
-- {"suspeito": "caio", "metodo": "m1", "motivo": "mo2"} + B-07, E-07, B-06
+- {"suspeito": "caio", "metodo": "m1", "motivo": "mo2"} + B-07, B-01, E-16
 - {"suspeito": "caio", "metodo": "m1", "motivo": "mo2"} + B-07, E-07, B-05
+- {"suspeito": "caio", "metodo": "m1", "motivo": "mo2"} + B-07, E-07, B-06
 - {"suspeito": "caio", "metodo": "m1", "motivo": "mo2"} + B-07, E-07, B-08
-- {"suspeito": "caio", "metodo": "m1", "motivo": "mo2"} + B-07, E-26, B-06
+- {"suspeito": "caio", "metodo": "m1", "motivo": "mo2"} + B-07, E-07, E-16
 - {"suspeito": "caio", "metodo": "m1", "motivo": "mo2"} + B-07, E-26, B-05
+- {"suspeito": "caio", "metodo": "m1", "motivo": "mo2"} + B-07, E-26, B-06
 - {"suspeito": "caio", "metodo": "m1", "motivo": "mo2"} + B-07, E-26, B-08
+- {"suspeito": "caio", "metodo": "m1", "motivo": "mo2"} + B-07, E-26, E-16
+- {"suspeito": "caio", "metodo": "m1", "motivo": "mo2"} + B-07, E-17, B-05
+- {"suspeito": "caio", "metodo": "m1", "motivo": "mo2"} + B-07, E-17, B-06
+- {"suspeito": "caio", "metodo": "m1", "motivo": "mo2"} + B-07, E-17, B-08
+- {"suspeito": "caio", "metodo": "m1", "motivo": "mo2"} + B-07, E-17, E-16
 
 **Quase lá:**
 - {"suspeito": "caio", "metodo": "m1", "motivo": "mo1"} → Caio nem era herdeiro (E-02). O que Augusto ia fazer na segunda que acabaria com ele? Releia B-06.

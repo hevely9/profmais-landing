@@ -52,3 +52,17 @@
 .ilus figcaption { font-size: 12px; margin-top: 8px; font-style: italic; }
 .notas { margin: 10px 0 0; padding-left: 18px; font-size: 13px; } .notas li { margin-bottom: 4px; }
 @media print { .doc { box-shadow: none; border: 1px solid #999; break-inside: avoid; } }
+/* fotos, anexos e áudio dentro dos documentos */
+.foto img, .anexo img { width: 100%; height: auto; display: block; border: 6px solid #F4F1EA; box-shadow: 0 4px 12px rgba(0,0,0,.25); background: #2A2520; min-height: 120px; }
+.zoomavel { cursor: zoom-in; }
+.anexo { margin: 14px 0 0; } .anexo figcaption { font-size: 12px; margin-top: 6px; font-style: italic; }
+.dep-cab { display: grid; grid-template-columns: 86px 1fr; gap: 12px; align-items: start; }
+.dep-foto img { width: 86px; height: 100px; object-fit: cover; object-position: top; border: 3px solid #F4F1EA; box-shadow: 0 2px 6px rgba(0,0,0,.3); display: block; background: #2A2520; }
+.audio-prova { --prog: 0%; display: flex; align-items: center; gap: 12px; background: var(--tinta); color: var(--osso); border-radius: 10px; padding: 10px 12px; margin: 10px 0 12px; font-family: var(--f-texto); }
+.audio-play { flex: none; width: 46px; height: 46px; border-radius: 50%; border: 0; background: var(--lacre); color: #fff; font-size: 17px; font-weight: 800; cursor: pointer; }
+.audio-play:focus-visible { outline: 3px solid var(--fita); outline-offset: 2px; }
+.audio-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; cursor: pointer; }
+.audio-info b { font-size: 13.5px; } .audio-tempo { font-size: 12px; color: var(--osso-e); }
+.audio-info::after { content: ""; height: 4px; border-radius: 2px; background: linear-gradient(90deg, var(--fita) var(--prog), #3A342E var(--prog)); }
+.audio-pdf { display: block; background: none; color: var(--tinta); border: 2px dashed var(--tinta); }
+.audio-pdf span { display: block; font-size: 12px; margin-top: 2px; } .audio-pdf::after { display: none; }

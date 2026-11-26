@@ -5,8 +5,15 @@ const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").
 const TIPO_ROTULO = {
   oficio: "Documento oficial", depoimento: "Termo de declarações", chat: "Conversa (print)", email: "E-mail", recibo: "Recibo",
   log: "Registro", jornal: "Recorte de jornal", extrato: "Extrato bancário", carta: "Carta / bilhete", agenda: "Agenda",
-  app: "Recibo de aplicativo", lista: "Auto de apreensão", ilustracao: "Foto / croqui da perícia",
+  app: "Recibo de aplicativo", lista: "Auto de apreensão", ilustracao: "Croqui da perícia", foto: "Foto da perícia", audio: "Prova em áudio",
 };
+
+// mídia: no site, <img data-midia> é preenchida depois (arquivo criptografado); no PDF, ctx.src devolve o caminho do arquivo
+const img = (nome, ctx, cls = "", alt = "") => nome ? `<img class="${cls}" data-midia="${esc(nome)}"${ctx.src ? ` src="${esc(ctx.src(nome))}"` : ""} alt="${esc(alt)}" loading="lazy">` : "";
+const anexo = (a, ctx) => !a ? "" : `<figure class="anexo">${img(a.img, ctx, "zoomavel", a.legenda)}<figcaption>${esc(a.legenda)}</figcaption></figure>`;
+const audio = (nome, ctx, rotulo) => !nome ? "" : ctx.pdf
+  ? `<div class="audio-prova audio-pdf"><b>▶ ${esc(rotulo || "Ouça a gravação")}</b><span>Disponível na Central de Investigação, aba Dossiê.</span></div>`
+  : `<div class="audio-prova" data-audio="${esc(nome)}"><button type="button" class="audio-play" aria-label="${esc(rotulo || "Ouvir gravação")}">▶</button><div class="audio-info"><b>${esc(rotulo || "Ouvir gravação")}</b><span class="audio-tempo">toque para carregar</span></div></div>`;
 
 const tabela = (t) => !t ? "" : `${t.titulo ? `<div class="doc-sub">${esc(t.titulo)}</div>` : ""}<table class="doc-tab"><thead><tr>${t.cab.map((c) => `<th>${esc(c)}</th>`).join("")}</tr></thead><tbody>${t.linhas.map((l) => `<tr>${l.map((c) => `<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
 const campos = (c) => !c ? "" : `<table class="doc-campos">${c.map(([k, v]) => `<tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join("")}</table>`;
@@ -14,7 +21,7 @@ const paragrafos = (ps) => (ps || []).map((p) => `<p>${esc(p)}</p>`).join("");
 
 const corpo = {
   oficio: (c) => `<div class="of-orgao">${esc(c.orgao)}</div><div class="of-doc">${esc(c.documento)}</div>${campos(c.campos)}${c.tabela && !c.corpo ? tabela(c.tabela) : ""}<div class="of-corpo">${paragrafos(c.corpo)}</div>${c.tabela && c.corpo ? tabela(c.tabela) : ""}${c.assinatura ? `<div class="assin"><span></span>${esc(c.assinatura)}</div>` : ""}`,
-  depoimento: (c) => `<div class="of-orgao">POLÍCIA CIVIL — 1ª DELEGACIA DE POLÍCIA DE MONTE ALBOR</div><div class="of-doc">TERMO DE DECLARAÇÕES</div>${campos([["Declarante", c.declarante], ["Data", c.data]])}<div class="qa">${c.qa.map(([q, a]) => `<p class="q"><b>P:</b> ${esc(q)}</p><p class="a"><b>R:</b> ${esc(a)}</p>`).join("")}</div><div class="assin"><span></span>Assinatura do declarante</div>`,
+  depoimento: (c, ctx) => `<div class="of-orgao">POLÍCIA CIVIL — 1ª DELEGACIA DE POLÍCIA DE MONTE ALBOR</div><div class="of-doc">${esc(c.documento || "TERMO DE DECLARAÇÕES")}</div><div class="dep-cab">${c.foto ? `<div class="dep-foto">${img(c.foto, ctx, "", c.declarante)}</div>` : ""}<div>${campos([["Declarante", c.declarante], ["Data", c.data]])}</div></div>${audio(c.audio, ctx, "Ouvir a gravação do depoimento")}<div class="qa">${c.qa.map(([q, a]) => `<p class="q"><b>P:</b> ${esc(q)}</p><p class="a"><b>R:</b> ${esc(a)}</p>`).join("")}</div><div class="assin"><span></span>Assinatura do declarante</div>`,
   chat: (c) => `<div class="chat"><div class="chat-top">${esc(c.grupo)}<small>${esc(c.data)}</small></div>${c.msgs.map(([h, a, t]) => `<div class="msg"><b>${esc(a)}</b>${esc(t)}<i>${esc(h)}</i></div>`).join("")}</div>`,
   email: (c) => `<div class="mail">${campos([["De", c.de], ["Para", c.para], ["Data", c.data], ["Assunto", c.assunto]])}<div class="mail-corpo">${paragrafos(c.corpo)}</div></div>`,
   recibo: (c) => `<div class="recibo"><b>${esc(c.loja)}</b><div>${esc(c.endereco)}</div><div>${esc(c.data)}</div><hr>${c.itens.map(([d, q, v]) => `<div class="rl"><span>${esc(q)}x ${esc(d)}</span><span>${esc(v)}</span></div>`).join("")}<hr><div class="rl"><b>TOTAL</b><b>${esc(c.total)}</b></div><hr>${(c.extra || []).map((e) => `<div>${esc(e)}</div>`).join("")}</div>`,
@@ -25,11 +32,14 @@ const corpo = {
   agenda: (c) => `<div class="agenda"><div class="ag-tit">${esc(c.titulo)}</div>${c.dias.map(([d, its]) => `<div class="ag-dia"><b>${esc(d)}</b><div>${its.map((i) => `<div class="ag-it">${esc(i)}</div>`).join("")}</div></div>`).join("")}</div>`,
   app: (c) => `<div class="appcard"><div class="app-top">${esc(c.app)}</div>${campos(c.campos)}</div>`,
   lista: (c) => `<div class="of-orgao">${esc(c.orgao)}</div><div class="of-doc">${esc(c.documento)}</div>${tabela({ cab: ["Item", "Descrição", "Onde estava"], linhas: c.itens })}${c.nota ? `<p class="nota">${esc(c.nota)}</p>` : ""}`,
+  foto: (c, ctx) => `<figure class="ilus foto">${img(c.img, ctx, "zoomavel", c.legenda)}<figcaption>${esc(c.legenda)}</figcaption></figure>${c.notas ? `<ul class="notas">${c.notas.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}`,
+  audio: (c, ctx) => `${campos([["Arquivo", c.arquivo], ["Trecho", c.inicio]])}<p>${esc(c.descricao)}</p>${audio(c.audio, ctx, "Ouvir a gravação")}${ctx.pdf ? "" : `<p class="nota">Não há transcrição: os detalhes desta prova estão só no áudio.</p>`}`,
   ilustracao: (c, ctx) => `<figure class="ilus">${(ILUS[c.svg] || (() => ""))(ctx)}<figcaption>${esc(c.legenda)}</figcaption></figure>${c.notas ? `<ul class="notas">${c.notas.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}`,
 };
 
 export function renderProva(p, ctx = {}) {
-  const fn = corpo[p.tipo] || ((c) => paragrafos(c.corpo));
+  const fn0 = corpo[p.tipo] || ((c) => paragrafos(c.corpo));
+  const fn = (c, x) => fn0(c, x) + anexo(c.anexo, x);
   const bonus = p.origem !== "pdf";
   return `<article class="doc doc-${p.tipo}${bonus ? " doc-bonus" : ""}" id="${esc(p.id)}">
   <header class="doc-head"><span class="doc-tipo">${esc(TIPO_ROTULO[p.tipo] || "Documento")}${bonus ? " · PROVA BÔNUS" : ""}</span><span class="doc-id">${esc(p.id)}</span></header>
@@ -100,40 +110,6 @@ const ILUS = {
   <text x="486" y="396">hall superior (S6)</text><text x="486" y="446">SUÍTE DO CASAL</text><text x="486" y="466">+ banheiro com</text><text x="486" y="484">armário de remédios</text>
   <text x="16" y="470">Portão social: P1</text><text x="16" y="490">Sensores repetem o registro a cada 5 min com presença.</text>
 </svg>`,
-  escritorio: () => `<svg viewBox="0 0 640 400" font-family="Courier" font-size="13">
-  <rect width="640" height="400" fill="#3A322A"/><rect x="0" y="0" width="640" height="150" fill="#4A4036"/>
-  <rect x="40" y="20" width="200" height="120" fill="#2A241E" stroke="#1A1612" stroke-width="4"/>${[40, 80, 120].map((y) => `<line x1="40" x2="240" y1="${y + 20}" y2="${y + 20}" stroke="#1A1612" stroke-width="3"/>`).join("")}
-  <rect x="300" y="170" width="170" height="150" rx="24" fill="#5A2A22"/><rect x="314" y="150" width="142" height="70" rx="18" fill="#6B3329"/>
-  <rect x="500" y="230" width="100" height="70" fill="#6A5A48"/><rect x="510" y="300" width="10" height="60" fill="#4A3E32"/><rect x="580" y="300" width="10" height="60" fill="#4A3E32"/>
-  <path d="M528 230 L530 190 Q545 170 560 190 L562 230Z" fill="#CFE3E8" opacity="0.8" stroke="#E8F2F4"/><rect x="536" y="206" width="20" height="24" fill="#B8762C" opacity="0.75"/>
-  <path d="M570 230 L566 210 L590 210 L586 230Z" fill="#E8F2F4" opacity="0.7"/><rect x="568" y="222" width="20" height="6" fill="#B8762C" opacity="0.8"/>
-  <rect x="120" y="300" width="50" height="60" fill="#2A241E"/><rect x="124" y="296" width="42" height="8" fill="#1A1612"/>
-  <rect x="250" y="320" width="240" height="60" fill="none" stroke="#ECE7DC" stroke-width="3" stroke-dasharray="10 8"/>
-  <g font-weight="700" fill="#1A1714">${[["1", 545, 160], ["2", 600, 200], ["3", 145, 286], ["4", 370, 312]].map(([n, x, y]) => `<rect x="${x - 14}" y="${y - 16}" width="28" height="22" fill="#F1E7C9"/><text x="${x - 5}" y="${y}">${n}</text>`).join("")}</g>
-  <text x="16" y="392" fill="#ECE7DC" font-size="11">Croqui fotográfico da perícia — ilustração</text>
-</svg>`,
-  jantar: () => {
-    const lug = [["Caio", "#1E2A44", 150, 120], ["Beatriz", "#6B1E2A", 270, 110], ["Augusto", "#7A7A7A", 470, 200], ["Helena", "#3B4F6B", 370, 290], ["Rafael", "#1E2A44", 250, 300], ["Dr. Renato", "#2E3A2E", 140, 290]];
-    return `<svg viewBox="0 0 640 400" font-family="Courier" font-size="13"><rect width="640" height="400" fill="#2B231C"/>
-    <ellipse cx="310" cy="205" rx="200" ry="80" fill="#6A4A30" stroke="#3A2A1C" stroke-width="6"/>${[230, 310, 390].map((x) => `<circle cx="${x}" cy="205" r="16" fill="#ECE7DC" opacity="0.8"/>`).join("")}
-    ${lug.map(([n, c, x, y]) => `<circle cx="${x}" cy="${y}" r="34" fill="${c}" stroke="#ECE7DC" stroke-width="3"/><circle cx="${x}" cy="${y - 4}" r="14" fill="#D9B08C"/><rect x="${x - 50}" y="${y + 38}" width="100" height="20" fill="#F1E7C9"/><text x="${x}" y="${y + 52}" text-anchor="middle" font-weight="700" fill="#1A1714">${n}</text>`).join("")}
-    <rect x="12" y="12" width="150" height="24" fill="#F1E7C9"/><text x="20" y="29" font-weight="700" fill="#1A1714">21/09 · 20:31</text></svg>`;
-  },
-  porta: () => {
-    const dias = ["SÁB 21", "DOM 22", "SEG 23", "TER 24", "QUA 25", "QUI 26", "SEX 27", "SÁB 28"];
-    return `<svg viewBox="0 0 640 260" font-family="Courier" font-size="13"><rect width="640" height="260" fill="#ECE7DC"/>
-    <rect x="20" y="60" width="600" height="130" rx="16" fill="#5E8FB0" opacity="0.35" stroke="#3E6A8A" stroke-width="3"/>
-    ${dias.map((d, i) => { const x = 34 + i * 73; return `<rect x="${x}" y="74" width="64" height="100" rx="10" fill="#F4F8FA" stroke="#3E6A8A" stroke-width="2"/><text x="${x + 32}" y="96" text-anchor="middle" font-weight="700" fill="#1A1714">${d}</text>${i === 0 ? `<text x="${x + 32}" y="142" text-anchor="middle" fill="#A3141C" font-weight="700">vazio</text>` : `<ellipse cx="${x + 32}" cy="138" rx="12" ry="8" fill="#FFFFFF" stroke="#8E8E8E"/>`}`; }).join("")}
-    <text x="20" y="40" font-weight="700" fill="#1A1714">PORTA-COMPRIMIDOS — DOSE DA MANHÃ (1 comprimido de digoxina 0,25 mg por dia)</text>
-    <text x="20" y="226" fill="#1A1714">Frasco em uso (cozinha): 9 comprimidos — quantidade compatível com a receita.</text></svg>`;
-  },
-  video: () => `<svg viewBox="0 0 640 400" font-family="Courier" font-size="14"><rect width="640" height="400" fill="#0E0E10"/>
-  <rect x="150" y="20" width="340" height="360" rx="30" fill="#1C1C20" stroke="#3A3A40" stroke-width="4"/><rect x="166" y="50" width="308" height="300" fill="#3A2C22"/>
-  <rect x="196" y="230" width="220" height="70" fill="#111"/><rect x="196" y="230" width="220" height="14" fill="#F4F1EA"/>${Array.from({ length: 15 }, (_, i) => `<rect x="${200 + i * 14}" y="230" width="6" height="9" fill="#111"/>`).join("")}
-  <circle cx="300" cy="170" r="22" fill="#D9A982"/><path d="M262 230 Q266 196 300 192 Q334 196 338 230Z" fill="#1E2A44"/>
-  <circle cx="440" cy="190" r="14" fill="#E2B796" opacity="0.8"/><path d="M420 240 Q424 210 440 206 Q456 210 460 240Z" fill="#6B1E2A" opacity="0.8"/>
-  <circle cx="186" cy="68" r="6" fill="#E0353F"/><text x="198" y="73" fill="#ECE7DC" font-weight="700">REC 21:49:10</text>
-  <text x="166" y="372" fill="#ECE7DC" font-size="12">VID_20240921_214910.mp4 · 04:02</text></svg>`,
 };
 
 export const ilustracoes = ILUS;
