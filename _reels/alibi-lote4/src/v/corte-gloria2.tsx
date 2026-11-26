@@ -82,7 +82,7 @@ const TITULOS: [number, number, string, string][] = [
   [0, 14.4, "“CONTA DE 1 ATÉ 18”", "DANIELLA PEREZ, 22 ANOS"],
   [14.4, 28.0, "O CRIME QUE PAROU O BRASIL", "RIO DE JANEIRO, 1992"],
   [28.0, 46.8, "TUDO O QUE FOI TIRADO DELA", "A CARREIRA, OS FILHOS, OS NETOS"],
-  [46.8, 58.1, "A MÃE QUE NÃO SE CALOU", "GLÓRIA PEREZ"],
+  [46.8, 58.1, "A LUTA PELA MEMÓRIA", "“ELA NÃO VAI SER APAGADA”"],
   [58.1, 72.1, "30 ANOS DEPOIS", "A MEMÓRIA DE DANIELLA"],
 ];
 const Titulos: React.FC = () => {
@@ -96,6 +96,17 @@ const Titulos: React.FC = () => {
       <div style={{ display: "inline-block", marginTop: 10, background: C.lacre, padding: "2px 14px", fontFamily: MONT, fontWeight: 800, fontSize: 44, color: C.osso }}>{l2}</div>
     </div>;
   })}</>;
+};
+
+// etiqueta de voz (quem fala não aparece: as fotos de Daniella cobrem a imagem)
+const Voz: React.FC<{ de: number; ate: number }> = ({ de, ate }) => {
+  const t = useS();
+  if (t < de - 0.1 || t > ate + 0.5) return null;
+  const k = entra(t, de, ate + 0.4, 0.35);
+  return <div style={{ position: "absolute", left: 28, top: BAND_TOP + 22, opacity: k, transform: `translateY(${(1 - k) * -10}px)`, display: "flex", alignItems: "center", gap: 10, background: "rgba(10,10,11,0.78)", padding: "8px 16px 8px 12px", borderLeft: `6px solid ${C.lacre}` }}>
+    <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 22, color: C.fita, letterSpacing: "0.08em" }}>VOZ</div>
+    <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 26, color: "#fff" }}>Glória Perez, mãe de Daniella</div>
+  </div>;
 };
 
 // cartões finais (sem fala): desfecho + chamada do perfil
@@ -138,8 +149,9 @@ export const CorteGloria2: React.FC = () => {
     <Cracha de={2.9} ate={5.5} nome="DANIELLA PEREZ" sub="ATRIZ · 22 ANOS · MORTA EM 28/12/1992" />
     <Cracha de={0.3} ate={2.2} nome="GLÓRIA PEREZ" sub="MÃE DE DANIELLA · NA ÉPOCA DO CRIME" />
     <Cracha de={11.9} ate={14.3} nome="RAUL GAZOLLA" sub="ATOR · MARIDO DE DANIELLA" />
-    <Cracha de={22.8} ate={25.1} nome="GUILHERME DE PÁDUA" sub="ATOR · CONDENADO PELO CRIME" />
-    <Cracha de={34.6} ate={38.4} nome="GLÓRIA PEREZ" sub="MÃE DE DANIELLA · DEPOIMENTO À SÉRIE" />
+    <Cracha de={22.8} ate={24.2} nome="GUILHERME DE PÁDUA" sub="ATOR · CONDENADO PELO CRIME" />
+    <Voz de={34.6} ate={41.1} />
+    <Voz de={47.8} ate={50.6} />
     <Legenda />
     <Final />
     <div style={{ position: "absolute", left: 60, right: 60, top: 1720, fontFamily: SANS, fontWeight: 600, fontSize: 19, color: "rgba(236,231,220,0.6)" }}>Reprodução · HBO Max, “Pacto Brutal: o assassinato de Daniella Perez” (2022) e arquivo de TV</div>
