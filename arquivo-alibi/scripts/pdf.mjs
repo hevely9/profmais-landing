@@ -21,7 +21,14 @@ execFileSync("python3", [path.join(RAIZ, "scripts", "qr.py"), url, qrArq]);
 const qr = fs.readFileSync(qrArq, "utf8").replace(/<\?xml[^>]*>/, "");
 const provas = b.provas.filter((p) => p.origem === "pdf");
 const dirMidia = path.join(RAIZ, "casos", slug, "midia");
-const src = (nome) => { const f = fs.readdirSync(dirMidia).find((x) => x.replace(/\.\w+$/, "") === nome); return f ? `file://${path.join(dirMidia, f)}` : ""; };
+// no PDF as fotos vão em JPEG (o Chrome embute JPEG sem recomprimir; WebP viraria imagem sem compressão)
+const dirJpg = path.join(OUT, ".jpg-" + slug); fs.mkdirSync(dirJpg, { recursive: true });
+const src = (nome) => {
+  const f = fs.readdirSync(dirMidia).find((x) => x.replace(/\.\w+$/, "") === nome); if (!f) return "";
+  const jpg = path.join(dirJpg, nome + ".jpg");
+  if (!fs.existsSync(jpg)) execFileSync("python3", ["-c", "import sys;from PIL import Image;im=Image.open(sys.argv[1]).convert('RGB');im.thumbnail((1000,1000));im.save(sys.argv[2],'JPEG',quality=72,optimize=True,progressive=True)", path.join(dirMidia, f), jpg]);
+  return `file://${jpg}`;
+};
 const CTX = { pdf: true, src };
 const foto = (nome, cls = "") => `<img class="${cls}" src="${src(nome)}" alt="">`;
 const css = ["tokens.css", "docs.css"].map((f) => fs.readFileSync(path.join(RAIZ, "site", f), "utf8")).join("\n").replaceAll('url("fonts/', `url("file://${RAIZ}/site/fonts/`);

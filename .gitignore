@@ -1,3 +1,4 @@
 # Reels gerados (vídeos e quadros temporários não vão para o git)
 _reels/*/saida/
 __pycache__/
+arquivo-alibi/dist/pdf/.jpg-*/
