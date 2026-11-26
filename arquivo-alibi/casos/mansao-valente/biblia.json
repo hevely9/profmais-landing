@@ -1,0 +1,1917 @@
+{
+ "slug": "mansao-valente",
+ "numero": "001",
+ "titulo": "O Último Jantar na Mansão Valente",
+ "subtitulo": "Ele reuniu a família para anunciar uma mudança. Não chegou à sobremesa do dia seguinte.",
+ "sinopse": "Augusto Valente reuniu a família para um jantar e avisou: na segunda-feira, algumas coisas iam mudar. Uma hora depois, foi encontrado morto no escritório. O médico da família diz que foi o coração. Você acha que não.",
+ "codigo": "VALENTE-7Q4K",
+ "acento": "#C9A227",
+ "dificuldade": "Média",
+ "duracao": "60–90 min",
+ "jogadores": "1 a 4",
+ "classificacao": "14+",
+ "local": "Mansão Valente — Alameda dos Ipês, 400, Jardim das Cerejeiras, Monte Albor",
+ "data_crime": "Sábado, 21 de setembro de 2024",
+ "verdade": {
+  "resumo": "Caio Moura, genro de Augusto e diretor financeiro da Cristais Valente, desviou R$ 2,3 milhões da empresa por meio de uma fornecedora fantasma. A auditoria pedida por Augusto descobriu o desvio. Augusto marcou para segunda-feira, às 9h, a assinatura de um novo testamento e a entrega da auditoria à polícia. No jantar de sábado, ele avisou que 'algumas coisas iam mudar'. Às 21h48, Caio disse que ia ao carro fazer uma ligação de trabalho. Em vez disso, subiu à suíte do casal, pegou 12 comprimidos de digoxina do frasco reserva que Helena tinha comprado na terça, triturou-os num papel de seda e, às 21h56, entrou no escritório e colocou o pó com um pouco de conhaque no único copo da bandeja que Lúcia deixa todas as noites às 21h30. Augusto, que tinha o ritual de tomar um conhaque sozinho no escritório depois das dez, serviu-se às 22h12. Caio só foi à garagem às 22h31 e fez a ligação às 22h32, para depois dizer que estava lá desde as 21h45. Augusto teve uma arritmia fatal e foi encontrado por Lúcia às 22h44.",
+  "culpado": "caio",
+  "metodo": "12 comprimidos de digoxina 0,25 mg, retirados do frasco reserva no banheiro da suíte, triturados e colocados com um pouco de conhaque no copo de Augusto, já servido na bandeja do escritório.",
+  "motivo": "Augusto ia denunciá-lo à polícia na segunda-feira pelo desvio de R$ 2,3 milhões da Cristais Valente.",
+  "linha_do_tempo": [
+   [
+    "19h30",
+    "Caio e Beatriz chegam. Dr. Renato chega às 19h40."
+   ],
+   [
+    "20h00",
+    "Jantar servido por Lúcia. Caio e Rafael usam camisa azul-marinho."
+   ],
+   [
+    "21h10",
+    "Na sobremesa, Augusto anuncia: 'Segunda, às 9h, vou ao advogado. Algumas coisas vão mudar nesta família.'"
+   ],
+   [
+    "21h30",
+    "Lúcia deixa a bandeja no escritório: decanter de conhaque e um único copo (sensor S3)."
+   ],
+   [
+    "21h35",
+    "Lúcia volta para a cozinha e lava a louça até 22h43 (sensor S2 contínuo)."
+   ],
+   [
+    "21h38",
+    "Dr. Renato vai embora num carro de aplicativo (portão às 21h38)."
+   ],
+   [
+    "21h40",
+    "Augusto vai para a sala de TV (S4 até 22h10)."
+   ],
+   [
+    "21h45",
+    "Helena, Rafael e Beatriz vão para a sala de música; Rafael toca piano (S5 até 22h31)."
+   ],
+   [
+    "21h48",
+    "Caio diz que vai ao carro fazer uma ligação de trabalho."
+   ],
+   [
+    "21h49",
+    "Helena começa a gravar o vídeo de Rafael ao piano (4 min 02 s)."
+   ],
+   [
+    "21h50",
+    "Caio sobe a escada (S6). Lúcia, da porta da cozinha, vê de costas um homem de camisa escura subindo e pensa que é Rafael."
+   ],
+   [
+    "21h51–21h54",
+    "Na suíte, Caio abre o frasco reserva de digoxina, retira 12 comprimidos e os tritura num papel de seda."
+   ],
+   [
+    "21h55",
+    "Caio desce (S6)."
+   ],
+   [
+    "21h56",
+    "Caio entra no escritório (S3), coloca o pó e um pouco de conhaque no copo e mexe."
+   ],
+   [
+    "21h58",
+    "Caio sai do escritório (S3) e fica na varanda lateral, onde não há sensor."
+   ],
+   [
+    "22h02",
+    "Beatriz sai da sala de música."
+   ],
+   [
+    "22h04",
+    "Beatriz atravessa o pátio (câmera C1) até o gazebo, fora do alcance da câmera."
+   ],
+   [
+    "22h06",
+    "Beatriz liga para a psicóloga (21 min)."
+   ],
+   [
+    "22h10",
+    "Augusto sai da sala de TV."
+   ],
+   [
+    "22h12",
+    "Augusto entra no escritório (S3), serve o conhaque no copo e bebe."
+   ],
+   [
+    "22h29",
+    "Beatriz volta pelo pátio (C1)."
+   ],
+   [
+    "22h30",
+    "Rafael para de tocar."
+   ],
+   [
+    "22h31",
+    "Caio entra na garagem pela primeira vez na noite (S1)."
+   ],
+   [
+    "22h32",
+    "Caio liga para o cliente Fernando Coutinho (9 min 14 s)."
+   ],
+   [
+    "22h44",
+    "Lúcia vai buscar a bandeja (S3) e encontra Augusto caído junto à poltrona."
+   ],
+   [
+    "22h46",
+    "Emergência médica acionada. Helena liga para o Dr. Renato às 22h50."
+   ],
+   [
+    "22h58",
+    "Dr. Renato chega e atribui a morte ao coração."
+   ],
+   [
+    "23h05",
+    "Óbito constatado pela equipe de emergência."
+   ],
+   [
+    "23h20",
+    "A delegada Marta Siqueira chega e determina necropsia e perícia."
+   ]
+  ]
+ },
+ "suspeitos": [
+  {
+   "id": "helena",
+   "nome": "Helena Valente",
+   "idade": 68,
+   "relacao": "Esposa da vítima",
+   "alibi": "Sala de música com Rafael e Beatriz, das 21h45 às 22h30.",
+   "segredo": "Tinha consultado uma advogada de família sobre divórcio (E-22).",
+   "parece_culpada": "Comprou o frasco reserva de digoxina (E-17) e é a maior herdeira.",
+   "inocenta": "Aparece no vídeo das 21h49 (E-24) e a sala de música fica ocupada o tempo todo (E-18).",
+   "retrato": {
+    "pele": "#E8C4A6",
+    "cabelo": "#D9D4CC",
+    "estilo": "curto",
+    "roupa": "#3B4F6B"
+   }
+  },
+  {
+   "id": "rafael",
+   "nome": "Rafael Valente",
+   "idade": 42,
+   "relacao": "Filho da vítima",
+   "alibi": "Tocando piano na sala de música, das 21h45 às 22h30.",
+   "segredo": "Dívidas com apostas; o pai negou dinheiro naquela tarde (E-20, E-21).",
+   "parece_culpado": "Estava de camisa azul-marinho, como o homem que Lúcia viu subindo a escada (E-13).",
+   "inocenta": "Está ao piano no vídeo que começa às 21h49 (E-24), no exato momento em que alguém sobe a escada (21h50).",
+   "retrato": {
+    "pele": "#D9A982",
+    "cabelo": "#2B2118",
+    "estilo": "curto",
+    "roupa": "#1E2A44"
+   }
+  },
+  {
+   "id": "beatriz",
+   "nome": "Beatriz Valente Moura",
+   "idade": 39,
+   "relacao": "Filha da vítima, casada com Caio",
+   "alibi": "Sala de música até 22h; depois no gazebo do jardim, fumando e ao telefone, até 22h30.",
+   "segredo": "Faz terapia e pensa em se separar de Caio; não quis dizer com quem falava (E-11).",
+   "parece_culpada": "Ficou fora do alcance da câmera por 25 minutos (E-25) e se recusou a dizer com quem falava.",
+   "inocenta": "O registro de chamadas (B-03) confirma a ligação com a psicóloga das 22h06 às 22h27. E o veneno foi colocado às 21h56, quando ela estava na sala de música (E-24).",
+   "retrato": {
+    "pele": "#E2B796",
+    "cabelo": "#4A2A1A",
+    "estilo": "longo",
+    "roupa": "#6B1E2A"
+   }
+  },
+  {
+   "id": "caio",
+   "nome": "Caio Moura",
+   "idade": 44,
+   "relacao": "Genro; diretor financeiro da Cristais Valente",
+   "alibi": "Dentro do carro, na garagem, numa ligação de trabalho, das 21h45 às 22h20.",
+   "segredo": "Desviou R$ 2,3 milhões da empresa (B-05).",
+   "parece_culpado": "É o culpado.",
+   "inocenta": "—",
+   "retrato": {
+    "pele": "#E0B08C",
+    "cabelo": "#3A2A1E",
+    "estilo": "lateral",
+    "roupa": "#1E2A44"
+   }
+  },
+  {
+   "id": "lucia",
+   "nome": "Lúcia Prado",
+   "idade": 55,
+   "relacao": "Governanta há 20 anos",
+   "alibi": "Na cozinha, lavando a louça, das 21h35 às 22h43.",
+   "segredo": "Recebe um legado de R$ 200 mil no testamento atual, que seria mudado (E-02).",
+   "parece_culpada": "Preparou a bandeja, cuida dos remédios e encontrou o corpo.",
+   "inocenta": "O sensor da cozinha registra presença contínua de 21h31 a 22h43, inclusive às 21h56 (E-18).",
+   "retrato": {
+    "pele": "#B98563",
+    "cabelo": "#1E1A18",
+    "estilo": "coque",
+    "roupa": "#4A4A4A"
+   }
+  },
+  {
+   "id": "renato",
+   "nome": "Dr. Renato Ilha",
+   "idade": 60,
+   "relacao": "Médico e amigo da família",
+   "alibi": "Saiu às 21h38 de carro por aplicativo; voltou às 22h58, chamado por Helena.",
+   "segredo": "Temia ser responsabilizado por ter receitado a digoxina e tentou atestar morte natural (E-08).",
+   "parece_culpado": "Receitou o remédio, conhecia a dose fatal e quis evitar a necropsia.",
+   "inocenta": "O recibo do aplicativo (E-23) mostra que ele já estava em casa às 21h59; o veneno foi posto às 21h56, depois que ele saiu.",
+   "retrato": {
+    "pele": "#E6BFA0",
+    "cabelo": "#8C8C8C",
+    "estilo": "calvo",
+    "roupa": "#2E3A2E"
+   }
+  }
+ ],
+ "provas": [
+  {
+   "id": "E-01",
+   "titulo": "Boletim de Ocorrência",
+   "tipo": "oficio",
+   "objetivos": [
+    1
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "orgao": "POLÍCIA CIVIL — 1ª DELEGACIA DE POLÍCIA DE MONTE ALBOR",
+    "documento": "BOLETIM DE OCORRÊNCIA Nº 2024/1187",
+    "campos": [
+     [
+      "Registro",
+      "22/09/2024, 00h20"
+     ],
+     [
+      "Natureza",
+      "Morte a esclarecer"
+     ],
+     [
+      "Local",
+      "Mansão Valente — Alameda dos Ipês, 400, Jardim das Cerejeiras, Monte Albor"
+     ],
+     [
+      "Vítima",
+      "Augusto Valente, 71 anos, empresário, fundador da Cristais Valente"
+     ],
+     [
+      "Comunicante",
+      "Helena Valente, 68 anos (esposa)"
+     ]
+    ],
+    "corpo": [
+     "Às 22h46 do dia 21/09/2024, foi acionada a emergência médica a partir da residência. A vítima foi encontrada pela governanta, Sra. Lúcia Prado, por volta das 22h44, caída junto à poltrona do escritório, no pavimento térreo.",
+     "A equipe de emergência constatou o óbito às 23h05. O médico da família, Dr. Renato Ilha, presente no local desde as 22h58, atribuiu a morte a causa cardíaca, citando o histórico de insuficiência cardíaca da vítima.",
+     "Diante de divergências entre os familiares e do anúncio, feito pela vítima durante o jantar daquela noite, de que mudaria o testamento na segunda-feira, esta autoridade determinou a remoção do corpo ao Instituto Médico-Legal para necropsia e exames toxicológicos, além da preservação do escritório para perícia."
+    ],
+    "assinatura": "Marta Siqueira — Delegada de Polícia"
+   }
+  },
+  {
+   "id": "E-02",
+   "titulo": "Relatório preliminar da Delegada",
+   "tipo": "oficio",
+   "objetivos": [
+    1,
+    2
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "orgao": "POLÍCIA CIVIL — 1ª DELEGACIA DE POLÍCIA DE MONTE ALBOR",
+    "documento": "RELATÓRIO PRELIMINAR — INQUÉRITO Nº 0412/2024",
+    "corpo": [
+     "Estavam na residência na noite de 21/09/2024, além da vítima: Helena Valente (esposa), Rafael Valente (filho), Beatriz Valente Moura (filha), Caio Moura (genro, diretor financeiro da Cristais Valente), Lúcia Prado (governanta) e Dr. Renato Ilha (médico da família, que saiu às 21h38).",
+     "Durante a sobremesa, por volta das 21h10, a vítima declarou a todos que na segunda-feira, às 9h, iria ao advogado e que 'algumas coisas vão mudar nesta família'. Pelo testamento em vigor, conhecido da família: 50% do patrimônio para Helena, 25% para Rafael, 25% para Beatriz e um legado de R$ 200.000,00 para Lúcia Prado. Caio Moura não é herdeiro.",
+     "Segundo todos os ouvidos, a vítima tinha um ritual: às 21h30, a governanta deixa no escritório uma bandeja com o decanter de conhaque e um único copo; depois das 22h, a vítima vai sozinha ao escritório tomar uma dose.",
+     "O escritório tem uma única porta, que dá para o corredor leste. As janelas têm grades fixas. A residência possui sistema de alarme com sensores de presença por ambiente (registro anexo, E-18) e câmera no pátio (relatório anexo, E-25)."
+    ],
+    "tabela": {
+     "titulo": "Onde cada um declarou estar entre 21h30 e 22h45",
+     "cab": [
+      "Pessoa",
+      "Declaração"
+     ],
+     "linhas": [
+      [
+       "Helena Valente",
+       "Sala de música, ouvindo Rafael tocar, das 21h45 às 22h30."
+      ],
+      [
+       "Rafael Valente",
+       "Ao piano, na sala de música, das 21h45 às 22h30, sem interrupção."
+      ],
+      [
+       "Beatriz V. Moura",
+       "Sala de música até cerca de 22h; depois, gazebo do jardim, fumando e ao telefone, até 22h30."
+      ],
+      [
+       "Caio Moura",
+       "Dentro do próprio carro, na garagem, em ligação de trabalho, das 21h45 às 22h20."
+      ],
+      [
+       "Lúcia Prado",
+       "Cozinha, lavando a louça do jantar, das 21h35 até buscar a bandeja (22h44)."
+      ],
+      [
+       "Dr. Renato Ilha",
+       "Saiu às 21h38 em carro de aplicativo; voltou às 22h58, chamado por Helena."
+      ]
+     ]
+    },
+    "assinatura": "Marta Siqueira — Delegada de Polícia"
+   }
+  },
+  {
+   "id": "E-03",
+   "titulo": "Planta da Mansão Valente",
+   "tipo": "ilustracao",
+   "objetivos": [
+    2
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "svg": "planta",
+    "legenda": "Planta simplificada elaborada pela perícia. S = sensor de presença do alarme; C1 = câmera do pátio.",
+    "notas": [
+     "O escritório só é acessível pelo corredor leste (sensor S3).",
+     "A garagem é acessada pela porta lateral do hall; tem sensor próprio (S1).",
+     "A escada para o andar superior passa pelo sensor S6. O armário de remédios fica no banheiro da suíte do casal."
+    ]
+   }
+  },
+  {
+   "id": "E-04",
+   "titulo": "Foto da cena — escritório",
+   "tipo": "ilustracao",
+   "objetivos": [
+    1
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "svg": "escritorio",
+    "legenda": "Escritório, 23h40. Equipe de emergência já havia retirado a vítima; a posição foi marcada pela perícia.",
+    "notas": [
+     "1 — Decanter de cristal com conhaque (cerca de 3/4).",
+     "2 — Copo de conhaque com resto de bebida.",
+     "3 — Lixeira de papéis.",
+     "4 — Poltrona e marcação da posição da vítima."
+    ]
+   }
+  },
+  {
+   "id": "E-05",
+   "titulo": "Laudo toxicológico preliminar (IML)",
+   "tipo": "oficio",
+   "objetivos": [
+    1
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "orgao": "INSTITUTO MÉDICO-LEGAL DE MONTE ALBOR",
+    "documento": "LAUDO TOXICOLÓGICO PRELIMINAR Nº 3391/2024",
+    "campos": [
+     [
+      "Examinado",
+      "Augusto Valente, 71 anos"
+     ],
+     [
+      "Material",
+      "Sangue periférico e conteúdo gástrico"
+     ],
+     [
+      "Data do exame",
+      "22/09/2024"
+     ]
+    ],
+    "tabela": {
+     "titulo": "Resultados",
+     "cab": [
+      "Análise",
+      "Resultado",
+      "Referência"
+     ],
+     "linhas": [
+      [
+       "Digoxina (sangue)",
+       "9,8 ng/mL",
+       "Faixa terapêutica: 0,5 a 2,0 ng/mL"
+      ],
+      [
+       "Álcool etílico (sangue)",
+       "0,3 g/L",
+       "Compatível com uma dose de destilado"
+      ],
+      [
+       "Conteúdo gástrico",
+       "Traços de conhaque e de digoxina",
+       "—"
+      ]
+     ]
+    },
+    "corpo": [
+     "O paciente fazia uso contínuo de digoxina 0,25 mg, um comprimido ao dia, pela manhã. A concentração encontrada é cerca de cinco vezes o limite superior da faixa terapêutica e é incompatível com o uso de uma dose diária.",
+     "Conclusão preliminar: intoxicação digitálica aguda, por ingestão de dose múltipla poucas horas antes do óbito, causando arritmia cardíaca fatal."
+    ],
+    "assinatura": "Dra. Ivone Castelar — Perita Médico-Legista"
+   }
+  },
+  {
+   "id": "E-06",
+   "titulo": "Porta-comprimidos e frasco em uso",
+   "tipo": "ilustracao",
+   "objetivos": [
+    1
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "svg": "porta",
+    "legenda": "Porta-comprimidos semanal da vítima, encontrado na cozinha. Fotografado em 22/09/2024, 01h10.",
+    "notas": [
+     "Segundo Lúcia, ela abastece o porta-comprimidos todo sábado à tarde e entrega a dose a Augusto no café da manhã.",
+     "Compartimento SÁB 21/09: vazio (dose da manhã, entregue por Lúcia às 8h).",
+     "Compartimentos DOM 22 a SÁB 28: um comprimido em cada, todos presentes (abastecidos por Lúcia às 17h de 21/09).",
+     "Frasco em uso (cozinha): 9 comprimidos, quantidade que bate com a receita e com as doses tomadas desde a compra anterior."
+    ]
+   }
+  },
+  {
+   "id": "E-07",
+   "titulo": "Laudo pericial — copo, decanter e papel",
+   "tipo": "oficio",
+   "objetivos": [
+    1,
+    3
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "orgao": "INSTITUTO DE CRIMINALÍSTICA — NÚCLEO DE MONTE ALBOR",
+    "documento": "LAUDO PERICIAL Nº 2207/2024 — EXAME DE OBJETOS",
+    "tabela": {
+     "titulo": "Objetos recolhidos no escritório (ver E-26)",
+     "cab": [
+      "Item",
+      "Descrição",
+      "Resultado"
+     ],
+     "linhas": [
+      [
+       "1",
+       "Decanter de cristal com conhaque (610 mL)",
+       "NEGATIVO para digoxina."
+      ],
+      [
+       "2",
+       "Copo de conhaque com resíduo de líquido âmbar (cerca de 5 mL)",
+       "POSITIVO para digoxina em alta concentração. Presença de partículas de comprimido triturado no fundo do copo."
+      ],
+      [
+       "3",
+       "Papel de seda branco, dobrado em quatro, encontrado na lixeira",
+       "Resíduo de pó branco POSITIVO para digoxina."
+      ]
+     ]
+    },
+    "corpo": [
+     "O conhaque do decanter não continha a substância. A digoxina estava apenas no copo, em forma de comprimidos triturados, e no papel encontrado na lixeira, compatível com o uso para triturar e transportar o pó.",
+     "Nenhuma impressão digital aproveitável foi encontrada no copo, que apresenta sinais de ter sido limpo por fora com tecido."
+    ],
+    "assinatura": "Paulo Rezende Lima — Perito Criminal"
+   }
+  },
+  {
+   "id": "E-08",
+   "titulo": "Rascunho de declaração de óbito",
+   "tipo": "carta",
+   "objetivos": [
+    1
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "cabecalho": "Dr. Renato Ilha — Clínica Médica — CRM fictício 00000",
+    "data": "21/09/2024, 23h15",
+    "corpo": [
+     "DECLARAÇÃO DE ÓBITO (rascunho)",
+     "Nome: Augusto Valente, 71 anos.",
+     "Causa da morte: parada cardiorrespiratória.",
+     "Causa básica: insuficiência cardíaca crônica.",
+     "Dispensa necropsia — paciente cardiopata em acompanhamento."
+    ],
+    "rodape": "Anotação a caneta, em outra letra: NÃO EMITIDA. Necropsia determinada pela autoridade policial. — M.S."
+   }
+  },
+  {
+   "id": "E-09",
+   "titulo": "Depoimento — Helena Valente",
+   "tipo": "depoimento",
+   "objetivos": [
+    1,
+    2
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "declarante": "Helena Valente, 68 anos, esposa da vítima",
+    "data": "22/09/2024, 01h30",
+    "qa": [
+     [
+      "Onde a senhora estava depois do jantar?",
+      "Na sala de música, desde umas 21h45. O Rafael tocou para mim. A Beatriz ficou com a gente até umas dez horas e saiu para fumar. O Rafael não saiu do piano até as dez e meia. Eu até gravei um pedaço para mandar para a minha neta."
+     ],
+     [
+      "E os demais?",
+      "O Augusto ficou na sala de TV vendo o jornal e depois foi para o escritório, como sempre, tomar o conhaque dele. O Caio disse que ia ao carro buscar uns papéis e fazer uma ligação. A Lúcia estava na cozinha."
+     ],
+     [
+      "Quem sabia do ritual do conhaque?",
+      "Todo mundo. A Lúcia deixa a bandeja às nove e meia e ele vai lá depois das dez. Há quinze anos é assim."
+     ],
+     [
+      "Seu marido tomava algum remédio?",
+      "Digoxina, para o coração. Um comprimido de manhã, que a Lúcia entrega no café. Na terça eu comprei um frasco reserva, porque o outro estava acabando, e deixei fechado no armário do banheiro da nossa suíte."
+     ],
+     [
+      "A senhora sabia o que ele ia mudar na segunda?",
+      "Não. Ele não quis me dizer."
+     ],
+     [
+      "Como estava o casamento?",
+      "Bem. Estava bem."
+     ]
+    ]
+   }
+  },
+  {
+   "id": "E-10",
+   "titulo": "Depoimento — Rafael Valente",
+   "tipo": "depoimento",
+   "objetivos": [
+    2
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "declarante": "Rafael Valente, 42 anos, filho da vítima",
+    "data": "22/09/2024, 01h55",
+    "qa": [
+     [
+      "Onde você estava entre 21h45 e 22h30?",
+      "Tocando piano para a minha mãe, na sala de música. Toquei direto, sem parar. A Beatriz estava lá no começo."
+     ],
+     [
+      "Que roupa você usava?",
+      "Calça cinza e camisa azul-marinho."
+     ],
+     [
+      "Você subiu ao andar de cima em algum momento?",
+      "Não. Só subi depois que tudo aconteceu, para buscar um casaco para a minha mãe."
+     ],
+     [
+      "Você pediu dinheiro ao seu pai nos últimos dias?",
+      "Pedi. Estou com umas dívidas. Ele disse não. Mas eu nunca faria mal ao meu pai."
+     ]
+    ]
+   }
+  },
+  {
+   "id": "E-11",
+   "titulo": "Depoimento — Beatriz Valente Moura",
+   "tipo": "depoimento",
+   "objetivos": [
+    2
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "declarante": "Beatriz Valente Moura, 39 anos, filha da vítima",
+    "data": "22/09/2024, 02h20",
+    "qa": [
+     [
+      "Onde você estava depois do jantar?",
+      "Na sala de música, ouvindo meu irmão, até umas dez horas. Depois saí pelo pátio e fui até o gazebo, lá no fundo do jardim, fumar e falar ao telefone. Voltei umas dez e meia."
+     ],
+     [
+      "Com quem você falou?",
+      "É um assunto pessoal. Prefiro não dizer agora."
+     ],
+     [
+      "E o seu marido?",
+      "O Caio disse que ia ao carro fazer uma ligação de trabalho. Não o vi até voltar para dentro."
+     ],
+     [
+      "Você sabe o que seu pai ia mudar no testamento?",
+      "Não. Mas ele estava estranho comigo e com o Caio nos últimos dias."
+     ]
+    ]
+   }
+  },
+  {
+   "id": "E-12",
+   "titulo": "Depoimento — Caio Moura",
+   "tipo": "depoimento",
+   "objetivos": [
+    2
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "declarante": "Caio Moura, 44 anos, genro da vítima, diretor financeiro da Cristais Valente",
+    "data": "22/09/2024, 02h45",
+    "qa": [
+     [
+      "Onde o senhor estava entre 21h45 e 22h30?",
+      "Na garagem, dentro do meu carro. Das 21h45 até umas 22h20 fiquei numa ligação de trabalho com um cliente, o Fernando Coutinho, distribuidor nosso no Recife. Depois voltei para a sala de estar."
+     ],
+     [
+      "O senhor subiu ao andar de cima ou foi ao escritório?",
+      "Não. Fui direto para a garagem e voltei."
+     ],
+     [
+      "Que roupa usava?",
+      "Camisa azul-marinho, calça bege."
+     ],
+     [
+      "Como vão os negócios da empresa?",
+      "Bem. A auditoria que o meu sogro pediu é procedimento de rotina."
+     ]
+    ]
+   }
+  },
+  {
+   "id": "E-13",
+   "titulo": "Depoimento — Lúcia Prado",
+   "tipo": "depoimento",
+   "objetivos": [
+    1,
+    2
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "declarante": "Lúcia Prado, 55 anos, governanta da residência há 20 anos",
+    "data": "22/09/2024, 03h10",
+    "qa": [
+     [
+      "Descreva a rotina da bandeja.",
+      "Todo dia, às nove e meia, deixo no escritório o decanter e um copo. Sempre um copo só. Ele vai lá depois das dez, se serve e fica lendo."
+     ],
+     [
+      "Onde a senhora estava depois disso?",
+      "Na cozinha, lavando a louça do jantar, das nove e trinta e cinco até a hora de buscar a bandeja. Foi aí que eu o encontrei, umas dez e quarenta e quatro."
+     ],
+     [
+      "Viu alguém circulando pela casa?",
+      "Por volta das nove e cinquenta, da porta da cozinha, vi um homem de camisa escura subindo a escada, de costas. Achei que era o Rafael, porque ele estava de azul-marinho. Não vi o rosto."
+     ],
+     [
+      "A senhora cuida dos remédios dele?",
+      "Cuido. Abasteço o porta-comprimidos todo sábado à tarde e dou o comprimido no café da manhã. Hoje de manhã ele tomou o de sempre."
+     ]
+    ]
+   }
+  },
+  {
+   "id": "E-14",
+   "titulo": "Depoimento — Dr. Renato Ilha",
+   "tipo": "depoimento",
+   "objetivos": [
+    1,
+    2
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "declarante": "Renato Ilha, 60 anos, médico da família",
+    "data": "22/09/2024, 03h40",
+    "qa": [
+     [
+      "A que horas o senhor saiu?",
+      "Às 21h38, num carro de aplicativo. Fui para casa. A Helena me ligou às 22h50 e eu voltei correndo."
+     ],
+     [
+      "Por que tentou atestar morte natural?",
+      "Ele era cardíaco, eu o acompanhava havia anos. Achei que fosse o coração. E não queria expor a família a uma necropsia."
+     ],
+     [
+      "O senhor receitava a digoxina?",
+      "Sim. Digoxina 0,25 mg, um comprimido por dia. Uma dose muito maior pode ser fatal para alguém com o coração dele."
+     ]
+    ]
+   }
+  },
+  {
+   "id": "E-15",
+   "titulo": "Foto do jantar (20h31)",
+   "tipo": "ilustracao",
+   "objetivos": [
+    2
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "svg": "jantar",
+    "legenda": "Foto feita por Helena às 20h31 e entregue à polícia. Posições à mesa, da esquerda para a direita.",
+    "notas": [
+     "Caio Moura — camisa azul-marinho.",
+     "Beatriz V. Moura — vestido vinho.",
+     "Augusto Valente (cabeceira) — paletó cinza.",
+     "Helena Valente — blazer azul.",
+     "Rafael Valente — camisa azul-marinho.",
+     "Dr. Renato Ilha — paletó verde-escuro."
+    ]
+   }
+  },
+  {
+   "id": "E-16",
+   "titulo": "Agenda de Augusto Valente",
+   "tipo": "agenda",
+   "objetivos": [
+    3
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "titulo": "Semana de 23 a 29 de setembro de 2024",
+    "dias": [
+     [
+      "SEG 23",
+      [
+       "9h00 — Dr. Paulo Arantes (escritório dele). Testamento novo + resolver a questão do C.",
+       "15h00 — ligar para o conselho"
+      ]
+     ],
+     [
+      "TER 24",
+      [
+       "10h00 — reunião do conselho da Cristais Valente"
+      ]
+     ],
+     [
+      "QUA 25",
+      [
+       "15h00 — cardiologista (levar exames)"
+      ]
+     ],
+     [
+      "QUI 26",
+      [
+       "Aniversário da Clarinha — ligar!"
+      ]
+     ],
+     [
+      "SEX 27",
+      [
+       "—"
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "E-17",
+   "titulo": "Recibo da farmácia (17/09)",
+   "tipo": "recibo",
+   "objetivos": [
+    1,
+    3
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "loja": "DROGARIA LÍRIO AZUL",
+    "endereco": "Av. das Palmeiras, 1.020 — Centro — Monte Albor",
+    "data": "17/09/2024 14:22",
+    "itens": [
+     [
+      "Digoxina 0,25 mg — 30 comprimidos",
+      "1",
+      "R$ 18,90"
+     ],
+     [
+      "Protetor solar FPS 50",
+      "1",
+      "R$ 54,90"
+     ]
+    ],
+    "total": "R$ 73,80",
+    "extra": [
+     "Cliente: Helena Valente",
+     "Receita: Dr. Renato Ilha",
+     "Pagamento: cartão de crédito"
+    ]
+   }
+  },
+  {
+   "id": "E-18",
+   "titulo": "Registro do sistema de alarme (21/09)",
+   "tipo": "log",
+   "objetivos": [
+    2
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "sistema": "SENTINELA CASA — Central de alarme residencial",
+    "local": "Mansão Valente",
+    "nota_topo": "Sensores de presença registram um evento quando alguém entra no ambiente e repetem o registro a cada 5 minutos enquanto houver presença.",
+    "colunas": [
+     "Hora",
+     "Sensor",
+     "Ambiente",
+     "Evento"
+    ],
+    "linhas": [
+     [
+      "21:00",
+      "S8",
+      "Sala de estar",
+      "Presença (várias pessoas) até 21:44"
+     ],
+     [
+      "21:30",
+      "S3",
+      "Corredor leste (escritório)",
+      "Presença"
+     ],
+     [
+      "21:31",
+      "S2",
+      "Cozinha",
+      "Presença — repete a cada 5 min até 22:43"
+     ],
+     [
+      "21:38",
+      "P1",
+      "Portão social",
+      "Abertura (saída de pedestre)"
+     ],
+     [
+      "21:40",
+      "S4",
+      "Sala de TV",
+      "Presença — repete até 22:10"
+     ],
+     [
+      "21:45",
+      "S5",
+      "Sala de música",
+      "Presença — repete até 22:31"
+     ],
+     [
+      "21:50",
+      "S6",
+      "Escada / hall superior",
+      "Presença"
+     ],
+     [
+      "21:55",
+      "S6",
+      "Escada / hall superior",
+      "Presença"
+     ],
+     [
+      "21:56",
+      "S3",
+      "Corredor leste (escritório)",
+      "Presença"
+     ],
+     [
+      "21:58",
+      "S3",
+      "Corredor leste (escritório)",
+      "Presença"
+     ],
+     [
+      "22:12",
+      "S3",
+      "Corredor leste (escritório)",
+      "Presença"
+     ],
+     [
+      "22:31",
+      "S1",
+      "Garagem",
+      "Presença — repete até 22:42"
+     ],
+     [
+      "22:44",
+      "S3",
+      "Corredor leste (escritório)",
+      "Presença"
+     ],
+     [
+      "22:46",
+      "S8",
+      "Sala de estar",
+      "Presença (várias pessoas)"
+     ]
+    ],
+    "nota": "S1 Garagem: nenhum evento entre 19:12 (chegada dos convidados) e 22:31. Teste da perícia em 22/09: o sensor S1 registra normalmente uma pessoa sentada dentro de qualquer veículo estacionado na garagem."
+   }
+  },
+  {
+   "id": "E-19",
+   "titulo": "Recorte de jornal (08/09)",
+   "tipo": "jornal",
+   "objetivos": [
+    3
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "jornal": "GAZETA DE MONTE ALBOR",
+    "data": "Domingo, 8 de setembro de 2024",
+    "manchete": "Cristais Valente anuncia auditoria externa após queda nos lucros",
+    "linha_fina": "Fundador diz que quer 'saber para onde foi cada centavo'",
+    "corpo": [
+     "A Cristais Valente, uma das maiores empregadoras de Monte Albor, contratou uma auditoria externa para revisar as contas dos últimos dois anos. A empresa registrou queda de 18% no lucro em 2023, mesmo com aumento nas vendas.",
+     "'Quero saber para onde foi cada centavo', disse o fundador, Augusto Valente, de 71 anos. O diretor financeiro, Caio Moura, afirmou que a auditoria é 'procedimento padrão' e que 'não há nada fora do lugar'."
+    ]
+   }
+  },
+  {
+   "id": "E-20",
+   "titulo": "Conversa no grupo da família (21/09)",
+   "tipo": "chat",
+   "objetivos": [
+    2,
+    3
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "grupo": "Família Valente 💎",
+    "data": "Sábado, 21/09/2024",
+    "msgs": [
+     [
+      "14:02",
+      "Augusto",
+      "Jantar hoje às 20h. Quero todos. Assunto sério."
+     ],
+     [
+      "14:05",
+      "Beatriz",
+      "Pai, aconteceu alguma coisa?"
+     ],
+     [
+      "14:06",
+      "Augusto",
+      "Conversamos à noite."
+     ],
+     [
+      "14:30",
+      "Rafael",
+      "Pai, e aquele assunto que te falei?"
+     ],
+     [
+      "14:31",
+      "Augusto",
+      "Já te dei minha resposta, Rafael. Não."
+     ],
+     [
+      "15:10",
+      "Caio",
+      "Estaremos aí às 19h30, sogrão 👍"
+     ],
+     [
+      "15:12",
+      "Helena",
+      "A Lúcia vai fazer o cordeiro que você gosta ❤️"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "E-21",
+   "titulo": "Extrato bancário — Rafael Valente",
+   "tipo": "extrato",
+   "objetivos": [
+    2
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "banco": "BANCO SERENO",
+    "cliente": "Rafael Valente",
+    "periodo": "01/09/2024 a 20/09/2024",
+    "linhas": [
+     [
+      "02/09",
+      "Saldo anterior",
+      "",
+      "-R$ 12.840,00"
+     ],
+     [
+      "03/09",
+      "PIX enviado — plataforma de apostas",
+      "-R$ 5.000,00",
+      "-R$ 17.840,00"
+     ],
+     [
+      "09/09",
+      "PIX enviado — plataforma de apostas",
+      "-R$ 8.500,00",
+      "-R$ 26.340,00"
+     ],
+     [
+      "12/09",
+      "Juros de cheque especial",
+      "-R$ 1.214,00",
+      "-R$ 27.554,00"
+     ],
+     [
+      "16/09",
+      "PIX enviado — plataforma de apostas",
+      "-R$ 10.846,00",
+      "-R$ 38.400,00"
+     ]
+    ],
+    "nota": "Limite de cheque especial: R$ 40.000,00."
+   }
+  },
+  {
+   "id": "E-22",
+   "titulo": "Carta encontrada no quarto de Helena",
+   "tipo": "carta",
+   "objetivos": [
+    2
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "cabecalho": "Cecília Monforte — Advocacia de Família",
+    "data": "Monte Albor, 10 de setembro de 2024",
+    "corpo": [
+     "Prezada Sra. Helena,",
+     "Conforme nossa conversa, segue a minuta do pedido de divórcio consensual. Como combinado, só daremos andamento quando a senhora autorizar.",
+     "Lembro que, pelo regime de bens do casamento, a senhora tem direito à metade do patrimônio constituído pelo casal, independentemente do testamento."
+    ],
+    "rodape": "Atenciosamente, Cecília Monforte"
+   }
+  },
+  {
+   "id": "E-23",
+   "titulo": "Recibo do aplicativo de transporte",
+   "tipo": "app",
+   "objetivos": [
+    2
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "app": "VAIJÁ — recibo de viagem",
+    "campos": [
+     [
+      "Passageiro",
+      "Renato Ilha"
+     ],
+     [
+      "Data",
+      "21/09/2024"
+     ],
+     [
+      "Embarque",
+      "21:38 — Alameda dos Ipês, 400"
+     ],
+     [
+      "Desembarque",
+      "21:59 — Rua das Acácias, 77"
+     ],
+     [
+      "Distância",
+      "11,2 km"
+     ],
+     [
+      "Motorista",
+      "Gilmar S. — sedã prata"
+     ],
+     [
+      "Valor",
+      "R$ 31,40"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "E-24",
+   "titulo": "Vídeo do celular de Helena (quadros)",
+   "tipo": "ilustracao",
+   "objetivos": [
+    2
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "svg": "video",
+    "legenda": "Arquivo VID_20240921_214910.mp4 — gravado no celular de Helena. Início: 21:49:10. Duração: 4 min 02 s (termina às 21:53:12).",
+    "notas": [
+     "00:00 — Rafael ao piano, de camisa azul-marinho, de frente para a câmera.",
+     "01:15 — Beatriz aparece no canto do quadro, batendo palmas.",
+     "02:40 — Rafael continua tocando; a música não para em nenhum momento do vídeo.",
+     "03:50 — voz de Helena: 'manda um beijo pra Clarinha'."
+    ]
+   }
+  },
+  {
+   "id": "E-25",
+   "titulo": "Relatório da câmera do pátio (C1)",
+   "tipo": "log",
+   "objetivos": [
+    2
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "sistema": "CÂMERA C1 — PÁTIO",
+    "local": "Mansão Valente",
+    "nota_topo": "A câmera C1 cobre o pátio até a entrada do jardim. O gazebo, no fundo do jardim, fica fora do alcance.",
+    "colunas": [
+     "Hora",
+     "Imagem",
+     "Descrição"
+    ],
+    "linhas": [
+     [
+      "21:00–22:04",
+      "—",
+      "Nenhuma pessoa no pátio."
+     ],
+     [
+      "22:04:12",
+      "Quadro 1",
+      "Mulher de vestido vinho (Beatriz) sai da casa e segue em direção ao jardim."
+     ],
+     [
+      "22:04–22:29",
+      "—",
+      "Nenhuma pessoa no pátio."
+     ],
+     [
+      "22:29:40",
+      "Quadro 2",
+      "A mesma mulher volta do jardim e entra na casa."
+     ],
+     [
+      "22:29–22:45",
+      "—",
+      "Nenhuma pessoa no pátio."
+     ]
+    ],
+    "nota": "Durante os 25 minutos em que Beatriz esteve no gazebo, não é possível confirmar pelas imagens o que ela fazia."
+   }
+  },
+  {
+   "id": "E-26",
+   "titulo": "Lista de objetos recolhidos no escritório",
+   "tipo": "lista",
+   "objetivos": [
+    1,
+    3
+   ],
+   "origem": "pdf",
+   "conteudo": {
+    "orgao": "INSTITUTO DE CRIMINALÍSTICA — NÚCLEO DE MONTE ALBOR",
+    "documento": "AUTO DE APREENSÃO — ESCRITÓRIO",
+    "itens": [
+     [
+      "1",
+      "Decanter de cristal com conhaque",
+      "Sobre a bandeja"
+     ],
+     [
+      "2",
+      "Copo de conhaque com resto de bebida",
+      "Sobre a mesa lateral, ao lado da poltrona"
+     ],
+     [
+      "3",
+      "Papel de seda branco, dobrado em quatro, com resíduo de pó branco",
+      "Na lixeira, sob outros papéis"
+     ],
+     [
+      "4",
+      "Óculos de leitura",
+      "No chão"
+     ],
+     [
+      "5",
+      "Livro aberto ('Memórias do vidro')",
+      "No braço da poltrona"
+     ]
+    ],
+    "nota": "Resultados das análises dos itens 1, 2 e 3: ver laudo E-07."
+   }
+  },
+  {
+   "id": "B-01",
+   "titulo": "Contagem do frasco reserva de digoxina",
+   "tipo": "oficio",
+   "objetivos": [
+    3
+   ],
+   "origem": "bonus1",
+   "conteudo": {
+    "orgao": "INSTITUTO DE CRIMINALÍSTICA — NÚCLEO DE MONTE ALBOR",
+    "documento": "INFORMAÇÃO TÉCNICA Nº 118/2024",
+    "campos": [
+     [
+      "Objeto",
+      "Frasco de digoxina 0,25 mg, 30 comprimidos"
+     ],
+     [
+      "Local",
+      "Armário do banheiro da suíte do casal (andar superior)"
+     ],
+     [
+      "Compra",
+      "17/09/2024 (ver recibo E-17)"
+     ]
+    ],
+    "corpo": [
+     "O frasco foi encontrado com o lacre rompido. Contagem: 18 comprimidos. Faltam 12 comprimidos.",
+     "Helena Valente declarou que o frasco estava fechado desde a compra. O porta-comprimidos e o frasco em uso estão completos (ver E-06). A quantidade que falta é compatível com a concentração encontrada no laudo E-05."
+    ],
+    "assinatura": "Paulo Rezende Lima — Perito Criminal"
+   }
+  },
+  {
+   "id": "B-02",
+   "titulo": "Registro de chamadas — celular de Caio Moura",
+   "tipo": "log",
+   "objetivos": [
+    2
+   ],
+   "origem": "bonus1",
+   "conteudo": {
+    "sistema": "REGISTRO DE CHAMADAS (VOZ E VÍDEO) — 21/09/2024",
+    "local": "Linha de Caio Moura — dados fornecidos pela operadora e pelo aplicativo de mensagens",
+    "colunas": [
+     "Hora",
+     "Tipo",
+     "Contato",
+     "Duração"
+    ],
+    "linhas": [
+     [
+      "18:40",
+      "Recebida",
+      "Beatriz",
+      "1 min 02 s"
+     ],
+     [
+      "22:32:05",
+      "Originada (vídeo)",
+      "Fernando Coutinho",
+      "9 min 14 s"
+     ]
+    ],
+    "nota": "Não há nenhuma chamada, de voz ou de vídeo, entre 18:41 e 22:32."
+   }
+  },
+  {
+   "id": "B-03",
+   "titulo": "Registro de chamadas — celular de Beatriz",
+   "tipo": "log",
+   "objetivos": [
+    2
+   ],
+   "origem": "bonus1",
+   "conteudo": {
+    "sistema": "REGISTRO DE CHAMADAS — 21/09/2024",
+    "local": "Linha de Beatriz Valente Moura",
+    "colunas": [
+     "Hora",
+     "Tipo",
+     "Contato",
+     "Duração"
+    ],
+    "linhas": [
+     [
+      "18:40",
+      "Originada",
+      "Caio",
+      "1 min 02 s"
+     ],
+     [
+      "22:06:30",
+      "Originada",
+      "Dra. Silvia Rocha (psicóloga)",
+      "21 min 08 s"
+     ]
+    ],
+    "nota": "A Dra. Silvia Rocha confirmou que fez um atendimento de emergência por telefone com Beatriz das 22h06 às 22h27. Beatriz depois declarou que pensa em se separar de Caio e não queria que isso viesse à tona."
+   }
+  },
+  {
+   "id": "B-04",
+   "titulo": "E-mail de Fernando Coutinho para Caio",
+   "tipo": "email",
+   "objetivos": [
+    2
+   ],
+   "origem": "bonus1",
+   "conteudo": {
+    "de": "Fernando Coutinho <fernando@coutinhodistribuidora.exemplo>",
+    "para": "Caio Moura <caio@cristaisvalente.exemplo>",
+    "data": "Domingo, 22/09/2024, 08:15",
+    "assunto": "Proposta de reposição — 4º trimestre",
+    "corpo": [
+     "Bom dia, Caio.",
+     "Conforme nossa ligação de ontem à noite (que, aliás, foi tarde, já passava das dez e meia!), segue a proposta de reposição para o quarto trimestre.",
+     "Abraço, Fernando."
+    ]
+   }
+  },
+  {
+   "id": "B-05",
+   "titulo": "Relatório de auditoria — Cristais Valente",
+   "tipo": "oficio",
+   "objetivos": [
+    3
+   ],
+   "origem": "bonus2",
+   "conteudo": {
+    "orgao": "FERRAZ & LINS AUDITORES INDEPENDENTES",
+    "documento": "RELATÓRIO PRELIMINAR CONFIDENCIAL — 19/09/2024",
+    "campos": [
+     [
+      "Destinatário",
+      "Augusto Valente, presidente do conselho"
+     ],
+     [
+      "Período auditado",
+      "Jan/2023 a ago/2024"
+     ]
+    ],
+    "corpo": [
+     "Identificamos pagamentos que somam R$ 2.314.600,00 à fornecedora Vidraria Ostra Azul Ltda., cujo CNPJ está inativo desde 2021. Não há registro de entrega de nenhuma mercadoria.",
+     "Todos os pagamentos foram aprovados pelo diretor financeiro, Caio Moura. A conta bancária de destino tem como procurador o próprio Caio Moura.",
+     "Recomendamos o afastamento imediato do diretor financeiro e a comunicação dos fatos à autoridade policial."
+    ],
+    "assinatura": "Rita Ferraz — Sócia-auditora"
+   }
+  },
+  {
+   "id": "B-06",
+   "titulo": "E-mail de Augusto ao advogado (20/09)",
+   "tipo": "email",
+   "objetivos": [
+    3
+   ],
+   "origem": "bonus2",
+   "conteudo": {
+    "de": "Augusto Valente <augusto@cristaisvalente.exemplo>",
+    "para": "Dr. Paulo Arantes <paulo@arantesadvocacia.exemplo>",
+    "data": "Sexta, 20/09/2024, 23:14",
+    "assunto": "Segunda-feira",
+    "corpo": [
+     "Paulo,",
+     "Segunda às 9h, como combinado. Quero assinar o testamento novo e quero que você leve a auditoria à polícia na mesma semana. É o Caio.",
+     "Não comente nada com a Beatriz ainda. Eu mesmo vou contar a ela.",
+     "Amanhã vou reunir a família para jantar. Não vou dizer nomes, mas quero olhar nos olhos dele.",
+     "Augusto"
+    ]
+   }
+  },
+  {
+   "id": "B-07",
+   "titulo": "Laudo papiloscópico — frasco reserva",
+   "tipo": "oficio",
+   "objetivos": [
+    3
+   ],
+   "origem": "bonus2",
+   "conteudo": {
+    "orgao": "INSTITUTO DE IDENTIFICAÇÃO — NÚCLEO DE MONTE ALBOR",
+    "documento": "LAUDO PAPILOSCÓPICO Nº 0981/2024",
+    "campos": [
+     [
+      "Objeto",
+      "Frasco de digoxina 0,25 mg (ver B-01)"
+     ],
+     [
+      "Padrões comparados",
+      "Todos os presentes na residência em 21/09/2024"
+     ]
+    ],
+    "tabela": {
+     "titulo": "Fragmentos encontrados",
+     "cab": [
+      "Local",
+      "Resultado"
+     ],
+     "linhas": [
+      [
+       "Tampa",
+       "Fragmentos compatíveis com Helena Valente (que comprou o frasco)."
+      ],
+      [
+       "Rótulo, lado direito",
+       "Fragmento de polegar direito COMPATÍVEL com Caio Moura (12 pontos característicos coincidentes)."
+      ]
+     ]
+    },
+    "corpo": [
+     "Caio Moura declarou não ter subido ao andar superior na noite dos fatos e não ter acesso ao banheiro da suíte do casal."
+    ],
+    "assinatura": "Neide Barcelos — Papiloscopista"
+   }
+  },
+  {
+   "id": "B-08",
+   "titulo": "Mensagem apagada recuperada — celular de Caio",
+   "tipo": "chat",
+   "objetivos": [
+    3
+   ],
+   "origem": "bonus2",
+   "conteudo": {
+    "grupo": "Conversa com “R.” (apagada às 23:58, recuperada pela perícia)",
+    "data": "Sábado, 21/09/2024",
+    "msgs": [
+     [
+      "18:52",
+      "Caio",
+      "o velho marcou advogado pra segunda"
+     ],
+     [
+      "18:53",
+      "Caio",
+      "se ele abrir a boca eu tô acabado"
+     ],
+     [
+      "19:02",
+      "R.",
+      "calma. vê o que dá pra fazer hoje"
+     ]
+    ]
+   }
+  }
+ ],
+ "objetivos": [
+  {
+   "n": 1,
+   "titulo": "Não foi o coração",
+   "pergunta": "O Dr. Renato diz que Augusto morreu do coração. Prove o que realmente aconteceu.",
+   "campos": [
+    {
+     "id": "fato",
+     "label": "O que causou a morte de Augusto?",
+     "opcoes": [
+      {
+       "id": "a",
+       "texto": "Morte natural: um problema cardíaco."
+      },
+      {
+       "id": "b",
+       "texto": "Overdose acidental: ele tomou o próprio remédio a mais, por engano."
+      },
+      {
+       "id": "c",
+       "texto": "Envenenamento: o remédio foi colocado no copo de conhaque dele."
+      },
+      {
+       "id": "d",
+       "texto": "Envenenamento: o remédio foi colocado no decanter de conhaque."
+      }
+     ]
+    }
+   ],
+   "n_provas": 3,
+   "aceitas": [
+    {
+     "fato": "c",
+     "provas": [
+      [
+       "E-05",
+       "E-06",
+       "E-07"
+      ],
+      [
+       "E-06",
+       "E-07",
+       "E-26"
+      ]
+     ]
+    }
+   ],
+   "quase": [
+    {
+     "campos": {
+      "fato": "a"
+     },
+     "msg": "Releia o laudo E-05. Aquele número no sangue combina com morte natural?"
+    },
+    {
+     "campos": {
+      "fato": "b"
+     },
+     "msg": "Se ele tivesse tomado remédio a mais por engano, a rotina dos remédios (E-06) contaria outra história."
+    },
+    {
+     "campos": {
+      "fato": "d"
+     },
+     "msg": "Releia o laudo E-07 com atenção: o que deu positivo e o que deu negativo?"
+    },
+    {
+     "campos": {
+      "fato": "c"
+     },
+     "msg": "Você descobriu o que aconteceu. Agora escolha as 3 provas que demonstram: o excesso no sangue, que não foi engano de dose e onde estava o veneno."
+    }
+   ],
+   "dicas": [
+    "Comece pelo laudo do IML. O que havia no sangue de Augusto?",
+    "Se ele tivesse tomado comprimidos a mais por engano, isso apareceria na rotina de remédios dele. E onde exatamente estava a substância: no copo, no decanter ou nos dois?",
+    "E-05 mostra digoxina cinco vezes acima do normal. E-06 mostra que a dose do dia foi tomada normalmente e nada sumiu do porta-comprimidos. E-07 mostra que só o copo tinha digoxina; o decanter, não."
+   ],
+   "bonus": [
+    "B-01",
+    "B-02",
+    "B-03",
+    "B-04"
+   ],
+   "msg_acerto": "Augusto foi envenenado. Alguém colocou digoxina triturada no copo que esperava por ele no escritório, entre 21h30 e 22h12. Novas provas foram liberadas."
+  },
+  {
+   "n": 2,
+   "titulo": "Quem mentiu sobre o álibi?",
+   "pergunta": "Uma das pessoas da casa mentiu sobre onde estava enquanto o copo era envenenado. Quem? Prove a mentira.",
+   "campos": [
+    {
+     "id": "suspeito",
+     "label": "Quem mentiu sobre o álibi?",
+     "opcoes": [
+      {
+       "id": "helena",
+       "texto": "Helena Valente"
+      },
+      {
+       "id": "rafael",
+       "texto": "Rafael Valente"
+      },
+      {
+       "id": "beatriz",
+       "texto": "Beatriz Valente Moura"
+      },
+      {
+       "id": "caio",
+       "texto": "Caio Moura"
+      },
+      {
+       "id": "lucia",
+       "texto": "Lúcia Prado"
+      },
+      {
+       "id": "renato",
+       "texto": "Dr. Renato Ilha"
+      }
+     ]
+    }
+   ],
+   "n_provas": 3,
+   "aceitas": [
+    {
+     "suspeito": "caio",
+     "provas": [
+      [
+       "E-12",
+       "E-18",
+       "B-02"
+      ],
+      [
+       "E-12",
+       "E-18",
+       "B-04"
+      ],
+      [
+       "E-12",
+       "B-02",
+       "B-04"
+      ],
+      [
+       "E-02",
+       "E-18",
+       "B-02"
+      ],
+      [
+       "E-02",
+       "E-18",
+       "B-04"
+      ],
+      [
+       "E-02",
+       "B-02",
+       "B-04"
+      ]
+     ]
+    }
+   ],
+   "quase": [
+    {
+     "campos": {
+      "suspeito": "rafael"
+     },
+     "msg": "A Lúcia só viu uma camisa escura de costas (E-13). Quem mais estava de azul-marinho (E-15)? E onde estava o Rafael às 21h50 (E-24)?"
+    },
+    {
+     "campos": {
+      "suspeito": "beatriz"
+     },
+     "msg": "O álibi da Beatriz tem um buraco na câmera (E-25), mas existe um registro que confirma onde ela estava. Ele foi liberado no Objetivo 1."
+    },
+    {
+     "campos": {
+      "suspeito": "lucia"
+     },
+     "msg": "Confira o sensor da cozinha no registro do alarme (E-18)."
+    },
+    {
+     "campos": {
+      "suspeito": "helena"
+     },
+     "msg": "O vídeo E-24 e o sensor da sala de música (E-18) mostram onde a Helena estava."
+    },
+    {
+     "campos": {
+      "suspeito": "renato"
+     },
+     "msg": "Confira o recibo E-23: a que horas ele já estava em casa?"
+    },
+    {
+     "campos": {
+      "suspeito": "caio"
+     },
+     "msg": "Suspeito certo. Agora mostre a mentira: o que ele declarou e quais registros desmentem a declaração."
+    }
+   ],
+   "dicas": [
+    "Compare o que cada um declarou (E-02) com os registros que não mentem: sensores, câmera e chamadas.",
+    "Existe um ambiente que ficou completamente vazio no alarme enquanto alguém jurava estar lá dentro. Veja também os registros de chamadas liberados no Objetivo 1.",
+    "Caio disse que estava na garagem, em ligação, das 21h45 às 22h20 (E-12). O sensor da garagem não registra ninguém até 22h31 (E-18), e a única ligação dele começa às 22h32 (B-02)."
+   ],
+   "bonus": [
+    "B-05",
+    "B-06",
+    "B-07",
+    "B-08"
+   ],
+   "msg_acerto": "Caio mentiu. Ele não estava na garagem quando o copo foi envenenado: só entrou lá às 22h31 e fez a ligação às 22h32. Novas provas foram liberadas."
+  },
+  {
+   "n": 3,
+   "titulo": "Acusação final",
+   "pergunta": "Monte a acusação: quem matou Augusto Valente, como e por quê?",
+   "campos": [
+    {
+     "id": "suspeito",
+     "label": "Culpado",
+     "opcoes": [
+      {
+       "id": "helena",
+       "texto": "Helena Valente"
+      },
+      {
+       "id": "rafael",
+       "texto": "Rafael Valente"
+      },
+      {
+       "id": "beatriz",
+       "texto": "Beatriz Valente Moura"
+      },
+      {
+       "id": "caio",
+       "texto": "Caio Moura"
+      },
+      {
+       "id": "lucia",
+       "texto": "Lúcia Prado"
+      },
+      {
+       "id": "renato",
+       "texto": "Dr. Renato Ilha"
+      }
+     ]
+    },
+    {
+     "id": "metodo",
+     "label": "Como",
+     "opcoes": [
+      {
+       "id": "m1",
+       "texto": "Triturou comprimidos do frasco reserva da suíte e colocou no copo de conhaque."
+      },
+      {
+       "id": "m2",
+       "texto": "Colocou o remédio no decanter de conhaque."
+      },
+      {
+       "id": "m3",
+       "texto": "Misturou o remédio na comida do jantar."
+      },
+      {
+       "id": "m4",
+       "texto": "Trocou os comprimidos do porta-comprimidos."
+      }
+     ]
+    },
+    {
+     "id": "motivo",
+     "label": "Por quê",
+     "opcoes": [
+      {
+       "id": "mo1",
+       "texto": "Herança: a mudança no testamento."
+      },
+      {
+       "id": "mo2",
+       "texto": "Augusto ia denunciá-lo pelo desvio de dinheiro na empresa."
+      },
+      {
+       "id": "mo3",
+       "texto": "Dívidas de jogo."
+      },
+      {
+       "id": "mo4",
+       "texto": "O fim do casamento."
+      }
+     ]
+    }
+   ],
+   "n_provas": 3,
+   "aceitas": [
+    {
+     "suspeito": "caio",
+     "metodo": "m1",
+     "motivo": "mo2",
+     "provas": [
+      [
+       "B-07",
+       "B-01",
+       "B-06"
+      ],
+      [
+       "B-07",
+       "B-01",
+       "B-05"
+      ],
+      [
+       "B-07",
+       "B-01",
+       "B-08"
+      ],
+      [
+       "B-07",
+       "E-07",
+       "B-06"
+      ],
+      [
+       "B-07",
+       "E-07",
+       "B-05"
+      ],
+      [
+       "B-07",
+       "E-07",
+       "B-08"
+      ],
+      [
+       "B-07",
+       "E-26",
+       "B-06"
+      ],
+      [
+       "B-07",
+       "E-26",
+       "B-05"
+      ],
+      [
+       "B-07",
+       "E-26",
+       "B-08"
+      ]
+     ]
+    }
+   ],
+   "quase": [
+    {
+     "campos": {
+      "suspeito": "caio",
+      "metodo": "m1",
+      "motivo": "mo1"
+     },
+     "msg": "Caio nem era herdeiro (E-02). O que Augusto ia fazer na segunda que acabaria com ele? Releia B-06."
+    },
+    {
+     "campos": {
+      "suspeito": "caio",
+      "metodo": "m2",
+      "motivo": "mo2"
+     },
+     "msg": "O decanter deu negativo (E-07). Onde estava o veneno?"
+    },
+    {
+     "campos": {
+      "suspeito": "caio",
+      "metodo": "m4",
+      "motivo": "mo2"
+     },
+     "msg": "O porta-comprimidos estava completo (E-06). De onde saíram os comprimidos? Veja B-01."
+    },
+    {
+     "campos": {
+      "suspeito": "caio",
+      "metodo": "m3",
+      "motivo": "mo2"
+     },
+     "msg": "Todos comeram o mesmo jantar, e o veneno estava no copo (E-07)."
+    },
+    {
+     "campos": {
+      "suspeito": "caio",
+      "metodo": "m1",
+      "motivo": "mo2"
+     },
+     "msg": "A acusação está certa. Agora sustente com 3 provas: de onde vieram os comprimidos, o que liga Caio a eles e qual era o motivo."
+    },
+    {
+     "campos": {
+      "suspeito": "rafael"
+     },
+     "msg": "O vídeo E-24 coloca Rafael ao piano no momento em que alguém subiu a escada."
+    },
+    {
+     "campos": {
+      "suspeito": "beatriz"
+     },
+     "msg": "Às 21h56, quando o copo foi envenenado, Beatriz estava na sala de música (E-24, E-25). E B-03 confirma a ligação dela depois."
+    },
+    {
+     "campos": {
+      "suspeito": "helena"
+     },
+     "msg": "Helena comprou o frasco, mas a digital no rótulo não é dela (B-07)."
+    },
+    {
+     "campos": {
+      "suspeito": "lucia"
+     },
+     "msg": "O sensor da cozinha (E-18) mostra Lúcia lá o tempo todo, inclusive às 21h56."
+    },
+    {
+     "campos": {
+      "suspeito": "renato"
+     },
+     "msg": "O Dr. Renato já estava em casa às 21h59 (E-23) e o portão registra a saída dele às 21h38 (E-18)."
+    }
+   ],
+   "dicas": [
+    "Quem tinha motivo para impedir que Augusto chegasse à segunda-feira? Leia com calma os documentos liberados no Objetivo 2.",
+    "O veneno não veio do porta-comprimidos (E-06). De onde vieram os comprimidos, e quem tocou nesse frasco?",
+    "B-01: faltam 12 comprimidos no frasco reserva da suíte. B-07: a digital de Caio está no rótulo, embora ele diga que nunca subiu. B-06: na segunda, Augusto ia levar a auditoria do desvio à polícia."
+   ],
+   "bonus": [],
+   "msg_acerto": "Caso encerrado. Caio Moura matou Augusto Valente."
+  }
+ ],
+ "solucao": {
+  "relato": [
+   "Caio Moura, diretor financeiro da Cristais Valente, desviou R$ 2.314.600,00 da empresa por meio de uma fornecedora fantasma, a Vidraria Ostra Azul (B-05). Augusto encomendou a auditoria que descobriu tudo e marcou para segunda-feira, às 9h, a assinatura de um novo testamento e a entrega da auditoria à polícia (B-06, E-16).",
+   "No jantar de sábado, Augusto avisou que 'algumas coisas iam mudar'. Caio entendeu o recado. Às 21h48, disse que ia ao carro fazer uma ligação. Em vez disso, subiu a escada às 21h50 (sensor S6, E-18). Lúcia o viu de costas e o confundiu com Rafael, porque os dois usavam camisa azul-marinho (E-13, E-15). Mas Rafael estava ao piano, gravado no vídeo de Helena (E-24).",
+   "No banheiro da suíte, Caio abriu o frasco reserva que Helena tinha comprado na terça (E-17), tirou 12 comprimidos (B-01) e deixou no rótulo a digital do polegar (B-07). Triturou tudo num papel de seda, desceu às 21h55 e, às 21h56, entrou no escritório (S3). Colocou o pó e um pouco de conhaque no único copo da bandeja que Lúcia tinha deixado às 21h30, limpou o copo por fora e jogou o papel na lixeira (E-07, E-26).",
+   "Às 22h12, Augusto entrou no escritório, serviu-se e bebeu, como fazia todas as noites. O decanter estava limpo; só o copo tinha veneno (E-07). A digoxina chegou a cinco vezes o limite terapêutico (E-05) e causou uma arritmia fatal.",
+   "Para ter um álibi, Caio só foi à garagem às 22h31 (S1) e ligou para o cliente às 22h32 (B-02, B-04). Depois, declarou que estava lá desde as 21h45 (E-12). O sensor da garagem, que registra até quem está sentado dentro do carro, ficou vazio a noite toda até 22h31 (E-18)."
+  ],
+  "confissao": "Eu ia devolver o dinheiro. Ia dar um jeito. Mas ele não ia me ouvir: ia direto na polícia, na segunda. Quando ele disse no jantar que 'as coisas iam mudar', olhando para mim, eu entendi que não tinha mais tempo. Eu sabia do conhaque, todo mundo sabia. Sabia do remédio, a Helena tinha comentado do frasco novo. Subi, desci, foram cinco minutos. Achei que ninguém ia pedir necropsia de um homem de 71 anos com o coração fraco. O Renato quase assinou. Quase. — Caio Moura, em depoimento à Delegada Marta Siqueira, 24/09/2024.",
+  "pistas": [
+   [
+    "E-05",
+    "O excesso de digoxina mostra intoxicação, não morte natural."
+   ],
+   [
+    "E-06",
+    "A dose do dia foi tomada normalmente e nada sumiu do porta-comprimidos: não foi engano de dose."
+   ],
+   [
+    "E-07",
+    "Só o copo tinha veneno. Ele foi preparado para Augusto, entre 21h30 e 22h12."
+   ],
+   [
+    "E-18",
+    "O único movimento no corredor do escritório nesse intervalo, antes de Augusto, é às 21h56, logo depois de alguém descer a escada (21h55). A garagem fica vazia até 22h31."
+   ],
+   [
+    "E-24",
+    "Rafael estava ao piano às 21h50: o homem de azul-marinho na escada não era ele."
+   ],
+   [
+    "B-02",
+    "A ligação de Caio começa às 22h32, e não às 21h45 como ele declarou."
+   ],
+   [
+    "B-01 + B-07",
+    "Faltam 12 comprimidos no frasco reserva, e a digital de Caio está no rótulo."
+   ],
+   [
+    "B-05 + B-06",
+    "Na segunda, Augusto ia entregar à polícia a prova do desvio de R$ 2,3 milhões."
+   ]
+  ]
+ },
+ "interrogatorio": {
+  "ativo": false,
+  "nota": "Preparado para a fase 2 do produto. Perguntas fixas por suspeito, respostas tiradas dos depoimentos."
+ }
+}

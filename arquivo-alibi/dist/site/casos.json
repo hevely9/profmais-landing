@@ -1,0 +1,45 @@
+{
+ "url": "https://alibi-casos.pages.dev",
+ "perfil": "@alibi.criminal",
+ "combo": "LINK_KIWIFY_combo",
+ "casos": [
+  {
+   "slug": "mansao-valente",
+   "numero": "001",
+   "titulo": "O Último Jantar na Mansão Valente",
+   "sinopse": "Augusto Valente reuniu a família para um jantar e avisou: na segunda-feira, algumas coisas iam mudar. Uma hora depois, foi encontrado morto no escritório. O médico da família diz que foi o coração. Você acha que não.",
+   "acento": "#C9A227",
+   "dificuldade": "Média",
+   "duracao": "60–90 min",
+   "jogadores": "1 a 4",
+   "classificacao": "14+",
+   "compra": "LINK_KIWIFY_mansao-valente",
+   "prefixo": "VALENTE",
+   "disponivel": true
+  },
+  {
+   "slug": "linha-404",
+   "numero": "002",
+   "titulo": "Linha 404: O Ônibus da Meia-Noite",
+   "sinopse": "Quarenta e dois passageiros embarcaram. Um não chegou vivo ao destino. Ninguém desceu no caminho.",
+   "acento": "#3E6A8A",
+   "dificuldade": "Média",
+   "duracao": "60–90 min",
+   "jogadores": "1 a 4",
+   "classificacao": "14+",
+   "disponivel": false
+  },
+  {
+   "slug": "serra-do-corvo",
+   "numero": "003",
+   "titulo": "Ninguém Saiu de Serra do Corvo",
+   "sinopse": "Numa cidade onde todo mundo se conhece, uma moça desaparece na noite da festa da padroeira. E todo mundo tem algo a esconder.",
+   "acento": "#5E7A4A",
+   "dificuldade": "Difícil",
+   "duracao": "75–100 min",
+   "jogadores": "1 a 4",
+   "classificacao": "14+",
+   "disponivel": false
+  }
+ ]
+}
