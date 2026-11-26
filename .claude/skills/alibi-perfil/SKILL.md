@@ -148,3 +148,12 @@ Em toda entrega de vídeo, mandar junto:
 
 Antes de entregar, revisar a legenda como editor exigente: cortar palavras, conferir ortografia e garantir que a L1
 sozinha já faça a pessoa querer ver o vídeo.
+
+- **GANCHO DOS 5 PRIMEIROS SEGUNDOS (26/11, usuário — gente saindo no início):**
+  1. Quadro 0 = a imagem REAL mais forte do caso, já em movimento (zoom/soco). Nada de abertura parada, logo ou tela preta.
+  2. Voz começa em até 0,2 s. A 1ª frase traz o número/fato concreto + a virada absurda (ex.: "US$ 100 milhões… pegos por causa de um sanduíche").
+     Abre uma pergunta que só o vídeo responde (curiosidade), e a resposta vem no meio do vídeo, não só no fim.
+  3. 2–3 imagens diferentes nos primeiros 8–9 s; texto grande entrando palavra a palavra junto com a voz.
+  4. Logo depois: "Isso aconteceu de verdade" + lugar/ano, para segurar quem ia arrastar.
+- **NUNCA TELA PRETA SÓ COM LEGENDA (26/11, usuário):** toda cena tem imagem real (foto, vídeo de arquivo, reconstituição do documentário).
+  Cartela só de texto apenas sobre foto/vídeo escurecido. Cena escura demais também conta como "tela preta": trocar por imagem clara.
