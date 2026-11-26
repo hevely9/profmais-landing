@@ -239,17 +239,17 @@ export const Antuerpia: React.FC = () => (
       <Rota r={120.3} pin={121.2} />
     </Plano>
     {/* NOVO: Speedy em pânico */}
-    <Plano r={[125.1, 129.1]}>
-      <Cheia src="an2-rua" r={[125.1, 129.1]} credito={CR} cinza={false} pos="60% 50%" zoom={[1.55, 1.7]} a={0.35} />
+    <Plano r={[125.1, 133.26]} soco={false}>
+      <Mural
+        itens={[{ id: "speedy", r: 125.2, x: 300, y: 520, w: 480, h: 420, img: "an2-silhueta", titulo: "SPEEDY", sub: "o mais nervoso do grupo", rot: -2 }]}
+        fios={[]}
+        camera={[[125.1, 0.95, 0, 0], [133.2, 1.08, 0, -30]]}
+      />
       <Fonte r={125.2} texto="SEGUNDO A REVISTA WIRED" />
-      <Titulo r={127.5} top={340} size={110}>SPEEDY</Titulo>
+      <Rotulo r={126.9} texto="QUEM LARGOU OS SACOS FOI" top={340} size={44} cor={C.fita} />
+      <Tremor r={131.0} forca={12}><Carimbo r={131.0} texto="EM PÂNICO" y={1180} rot={-8} size={90} /></Tremor>
     </Plano>
-    <Plano r={[129.1, 133.26]}>
-      <Tremor r={131.0} forca={10}><Cena r={[129.1, 133.26]} from={56.5} a={0.3} /></Tremor>
-      <Titulo r={129.1} top={340} size={110}>SPEEDY</Titulo>
-      <Rotulo r={129.3} texto="o mais nervoso do grupo" top={470} size={46} />
-      <Faixa r={131.0} texto="EM PÂNICO, NO MEIO DA FUGA" top={1080} size={50} />
-    </Plano>
+    <Flash r={131.0} />
     <Plano r={[133.26, T(111.9)]}>
       <Cheia src="an2-policia" r={[133.26, T(111.9)]} credito={CR} cinza={false} pos="45% 50%" zoom={[1.0, 1.15]} a={0.3} />
       <Rotulo r={T(107.6)} texto="O DONO DO TERRENO ABRE OS SACOS" top={330} size={42} cor={C.fita} />
