@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill, Easing, Img, OffthreadVideo, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
-import palavras from "../../public/palavras-dp30.json";
+import palavras from "../../public/palavras-dp30b.json";
 import { C, COURIER, MONT, SANS, SERIF, clamp } from "../kit";
 
 // ÁLIBI · Nº 030 — CORTE (mesmo formato do Nº 029): melhores momentos sobre o caso Daniella Perez (sem a entrevista da Glória já postada no Nº 029),
@@ -12,8 +12,8 @@ import { C, COURIER, MONT, SANS, SERIF, clamp } from "../kit";
 // → vídeos caseiros de Daniella + desfecho. Trecho com fotos de perícia foi cortado (nada gráfico).
 type W = { text: string; start: number; end: number };
 const WORDS = (palavras as { words: W[] }).words;
-export const GLORIA2_TOTAL = Math.floor(72.0 * 30);
-const BAND_TOP = 650, BAND_H = 608;
+export const GLORIA2_TOTAL = Math.floor(71.8 * 30);
+const BAND_TOP = 590, BAND_H = 780; // quadro 1080×780: o vídeo quadrado sem a faixa de legenda embutida, rostos inteiros
 const useS = () => { const f = useCurrentFrame(); const { fps } = useVideoConfig(); return f / fps; };
 const entra = (t: number, de: number, ate: number, d = 0.45) => interpolate(t, [de, de + d, ate - d, ate], [0, 1, 1, 0], { ...clamp, easing: Easing.inOut(Easing.cubic) });
 
@@ -60,9 +60,8 @@ const Legenda: React.FC = () => {
 // fotos de Daniella (tiradas da montagem de fotos da série) por cima do vídeo enquanto a entrevistada fala
 const FOTOS: [number, number, string, number][] = [
   [2.6, 4.1, "f150", 0], [4.1, 5.65, "f157", 1],
-  [35.9, 37.6, "f153", 0], [37.6, 39.35, "f161", 1],
-  [46.8, 48.75, "f165", 0], [48.75, 50.7, "f177", 1],
-  [50.7, 53.2, "f168.5", 0], [53.2, 55.6, "f181.5", 1], [55.6, 58.1, "f189", 0],
+  [26.6, 28.85, "f153", 0], [28.85, 31.1, "f161", 1],
+  [39.8, 41.6, "f165", 0], [41.6, 43.4, "f177", 1],
 ];
 const Fotos: React.FC = () => {
   const t = useS();
@@ -70,9 +69,10 @@ const Fotos: React.FC = () => {
     if (t < de - 0.4 || t > ate + 0.4) return null;
     const prevColado = i > 0 && Math.abs(FOTOS[i - 1][1] - de) < 0.05;
     const op = interpolate(t, [de - (prevColado ? 0.3 : 0.15), de + 0.15, ate - 0.15, ate + 0.3], [0, 1, 1, 0], clamp);
-    const z = interpolate(t, [de - 0.3, ate + 0.3], dir ? [1.12, 1.02] : [1.02, 1.12], clamp);
+    const z = interpolate(t, [de - 0.3, ate + 0.3], dir ? [1.04, 1.0] : [1.0, 1.04], clamp);
     return <div key={i} style={{ position: "absolute", inset: 0, opacity: op }}>
-      <Img src={staticFile(`img/dp30/${f}.jpg`)} style={{ width: "100%", height: "100%", objectFit: "cover", transform: `scale(${z})`, filter: "sepia(0.08)" }} />
+      <Img src={staticFile(`img/dp30/${f}.jpg`)} style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover", filter: "blur(30px) brightness(0.45)", transform: "scale(1.15)" }} />
+      <Img src={staticFile(`img/dp30/${f}.jpg`)} style={{ position: "absolute", width: "100%", height: "100%", objectFit: "contain", transform: `scale(${z})`, filter: "sepia(0.08)" }} />
     </div>;
   })}</>;
 };
@@ -80,10 +80,11 @@ const Fotos: React.FC = () => {
 // título estilo reportagem: muda a cada parte da história ("conta de 1 até 18" só no gancho)
 const TITULOS: [number, number, string, string][] = [
   [0, 14.4, "“CONTA DE 1 ATÉ 18”", "DANIELLA PEREZ, 22 ANOS"],
-  [14.4, 28.0, "O CRIME QUE PAROU O BRASIL", "RIO DE JANEIRO, 1992"],
-  [28.0, 46.8, "TUDO O QUE FOI TIRADO DELA", "A CARREIRA, OS FILHOS, OS NETOS"],
-  [46.8, 58.1, "A LUTA PELA MEMÓRIA", "“ELA NÃO VAI SER APAGADA”"],
-  [58.1, 72.1, "30 ANOS DEPOIS", "A MEMÓRIA DE DANIELLA"],
+  [14.4, 25.5, "O CRIME QUE PAROU O BRASIL", "RIO DE JANEIRO, 1992"],
+  [25.5, 38.2, "TUDO O QUE FOI TIRADO DELA", "A CARREIRA, OS FILHOS, OS NETOS"],
+  [38.2, 48.0, "A LUTA PELA MEMÓRIA", "“ELA NÃO VAI SER APAGADA”"],
+  [48.0, 58.1, "NAS PALAVRAS DELA", "DANIELLA PEREZ, ATRIZ"],
+  [58.1, 71.8, "30 ANOS DEPOIS", "A MEMÓRIA DE DANIELLA"],
 ];
 const Titulos: React.FC = () => {
   const t = useS();
@@ -91,7 +92,7 @@ const Titulos: React.FC = () => {
     if (t < de - 0.4 || t > ate + 0.4) return null;
     const op = interpolate(t, [de - (i ? 0.25 : 0), de + (i ? 0.25 : 0.5), ate - 0.25, ate + 0.25], [0, 1, 1, i === TITULOS.length - 1 ? 1 : 0], clamp);
     const y = interpolate(t, [de - 0.25, de + 0.35], [i ? 18 : 20, 0], { ...clamp, easing: Easing.out(Easing.cubic) });
-    return <div key={i} style={{ position: "absolute", left: 60, right: 60, top: 450, opacity: op, transform: `translateY(${y}px)` }}>
+    return <div key={i} style={{ position: "absolute", left: 60, right: 60, top: 440, opacity: op, transform: `translateY(${y}px)` }}>
       <div style={{ fontFamily: MONT, fontWeight: 800, fontSize: 56, lineHeight: 1.1, color: C.osso, textShadow: "0 4px 18px rgba(0,0,0,0.9)" }}>{l1}</div>
       <div style={{ display: "inline-block", marginTop: 10, background: C.lacre, padding: "2px 14px", fontFamily: MONT, fontWeight: 800, fontSize: 44, color: C.osso }}>{l2}</div>
     </div>;
@@ -112,7 +113,7 @@ const Voz: React.FC<{ de: number; ate: number }> = ({ de, ate }) => {
 // cartões finais (sem fala): desfecho + chamada do perfil
 const Final: React.FC = () => {
   const t = useS();
-  const a = entra(t, 58.4, 62.6), b = entra(t, 62.8, 67.8), c = entra(t, 68.0, 72.2);
+  const a = entra(t, 58.4, 62.6), b = entra(t, 62.8, 67.8), c = entra(t, 68.0, 72.0);
   const box: React.CSSProperties = { position: "absolute", left: 60, right: 60, top: BAND_TOP + BAND_H + 36, textAlign: "center" };
   return <>
     {a > 0 && <div style={{ ...box, opacity: a, transform: `translateY(${(1 - a) * 16}px)` }}>
@@ -134,14 +135,14 @@ export const CorteGloria2: React.FC = () => {
   const t = useS();
   const tit = interpolate(t, [0, 0.5], [0, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
   return <AbsoluteFill style={{ background: "#0A0A0B", overflow: "hidden" }}>
-    <AbsoluteFill><OffthreadVideo src={staticFile("v/dp30.mp4")} muted style={{ width: "100%", height: "100%", objectFit: "cover", filter: "blur(42px) brightness(0.3) saturate(0.8)", transform: "scale(1.2)" }} /></AbsoluteFill>
+    <AbsoluteFill><OffthreadVideo src={staticFile("v/dp30b.mp4")} muted style={{ width: "100%", height: "100%", objectFit: "cover", filter: "blur(42px) brightness(0.3) saturate(0.8)", transform: "scale(1.2)" }} /></AbsoluteFill>
     <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(10,10,11,0.55) 0%, rgba(10,10,11,0.1) 30%, rgba(10,10,11,0.1) 70%, rgba(10,10,11,0.6) 100%)" }} />
     <div style={{ position: "absolute", left: 0, top: BAND_TOP, width: 1080, height: BAND_H, overflow: "hidden", borderTop: "3px solid rgba(236,231,220,0.85)", borderBottom: "3px solid rgba(236,231,220,0.85)", boxShadow: "0 30px 80px rgba(0,0,0,0.8)" }}>
-      <OffthreadVideo src={staticFile("v/dp30.mp4")} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+      <OffthreadVideo src={staticFile("v/dp30b.mp4")} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
       <Fotos />
       <div style={{ position: "absolute", right: 14, top: 12, padding: "4px 10px", background: "rgba(10,10,11,0.6)", fontFamily: SANS, fontWeight: 700, fontSize: 18, color: "rgba(236,231,220,0.85)" }}>HBO MAX · PACTO BRUTAL</div>
     </div>
-    <div style={{ position: "absolute", left: 60, right: 60, top: 380, display: "flex", justifyContent: "space-between", alignItems: "center", opacity: tit }}>
+    <div style={{ position: "absolute", left: 60, right: 60, top: 370, display: "flex", justifyContent: "space-between", alignItems: "center", opacity: tit }}>
       <div style={{ fontFamily: SERIF, fontWeight: 900, fontSize: 40, letterSpacing: "0.14em", color: C.osso }}>ÁLIBI</div>
       <div style={{ padding: "5px 14px", background: C.lacre, fontFamily: MONT, fontWeight: 800, fontSize: 26, color: C.osso, letterSpacing: "0.06em" }}>Nº 030 · CASO REAL</div>
     </div>
@@ -149,12 +150,11 @@ export const CorteGloria2: React.FC = () => {
     <Cracha de={2.9} ate={5.5} nome="DANIELLA PEREZ" sub="ATRIZ · 22 ANOS · MORTA EM 28/12/1992" />
     <Cracha de={0.3} ate={2.2} nome="GLÓRIA PEREZ" sub="MÃE DE DANIELLA · NA ÉPOCA DO CRIME" />
     <Cracha de={11.9} ate={14.3} nome="RAUL GAZOLLA" sub="ATOR · MARIDO DE DANIELLA" />
-    <Cracha de={22.8} ate={24.2} nome="GUILHERME DE PÁDUA" sub="ATOR · CONDENADO PELO CRIME" />
-    <Voz de={34.6} ate={41.1} />
-    <Voz de={47.8} ate={50.6} />
+    <Voz de={25.7} ate={37.9} />
+    <Cracha de={48.4} ate={51.8} nome="DANIELLA PEREZ" sub="ATRIZ · EM ENTREVISTA" />
     <Legenda />
     <Final />
-    <div style={{ position: "absolute", left: 60, right: 60, top: 1720, fontFamily: SANS, fontWeight: 600, fontSize: 19, color: "rgba(236,231,220,0.6)" }}>Reprodução · HBO Max, “Pacto Brutal: o assassinato de Daniella Perez” (2022) e arquivo de TV</div>
+    <div style={{ position: "absolute", left: 60, right: 60, top: 1720, fontFamily: SANS, fontWeight: 600, fontSize: 19, color: "rgba(236,231,220,0.6)" }}>Reprodução · HBO Max, “Pacto Brutal: o assassinato de Daniella Perez” (2022)</div>
     <div style={{ position: "absolute", left: 60, right: 60, top: 1755, fontFamily: COURIER, fontWeight: 700, fontSize: 24, color: "rgba(236,231,220,0.55)", letterSpacing: "0.08em" }}>toda história tem um álibi.</div>
   </AbsoluteFill>;
 };
