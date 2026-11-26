@@ -157,3 +157,9 @@ sozinha já faça a pessoa querer ver o vídeo.
   4. Logo depois: "Isso aconteceu de verdade" + lugar/ano, para segurar quem ia arrastar.
 - **NUNCA TELA PRETA SÓ COM LEGENDA (26/11, usuário):** toda cena tem imagem real (foto, vídeo de arquivo, reconstituição do documentário).
   Cartela só de texto apenas sobre foto/vídeo escurecido. Cena escura demais também conta como "tela preta": trocar por imagem clara.
+- **VISUAL QUE PRENDE (26/11, usuário — "não é só a história, o visual tem que prender"):** vídeos longos (~3 min) continuam,
+  mas nenhuma imagem parada por mais de ~5 s sem algo acontecer. Usar animações que CONTAM a história (mural de investigação
+  com fios, grade/contador do que foi levado, rota em mapa, círculo desenhado na prova, laser/scanner, linha do tempo), flash e
+  tremor nos pontos de virada, cortes mais rápidos no gancho. A cada vídeo, subir o nível em relação ao anterior.
+- **Trechos de trailer/documentário:** nunca deixar aparecer claquete de bastidor, cartela com título/data de estreia, logo
+  ou faixa preta de cinema (zoom ≥ 1,55 em quadro letterbox). Mapear o trailer a cada 0,5 s antes de escolher os trechos.

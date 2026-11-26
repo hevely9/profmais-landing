@@ -117,10 +117,10 @@ export const Antuerpia: React.FC = () => (
 
     {/* ═══ CONTEXTO ═══ */}
     <Plano r={[9.0, 13.7]}>
-      <Cena r={[9.0, 13.7]} from={1.5} />
+      <Cena r={[9.0, 13.7]} from={3.0} />
       <Rotulo r={9.0} texto="ISSO ACONTECEU DE VERDADE" top={300} size={42} cor={C.fita} />
-      <Titulo r={10.2} top={370} size={88}>ANTUÉRPIA · BÉLGICA</Titulo>
-      <Rotulo r={11.7} texto="FEVEREIRO DE 2003" top={490} size={48} />
+      <Titulo r={10.2} top={370} size={70}>ANTUÉRPIA · BÉLGICA</Titulo>
+      <Rotulo r={11.7} texto="FEVEREIRO DE 2003" top={470} size={48} />
     </Plano>
     <Plano r={[13.7, 20.1]}>
       <Cheia src="an2-diamante" r={[13.7, 20.1]} credito={CR} cinza={false} pos="36% 50%" zoom={[1.2, 1.4]} a={0.3} />
@@ -150,7 +150,7 @@ export const Antuerpia: React.FC = () => (
     </Plano>
     <Flash r={36.6} />
     <Plano r={[38.4, 42.7]}>
-      <Cheia src="an2-rua" r={[38.4, 42.7]} credito={CR} cinza={false} pos="55% 50%" zoom={[1.0, 1.12]} />
+      <Cheia src="an2-rua" r={[38.4, 42.7]} credito={CR} cinza={false} pos="55% 50%" zoom={[1.55, 1.7]} />
       <Rotulo r={38.4} texto="MAS UM HOMEM JÁ ESTAVA LÁ DENTRO" top={330} size={44} cor={C.fita} />
       <Faixa r={40.6} texto="HÁ MAIS DE 2 ANOS" top={420} size={64} />
     </Plano>
@@ -240,7 +240,7 @@ export const Antuerpia: React.FC = () => (
     </Plano>
     {/* NOVO: Speedy em pânico */}
     <Plano r={[125.1, 129.1]}>
-      <Cena r={[125.1, 129.1]} from={53.0} a={0.3} />
+      <Cheia src="an2-rua" r={[125.1, 129.1]} credito={CR} cinza={false} pos="60% 50%" zoom={[1.55, 1.7]} a={0.35} />
       <Fonte r={125.2} texto="SEGUNDO A REVISTA WIRED" />
       <Titulo r={127.5} top={340} size={110}>SPEEDY</Titulo>
     </Plano>
