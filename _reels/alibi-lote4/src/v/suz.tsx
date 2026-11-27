@@ -219,17 +219,17 @@ const seq = (f: string, trechos: [number, number][], crop: Crop, gap = 0.15, t0 
 const CR1: Crop = [28, 414, 520, 292];
 const S1 = seq("s1", [[0.0, 6.6], [13.8, 17.7], [22.2, 37.4], [40.05, 43.45], [45.2, 50.0], [62.9, 76.65], [84.7, 90.5], [93.5, 109.95], [119.6, 121.5]], CR1);
 const F1 = S1.fim; // ~73,0 s
-export const SUZ031_TOTAL = Math.round((F1 + 10.6) * 30);
+export const SUZ031_TOTAL = Math.round((F1 + 11.2) * 30);
 const corte031: Corte = {
   n: "Nº 031",
-  planos: [...S1.ps, { at: F1 + 0.15, dur: 10.5, v: { f: "s1", from: 110.2, crop: CR1 } }],
-  fix: [[21, "Andreas."], [83, "descobriu"]], chave: /^(andreas|irmão|silêncio|mortos|grito|desespero|culpa|sofrimento|dor|assim)$/i,
+  planos: [...S1.ps, { at: F1 + 0.15, dur: 11.1, v: { f: "s1", from: 110.2, crop: CR1 } }],
+  fix: [[21, "Andreas."], [83, "descobre que"]], chave: /^(andreas|irmão|silêncio|mortos|grito|desespero|culpa|sofrimento|dor|assim)$/i,
   titulos: [
     [0, S1.T(2, 22.2), "SUZANE FALA DO IRMÃO", "ANDREAS TINHA 15 ANOS"],
     [S1.T(2, 22.2), S1.T(4, 45.2), "A NOITE DO CRIME", "ELA BUSCOU O IRMÃO NA LAN HOUSE"],
     [S1.T(4, 45.2), S1.T(6, 84.7), "A NOTÍCIA", "31 DE OUTUBRO DE 2002"],
     [S1.T(6, 84.7), F1, "24 ANOS DEPOIS", "NETFLIX · 2026"],
-    [F1 + 0.15, F1 + 10.6, "O DESFECHO", "CASO RICHTHOFEN"],
+    [F1 + 0.15, F1 + 11.2, "O DESFECHO", "CASO RICHTHOFEN"],
   ],
   fotos: [
     [S1.T(0, 3.4), S1.T(0, 6.6), "an-irmaos", "Suzane e Andreas, antes do crime"],
@@ -244,9 +244,9 @@ const corte031: Corte = {
   crachas: [{ de: 0.3, ate: 3.2, nome: "SUZANE VON RICHTHOFEN", sub: "CONDENADA PELA MORTE DOS PAIS" }],
   etiquetas: [],
   cartoes: [
-    [F1 + 0.3, F1 + 3.8, <div style={tx()}>Andreas <V>não quis participar</V> do documentário. Vive recluso em São Roque (SP).</div>],
-    [F1 + 4.0, F1 + 7.4, <div style={tx()}>Suzane foi condenada a <V>39 anos e 6 meses</V>. Está em regime aberto desde 2023.</div>],
-    [F1 + 7.6, F1 + 11, <Segue />],
+    [F1 + 0.8, F1 + 4.3, <div style={tx()}>Andreas <V>não quis participar</V> do documentário. Vive recluso em São Roque (SP).</div>],
+    [F1 + 4.5, F1 + 7.9, <div style={tx()}>Suzane foi condenada a <V>39 anos e 6 meses</V>. Está em regime aberto desde 2023.</div>],
+    [F1 + 8.1, F1 + 11.6, <Segue />],
   ],
   fonteTag: "NETFLIX · 2026",
   credito: "Reprodução · Netflix, “Suzane von Richthofen: O que o Tempo Não Apaga” (2026); fotos: arquivo de TV (2002) e redes sociais (2026)",
@@ -258,17 +258,17 @@ export const Suz031: React.FC = () => <CorteBase c={corte031} />;
 const CR3: Crop = [26, 366, 520, 290];
 const S3 = seq("s3", [[145.85, 152.5], [25.0, 44.2], [45.3, 51.9], [92.4, 102.8], [116.9, 129.3], [158.4, 162.85], [170.7, 178.95]], CR3);
 const F3 = S3.fim;
-export const SUZ032_TOTAL = Math.round((F3 + 10.6) * 30);
+export const SUZ032_TOTAL = Math.round((F3 + 11.2) * 30);
 const corte032: Corte = {
   n: "Nº 032",
-  planos: [...S3.ps, { at: F3 + 0.15, dur: 10.5, v: { f: "s3", from: 130.0, crop: CR3 } }],
+  planos: [...S3.ps, { at: F3 + 0.15, dur: 11.1, v: { f: "s3", from: 130.0, crop: CR3 } }],
   fix: [], chave: /^(mim|eu|premeditado|agosto|raiva|sabia|soube|arma|barra|ouvir|daniel)$/i,
   titulos: [
     [0, S3.T(1, 25.0), "“NÃO FUI EU QUE FIZ”", "A VERSÃO DE SUZANE"],
     [S3.T(1, 25.0), S3.T(3, 92.4), "A RECONSTITUIÇÃO", "ONDE ELA ESTAVA?"],
     [S3.T(3, 92.4), S3.T(5, 158.4), "A ARMA", "FEITA À MÃO POR DANIEL"],
     [S3.T(5, 158.4), F3, "24 ANOS DEPOIS", "O QUE ELA DIZ HOJE"],
-    [F3 + 0.15, F3 + 10.6, "O DESFECHO", "CASO RICHTHOFEN"],
+    [F3 + 0.15, F3 + 11.2, "O DESFECHO", "CASO RICHTHOFEN"],
   ],
   fotos: [
     [S3.T(1, 40.4), S3.T(1, 43.5), "s-mansao-aerea", "A casa da família Richthofen"],
@@ -283,9 +283,9 @@ const corte032: Corte = {
     { de: S3.T(5, 158.5), ate: S3.T(5, 162.6), texto: "SUZANE · 2026" },
   ],
   cartoes: [
-    [F3 + 0.3, F3 + 3.8, <div style={tx()}>Na reconstituição, ela confirmou que <V>abriu a porta</V> da casa para os irmãos Cravinhos.</div>],
-    [F3 + 4.0, F3 + 7.4, <div style={tx({ fontSize: 40 })}>Em 2006, o júri condenou Suzane e Daniel a <V>39 anos e 6 meses</V>; Cristian, a 38 anos e 6 meses.</div>],
-    [F3 + 7.6, F3 + 11, <Segue />],
+    [F3 + 0.8, F3 + 4.3, <div style={tx()}>Na reconstituição, ela confirmou que <V>abriu a porta</V> da casa para os irmãos Cravinhos.</div>],
+    [F3 + 4.5, F3 + 7.9, <div style={tx({ fontSize: 40 })}>Em 2006, o júri condenou Suzane e Daniel a <V>39 anos e 6 meses</V>; Cristian, a 38 anos e 6 meses.</div>],
+    [F3 + 8.1, F3 + 11.6, <Segue />],
   ],
   fonteTag: "NETFLIX · 2026",
   credito: "Reprodução · Netflix, “Suzane von Richthofen: O que o Tempo Não Apaga” (2026), com arquivo da reconstituição (2002); fotos: arquivo de TV",
