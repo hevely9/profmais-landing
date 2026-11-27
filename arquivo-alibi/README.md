@@ -32,7 +32,7 @@ config.json                URL final, links de compra (Kiwify/Hotmart), casos "e
 3. Gere:
    ```bash
    node scripts/build.mjs
-   NODE_PATH=$(npm root -g) node scripts/pdf.mjs <novo-slug>
+   NODE_PATH=$(npm root -g) node scripts/impressos.mjs <novo-slug>   # folhas coloridas do modo papel + dossiê (o build já chama)
    python3 scripts/biblia-md.py <novo-slug>
    ```
 4. Rode o teste ponta a ponta (celular 390px e computador): `NODE_PATH=$(npm root -g) node scripts/teste.mjs <novo-slug>`. Ajuste as respostas alternativas usadas no teste (constante `RESP`) para o caso novo.
