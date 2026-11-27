@@ -193,7 +193,6 @@ const EditBase: React.FC<{ e: Edit }> = ({ e }) => {
     <AbsoluteFill style={{ background: `rgba(10,10,11,${0.72 * fimK})` }} />
     <AbsoluteFill style={{ boxShadow: "inset 0 0 220px rgba(0,0,0,0.75)" }} />
     <Audios planos={e.planos} />
-    <Audio src={staticFile("audio/eliza-trilha.mp3")} volume={musVol} />
     <div style={{ position: "absolute", left: 60, right: 60, top: 300, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
       <div style={{ fontFamily: SERIF, fontWeight: 900, fontSize: 38, letterSpacing: "0.14em", color: C.osso, textShadow: "0 3px 12px #000" }}>ÁLIBI</div>
       <div style={{ padding: "5px 14px", background: C.lacre, fontFamily: MONT, fontWeight: 800, fontSize: 24, color: C.osso, letterSpacing: "0.06em" }}>CASO ELIZA SAMUDIO</div>
@@ -221,7 +220,7 @@ const EditBase: React.FC<{ e: Edit }> = ({ e }) => {
   </AbsoluteFill>;
 };
 
-const FIX: Fix[] = [[22, "a"], [23, "polícia."], [34, "maluca?"], [44, "eu."], [71, ""], [76, "Eliza,"], [88, "camisa"], [121, "Eliza"], [136, "Eliza"], [142, "Eliza,"], [149, "Eliza"], [165, "Eliza,"]];
+const FIX: Fix[] = [[0, "Por"], [16, ""], [17, ""], [18, ""], [19, "Tá"], [24, "Pro"], [40, "a"], [41, "polícia."], [52, "maluca?"], [62, "eu."], [89, ""], [94, "Eliza,"], [106, "camisa"], [139, "Eliza"], [154, "Eliza"], [160, "Eliza,"], [167, "Eliza"], [183, "Eliza,"]];
 
 const AIR: Crop = [180, 650, 820, 525];      // vídeo do aeroporto (4:3), sem a legenda queimada
 const DEAM: Crop = [183, 650, 807, 525];     // entrevista de Eliza (4:3)
@@ -230,40 +229,40 @@ const DIR: Crop = [371, 650, 709, 525];      // faixa 16:9, rosto à direita
 const E2: Crop = [87, 335, 401, 297];        // e2 (576 px), centro da faixa, sem a legenda queimada
 const editE: Edit = {
   planos: [
-    { at: 0, dur: 2.35, v: { f: "e4", from: 0.9, crop: AIR }, a: { f: "e4", from: 0.9, dur: 2.35 } },
-    { at: 2.35, dur: 4.45, v: { f: "e4", from: 13.35, crop: AIR }, a: { f: "e4", from: 13.35, dur: 4.45 } },
-    { at: 6.8, dur: 4.6, v: { f: "e4", from: 18.2, crop: AIR }, a: { f: "e4", from: 18.2, dur: 4.6 } },
-    { at: 11.4, dur: 6.9, v: { f: "e4", from: 80.95, crop: DEAM }, a: { f: "e4", from: 80.65, dur: 6.9 } },
-    { at: 18.3, dur: 6.7, v: { f: "e2", from: 22.4, crop: E2 }, a: { f: "e2", from: 21.0, dur: 6.7 } },
-    { at: 25.0, dur: 4.5, v: { f: "e2", from: 38.0, crop: E2 }, a: { f: "e2", from: 37.9, dur: 4.5 } },
-    { at: 29.5, dur: 3.6, v: { f: "e2", from: 57.0, crop: E2 }, a: { f: "e2", from: 57.0, dur: 3.65 } },
-    { at: 33.1, dur: 6.1, v: { f: "e2", from: 61.9, crop: E2 }, a: { f: "e2", from: 61.9, dur: 6.1 } },
-    { at: 39.2, dur: 1.7, v: { f: "e4", from: 58.8, crop: DIR }, a: { f: "e4", from: 58.8, dur: 1.7 } },
-    { at: 40.9, dur: 1.2, v: { f: "e4", from: 60.6, crop: MEIO }, a: { f: "e4", from: 60.6, dur: 14.1 } },
-    { at: 42.1, dur: 4.7, v: { f: "e4", from: 61.8, crop: MEIO } },
-    { at: 46.8, dur: 2.0, v: { f: "e4", from: 66.5, crop: MEIO } },
-    { at: 48.8, dur: 2.2, v: { f: "e4", from: 68.5, crop: MEIO } },
-    { at: 51.0, dur: 4.0, v: { f: "e4", from: 70.7, crop: DIR } },
-    { at: 55.0, dur: 1.6, v: { f: "e2", from: 45.1, crop: E2 }, a: { f: "e4", from: 78.66, dur: 1.6 } },
-    { at: 56.6, dur: 3.4, v: { f: "e4", from: 23.0, crop: AIR } },
-    { at: 60.0, dur: 3.0, v: { f: "e4", from: 5.2, crop: AIR } },
-    { at: 63.0, dur: 2.9, v: { f: "e4", from: 88.0, crop: DEAM } },
-    { at: 65.9, dur: 3.1, v: { f: "e4", from: 10.0, crop: AIR } },
+    { at: 0, dur: 6.25, v: { f: "e4", from: 0.0, crop: AIR }, a: { f: "e4", from: 0.0, dur: 6.25 } },
+    { at: 6.25, dur: 4.45, v: { f: "e4", from: 13.35, crop: AIR }, a: { f: "e4", from: 13.35, dur: 4.45 } },
+    { at: 10.7, dur: 4.6, v: { f: "e4", from: 18.2, crop: AIR }, a: { f: "e4", from: 18.2, dur: 4.6 } },
+    { at: 15.3, dur: 6.9, v: { f: "e4", from: 80.95, crop: DEAM }, a: { f: "e4", from: 80.65, dur: 6.9 } },
+    { at: 22.2, dur: 6.7, v: { f: "e2", from: 22.4, crop: E2 }, a: { f: "e2", from: 21.0, dur: 6.7 } },
+    { at: 28.9, dur: 4.5, v: { f: "e2", from: 38.0, crop: E2 }, a: { f: "e2", from: 37.9, dur: 4.5 } },
+    { at: 33.4, dur: 3.6, v: { f: "e2", from: 57.0, crop: E2 }, a: { f: "e2", from: 57.0, dur: 3.65 } },
+    { at: 37.0, dur: 6.1, v: { f: "e2", from: 61.9, crop: E2 }, a: { f: "e2", from: 61.9, dur: 6.1 } },
+    { at: 43.1, dur: 1.7, v: { f: "e4", from: 58.8, crop: DIR }, a: { f: "e4", from: 58.8, dur: 1.7 } },
+    { at: 44.8, dur: 1.2, v: { f: "e4", from: 60.6, crop: MEIO }, a: { f: "e4", from: 60.6, dur: 14.1 } },
+    { at: 46.0, dur: 4.7, v: { f: "e4", from: 61.8, crop: MEIO } },
+    { at: 50.7, dur: 2.0, v: { f: "e4", from: 66.5, crop: MEIO } },
+    { at: 52.7, dur: 2.2, v: { f: "e4", from: 68.5, crop: MEIO } },
+    { at: 54.9, dur: 4.0, v: { f: "e4", from: 70.7, crop: DIR } },
+    { at: 58.9, dur: 1.6, v: { f: "e2", from: 45.1, crop: E2 }, a: { f: "e4", from: 78.66, dur: 1.6 } },
+    { at: 60.5, dur: 3.4, v: { f: "e4", from: 23.0, crop: AIR } },
+    { at: 63.9, dur: 3.0, v: { f: "e4", from: 7.0, crop: AIR } },
+    { at: 66.9, dur: 2.9, v: { f: "e4", from: 88.0, crop: DEAM } },
+    { at: 69.8, dur: 3.1, v: { f: "e4", from: 10.0, crop: AIR } },
   ],
   fix: FIX, chave: /^(medo|maluco|polícia|delegacia|mato|goleira|um|país|medo|invisível|acreditou|certo|justiça|socorro|ouvida|errado)$/i,
-  topo: [[0, 11.3, "ELA AVISOU", "QUE TINHA MEDO DELE."], [11.4, 18.2, "ELA DENUNCIOU", "AS AMEAÇAS."], [18.3, 39.1, "QUEM ERA ELIZA", "GOLEIRA. CAMISA 1."], [39.2, 54.9, "ELA PEDIU SOCORRO.", "NINGUÉM OUVIU."]],
-  carimbos: [[39.3, 40.85, "VÍTIMA INVISÍVEL", 70]],
-  etiquetas: [{ de: 0.2, ate: 6.7, texto: "ELIZA SAMUDIO" }, { de: 11.5, ate: 18.1, texto: "ELIZA, EM ENTREVISTA" }, { de: 25.1, ate: 29.4, texto: "CARLA BÓ · AMIGA DE ELIZA" }, { de: 42.2, ate: 46.7, texto: "SÔNIA MOURA · MÃE DE ELIZA" }],
+  topo: [[0, 15.2, "ELA AVISOU", "QUE TINHA MEDO DELE."], [15.3, 22.1, "ELA DENUNCIOU", "AS AMEAÇAS."], [22.2, 43.0, "QUEM ERA ELIZA", "GOLEIRA. CAMISA 1."], [43.1, 58.8, "ELA PEDIU SOCORRO.", "NINGUÉM OUVIU."]],
+  carimbos: [[43.2, 44.75, "VÍTIMA INVISÍVEL", 70]],
+  etiquetas: [{ de: 0.2, ate: 10.6, texto: "ELIZA SAMUDIO" }, { de: 15.4, ate: 22.0, texto: "ELIZA, EM ENTREVISTA" }, { de: 29.0, ate: 33.3, texto: "CARLA BÓ · AMIGA DE ELIZA" }, { de: 46.1, ate: 50.6, texto: "SÔNIA MOURA · MÃE DE ELIZA" }],
   crachas: [],
   cartoes: [
-    [56.8, 59.7, <div style={tx({ fontSize: 50 })}>Eliza tinha <V>25 anos</V> e um filho de 4 meses.</div>],
-    [59.9, 62.9, <div style={tx({ fontSize: 46 })}>Desapareceu em junho de 2010. <V>O corpo nunca foi encontrado.</V></div>],
-    [63.1, 66.0, <div style={tx({ fontSize: 46 })}>Bruno foi condenado a <V>22 anos e 3 meses</V> de prisão.</div>],
-    [66.2, 69.0, <Segue />],
+    [60.7, 63.6, <div style={tx({ fontSize: 50 })}>Eliza tinha <V>25 anos</V> e um filho de 4 meses.</div>],
+    [63.8, 66.8, <div style={tx({ fontSize: 46 })}>Desapareceu em junho de 2010. <V>O corpo nunca foi encontrado.</V></div>],
+    [67.0, 69.9, <div style={tx({ fontSize: 46 })}>Bruno foi condenado a <V>22 anos e 3 meses</V> de prisão.</div>],
+    [70.1, 72.9, <Segue />],
   ],
-  fim: 56.6, total: Math.round(69.0 * 30), musica: [[55.0, 70]],
-  moldura: [[0, 70]],
-  credito: "Reprodução · Netflix, “A Vítima Invisível: O Caso Eliza Samudio” · Trilha: “Ode to Loneliness”, Diego Nava (Mixkit)",
+  fim: 60.5, total: Math.round(72.9 * 30), musica: [],
+  moldura: [[0, 80]],
+  credito: "Reprodução · Netflix, “A Vítima Invisível: O Caso Eliza Samudio”",
 };
 export const ELIZA_TOTAL = editE.total;
 export const EditEliza: React.FC = () => <EditBase e={editE} />;
