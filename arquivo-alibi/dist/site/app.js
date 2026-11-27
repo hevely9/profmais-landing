@@ -3,6 +3,7 @@
 // Regra de ouro: uma ação principal por tela, linguagem simples, botão voltar do celular sempre funciona.
 import { sha, derivar, chaveBruta, decifrar, decifrarBytes, normCodigo, canonCampos, canonResposta } from "./cripto.js";
 import { renderProva } from "./render.js";
+import { htmlVitrine } from "./vitrine.js";
 
 const $app = document.getElementById("app");
 const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -51,23 +52,11 @@ const entrada = () => (!atual() ? "final" : S.est.modo === "papel" ? "papel" : "
 async function telaHome(msgErro) {
   S.tela = "home";
   const v = await vitrine();
-  const salvos = v.casos.filter((c) => c.disponivel && carregar(c.slug)?.codigo);
-  $app.innerHTML = `<section class="entrada">
-    <small class="eyebrow">CENTRAL DE INVESTIGAÇÃO</small>
-    <h1>Abra o seu caso</h1>
-    <p>O jeito mais fácil: toque no botão <b>“Começar a jogar”</b> na sua área de membros da Kiwify. Ou digite o código aqui:</p>
-    <form id="f-cod" class="form-cod"><label class="rotulo" for="cod">Código do caso</label>
-      <input class="campo-codigo" id="cod" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="VALENTE-XXXX-XXXX" maxlength="24">
-      <button class="btn btn-p btn-grande">Abrir meu caso</button>
-      <p class="erro" id="err" role="alert">${esc(msgErro || "")}</p></form>
-  </section>
-  ${salvos.length ? `<section class="continuar">${salvos.map((c) => { const st = carregar(c.slug), feitos = Object.keys(st.resolvidos || {}).length; return `<a class="btn btn-s btn-grande" href="#/caso/${esc(c.slug)}">${feitos >= 3 ? "Rever" : "Continuar"} o Caso Nº ${esc(c.numero)}</a>`; }).join("")}</section>` : ""}
-  <h2 class="sec-tit">Arquivos</h2>
-  <section class="casos">${v.casos.map((c) => `<article class="pasta${c.disponivel ? "" : " embreve"}" data-num="CASO Nº ${esc(c.numero)}" style="--acento:${esc(c.acento)}">
-    <div class="pasta-faixa"></div><div class="carimbo">${c.disponivel ? "CONFIDENCIAL" : "EM BREVE"}</div>
-    <h3>${esc(c.titulo)}</h3><p>${esc(c.sinopse)}</p>
-    <div class="selos"><span>${esc(c.dificuldade)}</span><span>${esc(c.duracao)}</span><span>${esc(c.jogadores)} jogadores</span><span>${esc(c.classificacao)}</span></div>
-  </article>`).join("")}</section>`;
+  const salvos = v.casos.filter((c) => c.disponivel && carregar(c.slug)?.codigo).map((c) => ({ ...c, feitos: Object.keys(carregar(c.slug).resolvidos || {}).length }));
+  document.body.classList.add("na-vitrine");
+  $app.innerHTML = htmlVitrine(v, salvos, msgErro);
+  document.querySelectorAll("[data-rola]").forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); document.getElementById(a.dataset.rola)?.scrollIntoView({ behavior: "smooth", block: "start" }); }));
+  if (msgErro) document.getElementById("entrar")?.scrollIntoView({ block: "start" });
   const f = document.getElementById("f-cod"), inp = document.getElementById("cod");
   inp.addEventListener("input", () => { const n = formatar(inp.value); if (n !== inp.value) inp.value = n; });
   f.onsubmit = async (e) => {
@@ -203,6 +192,7 @@ const todasProvas = () => [...S.caso.provas, ...bonusLiberadas()];
 const temAudio = (p) => p.tipo === "audio" || !!p.conteudo?.audio;
 
 function desenhaTela(tela) {
+  document.body.classList.remove("na-vitrine");
   if (tocando) tocando.pause();
   S.tela = tela;
   document.body.classList.toggle("com-abas", S.est.modo === "tela" && ["docs", "objetivo", "notas"].includes(tela));

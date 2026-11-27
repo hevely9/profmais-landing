@@ -130,7 +130,18 @@ for (const slug of fs.readdirSync(path.join(RAIZ, "casos")).sort()) {
   }
   const pacote = { slug, versao: 2, iter: 120000, caso: await cifrar(chaveCaso, publico), blocos: blocosOut };
   fs.writeFileSync(path.join(OUT, "data", `${slug}.json`), JSON.stringify(pacote));
-  vitrine.push({ slug, numero: b.numero, titulo: b.titulo, sinopse: b.sinopse, acento: b.acento, dificuldade: b.dificuldade, duracao: b.duracao, jogadores: b.jogadores, classificacao: b.classificacao, compra: cfg.links[slug] || `LINK_KIWIFY_${slug}`, prefixo: b.codigo.split("-")[0], disponivel: true });
+  // capa pública da vitrine (imagem sem spoiler escolhida na Bíblia), reduzida
+  const vt = b.vitrine || {};
+  let capa = null;
+  if (vt.capa) {
+    fs.mkdirSync(path.join(OUT, "capas"), { recursive: true });
+    const orig = fs.readdirSync(dirMidia[0]).find((f) => f.replace(/\.\w+$/, "") === vt.capa);
+    execFileSync("python3", ["-c", "import sys;from PIL import Image;im=Image.open(sys.argv[1]).convert('RGB');im.thumbnail((760,760));im.save(sys.argv[2],'WEBP',quality=72)", path.join(dirMidia[0], orig), path.join(OUT, "capas", `${slug}.webp`)]);
+    capa = `capas/${slug}.webp`;
+  }
+  vitrine.push({ slug, numero: b.numero, titulo: b.titulo, sinopse: b.sinopse, chamada: b.subtitulo, acento: b.acento, dificuldade: b.dificuldade, duracao: b.duracao, jogadores: b.jogadores, classificacao: b.classificacao,
+    provas: b.provas.length, suspeitos: b.suspeitos.length, tipo: vt.tipo, ano: vt.ano, cidade: vt.cidade, novo: !!vt.novo, capa,
+    compra: cfg.links[slug] || `LINK_KIWIFY_${slug}`, prefixo: b.codigo.split("-")[0], disponivel: true });
   const kb = fs.readdirSync(dirOut).reduce((s, f) => s + fs.statSync(path.join(dirOut, f)).size, 0) / 1024;
   console.log(`✓ ${slug}: ${b.provas.length} provas, ${objetivos.length} objetivos, ${jaCifradas.size} arquivos de mídia (${Math.round(kb)} KB, criptografados)`);
 }
@@ -140,7 +151,7 @@ fs.writeFileSync(path.join(OUT, "casos.json"), JSON.stringify({ url: cfg.urlFina
 
 // checagem: nenhuma resposta, prova bônus, solução ou código em texto puro no que vai ser publicado
 const textos = [];
-const varre = (d) => { for (const f of fs.readdirSync(d)) { const p = path.join(d, f); if (fs.statSync(p).isDirectory()) varre(p); else if (!/\.(woff2|bin)$/.test(f)) textos.push(fs.readFileSync(p, "utf8")); } };
+const varre = (d) => { for (const f of fs.readdirSync(d)) { const p = path.join(d, f); if (fs.statSync(p).isDirectory()) varre(p); else if (!/\.(woff2|bin|webp)$/.test(f)) textos.push(fs.readFileSync(p, "utf8")); } };
 varre(OUT);
 const publicado = textos.join("\n");
 for (const proibido of proibidos) {

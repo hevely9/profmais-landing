@@ -2235,5 +2235,12 @@
   "titulo_pessoas": "As pessoas da casa",
   "texto_vitima": "Encontrado morto no escritório da própria casa na noite de sábado, 21 de setembro de 2024.",
   "texto_suspeitos": "Estavam na casa naquela noite:"
+ },
+ "vitrine": {
+  "tipo": "HOMICÍDIO",
+  "ano": "2024",
+  "cidade": "MONTE ALBOR",
+  "capa": "cena-escritorio",
+  "novo": false
  }
 }
