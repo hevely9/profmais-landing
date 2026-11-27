@@ -18,6 +18,7 @@ import { Antuerpia, CapaAntu, ctxAn } from "./v/antuerpia";
 import { CorteGloria, GLORIA_TOTAL } from "./v/corte-gloria";
 import { CapaDp30, CorteGloria2, GLORIA2_TOTAL } from "./v/corte-gloria2";
 import { CapaSob, SobInvestigacao, SOB_TOTAL } from "./v/sobinv";
+import { CapaSuz, Suz031, Suz032, SuzEditA, SuzEditB, SuzEditC, SUZ031_TOTAL, SUZ032_TOTAL, SUZEA_TOTAL, SUZEB_TOTAL, SUZEC_TOTAL } from "./v/suz";
 import { CapaSob2, SobInvestigacao2, SOB2_TOTAL } from "./v/sobinv2";
 
 const comp = (id: string, c: React.FC, total: number) => <Composition id={id} component={c} durationInFrames={total} fps={FPS} width={1080} height={1920} />;
@@ -41,6 +42,16 @@ export const Root: React.FC = () => (
     {comp("028-Antuerpia", Antuerpia, ctxAn.TOTAL)}
     <Composition id="029-Gloria" component={CorteGloria} durationInFrames={GLORIA_TOTAL} fps={FPS} width={1080} height={1920} />
     <Composition id="030-Gloria2" component={CorteGloria2} durationInFrames={GLORIA2_TOTAL} fps={FPS} width={1080} height={1920} />
+    {comp("031-Suzane-irmao", Suz031, SUZ031_TOTAL)}
+    {comp("032-Suzane-versao", Suz032, SUZ032_TOTAL)}
+    {comp("Edit-Suz-A", SuzEditA, SUZEA_TOTAL)}
+    {comp("Edit-Suz-B", SuzEditB, SUZEB_TOTAL)}
+    {comp("Edit-Suz-C", SuzEditC, SUZEC_TOTAL)}
+    <Composition id="Capa-031" component={CapaSuz as React.FC<any>} defaultProps={{ img: "s-netflix-suzane", pos: "50% 22%", l1: "ELA FALA DO IRMÃO", l2: "“NÃO ERA PRA TER SIDO ASSIM”", sub: "Suzane von Richthofen, 2026.", n: "Nº 031" }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
+    <Composition id="Capa-032" component={CapaSuz as React.FC<any>} defaultProps={{ img: "c2-suz-hoje", pos: "50% 30%", l1: "“NÃO FUI EU QUE FIZ”", l2: "O QUE AS PROVAS DIZEM", sub: "A versão de Suzane, 24 anos depois.", n: "Nº 032" }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
+    <Composition id="Capa-Edit-A" component={CapaSuz as React.FC<any>} defaultProps={{ img: "s-suzane-escoltada", pos: "50% 40%", l1: "“NADA A DECLARAR”", l2: "UMA PESSOA MUITO FRIA", sub: "A pergunta que ela não respondeu." }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
+    <Composition id="Capa-Edit-B" component={CapaSuz as React.FC<any>} defaultProps={{ img: "c2-suz-grade", pos: "50% 30%", l1: "“ELA SEDUZIU O PROMOTOR”", l2: "SUZANE NA PRISÃO", sub: "O que diz quem conviveu com ela." }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
+    <Composition id="Capa-Edit-C" component={CapaSuz as React.FC<any>} defaultProps={{ img: "c2-suz-daniel", pos: "50% 40%", l1: "ELE MATOU OS PAIS DELA", l2: "A SUZANE DE ANTIGAMENTE", sub: "Daniel Cravinhos, 2002." }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
     <Composition id="Capa-030" component={CapaDp30} durationInFrames={1} fps={FPS} width={1080} height={1920} />
     <Composition id="Capa-028-Antuerpia" component={CapaAntu} durationInFrames={1} fps={FPS} width={1080} height={1920} />
     <Composition id="Capa-027-Kukaracha" component={CapaKuka} durationInFrames={1} fps={FPS} width={1080} height={1920} />
