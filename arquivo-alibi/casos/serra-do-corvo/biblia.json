@@ -239,7 +239,7 @@
     "corpo": [
      "Lívia Campos era professora e, como voluntária, cuidava do caixa da comissão da festa, coordenada por Gilberto Assunção, dono do Mercadinho Assunção. Tinha passagem comprada para domingo: ia assumir uma vaga de professora num colégio da capital.",
      "Às 21h20, Lívia e o ex-namorado, Caíque Lopes, discutiram em voz alta na frente da barraca do pastel. Várias pessoas viram.",
-     "O salão paroquial fica ao lado da igreja. Durante a festa, a porta da frente do salão ficou fechada; a porta lateral, na rua de trás, só abre com chave. Têm a chave: o padre, Gilberto, Vânia Assunção e a própria vítima.",
+     "O salão paroquial fica ao lado da igreja. Durante a festa, a porta da frente do salão ficou fechada; a porta lateral, na rua de trás, só abre com chave. Além das cópias da comissão, uma chave reserva fica pendurada no quadro da sacristia, por onde voluntários entraram e saíram a noite toda.",
      "Os fogos foram das 22h às 22h15, com a praça cheia. Ouvimos as seis pessoas abaixo, por terem estado com a vítima naquela noite ou por terem algum conflito com ela."
     ],
     "tabela": {
@@ -291,7 +291,7 @@
     "svg": "praca",
     "legenda": "Croqui elaborado pela perícia. F1 = câmera da Farmácia Santa Luzia.",
     "notas": [
-     "A câmera F1 fica na esquina da farmácia e grava a rua de trás do salão paroquial, onde fica a porta lateral.",
+     "A câmera F1 fica na esquina da farmácia e grava a rua de trás do salão paroquial, onde fica a porta lateral. A sacristia, onde fica a chave reserva, é aberta para os voluntários durante a festa.",
      "O depósito fica nos fundos do salão, junto da porta lateral.",
      "O Mirante da Pedra do Corvo fica a 2 km da praça, pela Estrada do Mirante. Do estacionamento do mirante até o guarda-corpo há uma trilha de terra de 60 metros."
     ]
@@ -494,7 +494,7 @@
      ],
      [
       "A senhora tem a chave do salão?",
-      "Tenho. A comissão guarda as coisas da festa no depósito."
+      "Tenho uma cópia, como o pessoal da comissão. E tem a reserva, na sacristia."
      ],
      [
       "Conhecia bem a Lívia?",
@@ -892,7 +892,7 @@
      [
       "Coordenação",
       "Gilberto",
-      "Chave do depósito do salão"
+      "Organiza as barracas e os voluntários"
      ]
     ]
    }

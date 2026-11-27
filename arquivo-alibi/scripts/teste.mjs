@@ -16,7 +16,16 @@ let nShot = 0; const shot = async (pg, n) => { if (!PR) return; nShot++; await p
 const URL0 = "http://localhost:8799/";
 const LINK_KIWIFY = `${URL0}?c=${b.codigo}`;
 // combinações ALTERNATIVAS (não as óbvias), para provar que todas valem
-const RESP = { 1: [{ fato: "c" }, ["E-05", "E-07", "E-26"]], 2: [{ suspeito: "caio" }, ["E-02", "E-27", "B-02"]], 3: [{ suspeito: "caio", metodo: "m1", motivo: "mo2" }, ["B-07", "E-17", "E-16"]] };
+const RESPS = {
+  "mansao-valente": { 1: [{ fato: "c" }, ["E-05", "E-07", "E-26"]], 2: [{ suspeito: "caio" }, ["E-02", "E-27", "B-02"]], 3: [{ suspeito: "caio", metodo: "m1", motivo: "mo2" }, ["B-07", "E-17", "E-16"]], fraca: [{ suspeito: "caio" }, ["E-02", "E-12", "E-27"]] },
+  "linha-404": { 1: [{ fato: "c" }, ["E-05", "E-08", "E-07"]], 2: [{ suspeito: "davi" }, ["E-02", "B-02", "E-15"]], 3: [{ suspeito: "davi", metodo: "m1", motivo: "mo2" }, ["B-05", "B-03", "B-08"]], fraca: [{ suspeito: "davi" }, ["E-09", "E-02", "E-15"]] },
+  "serra-do-corvo": { 1: [{ fato: "c" }, ["E-05", "E-04", "E-21"]], 2: [{ suspeito: "gilberto" }, ["E-08", "B-02", "E-17"]], 3: [{ suspeito: "gilberto", metodo: "m1", motivo: "mo2" }, ["B-05", "B-06", "B-03"]], fraca: [{ suspeito: "gilberto" }, ["E-08", "E-02", "E-17"]] },
+};
+const RESP = RESPS[slug];
+// prova com áudio de verdade (só as que já têm arquivo gravado)
+const temArq = (n) => fs.readdirSync(path.join(RAIZ, "casos", slug, "midia")).some((f) => f.replace(/\.\w+$/, "") === n);
+const PROVA_AUDIO = b.provas.find((p) => p.origem === "pdf" && p.tipo === "audio" && temArq(p.conteudo.audio))?.id;
+const CARTA = b.tempo_jogo.cartas.find((c) => !c[4]); const SLOT = (() => { const [h, m] = CARTA[2].split(":").map(Number); return Math.floor((h * 60 + m) / 5) * 5; })();
 
 // 0) segurança: nada de PDF solto; arquivos de mídia são ilegíveis sem o código
 const soltos = execFileSync("find", [SITE, "-name", "*.pdf"]).toString().trim();
@@ -68,20 +77,23 @@ async function modoTela() {
   // documentos e voltar
   await pg.click('.abas-baixo a[href$="/docs"]'); await pg.waitForSelector("#lista-docs .doc-card");
   await shot(pg, "tela-06-documentos");
-  await pg.click('[data-doc="E-27"]'); await pg.waitForSelector(".modal .audio-play"); await pg.click(".modal .audio-play");
-  await pg.waitForFunction(() => /\d:\d\d \/ \d:\d\d/.test(document.querySelector(".modal .audio-tempo").textContent), null, { timeout: 15000 });
-  await pg.click(".modal .transcricao summary"); await shot(pg, "tela-07-audio-com-transcricao"); passo("áudio toca dentro do documento, com transcrição");
+  if (PROVA_AUDIO) {
+    await pg.click(`[data-doc="${PROVA_AUDIO}"]`); await pg.waitForSelector(".modal .audio-play"); await pg.click(".modal .audio-play");
+    await pg.waitForFunction(() => /\d:\d\d \/ \d:\d\d/.test(document.querySelector(".modal .audio-tempo").textContent), null, { timeout: 15000 });
+    await pg.click(".modal .transcricao summary"); await shot(pg, "tela-07-audio-com-transcricao"); passo("áudio toca dentro do documento, com transcrição");
+  } else { await pg.click('[data-doc="E-05"]'); await pg.waitForSelector(".modal .doc"); await shot(pg, "tela-07-documento"); passo("documento abre (caso ainda sem áudios gravados)"); }
   await pg.goBack(); await pg.waitForTimeout(300); await pg.goBack(); await pg.waitForSelector("#f-obj"); passo("voltar do celular: documento → lista → objetivo");
   // objetivos
   for (const n of [1, 2, 3]) {
     const [campos, provas] = RESP[n];
     for (const [k, v] of Object.entries(campos)) await pg.check(`#f-obj input[name="${k}"][value="${v}"]`);
     if (n === 1) { await pg.click("#enviar"); await pg.waitForSelector(".resposta.quase"); if (!/Marque 3 provas\. Você marcou 0/.test(await pg.textContent("#resp"))) falha("erro de provas não ensina"); else passo("erro ensina: “Marque 3 provas. Você marcou 0.”"); }
-    if (n === 2 && slug === "mansao-valente") {
+    if (n === 2) {
       // prova fraca (nenhum registro que desminta o álibi) não pode passar: tem de dar "quase"
-      for (const id of ["E-02", "E-12", "E-27"]) { await pg.fill("#busca", id); await pg.check(`#lista-provas input[value="${id}"]`); }
+      for (const [k, v] of Object.entries(RESP.fraca[0])) await pg.check(`#f-obj input[name="${k}"][value="${v}"]`);
+      for (const id of RESP.fraca[1]) { await pg.fill("#busca", id); await pg.check(`#lista-provas input[value="${id}"]`); }
       await pg.click("#enviar"); await pg.waitForSelector(".resposta.quase", { timeout: 20000 });
-      if (!/falta um registro/.test(await pg.textContent("#resp"))) falha("E-02+E-12+E-27 não deu o 'quase' certo"); else passo("E-02+E-12+E-27 dá 'quase' (falta um registro), não acerto");
+      if (!/falta um registro/.test(await pg.textContent("#resp"))) falha(`${RESP.fraca[1].join("+")} não deu o 'quase' certo`); else passo(`${RESP.fraca[1].join("+")} dá 'quase' (falta um registro), não acerto`);
       await pg.click("#limpar-sel"); if (!/0 de 3 marcadas/.test(await pg.textContent("#marcadas"))) falha("Limpar seleção não zerou"); else passo("botão Limpar seleção zera as provas marcadas");
     }
     for (const id of provas) { await pg.fill("#busca", id); await pg.check(`#lista-provas input[value="${id}"]`); }
@@ -101,9 +113,10 @@ async function modoTela() {
   if (PR) { const src = await pg.$eval(".share-fig img", (i) => i.src); fs.writeFileSync(path.join(PR, "tela-13-imagem-1080x1920.png"), Buffer.from(src.split(",")[1], "base64")); }
   // anotações + linha do tempo (aba ainda existe após o fim? acessar direto)
   await pg.goto(`${URL0}#/caso/${slug}/notas`); await pg.waitForSelector("#notas");
-  await pg.fill("#notas", "Caio e Rafael de azul-marinho"); await pg.click('.tl-carta[data-c="t07"]'); await pg.click('.slot[data-m="1310"]'); await pg.click("#conf");
+  await pg.fill("#notas", "teste de anotação"); await pg.click(`.tl-carta[data-c="${CARTA[0]}"]`); await pg.click(`.slot[data-m="${SLOT}"]`); await pg.click("#conf");
+  if (!/1 de 1 fatos no horário certo/.test(await pg.textContent("#res"))) falha("linha do tempo: carta no horário certo não foi aceita");
   await shot(pg, "tela-14-anotacoes"); passo("anotações e linha do tempo");
-  await pg.reload(); await pg.waitForSelector("#notas"); if ((await pg.inputValue("#notas")) !== "Caio e Rafael de azul-marinho") falha("notas não salvaram"); else passo("progresso e notas salvos após recarregar");
+  await pg.reload(); await pg.waitForSelector("#notas"); if ((await pg.inputValue("#notas")) !== "teste de anotação") falha("notas não salvaram"); else passo("progresso e notas salvos após recarregar");
   if (erros.length) falha(`modo tela, erros: ${erros.join(" | ")}`);
   await ctx.close();
 }
@@ -125,12 +138,12 @@ async function modoPapel() {
     for (let i = 0; i < provas.length; i++) {
       const [L, num] = provas[i].split("-"); const box = campos2[i];
       if (await box.$("[data-l]")) await (await box.$(`[data-l="${L}"]`)).click();
-      await (await box.$("input")).fill(n === 1 && i === 0 ? "e5" : n === 1 && i === 1 ? "E-07" : String(+num));
+      await (await box.$("input")).fill(n === 1 && i === 0 ? "e5" : n === 1 && i === 1 ? provas[i] : String(+num));
     }
     const nomes = await pg.$$eval(".nome-prova", (els) => els.map((e) => e.textContent));
     if (nomes.some((t) => !/·/.test(t))) falha(`papel obj ${n}: nome da prova não apareceu (${nomes})`);
     if (n === 1) { passo(`papel aceita “e5”, “E-07” e “26” e mostra o nome: ${nomes[0]}`); await shot(pg, "papel-04-numeros-digitados"); }
-    if (n === 2) { await pg.click("#audios"); await pg.waitForSelector(".modal .doc-card"); await shot(pg, "papel-05-audios-do-caso"); await pg.goBack(); await pg.waitForTimeout(300); passo("papel: botão Áudios do caso"); }
+    if (n === 2 && PROVA_AUDIO) { await pg.click("#audios"); await pg.waitForSelector(".modal .doc-card"); await shot(pg, "papel-05-audios-do-caso"); await pg.goBack(); await pg.waitForTimeout(300); passo("papel: botão Áudios do caso"); }
     await pg.click("#enviar");
     if (n < 3) {
       await pg.waitForSelector("#imp-novas", { timeout: 20000 }); passo(`papel: objetivo ${n} confirmado`);
@@ -151,8 +164,8 @@ async function modoPapel() {
 
 // ── imagens do "Precisa de ajuda?" (sem spoiler: telas do objetivo 1, sem marcar a resposta certa) ──
 async function imagensAjuda() {
-  const D = path.join(RAIZ, "site", "ajuda"); fs.mkdirSync(D, { recursive: true });
-  const salva = async (loc, nome) => { const f = path.join(D, nome + ".png"); await loc.screenshot({ path: f }); execFileSync("python3", ["-c", "import sys;from PIL import Image;im=Image.open(sys.argv[1]).convert('RGB');im.thumbnail((720,720));im.save(sys.argv[2],'WEBP',quality=72)", f, f.replace(".png", ".webp")]); fs.rmSync(f); };
+  const D = path.join(RAIZ, "site", "ajuda", slug); fs.mkdirSync(D, { recursive: true });
+  const salva = async (loc, nome) => { const f = path.join(D, nome + ".png"); await loc.screenshot({ path: f }); execFileSync("python3", ["-c", "import sys;from PIL import Image;im=Image.open(sys.argv[1]).convert('RGB');im.thumbnail((1400,1400));im.save(sys.argv[2],'WEBP',quality=90,method=6)", f, f.replace(".png", ".webp")]); fs.rmSync(f); };
   const { ctx, pg } = await novoCel();
   await pg.goto(LINK_KIWIFY); await pg.click('[data-modo="tela"]'); await pg.click("#entendi"); await pg.click("#comecar"); await pg.waitForSelector("#f-obj");
   await salva(pg.locator(".obj-tela fieldset").first(), "tela-1");

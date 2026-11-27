@@ -174,12 +174,12 @@ function abrirLista(titulo, provas, intro = "") {
 const AJUDA = {
   home: { t: "Como abrir o seu caso", p: [["1", "Entre na sua área de membros da Kiwify e toque em <b>“Começar a jogar”</b>. O caso abre sozinho."], ["2", "Se o botão não abrir, copie o código que aparece embaixo dele e digite aqui."], ["3", "Seu progresso fica salvo neste celular. Para voltar depois, é só abrir o mesmo endereço."]] },
   tela: { t: "Como jogar na tela", p: [["ajuda/tela-1.webp", "Em <b>Objetivo</b>, leia a pergunta e escolha a sua resposta."], ["ajuda/tela-2.webp", "Marque as provas que mostram que você tem razão. Toque em <b>ver</b> para ler o documento sem sair da tela."], ["ajuda/tela-3.webp", "Em <b>Documentos</b> estão todos os papéis, fotos e áudios do caso. Use + e − para aumentar a letra."], ["ajuda/tela-4.webp", "Toque em <b>Conferir resposta</b>. Travou? Toque em <b>Pedir dica</b>. Suas anotações ficam em <b>Anotações</b>."]] },
-  papel: { t: "Como jogar no papel", p: [["ajuda/papel-1.webp", "Toque em <b>Baixar documentos para imprimir</b> e imprima as folhas."], ["ajuda/papel-2.webp", "Leia as folhas. No celular, toque na resposta que você acha certa."], ["ajuda/papel-3.webp", "Digite os números das provas (por exemplo, <b>5</b> para a prova E-05) e toque em <b>Conferir resposta</b>."], ["ajuda/papel-4.webp", "Acertou? Imprima as provas novas e toque em <b>Já imprimi, continuar</b>. Os áudios você ouve no celular."]] },
+  papel: { t: "Como jogar no papel", p: [["ajuda/papel-1.webp", "Toque em <b>Baixar o essencial para imprimir</b> e imprima as folhas."], ["ajuda/papel-2.webp", "Leia as folhas. No celular, toque na resposta que você acha certa."], ["ajuda/papel-3.webp", "Digite os números das provas (por exemplo, <b>5</b> para a prova E-05) e toque em <b>Conferir resposta</b>."], ["ajuda/papel-4.webp", "Acertou? Imprima as provas novas e toque em <b>Já imprimi, continuar</b>. Os áudios você ouve no celular."]] },
 };
 function abrirAjuda() {
   const k = !S.caso || S.tela === "home" ? "home" : S.est.modo === "papel" ? "papel" : "tela";
   const a = AJUDA[k];
-  const { el } = modal(`${barra(esc(a.t), false)}<div class="modal-corpo"><ol class="ajuda">${a.p.map(([img, txt]) => `<li>${img.includes("/") ? `<img src="${img}" alt="" loading="lazy">` : ""}<p>${txt}</p></li>`).join("")}</ol>
+  const { el } = modal(`${barra(esc(a.t), false)}<div class="modal-corpo"><ol class="ajuda">${a.p.map(([img, txt]) => `<li>${img.includes("/") ? `<img src="${img.replace("ajuda/", `ajuda/${S.slug}/`)}" alt="" loading="lazy">` : ""}<p>${txt}</p></li>`).join("")}</ol>
   <p class="intro">Ainda com dúvida? Mande uma mensagem para ${esc(VITRINE?.perfil || "@alibi.criminal")}.</p><button type="button" class="btn btn-p btn-grande" data-fechar>Entendi</button></div>`);
   el.querySelectorAll("[data-fechar]").forEach((b) => (b.onclick = () => history.back()));
 }
@@ -220,6 +220,8 @@ function telaComo() {
     : ["Leia o objetivo: é a pergunta que você precisa responder.", "Abra os documentos, fotos e áudios em Documentos.", "Escolha a resposta e marque as provas que mostram que você tem razão.", "Acertou? Provas novas aparecem. Travou? Peça uma dica."];
   $app.innerHTML = `${cabecalhoCaso()}<section class="cartao"><h2 class="h-grande">Como jogar ${papel ? "no papel" : "na tela"}</h2>
     <ol class="passos-4">${passos.map((p) => `<li>${esc(p)}</li>`).join("")}</ol>
+    <div class="segredo"><b>O segredo do jogo</b><p>As pessoas podem mentir. Os registros (câmeras, alarmes, celulares, recibos) não mentem. Compare o que cada um <b>disse</b> com o que os registros <b>mostram</b>.</p></div>
+    <div class="obj-lista"><b>Os ${S.caso.objetivos.length} objetivos, um de cada vez:</b><ol>${S.caso.objetivos.map((o) => `<li>${esc(o.titulo)}</li>`).join("")}</ol><p>Cada acerto libera provas novas para o próximo.</p></div>
     <button type="button" class="btn btn-p btn-grande" id="entendi">Entendi, começar</button>
     <label class="marcar"><input type="checkbox" id="nao-mostrar"> Não mostrar de novo</label></section>`;
   ligarCabecalho();

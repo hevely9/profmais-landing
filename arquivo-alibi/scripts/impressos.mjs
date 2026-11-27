@@ -106,7 +106,7 @@ const CAPA = `<section class="pag capa"><div class="etq">CASO Nº ${esc(b.numero
 const REGRAS = `<section class="pag regras compacta"><h2 class="sec">Como jogar no papel</h2>
   <div class="box alerta"><b>Aviso de spoiler:</b> não procure a solução. Ela fica trancada na Central até você resolver o caso.</div>
   <h3>Sua missão</h3><p>${esc(b.sinopse)} Você é o investigador. Nestas folhas estão os documentos que a polícia reuniu na primeira noite: boletim, depoimentos, laudos, fotos e registros. Cada documento tem um número (E-01, E-02…).</p>
-  <h3>Os ${b.objetivos.length} objetivos</h3><p>${b.objetivos.map((o) => `<b>${o.n}. ${esc(o.titulo)}:</b> ${esc(o.pergunta)}`).join("<br>")}</p>
+  <h3>Os ${b.objetivos.length} objetivos</h3><p>${b.objetivos.map((o) => `<b>${o.n}. ${esc(o.titulo)}</b>`).join("<br>")}<br>A pergunta de cada objetivo aparece no celular, um de cada vez. Cada acerto libera provas novas.</p>
   <h3>Passo a passo</h3><ol>
     <li>Leia as folhas com calma. Anote horários e compare o que as pessoas <b>dizem</b> com o que os registros <b>mostram</b>.</li>
     <li>No celular, abra a Central pelo botão <b>“Começar a jogar”</b> na sua área de membros da Kiwify (você já escolheu jogar <b>no papel</b>).</li>
