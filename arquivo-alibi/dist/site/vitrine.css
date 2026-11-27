@@ -22,7 +22,7 @@ body.na-vitrine .btn-ajuda { display: none; }
 .vt-hero-in { max-width: 1120px; margin: 0 auto; padding: 0 16px; display: grid; gap: 34px; align-items: center; }
 @media (min-width: 900px) { .vt-hero-in { grid-template-columns: 1.05fr .95fr; } .vt-hero { padding: 70px 0 90px; } }
 
-.vt-folha { position: relative; background: var(--papel); color: var(--tinta); padding: 34px 24px 26px; transform: rotate(-.8deg); box-shadow: 0 30px 60px rgba(0,0,0,.6); border-radius: 2px;
+.vt-folha { position: relative; background: var(--papel); color: var(--tinta); padding: 34px 24px 26px; box-shadow: 0 30px 60px rgba(0,0,0,.6); border-radius: 2px;
   background-image: linear-gradient(transparent 31px, rgba(26,23,20,.06) 32px); background-size: 100% 32px; }
 .fita-cola { position: absolute; top: -12px; left: 50%; width: 120px; height: 28px; margin-left: -60px; background: rgba(201,162,39,.55); transform: rotate(-3deg); box-shadow: 0 1px 2px rgba(0,0,0,.2); }
 .vt-eyebrow { font-family: var(--f-doc); font-weight: 700; font-size: 14px; letter-spacing: .14em; color: var(--lacre); }
@@ -60,7 +60,7 @@ body.na-vitrine .btn-ajuda { display: none; }
 /* cards de caso (pasta com fita e carimbo) */
 .vt-grade { display: grid; gap: 40px 26px; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); }
 .vt-card { position: relative; background: linear-gradient(175deg, #EDE4CC, #DCCFAE); color: var(--tinta); padding: 18px 18px 18px; border-radius: 3px; box-shadow: 0 22px 44px rgba(0,0,0,.55); display: flex; flex-direction: column; }
-.vt-card .fita-cola { width: 96px; margin-left: -48px; top: -10px; }
+.vt-card .fita-cola { width: 84px; margin-left: 0; left: auto; right: 22px; top: -12px; }
 .vt-aba { position: absolute; top: -26px; left: 0; background: #DCCFAE; padding: 5px 14px; border-radius: 8px 8px 0 0; font-family: var(--f-doc); font-weight: 700; font-size: 13px; letter-spacing: .06em; }
 .vt-capa { position: relative; height: 170px; margin: 0 -18px 14px; margin-top: -18px; overflow: hidden; background: #2A2520; border-bottom: 6px solid var(--acento); }
 .vt-capa img { width: 100%; height: 100%; object-fit: cover; filter: sepia(.35) contrast(1.05) brightness(.8); display: block; }
@@ -84,7 +84,7 @@ body.na-vitrine .btn-ajuda { display: none; }
 .vt-passo .num { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--lacre); color: #fff; font-weight: 800; margin-bottom: 12px; }
 .vt-passo h3 { font-family: var(--f-impacto); font-weight: 800; text-transform: uppercase; font-size: 19px; margin: 0 0 8px; }
 .vt-passo p { margin: 0; color: #C2BBAE; font-size: 16px; line-height: 1.5; }
-.vt-regra { position: relative; margin: 34px auto 0; max-width: 760px; background: var(--papel); color: var(--tinta); padding: 22px 22px 16px; transform: rotate(.5deg); box-shadow: 0 18px 40px rgba(0,0,0,.55); }
+.vt-regra { position: relative; margin: 34px auto 0; max-width: 760px; background: var(--papel); color: var(--tinta); padding: 22px 22px 16px; box-shadow: 0 18px 40px rgba(0,0,0,.55); }
 .vt-regra b { font-family: var(--f-impacto); text-transform: uppercase; font-size: 18px; }
 .vt-regra p { font-family: var(--f-doc); font-size: 16px; line-height: 1.55; margin: 8px 0 0; }
 

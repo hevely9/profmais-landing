@@ -57,7 +57,7 @@ h2.sec { font-family: var(--f-impacto); font-size: 26px; margin: 0 0 4mm; border
 .codigo-box b { font-family: var(--f-doc); font-size: 22px; letter-spacing: .08em; white-space: nowrap; } .codigo-box span { font-size: 12px; max-width: 80mm; }
 .vit { display: grid; grid-template-columns: 50mm 1fr; gap: 5mm; align-items: center; border: 2px solid var(--tinta); padding: 3mm; margin-bottom: 5mm; font-size: 13px; } .vit img { width: 50mm; height: 56mm; object-fit: cover; object-position: top; display: block; }
 .pers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; } .pers .p { border: 1px solid #B8AD96; padding: 2.5mm; font-size: 11.5px; line-height: 1.35; break-inside: avoid; } .pers img { width: 100%; height: 52mm; object-fit: cover; object-position: top; display: block; margin-bottom: 2mm; }
-.fluxo { zoom: .72; } .fluxo .prova-pag { break-inside: auto; margin: 0 0 5mm; } .fluxo .doc > :first-child, .fluxo .doc h3, .fluxo .doc .doc-titulo { break-after: avoid; } .fluxo tr, .fluxo .qa, .fluxo img, .fluxo figure, .fluxo .anexo, .fluxo .msg { break-inside: avoid; } .fluxo .prova-pag .foto img { max-height: 95mm; } .fluxo .prova-pag .anexo img { height: 52mm; }
+.fluxo { zoom: .72; } .fluxo .prova-pag { break-inside: avoid; margin: 0 0 5mm; } .fluxo .doc > :first-child, .fluxo .doc h3, .fluxo .doc .doc-titulo { break-after: avoid; } .fluxo tr, .fluxo .qa, .fluxo img, .fluxo figure, .fluxo .anexo, .fluxo .msg { break-inside: avoid; } .fluxo .prova-pag .foto img { max-height: 95mm; } .fluxo .prova-pag .anexo img { height: 52mm; }
 .regras.compacta { font-size: 12.5px; line-height: 1.45; } .regras.compacta h3 { margin: 3mm 0 1.5mm; }
 .prova-pag .doc { box-shadow: none; border: 1px solid #B8AD96; padding: 18px 20px 12px; break-inside: auto; }
 .prova-pag .doc-tab td, .prova-pag .doc-tab th { padding: 3px 6px; }
@@ -72,11 +72,42 @@ h2.sec { font-family: var(--f-impacto); font-size: 26px; margin: 0 0 4mm; border
 `;
 const rodape = (t) => `<div style="width:100%;font-size:7.5px;color:#555;padding:0 13mm;display:flex;justify-content:space-between;font-family:Arial"><span>ARQUIVO ÁLIBI · CASO Nº ${b.numero} · ${t} · Caso fictício. Qualquer semelhança com fatos ou pessoas reais é coincidência. · Uso pessoal — proibida a redistribuição.</span><span class="pageNumber"></span></div>`;
 
+// Paginação dos documentos em fluxo: nenhum documento é partido se cabe numa folha; o espaço que sobra no
+// fim de uma folha é preenchido com o próximo documento pequeno que caiba (no máximo 3 posições adiante),
+// para não sobrar meia folha em branco nem um pedacinho de documento sozinho numa folha.
+function paginar() {
+  const AREA = (267 * 96) / 25.4; // altura útil da A4 (297 − 30 mm de margens), em px
+  for (const fluxo of document.querySelectorAll(".fluxo")) {
+    const itens = [...fluxo.children];
+    const alt = new Map(itens.map((el) => { const r = el.getBoundingClientRect(); const mb = parseFloat(getComputedStyle(el).marginBottom) || 0; return [el, r.height + mb * (r.height / (el.offsetHeight || r.height || 1))]; }));
+    const fila = [...itens], ordem = [];
+    let resta = AREA;
+    while (fila.length) {
+      let i = fila.findIndex((el, k) => k < 4 && alt.get(el) <= resta);
+      let el;
+      if (i >= 0) { el = fila.splice(i, 1)[0]; el.style.breakBefore = "auto"; resta -= alt.get(el); }
+      else {
+        el = fila.shift();
+        if (alt.get(el) > AREA) { // maior que uma folha: começa no topo de uma folha nova e pode continuar na seguinte
+          el.style.breakBefore = resta < AREA ? "page" : "auto"; el.style.breakInside = "auto";
+          resta = AREA - (alt.get(el) % AREA);
+        } else { el.style.breakBefore = "page"; resta = AREA - alt.get(el); }
+      }
+      if (el.style.breakInside !== "auto") el.style.breakInside = "avoid";
+      ordem.push(el);
+    }
+    for (const el of ordem) fluxo.appendChild(el);
+  }
+}
+
 async function gerar(nome, titulo, corpo) {
   const html = `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><style>${ESTILO}</style></head><body>${corpo}</body></html>`;
   const arqHtml = path.join(OUT, `${nome}.html`); fs.writeFileSync(arqHtml, html);
-  const pg = await nav.newPage();
+  // viewport = área útil da folha A4 (210 − 26 mm de margens), para medir a altura real de cada documento
+  const pg = await nav.newPage({ viewport: { width: Math.round((184 * 96) / 25.4), height: 1200 } });
+  await pg.emulateMedia({ media: "print" });
   await pg.goto(`file://${arqHtml}`, { waitUntil: "networkidle" }); await pg.evaluate(() => document.fonts.ready);
+  await pg.evaluate(paginar);
   const pdf = path.join(OUT, `${nome}.pdf`);
   await pg.pdf({ path: pdf, format: "A4", printBackground: true, displayHeaderFooter: true, headerTemplate: "<span></span>", footerTemplate: rodape(titulo), margin: { top: "14mm", bottom: "16mm", left: "13mm", right: "13mm" } });
   await pg.close(); fs.rmSync(arqHtml);
@@ -136,9 +167,8 @@ for (const o of b.objetivos) {
   if (!o.bonus.length) continue;
   const lista = o.bonus.map((id) => b.provas.find((p) => p.id === id));
   paginas[`impresso-obj${o.n}`] = await gerar(`impresso-obj${o.n}`, `Provas novas — objetivo ${o.n}`, `
-<section class="pag"><div class="faixa"><small>ARQUIVO ÁLIBI · CASO Nº ${esc(b.numero)}</small><h1>Provas novas</h1><div>Liberadas no objetivo ${o.n}. Junte estas folhas às outras: elas são necessárias para o próximo objetivo.</div><div class="carimbo">NOVAS</div></div>
-<div class="prova-pag">${renderProva(lista[0], CTX)}</div></section>
-${docs(lista.slice(1))}`);
+<section class="fluxo"><div class="prova-pag"><div class="faixa"><small>ARQUIVO ÁLIBI · CASO Nº ${esc(b.numero)}</small><h1>Provas novas</h1><div>Liberadas no objetivo ${o.n}. Junte estas folhas às outras: elas são necessárias para o próximo objetivo.</div><div class="carimbo">NOVAS</div></div></div>
+${lista.map((p) => `<div class="prova-pag">${renderProva(p, CTX)}</div>`).join("\n")}</section>`);
 }
 
 // 3) solução

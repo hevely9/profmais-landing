@@ -36,7 +36,7 @@
 .mail .doc-campos th { width: 16%; } .mail-corpo { padding: 10px 4px; }
 .recibo { background: #FBFAF6; max-width: 330px; margin: 0 auto; padding: 14px 16px; font-size: 12.5px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
 .recibo hr { border: 0; border-top: 1px dashed #777; margin: 8px 0; } .rl { display: flex; justify-content: space-between; gap: 10px; text-align: left; }
-.jornal { background: #EDE6D3; padding: 14px 16px; font-family: Georgia, "Times New Roman", serif; transform: rotate(-.6deg); border: 1px solid #C9BFA6; }
+.jornal { background: #EDE6D3; padding: 14px 16px; font-family: Georgia, "Times New Roman", serif; border: 1px solid #C9BFA6; box-shadow: 2px 3px 0 rgba(26,23,20,.08); }
 .j-nome { font-family: var(--f-titulo); font-weight: 900; font-size: 22px; text-align: center; border-bottom: 3px double var(--tinta); }
 .j-data { text-align: center; font-size: 11px; margin: 3px 0 8px; } .jornal h3 { font-size: 21px; line-height: 1.2; margin: 6px 0; }
 .j-fina { font-style: italic; margin-bottom: 8px; } .j-col { column-count: 2; column-gap: 18px; font-size: 13px; text-align: justify; }
@@ -56,7 +56,7 @@
 .foto img, .anexo img { width: 100%; height: auto; display: block; border: 6px solid #F4F1EA; box-shadow: 0 4px 12px rgba(0,0,0,.25); background: #2A2520; min-height: 120px; }
 .zoomavel { cursor: zoom-in; }
 .anexo { margin: 14px 0 0; } .anexo figcaption { font-size: 12px; margin-top: 6px; font-style: italic; }
-.dep-cab { display: grid; grid-template-columns: 86px 1fr; gap: 12px; align-items: start; }
+.dep-cab { display: grid; grid-template-columns: 86px 1fr; gap: 12px; align-items: start; } .dep-cab > div:only-child { grid-column: 1 / -1; }
 .dep-foto img { width: 86px; height: 100px; object-fit: cover; object-position: top; border: 3px solid #F4F1EA; box-shadow: 0 2px 6px rgba(0,0,0,.3); display: block; background: #2A2520; }
 .audio-prova { --prog: 0%; display: flex; align-items: center; gap: 12px; background: var(--tinta); color: var(--osso); border-radius: 10px; padding: 10px 12px; margin: 10px 0 12px; font-family: var(--f-texto); }
 .audio-play { flex: none; width: 46px; height: 46px; border-radius: 50%; border: 0; background: var(--lacre); color: #fff; font-size: 17px; font-weight: 800; cursor: pointer; }
@@ -66,3 +66,11 @@
 .audio-info::after { content: ""; height: 4px; border-radius: 2px; background: linear-gradient(90deg, var(--fita) var(--prog), #3A342E var(--prog)); }
 .audio-pdf { display: block; background: none; color: var(--tinta); border: 2px dashed var(--tinta); }
 .audio-pdf span { display: block; font-size: 12px; margin-top: 2px; } .audio-pdf::after { display: none; }
+.doc-campos th, .doc-campos td, .mail-corpo, .chat .msg { overflow-wrap: anywhere; }
+/* números das provas nunca quebram; rótulos das fichas não se partem no meio da palavra */
+.doc-id { white-space: nowrap; flex-shrink: 0; }
+.doc-tipo { min-width: 0; }
+.doc-campos th { overflow-wrap: normal; word-break: normal; hyphens: manual; white-space: nowrap; width: 1%; }
+.doc-campos, .doc-tab { color: inherit; }
+/* jornal: no celular, uma coluna só e sem justificar (evita buracos entre as palavras) */
+@media (max-width: 560px) { .j-col { column-count: 1; text-align: left; } }
