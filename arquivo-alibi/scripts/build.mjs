@@ -109,7 +109,7 @@ for (const slug of fs.readdirSync(path.join(RAIZ, "casos")).sort()) {
   const publico = {
     slug, numero: b.numero, titulo: b.titulo, local: b.local, data_crime: b.data_crime, briefing: b.briefing, vitima: b.vitima,
     suspeitos: b.suspeitos.map(({ id, nome, idade, relacao, foto }) => ({ id, nome, idade, relacao, foto })),
-    provas: provasPdf, objetivos, impresso: imp("impresso-dossie"), tempo: { de: b.tempo_jogo.de, ate: b.tempo_jogo.ate, cartas: cartasBase },
+    provas: provasPdf, objetivos, impresso: imp("impresso-dossie"), impressoOpcional: imp("impresso-opcional"), tempo: { de: b.tempo_jogo.de, ate: b.tempo_jogo.ate, cartas: cartasBase },
   };
 
   // mídia: o que aparece no caso abre com o código; o resto só com o objetivo que libera

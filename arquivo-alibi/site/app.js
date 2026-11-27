@@ -266,7 +266,7 @@ function telaDocs() {
   const lista0 = todasProvas();
   $app.innerHTML = `${cabecalhoCaso()}<section>
     <h2 class="h-sec">Documentos</h2>
-    <input type="search" id="busca-docs" class="busca" placeholder="Buscar: número ou palavra (ex.: 18, alarme)" aria-label="Buscar documento">
+    <input type="search" id="busca-docs" class="busca" placeholder="Buscar nº ou palavra" aria-label="Buscar documento">
     <button type="button" class="btn btn-s btn-grande" id="ver-pessoas">Ver as pessoas do caso</button>
     <div id="lista-docs"></div></section>${abasBaixo("docs")}`;
   ligarCabecalho();
@@ -303,7 +303,7 @@ function telaObjetivo() {
     ${o.campos.map((c) => `<fieldset><legend>${esc(c.label)}</legend>${c.opcoes.map((op) => `<label class="opc"><input type="radio" name="${esc(c.id)}" value="${esc(op.id)}" required> <span>${esc(op.texto)}</span></label>`).join("")}</fieldset>`).join("")}
     <fieldset><legend>Marque ${o.n_provas} provas que mostram que você tem razão</legend>
       <div class="marcadas" id="marcadas"></div>
-      <input type="search" id="busca" class="busca" placeholder="Buscar: número ou palavra (ex.: 18, alarme)" value="${esc(S.busca)}" aria-label="Buscar prova">
+      <input type="search" id="busca" class="busca" placeholder="Buscar nº ou palavra" value="${esc(S.busca)}" aria-label="Buscar prova">
       <div class="provas-sel" id="lista-provas"></div>
     </fieldset>
     <div id="resp" aria-live="polite"></div>
@@ -316,8 +316,9 @@ function telaObjetivo() {
   const sel = new Set(S.est.sel[o.n] || []);
   const memo = () => { S.est.sel[o.n] = [...sel]; guarda(); };
   const desenhaMarcadas = () => {
-    document.getElementById("marcadas").innerHTML = `<span class="cont">${sel.size} de ${o.n_provas} marcadas</span>${[...sel].map((id) => `<button type="button" class="pill" data-tira="${esc(id)}" aria-label="Desmarcar ${esc(id)}">${esc(id)} ✕</button>`).join("")}`;
+    document.getElementById("marcadas").innerHTML = `<span class="cont">${sel.size} de ${o.n_provas} marcadas</span>${sel.size ? `<button type="button" class="limpar" id="limpar-sel">Limpar seleção</button>` : ""}${[...sel].map((id) => `<button type="button" class="pill" data-tira="${esc(id)}" aria-label="Desmarcar ${esc(id)}">${esc(id)} ✕</button>`).join("")}`;
     document.querySelectorAll("[data-tira]").forEach((b) => (b.onclick = () => { sel.delete(b.dataset.tira); memo(); desenhaMarcadas(); desenhaLista(); }));
+    document.getElementById("limpar-sel")?.addEventListener("click", () => { sel.clear(); memo(); desenhaMarcadas(); desenhaLista(); });
   };
   const desenhaLista = () => {
     const q = S.busca.trim().toLowerCase();
@@ -460,12 +461,15 @@ function papelBaixar() {
   const imp = S.caso.impresso;
   $app.innerHTML = `${cabecalhoCaso()}<section class="cartao centro"><span class="ic-grande">${IC.papel}</span><h2 class="h-grande">Imprima os documentos</h2>
     <p class="lead">Você vai precisar de: <b>as folhas impressas, uma caneta e o celular</b> só para conferir as respostas.</p>
-    <button type="button" class="btn btn-p btn-grande" id="baixar">Baixar documentos para imprimir (${imp.paginas} páginas)</button>
+    <button type="button" class="btn btn-p btn-grande" id="baixar">Baixar o essencial para imprimir (${imp.paginas} páginas)</button>
+    <p class="nota-imp">Regras, pessoas e todos os documentos do caso. É só isso que precisa estar na mesa.</p>
+    ${S.caso.impressoOpcional ? `<button type="button" class="btn btn-g" id="baixar-opc">Opcional: capa da pasta e fichas recortáveis (${S.caso.impressoOpcional.paginas} ${S.caso.impressoOpcional.paginas === 1 ? "página" : "páginas"})</button>` : ""}
     ${podeCompartilhar() ? `<button type="button" class="btn btn-g btn-grande" id="enviar-pdf">Enviar o PDF para o meu e-mail ou WhatsApp</button>` : ""}
     <button type="button" class="link" id="ja-tenho">Já imprimi, quero responder</button></section>`;
   ligarCabecalho();
   document.getElementById("baixar").onclick = async () => { await baixar(imp.pdf, nomeArq("documentos")); S.est.papel.baixou = true; guarda(); desenhaTela("papel"); };
   document.getElementById("enviar-pdf")?.addEventListener("click", () => compartilhar(imp.pdf, nomeArq("documentos")));
+  document.getElementById("baixar-opc")?.addEventListener("click", () => baixar(S.caso.impressoOpcional.pdf, nomeArq("opcional")));
   document.getElementById("ja-tenho").onclick = () => { S.est.papel.baixou = true; guarda(); desenhaTela("papel"); };
 }
 function papelNovas(o) {

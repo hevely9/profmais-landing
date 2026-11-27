@@ -1,6 +1,7 @@
 // ARQUIVO ÁLIBI — folhas de imprimir (modo papel), no visual colorido do dossiê: capa de pasta, documentos em papel,
 // fotos coloridas. UM gerador só para tudo que é impresso, para nada ficar desatualizado:
-//   impresso-dossie.pdf   documentos iniciais (o mesmo arquivo é entregue como dossiê completo em dist/pdf/)
+//   impresso-dossie.pdf   ESSENCIAL: regras, pessoas e documentos iniciais em fluxo compacto
+//   impresso-opcional.pdf capa da pasta + fichas recortáveis · impresso-completo.pdf = tudo (vai para dist/pdf/)
 //   impresso-obj1/2.pdf   provas novas liberadas em cada objetivo
 //   impresso-solucao.pdf  solução + interrogatório
 // Estes PDFs NUNCA vão soltos para o site: o build os criptografa (dossiê com o código; provas novas e solução
@@ -56,6 +57,8 @@ h2.sec { font-family: var(--f-impacto); font-size: 26px; margin: 0 0 4mm; border
 .codigo-box b { font-family: var(--f-doc); font-size: 22px; letter-spacing: .08em; white-space: nowrap; } .codigo-box span { font-size: 12px; max-width: 80mm; }
 .vit { display: grid; grid-template-columns: 50mm 1fr; gap: 5mm; align-items: center; border: 2px solid var(--tinta); padding: 3mm; margin-bottom: 5mm; font-size: 13px; } .vit img { width: 50mm; height: 56mm; object-fit: cover; object-position: top; display: block; }
 .pers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; } .pers .p { border: 1px solid #B8AD96; padding: 2.5mm; font-size: 11.5px; line-height: 1.35; break-inside: avoid; } .pers img { width: 100%; height: 52mm; object-fit: cover; object-position: top; display: block; margin-bottom: 2mm; }
+.fluxo { zoom: .72; } .fluxo .prova-pag { break-inside: auto; margin: 0 0 5mm; } .fluxo .doc > :first-child, .fluxo .doc h3, .fluxo .doc .doc-titulo { break-after: avoid; } .fluxo tr, .fluxo .qa, .fluxo img, .fluxo figure, .fluxo .anexo, .fluxo .msg { break-inside: avoid; } .fluxo .prova-pag .foto img { max-height: 95mm; } .fluxo .prova-pag .anexo img { height: 52mm; }
+.regras.compacta { font-size: 12.5px; line-height: 1.45; } .regras.compacta h3 { margin: 3mm 0 1.5mm; }
 .prova-pag .doc { box-shadow: none; border: 1px solid #B8AD96; padding: 18px 20px 12px; break-inside: auto; }
 .prova-pag .doc-tab td, .prova-pag .doc-tab th { padding: 3px 6px; }
 .prova-pag .foto img { max-height: 120mm; object-fit: contain; background: #fff; }
@@ -87,44 +90,46 @@ const paginas = {};
 const provasIniciais = b.provas.filter((p) => p.origem === "pdf");
 const docs = (lista) => lista.map((p) => `<section class="pag prova-pag">${renderProva(p, CTX)}</section>`).join("\n");
 const local = b.local.split("—")[0].trim();
+const AUDIOS = provasIniciais.filter((p) => p.tipo === "audio").map((p) => p.id);
+const IMP = b.impresso || {};
 
-// 1) dossiê (documentos iniciais)
-paginas["impresso-dossie"] = await gerar("impresso-dossie", "Dossiê", `
-<section class="pag capa"><div class="etq">CASO Nº ${esc(b.numero)}</div><div class="fita"></div>
+// 1) dossiê. ESSENCIAL (o que precisa estar na mesa): regras, pessoas e TODOS os documentos em fluxo compacto.
+//    Nada é destacado nem deixado de fora: separar "importantes" de "não importantes" entregaria a solução.
+//    OPCIONAL: capa da pasta e fichas recortáveis. COMPLETO (entrega/Kiwify): capa + essencial + fichas.
+const CAPA = `<section class="pag capa"><div class="etq">CASO Nº ${esc(b.numero)}</div><div class="fita"></div>
   <div style="margin-top:14mm"><span class="alibi">ÁLIBI</span><div class="arq">ARQUIVO ÁLIBI</div></div>
   <h1>${esc(b.titulo)}</h1><div class="sub">${esc(b.subtitulo)}</div>
   <div class="fotinha">${foto(b.vitima.foto.rosto)}<span>${esc(b.vitima.nome)}</span></div>
   <div class="carimbo">CONFIDENCIAL</div>
   <div class="cnum">ARQUIVO ÁLIBI — CASO Nº ${esc(b.numero)} — CONFIDENCIAL<br>${esc(b.data_crime)} · ${esc(local)}<br>${esc(b.jogadores)} jogadores · ${esc(b.duracao)} · ${esc(b.classificacao)}</div>
-</section>
-
-<section class="pag regras"><h2 class="sec">Como jogar no papel</h2>
+</section>`;
+const REGRAS = `<section class="pag regras compacta"><h2 class="sec">Como jogar no papel</h2>
   <div class="box alerta"><b>Aviso de spoiler:</b> não procure a solução. Ela fica trancada na Central até você resolver o caso.</div>
   <h3>Sua missão</h3><p>${esc(b.sinopse)} Você é o investigador. Nestas folhas estão os documentos que a polícia reuniu na primeira noite: boletim, depoimentos, laudos, fotos e registros. Cada documento tem um número (E-01, E-02…).</p>
-  <h3>Os 3 objetivos</h3><p><b>1. Não foi o coração:</b> prove o que realmente causou a morte.<br><b>2. Quem mentiu sobre o álibi?</b> Descubra quem mentiu sobre onde estava e prove a mentira.<br><b>3. Acusação final:</b> quem foi, como e por quê.</p>
+  <h3>Os ${b.objetivos.length} objetivos</h3><p>${b.objetivos.map((o) => `<b>${o.n}. ${esc(o.titulo)}:</b> ${esc(o.pergunta)}`).join("<br>")}</p>
   <h3>Passo a passo</h3><ol>
     <li>Leia as folhas com calma. Anote horários e compare o que as pessoas <b>dizem</b> com o que os registros <b>mostram</b>.</li>
     <li>No celular, abra a Central pelo botão <b>“Começar a jogar”</b> na sua área de membros da Kiwify (você já escolheu jogar <b>no papel</b>).</li>
     <li>Toque na resposta e <b>digite os números das provas</b> que mostram que você tem razão (por exemplo, 5 para a E-05). Toque em <b>Conferir resposta</b>.</li>
     <li>Acertou? A Central libera <b>provas novas para imprimir</b>. Sem elas não dá para fechar o caso. Travou? Toque em <b>Pedir dica</b> (3 por objetivo).</li>
   </ol>
-  <h3>Provas em áudio</h3><p>Os depoimentos foram gravados, e as provas <b>E-27</b> e <b>E-28</b> existem só em áudio. Nas folhas, elas aparecem com o aviso <b>“Ouça no celular”</b>: abra a Central &gt; Documentos e toque no ▶.</p>
+  <h3>Provas em áudio</h3><p>Os depoimentos foram gravados${AUDIOS.length ? `, e ${AUDIOS.length === 1 ? "a prova" : "as provas"} ${AUDIOS.map((id) => `<b>${esc(id)}</b>`).join(" e ")} ${AUDIOS.length === 1 ? "existe" : "existem"} só em áudio` : ""}. Nas folhas, elas aparecem com o aviso <b>“Ouça no celular”</b>: abra a Central &gt; Documentos e toque no ▶.</p>
   <div class="codigo-box"><b>${esc(b.codigo)}</b><span>Seu código. Guarde: se precisar abrir o caso de novo, digite-o na Central. Não compartilhe.</span></div>
   <div class="box"><b>Caso fictício.</b> Qualquer semelhança com fatos ou pessoas reais é coincidência. Classificação: ${esc(b.classificacao)}. Uso pessoal — proibida a redistribuição.</div>
-</section>
-
-<section class="pag"><h2 class="sec">As pessoas da casa</h2>
-  <div class="vit">${foto(b.vitima.foto.rosto)}<div><b style="font-size:11px;letter-spacing:.1em">A VÍTIMA</b><br><b style="font-size:17px">${esc(b.vitima.nome)}, ${esc(b.vitima.idade)} anos</b><br>${esc(b.vitima.relacao)}<br><br>Encontrado morto no escritório da própria casa na noite de ${esc(b.data_crime.toLowerCase())}.</div></div>
-  <p style="font-size:13px;margin:0 0 3mm">Estavam na casa naquela noite:</p>
+</section>`;
+const PESSOAS = `<section class="pag"><h2 class="sec">${esc(IMP.titulo_pessoas || "As pessoas da casa")}</h2>
+  <div class="vit">${foto(b.vitima.foto.rosto)}<div><b style="font-size:11px;letter-spacing:.1em">A VÍTIMA</b><br><b style="font-size:17px">${esc(b.vitima.nome)}, ${esc(b.vitima.idade)} anos</b><br>${esc(b.vitima.relacao)}<br><br>${esc(IMP.texto_vitima || `Encontrado morto na noite de ${b.data_crime.toLowerCase()}.`)}</div></div>
+  <p style="font-size:13px;margin:0 0 3mm">${esc(IMP.texto_suspeitos || "Estavam na casa naquela noite:")}</p>
   <div class="pers">${b.suspeitos.map((s) => `<div class="p">${foto(s.foto.rosto)}<b>${esc(s.nome)}</b>, ${esc(s.idade)}<br>${esc(s.relacao)}</div>`).join("")}</div>
   <p style="font-size:11px;margin-top:3mm">Fotos de identificação. Todas as pessoas são fictícias e as imagens foram criadas para o jogo.</p>
-</section>
-
-${docs(provasIniciais)}
-
-<section class="pag"><h2 class="sec">Fichas recortáveis (opcional)</h2><p style="font-size:12px">Recorte na linha tracejada e use as fichas para montar seu quadro de suspeitos.</p>
+</section>`;
+const FICHAS = `<section class="pag"><h2 class="sec">Fichas recortáveis (opcional)</h2><p style="font-size:12px">Recorte na linha tracejada e use as fichas para montar seu quadro de suspeitos.</p>
   <div class="recorte">${b.suspeitos.map((s) => `<div class="r">${foto(s.foto.rosto)}<b>${esc(s.nome)}</b><br>${esc(s.relacao)}</div>`).join("")}</div>
-</section>`);
+</section>`;
+const FLUXO = `<section class="fluxo">${provasIniciais.map((p) => `<div class="prova-pag">${renderProva(p, CTX)}</div>`).join("\n")}</section>`;
+paginas["impresso-dossie"] = await gerar("impresso-dossie", "Dossiê — essencial", REGRAS + PESSOAS + FLUXO);
+paginas["impresso-opcional"] = await gerar("impresso-opcional", "Dossiê — opcional", CAPA + FICHAS);
+paginas["impresso-completo"] = await gerar("impresso-completo", "Dossiê", CAPA + REGRAS + PESSOAS + FLUXO + `<div style="break-before:page"></div>` + FICHAS);
 
 // 2) provas novas de cada objetivo
 for (const o of b.objetivos) {
@@ -149,4 +154,4 @@ fs.rmSync(dirJpg, { recursive: true, force: true });
 fs.writeFileSync(path.join(OUT, "paginas.json"), JSON.stringify(paginas, null, 1));
 // o dossiê completo para entrega é o mesmo arquivo do modo papel (uma fonte só)
 const DPDF = path.join(RAIZ, "dist", "pdf"); fs.mkdirSync(DPDF, { recursive: true });
-fs.copyFileSync(path.join(OUT, "impresso-dossie.pdf"), path.join(DPDF, `${slug}-dossie.pdf`));
+fs.copyFileSync(path.join(OUT, "impresso-completo.pdf"), path.join(DPDF, `${slug}-dossie.pdf`));

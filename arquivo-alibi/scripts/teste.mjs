@@ -16,7 +16,7 @@ let nShot = 0; const shot = async (pg, n) => { if (!PR) return; nShot++; await p
 const URL0 = "http://localhost:8799/";
 const LINK_KIWIFY = `${URL0}?c=${b.codigo}`;
 // combinações ALTERNATIVAS (não as óbvias), para provar que todas valem
-const RESP = { 1: [{ fato: "c" }, ["E-05", "E-07", "E-26"]], 2: [{ suspeito: "caio" }, ["E-02", "E-27", "B-04"]], 3: [{ suspeito: "caio", metodo: "m1", motivo: "mo2" }, ["B-07", "E-17", "E-16"]] };
+const RESP = { 1: [{ fato: "c" }, ["E-05", "E-07", "E-26"]], 2: [{ suspeito: "caio" }, ["E-02", "E-27", "B-02"]], 3: [{ suspeito: "caio", metodo: "m1", motivo: "mo2" }, ["B-07", "E-17", "E-16"]] };
 
 // 0) segurança: nada de PDF solto; arquivos de mídia são ilegíveis sem o código
 const soltos = execFileSync("find", [SITE, "-name", "*.pdf"]).toString().trim();
@@ -77,6 +77,13 @@ async function modoTela() {
     const [campos, provas] = RESP[n];
     for (const [k, v] of Object.entries(campos)) await pg.check(`#f-obj input[name="${k}"][value="${v}"]`);
     if (n === 1) { await pg.click("#enviar"); await pg.waitForSelector(".resposta.quase"); if (!/Marque 3 provas\. Você marcou 0/.test(await pg.textContent("#resp"))) falha("erro de provas não ensina"); else passo("erro ensina: “Marque 3 provas. Você marcou 0.”"); }
+    if (n === 2 && slug === "mansao-valente") {
+      // prova fraca (nenhum registro que desminta o álibi) não pode passar: tem de dar "quase"
+      for (const id of ["E-02", "E-12", "E-27"]) { await pg.fill("#busca", id); await pg.check(`#lista-provas input[value="${id}"]`); }
+      await pg.click("#enviar"); await pg.waitForSelector(".resposta.quase", { timeout: 20000 });
+      if (!/falta um registro/.test(await pg.textContent("#resp"))) falha("E-02+E-12+E-27 não deu o 'quase' certo"); else passo("E-02+E-12+E-27 dá 'quase' (falta um registro), não acerto");
+      await pg.click("#limpar-sel"); if (!/0 de 3 marcadas/.test(await pg.textContent("#marcadas"))) falha("Limpar seleção não zerou"); else passo("botão Limpar seleção zera as provas marcadas");
+    }
     for (const id of provas) { await pg.fill("#busca", id); await pg.check(`#lista-provas input[value="${id}"]`); }
     if (n === 1) { await pg.fill("#busca", ""); await pg.click('[data-ver="E-05"]'); await pg.waitForSelector(".modal .doc"); await shot(pg, "tela-08-ver-prova-sem-sair"); await pg.goBack(); await pg.waitForTimeout(300); passo("prova aberta e fechada sem sair do objetivo"); }
     await pg.click("#enviar");

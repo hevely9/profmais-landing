@@ -75,8 +75,8 @@ export function retrato(s, w = 220) {
 
 // ── croquis / fotos ilustradas da perícia ──
 const ILUS = {
-  planta: () => `<svg viewBox="0 0 640 520" class="svg-planta" font-family="Courier" font-size="12">
-  <rect width="640" height="520" fill="#F1EBDD"/>
+  planta: () => `<svg viewBox="0 0 640 560" class="svg-planta" font-family="Courier" font-size="12">
+  <rect width="640" height="560" fill="#F1EBDD"/>
   <text x="16" y="24" font-weight="700" font-size="14">TÉRREO</text>
   <g stroke="#1A1714" stroke-width="3" fill="none">
     <rect x="16" y="34" width="608" height="300"/>
@@ -89,7 +89,7 @@ const ILUS = {
     <text x="356" y="250">CORREDOR LESTE</text><text x="496" y="100">ESCRITÓRIO</text><text x="496" y="250">GARAGEM</text>
   </g>
   <line x1="336" y1="200" x2="336" y2="334" stroke="#1A1714" stroke-width="3" stroke-dasharray="6 6"/>
-  <rect x="470" y="110" width="12" height="36" fill="#A3141C"/><text x="380" y="292" font-size="11">porta única →</text>
+  <rect x="470" y="110" width="12" height="36" fill="#A3141C"/><text x="352" y="150" font-size="11">porta única do escritório →</text>
   <g fill="#A3141C" font-weight="700" font-size="12">
     <circle cx="150" cy="60" r="11"/><text x="143" y="64" fill="#fff">S8</text>
     <circle cx="310" cy="160" r="11"/><text x="303" y="164" fill="#fff">S6</text>
@@ -99,16 +99,19 @@ const ILUS = {
     <circle cx="450" cy="226" r="11"/><text x="443" y="230" fill="#fff">S3</text>
     <circle cx="600" cy="196" r="11"/><text x="593" y="200" fill="#fff">S1</text>
   </g>
-  <text x="16" y="360" font-weight="700" font-size="14">PÁTIO / JARDIM</text>
-  <rect x="16" y="368" width="420" height="60" fill="none" stroke="#1A1714" stroke-dasharray="4 4"/>
-  <circle cx="40" cy="398" r="11" fill="#1A1714"/><text x="31" y="402" fill="#fff" font-weight="700">C1</text>
-  <text x="60" y="402">câmera cobre o pátio até a entrada do jardim</text>
-  <text x="340" y="420">gazebo (fora da câmera) →</text>
-  <text x="476" y="360" font-weight="700" font-size="14">ANDAR SUPERIOR</text>
-  <rect x="476" y="368" width="148" height="140" fill="none" stroke="#1A1714" stroke-width="3"/>
+    <rect x="336" y="338" width="288" height="30" fill="#E3D9C4" stroke="#1A1714" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="346" y="358" font-weight="700" font-size="11">VARANDA LATERAL (sem sensor e sem câmera)</text>
+  <rect x="380" y="328" width="34" height="10" fill="#1A1714"/><text x="372" y="322" font-size="10">porta</text>
+<text x="16" y="400" font-weight="700" font-size="14">PÁTIO / JARDIM</text>
+  <rect x="16" y="408" width="420" height="60" fill="none" stroke="#1A1714" stroke-dasharray="4 4"/>
+  <circle cx="40" cy="438" r="11" fill="#1A1714"/><text x="31" y="442" fill="#fff" font-weight="700">C1</text>
+  <text x="60" y="442">câmera cobre o pátio até a entrada do jardim</text>
+  <text x="340" y="460">gazebo (fora da câmera) →</text>
+  <text x="476" y="400" font-weight="700" font-size="14">ANDAR SUPERIOR</text>
+  <rect x="476" y="408" width="148" height="140" fill="none" stroke="#1A1714" stroke-width="3"/>
   <line x1="476" y1="420" x2="624" y2="420" stroke="#1A1714" stroke-width="2"/>
-  <text x="486" y="396">hall superior (S6)</text><text x="486" y="446">SUÍTE DO CASAL</text><text x="486" y="466">+ banheiro com</text><text x="486" y="484">armário de remédios</text>
-  <text x="16" y="470">Portão social: P1</text><text x="16" y="490">Sensores repetem o registro a cada 5 min com presença.</text>
+  <text x="486" y="436">hall superior (S6)</text><text x="486" y="486">SUÍTE DO CASAL</text><text x="486" y="506">+ banheiro com</text><text x="486" y="524">armário de remédios</text>
+  <text x="16" y="510">Portão social: P1</text><text x="16" y="530">Sensores repetem o registro a cada 5 min com presença.</text>
 </svg>`,
 };
 

@@ -2,7 +2,7 @@
  "slug": "mansao-valente",
  "numero": "001",
  "titulo": "O Último Jantar na Mansão Valente",
- "subtitulo": "Ele reuniu a família para anunciar uma mudança. Não chegou à sobremesa do dia seguinte.",
+ "subtitulo": "Ele avisou que tudo ia mudar. Não viveu para ver.",
  "sinopse": "Augusto Valente reuniu a família para um jantar e avisou: na segunda-feira, algumas coisas iam mudar. Uma hora depois, foi encontrado morto no escritório. O médico da família diz que foi o coração. Você acha que não.",
  "codigo": "VALENTE-V9UZ-83JA",
  "acento": "#C9A227",
@@ -378,7 +378,8 @@
     "notas": [
      "O escritório só é acessível pelo corredor leste (sensor S3).",
      "A garagem é acessada pela porta lateral do hall; tem sensor próprio (S1).",
-     "A escada para o andar superior passa pelo sensor S6. O armário de remédios fica no banheiro da suíte do casal."
+     "A escada para o andar superior passa pelo sensor S6. O armário de remédios fica no banheiro da suíte do casal.",
+     "A varanda lateral corre ao longo do corredor leste e da garagem, do lado de fora. Tem porta só para o corredor leste e não tem sensor nem câmera."
     ]
    }
   },
@@ -453,7 +454,7 @@
     },
     "corpo": [
      "O paciente fazia uso contínuo de digoxina 0,25 mg, um comprimido ao dia, pela manhã. A concentração encontrada é cerca de cinco vezes o limite superior da faixa terapêutica e é incompatível com o uso de uma dose diária.",
-     "Conclusão preliminar: intoxicação digitálica aguda, por ingestão de dose múltipla poucas horas antes do óbito, causando arritmia cardíaca fatal."
+     "Conclusão preliminar: intoxicação digitálica aguda, por ingestão de dose múltipla menos de uma hora antes do óbito, causando arritmia cardíaca fatal."
     ],
     "assinatura": "Dra. Ivone Castelar — Perita Médico-Legista"
    }
@@ -516,6 +517,7 @@
     },
     "corpo": [
      "O conhaque do decanter não continha a substância. A digoxina estava apenas no copo, em forma de comprimidos triturados, e no papel encontrado na lixeira, compatível com o uso para triturar e transportar o pó.",
+     "Misturado a um pouco de conhaque no fundo do copo de cristal lapidado, o pó se dissolve quase todo e fica escondido pela cor escura da bebida. Sob a luz baixa do escritório, o resíduo não seria percebido por quem servisse a dose por cima.",
      "Nenhuma impressão digital aproveitável foi encontrada no copo, que apresenta sinais de ter sido limpo por fora com tecido."
     ],
     "assinatura": "Paulo Rezende Lima — Perito Criminal",
@@ -950,7 +952,7 @@
       "Presença (várias pessoas)"
      ]
     ],
-    "nota": "S1 Garagem: nenhum evento entre 19:12 (chegada dos convidados) e 22:31. Teste da perícia em 22/09: o sensor S1 registra normalmente uma pessoa sentada dentro de qualquer veículo estacionado na garagem.",
+    "nota": "S1 Garagem: nenhum evento entre 19:30 (chegada dos convidados) e 22:31. Teste da perícia em 22/09: o sensor S1 registra normalmente uma pessoa sentada dentro de qualquer veículo estacionado na garagem.",
     "anexo": {
      "img": "cena-garagem",
      "legenda": "Anexo: garagem da residência. O sensor S1 fica no canto superior direito (marcador 1)."
@@ -1013,6 +1015,11 @@
       "14:31",
       "Augusto",
       "Já te dei minha resposta, Rafael. Não."
+     ],
+     [
+      "14:48",
+      "Helena",
+      "Comprei mais um frasco do remédio do pai, tá no armário do banheiro da nossa suíte. Se ele pedir à noite, é lá que fica 💊"
      ],
      [
       "15:10",
@@ -1269,7 +1276,7 @@
      "[piano ao fundo, a música não para em nenhum momento]",
      "00:46 — Helena (sussurrando): Isso, filho... devagar, que é a parte que o seu pai gosta.",
      "00:59 — [passos rápidos subindo uma escada de madeira, ao longe; dois rangidos]",
-     "01:04 — Beatriz (sussurrando): Ué... o Caio não tinha ido pro carro?",
+     "01:04 — Beatriz (sussurrando): Ué... alguém viu a minha bolsa? [uma porta bate ao fundo]",
      "01:08 — Helena (sussurrando): Shhh. Tô gravando.",
      "01:15 — [palmas baixas, perto do celular]",
      "01:40 — [fim do trecho; o piano continua]"
@@ -1419,6 +1426,7 @@
     "corpo": [
      "Bom dia, Caio.",
      "Conforme nossa ligação de ontem à noite (que, aliás, foi tarde, já passava das dez e meia!), segue a proposta de reposição para o quarto trimestre.",
+     "PS: você comentou ontem à tarde que soube pela secretária dele que o Sr. Augusto marcou advogado para segunda. Se isso mudar alguma coisa nos pedidos, me avise.",
      "Abraço, Fernando."
     ]
    }
@@ -1531,7 +1539,7 @@
    ],
    "origem": "bonus2",
    "conteudo": {
-    "grupo": "Conversa com “R.” (apagada às 23:58, recuperada pela perícia)",
+    "grupo": "Conversa com “Toninho” (Antônio Saraiva, amigo de Caio, sem ligação com a família) — apagada às 23:58, recuperada pela perícia",
     "data": "Sábado, 21/09/2024",
     "msgs": [
      [
@@ -1546,7 +1554,7 @@
      ],
      [
       "19:02",
-      "R.",
+      "Toninho",
       "calma. vê o que dá pra fazer hoje"
      ]
     ]
@@ -1689,39 +1697,66 @@
    "aceitas": [
     {
      "suspeito": "caio",
-     "papeis": [
-      {
-       "de": [
-        "E-12",
-        "E-02"
-       ],
-       "n": 1
-      },
-      {
-       "de": [
-        "E-18",
-        "B-02",
-        "B-04",
-        "E-27"
-       ],
-       "n": 2
-      }
-     ],
      "combinacoes": [
       [
+       "B-02",
        "E-12",
-       "E-02",
+       "E-18"
+      ],
+      [
+       "B-04",
+       "E-12",
        "E-18"
       ],
       [
        "E-12",
-       "E-02",
-       "B-02"
+       "E-18",
+       "E-27"
       ],
       [
-       "E-12",
        "E-02",
-       "B-04"
+       "E-12",
+       "E-18"
+      ],
+      [
+       "B-02",
+       "B-04",
+       "E-12"
+      ],
+      [
+       "B-02",
+       "E-12",
+       "E-27"
+      ],
+      [
+       "B-02",
+       "E-02",
+       "E-12"
+      ],
+      [
+       "B-02",
+       "E-02",
+       "E-18"
+      ],
+      [
+       "B-04",
+       "E-02",
+       "E-18"
+      ],
+      [
+       "E-02",
+       "E-18",
+       "E-27"
+      ],
+      [
+       "B-02",
+       "B-04",
+       "E-02"
+      ],
+      [
+       "B-02",
+       "E-02",
+       "E-27"
       ]
      ]
     }
@@ -1761,7 +1796,7 @@
      "campos": {
       "suspeito": "caio"
      },
-     "msg": "Suspeito certo. Agora mostre a mentira: o que ele declarou e quais registros desmentem a declaração."
+     "msg": "Você achou o suspeito certo, mas falta um registro que prove que ele não estava onde disse. Junte o que ele declarou com um registro feito por outra pessoa."
     }
    ],
    "dicas": [
@@ -1942,7 +1977,7 @@
      "campos": {
       "suspeito": "beatriz"
      },
-     "msg": "Às 21h56, quando o copo foi envenenado, Beatriz estava na sala de música (E-24, E-25). E B-03 confirma a ligação dela depois."
+     "msg": "O vídeo E-24 mostra Beatriz na sala de música até 21h53, e a câmera do pátio (E-25) só a vê sair às 22h04. Às 22h06 ela já estava ao telefone com a psicóloga (B-03). E a digital no frasco (B-07) não é dela."
     },
     {
      "campos": {
@@ -1980,7 +2015,7 @@
    "Às 22h12, Augusto entrou no escritório, serviu-se e bebeu, como fazia todas as noites. O decanter estava limpo; só o copo tinha veneno (E-07). A digoxina chegou a cinco vezes o limite terapêutico (E-05) e causou uma arritmia fatal.",
    "Para ter um álibi, Caio só foi à garagem às 22h31 (S1) e ligou para o cliente às 22h32 (B-02, B-04). Depois, declarou que estava lá desde as 21h45 (E-12). O sensor da garagem, que registra até quem está sentado dentro do carro, ficou vazio a noite toda até 22h31 (E-18)."
   ],
-  "confissao": "Eu ia devolver o dinheiro. Ia dar um jeito. Mas ele não ia me ouvir: ia direto na polícia, na segunda. Quando ele disse no jantar que 'as coisas iam mudar', olhando para mim, eu entendi que não tinha mais tempo. Eu sabia do conhaque, todo mundo sabia. Sabia do remédio, a Helena tinha comentado do frasco novo. Subi, desci, foram cinco minutos. Achei que ninguém ia pedir necropsia de um homem de 71 anos com o coração fraco. O Renato quase assinou. Quase. — Caio Moura, em depoimento à Delegada Marta Siqueira, 24/09/2024.",
+  "confissao": "Eu ia devolver o dinheiro. Ia dar um jeito. Mas ele não ia me ouvir: ia direto na polícia, na segunda. Quando ele disse no jantar que 'as coisas iam mudar', olhando para mim, eu entendi que não tinha mais tempo. Eu sabia do conhaque, todo mundo sabia. Sabia do remédio, a Helena tinha comentado do frasco novo. Subi, desci, foram cinco minutos. Misturei o pó com um pouco de conhaque no fundo do copo; escuro do jeito que é, ninguém ia ver nada. Achei que ninguém ia pedir necropsia de um homem de 71 anos com o coração fraco. O Renato quase assinou. Quase. — Caio Moura, em depoimento à Delegada Marta Siqueira, 24/09/2024.",
   "pistas": [
    [
     "E-05",
@@ -2195,5 +2230,10 @@
     0
    ]
   ]
+ },
+ "impresso": {
+  "titulo_pessoas": "As pessoas da casa",
+  "texto_vitima": "Encontrado morto no escritório da própria casa na noite de sábado, 21 de setembro de 2024.",
+  "texto_suspeitos": "Estavam na casa naquela noite:"
  }
 }
