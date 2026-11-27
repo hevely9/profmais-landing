@@ -1,12 +1,11 @@
 {
-  "urlFinal": "https://alibi-casos.pages.dev",
-  "perfil": "@alibi.criminal",
-  "links": {
-    "mansao-valente": "LINK_KIWIFY_mansao-valente",
-    "combo": "LINK_KIWIFY_combo"
-  },
-  "emBreve": [
-    { "slug": "linha-404", "numero": "002", "titulo": "Linha 404: O Ônibus da Meia-Noite", "sinopse": "Quarenta e dois passageiros embarcaram. Um não chegou vivo ao destino. Ninguém desceu no caminho.", "acento": "#3E6A8A", "dificuldade": "Média", "duracao": "60–90 min", "jogadores": "1 a 4", "classificacao": "14+" },
-    { "slug": "serra-do-corvo", "numero": "003", "titulo": "Ninguém Saiu de Serra do Corvo", "sinopse": "Numa cidade onde todo mundo se conhece, uma moça desaparece na noite da festa da padroeira. E todo mundo tem algo a esconder.", "acento": "#5E7A4A", "dificuldade": "Difícil", "duracao": "75–100 min", "jogadores": "1 a 4", "classificacao": "14+" }
-  ]
+ "urlFinal": "https://alibi-casos.pages.dev",
+ "perfil": "@alibi.criminal",
+ "links": {
+  "mansao-valente": "LINK_KIWIFY_mansao-valente",
+  "combo": "LINK_KIWIFY_combo",
+  "linha-404": "LINK_KIWIFY_linha-404",
+  "serra-do-corvo": "LINK_KIWIFY_serra-do-corvo"
+ },
+ "emBreve": []
 }

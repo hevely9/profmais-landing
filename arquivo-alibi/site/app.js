@@ -277,7 +277,7 @@ function abrirPessoas() {
   const { el } = modal(`${barra("As pessoas do caso", false)}<div class="modal-corpo"><article class="pessoa vitima"><img class="zoomavel" data-midia="${esc(v.foto.ficha)}" alt="${esc(v.nome)}"><div class="pessoa-txt"><small>A VÍTIMA</small><h3>${esc(v.nome)}, ${esc(v.idade)}</h3><p>${esc(v.relacao)}</p></div></article>
   <div class="pessoas">${S.caso.suspeitos.map((s) => `<article class="pessoa"><img class="zoomavel" data-midia="${esc(s.foto.ficha)}" alt="${esc(s.nome)} — foto de identificação">
     <div class="pessoa-txt"><h3>${esc(s.nome)}, ${esc(s.idade)}</h3><p>${esc(s.relacao)}</p></div>
-    ${s.foto.cracha ? `<div class="cracha"><div class="cr-top">${esc(s.foto.cracha.empresa)}</div><img class="zoomavel cr-foto" data-midia="${esc(s.foto.dia)}" alt="${esc(s.nome)} — crachá"><b>${esc(s.nome.toUpperCase())}</b><span>${esc(s.foto.cracha.cargo)}</span></div>` : `<figure class="dia"><img class="zoomavel" data-midia="${esc(s.foto.dia)}" alt="${esc(s.nome)} — foto pessoal"><figcaption>Foto pessoal entregue à polícia</figcaption></figure>`}
+    ${!s.foto.dia ? "" : s.foto.cracha ? `<div class="cracha"><div class="cr-top">${esc(s.foto.cracha.empresa)}</div><img class="zoomavel cr-foto" data-midia="${esc(s.foto.dia)}" alt="${esc(s.nome)} — crachá"><b>${esc(s.nome.toUpperCase())}</b><span>${esc(s.foto.cracha.cargo)}</span></div>` : `<figure class="dia"><img class="zoomavel" data-midia="${esc(s.foto.dia)}" alt="${esc(s.nome)} — foto pessoal"><figcaption>Foto pessoal entregue à polícia</figcaption></figure>`}
   </article>`).join("")}</div><p class="intro">Todas as pessoas e imagens são fictícias, criadas para o jogo.</p></div>`);
   hidratar(el);
 }

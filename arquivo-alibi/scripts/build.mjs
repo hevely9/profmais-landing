@@ -65,7 +65,11 @@ for (const slug of fs.readdirSync(path.join(RAIZ, "casos")).sort()) {
   if (!fs.existsSync(arq)) continue;
   const b = JSON.parse(fs.readFileSync(arq, "utf8"));
   const codigo = normCodigo(b.codigo);
-  proibidos.add(b.codigo); proibidos.add(codigo);
+  proibidos.add(b.codigo); proibidos.add(codigo); for (const x of b.proibidos || []) proibidos.add(x);
+  // mídia que ainda não existe (ex.: vozes geradas só depois da aprovação): o áudio sai da prova e a transcrição aparece
+  const temMidia = (n) => [path.join(RAIZ, "casos", slug, "midia")].some((d) => fs.existsSync(d) && fs.readdirSync(d).some((f) => f.replace(/\.\w+$/, "") === n));
+  const tiraAudio = (o) => { if (Array.isArray(o)) o.forEach(tiraAudio); else if (o && typeof o === "object") { if (typeof o.audio === "string" && !temMidia(o.audio)) delete o.audio; Object.values(o).forEach(tiraAudio); } };
+  tiraAudio(b);
   // folhas de imprimir (modo papel): geradas antes e criptografadas como o resto
   execFileSync("node", [path.join(RAIZ, "scripts", "impressos.mjs"), slug], { stdio: "inherit", env: { ...process.env, NODE_PATH: process.env.NODE_PATH || execFileSync("npm", ["root", "-g"]).toString().trim() } });
   const dirImp = path.join(RAIZ, "dist", "impressos", slug);
