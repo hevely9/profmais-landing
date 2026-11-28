@@ -19,6 +19,7 @@ import { CorteGloria, GLORIA_TOTAL } from "./v/corte-gloria";
 import { CapaDp30, CorteGloria2, GLORIA2_TOTAL } from "./v/corte-gloria2";
 import { CapaSob, SobInvestigacao, SOB_TOTAL } from "./v/sobinv";
 import { EditEliza, ELIZA_TOTAL } from "./v/eliza";
+import { MOLDURAS, LACO } from "./molduras";
 import { CapaSuz, Suz031, Suz032, SuzEditA, SuzEditB, SuzEditC, SUZ031_TOTAL, SUZ032_TOTAL, SUZEA_TOTAL, SUZEB_TOTAL, SUZEC_TOTAL } from "./v/suz";
 import { CapaSob2, SobInvestigacao2, SOB2_TOTAL } from "./v/sobinv2";
 
@@ -49,6 +50,15 @@ export const Root: React.FC = () => (
     {comp("Edit-Suz-B", SuzEditB, SUZEB_TOTAL)}
     {comp("Edit-Suz-C", SuzEditC, SUZEC_TOTAL)}
     {comp("Edit-Eliza", EditEliza, ELIZA_TOTAL)}
+    <Composition id="Moldura-Dossie-verde" component={MOLDURAS.Dossie as React.FC<any>} defaultProps={{ modo: "verde" }} durationInFrames={LACO} fps={FPS} width={1080} height={1920} />
+    <Composition id="Moldura-Dossie-png" component={MOLDURAS.Dossie as React.FC<any>} defaultProps={{ modo: "png" }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
+    <Composition id="Moldura-Dossie-previa" component={MOLDURAS.Dossie as React.FC<any>} defaultProps={{ modo: "previa" }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
+    <Composition id="Moldura-Fita-verde" component={MOLDURAS.Fita as React.FC<any>} defaultProps={{ modo: "verde" }} durationInFrames={LACO} fps={FPS} width={1080} height={1920} />
+    <Composition id="Moldura-Fita-png" component={MOLDURAS.Fita as React.FC<any>} defaultProps={{ modo: "png" }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
+    <Composition id="Moldura-Fita-previa" component={MOLDURAS.Fita as React.FC<any>} defaultProps={{ modo: "previa" }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
+    <Composition id="Moldura-Cinema-verde" component={MOLDURAS.Cinema as React.FC<any>} defaultProps={{ modo: "verde" }} durationInFrames={LACO} fps={FPS} width={1080} height={1920} />
+    <Composition id="Moldura-Cinema-png" component={MOLDURAS.Cinema as React.FC<any>} defaultProps={{ modo: "png" }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
+    <Composition id="Moldura-Cinema-previa" component={MOLDURAS.Cinema as React.FC<any>} defaultProps={{ modo: "previa" }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
     <Composition id="Capa-Eliza" component={CapaSuz as React.FC<any>} defaultProps={{ img: "eliza-capa", pos: "50% 30%", l1: "ELA AVISOU.", l2: "NINGUÉM OUVIU.", sub: "Eliza Samudio, 25 anos." }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
     <Composition id="Capa-031" component={CapaSuz as React.FC<any>} defaultProps={{ img: "s-netflix-suzane", pos: "50% 22%", l1: "ELA FALA DO IRMÃO", l2: "“NÃO ERA PRA TER SIDO ASSIM”", sub: "Suzane von Richthofen, 2026.", n: "Nº 031" }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
     <Composition id="Capa-032" component={CapaSuz as React.FC<any>} defaultProps={{ img: "c2-suz-hoje", pos: "50% 30%", l1: "“NÃO FUI EU QUE FIZ”", l2: "O QUE AS PROVAS DIZEM", sub: "A versão de Suzane, 24 anos depois.", n: "Nº 032" }} durationInFrames={1} fps={FPS} width={1080} height={1920} />
