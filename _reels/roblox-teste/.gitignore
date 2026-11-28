@@ -1,0 +1,6 @@
+node_modules/
+out/
+entrega/*.mp4
+bruto/
+public/v/
+public/audio/

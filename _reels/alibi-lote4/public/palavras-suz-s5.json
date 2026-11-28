@@ -1,0 +1,538 @@
+{
+"words": [
+{
+"text": "ela",
+"start": 0.0,
+"end": 0.88,
+"p": 0.25
+},
+{
+"text": "seduziu",
+"start": 0.88,
+"end": 1.44,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 1.44,
+"end": 2.24,
+"p": 0.92
+},
+{
+"text": "promotor",
+"start": 2.24,
+"end": 2.72,
+"p": 1.0
+},
+{
+"text": "ela",
+"start": 2.72,
+"end": 3.56,
+"p": 0.27
+},
+{
+"text": "seduziu",
+"start": 3.56,
+"end": 4.0,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 4.0,
+"end": 4.72,
+"p": 1.0
+},
+{
+"text": "agente",
+"start": 4.72,
+"end": 5.64,
+"p": 1.0
+},
+{
+"text": "lá",
+"start": 5.64,
+"end": 5.86,
+"p": 0.91
+},
+{
+"text": "de",
+"start": 5.86,
+"end": 6.28,
+"p": 0.99
+},
+{
+"text": "segurança",
+"start": 6.28,
+"end": 6.98,
+"p": 0.98
+},
+{
+"text": "a",
+"start": 6.98,
+"end": 7.62,
+"p": 0.8
+},
+{
+"text": "diretora",
+"start": 7.62,
+"end": 8.28,
+"p": 1.0
+},
+{
+"text": "ela",
+"start": 8.28,
+"end": 9.06,
+"p": 0.83
+},
+{
+"text": "seduzia",
+"start": 9.06,
+"end": 9.48,
+"p": 1.0
+},
+{
+"text": "tanto",
+"start": 9.48,
+"end": 9.76,
+"p": 1.0
+},
+{
+"text": "homens",
+"start": 9.76,
+"end": 10.22,
+"p": 0.99
+},
+{
+"text": "quanto",
+"start": 10.22,
+"end": 10.44,
+"p": 0.96
+},
+{
+"text": "mulheres",
+"start": 10.44,
+"end": 10.88,
+"p": 0.82
+},
+{
+"text": "teve",
+"start": 12.18,
+"end": 12.66,
+"p": 0.61
+},
+{
+"text": "um",
+"start": 12.66,
+"end": 12.84,
+"p": 0.99
+},
+{
+"text": "que",
+"start": 12.84,
+"end": 12.96,
+"p": 0.87
+},
+{
+"text": "quase",
+"start": 12.96,
+"end": 13.1,
+"p": 1.0
+},
+{
+"text": "separou",
+"start": 13.1,
+"end": 13.62,
+"p": 0.99
+},
+{
+"text": "e",
+"start": 13.62,
+"end": 14.52,
+"p": 0.96
+},
+{
+"text": "quando",
+"start": 14.52,
+"end": 14.72,
+"p": 1.0
+},
+{
+"text": "eu",
+"start": 14.72,
+"end": 14.8,
+"p": 1.0
+},
+{
+"text": "fiz",
+"start": 14.8,
+"end": 14.94,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 14.94,
+"end": 15.06,
+"p": 0.92
+},
+{
+"text": "análise",
+"start": 15.06,
+"end": 15.32,
+"p": 1.0
+},
+{
+"text": "dela,",
+"start": 15.32,
+"end": 15.66,
+"p": 1.0
+},
+{
+"text": "duas",
+"start": 15.7,
+"end": 16.12,
+"p": 1.0
+},
+{
+"text": "carcereiras",
+"start": 16.12,
+"end": 16.66,
+"p": 1.0
+},
+{
+"text": "entraram",
+"start": 16.66,
+"end": 16.96,
+"p": 0.97
+},
+{
+"text": "em",
+"start": 16.96,
+"end": 17.06,
+"p": 1.0
+},
+{
+"text": "contato",
+"start": 17.06,
+"end": 17.36,
+"p": 1.0
+},
+{
+"text": "comigo,",
+"start": 17.36,
+"end": 17.64,
+"p": 1.0
+},
+{
+"text": "acho",
+"start": 17.68,
+"end": 17.84,
+"p": 0.98
+},
+{
+"text": "que",
+"start": 17.84,
+"end": 17.88,
+"p": 1.0
+},
+{
+"text": "foi",
+"start": 17.88,
+"end": 18.0,
+"p": 1.0
+},
+{
+"text": "pelo",
+"start": 18.0,
+"end": 18.18,
+"p": 1.0
+},
+{
+"text": "facebook",
+"start": 18.18,
+"end": 18.48,
+"p": 0.67
+},
+{
+"text": "também",
+"start": 18.48,
+"end": 18.76,
+"p": 0.99
+},
+{
+"text": "Ricardo,",
+"start": 18.76,
+"end": 19.0,
+"p": 0.52
+},
+{
+"text": "você",
+"start": 19.1,
+"end": 19.24,
+"p": 1.0
+},
+{
+"text": "descreveu",
+"start": 19.24,
+"end": 19.6,
+"p": 1.0
+},
+{
+"text": "exatamente",
+"start": 19.6,
+"end": 20.16,
+"p": 1.0
+},
+{
+"text": "como",
+"start": 20.16,
+"end": 20.62,
+"p": 1.0
+},
+{
+"text": "é",
+"start": 20.62,
+"end": 20.76,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 20.76,
+"end": 20.84,
+"p": 1.0
+},
+{
+"text": "Suzane",
+"start": 20.84,
+"end": 21.1,
+"p": 0.99
+},
+{
+"text": "a",
+"start": 21.1,
+"end": 21.58,
+"p": 0.91
+},
+{
+"text": "Suzane",
+"start": 21.58,
+"end": 21.8,
+"p": 1.0
+},
+{
+"text": "é",
+"start": 21.8,
+"end": 21.88,
+"p": 1.0
+},
+{
+"text": "uma",
+"start": 21.88,
+"end": 21.92,
+"p": 1.0
+},
+{
+"text": "pessoa,",
+"start": 21.92,
+"end": 22.24,
+"p": 1.0
+},
+{
+"text": "exatamente",
+"start": 22.26,
+"end": 22.52,
+"p": 0.98
+},
+{
+"text": "como",
+"start": 22.52,
+"end": 22.62,
+"p": 0.87
+},
+{
+"text": "você",
+"start": 22.62,
+"end": 22.68,
+"p": 1.0
+},
+{
+"text": "falou",
+"start": 22.68,
+"end": 22.92,
+"p": 1.0
+},
+{
+"text": "se",
+"start": 22.92,
+"end": 23.28,
+"p": 0.96
+},
+{
+"text": "você",
+"start": 23.28,
+"end": 23.48,
+"p": 1.0
+},
+{
+"text": "sentar",
+"start": 23.48,
+"end": 23.84,
+"p": 1.0
+},
+{
+"text": "com",
+"start": 23.84,
+"end": 24.0,
+"p": 1.0
+},
+{
+"text": "ela",
+"start": 24.0,
+"end": 24.18,
+"p": 1.0
+},
+{
+"text": "meia",
+"start": 24.18,
+"end": 24.46,
+"p": 0.96
+},
+{
+"text": "hora",
+"start": 24.46,
+"end": 24.64,
+"p": 1.0
+},
+{
+"text": "pra",
+"start": 24.64,
+"end": 24.74,
+"p": 0.78
+},
+{
+"text": "conversar",
+"start": 24.74,
+"end": 25.04,
+"p": 1.0
+},
+{
+"text": "com",
+"start": 25.04,
+"end": 25.16,
+"p": 1.0
+},
+{
+"text": "ela,",
+"start": 25.16,
+"end": 25.4,
+"p": 1.0
+},
+{
+"text": "você",
+"start": 25.52,
+"end": 25.8,
+"p": 1.0
+},
+{
+"text": "leva",
+"start": 25.8,
+"end": 25.96,
+"p": 1.0
+},
+{
+"text": "ela",
+"start": 25.96,
+"end": 26.06,
+"p": 1.0
+},
+{
+"text": "pra",
+"start": 26.06,
+"end": 26.18,
+"p": 1.0
+},
+{
+"text": "casa",
+"start": 26.18,
+"end": 26.4,
+"p": 1.0
+},
+{
+"text": "pra",
+"start": 26.4,
+"end": 26.52,
+"p": 1.0
+},
+{
+"text": "tomar",
+"start": 26.52,
+"end": 26.68,
+"p": 0.99
+},
+{
+"text": "chá",
+"start": 26.68,
+"end": 27.0,
+"p": 0.98
+},
+{
+"text": "você",
+"start": 27.0,
+"end": 27.6,
+"p": 0.93
+},
+{
+"text": "acha",
+"start": 27.6,
+"end": 27.78,
+"p": 0.87
+},
+{
+"text": "ela",
+"start": 27.78,
+"end": 27.9,
+"p": 0.97
+},
+{
+"text": "muito",
+"start": 27.9,
+"end": 28.1,
+"p": 1.0
+},
+{
+"text": "legal",
+"start": 28.1,
+"end": 28.42,
+"p": 1.0
+},
+{
+"text": "todo",
+"start": 28.42,
+"end": 29.18,
+"p": 0.38
+},
+{
+"text": "psicopata",
+"start": 29.18,
+"end": 29.98,
+"p": 0.99
+},
+{
+"text": "é",
+"start": 29.98,
+"end": 30.18,
+"p": 0.98
+},
+{
+"text": "extremamente",
+"start": 30.18,
+"end": 31.48,
+"p": 1.0
+},
+{
+"text": "sedutor",
+"start": 31.48,
+"end": 32.16,
+"p": 1.0
+}
+]
+}

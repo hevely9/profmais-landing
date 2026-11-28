@@ -1,0 +1,892 @@
+{
+"words": [
+{
+"text": "O",
+"start": 0.0,
+"end": 0.12,
+"p": 0.95
+},
+{
+"text": "Brasil",
+"start": 0.12,
+"end": 0.46,
+"p": 1.0
+},
+{
+"text": "ganhou",
+"start": 0.46,
+"end": 0.88,
+"p": 1.0
+},
+{
+"text": "essa",
+"start": 0.88,
+"end": 1.12,
+"p": 0.99
+},
+{
+"text": "taça",
+"start": 1.12,
+"end": 1.54,
+"p": 0.99
+},
+{
+"text": "para",
+"start": 1.54,
+"end": 1.84,
+"p": 1.0
+},
+{
+"text": "sempre",
+"start": 1.84,
+"end": 2.42,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 2.42,
+"end": 3.12,
+"p": 0.7
+},
+{
+"text": "perdeu",
+"start": 3.12,
+"end": 3.6,
+"p": 1.0
+},
+{
+"text": "numa",
+"start": 3.6,
+"end": 3.78,
+"p": 1.0
+},
+{
+"text": "noite.",
+"start": 3.78,
+"end": 4.22,
+"p": 1.0
+},
+{
+"text": "A",
+"start": 4.64,
+"end": 5.02,
+"p": 1.0
+},
+{
+"text": "Jules",
+"start": 5.02,
+"end": 5.24,
+"p": 0.91
+},
+{
+"text": "Rimet",
+"start": 5.24,
+"end": 5.58,
+"p": 0.92
+},
+{
+"text": "era",
+"start": 5.58,
+"end": 5.98,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 5.98,
+"end": 6.12,
+"p": 1.0
+},
+{
+"text": "troféu",
+"start": 6.12,
+"end": 6.58,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 6.58,
+"end": 6.7,
+"p": 1.0
+},
+{
+"text": "Copa",
+"start": 6.7,
+"end": 6.98,
+"p": 1.0
+},
+{
+"text": "do",
+"start": 6.98,
+"end": 7.12,
+"p": 1.0
+},
+{
+"text": "Mundo.",
+"start": 7.12,
+"end": 7.38,
+"p": 1.0
+},
+{
+"text": "Em",
+"start": 7.64,
+"end": 8.02,
+"p": 1.0
+},
+{
+"text": "1970,",
+"start": 8.02,
+"end": 9.08,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 9.74,
+"end": 9.78,
+"p": 1.0
+},
+{
+"text": "Brasil",
+"start": 9.78,
+"end": 10.06,
+"p": 1.0
+},
+{
+"text": "foi",
+"start": 10.06,
+"end": 10.36,
+"p": 1.0
+},
+{
+"text": "tricampeão",
+"start": 10.36,
+"end": 11.14,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 11.14,
+"end": 11.46,
+"p": 1.0
+},
+{
+"text": "ganhou",
+"start": 11.46,
+"end": 11.76,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 11.76,
+"end": 11.9,
+"p": 1.0
+},
+{
+"text": "direito",
+"start": 11.9,
+"end": 12.16,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 12.16,
+"end": 12.34,
+"p": 1.0
+},
+{
+"text": "ficar",
+"start": 12.34,
+"end": 12.64,
+"p": 1.0
+},
+{
+"text": "com",
+"start": 12.64,
+"end": 12.84,
+"p": 1.0
+},
+{
+"text": "ela",
+"start": 12.84,
+"end": 13.14,
+"p": 1.0
+},
+{
+"text": "definitivamente.",
+"start": 13.14,
+"end": 14.42,
+"p": 1.0
+},
+{
+"text": "Ela",
+"start": 14.68,
+"end": 15.2,
+"p": 1.0
+},
+{
+"text": "ficava",
+"start": 15.2,
+"end": 15.58,
+"p": 1.0
+},
+{
+"text": "na",
+"start": 15.58,
+"end": 15.76,
+"p": 1.0
+},
+{
+"text": "sede",
+"start": 15.76,
+"end": 16.1,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 16.1,
+"end": 16.28,
+"p": 1.0
+},
+{
+"text": "CBF,",
+"start": 16.28,
+"end": 16.96,
+"p": 1.0
+},
+{
+"text": "no",
+"start": 17.08,
+"end": 17.16,
+"p": 1.0
+},
+{
+"text": "Rio",
+"start": 17.16,
+"end": 17.3,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 17.3,
+"end": 17.44,
+"p": 1.0
+},
+{
+"text": "Janeiro,",
+"start": 17.44,
+"end": 17.82,
+"p": 1.0
+},
+{
+"text": "numa",
+"start": 18.16,
+"end": 18.36,
+"p": 1.0
+},
+{
+"text": "vitrine",
+"start": 18.36,
+"end": 18.88,
+"p": 1.0
+},
+{
+"text": "à",
+"start": 18.88,
+"end": 19.04,
+"p": 0.99
+},
+{
+"text": "prova",
+"start": 19.04,
+"end": 19.36,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 19.36,
+"end": 19.52,
+"p": 1.0
+},
+{
+"text": "balas.",
+"start": 19.52,
+"end": 20.02,
+"p": 1.0
+},
+{
+"text": "Na",
+"start": 20.02,
+"end": 20.72,
+"p": 1.0
+},
+{
+"text": "noite",
+"start": 20.72,
+"end": 21.0,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 21.0,
+"end": 21.18,
+"p": 1.0
+},
+{
+"text": "19",
+"start": 21.18,
+"end": 21.64,
+"p": 1.0
+},
+{
+"text": "para",
+"start": 21.64,
+"end": 22.04,
+"p": 1.0
+},
+{
+"text": "20",
+"start": 22.04,
+"end": 22.42,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 22.42,
+"end": 22.62,
+"p": 1.0
+},
+{
+"text": "dezembro",
+"start": 22.62,
+"end": 23.14,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 23.14,
+"end": 23.32,
+"p": 1.0
+},
+{
+"text": "1983,",
+"start": 23.32,
+"end": 24.58,
+"p": 1.0
+},
+{
+"text": "ladrões",
+"start": 25.52,
+"end": 25.92,
+"p": 1.0
+},
+{
+"text": "renderam",
+"start": 25.92,
+"end": 26.46,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 26.46,
+"end": 26.58,
+"p": 1.0
+},
+{
+"text": "vigia,",
+"start": 26.58,
+"end": 27.0,
+"p": 1.0
+},
+{
+"text": "arrombaram",
+"start": 27.34,
+"end": 27.9,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 27.9,
+"end": 28.02,
+"p": 1.0
+},
+{
+"text": "vitrine",
+"start": 28.02,
+"end": 28.48,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 28.48,
+"end": 29.0,
+"p": 1.0
+},
+{
+"text": "levaram",
+"start": 29.0,
+"end": 29.54,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 29.54,
+"end": 29.66,
+"p": 1.0
+},
+{
+"text": "taça.",
+"start": 29.66,
+"end": 30.0,
+"p": 0.99
+},
+{
+"text": "A",
+"start": 30.28,
+"end": 30.7,
+"p": 1.0
+},
+{
+"text": "investigação",
+"start": 30.7,
+"end": 31.34,
+"p": 1.0
+},
+{
+"text": "apontou",
+"start": 31.34,
+"end": 31.82,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 31.82,
+"end": 31.96,
+"p": 1.0
+},
+{
+"text": "homem",
+"start": 31.96,
+"end": 32.26,
+"p": 1.0
+},
+{
+"text": "que",
+"start": 32.26,
+"end": 32.42,
+"p": 1.0
+},
+{
+"text": "circulava",
+"start": 32.42,
+"end": 33.04,
+"p": 1.0
+},
+{
+"text": "pela",
+"start": 33.04,
+"end": 33.26,
+"p": 1.0
+},
+{
+"text": "própria",
+"start": 33.26,
+"end": 33.7,
+"p": 1.0
+},
+{
+"text": "CBF",
+"start": 33.7,
+"end": 34.34,
+"p": 1.0
+},
+{
+"text": "como",
+"start": 34.34,
+"end": 34.62,
+"p": 1.0
+},
+{
+"text": "mentor",
+"start": 34.62,
+"end": 35.1,
+"p": 0.64
+},
+{
+"text": "do",
+"start": 35.1,
+"end": 35.32,
+"p": 1.0
+},
+{
+"text": "plano.",
+"start": 35.32,
+"end": 35.64,
+"p": 1.0
+},
+{
+"text": "Três",
+"start": 36.14,
+"end": 36.42,
+"p": 1.0
+},
+{
+"text": "pessoas",
+"start": 36.42,
+"end": 36.88,
+"p": 1.0
+},
+{
+"text": "foram",
+"start": 36.88,
+"end": 37.18,
+"p": 1.0
+},
+{
+"text": "condenadas,",
+"start": 37.18,
+"end": 37.84,
+"p": 1.0
+},
+{
+"text": "mas",
+"start": 38.06,
+"end": 38.52,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 38.52,
+"end": 38.68,
+"p": 1.0
+},
+{
+"text": "taça",
+"start": 38.68,
+"end": 39.08,
+"p": 1.0
+},
+{
+"text": "nunca",
+"start": 39.08,
+"end": 39.58,
+"p": 1.0
+},
+{
+"text": "apareceu.",
+"start": 39.58,
+"end": 40.16,
+"p": 1.0
+},
+{
+"text": "A",
+"start": 40.4,
+"end": 40.82,
+"p": 1.0
+},
+{
+"text": "versão",
+"start": 40.82,
+"end": 41.1,
+"p": 1.0
+},
+{
+"text": "oficial",
+"start": 41.1,
+"end": 41.6,
+"p": 1.0
+},
+{
+"text": "foi",
+"start": 41.6,
+"end": 42.22,
+"p": 1.0
+},
+{
+"text": "derretida",
+"start": 42.22,
+"end": 42.94,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 42.94,
+"end": 43.2,
+"p": 1.0
+},
+{
+"text": "vendida",
+"start": 43.2,
+"end": 43.68,
+"p": 1.0
+},
+{
+"text": "como",
+"start": 43.68,
+"end": 43.92,
+"p": 1.0
+},
+{
+"text": "ouro.",
+"start": 43.92,
+"end": 44.3,
+"p": 1.0
+},
+{
+"text": "Os",
+"start": 44.5,
+"end": 44.88,
+"p": 1.0
+},
+{
+"text": "condenados",
+"start": 44.88,
+"end": 45.44,
+"p": 1.0
+},
+{
+"text": "sempre",
+"start": 45.44,
+"end": 45.98,
+"p": 1.0
+},
+{
+"text": "negaram.",
+"start": 45.98,
+"end": 46.48,
+"p": 1.0
+},
+{
+"text": "Hoje,",
+"start": 46.64,
+"end": 47.3,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 47.48,
+"end": 47.68,
+"p": 1.0
+},
+{
+"text": "Brasil",
+"start": 47.68,
+"end": 47.96,
+"p": 1.0
+},
+{
+"text": "guarda",
+"start": 47.96,
+"end": 48.42,
+"p": 1.0
+},
+{
+"text": "só",
+"start": 48.42,
+"end": 48.7,
+"p": 1.0
+},
+{
+"text": "uma",
+"start": 48.7,
+"end": 48.9,
+"p": 1.0
+},
+{
+"text": "réplica.",
+"start": 48.9,
+"end": 49.4,
+"p": 1.0
+},
+{
+"text": "E",
+"start": 49.4,
+"end": 50.34,
+"p": 0.99
+},
+{
+"text": "não",
+"start": 50.34,
+"end": 50.48,
+"p": 1.0
+},
+{
+"text": "foi",
+"start": 50.48,
+"end": 50.78,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 50.78,
+"end": 50.88,
+"p": 1.0
+},
+{
+"text": "primeira",
+"start": 50.88,
+"end": 51.14,
+"p": 1.0
+},
+{
+"text": "vez.",
+"start": 51.14,
+"end": 51.52,
+"p": 1.0
+},
+{
+"text": "Em",
+"start": 51.78,
+"end": 52.18,
+"p": 1.0
+},
+{
+"text": "1966,",
+"start": 52.18,
+"end": 53.28,
+"p": 1.0
+},
+{
+"text": "na",
+"start": 54.02,
+"end": 54.08,
+"p": 1.0
+},
+{
+"text": "Inglaterra,",
+"start": 54.08,
+"end": 54.74,
+"p": 1.0
+},
+{
+"text": "ela",
+"start": 54.96,
+"end": 55.08,
+"p": 1.0
+},
+{
+"text": "também",
+"start": 55.08,
+"end": 55.48,
+"p": 1.0
+},
+{
+"text": "foi",
+"start": 55.48,
+"end": 55.78,
+"p": 1.0
+},
+{
+"text": "roubada.",
+"start": 55.78,
+"end": 56.3,
+"p": 1.0
+},
+{
+"text": "E",
+"start": 56.42,
+"end": 56.74,
+"p": 1.0
+},
+{
+"text": "quem",
+"start": 56.74,
+"end": 56.92,
+"p": 1.0
+},
+{
+"text": "encontrou",
+"start": 56.92,
+"end": 57.44,
+"p": 0.98
+},
+{
+"text": "foi",
+"start": 57.44,
+"end": 57.78,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 57.78,
+"end": 57.9,
+"p": 1.0
+},
+{
+"text": "cachorro,",
+"start": 57.9,
+"end": 58.46,
+"p": 1.0
+},
+{
+"text": "chamado",
+"start": 58.58,
+"end": 59.02,
+"p": 1.0
+},
+{
+"text": "Pickles.",
+"start": 59.02,
+"end": 59.58,
+"p": 0.96
+},
+{
+"text": "Onde",
+"start": 60.32,
+"end": 60.62,
+"p": 1.0
+},
+{
+"text": "você",
+"start": 60.62,
+"end": 60.88,
+"p": 1.0
+},
+{
+"text": "estava",
+"start": 60.88,
+"end": 61.28,
+"p": 1.0
+},
+{
+"text": "naquela",
+"start": 61.28,
+"end": 61.6,
+"p": 1.0
+},
+{
+"text": "noite?",
+"start": 61.6,
+"end": 61.96,
+"p": 1.0
+},
+{
+"text": "E",
+"start": 62.22,
+"end": 62.76,
+"p": 1.0
+},
+{
+"text": "esse",
+"start": 62.76,
+"end": 63.12,
+"p": 1.0
+},
+{
+"text": "era",
+"start": 63.12,
+"end": 63.66,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 63.66,
+"end": 63.82,
+"p": 1.0
+},
+{
+"text": "álibi.",
+"start": 63.82,
+"end": 64.14,
+"p": 0.93
+}
+]
+}

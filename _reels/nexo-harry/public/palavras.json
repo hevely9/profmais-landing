@@ -1,0 +1,874 @@
+{
+"words": [
+{
+"text": "Doze",
+"start": 0.0,
+"end": 0.44,
+"p": 0.88
+},
+{
+"text": "editoras",
+"start": 0.44,
+"end": 1.04,
+"p": 1.0
+},
+{
+"text": "disseram",
+"start": 1.04,
+"end": 1.5,
+"p": 1.0
+},
+{
+"text": "não",
+"start": 1.5,
+"end": 1.86,
+"p": 0.98
+},
+{
+"text": "para",
+"start": 1.86,
+"end": 2.12,
+"p": 0.78
+},
+{
+"text": "o",
+"start": 2.12,
+"end": 2.16,
+"p": 0.99
+},
+{
+"text": "Harry",
+"start": 2.16,
+"end": 2.36,
+"p": 1.0
+},
+{
+"text": "Potter.",
+"start": 2.36,
+"end": 2.74,
+"p": 1.0
+},
+{
+"text": "Ela",
+"start": 3.78,
+"end": 4.4,
+"p": 1.0
+},
+{
+"text": "era",
+"start": 4.4,
+"end": 4.54,
+"p": 1.0
+},
+{
+"text": "mãe",
+"start": 4.54,
+"end": 4.72,
+"p": 0.99
+},
+{
+"text": "solteira,",
+"start": 4.72,
+"end": 5.4,
+"p": 1.0
+},
+{
+"text": "desempregada,",
+"start": 5.62,
+"end": 6.48,
+"p": 1.0
+},
+{
+"text": "vivendo",
+"start": 6.68,
+"end": 7.0,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 7.0,
+"end": 7.12,
+"p": 1.0
+},
+{
+"text": "ajuda",
+"start": 7.12,
+"end": 7.4,
+"p": 1.0
+},
+{
+"text": "do",
+"start": 7.4,
+"end": 7.54,
+"p": 1.0
+},
+{
+"text": "governo",
+"start": 7.54,
+"end": 7.94,
+"p": 1.0
+},
+{
+"text": "na",
+"start": 7.94,
+"end": 8.12,
+"p": 0.99
+},
+{
+"text": "Escócia.",
+"start": 8.12,
+"end": 8.68,
+"p": 1.0
+},
+{
+"text": "Escrevia",
+"start": 8.98,
+"end": 9.6,
+"p": 1.0
+},
+{
+"text": "em",
+"start": 9.6,
+"end": 9.68,
+"p": 1.0
+},
+{
+"text": "cafés,",
+"start": 9.68,
+"end": 10.24,
+"p": 1.0
+},
+{
+"text": "com",
+"start": 10.46,
+"end": 10.5,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 10.5,
+"end": 10.62,
+"p": 1.0
+},
+{
+"text": "filha",
+"start": 10.62,
+"end": 10.86,
+"p": 1.0
+},
+{
+"text": "dormindo",
+"start": 10.86,
+"end": 11.26,
+"p": 1.0
+},
+{
+"text": "do",
+"start": 11.26,
+"end": 11.4,
+"p": 1.0
+},
+{
+"text": "lado.",
+"start": 11.4,
+"end": 11.7,
+"p": 1.0
+},
+{
+"text": "Mandou",
+"start": 12.36,
+"end": 12.92,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 12.92,
+"end": 13.02,
+"p": 1.0
+},
+{
+"text": "livro",
+"start": 13.02,
+"end": 13.2,
+"p": 1.0
+},
+{
+"text": "para",
+"start": 13.2,
+"end": 13.36,
+"p": 0.99
+},
+{
+"text": "as",
+"start": 13.36,
+"end": 13.46,
+"p": 1.0
+},
+{
+"text": "editoras.",
+"start": 13.46,
+"end": 14.12,
+"p": 1.0
+},
+{
+"text": "Não,",
+"start": 14.66,
+"end": 14.9,
+"p": 1.0
+},
+{
+"text": "não,",
+"start": 15.36,
+"end": 15.78,
+"p": 1.0
+},
+{
+"text": "não.",
+"start": 16.3,
+"end": 16.62,
+"p": 1.0
+},
+{
+"text": "Doze",
+"start": 17.28,
+"end": 17.8,
+"p": 0.99
+},
+{
+"text": "vezes",
+"start": 17.8,
+"end": 18.2,
+"p": 1.0
+},
+{
+"text": "não.",
+"start": 18.2,
+"end": 18.6,
+"p": 1.0
+},
+{
+"text": "A",
+"start": 19.22,
+"end": 19.56,
+"p": 1.0
+},
+{
+"text": "décima",
+"start": 19.56,
+"end": 19.86,
+"p": 0.97
+},
+{
+"text": "terceira",
+"start": 19.86,
+"end": 20.38,
+"p": 1.0
+},
+{
+"text": "só",
+"start": 20.38,
+"end": 20.66,
+"p": 1.0
+},
+{
+"text": "aceitou",
+"start": 20.66,
+"end": 21.22,
+"p": 1.0
+},
+{
+"text": "porque",
+"start": 21.22,
+"end": 21.48,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 21.48,
+"end": 21.62,
+"p": 1.0
+},
+{
+"text": "filha",
+"start": 21.62,
+"end": 21.9,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 21.9,
+"end": 22.06,
+"p": 1.0
+},
+{
+"text": "oito",
+"start": 22.06,
+"end": 22.34,
+"p": 1.0
+},
+{
+"text": "anos",
+"start": 22.34,
+"end": 22.62,
+"p": 1.0
+},
+{
+"text": "do",
+"start": 22.62,
+"end": 22.8,
+"p": 0.96
+},
+{
+"text": "presidente",
+"start": 22.8,
+"end": 23.26,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 23.26,
+"end": 23.48,
+"p": 1.0
+},
+{
+"text": "editora",
+"start": 23.48,
+"end": 24.0,
+"p": 1.0
+},
+{
+"text": "leu",
+"start": 24.0,
+"end": 24.32,
+"p": 0.99
+},
+{
+"text": "o",
+"start": 24.32,
+"end": 24.4,
+"p": 1.0
+},
+{
+"text": "primeiro",
+"start": 24.4,
+"end": 24.66,
+"p": 1.0
+},
+{
+"text": "capítulo",
+"start": 24.66,
+"end": 25.22,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 25.22,
+"end": 25.64,
+"p": 1.0
+},
+{
+"text": "pediu",
+"start": 25.64,
+"end": 25.98,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 25.98,
+"end": 26.08,
+"p": 1.0
+},
+{
+"text": "resto.",
+"start": 26.08,
+"end": 26.38,
+"p": 1.0
+},
+{
+"text": "Esse",
+"start": 26.82,
+"end": 27.34,
+"p": 0.99
+},
+{
+"text": "livro",
+"start": 27.34,
+"end": 27.68,
+"p": 1.0
+},
+{
+"text": "virou",
+"start": 27.68,
+"end": 27.94,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 27.94,
+"end": 28.06,
+"p": 1.0
+},
+{
+"text": "série",
+"start": 28.06,
+"end": 28.3,
+"p": 1.0
+},
+{
+"text": "mais",
+"start": 28.3,
+"end": 28.74,
+"p": 1.0
+},
+{
+"text": "vendida",
+"start": 28.74,
+"end": 29.26,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 29.26,
+"end": 29.42,
+"p": 1.0
+},
+{
+"text": "história.",
+"start": 29.42,
+"end": 29.84,
+"p": 1.0
+},
+{
+"text": "Mais",
+"start": 30.0,
+"end": 30.5,
+"p": 0.66
+},
+{
+"text": "de",
+"start": 30.5,
+"end": 30.64,
+"p": 1.0
+},
+{
+"text": "500",
+"start": 30.64,
+"end": 31.18,
+"p": 0.96
+},
+{
+"text": "milhões",
+"start": 31.18,
+"end": 31.66,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 31.66,
+"end": 32.0,
+"p": 1.0
+},
+{
+"text": "cópias.",
+"start": 32.0,
+"end": 32.54,
+"p": 1.0
+},
+{
+"text": "Agora",
+"start": 32.94,
+"end": 33.54,
+"p": 1.0
+},
+{
+"text": "pensa,",
+"start": 33.54,
+"end": 34.0,
+"p": 0.96
+},
+{
+"text": "se",
+"start": 34.22,
+"end": 34.58,
+"p": 1.0
+},
+{
+"text": "ela",
+"start": 34.58,
+"end": 34.7,
+"p": 1.0
+},
+{
+"text": "tivesse",
+"start": 34.7,
+"end": 35.04,
+"p": 1.0
+},
+{
+"text": "desistido",
+"start": 35.04,
+"end": 35.68,
+"p": 1.0
+},
+{
+"text": "no",
+"start": 35.68,
+"end": 35.84,
+"p": 1.0
+},
+{
+"text": "décimo",
+"start": 35.84,
+"end": 36.38,
+"p": 0.85
+},
+{
+"text": "segundo",
+"start": 36.38,
+"end": 36.82,
+"p": 1.0
+},
+{
+"text": "não,",
+"start": 36.82,
+"end": 37.18,
+"p": 0.81
+},
+{
+"text": "o",
+"start": 37.56,
+"end": 37.9,
+"p": 1.0
+},
+{
+"text": "mundo",
+"start": 37.9,
+"end": 38.14,
+"p": 1.0
+},
+{
+"text": "nunca",
+"start": 38.14,
+"end": 38.62,
+"p": 1.0
+},
+{
+"text": "teria",
+"start": 38.62,
+"end": 38.86,
+"p": 1.0
+},
+{
+"text": "conhecido",
+"start": 38.86,
+"end": 39.48,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 39.48,
+"end": 39.6,
+"p": 0.37
+},
+{
+"text": "Harry",
+"start": 39.6,
+"end": 39.72,
+"p": 1.0
+},
+{
+"text": "Potter.",
+"start": 39.72,
+"end": 40.12,
+"p": 1.0
+},
+{
+"text": "E",
+"start": 40.5,
+"end": 40.82,
+"p": 1.0
+},
+{
+"text": "você,",
+"start": 40.82,
+"end": 41.12,
+"p": 1.0
+},
+{
+"text": "quantos",
+"start": 41.52,
+"end": 42.08,
+"p": 1.0
+},
+{
+"text": "nãos",
+"start": 42.08,
+"end": 42.38,
+"p": 0.64
+},
+{
+"text": "você",
+"start": 42.38,
+"end": 42.7,
+"p": 0.95
+},
+{
+"text": "já",
+"start": 42.7,
+"end": 42.9,
+"p": 1.0
+},
+{
+"text": "ouviu",
+"start": 42.9,
+"end": 43.4,
+"p": 1.0
+},
+{
+"text": "e",
+"start": 43.4,
+"end": 43.78,
+"p": 1.0
+},
+{
+"text": "parou",
+"start": 43.78,
+"end": 44.04,
+"p": 1.0
+},
+{
+"text": "no",
+"start": 44.04,
+"end": 44.16,
+"p": 1.0
+},
+{
+"text": "terceiro?",
+"start": 44.16,
+"end": 44.68,
+"p": 1.0
+},
+{
+"text": "O",
+"start": 45.56,
+"end": 46.2,
+"p": 1.0
+},
+{
+"text": "não",
+"start": 46.2,
+"end": 46.46,
+"p": 1.0
+},
+{
+"text": "que",
+"start": 46.46,
+"end": 46.62,
+"p": 1.0
+},
+{
+"text": "você",
+"start": 46.62,
+"end": 46.86,
+"p": 1.0
+},
+{
+"text": "recebeu",
+"start": 46.86,
+"end": 47.32,
+"p": 1.0
+},
+{
+"text": "hoje",
+"start": 47.32,
+"end": 47.62,
+"p": 1.0
+},
+{
+"text": "não",
+"start": 47.62,
+"end": 47.92,
+"p": 0.99
+},
+{
+"text": "é",
+"start": 47.92,
+"end": 48.16,
+"p": 1.0
+},
+{
+"text": "o",
+"start": 48.16,
+"end": 48.28,
+"p": 1.0
+},
+{
+"text": "fim",
+"start": 48.28,
+"end": 48.44,
+"p": 1.0
+},
+{
+"text": "da",
+"start": 48.44,
+"end": 48.58,
+"p": 1.0
+},
+{
+"text": "sua",
+"start": 48.58,
+"end": 48.72,
+"p": 1.0
+},
+{
+"text": "história.",
+"start": 48.72,
+"end": 49.1,
+"p": 1.0
+},
+{
+"text": "Talvez",
+"start": 49.4,
+"end": 49.76,
+"p": 1.0
+},
+{
+"text": "seja",
+"start": 49.76,
+"end": 50.02,
+"p": 1.0
+},
+{
+"text": "só",
+"start": 50.02,
+"end": 50.3,
+"p": 1.0
+},
+{
+"text": "a",
+"start": 50.3,
+"end": 50.44,
+"p": 1.0
+},
+{
+"text": "porta",
+"start": 50.44,
+"end": 50.64,
+"p": 1.0
+},
+{
+"text": "errada.",
+"start": 50.64,
+"end": 51.06,
+"p": 1.0
+},
+{
+"text": "Doze",
+"start": 51.6,
+"end": 52.02,
+"p": 0.95
+},
+{
+"text": "disseram",
+"start": 52.02,
+"end": 52.5,
+"p": 1.0
+},
+{
+"text": "não,",
+"start": 52.5,
+"end": 52.68,
+"p": 1.0
+},
+{
+"text": "só",
+"start": 53.0,
+"end": 53.26,
+"p": 1.0
+},
+{
+"text": "precisava",
+"start": 53.26,
+"end": 53.8,
+"p": 1.0
+},
+{
+"text": "de",
+"start": 53.8,
+"end": 53.98,
+"p": 1.0
+},
+{
+"text": "um",
+"start": 53.98,
+"end": 54.2,
+"p": 1.0
+},
+{
+"text": "sim.",
+"start": 54.2,
+"end": 54.5,
+"p": 1.0
+},
+{
+"text": "Continua",
+"start": 55.0,
+"end": 55.48,
+"p": 0.99
+},
+{
+"text": "batendo.",
+"start": 55.48,
+"end": 55.98,
+"p": 1.0
+},
+{
+"text": "O",
+"start": 56.18,
+"end": 56.44,
+"p": 1.0
+},
+{
+"text": "seu",
+"start": 56.44,
+"end": 56.64,
+"p": 1.0
+},
+{
+"text": "sim",
+"start": 56.64,
+"end": 57.0,
+"p": 1.0
+},
+{
+"text": "pode",
+"start": 57.0,
+"end": 57.3,
+"p": 1.0
+},
+{
+"text": "estar",
+"start": 57.3,
+"end": 57.54,
+"p": 1.0
+},
+{
+"text": "na",
+"start": 57.54,
+"end": 57.72,
+"p": 1.0
+},
+{
+"text": "próxima",
+"start": 57.72,
+"end": 58.18,
+"p": 1.0
+},
+{
+"text": "porta.",
+"start": 58.18,
+"end": 58.62,
+"p": 1.0
+}
+]
+}

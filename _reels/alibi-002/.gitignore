@@ -1,0 +1,9 @@
+node_modules/
+out/
+out-render.log
+entrega/
+vozes/
+clips/
+bruto/
+public/v/
+public/audio/

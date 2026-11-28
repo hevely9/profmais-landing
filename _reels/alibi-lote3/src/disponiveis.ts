@@ -1,0 +1,1 @@
+export const DISPONIVEIS: string[] = ["l-andre","l-andrehoje","l-caninde","l-copa","l-crufla","l-escudo","l-faixa","l-flafesta","l-flafinal","l-flufesta","l-heverton","l-lusachoro","l-lusagremio","l-mario","l-onibus","l-protesto","l-somos","l-stjd","l-torcidas"];

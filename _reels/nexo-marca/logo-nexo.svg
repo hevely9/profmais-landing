@@ -1,0 +1,12 @@
+<svg viewBox="0 0 520 140" xmlns="http://www.w3.org/2000/svg" style="overflow:visible">
+  <defs><linearGradient id="gx" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8FA3FF"/><stop offset="1" stop-color="#4F6FFF"/></linearGradient>
+  <filter id="gl"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <text x="0" y="112" font-family="Sora" font-weight="600" font-size="128" fill="#FFFFFF" letter-spacing="4">NE</text>
+  <g transform="translate(226 22)" filter="url(#gl)">
+    <line x1="8" y1="8" x2="88" y2="88" stroke="url(#gx)" stroke-width="12" stroke-linecap="round"/>
+    <line x1="88" y1="8" x2="8" y2="88" stroke="url(#gx)" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="8" cy="8" r="10" fill="#4F6FFF"/><circle cx="88" cy="88" r="10" fill="#4F6FFF"/><circle cx="88" cy="8" r="10" fill="#4F6FFF"/><circle cx="8" cy="88" r="10" fill="#4F6FFF"/>
+    <path d="M48 32 L52 44 L64 48 L52 52 L48 64 L44 52 L32 48 L44 44 Z" fill="#FFFFFF"/>
+  </g>
+  <text x="352" y="112" font-family="Sora" font-weight="600" font-size="128" fill="#FFFFFF">O</text>
+</svg>
